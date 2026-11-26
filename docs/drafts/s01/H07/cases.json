@@ -1,0 +1,386 @@
+{
+  "owner": "H07",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "H07.01.01.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.01.01",
+      "claim_refs": [
+        "H07.01.01.D4.01",
+        "H07.01.01.D4.02"
+      ],
+      "fixture": "GF规范与HSK3.0大纲分别引用",
+      "views": {
+        "forward": "GF0025-2021是国际中文教育等级规范；考试大纲是考试范围文件，两者身份与用途不能合并",
+        "reverse": "反推需匹配目标、证据、版本及条件：GF标准不等同考试大纲",
+        "intervention": "保留标准机构、编号、版本、适用范围和来源，GF页图待核",
+        "counterexample": "GF标准不等同考试大纲"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.01.02.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.01.02",
+      "claim_refs": [
+        "H07.01.02.D4.01",
+        "H07.01.02.D4.02"
+      ],
+      "fixture": "目录分别列五类",
+      "views": {
+        "forward": "新版HSK大纲具有任务、话题、词汇、汉字、语法五部分，页块不是独立词典或语法知识",
+        "reverse": "反推需匹配目标、证据、版本及条件：大纲词表不是独立词典",
+        "intervention": "以大纲身份及来源页块记录成员候选，不自动生成义项",
+        "counterexample": "大纲词表不是独立词典"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.01.03.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.01.03",
+      "claim_refs": [
+        "H07.01.03.D4.01",
+        "H07.01.03.D4.02"
+      ],
+      "fixture": "旧HSK三级与新HSK三级",
+      "views": {
+        "forward": "官方介绍将新版三等九级与既有六级体系区分；标准、考试版本及资料副本应使用不同身份",
+        "reverse": "反推需匹配目标、证据、版本及条件：相似名称不得覆盖历史版本",
+        "intervention": "不覆盖原版本，不以相同级别名自动等值",
+        "counterexample": "相似名称不得覆盖历史版本"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.01.04.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.01.04",
+      "claim_refs": [
+        "H07.01.04.D4.01",
+        "H07.01.04.D4.02"
+      ],
+      "fixture": "大纲封面2026-07与开考2026-12-13",
+      "views": {
+        "forward": "官方公告计划2026-12-13全球正式开考；截至2026-11-27尚未发生，具体考点信息需另查",
+        "reverse": "反推需匹配目标、证据、版本及条件：大纲实施月不等于全球正式开考",
+        "intervention": "分别保存大纲实施标签、试行线索、计划开考及实际证据",
+        "counterexample": "大纲实施月不等于全球正式开考"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.02.01.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.02.01",
+      "claim_refs": [
+        "H07.02.01.D4.01",
+        "H07.02.01.D4.02"
+      ],
+      "fixture": "七至九级合并量化条目",
+      "views": {
+        "forward": "GF等级描述包含交际能力、话题任务与量化基准，不能把量化数量替代实际能力；合并高等级量化项不强拆",
+        "reverse": "反推需匹配目标、证据、版本及条件：等级描述不等于个体实际能力",
+        "intervention": "保留原层级、累计/新增含义及版本，不凭成员数晋升个人等级",
+        "counterexample": "等级描述不等于个体实际能力"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.02.02.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.02.02",
+      "claim_refs": [
+        "H07.02.02.D4.01",
+        "H07.02.02.D4.02"
+      ],
+      "fixture": "目标只覆盖词汇识别",
+      "views": {
+        "forward": "官方新版HSK介绍区分听、说、读、写与高级翻译技能；各级具体条件须以相应版本描述核对",
+        "reverse": "反推需匹配目标、证据、版本及条件：词表数量不能代表技能要求",
+        "intervention": "另映射实际技能任务及可观察证据",
+        "counterexample": "词表数量不能代表技能要求"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.02.03.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.02.03",
+      "claim_refs": [
+        "H07.02.03.D4.01",
+        "H07.02.03.D4.02"
+      ],
+      "fixture": "购物话题词汇表已学",
+      "views": {
+        "forward": "新版大纲描述交际目标及范围；任务完成仍需场景、角色与独立表现证据",
+        "reverse": "反推需匹配目标、证据、版本及条件：话题覆盖不证明交际完成",
+        "intervention": "通过新购物互动核实际交际",
+        "counterexample": "话题覆盖不证明交际完成"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.03.01.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.03.01",
+      "claim_refs": [
+        "H07.03.01.D4.01",
+        "H07.03.01.D4.02"
+      ],
+      "fixture": "目录任务一级到七—九级",
+      "views": {
+        "forward": "新版大纲任务部分按等级组织，七至九级合并；源页块不能直接计为原子任务",
+        "reverse": "反推需匹配目标、证据、版本及条件：页块数不是原子任务数",
+        "intervention": "保留源块身份，原子任务拆分需原文及审查",
+        "counterexample": "页块数不是原子任务数"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.03.02.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.03.02",
+      "claim_refs": [
+        "H07.03.02.D4.01",
+        "H07.03.02.D4.02"
+      ],
+      "fixture": "同一话题涉及多个技能",
+      "views": {
+        "forward": "新版大纲话题部分按等级组织；话题成员是范围记录，不自动成为学习单元或课程顺序",
+        "reverse": "反推需匹配目标、证据、版本及条件：话题不等于学习单元",
+        "intervention": "保留话题层级及任务映射候选",
+        "counterexample": "话题不等于学习单元"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.03.03.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.03.03",
+      "claim_refs": [
+        "H07.03.03.D4.01",
+        "H07.03.03.D4.02"
+      ],
+      "fixture": "合成级别1（4）与多词性原串",
+      "views": {
+        "forward": "印刷77页词表包含序号、等级、词语、拼音及词性，部分等级和词性有括号，必须保留原串与映射未知",
+        "reverse": "反推需匹配目标、证据、版本及条件：不能把括号级别或合并等级扁平化",
+        "intervention": "不扁平化括号级别或拆出未证义项，QD4-15保留",
+        "counterexample": "不能把括号级别或合并等级扁平化"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.03.04.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.03.04",
+      "claim_refs": [
+        "H07.03.04.D4.01",
+        "H07.03.04.D4.02"
+      ],
+      "fixture": "一个字同时存在认读和书写成员",
+      "views": {
+        "forward": "印刷374页书写字表含一级至二级合并段；认读与书写属于不同成员关系，序号非字符身份",
+        "reverse": "反推需匹配目标、证据、版本及条件：重复成员不能当重复字符",
+        "intervention": "分别绑定版本、能力类型、原级别及原序号",
+        "counterexample": "重复成员不能当重复字符"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.03.05.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.03.05",
+      "claim_refs": [
+        "H07.03.05.D4.01",
+        "H07.03.05.D4.02"
+      ],
+      "fixture": "某语法类别含多个助词条目",
+      "views": {
+        "forward": "印刷383页语法表有类别、类别名称、细目和内容等层级；源单元格不自动等于一条正式构式规则",
+        "reverse": "反推需匹配目标、证据、版本及条件：源页块不能直接当语法规则",
+        "intervention": "保留原层级与源块，另核构式、义项及限制",
+        "counterexample": "源页块不能直接当语法规则"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.04.01.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.04.01",
+      "claim_refs": [
+        "H07.04.01.D4.01",
+        "H07.04.01.D4.02"
+      ],
+      "fixture": "某词属于指定版本一级",
+      "views": {
+        "forward": "课程目标对齐需显式连接标准成员、语言目标、专业命题、实际任务与评分证据；覆盖不能代替能力",
+        "reverse": "反推需匹配目标、证据、版本及条件：范围成员不能证明能力达成",
+        "intervention": "生成候选目标而非掌握状态",
+        "counterexample": "范围成员不能证明能力达成"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.04.02.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.04.02",
+      "claim_refs": [
+        "H07.04.02.D4.01",
+        "H07.04.02.D4.02"
+      ],
+      "fixture": "高一级目标含已会的低级词",
+      "views": {
+        "forward": "课程顺序与必要先修分别建模，标准等级仅为范围和目标线索；替代路径需证据",
+        "reverse": "反推需匹配目标、证据、版本及条件：HSK级别不能推出必需先修",
+        "intervention": "允许独立证据支持的跳过，不由级别推硬先修",
+        "counterexample": "HSK级别不能推出必需先修"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.04.03.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.04.03",
+      "claim_refs": [
+        "H07.04.03.D4.01",
+        "H07.04.03.D4.02"
+      ],
+      "fixture": "两个列表同样100行但内容不同",
+      "views": {
+        "forward": "源归档对账应分别核记录身份、成员、版本、原字段及数量；总量相等不证明语义一致",
+        "reverse": "反推需匹配目标、证据、版本及条件：数量一致不证明逐字段语义一致",
+        "intervention": "逐字段及稳定ID对账，保留私有归档未迁移状态",
+        "counterexample": "数量一致不证明逐字段语义一致"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.04.04.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.04.04",
+      "claim_refs": [
+        "H07.04.04.D4.01",
+        "H07.04.04.D4.02"
+      ],
+      "fixture": "课本出现某词",
+      "views": {
+        "forward": "学习材料需独立记录教材版本、许可、目标和官方来源引用；教材收录不等同官方范围",
+        "reverse": "反推需匹配目标、证据、版本及条件：教材出现不等于官方成员",
+        "intervention": "官方成员须由指定大纲源记录证实",
+        "counterexample": "教材出现不等于官方成员"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.05.01.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.05.01",
+      "claim_refs": [
+        "H07.05.01.D4.01",
+        "H07.05.01.D4.02"
+      ],
+      "fixture": "旧版与新版同为三级",
+      "views": {
+        "forward": "官方新版HSK介绍指出题型、题量、时长及听力速度等调整；跨版本同级并非自然等值",
+        "reverse": "反推需匹配目标、证据、版本及条件：不假设同级直接等价",
+        "intervention": "逐维度比较，未取得等值证据保持UNKNOWN",
+        "counterexample": "不假设同级直接等价"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.05.02.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.05.02",
+      "claim_refs": [
+        "H07.05.02.D4.01",
+        "H07.05.02.D4.02"
+      ],
+      "fixture": "标准生效与正式开考",
+      "views": {
+        "forward": "GF0025-2021抽取文本显示三等九级及2021-07-01实施；与考试实施事件分别记录",
+        "reverse": "反推需匹配目标、证据、版本及条件：标准颁布不能自动确定考试实施",
+        "intervention": "不由GF生效推定新版考试已实施；页图及原字节仍待核",
+        "counterexample": "标准颁布不能自动确定考试实施"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.05.03.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.05.03",
+      "claim_refs": [
+        "H07.05.03.D4.01",
+        "H07.05.03.D4.02"
+      ],
+      "fixture": "词表交集50%",
+      "views": {
+        "forward": "等值、部分重叠和未知需按对象、维度、方向与证据分别表达；CEFR及HSK同级名不能直接映射",
+        "reverse": "反推需匹配目标、证据、版本及条件：词表交集不能推出能力等价",
+        "intervention": "仅报告指定词表交集，能力等值保持UNKNOWN",
+        "counterexample": "词表交集不能推出能力等价"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H07.05.04.CASE.01",
+      "owner": "H07",
+      "d3_id": "H07.05.04",
+      "claim_refs": [
+        "H07.05.04.D4.01",
+        "H07.05.04.D4.02"
+      ],
+      "fixture": "公开大纲链接与私有PDF名称相近",
+      "views": {
+        "forward": "来源谱系应区分访问链接、原始字节、抽取副本、私有归档与发布许可；现有19317条只保全不代表正式迁移",
+        "reverse": "反推需匹配目标、证据、版本及条件：读取或公共链接不自动授权再分发",
+        "intervention": "未核原始字节不宣布同一性，不发布私有全文",
+        "counterexample": "读取或公共链接不自动授权再分发"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}
