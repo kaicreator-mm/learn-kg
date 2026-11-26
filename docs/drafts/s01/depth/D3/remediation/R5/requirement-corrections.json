@@ -1,0 +1,207 @@
+{
+  "status": "R3_MAPPING_DELTA_ONLY",
+  "records": [
+    {
+      "requirement_id": "P05.RQ03",
+      "contract": "P05",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "明确最后相关接触、未知历史及跨会话版本",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "跨会话复习：原暴露模型加R5同分钟顺序未知HOLD、目标ID/签名与不相关标记冲突HOLD；真实历史完整性未知。",
+      "evidence_paths": [
+        "/cases/history_model",
+        "/cases/history_cases",
+        "/r5/history_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "P05.RQ04",
+      "contract": "P05",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "延迟保持与新情境迁移分开，近迁移候选非真实迁移",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "保持/近迁移分别判定；最后相关暴露及明确顺序、有效独立理由、目标未预览为有限前提；未验证真实迁移或等值性。",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer",
+        "/cases/history_cases",
+        "/r5/history_contract",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "P09.RQ01",
+      "contract": "P09",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "即时/延迟成功及延迟失败分别记录",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "即时与延迟保留正负原响应；相关同分钟事件不推断先后，未知理由或曝光冲突HOLD。",
+      "evidence_paths": [
+        "/cases/history_cases",
+        "/cases/cases/0/observations",
+        "/r5/history_contract",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "P09.RQ02",
+      "contract": "P09",
+      "previous_status": "CANDIDATE_PARTIAL",
+      "previous_interpretation": "新情境和构念匹配条件；非真实复杂任务测量",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "书面新情境有限例；目标身份冲突/同分钟曝光阻断，真实复杂任务仍待核。",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer",
+        "/r5/history_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "P09.RQ03",
+      "contract": "P09",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "独立受控评分，不互换两学科量尺",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "独立分维度评分；数学结构化断言、精确计算及限定解释；未知开放理由人工/HOLD，不声称一般评分。",
+      "evidence_paths": [
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A02.RQ03",
+      "contract": "A02",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "分维度评分",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "数值关系与理由分开；显式反断言/矛盾理由不能获满分，未知解释不强制判错。",
+      "evidence_paths": [
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A02.RQ04",
+      "contract": "A02",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "实际合成响应的评分及提示边界",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "辅助/独立分开；独立身份为合成声明，有效理由及历史条件仍需检查。",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations",
+        "/r5/reason_contract",
+        "/r5/history_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A03.RQ01",
+      "contract": "A03",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "独立错答原值与评分",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "保留原响应、关系及理由各维度；错误理由形成负证据，未知解释进入人工/HOLD，不强制归因。",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A03.RQ02",
+      "contract": "A03",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "竞争解释和区分证据",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "竞争解释的探查设计保留；正确数字但理由矛盾不得视为已排除误概念。",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/cases/cases/1/diagnosis",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A03.RQ04",
+      "contract": "A03",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "缺失、历史未知、冲突阻断",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "缺失、同分钟先后未知及目标相关性矛盾显式HOLD；未解决真实日志完整性。",
+      "evidence_paths": [
+        "/cases/history_cases",
+        "/r5/history_contract",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A05.RQ01",
+      "contract": "A05",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "即时、辅助和独立结果分开",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "教学、辅助、独立及理由分别记录；未知解释不晋升。",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A05.RQ02",
+      "contract": "A05",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "以最后暴露及完整历史为必要条件，错误保留",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "保持按最后确定相关暴露计；同分钟顺序未知、目标身份矛盾HOLD，错误延迟保留。",
+      "evidence_paths": [
+        "/cases/history_cases",
+        "/r5/history_contract",
+        "/r5/reason_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A05.RQ03",
+      "contract": "A05",
+      "previous_status": "CANDIDATE_PARTIAL",
+      "previous_interpretation": "双学科近情境例，非真实远迁移",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "近情境迁移仍须检查目标新颖性及暴露冲突；非真实远迁移。",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer",
+        "/r5/history_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "requirement_id": "A05.RQ04",
+      "contract": "A05",
+      "previous_status": "CANDIDATE_EXEMPLIFIED",
+      "previous_interpretation": "共用策略但不复用知识/量规，真实教育效果HOLD",
+      "status": "CANDIDATE_PARTIAL",
+      "interpretation": "共享策略而非量尺；有限结构化评分及暴露规则，真实效度与历史仍待。",
+      "evidence_paths": [
+        "/cases/policy",
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric",
+        "/r5/reason_contract",
+        "/r5/history_contract"
+      ],
+      "formal_receipt": "NOT_ISSUED"
+    }
+  ]
+}

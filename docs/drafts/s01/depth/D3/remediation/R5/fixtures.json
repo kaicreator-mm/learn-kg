@@ -1,0 +1,392 @@
+{
+  "status": "FINITE_RESIDUAL_REVIEW_FIXTURES",
+  "reason_assertion_patches": {
+    "M-E1": {
+      "equal_positive_unit": true,
+      "equivalent_fractions": true
+    },
+    "M-E2": {
+      "positive_denominators": true,
+      "positive_multiplier_preserves_order": true
+    },
+    "M-E3": {
+      "equal_positive_unit": true,
+      "equivalent_fractions": true
+    },
+    "M-E4": {
+      "positive_denominators": true,
+      "positive_multiplier_preserves_order": true
+    }
+  },
+  "reason_cases": [
+    {
+      "id": "cross_contradictory_baseline",
+      "obs": "M-E2",
+      "set": {
+        "reason": "分母并非正数，乘负数不需要反向"
+      },
+      "expected": 0,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_BASELINE"
+    },
+    {
+      "id": "common_contradictory_target",
+      "obs": "M-E3",
+      "set": {
+        "reason": "单位不相同，所以不能比较"
+      },
+      "expected": 0,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    {
+      "id": "cross_unknown_text",
+      "obs": "M-E2",
+      "set": {
+        "reason": "可能是正数，也可能不是"
+      },
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_BASELINE"
+    },
+    {
+      "id": "common_unknown_text",
+      "obs": "M-E3",
+      "set": {
+        "reason": "我想这样算"
+      },
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    {
+      "id": "cross_explicit_false",
+      "obs": "M-E2",
+      "set": {
+        "assertions": {
+          "positive_denominators": false,
+          "positive_multiplier_preserves_order": true
+        }
+      },
+      "expected": 0,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_BASELINE"
+    },
+    {
+      "id": "common_explicit_false",
+      "obs": "M-E3",
+      "set": {
+        "assertions": {
+          "equal_positive_unit": true,
+          "equivalent_fractions": false
+        }
+      },
+      "expected": 0,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    {
+      "id": "cross_missing_assertions",
+      "obs": "M-E2",
+      "remove": [
+        "assertions"
+      ],
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_BASELINE"
+    },
+    {
+      "id": "common_null_assertions",
+      "obs": "M-E3",
+      "set": {
+        "assertions": null
+      },
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    {
+      "id": "cross_non_boolean",
+      "obs": "M-E2",
+      "set": {
+        "assertions": {
+          "positive_denominators": 1,
+          "positive_multiplier_preserves_order": true
+        }
+      },
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_BASELINE"
+    },
+    {
+      "id": "cross_wrong_product",
+      "obs": "M-E2",
+      "set": {
+        "left_product": 21
+      },
+      "expected": 0,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_BASELINE"
+    },
+    {
+      "id": "common_wrong_equivalence",
+      "obs": "M-E3",
+      "set": {
+        "left_n": 14
+      },
+      "expected": 0,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    {
+      "id": "common_nonminimal_denominator",
+      "obs": "M-E3",
+      "set": {
+        "denominator": 48,
+        "left_n": 30,
+        "right_n": 32,
+        "reason": "两分数等价变为同一正分母，比较分子"
+      },
+      "expected": 1,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "RETENTION_POSITIVE_CANDIDATE"
+    },
+    {
+      "id": "cross_legal_alternative_on_target",
+      "obs": "M-E3",
+      "set": {
+        "method": "CROSS",
+        "left_product": 15,
+        "right_product": 16,
+        "reason": "两分母为正，乘共同正数保持不等号方向",
+        "assertions": {
+          "positive_denominators": true,
+          "positive_multiplier_preserves_order": true
+        }
+      },
+      "expected": 1,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "RETENTION_POSITIVE_CANDIDATE"
+    },
+    {
+      "id": "unrecognized_number_line",
+      "obs": "M-E3",
+      "set": {
+        "method": "NUMBER_LINE",
+        "reason": "数轴上左边在右边之前"
+      },
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    {
+      "id": "canonical_text_wrong_denominator",
+      "obs": "M-E3",
+      "set": {
+        "reason": "同为十分之一单位"
+      },
+      "expected": 0,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    {
+      "id": "missing_reason",
+      "obs": "M-E3",
+      "remove": [
+        "reason"
+      ],
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    {
+      "id": "cross_extra_contradictory_assertion",
+      "obs": "M-E2",
+      "set": {
+        "assertions": {
+          "positive_denominators": true,
+          "positive_multiplier_preserves_order": true,
+          "equal_positive_unit": false
+        }
+      },
+      "expected": null,
+      "baseline": "E2",
+      "target": "E3",
+      "outcome": "HOLD_BASELINE"
+    }
+  ],
+  "history_cases": [
+    {
+      "id": "target_feedback_same_minute",
+      "event": {
+        "minute": 1460,
+        "kind": "FEEDBACK",
+        "related": true,
+        "item": "TARGET"
+      },
+      "expected": "HOLD_EVENT_ORDER"
+    },
+    {
+      "id": "other_practice_same_minute",
+      "event": {
+        "minute": 1460,
+        "kind": "PRACTICE",
+        "related": true,
+        "item": "X"
+      },
+      "expected": "HOLD_EVENT_ORDER"
+    },
+    {
+      "id": "preview_target_false",
+      "event": {
+        "minute": 21,
+        "kind": "PREVIEW_TARGET",
+        "related": false,
+        "item": "TARGET"
+      },
+      "expected": "HOLD_EXPOSURE_CONFLICT"
+    },
+    {
+      "id": "practice_target_false",
+      "event": {
+        "minute": 1430,
+        "kind": "PRACTICE",
+        "related": false,
+        "item": "TARGET"
+      },
+      "expected": "HOLD_EXPOSURE_CONFLICT"
+    },
+    {
+      "id": "exact_target_id_false",
+      "event": {
+        "minute": 1430,
+        "kind": "PRACTICE",
+        "related": false,
+        "item": "$TARGET_ID"
+      },
+      "expected": "HOLD_EXPOSURE_CONFLICT"
+    },
+    {
+      "id": "exact_target_digest_false",
+      "event": {
+        "minute": 1430,
+        "kind": "PRACTICE",
+        "related": false,
+        "item": "$TARGET_SIGNATURE"
+      },
+      "expected": "HOLD_EXPOSURE_CONFLICT"
+    },
+    {
+      "id": "preview_wrong_identity",
+      "event": {
+        "minute": 21,
+        "kind": "PREVIEW_TARGET",
+        "related": true,
+        "item": "X"
+      },
+      "expected": "HOLD_EXPOSURE_CONFLICT"
+    },
+    {
+      "id": "unrelated_same_minute",
+      "event": {
+        "minute": 1460,
+        "kind": "PRACTICE",
+        "related": false,
+        "item": "OTHER-SUBJECT"
+      },
+      "expected": "RETENTION_POSITIVE_CANDIDATE"
+    },
+    {
+      "id": "known_post_response",
+      "event": {
+        "minute": 1461,
+        "kind": "PRACTICE",
+        "related": true,
+        "item": "TARGET"
+      },
+      "expected": "RETENTION_POSITIVE_CANDIDATE"
+    },
+    {
+      "id": "baseline_same_minute",
+      "event": {
+        "minute": 20,
+        "kind": "FEEDBACK",
+        "related": true,
+        "item": "X"
+      },
+      "expected": "HOLD_EVENT_ORDER"
+    },
+    {
+      "id": "target_related_unknown",
+      "event": {
+        "minute": 1430,
+        "kind": "PRACTICE",
+        "related": null,
+        "item": "TARGET"
+      },
+      "expected": "HOLD_EXPOSURE_HISTORY"
+    },
+    {
+      "id": "invalid_clock",
+      "event": {
+        "minute": "1430",
+        "kind": "PRACTICE",
+        "related": true,
+        "item": "X"
+      },
+      "expected": "HOLD_EXPOSURE_HISTORY"
+    },
+    {
+      "id": "missing_event_kind",
+      "event": {
+        "minute": 1430,
+        "related": true,
+        "item": "X"
+      },
+      "expected": "HOLD_EXPOSURE_HISTORY"
+    },
+    {
+      "id": "missing_event_item",
+      "event": {
+        "minute": 1430,
+        "kind": "PRACTICE",
+        "related": true
+      },
+      "expected": "HOLD_EXPOSURE_HISTORY"
+    },
+    {
+      "id": "same_time_other_observation",
+      "observation": "E1",
+      "minute": 1460,
+      "expected": "HOLD_EVENT_ORDER"
+    },
+    {
+      "id": "transfer_same_minute",
+      "target": "E4",
+      "purpose": "TRANSFER",
+      "event": {
+        "minute": 1470,
+        "kind": "PRACTICE",
+        "related": true,
+        "item": "X"
+      },
+      "expected": "HOLD_EVENT_ORDER"
+    }
+  ]
+}

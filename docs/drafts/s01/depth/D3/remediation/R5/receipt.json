@@ -1,0 +1,213 @@
+{
+  "status": "R5_FINITE_CORRECTION_CANDIDATE_ONLY",
+  "depth": {
+    "original_generic_retained": 189,
+    "generic_explicit_pending": 180,
+    "targeted_topics": 12,
+    "targeted_previous_retained": 9,
+    "facets": 44,
+    "facet_states": {
+      "PARTIAL": 19,
+      "CANDIDATE_EXAMPLE": 21,
+      "HOLD": 4
+    },
+    "qualification": "NOT_RUN"
+  },
+  "historical_reason_false_positives": [
+    "cross_contradictory_baseline",
+    "common_contradictory_target"
+  ],
+  "historical_exposure_false_positives": {
+    "R3-ZH-TRADE-01": [
+      "target_feedback_same_minute",
+      "other_practice_same_minute",
+      "preview_target_false",
+      "practice_target_false"
+    ],
+    "R3-MATH-FRACTION-01": [
+      "target_feedback_same_minute",
+      "other_practice_same_minute",
+      "preview_target_false",
+      "practice_target_false"
+    ]
+  },
+  "preserved_original_cases": {
+    "R3-ZH-TRADE-01": {
+      "scores": 7,
+      "history": 15
+    },
+    "R3-MATH-FRACTION-01": {
+      "scores": 7,
+      "history": 15
+    }
+  },
+  "reason_checks": {
+    "cross_contradictory_baseline": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 0
+      },
+      "outcome": "HOLD_BASELINE"
+    },
+    "common_contradictory_target": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 0
+      },
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    "cross_unknown_text": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_BASELINE"
+    },
+    "common_unknown_text": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    "cross_explicit_false": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 0
+      },
+      "outcome": "HOLD_BASELINE"
+    },
+    "common_explicit_false": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 0
+      },
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    "cross_missing_assertions": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_BASELINE"
+    },
+    "common_null_assertions": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    "cross_non_boolean": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_BASELINE"
+    },
+    "cross_wrong_product": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 0
+      },
+      "outcome": "HOLD_BASELINE"
+    },
+    "common_wrong_equivalence": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 0
+      },
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    "common_nonminimal_denominator": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 1
+      },
+      "outcome": "RETENTION_POSITIVE_CANDIDATE"
+    },
+    "cross_legal_alternative_on_target": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 1
+      },
+      "outcome": "RETENTION_POSITIVE_CANDIDATE"
+    },
+    "unrecognized_number_line": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    "canonical_text_wrong_denominator": {
+      "score": {
+        "relation": 1,
+        "valid_justification": 0
+      },
+      "outcome": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    "missing_reason": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_JUSTIFICATION"
+    },
+    "cross_extra_contradictory_assertion": {
+      "score": {
+        "relation": 1,
+        "valid_justification": null
+      },
+      "outcome": "HOLD_BASELINE"
+    }
+  },
+  "history_checks": {
+    "R3-ZH-TRADE-01": {
+      "target_feedback_same_minute": "HOLD_EVENT_ORDER",
+      "other_practice_same_minute": "HOLD_EVENT_ORDER",
+      "preview_target_false": "HOLD_EXPOSURE_CONFLICT",
+      "practice_target_false": "HOLD_EXPOSURE_CONFLICT",
+      "exact_target_id_false": "HOLD_EXPOSURE_CONFLICT",
+      "exact_target_digest_false": "HOLD_EXPOSURE_CONFLICT",
+      "preview_wrong_identity": "HOLD_EXPOSURE_CONFLICT",
+      "unrelated_same_minute": "RETENTION_POSITIVE_CANDIDATE",
+      "known_post_response": "RETENTION_POSITIVE_CANDIDATE",
+      "baseline_same_minute": "HOLD_EVENT_ORDER",
+      "target_related_unknown": "HOLD_EXPOSURE_HISTORY",
+      "invalid_clock": "HOLD_EXPOSURE_HISTORY",
+      "missing_event_kind": "HOLD_EXPOSURE_HISTORY",
+      "missing_event_item": "HOLD_EXPOSURE_HISTORY",
+      "same_time_other_observation": "HOLD_EVENT_ORDER",
+      "transfer_same_minute": "HOLD_EVENT_ORDER"
+    },
+    "R3-MATH-FRACTION-01": {
+      "target_feedback_same_minute": "HOLD_EVENT_ORDER",
+      "other_practice_same_minute": "HOLD_EVENT_ORDER",
+      "preview_target_false": "HOLD_EXPOSURE_CONFLICT",
+      "practice_target_false": "HOLD_EXPOSURE_CONFLICT",
+      "exact_target_id_false": "HOLD_EXPOSURE_CONFLICT",
+      "exact_target_digest_false": "HOLD_EXPOSURE_CONFLICT",
+      "preview_wrong_identity": "HOLD_EXPOSURE_CONFLICT",
+      "unrelated_same_minute": "RETENTION_POSITIVE_CANDIDATE",
+      "known_post_response": "RETENTION_POSITIVE_CANDIDATE",
+      "baseline_same_minute": "HOLD_EVENT_ORDER",
+      "target_related_unknown": "HOLD_EXPOSURE_HISTORY",
+      "invalid_clock": "HOLD_EXPOSURE_HISTORY",
+      "missing_event_kind": "HOLD_EXPOSURE_HISTORY",
+      "missing_event_item": "HOLD_EXPOSURE_HISTORY",
+      "same_time_other_observation": "HOLD_EVENT_ORDER",
+      "transfer_same_minute": "HOLD_EVENT_ORDER"
+    }
+  },
+  "mapping_delta": 14,
+  "mapping_states": {
+    "CANDIDATE_EXEMPLIFIED": 61,
+    "CANDIDATE_PARTIAL": 37,
+    "CANDIDATE_HOLD": 10
+  },
+  "formal_CQ": "26_NOT_RUN",
+  "qualification": "NOT_RUN",
+  "persistent_db_files": 0,
+  "oracle": "SAME_AUTHOR_FIXED_EXPECTATIONS"
+}
