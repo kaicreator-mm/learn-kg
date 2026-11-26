@@ -1,0 +1,671 @@
+{
+  "owner": "H04",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "H04.01.01.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.01.01",
+      "claim_refs": [
+        "H04.01.01.D4.01",
+        "H04.01.01.D4.02"
+      ],
+      "fixture": "新的地图 / 购买地图",
+      "views": {
+        "forward": "词组结构类型与功能类型不同：偏正、动宾等结构可承担句中不同功能",
+        "reverse": "从表达观察反推意图或构式需限定语境；多字序列不必构成独立词组",
+        "intervention": "分别分析中心、修饰及整体句法作用",
+        "counterexample": "多字序列不必构成独立词组"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.01.02.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.01.02",
+      "claim_refs": [
+        "H04.01.02.D4.01",
+        "H04.01.02.D4.02"
+      ],
+      "fixture": "老师来了 / 我问老师",
+      "views": {
+        "forward": "句法成分是句中的关系角色而不是词类；名词短语可在不同句中作主语或宾语",
+        "reverse": "从表达观察反推意图或构式需限定语境；词类不等于句法成分",
+        "intervention": "保留同词不同句法功能",
+        "counterexample": "词类不等于句法成分"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.01.03.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.01.03",
+      "claim_refs": [
+        "H04.01.03.D4.01",
+        "H04.01.03.D4.02"
+      ],
+      "fixture": "我喜欢茶：喜欢与茶",
+      "views": {
+        "forward": "UD依存标注描述词之间的中心与依附关系；标签属于分析框架而非必要学习关系",
+        "reverse": "从表达观察反推意图或构式需限定语境；依存树不等同教学先修图",
+        "intervention": "保留框架版本，禁止映射成硬先修",
+        "counterexample": "依存树不等同教学先修图"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.01.04.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.01.04",
+      "claim_refs": [
+        "H04.01.04.D4.01",
+        "H04.01.04.D4.02"
+      ],
+      "fixture": "我读完了这本书 / 我把这本书读完了",
+      "views": {
+        "forward": "普通话典型主谓宾顺序可因构式及信息组织而改变，合法性需在具体条件下判断",
+        "reverse": "从表达观察反推意图或构式需限定语境；不能用唯一语序否定全部变体",
+        "intervention": "比较论元、谓语和构式条件",
+        "counterexample": "不能用唯一语序否定全部变体"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.02.01.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.02.01",
+      "claim_refs": [
+        "H04.02.01.D4.01",
+        "H04.02.01.D4.02"
+      ],
+      "fixture": "太阳从西边升起。",
+      "views": {
+        "forward": "陈述句以表达命题为常见功能；语法可接受性与命题真假不同",
+        "reverse": "从表达观察反推意图或构式需限定语境；陈述形式不保证事实真实",
+        "intervention": "分别判断形式和事实",
+        "counterexample": "陈述形式不保证事实真实"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.02.02.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.02.02",
+      "claim_refs": [
+        "H04.02.02.D4.01",
+        "H04.02.02.D4.02"
+      ],
+      "fixture": "你去不去 / 谁去",
+      "views": {
+        "forward": "疑问句可使用吗、疑问词、选择或正反形式；语用上也可能表达反问或邀请",
+        "reverse": "从表达观察反推意图或构式需限定语境；问句不一定索取信息",
+        "intervention": "按疑问范围及语境确定所求信息",
+        "counterexample": "问句不一定索取信息"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.02.03.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.02.03",
+      "claim_refs": [
+        "H04.02.03.D4.01",
+        "H04.02.03.D4.02"
+      ],
+      "fixture": "我不去 / 我没去",
+      "views": {
+        "forward": "不与没的选择依事件、体貌和情态等条件；不一般可用于意愿或习惯，没常否定事件发生",
+        "reverse": "从表达观察反推意图或构式需限定语境；不能逐字互换否定标记",
+        "intervention": "给时间和意愿语境，不机械替换",
+        "counterexample": "不能逐字互换否定标记"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.02.04.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.02.04",
+      "claim_refs": [
+        "H04.02.04.D4.01",
+        "H04.02.04.D4.02"
+      ],
+      "fixture": "请把窗户关上",
+      "views": {
+        "forward": "祈使句的指令强度、礼貌和主语省略依交际场景，形式不直接决定是否失礼",
+        "reverse": "从表达观察反推意图或构式需限定语境；祈使形式不等于不礼貌",
+        "intervention": "核角色、语气及请求负担",
+        "counterexample": "祈使形式不等于不礼貌"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.02.05.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.02.05",
+      "claim_refs": [
+        "H04.02.05.D4.01",
+        "H04.02.05.D4.02"
+      ],
+      "fixture": "桌上有一本书 / 我有一本书",
+      "views": {
+        "forward": "处所存在与领有均可用有，但前置成分及信息结构不同",
+        "reverse": "从表达观察反推意图或构式需限定语境；有字句不一定是存在构式",
+        "intervention": "识别处所与领有者，分别建构式",
+        "counterexample": "有字句不一定是存在构式"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.03.01.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.03.01",
+      "claim_refs": [
+        "H04.03.01.D4.01",
+        "H04.03.01.D4.02"
+      ],
+      "fixture": "我把文件放进柜子了 / 一把伞",
+      "views": {
+        "forward": "把构式常将受影响论元置于谓语前，并对谓语及语境提出限制；不只容许定指宾语",
+        "reverse": "从表达观察反推意图或构式需限定语境；有把字不自动判为把字句",
+        "intervention": "按论元和谓语分析，排除量词用法",
+        "counterexample": "有把字不自动判为把字句"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.03.02.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.03.02",
+      "claim_refs": [
+        "H04.03.02.D4.01",
+        "H04.03.02.D4.02"
+      ],
+      "fixture": "方案被采用了 / 方案被委员会采用了",
+      "views": {
+        "forward": "被动构式可显式或省略施事；长短被在UD中有不同标注，受事凸显不必带负面评价",
+        "reverse": "从表达观察反推意图或构式需限定语境；被动形式不必表达负面",
+        "intervention": "分别存受事、施事及形式，不强制负面义",
+        "counterexample": "被动形式不必表达负面"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.03.03.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.03.03",
+      "claim_refs": [
+        "H04.03.03.D4.01",
+        "H04.03.03.D4.02"
+      ],
+      "fixture": "我送她一本书",
+      "views": {
+        "forward": "双宾结构常包含接受者与转移物等不同论元角色；两个相邻名词不足确认",
+        "reverse": "从表达观察反推意图或构式需限定语境；两个名词不一定构成双宾",
+        "intervention": "核动词许可及两个宾语的关系",
+        "counterexample": "两个名词不一定构成双宾"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.03.04.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.03.04",
+      "claim_refs": [
+        "H04.03.04.D4.01",
+        "H04.03.04.D4.02"
+      ],
+      "fixture": "我请小王帮忙",
+      "views": {
+        "forward": "兼语分析中一个成分兼有前谓词宾语与后谓词主语的关系，须验证角色",
+        "reverse": "从表达观察反推意图或构式需限定语境；表面词序不足以确定兼语",
+        "intervention": "区分邀请对象与帮忙施事",
+        "counterexample": "表面词序不足以确定兼语"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.03.05.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.03.05",
+      "claim_refs": [
+        "H04.03.05.D4.01",
+        "H04.03.05.D4.02"
+      ],
+      "fixture": "我去超市买菜",
+      "views": {
+        "forward": "连动结构可有共享主语的多动作序列及目的等关系；动词相邻不必构成连动",
+        "reverse": "从表达观察反推意图或构式需限定语境；谓词连续不一定是连动",
+        "intervention": "分析事件先后及目的，排除动补",
+        "counterexample": "谓词连续不一定是连动"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.04.01.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.04.01",
+      "claim_refs": [
+        "H04.04.01.D4.01",
+        "H04.04.01.D4.02"
+      ],
+      "fixture": "明天吃了饭再走 / 天冷了",
+      "views": {
+        "forward": "动后了与句末了有不同语法语义；句末可出现分析重叠，不能统一译作过去时",
+        "reverse": "从表达观察反推意图或构式需限定语境；不能把所有了等同过去时",
+        "intervention": "按位置、参照时点和新情状判别",
+        "counterexample": "不能把所有了等同过去时"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.04.02.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.04.02",
+      "claim_refs": [
+        "H04.04.02.D4.01",
+        "H04.04.02.D4.02"
+      ],
+      "fixture": "我坐过高铁 / 我走过桥",
+      "views": {
+        "forward": "动后过常表达经历体；过亦有其他词汇用法，不能按字符判断",
+        "reverse": "从表达观察反推意图或构式需限定语境；出现过字不必表示经历体",
+        "intervention": "用语境区分经历与路径",
+        "counterexample": "出现过字不必表示经历体"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.04.03.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.04.03",
+      "claim_refs": [
+        "H04.04.03.D4.01",
+        "H04.04.03.D4.02"
+      ],
+      "fixture": "灯亮着 / 着急",
+      "views": {
+        "forward": "着可用于持续状态或动作等体貌表达；与其他字词读法用法分开",
+        "reverse": "从表达观察反推意图或构式需限定语境；不能将着统一映射一种时态",
+        "intervention": "核动后体标记及词项身份",
+        "counterexample": "不能将着统一映射一种时态"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.04.04.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.04.04",
+      "claim_refs": [
+        "H04.04.04.D4.01",
+        "H04.04.04.D4.02"
+      ],
+      "fixture": "昨天在家 / 明天吃了饭就走",
+      "views": {
+        "forward": "汉语时间参照可由时间词、上下文及体标记共同表达；体貌不等同英语时态",
+        "reverse": "从表达观察反推意图或构式需限定语境；时间表达与英语时态不一一对应",
+        "intervention": "分开事件时间和完成性",
+        "counterexample": "时间表达与英语时态不一一对应"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.04.05.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.04.05",
+      "claim_refs": [
+        "H04.04.05.D4.01",
+        "H04.04.05.D4.02"
+      ],
+      "fixture": "现在可以进去了",
+      "views": {
+        "forward": "句末了可用于标记新情状，但状态变化解释需要语境，非任意了均表示变化",
+        "reverse": "从表达观察反推意图或构式需限定语境；变化意义不能由单字推断",
+        "intervention": "核此前状态及话语条件",
+        "counterexample": "变化意义不能由单字推断"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.05.01.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.05.01",
+      "claim_refs": [
+        "H04.05.01.D4.01",
+        "H04.05.01.D4.02"
+      ],
+      "fixture": "红书包 / 我买的书",
+      "views": {
+        "forward": "定语修饰名词性中心，的可在一定条件下出现或省略",
+        "reverse": "从表达观察反推意图或构式需限定语境；定语不必以的结尾",
+        "intervention": "检查修饰类型和允许省略条件",
+        "counterexample": "定语不必以的结尾"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.05.02.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.05.02",
+      "claim_refs": [
+        "H04.05.02.D4.01",
+        "H04.05.02.D4.02"
+      ],
+      "fixture": "他认真核对数据",
+      "views": {
+        "forward": "状语通常修饰谓词或分句，位置和范围需分析；词类不唯一决定状语",
+        "reverse": "从表达观察反推意图或构式需限定语境；状语与补语不能按词类机械判断",
+        "intervention": "标明修饰对象及作用域",
+        "counterexample": "状语与补语不能按词类机械判断"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.05.03.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.05.03",
+      "claim_refs": [
+        "H04.05.03.D4.01",
+        "H04.05.03.D4.02"
+      ],
+      "fixture": "擦干 / 擦了再晾",
+      "views": {
+        "forward": "结果补语表达动作导致的结果，区别仅描述后续动作的序列",
+        "reverse": "从表达观察反推意图或构式需限定语境；相邻两动词不必是结果补语",
+        "intervention": "核事件和结果状态联系",
+        "counterexample": "相邻两动词不必是结果补语"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.05.04.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.05.04",
+      "claim_refs": [
+        "H04.05.04.D4.01",
+        "H04.05.04.D4.02"
+      ],
+      "fixture": "走进去 / 想起来",
+      "views": {
+        "forward": "趋向补语可表达空间方向或引申意义，来去的参照点依语境",
+        "reverse": "从表达观察反推意图或构式需限定语境；趋向形式不必表示实际移动",
+        "intervention": "区分实际位移与引申",
+        "counterexample": "趋向形式不必表示实际移动"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.05.05.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.05.05",
+      "claim_refs": [
+        "H04.05.05.D4.01",
+        "H04.05.05.D4.02"
+      ],
+      "fixture": "说得很清楚 / 很清楚地说",
+      "views": {
+        "forward": "程度/状态补语与程度副词分属不同句法位置，得后成分可描写动作状态",
+        "reverse": "从表达观察反推意图或构式需限定语境；高程度不等于语法正确",
+        "intervention": "比较评价对象及结构",
+        "counterexample": "高程度不等于语法正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.05.06.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.05.06",
+      "claim_refs": [
+        "H04.05.06.D4.01",
+        "H04.05.06.D4.02"
+      ],
+      "fixture": "看得懂 / 看不懂 / 能看",
+      "views": {
+        "forward": "可能补语常以V得/不+C表示结果可达性，与能的情态用法不完全相同",
+        "reverse": "从表达观察反推意图或构式需限定语境；可能补语不等同所有能字表达",
+        "intervention": "分离理解能力、许可和机会",
+        "counterexample": "可能补语不等同所有能字表达"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.06.01.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.06.01",
+      "claim_refs": [
+        "H04.06.01.D4.01",
+        "H04.06.01.D4.02"
+      ],
+      "fixture": "买米和面",
+      "views": {
+        "forward": "并列结构连接功能可比的成分或分句，连接手段可显式或隐式",
+        "reverse": "从表达观察反推意图或构式需限定语境；逗号不必表示并列",
+        "intervention": "核句法平行及语义关系",
+        "counterexample": "逗号不必表示并列"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.06.02.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.06.02",
+      "claim_refs": [
+        "H04.06.02.D4.01",
+        "H04.06.02.D4.02"
+      ],
+      "fixture": "因为堵车，所以迟到",
+      "views": {
+        "forward": "因果复句表达说话者提出的因果关系，但语言形式不是独立因果证据",
+        "reverse": "从表达观察反推意图或构式需限定语境；语言表达因果不证明真实因果",
+        "intervention": "区分语言关系及实际事实核证",
+        "counterexample": "语言表达因果不证明真实因果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.06.03.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.06.03",
+      "claim_refs": [
+        "H04.06.03.D4.01",
+        "H04.06.03.D4.02"
+      ],
+      "fixture": "如果下雨，就改期",
+      "views": {
+        "forward": "条件句的前件与后件可表达条件关系，具体必要充分性和反事实由语境决定",
+        "reverse": "从表达观察反推意图或构式需限定语境；有如果不保证逻辑蕴含成立",
+        "intervention": "不从如果一词生成逻辑双向蕴含",
+        "counterexample": "有如果不保证逻辑蕴含成立"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.06.04.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.06.04",
+      "claim_refs": [
+        "H04.06.04.D4.01",
+        "H04.06.04.D4.02"
+      ],
+      "fixture": "虽然很忙，他还是来了",
+      "views": {
+        "forward": "让步构式表达预期与后件之间的冲突，关联词可不成对出现",
+        "reverse": "从表达观察反推意图或构式需限定语境；关联词不总是成对出现",
+        "intervention": "核预期与实际表达",
+        "counterexample": "关联词不总是成对出现"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.06.05.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.06.05",
+      "claim_refs": [
+        "H04.06.05.D4.01",
+        "H04.06.05.D4.02"
+      ],
+      "fixture": "为了赶上车，他提前出门",
+      "views": {
+        "forward": "目的构式表达行为者意图的预期结果，不断言目标实现",
+        "reverse": "从表达观察反推意图或构式需限定语境；目的不证明实际效果",
+        "intervention": "区分目的、动作与结果证据",
+        "counterexample": "目的不证明实际效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.06.06.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.06.06",
+      "claim_refs": [
+        "H04.06.06.D4.01",
+        "H04.06.06.D4.02"
+      ],
+      "fixture": "不是所有人都来了",
+      "views": {
+        "forward": "否定、数量和情态的作用域可产生不同解释，线性词序并非充分消歧依据",
+        "reverse": "从表达观察反推意图或构式需限定语境；词序相同不保证范围唯一",
+        "intervention": "区分非全称与全体否定",
+        "counterexample": "词序相同不保证范围唯一"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.07.01.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.07.01",
+      "claim_refs": [
+        "H04.07.01.D4.01",
+        "H04.07.01.D4.02"
+      ],
+      "fixture": "少见但可理解的专业句",
+      "views": {
+        "forward": "可接受性判断应固定语体、方言、语境和任务；低频可能是内容稀有而非句法不合法",
+        "reverse": "从表达观察反推意图或构式需限定语境；低频不能直接判不合语法",
+        "intervention": "以对比任务及独立语料核证",
+        "counterexample": "低频不能直接判不合语法"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.07.02.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.07.02",
+      "claim_refs": [
+        "H04.07.02.D4.01",
+        "H04.07.02.D4.02"
+      ],
+      "fixture": "我把门关上了 / 门我关上了",
+      "views": {
+        "forward": "构式选择受信息状态和语境影响，即使近义表达也可能不具完全相同的话语功能",
+        "reverse": "从表达观察反推意图或构式需限定语境；脱离语境不能强制唯一答案",
+        "intervention": "提供明确对比场景，保留可接受变体",
+        "counterexample": "脱离语境不能强制唯一答案"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.07.03.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.07.03",
+      "claim_refs": [
+        "H04.07.03.D4.01",
+        "H04.07.03.D4.02"
+      ],
+      "fixture": "我看见他拿着望远镜",
+      "views": {
+        "forward": "歧义可来自结构、词义、指称和作用域；缺少消歧证据应保留多个解释",
+        "reverse": "从表达观察反推意图或构式需限定语境；不能把合法多解题判唯一",
+        "intervention": "根据上下文确认，不强制唯一解析",
+        "counterexample": "不能把合法多解题判唯一"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H04.07.04.CASE.01",
+      "owner": "H04",
+      "d3_id": "H04.07.04",
+      "claim_refs": [
+        "H04.07.04.D4.01",
+        "H04.07.04.D4.02"
+      ],
+      "fixture": "普通SVO、把与被的同一事件描述",
+      "views": {
+        "forward": "构式对比需控制事件和论元，分别比较形式、语义及使用条件；表面同形不充分",
+        "reverse": "从表达观察反推意图或构式需限定语境；形式相似不等于功能等价",
+        "intervention": "固定受事施事与语境再比较",
+        "counterexample": "形式相似不等于功能等价"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}
