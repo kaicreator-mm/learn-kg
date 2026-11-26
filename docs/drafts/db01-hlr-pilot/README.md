@@ -10,3 +10,6 @@
 
 ## 可复现验证
 41条记录，25个合成案例（15模型/10决策），含非整数指数、向量内积、逆解、边界与权限优先。预期为Builder手算/逻辑规则，不是独立oracle；浮点容差1e-12。实际执行证据另记，不提前报告PASS。与BKT相同仅为本地单包结构及数学/规则调查；跨包、通用schema、实际SQLite导入、完整CQ06/07、实证、G01/K10/K11资格均未完成。
+
+## 实际执行证据
+测试HEAD a14c53046fba631fca0739d7dd3a4b6a2320f560，Gateway job_01M8C0C2NG00A89MNBRQ8GXT5S 成功，三项Git Blob核对、py_compile通过。25/25模型和规则案例、12/12结构负例通过；另一次Gateway job_01M8C0CT2C00BTDDGSCYY00YFG 实际从policy.model_ref解析模型，把计算值或null与适用性传给策略，5/5组合夹具通过（建议、等待、延期、权限拒绝、无效模型UNKNOWN）。[实际结果](validation-evidence.json)。合成参数、目标和授权由Builder设定，不是独立oracle或真实权限；原PDF字节hash、统一schema、模型拟合、完整CQ06/07、跨包和SQLite导入未验证，专业资格NOT_RUN。

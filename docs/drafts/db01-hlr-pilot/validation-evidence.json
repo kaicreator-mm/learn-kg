@@ -1,0 +1,453 @@
+{
+  "scope": "INVESTIGATION_ONLY",
+  "tested_head": "a14c53046fba631fca0739d7dd3a4b6a2320f560",
+  "version_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+  "gateway_job": "job_01M8C0C2NG00A89MNBRQ8GXT5S",
+  "job_status": "succeeded",
+  "exit_code": 0,
+  "python": "3.12.3",
+  "jsonschema": "4.10.3",
+  "git_blob_verified": true,
+  "syntax_check": "PASS",
+  "blobs": {
+    "schema.json": "37ee0a0f0c7d5c92b4f1b0421cf7f070d9c976cf",
+    "records.json": "b0341f965f1312eb559cad4235b5890eeb003cc3",
+    "validate.py": "8a8ad9ac1666c91efddacffeb0a3ebbb1f3d0b34"
+  },
+  "sha256": {
+    "records.json": "f547d3c841d8500ffc00f462559fa18057eca2f3f6d16478e3f6bdebe190ecd2",
+    "schema.json": "c7f723094295c3a6e0f5b98180eb253ace1f76b0d4434fa15ec1224d70fa9c6e",
+    "validate.py": "7fe79906b14a85b599c9ba5ad30fa0ce922b521524747dc1c9917837afc86747"
+  },
+  "records": 41,
+  "cases": [
+    {
+      "id": "hlr:case:zero",
+      "expected": {
+        "status": "OK",
+        "value": 1
+      },
+      "actual": {
+        "status": "OK",
+        "value": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:half",
+      "expected": {
+        "status": "OK",
+        "value": 0.5
+      },
+      "actual": {
+        "status": "OK",
+        "value": 0.5
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:double",
+      "expected": {
+        "status": "OK",
+        "value": 0.25
+      },
+      "actual": {
+        "status": "OK",
+        "value": 0.25
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:fraction",
+      "expected": {
+        "status": "OK",
+        "value": 0.7071067811865476
+      },
+      "actual": {
+        "status": "OK",
+        "value": 0.7071067811865476
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:negative-time",
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:zero-h",
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:wrong-unit",
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:underflow",
+      "expected": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "actual": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:regression",
+      "expected": {
+        "status": "OK",
+        "value": 4
+      },
+      "actual": {
+        "status": "OK",
+        "value": 4
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:mismatch",
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:overflow",
+      "expected": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "actual": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:inverse",
+      "expected": {
+        "status": "OK",
+        "value": 2
+      },
+      "actual": {
+        "status": "OK",
+        "value": 2
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:inverse-one",
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:inverse-zero",
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:inverse-zero-time",
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-due",
+      "expected": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "actual": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-equal",
+      "expected": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "actual": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-wait",
+      "expected": {
+        "status": "WAIT"
+      },
+      "actual": {
+        "status": "WAIT"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-budget",
+      "expected": {
+        "status": "DEFER_BUDGET"
+      },
+      "actual": {
+        "status": "DEFER_BUDGET"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-permission",
+      "expected": {
+        "status": "REJECT_PERMISSION"
+      },
+      "actual": {
+        "status": "REJECT_PERMISSION"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-unknown",
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "actual": {
+        "status": "UNKNOWN"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-not-applicable",
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "actual": {
+        "status": "UNKNOWN"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-unknown-target",
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "actual": {
+        "status": "UNKNOWN"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-bad-target",
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "actual": {
+        "status": "UNKNOWN"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "hlr:case:policy-denied-unknown",
+      "expected": {
+        "status": "REJECT_PERMISSION"
+      },
+      "actual": {
+        "status": "REJECT_PERMISSION"
+      },
+      "status": "PASS"
+    }
+  ],
+  "negative_tests": [
+    {
+      "id": "duplicate-id",
+      "error": "ValueError",
+      "status": "PASS"
+    },
+    {
+      "id": "unknown-field",
+      "error": "ValidationError",
+      "status": "PASS"
+    },
+    {
+      "id": "wrong-kind",
+      "error": "ValueError",
+      "status": "PASS"
+    },
+    {
+      "id": "missing-target",
+      "error": "ValueError",
+      "status": "PASS"
+    },
+    {
+      "id": "wrong-version",
+      "error": "ValidationError",
+      "status": "PASS"
+    },
+    {
+      "id": "unapproved-op",
+      "error": "ValidationError",
+      "status": "PASS"
+    },
+    {
+      "id": "policy-order",
+      "error": "ValueError",
+      "status": "PASS"
+    },
+    {
+      "id": "policy-action",
+      "error": "ValueError",
+      "status": "PASS"
+    },
+    {
+      "id": "missing-evidence",
+      "error": "ValueError",
+      "status": "PASS"
+    },
+    {
+      "id": "unearned-qualification",
+      "error": "ValidationError",
+      "status": "PASS"
+    },
+    {
+      "id": "mode-mismatch",
+      "error": "ValueError",
+      "status": "PASS"
+    },
+    {
+      "id": "duplicate-key",
+      "error": "ValueError",
+      "status": "PASS"
+    }
+  ],
+  "composition": {
+    "job": "job_01M8C0CT2C00BTDDGSCYY00YFG",
+    "exit_code": 0,
+    "scope": "DRAFT_IN_PROCESS_COMPOSITION",
+    "cases": [
+      {
+        "id": "due",
+        "model_input": {
+          "delta": 4,
+          "half_life": 2,
+          "unit": "day"
+        },
+        "model_result": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "budget_minutes": 5,
+        "authorized": true,
+        "expected": "SUGGEST_REVIEW",
+        "actual": "SUGGEST_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "id": "wait",
+        "model_input": {
+          "delta": 1,
+          "half_life": 2,
+          "unit": "day"
+        },
+        "model_result": {
+          "status": "OK",
+          "value": 0.7071067811865476
+        },
+        "budget_minutes": 5,
+        "authorized": true,
+        "expected": "WAIT",
+        "actual": "WAIT",
+        "status": "PASS"
+      },
+      {
+        "id": "budget",
+        "model_input": {
+          "delta": 4,
+          "half_life": 2,
+          "unit": "day"
+        },
+        "model_result": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "budget_minutes": 3,
+        "authorized": true,
+        "expected": "DEFER_BUDGET",
+        "actual": "DEFER_BUDGET",
+        "status": "PASS"
+      },
+      {
+        "id": "permission",
+        "model_input": {
+          "delta": 4,
+          "half_life": 2,
+          "unit": "day"
+        },
+        "model_result": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "budget_minutes": 5,
+        "authorized": false,
+        "expected": "REJECT_PERMISSION",
+        "actual": "REJECT_PERMISSION",
+        "status": "PASS"
+      },
+      {
+        "id": "invalid-time",
+        "model_input": {
+          "delta": -1,
+          "half_life": 2,
+          "unit": "day"
+        },
+        "model_result": {
+          "status": "REJECT_INPUT"
+        },
+        "budget_minutes": 5,
+        "authorized": true,
+        "expected": "UNKNOWN",
+        "actual": "UNKNOWN",
+        "status": "PASS"
+      }
+    ],
+    "method": "resolve policy.model_ref, call model recall, pass value or null and model validity to policy with target=.5,cost_minutes=4; compare expected. Exact three source blobs checked again."
+  },
+  "local_validation_status": "PASS",
+  "professional_qualification": "NOT_RUN",
+  "sqlite_generated": false,
+  "sqlite_import_test": "NOT_RUN",
+  "limitations": [
+    "原文网页文本及1851–1853页面图像核对完成，原PDF字节hash未取得",
+    "预期和组合夹具由Builder编写；非独立审核",
+    "BKT与HLR复用概念链，不共享schema或验证器；正式统一格式未冻结",
+    "模型适用性、实际授权、真实活动时长由调用方给定，不能用合成布尔值证明现实授权",
+    "HLR拟合/校准、完整CQ06/07、跨包引用、SQLite导入、真实教育效果未验证"
+  ],
+  "task_receipt": null
+}
