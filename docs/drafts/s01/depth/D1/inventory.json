@@ -71,9 +71,13 @@
         {
           "file": "arithmetic-evidence.json",
           "blob": "02c02f6f2a8d7183f38591cb7fca8ce11912a7fd",
-          "records": 0,
+          "records": 5,
           "declared_passed": null,
-          "qualification": "HISTORICAL_ONLY"
+          "qualification": "HISTORICAL_ONLY",
+          "record_field": "results",
+          "status_counts": {
+            "PASS_CALCULATION_ONLY": 5
+          }
         }
       ]
     },
@@ -120,9 +124,13 @@
         {
           "file": "arithmetic-evidence.json",
           "blob": "9fffc3e9e52796b698adf1f5fe5432033b92710a",
-          "records": 0,
+          "records": 14,
           "declared_passed": null,
-          "qualification": "HISTORICAL_ONLY"
+          "qualification": "HISTORICAL_ONLY",
+          "record_field": "results",
+          "status_counts": {
+            "PASS_CALCULATION_ONLY": 14
+          }
         }
       ]
     },
@@ -169,9 +177,13 @@
         {
           "file": "logic-evidence.json",
           "blob": "669ed2224af4df29364a27e9a1140c28d4c2b45d",
-          "records": 0,
+          "records": 17,
           "declared_passed": null,
-          "qualification": "HISTORICAL_ONLY"
+          "qualification": "HISTORICAL_ONLY",
+          "record_field": "results",
+          "status_counts": {
+            "PASS_LOGIC_ONLY": 17
+          }
         }
       ]
     },
@@ -207,9 +219,13 @@
         {
           "file": "arithmetic-evidence.json",
           "blob": "835b55b51a7aeb293a283654d82eb8caa4146d4f",
-          "records": 0,
+          "records": 14,
           "declared_passed": null,
-          "qualification": "HISTORICAL_ONLY"
+          "qualification": "HISTORICAL_ONLY",
+          "record_field": "results",
+          "status_counts": {
+            "PASS_CALCULATION_ONLY": 14
+          }
         }
       ]
     },
@@ -1201,5 +1217,46 @@
     "QD4 references checked against requirements where coverage field exists; not proving historical QD4 content equivalence",
     "historical tests counted as records, not replay or independent evidence",
     "no formal receipt or SQLite"
-  ]
+  ],
+  "historical_reconciliation": {
+    "legacy_field": "results",
+    "corrected_modules": [
+      {
+        "module": "K01",
+        "blob": "02c02f6f2a8d7183f38591cb7fca8ce11912a7fd",
+        "records": 5,
+        "counts": {
+          "PASS_CALCULATION_ONLY": 5
+        }
+      },
+      {
+        "module": "K02",
+        "blob": "9fffc3e9e52796b698adf1f5fe5432033b92710a",
+        "records": 14,
+        "counts": {
+          "PASS_CALCULATION_ONLY": 14
+        }
+      },
+      {
+        "module": "K03",
+        "blob": "669ed2224af4df29364a27e9a1140c28d4c2b45d",
+        "records": 17,
+        "counts": {
+          "PASS_LOGIC_ONLY": 17
+        }
+      },
+      {
+        "module": "K04",
+        "blob": "835b55b51a7aeb293a283654d82eb8caa4146d4f",
+        "records": 14,
+        "counts": {
+          "PASS_CALCULATION_ONLY": 14
+        }
+      }
+    ],
+    "record_count": 235,
+    "scope": "historical records only; no replay or new validation",
+    "prior_inventory": "ebe7140c1ecf63ef078de4356d07c63384a6343c",
+    "readback_job": "job_01M8CB1KVV000M7YMFP3D0TJHG"
+  }
 }
