@@ -14,7 +14,7 @@
     "visual_review": "Rendered and inspected all 14 discrepancy pages in four contact sheets; tables contain merged/continuation cells, not sufficient to verify all individual characters or infer semantic parentage."
   },
   "discrepancies": {
-    "normalization": "NFC remove whitespace; compare SHA256 of ordered string and SHA256 of sorted character multiset, independently from historical private extraction (JSON and importer hash verified) and current exact PDF. All 14 ordered and all 14 multiset digests differ; not solely reordering. Page 67 equal length also differs. No cause of specific glyph mismatch inferred.",
+    "normalization": "NFC remove whitespace; compare SHA256 of ordered string and SHA256 of sorted character multiset, independently from historical private extraction (JSON and importer hash verified) and current exact PDF. All 14 ordered and all 14 multiset digests differ; not solely reordering. All fourteen also differ in normalized character count. No cause of specific glyph mismatch inferred.",
     "columns": [
       "printed_page",
       "historical_normalized_chars",
