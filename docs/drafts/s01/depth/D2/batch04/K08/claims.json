@@ -1,0 +1,112 @@
+{
+  "owner": "K08",
+  "base": "7e1d883c9d679686dab925812d0870c3601dfeb0",
+  "prior_claim_blob": "672cc127bbd3d113e1d4ef0431cea4120f5f6399",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K08.02.01.D4.03",
+      "owner": "K08",
+      "d3_id": "K08.02.01",
+      "requirement_id": "K08.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "兴趣发展理论区分情境唤起、情境维持、初步个体兴趣与成熟个体兴趣；阶段可停滞或回退，且兴趣与特定内容有关。",
+      "conditions": [
+        "理论模型；情感、知识及价值需结合观测"
+      ],
+      "negative_boundary": "一次点击或喜欢不足以晋升为稳定兴趣。",
+      "source_refs": [
+        "K08-B04-HIR"
+      ],
+      "source_locator": "pp112–113 overview/Background",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K08.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "用户短暂喜欢某个视频但未主动再参与",
+        "expected": "仅情境兴趣线索，不能判成熟兴趣",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K08.02.01.D4.04",
+      "owner": "K08",
+      "d3_id": "K08.02.01",
+      "requirement_id": "K08.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "支持兴趣的方式需根据实际内容及环境选择；情境刺激与持续再参与不是同一观测。",
+      "conditions": [
+        "理论启示，效果需任务实证"
+      ],
+      "negative_boundary": "不得强迫学习或利用兴趣标签无限延长任务。",
+      "source_refs": [
+        "K08-B04-HIR"
+      ],
+      "source_locator": "pp112–113",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K08.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "用户愿继续探索某个主题",
+        "expected": "提供可选任务与停止入口，观察自愿再参与",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K08.05.02.D4.03",
+      "owner": "K08",
+      "d3_id": "K08.05.02",
+      "requirement_id": "K08.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "研究采用y=a−b·exp(−cx)拟合自评自动性，其中x为研究天数而不是已确认重复次数；a,b,c为正，95%渐近值时间为ln(20b/a)/c。",
+      "conditions": [
+        "拟合模型，缺日志使重复次数不完整；若初值已达到阈值则非负首次时间为0；适用性和参数需证据"
+      ],
+      "negative_boundary": "不以公式预测个人完成天数，亦不等于掌握。",
+      "source_refs": [
+        "K08-B04-LAL"
+      ],
+      "source_locator": "p1001 Analysis",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K08.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "a=40,b=40,c=.05",
+        "expected": "t95≈59.91天（纯算例）",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K08.05.02.D4.04",
+      "owner": "K08",
+      "d3_id": "K08.05.02",
+      "requirement_id": "K08.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "82个数据充分的参与者中39个符合作者良好拟合标准，其模型估计95%渐近值时间中位数66天、范围18–254天；非所有参与者固定规律。",
+      "conditions": [
+        "自选日常饮食、饮水或活动，研究84天；部分时间为模型外推"
+      ],
+      "negative_boundary": "不能设置66天强制习惯晋升，不把漏打卡视为失败或未形成习惯。",
+      "source_refs": [
+        "K08-B04-LAL"
+      ],
+      "source_locator": "p1002 Results",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K08.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "有连续66天打卡但无自动性观测",
+        "expected": "习惯状态UNKNOWN，不惩罚遗漏",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}
