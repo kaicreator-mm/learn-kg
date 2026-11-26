@@ -1,0 +1,306 @@
+{
+  "owner": "K11",
+  "base": "d6f1aed3ccb93a1349b8566945e255da0559f922",
+  "scope": "SYNTHETIC_BUILDER_ONLY",
+  "independent_oracle": false,
+  "limitations": "合成阈值、回报、熵、信念、IPS及筛选；fullSupport由合成输入声明，非实际日志支持识别；筛选仅单动作，不是调度器，未执行授权、预算事务或教育效果。",
+  "records": [
+    {
+      "id": "K11-LOGIC-1",
+      "input": {
+        "mode": "due",
+        "h": 4,
+        "target": 0.5
+      },
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-2",
+      "input": {
+        "mode": "due",
+        "h": 4,
+        "target": 1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-3",
+      "input": {
+        "mode": "due",
+        "h": 0,
+        "target": 0.5
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-4",
+      "input": {
+        "mode": "return",
+        "r": [
+          1,
+          2
+        ],
+        "gamma": 0.5
+      },
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-5",
+      "input": {
+        "mode": "return",
+        "r": [
+          1,
+          2
+        ],
+        "gamma": 1
+      },
+      "expected": 3,
+      "actual": 3,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-6",
+      "input": {
+        "mode": "return",
+        "r": [
+          1
+        ],
+        "gamma": 1.1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-7",
+      "input": {
+        "mode": "ig",
+        "prior": 0.5,
+        "pos1": 1,
+        "pos0": 0
+      },
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-8",
+      "input": {
+        "mode": "ig",
+        "prior": 0.5,
+        "pos1": 0.5,
+        "pos0": 0.5
+      },
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-9",
+      "input": {
+        "mode": "ig",
+        "prior": 1,
+        "pos1": 0.9,
+        "pos0": 0.1
+      },
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-10",
+      "input": {
+        "mode": "ig",
+        "prior": 1.1,
+        "pos1": 1,
+        "pos0": 0
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-11",
+      "input": {
+        "mode": "belief",
+        "prior": 0.5,
+        "t01": 0,
+        "t11": 1,
+        "o1": 0.8,
+        "o0": 0.2
+      },
+      "expected": 0.8,
+      "actual": 0.8,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-12",
+      "input": {
+        "mode": "belief",
+        "prior": 0.5,
+        "t01": 0.2,
+        "t11": 0.8,
+        "o1": 0,
+        "o0": 0
+      },
+      "expected": "ZERO_LIKELIHOOD",
+      "actual": "ZERO_LIKELIHOOD",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-13",
+      "input": {
+        "mode": "ips",
+        "fullSupport": true,
+        "rows": [
+          {
+            "pi": 1,
+            "mu": 0.5,
+            "reward": 1
+          },
+          {
+            "pi": 0,
+            "mu": 0.5,
+            "reward": 0
+          }
+        ]
+      },
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-14",
+      "input": {
+        "mode": "ips",
+        "fullSupport": false,
+        "rows": [
+          {
+            "pi": 1,
+            "mu": 0.5,
+            "reward": 1
+          }
+        ]
+      },
+      "expected": "HOLD_SUPPORT",
+      "actual": "HOLD_SUPPORT",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-15",
+      "input": {
+        "mode": "ips",
+        "fullSupport": true,
+        "rows": [
+          {
+            "pi": 1,
+            "mu": 0,
+            "reward": 1
+          }
+        ]
+      },
+      "expected": "HOLD_SUPPORT",
+      "actual": "HOLD_SUPPORT",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-16",
+      "input": {
+        "mode": "select",
+        "budget": 5,
+        "actions": [
+          {
+            "id": "A",
+            "gain": 9,
+            "cost": 2,
+            "authorized": false,
+            "prereq": true
+          },
+          {
+            "id": "B",
+            "gain": 3,
+            "cost": 3,
+            "authorized": true,
+            "prereq": true
+          }
+        ]
+      },
+      "expected": "B",
+      "actual": "B",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-17",
+      "input": {
+        "mode": "select",
+        "budget": 1,
+        "actions": [
+          {
+            "id": "B",
+            "gain": 3,
+            "cost": 3,
+            "authorized": true,
+            "prereq": true
+          }
+        ]
+      },
+      "expected": "HOLD_NO_FEASIBLE",
+      "actual": "HOLD_NO_FEASIBLE",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-18",
+      "input": {
+        "mode": "select",
+        "budget": 5,
+        "actions": [
+          {
+            "id": "B",
+            "gain": 3,
+            "cost": 3,
+            "authorized": true,
+            "prereq": true
+          },
+          {
+            "id": "A",
+            "gain": 3,
+            "cost": 2,
+            "authorized": true,
+            "prereq": true
+          }
+        ]
+      },
+      "expected": "A",
+      "actual": "A",
+      "pass": true
+    },
+    {
+      "id": "K11-LOGIC-19",
+      "input": {
+        "mode": "select",
+        "budget": 5,
+        "actions": [
+          {
+            "id": "A",
+            "gain": 3,
+            "cost": 2,
+            "authorized": true,
+            "prereq": false
+          }
+        ]
+      },
+      "expected": "HOLD_NO_FEASIBLE",
+      "actual": "HOLD_NO_FEASIBLE",
+      "pass": true
+    }
+  ],
+  "passed": 19
+}
