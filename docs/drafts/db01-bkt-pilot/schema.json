@@ -1,0 +1,776 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Exploratory BKT package, not frozen IF01",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "package_id",
+    "version",
+    "status",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "draft-bkt-1"
+    },
+    "package_id": {
+      "const": "learn-kg.draft.bkt"
+    },
+    "version": {
+      "const": "0.0.1"
+    },
+    "status": {
+      "const": "INVESTIGATION_ONLY"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/Source"
+          },
+          {
+            "$ref": "#/$defs/EvidenceLocator"
+          },
+          {
+            "$ref": "#/$defs/Claim"
+          },
+          {
+            "$ref": "#/$defs/Element"
+          },
+          {
+            "$ref": "#/$defs/ModelSpec"
+          },
+          {
+            "$ref": "#/$defs/Relation"
+          },
+          {
+            "$ref": "#/$defs/Case"
+          },
+          {
+            "$ref": "#/$defs/ValidationSpec"
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "package_id",
+        "version",
+        "stable_id",
+        "kind"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "learn-kg.draft.bkt"
+        },
+        "version": {
+          "const": "0.0.1"
+        },
+        "stable_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "Source",
+            "EvidenceLocator",
+            "Claim",
+            "Element",
+            "ModelSpec",
+            "Relation",
+            "Case",
+            "ValidationSpec"
+          ]
+        }
+      }
+    },
+    "expression": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "var"
+          ],
+          "properties": {
+            "var": {
+              "enum": [
+                "p",
+                "G",
+                "S",
+                "T",
+                "posterior"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "const"
+          ],
+          "properties": {
+            "const": {
+              "enum": [
+                "0",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "args"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "add",
+                "sub",
+                "mul",
+                "div"
+              ]
+            },
+            "args": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "$ref": "#/$defs/expression"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "title",
+        "authors",
+        "identifier",
+        "url",
+        "bibliography",
+        "access",
+        "rights",
+        "qualification"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "Source"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "identifier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bibliography": {
+          "type": "string",
+          "minLength": 1
+        },
+        "access": {
+          "const": "EXTRACTED_TEXT_ONLY"
+        },
+        "rights": {
+          "const": "NO_SOURCE_REPUBLICATION"
+        },
+        "qualification": {
+          "const": "NOT_RUN"
+        }
+      }
+    },
+    "EvidenceLocator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "source_ref",
+        "location",
+        "scope",
+        "verification"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "EvidenceLocator"
+        },
+        "source_ref": {
+          "$ref": "#/$defs/reference"
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification": {
+          "const": "TEXT_READ_SCREENSHOT_FAILED"
+        }
+      }
+    },
+    "Claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "topic",
+        "claim_type",
+        "statement",
+        "conditions",
+        "limitations",
+        "evidence_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "Claim"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_type": {
+          "enum": [
+            "MODEL_ASSUMPTION",
+            "DEFINITION",
+            "MATHEMATICAL_MODEL",
+            "ENGINEERING_POLICY"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      }
+    },
+    "Element": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "topic",
+        "element_type",
+        "label",
+        "claim_refs",
+        "model_ref"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "Element"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "element_type": {
+          "const": "ProbabilisticModel"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "model_ref": {
+          "$ref": "#/$defs/reference"
+        }
+      }
+    },
+    "ModelSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "topic",
+        "element_ref",
+        "claim_refs",
+        "parameters",
+        "formulas",
+        "policy"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "ModelSpec"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "element_ref": {
+          "$ref": "#/$defs/reference"
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "parameters": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "meaning",
+              "range",
+              "unit"
+            ],
+            "properties": {
+              "name": {
+                "enum": [
+                  "p",
+                  "G",
+                  "S",
+                  "T"
+                ]
+              },
+              "meaning": {
+                "type": "string",
+                "minLength": 1
+              },
+              "range": {
+                "const": [
+                  0,
+                  1
+                ]
+              },
+              "unit": {
+                "const": "probability"
+              }
+            }
+          }
+        },
+        "formulas": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "expr"
+            ],
+            "properties": {
+              "name": {
+                "enum": [
+                  "prediction_correct",
+                  "posterior_correct",
+                  "posterior_incorrect",
+                  "next_prior"
+                ]
+              },
+              "expr": {
+                "$ref": "#/$defs/expression"
+              }
+            }
+          }
+        },
+        "policy": {
+          "const": {
+            "missing": "UNKNOWN",
+            "not_independent": "UNKNOWN",
+            "unmapped": "UNKNOWN",
+            "zero_likelihood": "REJECT_ZERO_LIKELIHOOD",
+            "invalid_parameter": "REJECT_PARAMETER",
+            "no_forgetting": true,
+            "not_calibrated_for_any_population": true
+          }
+        }
+      }
+    },
+    "Relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "relation_type",
+        "from_ref",
+        "to_ref",
+        "claim_refs",
+        "conditions",
+        "transitive",
+        "reversible"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "Relation"
+        },
+        "relation_type": {
+          "const": "defined_by_model"
+        },
+        "from_ref": {
+          "$ref": "#/$defs/reference"
+        },
+        "to_ref": {
+          "$ref": "#/$defs/reference"
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "transitive": {
+          "const": false
+        },
+        "reversible": {
+          "const": false
+        }
+      }
+    },
+    "Case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "topic",
+        "model_ref",
+        "claim_refs",
+        "view",
+        "input",
+        "expected",
+        "explanation"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "Case"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_ref": {
+          "$ref": "#/$defs/reference"
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "view": {
+          "enum": [
+            "FORWARD",
+            "REVERSE",
+            "INTERVENTION",
+            "COUNTEREXAMPLE",
+            "BOUNDARY"
+          ]
+        },
+        "input": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "p",
+            "G",
+            "S",
+            "T",
+            "observation",
+            "independent",
+            "single_component"
+          ],
+          "properties": {
+            "p": {
+              "type": "string",
+              "minLength": 1
+            },
+            "G": {
+              "type": "string",
+              "minLength": 1
+            },
+            "S": {
+              "type": "string",
+              "minLength": 1
+            },
+            "T": {
+              "type": "string",
+              "minLength": 1
+            },
+            "observation": {
+              "enum": [
+                "correct",
+                "incorrect",
+                "missing"
+              ]
+            },
+            "independent": {
+              "type": "boolean"
+            },
+            "single_component": {
+              "type": "boolean"
+            }
+          }
+        },
+        "expected": {
+          "oneOf": [
+            {
+              "type": "object",
+              "required": [
+                "status",
+                "prediction_correct",
+                "posterior",
+                "next_prior"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "const": "OK"
+                },
+                "prediction_correct": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "posterior": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "next_prior": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            {
+              "type": "object",
+              "required": [
+                "status"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "enum": [
+                    "UNKNOWN",
+                    "REJECT_ZERO_LIKELIHOOD",
+                    "REJECT_PARAMETER"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ValidationSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "owner",
+        "status",
+        "kind",
+        "target_ref",
+        "case_refs",
+        "method",
+        "run_status",
+        "qualification"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^bkt:[a-z0-9:-]+$"
+        },
+        "owner": {
+          "const": "K10"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "kind": {
+          "const": "ValidationSpec"
+        },
+        "target_ref": {
+          "$ref": "#/$defs/reference"
+        },
+        "case_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reference"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_status": {
+          "const": "NOT_RUN"
+        },
+        "qualification": {
+          "const": "NOT_RUN"
+        }
+      }
+    }
+  }
+}

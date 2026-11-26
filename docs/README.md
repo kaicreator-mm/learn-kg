@@ -59,3 +59,5 @@
 - [S01 通用/汉语26域648主题需求全覆盖](drafts/s01/README.md)；[HSK源归档与专业需求映射](drafts/s01/hsk-source-domain-mapping.md)（调查草案，未完成专业资格）。
 
 - [S01 P/F/A/E 27视图研究需求](drafts/s01/process-view-requirements.md)；[CQ/LC正负夹具设计](drafts/s01/cq-lifecycle-fixture-requirements.json)（NOT_RUN）。
+
+- [DB01/S01 BKT 原子知识与格式试点](drafts/db01-bkt-pilot/README.md)（调查草案，非正式专业资格）。
