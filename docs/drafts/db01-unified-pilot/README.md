@@ -11,3 +11,8 @@
 
 ## V2语言实体与有界活动扩展（调查）
 原三包与65条记录保持字节不变，历史验证证据保留。共享schema扩展8种类型：HanCharacter、Reading、Lexeme、Sense、ConditionSpec、TaskSpec、FlowSpec、ScenarioCase。新增chinese 31条、flow 17条，flow声明chinese依赖；新语义是小范围辞书候选，不是全HSK知识或正式迁移。汉典“买”“卖”条已读HTML，见来源与定位。条件关系仅同笔已完成的货物金钱交易、角色匹配时成立；未知条件保留UNKNOWN，不推断实际交易。原创书面辨义任务不等同听辨；活动完成不等于掌握。有限事件预算、独立性、权限、任务身份、重复事件、退出和终止；不实现真实运行时、持续学习者状态或独立效果。V2记录及schema为调查候选；实际验证证据另附，不改写V1证据。
+
+### V2实际验证
+测试HEAD eddb3a30d8217dbcd2866f50c704d400f24efbef，Gateway job_01M8C1ED0600DDT38QYJES4Q2D exit0，8文件Git Blob核对与py_compile通过。原三包65条不变并可逆还原；新增31条汉语及17条流程记录，累计113条、17类、269处引用。35/35原模型策略案例、5/5原组合、17/17新增条件和流程案例、1/1预算上限、25/25文本和语义负例、3/3 SQL负例，合计86/86本轮断言组。SQLite单个:memory:连接，113/113记录和269/269引用往返一致，外键检查通过；flow只加载chinese.json和flow.json。运行目录未出现持久SQLite文件。[V2完整证据](validation-evidence-v2.json)；[V1历史证据](validation-evidence.json)保持原字节。
+
+本轮仅试点，未迁移私有HSK记录；未完成真实授权、跨会话恢复、独立专业审核或学习效果；不能以本次书面活动完成宣称掌握。原网页字节及正式权利资格未核，未晋升任何任务。

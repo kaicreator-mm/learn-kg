@@ -1,0 +1,1101 @@
+{
+  "schema_version": 2,
+  "tested_head": "eddb3a30d8217dbcd2866f50c704d400f24efbef",
+  "version_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+  "previous_evidence_head": "6939a95ab65fecfe062d85b09ef8dd605e6bfffe",
+  "gateway_job": "job_01M8C1ED0600DDT38QYJES4Q2D",
+  "job_status": "succeeded",
+  "exit_code": 0,
+  "evidence_read_job": "job_01M8C1FDJK00J2V66HHJ7A20PN",
+  "syntax_check": "PASS",
+  "git_blob_verified": true,
+  "blobs": {
+    "schema.json": "b5d9070267dbf33ebccdac7da6f8468828bc8ae4",
+    "chinese.json": "ae57e7abb3b3e79f934b7ac52eb2712b6355c64e",
+    "flow.json": "90eb4b2b4ad26cb0f1361361ef49be19ed3c3652",
+    "manifest.json": "63046ca3ca3f87494631507617ad198c8425a35b",
+    "validate.py": "89babe3364e0ab306bfc5bd2dc9304393df99822",
+    "bkt.json": "c0d311f2ef96920547cd684c80924121f41c9f50",
+    "hlr.json": "c80d3d02d05ac51bd879f141b7b790dcc35c39d7",
+    "review.json": "a02d82e4f0d1483dfdf8a9bef82e9a349fd1a5d9"
+  },
+  "result": {
+    "scope": "DB01_INVESTIGATION_ONLY",
+    "python": "3.12.3",
+    "jsonschema": "4.10.3",
+    "legacy_roundtrip": 65,
+    "records": 113,
+    "routes": {
+      "all": [
+        "bkt.json",
+        "hlr.json",
+        "review.json",
+        "chinese.json",
+        "flow.json"
+      ],
+      "review": [
+        "hlr.json",
+        "review.json"
+      ],
+      "bkt": [
+        "bkt.json"
+      ],
+      "flow": [
+        "chinese.json",
+        "flow.json"
+      ]
+    },
+    "cases": [
+      {
+        "id": "bkt:case:correct",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:incorrect",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "1/13",
+          "next_prior": "11/65"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "1/13",
+          "next_prior": "11/65"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:non-discriminating",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "4/5",
+          "posterior": "2/5",
+          "next_prior": "23/50"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "4/5",
+          "posterior": "2/5",
+          "next_prior": "23/50"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:missing",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:hint",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:multi",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:zero-likelihood",
+        "expected": {
+          "status": "REJECT_ZERO_LIKELIHOOD"
+        },
+        "actual": {
+          "status": "REJECT_ZERO_LIKELIHOOD"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:invalid-parameter",
+        "expected": {
+          "status": "REJECT_PARAMETER"
+        },
+        "actual": {
+          "status": "REJECT_PARAMETER"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:certain-transition",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "1"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "1"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:strategy-no-threshold",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:zero",
+        "expected": {
+          "status": "OK",
+          "value": 1
+        },
+        "actual": {
+          "status": "OK",
+          "value": 1
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:half",
+        "expected": {
+          "status": "OK",
+          "value": 0.5
+        },
+        "actual": {
+          "status": "OK",
+          "value": 0.5
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:double",
+        "expected": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "actual": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:fraction",
+        "expected": {
+          "status": "OK",
+          "value": 0.7071067811865476
+        },
+        "actual": {
+          "status": "OK",
+          "value": 0.7071067811865476
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:negative-time",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:zero-h",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:wrong-unit",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:underflow",
+        "expected": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "actual": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:regression",
+        "expected": {
+          "status": "OK",
+          "value": 4
+        },
+        "actual": {
+          "status": "OK",
+          "value": 4
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:mismatch",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:overflow",
+        "expected": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "actual": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse",
+        "expected": {
+          "status": "OK",
+          "value": 2
+        },
+        "actual": {
+          "status": "OK",
+          "value": 2
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse-one",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse-zero",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse-zero-time",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-due",
+        "expected": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "actual": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-equal",
+        "expected": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "actual": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-wait",
+        "expected": {
+          "status": "WAIT"
+        },
+        "actual": {
+          "status": "WAIT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-budget",
+        "expected": {
+          "status": "DEFER_BUDGET"
+        },
+        "actual": {
+          "status": "DEFER_BUDGET"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-permission",
+        "expected": {
+          "status": "REJECT_PERMISSION"
+        },
+        "actual": {
+          "status": "REJECT_PERMISSION"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-unknown",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-not-applicable",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-unknown-target",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-bad-target",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-denied-unknown",
+        "expected": {
+          "status": "REJECT_PERMISSION"
+        },
+        "actual": {
+          "status": "REJECT_PERMISSION"
+        },
+        "status": "PASS"
+      }
+    ],
+    "composition": [
+      {
+        "id": "due",
+        "prediction": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "expected": "SUGGEST_REVIEW",
+        "actual": "SUGGEST_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "id": "wait",
+        "prediction": {
+          "status": "OK",
+          "value": 0.7071067811865476
+        },
+        "expected": "WAIT",
+        "actual": "WAIT",
+        "status": "PASS"
+      },
+      {
+        "id": "budget",
+        "prediction": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "expected": "DEFER_BUDGET",
+        "actual": "DEFER_BUDGET",
+        "status": "PASS"
+      },
+      {
+        "id": "permission",
+        "prediction": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "expected": "REJECT_PERMISSION",
+        "actual": "REJECT_PERMISSION",
+        "status": "PASS"
+      },
+      {
+        "id": "invalid-time",
+        "prediction": {
+          "status": "REJECT_INPUT"
+        },
+        "expected": "UNKNOWN",
+        "actual": "UNKNOWN",
+        "status": "PASS"
+      }
+    ],
+    "scenarios": [
+      {
+        "id": "zh:case:applicable",
+        "mode": "relation_condition",
+        "expected": {
+          "status": "APPLIES"
+        },
+        "actual": {
+          "status": "APPLIES"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "zh:case:different-event",
+        "mode": "relation_condition",
+        "expected": {
+          "status": "NOT_APPLICABLE"
+        },
+        "actual": {
+          "status": "NOT_APPLICABLE"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "zh:case:figurative",
+        "mode": "relation_condition",
+        "expected": {
+          "status": "NOT_APPLICABLE"
+        },
+        "actual": {
+          "status": "NOT_APPLICABLE"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "zh:case:unknown",
+        "mode": "relation_condition",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "zh:case:wrong-role",
+        "mode": "relation_condition",
+        "expected": {
+          "status": "NOT_APPLICABLE"
+        },
+        "actual": {
+          "status": "NOT_APPLICABLE"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:complete",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "ACTIVITY_COMPLETE",
+          "state": "done",
+          "processed": 2,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "actual": {
+          "status": "ACTIVITY_COMPLETE",
+          "state": "done",
+          "processed": 2,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:retry",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "ACTIVITY_COMPLETE",
+          "state": "done",
+          "processed": 3,
+          "feedback_count": 1,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "INCORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e3",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "actual": {
+          "status": "ACTIVITY_COMPLETE",
+          "state": "done",
+          "processed": 3,
+          "feedback_count": 1,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "INCORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e3",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:exhausted",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "RETRY_EXHAUSTED",
+          "state": "failed",
+          "processed": 2,
+          "feedback_count": 1,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "INCORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:buy",
+              "result": "INCORRECT"
+            }
+          ]
+        },
+        "actual": {
+          "status": "RETRY_EXHAUSTED",
+          "state": "failed",
+          "processed": 2,
+          "feedback_count": 1,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "INCORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:buy",
+              "result": "INCORRECT"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:hint",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "UNKNOWN",
+          "state": "unknown",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "actual": {
+          "status": "UNKNOWN",
+          "state": "unknown",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:no-permission",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "REJECT_PERMISSION",
+          "state": "buy",
+          "processed": 0,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "actual": {
+          "status": "REJECT_PERMISSION",
+          "state": "buy",
+          "processed": 0,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:exit",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "STOPPED",
+          "state": "stopped",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "actual": {
+          "status": "STOPPED",
+          "state": "stopped",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:wrong-task",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "REJECT_TASK",
+          "state": "buy",
+          "processed": 0,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "actual": {
+          "status": "REJECT_TASK",
+          "state": "buy",
+          "processed": 0,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:missing",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "UNKNOWN",
+          "state": "unknown",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "actual": {
+          "status": "UNKNOWN",
+          "state": "unknown",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": []
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:replay",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "ACTIVITY_COMPLETE",
+          "state": "done",
+          "processed": 2,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "actual": {
+          "status": "ACTIVITY_COMPLETE",
+          "state": "done",
+          "processed": 2,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:conflict",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "REJECT_EVENT_CONFLICT",
+          "state": "sell",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "actual": {
+          "status": "REJECT_EVENT_CONFLICT",
+          "state": "sell",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:pending",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "INCOMPLETE",
+          "state": "sell",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "actual": {
+          "status": "INCOMPLETE",
+          "state": "sell",
+          "processed": 1,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "flow:case:after-terminal",
+        "mode": "bounded_flow",
+        "expected": {
+          "status": "REJECT_AFTER_TERMINAL",
+          "state": "done",
+          "processed": 2,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "actual": {
+          "status": "REJECT_AFTER_TERMINAL",
+          "state": "done",
+          "processed": 2,
+          "feedback_count": 0,
+          "observations": [
+            {
+              "event_id": "e1",
+              "task_id": "flow:task:buy",
+              "result": "CORRECT"
+            },
+            {
+              "event_id": "e2",
+              "task_id": "flow:task:sell",
+              "result": "CORRECT"
+            }
+          ]
+        },
+        "status": "PASS"
+      }
+    ],
+    "budget_cap": {
+      "status": "BUDGET_EXHAUSTED",
+      "state": "sell",
+      "processed": 1,
+      "feedback_count": 0,
+      "observations": [
+        {
+          "event_id": "e1",
+          "task_id": "flow:task:buy",
+          "result": "CORRECT"
+        }
+      ]
+    },
+    "negative_tests": [
+      {
+        "id": "duplicate-id",
+        "error": "ValueError"
+      },
+      {
+        "id": "unknown-field",
+        "error": "ValidationError"
+      },
+      {
+        "id": "wrong-kind",
+        "error": "ValueError"
+      },
+      {
+        "id": "wrong-version",
+        "error": "ValueError"
+      },
+      {
+        "id": "orphan-ref",
+        "error": "ValueError"
+      },
+      {
+        "id": "undeclared-dependency",
+        "error": "ValueError"
+      },
+      {
+        "id": "missing-package",
+        "error": "ValueError"
+      },
+      {
+        "id": "dependency-digest",
+        "error": "ValueError"
+      },
+      {
+        "id": "unsafe-path",
+        "error": "ValueError"
+      },
+      {
+        "id": "unapproved-op",
+        "error": "ValidationError"
+      },
+      {
+        "id": "policy-order",
+        "error": "ValueError"
+      },
+      {
+        "id": "unearned-qualification",
+        "error": "ValidationError"
+      },
+      {
+        "id": "missing-evidence",
+        "error": "ValueError"
+      },
+      {
+        "id": "hash-mismatch",
+        "error": "ValueError"
+      },
+      {
+        "id": "duplicate-key",
+        "error": "ValueError"
+      },
+      {
+        "id": "dependency-cycle",
+        "error": "ValueError"
+      },
+      {
+        "id": "codepoint-mismatch",
+        "error": "ValueError"
+      },
+      {
+        "id": "tone-mismatch",
+        "error": "ValueError"
+      },
+      {
+        "id": "missing-condition",
+        "error": "ValueError"
+      },
+      {
+        "id": "duplicate-condition-field",
+        "error": "ValueError"
+      },
+      {
+        "id": "wrong-task-answer",
+        "error": "ValueError"
+      },
+      {
+        "id": "invalid-flow-task",
+        "error": "ValueError"
+      },
+      {
+        "id": "unbounded-flow-cycle",
+        "error": "ValueError"
+      },
+      {
+        "id": "flow-retry-edge",
+        "error": "ValueError"
+      },
+      {
+        "id": "wrong-scenario-target",
+        "error": "ValueError"
+      }
+    ],
+    "sql": {
+      "rows": 113,
+      "record_roundtrip": 113,
+      "references": 269,
+      "reference_roundtrip": 269,
+      "per_kind_rows": {
+        "Source": 4,
+        "EvidenceLocator": 9,
+        "Claim": 20,
+        "Element": 2,
+        "ModelSpec": 2,
+        "PolicySpec": 1,
+        "Relation": 5,
+        "Case": 35,
+        "ValidationSpec": 4,
+        "HanCharacter": 4,
+        "Reading": 2,
+        "Lexeme": 2,
+        "Sense": 2,
+        "ConditionSpec": 1,
+        "TaskSpec": 2,
+        "FlowSpec": 1,
+        "ScenarioCase": 17
+      },
+      "foreign_key_check": "PASS",
+      "cross_package_query": [
+        [
+          "hlr:policy:review",
+          "hlr:model:hlr"
+        ]
+      ],
+      "negative_tests": [
+        "sql-duplicate",
+        "sql-orphan",
+        "sql-wrong-kind"
+      ],
+      "database": ":memory:",
+      "sqlite_version": "3.45.1"
+    },
+    "files_sha256": {
+      "manifest.json": "44f5ff11d71b9a23a2706883cb6ecdd156972b6d60731ba82fb78bc706e8c392",
+      "schema.json": "b8508ea54ce6540745db8102379db485948d6a3eb445167978a168ee68899971",
+      "bkt.json": "657ab5494a1f960ff926f1f55ff0b68e8280dc727b3fe62aea33cb42e9271235",
+      "hlr.json": "12246d38ae859cabbf687ff31d821d753f91a5e91154e8e29264272e59e82ec8",
+      "review.json": "e22e4c7a40246a7081a0d9630de7f6c6d3a8d1d6d38d31fd280afae1a1afade9",
+      "chinese.json": "5cbba4da56888a18c3a7b466b04f052a76faf99028b7c28e1ecdf44dae2e695b",
+      "flow.json": "08d7c325e8898d9bf396769438d5d04a7d1fc1fb0c1644e3216c37589f664194",
+      "validate.py": "d179e797a09c7c41523ca9e063b0dec823037ba7b37b8e52822f96f823f327c1"
+    },
+    "professional_qualification": "NOT_RUN",
+    "persistent_sqlite_generated": false
+  },
+  "local_validation_status": "PASS",
+  "persistent_sqlite_file_check": "PASS",
+  "task_receipt": null,
+  "limitations": [
+    "原始辞书HTML条目已读，未归档原始网页字节或取得正式发布权利与专业资格；仅原创有限语义概括",
+    "限定语境关系是建设者语义归纳，不是所有义项的反义关系；未知条件不补全",
+    "仅两个词条、两个书面任务和一个有界流程，不代表完整汉语或HSK知识建设；未读写私有HSK源数据",
+    "事件去重、预算和权限在单次合成运行验证；没有跨会话持久恢复、真实授权验证、分布式事件或真实学习者",
+    "学习活动完成仅为本次表现，非长期保持、迁移或听辨能力证据；重试后的答对不当初次独立掌握",
+    "共享schema扩展仍包含试点类型和显式守卫；内存SQL按字段投影不是正式专业DDL或持久化多库导入器",
+    "预期由Builder编写，不是独立oracle；G01/IF01/DB02/H/P正式资格、完整CQ/LC和R3裁决均未取得"
+  ]
+}
