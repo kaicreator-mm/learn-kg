@@ -65,3 +65,5 @@
 - [HLR与复习决策调查试点](drafts/db01-hlr-pilot/README.md)（专业候选与条件规则验证，不是正式模块资格）。
 
 - [DB01 统一可读知识表达调查原型](drafts/db01-unified-pilot/README.md)（保留历史试点，未冻结正式schema）。
+
+- [DB01 统一格式语言实体与有界活动扩展](drafts/db01-unified-pilot/README.md)（调查原型）。

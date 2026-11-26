@@ -3,7 +3,7 @@
   "status": "INVESTIGATION_ONLY",
   "schema": {
     "file": "schema.json",
-    "sha256": "6dfea9562ac31be9b8946017f8a6a0784ed9c8722e1c42834631f0d785fc33c7"
+    "sha256": "b8508ea54ce6540745db8102379db485948d6a3eb445167978a168ee68899971"
   },
   "legacy": [
     {
@@ -47,6 +47,28 @@
           "package_id": "learn-kg.draft.unified.hlr",
           "version": "0.0.2",
           "sha256": "12246d38ae859cabbf687ff31d821d753f91a5e91154e8e29264272e59e82ec8"
+        }
+      ]
+    },
+    {
+      "package_id": "learn-kg.draft.unified.chinese",
+      "version": "0.0.2",
+      "file": "chinese.json",
+      "sha256": "5cbba4da56888a18c3a7b466b04f052a76faf99028b7c28e1ecdf44dae2e695b",
+      "count": 31,
+      "dependencies": []
+    },
+    {
+      "package_id": "learn-kg.draft.unified.flow",
+      "version": "0.0.2",
+      "file": "flow.json",
+      "sha256": "08d7c325e8898d9bf396769438d5d04a7d1fc1fb0c1644e3216c37589f664194",
+      "count": 17,
+      "dependencies": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "sha256": "5cbba4da56888a18c3a7b466b04f052a76faf99028b7c28e1ecdf44dae2e695b"
         }
       ]
     }

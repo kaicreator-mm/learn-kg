@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Unified exploratory knowledge profile 0.0.2",
+  "title": "Unified exploratory knowledge profile, language and bounded flow extension",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -12,7 +12,10 @@
   ],
   "properties": {
     "schema_version": {
-      "const": "draft-unified-1"
+      "enum": [
+        "draft-unified-1",
+        "draft-unified-2"
+      ]
     },
     "package_id": {
       "type": "string",
@@ -55,6 +58,30 @@
           },
           {
             "$ref": "#/$defs/PolicySpec"
+          },
+          {
+            "$ref": "#/$defs/HanCharacter"
+          },
+          {
+            "$ref": "#/$defs/Reading"
+          },
+          {
+            "$ref": "#/$defs/Lexeme"
+          },
+          {
+            "$ref": "#/$defs/Sense"
+          },
+          {
+            "$ref": "#/$defs/ConditionSpec"
+          },
+          {
+            "$ref": "#/$defs/TaskSpec"
+          },
+          {
+            "$ref": "#/$defs/FlowSpec"
+          },
+          {
+            "$ref": "#/$defs/ScenarioCase"
           }
         ]
       }
@@ -93,7 +120,15 @@
             "Relation",
             "Case",
             "ValidationSpec",
-            "PolicySpec"
+            "PolicySpec",
+            "HanCharacter",
+            "Reading",
+            "Lexeme",
+            "Sense",
+            "ConditionSpec",
+            "TaskSpec",
+            "FlowSpec",
+            "ScenarioCase"
           ]
         }
       }
@@ -299,7 +334,8 @@
         "verification": {
           "enum": [
             "TEXT_READ_SCREENSHOT_FAILED",
-            "TEXT_AND_PAGE_IMAGE_READ"
+            "TEXT_AND_PAGE_IMAGE_READ",
+            "HTML_ENTRY_READ"
           ]
         }
       }
@@ -630,7 +666,9 @@
         "relation_type": {
           "enum": [
             "defined_by_model",
-            "informs_decision"
+            "informs_decision",
+            "script_variant",
+            "converse_in_context"
           ]
         },
         "from_ref": {
@@ -660,6 +698,14 @@
         },
         "reversible": {
           "const": false
+        },
+        "condition_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
         }
       }
     },
@@ -966,6 +1012,784 @@
         },
         "effect": {
           "const": "ADVICE_ONLY"
+        }
+      }
+    },
+    "HanCharacter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "character",
+        "codepoint",
+        "script",
+        "claim_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "HanCharacter"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "character": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1
+        },
+        "codepoint": {
+          "type": "string",
+          "pattern": "^U\\+[0-9A-F]{4,6}$"
+        },
+        "script": {
+          "enum": [
+            "SIMPLIFIED",
+            "TRADITIONAL"
+          ]
+        },
+        "claim_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        }
+      }
+    },
+    "Reading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "pinyin",
+        "tone",
+        "reading_scope",
+        "claim_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Reading"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pinyin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tone": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "reading_scope": {
+          "const": "DICTIONARY_CITATION_FORM"
+        },
+        "claim_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        }
+      }
+    },
+    "Lexeme": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "lemma",
+        "form_refs",
+        "reading_refs",
+        "claim_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Lexeme"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lemma": {
+          "type": "string",
+          "minLength": 1
+        },
+        "form_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        },
+        "reading_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        },
+        "claim_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        }
+      }
+    },
+    "Sense": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "lexeme_ref",
+        "gloss",
+        "part_of_speech",
+        "domain",
+        "claim_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Sense"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lexeme_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "gloss": {
+          "type": "string",
+          "minLength": 1
+        },
+        "part_of_speech": {
+          "const": "VERB"
+        },
+        "domain": {
+          "const": "MONEY_GOODS_TRANSACTION"
+        },
+        "claim_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        }
+      }
+    },
+    "ConditionSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "clauses",
+        "combination",
+        "unknown",
+        "claim_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "ConditionSpec"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clauses": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "field",
+              "equals"
+            ],
+            "properties": {
+              "field": {
+                "enum": [
+                  "domain",
+                  "same_transaction",
+                  "completed",
+                  "from_role",
+                  "to_role"
+                ]
+              },
+              "equals": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "boolean"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "combination": {
+          "const": "ALL"
+        },
+        "unknown": {
+          "const": "UNKNOWN"
+        },
+        "claim_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        }
+      }
+    },
+    "TaskSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "construct",
+        "prompt",
+        "accepted_answers",
+        "sense_ref",
+        "claim_refs",
+        "feedback",
+        "modality",
+        "independence",
+        "scoring"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "TaskSpec"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "construct": {
+          "const": "WRITTEN_CONTEXT_WORD_CHOICE"
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "accepted_answers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "sense_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "claim_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        },
+        "feedback": {
+          "type": "string",
+          "minLength": 1
+        },
+        "modality": {
+          "const": "TEXT"
+        },
+        "independence": {
+          "const": "NO_EXTERNAL_HELP"
+        },
+        "scoring": {
+          "const": "EXACT_MATCH"
+        }
+      }
+    },
+    "FlowSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "entry",
+        "steps",
+        "terminals",
+        "max_events",
+        "claim_refs",
+        "effect",
+        "completion_scope"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "FlowSpec"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entry": {
+          "type": "string",
+          "minLength": 1
+        },
+        "steps": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "task_ref",
+              "max_attempts",
+              "transitions"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "task_ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "max_attempts": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5
+              },
+              "transitions": {
+                "type": "array",
+                "minItems": 5,
+                "maxItems": 5,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "outcome",
+                    "target"
+                  ],
+                  "properties": {
+                    "outcome": {
+                      "enum": [
+                        "CORRECT",
+                        "INCORRECT_RETRY",
+                        "INCORRECT_EXHAUSTED",
+                        "UNKNOWN",
+                        "STOP"
+                      ]
+                    },
+                    "target": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "terminals": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "status"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "ACTIVITY_COMPLETE",
+                  "RETRY_EXHAUSTED",
+                  "UNKNOWN",
+                  "STOPPED"
+                ]
+              }
+            }
+          }
+        },
+        "max_events": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 80
+        },
+        "claim_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/ref"
+          }
+        },
+        "effect": {
+          "const": "OBSERVATION_ONLY"
+        },
+        "completion_scope": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ScenarioCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "target_ref",
+        "mode",
+        "input",
+        "expected",
+        "explanation"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "ScenarioCase"
+        },
+        "owner": {
+          "type": "string",
+          "pattern": "^[KHPAFE][0-9]{2}$"
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "target_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "mode": {
+          "enum": [
+            "relation_condition",
+            "bounded_flow"
+          ]
+        },
+        "input": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "context"
+              ],
+              "properties": {
+                "context": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [],
+                  "properties": {
+                    "domain": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "same_transaction": {
+                      "type": "boolean"
+                    },
+                    "completed": {
+                      "type": "boolean"
+                    },
+                    "from_role": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "to_role": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "authorized",
+                "events"
+              ],
+              "properties": {
+                "authorized": {
+                  "type": "boolean"
+                },
+                "events": {
+                  "type": "array",
+                  "maxItems": 40,
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "event_id",
+                          "event",
+                          "task_id",
+                          "answer",
+                          "independent"
+                        ],
+                        "properties": {
+                          "event_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "event": {
+                            "const": "ANSWER"
+                          },
+                          "task_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "answer": {
+                            "type": "string"
+                          },
+                          "independent": {
+                            "type": "boolean"
+                          }
+                        }
+                      },
+                      {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "event_id",
+                          "event"
+                        ],
+                        "properties": {
+                          "event_id": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "event": {
+                            "const": "EXIT"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "expected": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "APPLIES",
+                    "NOT_APPLICABLE",
+                    "UNKNOWN"
+                  ]
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "state",
+                "processed",
+                "feedback_count",
+                "observations"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "ACTIVITY_COMPLETE",
+                    "RETRY_EXHAUSTED",
+                    "UNKNOWN",
+                    "STOPPED",
+                    "REJECT_PERMISSION",
+                    "REJECT_TASK",
+                    "REJECT_EVENT_CONFLICT",
+                    "INCOMPLETE",
+                    "REJECT_AFTER_TERMINAL",
+                    "BUDGET_EXHAUSTED"
+                  ]
+                },
+                "state": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "processed": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "feedback_count": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "observations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "event_id",
+                      "task_id",
+                      "result"
+                    ],
+                    "properties": {
+                      "event_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "task_id": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "result": {
+                        "enum": [
+                          "CORRECT",
+                          "INCORRECT"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
         }
       }
     }

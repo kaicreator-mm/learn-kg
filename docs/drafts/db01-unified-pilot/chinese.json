@@ -1,0 +1,783 @@
+{
+  "schema_version": "draft-unified-2",
+  "package_id": "learn-kg.draft.unified.chinese",
+  "version": "0.0.2",
+  "status": "INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "zh:source:buy",
+      "kind": "Source",
+      "owner": "H03",
+      "status": "DRAFT",
+      "title": "汉典·买条",
+      "authors": [
+        "汉典"
+      ],
+      "identifier": "https://zdic.net/hans/%E4%B9%B0",
+      "url": "https://zdic.net/hans/%E4%B9%B0",
+      "access": "HTML_ENTRY_READ_2026-11-26",
+      "rights": "原创有限概括；不复制辞书正文，正式权利资格未审核",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "zh:loc:buy",
+      "kind": "EvidenceLocator",
+      "owner": "H03",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:source:buy",
+        "kind": "Source"
+      },
+      "location": "字头拼音、统一码、基本解释第1义、详细解释动词本义",
+      "scope": "简繁字形、普通话字典读音、交易义项",
+      "verification": "HTML_ENTRY_READ"
+    },
+    {
+      "stable_id": "zh:claim:buy-form",
+      "kind": "Claim",
+      "owner": "H02",
+      "status": "DRAFT",
+      "conditions": [
+        "限所引辞书条目及本试点普通话交易语境"
+      ],
+      "limitations": [
+        "不覆盖所有词义、方言、变调或规范版本"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:buy",
+          "kind": "EvidenceLocator"
+        }
+      ],
+      "claim_type": "DEFINITION",
+      "topic": "H02.01.02",
+      "statement": "买与買为此字头的简繁对应形式；编码身份仍分别保存。"
+    },
+    {
+      "stable_id": "zh:claim:buy-reading",
+      "kind": "Claim",
+      "owner": "H01",
+      "status": "DRAFT",
+      "conditions": [
+        "限所引辞书条目及本试点普通话交易语境"
+      ],
+      "limitations": [
+        "不覆盖所有词义、方言、变调或规范版本"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:buy",
+          "kind": "EvidenceLocator"
+        }
+      ],
+      "claim_type": "DEFINITION",
+      "topic": "H01.05.01",
+      "statement": "在此词义和字典读音中，买读作mǎi，词汇调为第3声。"
+    },
+    {
+      "stable_id": "zh:claim:buy-sense",
+      "kind": "Claim",
+      "owner": "H03",
+      "status": "DRAFT",
+      "conditions": [
+        "限所引辞书条目及本试点普通话交易语境"
+      ],
+      "limitations": [
+        "不覆盖所有词义、方言、变调或规范版本"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:buy",
+          "kind": "EvidenceLocator"
+        }
+      ],
+      "claim_type": "DEFINITION",
+      "topic": "H03.01.04",
+      "statement": "在通常金钱与货物的交易中，从取得货物的一方描述这一行为。"
+    },
+    {
+      "stable_id": "zh:char:buy-sc",
+      "kind": "HanCharacter",
+      "owner": "H02",
+      "status": "DRAFT",
+      "topic": "H02.01.01",
+      "character": "买",
+      "codepoint": "U+4E70",
+      "script": "SIMPLIFIED",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:buy-form",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:char:buy-tc",
+      "kind": "HanCharacter",
+      "owner": "H02",
+      "status": "DRAFT",
+      "topic": "H02.01.01",
+      "character": "買",
+      "codepoint": "U+8CB7",
+      "script": "TRADITIONAL",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:buy-form",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:reading:buy",
+      "kind": "Reading",
+      "owner": "H01",
+      "status": "DRAFT",
+      "topic": "H01.05.01",
+      "pinyin": "mǎi",
+      "tone": 3,
+      "reading_scope": "DICTIONARY_CITATION_FORM",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:buy-reading",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:lexeme:buy",
+      "kind": "Lexeme",
+      "owner": "H03",
+      "status": "DRAFT",
+      "topic": "H03.01.04",
+      "lemma": "买",
+      "form_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:char:buy-sc",
+          "kind": "HanCharacter"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:char:buy-tc",
+          "kind": "HanCharacter"
+        }
+      ],
+      "reading_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:reading:buy",
+          "kind": "Reading"
+        }
+      ],
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:buy-sense",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:sense:buy",
+      "kind": "Sense",
+      "owner": "H03",
+      "status": "DRAFT",
+      "topic": "H03.03.03",
+      "lexeme_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:lexeme:buy",
+        "kind": "Lexeme"
+      },
+      "gloss": "在通常金钱与货物的交易中，从取得货物的一方描述这一行为。",
+      "part_of_speech": "VERB",
+      "domain": "MONEY_GOODS_TRANSACTION",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:buy-sense",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:relation:buy-variant",
+      "kind": "Relation",
+      "owner": "H02",
+      "status": "DRAFT",
+      "relation_type": "script_variant",
+      "from_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:char:buy-sc",
+        "kind": "HanCharacter"
+      },
+      "to_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:char:buy-tc",
+        "kind": "HanCharacter"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:buy-form",
+          "kind": "Claim"
+        }
+      ],
+      "conditions": [
+        "仅本字头的简繁映射，不做一般性文本转换"
+      ],
+      "transitive": false,
+      "reversible": false
+    },
+    {
+      "stable_id": "zh:source:sell",
+      "kind": "Source",
+      "owner": "H03",
+      "status": "DRAFT",
+      "title": "汉典·卖条",
+      "authors": [
+        "汉典"
+      ],
+      "identifier": "https://zdic.net/hans/%E5%8D%96",
+      "url": "https://zdic.net/hans/%E5%8D%96",
+      "access": "HTML_ENTRY_READ_2026-11-26",
+      "rights": "原创有限概括；不复制辞书正文，正式权利资格未审核",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "zh:loc:sell",
+      "kind": "EvidenceLocator",
+      "owner": "H03",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:source:sell",
+        "kind": "Source"
+      },
+      "location": "字头拼音、统一码、基本解释第1义、详细解释动词本义",
+      "scope": "简繁字形、普通话字典读音、交易义项",
+      "verification": "HTML_ENTRY_READ"
+    },
+    {
+      "stable_id": "zh:claim:sell-form",
+      "kind": "Claim",
+      "owner": "H02",
+      "status": "DRAFT",
+      "conditions": [
+        "限所引辞书条目及本试点普通话交易语境"
+      ],
+      "limitations": [
+        "不覆盖所有词义、方言、变调或规范版本"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:sell",
+          "kind": "EvidenceLocator"
+        }
+      ],
+      "claim_type": "DEFINITION",
+      "topic": "H02.01.02",
+      "statement": "卖与賣为此字头的简繁对应形式；编码身份仍分别保存。"
+    },
+    {
+      "stable_id": "zh:claim:sell-reading",
+      "kind": "Claim",
+      "owner": "H01",
+      "status": "DRAFT",
+      "conditions": [
+        "限所引辞书条目及本试点普通话交易语境"
+      ],
+      "limitations": [
+        "不覆盖所有词义、方言、变调或规范版本"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:sell",
+          "kind": "EvidenceLocator"
+        }
+      ],
+      "claim_type": "DEFINITION",
+      "topic": "H01.05.01",
+      "statement": "在此词义和字典读音中，卖读作mài，词汇调为第4声。"
+    },
+    {
+      "stable_id": "zh:claim:sell-sense",
+      "kind": "Claim",
+      "owner": "H03",
+      "status": "DRAFT",
+      "conditions": [
+        "限所引辞书条目及本试点普通话交易语境"
+      ],
+      "limitations": [
+        "不覆盖所有词义、方言、变调或规范版本"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:sell",
+          "kind": "EvidenceLocator"
+        }
+      ],
+      "claim_type": "DEFINITION",
+      "topic": "H03.01.04",
+      "statement": "在通常金钱与货物的交易中，从交付货物并收取价款的一方描述这一行为。"
+    },
+    {
+      "stable_id": "zh:char:sell-sc",
+      "kind": "HanCharacter",
+      "owner": "H02",
+      "status": "DRAFT",
+      "topic": "H02.01.01",
+      "character": "卖",
+      "codepoint": "U+5356",
+      "script": "SIMPLIFIED",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:sell-form",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:char:sell-tc",
+      "kind": "HanCharacter",
+      "owner": "H02",
+      "status": "DRAFT",
+      "topic": "H02.01.01",
+      "character": "賣",
+      "codepoint": "U+8CE3",
+      "script": "TRADITIONAL",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:sell-form",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:reading:sell",
+      "kind": "Reading",
+      "owner": "H01",
+      "status": "DRAFT",
+      "topic": "H01.05.01",
+      "pinyin": "mài",
+      "tone": 4,
+      "reading_scope": "DICTIONARY_CITATION_FORM",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:sell-reading",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:lexeme:sell",
+      "kind": "Lexeme",
+      "owner": "H03",
+      "status": "DRAFT",
+      "topic": "H03.01.04",
+      "lemma": "卖",
+      "form_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:char:sell-sc",
+          "kind": "HanCharacter"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:char:sell-tc",
+          "kind": "HanCharacter"
+        }
+      ],
+      "reading_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:reading:sell",
+          "kind": "Reading"
+        }
+      ],
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:sell-sense",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:sense:sell",
+      "kind": "Sense",
+      "owner": "H03",
+      "status": "DRAFT",
+      "topic": "H03.03.03",
+      "lexeme_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:lexeme:sell",
+        "kind": "Lexeme"
+      },
+      "gloss": "在通常金钱与货物的交易中，从交付货物并收取价款的一方描述这一行为。",
+      "part_of_speech": "VERB",
+      "domain": "MONEY_GOODS_TRANSACTION",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:sell-sense",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:relation:sell-variant",
+      "kind": "Relation",
+      "owner": "H02",
+      "status": "DRAFT",
+      "relation_type": "script_variant",
+      "from_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:char:sell-sc",
+        "kind": "HanCharacter"
+      },
+      "to_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:char:sell-tc",
+        "kind": "HanCharacter"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:sell-form",
+          "kind": "Claim"
+        }
+      ],
+      "conditions": [
+        "仅本字头的简繁映射，不做一般性文本转换"
+      ],
+      "transitive": false,
+      "reversible": false
+    },
+    {
+      "stable_id": "zh:claim:converse",
+      "kind": "Claim",
+      "owner": "H03",
+      "status": "DRAFT",
+      "topic": "H03.04.02",
+      "claim_type": "DEFINITION",
+      "statement": "在同一笔已完成的金钱货物交易中，买入与卖出从交易两方描述同一事件。",
+      "conditions": [
+        "已完成同一笔交易",
+        "一方为买方、另一方为卖方",
+        "仅货物与价款的交易义"
+      ],
+      "limitations": [
+        "原创受限语义归纳，不能扩展至所有引申义",
+        "不从一方单独意图推断交易已经完成"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:buy",
+          "kind": "EvidenceLocator"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:loc:sell",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:condition:trade",
+      "kind": "ConditionSpec",
+      "owner": "H03",
+      "status": "DRAFT",
+      "topic": "H03.04.02",
+      "clauses": [
+        {
+          "field": "domain",
+          "equals": "MONEY_GOODS_TRANSACTION"
+        },
+        {
+          "field": "same_transaction",
+          "equals": true
+        },
+        {
+          "field": "completed",
+          "equals": true
+        },
+        {
+          "field": "from_role",
+          "equals": "BUYER"
+        },
+        {
+          "field": "to_role",
+          "equals": "SELLER"
+        }
+      ],
+      "combination": "ALL",
+      "unknown": "UNKNOWN",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:converse",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "zh:relation:converse",
+      "kind": "Relation",
+      "owner": "H03",
+      "status": "DRAFT",
+      "relation_type": "converse_in_context",
+      "from_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:sense:buy",
+        "kind": "Sense"
+      },
+      "to_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:sense:sell",
+        "kind": "Sense"
+      },
+      "condition_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:condition:trade",
+          "kind": "ConditionSpec"
+        }
+      ],
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:claim:converse",
+          "kind": "Claim"
+        }
+      ],
+      "conditions": [
+        "只在结构化条件成立时支持这一语义关系"
+      ],
+      "transitive": false,
+      "reversible": false
+    },
+    {
+      "stable_id": "zh:case:applicable",
+      "kind": "ScenarioCase",
+      "owner": "H03",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:relation:converse",
+        "kind": "Relation"
+      },
+      "mode": "relation_condition",
+      "input": {
+        "context": {
+          "domain": "MONEY_GOODS_TRANSACTION",
+          "same_transaction": true,
+          "completed": true,
+          "from_role": "BUYER",
+          "to_role": "SELLER"
+        }
+      },
+      "expected": {
+        "status": "APPLIES"
+      },
+      "explanation": "合成条件测试；不判定真实交易事实。"
+    },
+    {
+      "stable_id": "zh:case:different-event",
+      "kind": "ScenarioCase",
+      "owner": "H03",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:relation:converse",
+        "kind": "Relation"
+      },
+      "mode": "relation_condition",
+      "input": {
+        "context": {
+          "domain": "MONEY_GOODS_TRANSACTION",
+          "same_transaction": false,
+          "completed": true,
+          "from_role": "BUYER",
+          "to_role": "SELLER"
+        }
+      },
+      "expected": {
+        "status": "NOT_APPLICABLE"
+      },
+      "explanation": "合成条件测试；不判定真实交易事实。"
+    },
+    {
+      "stable_id": "zh:case:figurative",
+      "kind": "ScenarioCase",
+      "owner": "H03",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:relation:converse",
+        "kind": "Relation"
+      },
+      "mode": "relation_condition",
+      "input": {
+        "context": {
+          "domain": "FIGURATIVE",
+          "same_transaction": true,
+          "completed": true,
+          "from_role": "BUYER",
+          "to_role": "SELLER"
+        }
+      },
+      "expected": {
+        "status": "NOT_APPLICABLE"
+      },
+      "explanation": "合成条件测试；不判定真实交易事实。"
+    },
+    {
+      "stable_id": "zh:case:unknown",
+      "kind": "ScenarioCase",
+      "owner": "H03",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:relation:converse",
+        "kind": "Relation"
+      },
+      "mode": "relation_condition",
+      "input": {
+        "context": {
+          "domain": "MONEY_GOODS_TRANSACTION",
+          "same_transaction": true,
+          "from_role": "BUYER",
+          "to_role": "SELLER"
+        }
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "合成条件测试；不判定真实交易事实。"
+    },
+    {
+      "stable_id": "zh:case:wrong-role",
+      "kind": "ScenarioCase",
+      "owner": "H03",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:relation:converse",
+        "kind": "Relation"
+      },
+      "mode": "relation_condition",
+      "input": {
+        "context": {
+          "domain": "MONEY_GOODS_TRANSACTION",
+          "same_transaction": true,
+          "completed": true,
+          "from_role": "BUYER",
+          "to_role": "BUYER"
+        }
+      },
+      "expected": {
+        "status": "NOT_APPLICABLE"
+      },
+      "explanation": "合成条件测试；不判定真实交易事实。"
+    },
+    {
+      "stable_id": "zh:validation:conditions",
+      "kind": "ValidationSpec",
+      "owner": "H03",
+      "status": "DRAFT",
+      "case_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:case:applicable",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:case:different-event",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:case:figurative",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:case:unknown",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "stable_id": "zh:case:wrong-role",
+          "kind": "ScenarioCase"
+        }
+      ],
+      "method": "Builder-authored fixed cases; inspect actual output against expected; no professional qualification",
+      "run_status": "NOT_RUN",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}
