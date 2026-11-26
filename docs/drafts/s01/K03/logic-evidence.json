@@ -1,0 +1,110 @@
+{
+  "scope": "BUILDER_SYNTHETIC_LOGIC_ONLY",
+  "base": "10aaa8c19848e365d01c1f350f82df6c4cac9761",
+  "method": "实际JS执行固定三值ALL/ANY、空路径拒绝、二列二元任务覆盖签名比较、单向蕴含及冲突判别。输入与预期由Builder指定；签名不同只表明设计结构有差异，不证明统计可识别或掌握。非正式推理器。",
+  "results": [
+    {
+      "id": "K03.PATH01",
+      "expected": "TRUE",
+      "actual": "TRUE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.PATH02",
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.PATH03",
+      "expected": "FALSE",
+      "actual": "FALSE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.PATH04",
+      "expected": "TRUE",
+      "actual": "TRUE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.PATH05",
+      "expected": "REJECT_EMPTY_PATH",
+      "actual": "REJECT_EMPTY_PATH",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.PATH06",
+      "expected": "REJECT_EMPTY_PATH",
+      "actual": "REJECT_EMPTY_PATH",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.COND01",
+      "expected": "TRUE",
+      "actual": "TRUE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.COND02",
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.COND03",
+      "expected": "FALSE",
+      "actual": "FALSE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.COND04",
+      "expected": "REJECT_EMPTY_CONDITION",
+      "actual": "REJECT_EMPTY_CONDITION",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.KC01",
+      "expected": "INDISTINGUISHABLE",
+      "actual": "INDISTINGUISHABLE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.KC02",
+      "expected": "DISTINCT_SIGNATURES_ONLY",
+      "actual": "DISTINCT_SIGNATURES_ONLY",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.KC03",
+      "expected": "REJECT_SHAPE",
+      "actual": "REJECT_SHAPE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.KC04",
+      "expected": "UNOBSERVED_COMPONENT",
+      "actual": "UNOBSERVED_COMPONENT",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.LOG01",
+      "expected": "CONSEQUENT_FOLLOWS_UNDER_RULE",
+      "actual": "CONSEQUENT_FOLLOWS_UNDER_RULE",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.LOG02",
+      "expected": "PREMISE_UNKNOWN",
+      "actual": "PREMISE_UNKNOWN",
+      "status": "PASS_LOGIC_ONLY"
+    },
+    {
+      "id": "K03.LOG03",
+      "expected": "CONFLICT_WITH_RULE",
+      "actual": "CONFLICT_WITH_RULE",
+      "status": "PASS_LOGIC_ONLY"
+    }
+  ],
+  "qualification": "NOT_RUN"
+}
