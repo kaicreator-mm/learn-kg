@@ -1,0 +1,77 @@
+{
+  "status": "SCOPED_REMEDIATION_CANDIDATE_ONLY",
+  "original_fail_open_reproduced": [
+    "ELIGIBLE_FOR_SEPARATE_DELIVERY_REVIEW",
+    "ELIGIBLE_FOR_SEPARATE_RELEASE_DECISION",
+    "ELIGIBLE_FOR_SEPARATE_RELEASE_DECISION"
+  ],
+  "gate_results": {
+    "content": {
+      "passed": 19,
+      "ids": [
+        "valid",
+        "missing_all_versions",
+        "null_version",
+        "empty_version",
+        "stale_content",
+        "missing_content_id",
+        "missing_receipt",
+        "receipt_missing_version",
+        "receipt_empty_id",
+        "missing_evidence",
+        "duplicate_receipt",
+        "wrong_version",
+        "wrong_digest",
+        "wrong_content",
+        "author_self_review",
+        "independence_unknown",
+        "failed_check",
+        "unknown_check",
+        "unknown_auth"
+      ]
+    },
+    "improvement": {
+      "passed": 23,
+      "ids": [
+        "valid",
+        "missing_all_versions",
+        "null_protocol",
+        "empty_candidate",
+        "wrong_protocol_id",
+        "stale_protocol",
+        "wrong_candidate_id",
+        "stale_candidate",
+        "withdrawal_missing",
+        "withdrawal_null",
+        "withdrawal_wrong_type",
+        "withdrawal_priority",
+        "unknown_auth",
+        "no_ethics",
+        "no_comparison",
+        "safety_unknown",
+        "negative",
+        "inconclusive",
+        "author_self_review",
+        "missing_review_receipt",
+        "stale_review_binding",
+        "missing_approval_receipt",
+        "wrong_approval_binding"
+      ]
+    }
+  },
+  "recorded_locator_rows": 974,
+  "locator_status_counts": {
+    "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 388,
+    "HOLD_CLAIM_LOCATOR_MISSING": 576,
+    "HOLD_MULTI_SOURCE_ATTRIBUTION": 10
+  },
+  "K01_locator_query": [
+    "evidence_locator_note",
+    "PDF p.176引言；定义保留时点条件",
+    "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED"
+  ],
+  "narrowed_relation": "D3G-R15",
+  "qualification": "NOT_RUN",
+  "persistent_db_files": 0,
+  "oracle": "SAME_AUTHOR_FIXED_EXPECTATIONS"
+}
