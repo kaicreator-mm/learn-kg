@@ -1,0 +1,284 @@
+{
+  "owner": "K17",
+  "base": "a37a09b513d61d78b1638b77a33bb0123a97fdc0",
+  "status": "SYNTHETIC_BUILDER_ONLY",
+  "execution": "ACTUAL_JS_BUILDER_EXECUTION",
+  "independent_oracle": false,
+  "passed": 13,
+  "records": [
+    {
+      "id": "K17-LOGIC-1",
+      "input": {
+        "mode": "standardize",
+        "strata": [
+          {
+            "id": "high",
+            "n1": 10,
+            "y1": 8,
+            "n0": 90,
+            "y0": 63,
+            "w": 0.5
+          },
+          {
+            "id": "low",
+            "n1": 90,
+            "y1": 36,
+            "n0": 10,
+            "y0": 3,
+            "w": 0.5
+          }
+        ]
+      },
+      "expected": {
+        "crude": -0.22,
+        "standardized": 0.1
+      },
+      "actual": {
+        "crude": -0.22000000000000003,
+        "standardized": 0.10000000000000006
+      },
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-2",
+      "input": {
+        "mode": "standardize",
+        "strata": [
+          {
+            "id": "a",
+            "n1": 10,
+            "y1": 6,
+            "n0": 10,
+            "y0": 4,
+            "w": 1
+          }
+        ]
+      },
+      "expected": {
+        "crude": 0.2,
+        "standardized": 0.2
+      },
+      "actual": {
+        "crude": 0.19999999999999996,
+        "standardized": 0.19999999999999996
+      },
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-3",
+      "input": {
+        "mode": "standardize",
+        "strata": [
+          {
+            "id": "a",
+            "n1": 0,
+            "y1": 0,
+            "n0": 10,
+            "y0": 5,
+            "w": 1
+          }
+        ]
+      },
+      "expected": "HOLD_SUPPORT",
+      "actual": "HOLD_SUPPORT",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-4",
+      "input": {
+        "mode": "standardize",
+        "strata": [
+          {
+            "id": "a",
+            "n1": 10,
+            "y1": 6,
+            "n0": 10,
+            "y0": 4,
+            "w": 0.8
+          }
+        ]
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-5",
+      "input": {
+        "mode": "standardize",
+        "strata": [
+          {
+            "id": "a",
+            "n1": 10,
+            "y1": 11,
+            "n0": 10,
+            "y0": 4,
+            "w": 1
+          }
+        ]
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-6",
+      "input": {
+        "mode": "iv",
+        "studies": [
+          {
+            "id": "a",
+            "effect": 1,
+            "se": 1
+          },
+          {
+            "id": "b",
+            "effect": 3,
+            "se": 1
+          }
+        ],
+        "sameScale": true,
+        "independent": true,
+        "commonEffect": true
+      },
+      "expected": {
+        "effect": 2,
+        "se": 0.7071067811865476
+      },
+      "actual": {
+        "effect": 2,
+        "se": 0.7071067811865475
+      },
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-7",
+      "input": {
+        "mode": "iv",
+        "studies": [
+          {
+            "id": "a",
+            "effect": 1,
+            "se": 1
+          },
+          {
+            "id": "b",
+            "effect": 3,
+            "se": 2
+          }
+        ],
+        "sameScale": true,
+        "independent": true,
+        "commonEffect": true
+      },
+      "expected": {
+        "effect": 1.4,
+        "se": 0.8944271909999159
+      },
+      "actual": {
+        "effect": 1.4,
+        "se": 0.8944271909999159
+      },
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-8",
+      "input": {
+        "mode": "iv",
+        "studies": [
+          {
+            "id": "a",
+            "effect": 1,
+            "se": 0
+          }
+        ],
+        "sameScale": true,
+        "independent": true,
+        "commonEffect": true
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-9",
+      "input": {
+        "mode": "iv",
+        "studies": [
+          {
+            "id": "a",
+            "effect": 1,
+            "se": 1
+          },
+          {
+            "id": "b",
+            "effect": 3,
+            "se": 1
+          }
+        ],
+        "sameScale": true,
+        "independent": false,
+        "commonEffect": true
+      },
+      "expected": "HOLD_ASSUMPTION",
+      "actual": "HOLD_ASSUMPTION",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-10",
+      "input": {
+        "mode": "iv",
+        "studies": [
+          {
+            "id": "a",
+            "effect": 1,
+            "se": 1
+          }
+        ],
+        "sameScale": false,
+        "independent": true,
+        "commonEffect": true
+      },
+      "expected": "HOLD_ASSUMPTION",
+      "actual": "HOLD_ASSUMPTION",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-11",
+      "input": {
+        "mode": "identify",
+        "exchangeability": "yes",
+        "positivity": "yes",
+        "consistency": "yes"
+      },
+      "expected": "ASSUMPTIONS_ASSERTED_NOT_ESTABLISHED",
+      "actual": "ASSUMPTIONS_ASSERTED_NOT_ESTABLISHED",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-12",
+      "input": {
+        "mode": "identify",
+        "exchangeability": "unknown",
+        "positivity": "yes",
+        "consistency": "yes"
+      },
+      "expected": "HOLD_IDENTIFICATION",
+      "actual": "HOLD_IDENTIFICATION",
+      "pass": true
+    },
+    {
+      "id": "K17-LOGIC-13",
+      "input": {
+        "mode": "identify",
+        "exchangeability": "yes",
+        "positivity": "no",
+        "consistency": "yes"
+      },
+      "expected": "HOLD_IDENTIFICATION",
+      "actual": "HOLD_IDENTIFICATION",
+      "pass": true
+    }
+  ],
+  "limitations": "合成标准化与粗差、共同效应逆方差加权、识别条件守卫；不是因果效应识别或原研究复现。识别条件由输入声明，非证据证明；研究独立性、共同效应、权重及无测量误差等仍待实质论证；预期由Builder构造。"
+}
