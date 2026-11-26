@@ -1,0 +1,60 @@
+{
+  "owner": "H07",
+  "base": "43430ad3bc026d832715d5178f80b37f0549404d",
+  "prior_claim_blob": "4939a31fc992b87fb1215fcb69dc97b0f0464bfe",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H07.04.02.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.04.02",
+      "requirement_id": "H07.04.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "等级标准为课程设计及评价提供参考；课程路径与必要先修关系应另有知识依赖证据。",
+      "conditions": [
+        "公告支持标准用途；先修规则是项目决策，未核具体标准条目。"
+      ],
+      "negative_boundary": "等级次序不是全部知识点的硬先修。",
+      "source_refs": [
+        "H07-B09-MOE"
+      ],
+      "source_locator": "HTML l7–14",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.04.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "已具备高阶阅读的学习者",
+        "expected": "经实际证据选择路径",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H07.04.03.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.04.03",
+      "requirement_id": "H07.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "来源实体、版本、转换活动及责任可分别记录；记录数量对账之外还需验证成员身份与转换语义。",
+      "conditions": [
+        "PROV导读支持谱系分离；成员核对是项目规则，未运行真实导入。"
+      ],
+      "negative_boundary": "两个列表等长不能证明成员相同。",
+      "source_refs": [
+        "H07-B09-PROV"
+      ],
+      "source_locator": "§2.1–2.9 HTML l100–132",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两个版本各2条但一条替换",
+        "expected": "按稳定ID及字段核对",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

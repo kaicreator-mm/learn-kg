@@ -1,0 +1,86 @@
+{
+  "owner": "K15",
+  "base": "43430ad3bc026d832715d5178f80b37f0549404d",
+  "prior_claim_blob": "089e6b6b624fa4597bb4f133ca3876d684852b98",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K15.01.01.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.01.01",
+      "requirement_id": "K15.01.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "多媒体设计可考虑互补表示、空间邻近、去除非必要信息、重点提示及分段；各方法依任务选择。",
+      "conditions": [
+        "本轮仅核摘要；进一步效果及适用性待正文核证。"
+      ],
+      "negative_boundary": "不据此强制移除无障碍字幕。",
+      "source_refs": [
+        "K15-B09-MEDIA"
+      ],
+      "source_locator": "abstract HTML l40",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "K15.01.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "动态流程图配文字",
+        "expected": "设计分段和必要替代文本",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.03.03.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.03.03",
+      "requirement_id": "K15.03.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "复杂图表可提供简短概述和包含量尺、数值、关系及趋势的详细文字替代。",
+      "conditions": [
+        "WAI示例；不保证解释统计不确定性充分。"
+      ],
+      "negative_boundary": "图表替代文本不是教育效度证明。",
+      "source_refs": [
+        "K15-B09-WAI"
+      ],
+      "source_locator": "example 1, HTML l100–114,154–176",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.03.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "学习进度折线图",
+        "expected": "提供同数据表和趋势说明",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.06.04.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.06.04",
+      "requirement_id": "K15.06.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "幂等语义关注重复相同请求的预期效果，而非响应内容或所有日志副作用；同步须另验事件身份和冲突。",
+      "conditions": [
+        "HTTP语义；后半项目规则。"
+      ],
+      "negative_boundary": "不因HTTP方法名就保证业务幂等或处理并发冲突。",
+      "source_refs": [
+        "K15-B09-IDEM"
+      ],
+      "source_locator": "definition and examples HTML l174–183,192–206",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.06.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "同一练习提交重试",
+        "expected": "验证事件只计一次，冲突另列",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "owner": "K17",
+  "base": "43430ad3bc026d832715d5178f80b37f0549404d",
+  "prior_claim_blob": "498623e8d47e2740f442a3a575e5076159effeb6",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K17.01.01.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.01.01",
+      "requirement_id": "K17.01.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "学习评价应基于明确定义的学习模型，以识别现有和目标表现间差距；观测设计需区分代理指标和目标构念。",
+      "conditions": [
+        "结论7-5部分支持；完整构念效度论证另证。"
+      ],
+      "negative_boundary": "登录次数不能单独证明理解提高。",
+      "source_refs": [
+        "K17-B09-SCHOOL"
+      ],
+      "source_locator": "conclusions 7-1,7-2,7-5, HTML l642–660",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.01.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "学习时间增加但迁移未测",
+        "expected": "保持目标能力未知",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.02.01.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.02.01",
+      "requirement_id": "K17.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "分层、整群和便利样本的纳入机制不同；自选和无响应可能影响总体推断。",
+      "conditions": [
+        "教材示例；概率抽样可具有不等纳入概率。"
+      ],
+      "negative_boundary": "不以大样本量自动排除选择偏差。",
+      "source_refs": [
+        "K17-B09-SAMP"
+      ],
+      "source_locator": "HTML l260–280",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "只调查主动报名学员",
+        "expected": "明确目标总体及纳入机制",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.03.01.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.03.01",
+      "requirement_id": "K17.03.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "随机实验通过分配处理并观察结果研究因果；随机抽样是选择研究对象的过程。",
+      "conditions": [
+        "教材结合统计基本区别；随机分配只在概率意义上平衡，聚类分析另证。"
+      ],
+      "negative_boundary": "不保证有限样本恰好平衡。",
+      "source_refs": [
+        "K17-B09-EXP"
+      ],
+      "source_locator": "HTML l23–33",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.03.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "便利样本随机分两种教学",
+        "expected": "内部因果识别条件与总体外推分开",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.03.04.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.03.04",
+      "requirement_id": "K17.03.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "效应修饰需在指定效应尺度下比较分层效应，发现有意义差异时分别报告。",
+      "conditions": [
+        "流行病学方法；中介识别条件尚未直接补证。"
+      ],
+      "negative_boundary": "分层效应差异不是中介路径证据。",
+      "source_refs": [
+        "K17-B09-CDC"
+      ],
+      "source_locator": "HTML l958–962,1111–1126",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.03.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "初学与熟练组教学效果不同",
+        "expected": "分别报告，不自动宣称机制",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.02.04.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.02.04",
+      "requirement_id": "K17.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "先后顺序是因果解释需考虑的条件，同时应检查选择偏差、信息偏差、混杂和计算错误。",
+      "conditions": [
+        "流行病学检查表；时变混杂及重复测量模型另证。"
+      ],
+      "negative_boundary": "纵向先后不能单独证明因果。",
+      "source_refs": [
+        "K17-B09-CDC"
+      ],
+      "source_locator": "HTML l958–962,1111–1126",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.02.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "使用平台后分数提高",
+        "expected": "保留选择及同期教学解释",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.06.03.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.06.03",
+      "requirement_id": "K17.06.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "代表性取决于纳入机制和无响应等；便利样本的结果推广需论证目标总体差异。",
+      "conditions": [
+        "抽样教材；因果效应运输条件未完整支持。"
+      ],
+      "negative_boundary": "不以单校大样本推广所有成人学习者。",
+      "source_refs": [
+        "K17-B09-SAMP"
+      ],
+      "source_locator": "HTML l260–280",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.06.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "仅城市学校测试",
+        "expected": "限定样本范围",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}
