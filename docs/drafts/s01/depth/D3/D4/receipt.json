@@ -1,0 +1,141 @@
+{
+  "status": "CANDIDATE_MEMORY_PROJECTION_ONLY",
+  "sqlite": "3.45.1",
+  "routes": {
+    "learning-core": {
+      "loaded": [
+        "learning-core"
+      ],
+      "files": 172,
+      "roundtrip": 2498,
+      "counts": {
+        "modules": 19,
+        "topics": 475,
+        "claims": 1214,
+        "sources": 334,
+        "cases": 475,
+        "contracts": 0,
+        "edges": 4088,
+        "held_anchors": 0,
+        "overlays": 0,
+        "flows": 0,
+        "flow_steps": 0,
+        "flow_guards": 0,
+        "flow_transitions": 0
+      }
+    },
+    "chinese": {
+      "loaded": [
+        "chinese"
+      ],
+      "files": 74,
+      "roundtrip": 951,
+      "counts": {
+        "modules": 7,
+        "topics": 173,
+        "claims": 498,
+        "sources": 107,
+        "cases": 173,
+        "contracts": 0,
+        "edges": 1606,
+        "held_anchors": 0,
+        "overlays": 0,
+        "flows": 0,
+        "flow_steps": 0,
+        "flow_guards": 0,
+        "flow_transitions": 0
+      }
+    },
+    "learning-process": {
+      "loaded": [
+        "learning-core",
+        "learning-process"
+      ],
+      "files": 175,
+      "roundtrip": 2525,
+      "counts": {
+        "modules": 19,
+        "topics": 475,
+        "claims": 1214,
+        "sources": 334,
+        "cases": 475,
+        "contracts": 27,
+        "edges": 4305,
+        "held_anchors": 0,
+        "overlays": 0,
+        "flows": 1,
+        "flow_steps": 10,
+        "flow_guards": 9,
+        "flow_transitions": 9
+      }
+    },
+    "research-overlay": {
+      "loaded": [
+        "learning-core",
+        "chinese",
+        "learning-process",
+        "research-overlay"
+      ],
+      "files": 253,
+      "roundtrip": 3476,
+      "counts": {
+        "modules": 26,
+        "topics": 648,
+        "claims": 1712,
+        "sources": 441,
+        "cases": 648,
+        "contracts": 27,
+        "edges": 5931,
+        "held_anchors": 189,
+        "overlays": 2,
+        "flows": 1,
+        "flow_steps": 10,
+        "flow_guards": 9,
+        "flow_transitions": 9
+      }
+    }
+  },
+  "checks": [
+    "fk:learning-core",
+    "core_only",
+    "fk:chinese",
+    "chinese_only",
+    "fk:learning-process",
+    "process_no_chinese",
+    "flow_structure",
+    "flow_guard_query",
+    "flow_orphan_guard",
+    "fk:research-overlay",
+    "totals",
+    "binding_count",
+    "depth_count",
+    "citation_count",
+    "no_qualified",
+    "no_semantic_promotion",
+    "semantic_count",
+    "held_anchor_unresolved",
+    "query_p05",
+    "query_h01",
+    "index_plan",
+    "sql_wrong_type",
+    "sql_orphan",
+    "sql_duplicate",
+    "unknown_package",
+    "missing_dependency",
+    "stale_dependency",
+    "wrong_file_digest",
+    "duplicate_json_key"
+  ],
+  "count": 29,
+  "query_plan": [
+    [
+      2,
+      0,
+      0,
+      "SEARCH edges USING COVERING INDEX edge_forward (source=? AND type=?)"
+    ]
+  ],
+  "persistent_database_files": 0,
+  "qualification": "NOT_RUN",
+  "oracle": "SAME_AUTHOR_FIXED_ASSERTIONS"
+}
