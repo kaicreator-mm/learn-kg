@@ -1,0 +1,686 @@
+{
+  "owner": "K04",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K04.01.01.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.01.01",
+      "claim_refs": [
+        "K04.01.01.D4.01",
+        "K04.01.01.D4.02"
+      ],
+      "fixture": "会背算法规则但不能完成新输入",
+      "views": {
+        "forward": "规则陈述与独立执行分开",
+        "reverse": "可能是规则选择或工具问题",
+        "intervention": "新输入独立解题",
+        "counterexample": "背公式不算技能"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.01.02.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.01.02",
+      "claim_refs": [
+        "K04.01.02.D4.01",
+        "K04.01.02.D4.02"
+      ],
+      "fixture": "熟悉发音正确辨别，陌生说话者失败",
+      "views": {
+        "forward": "分别记录样本",
+        "reverse": "可能有说话者依赖或设备差",
+        "intervention": "匹配设备使用新说话者",
+        "counterexample": "书面词形不替代听辨"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.01.03.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.01.03",
+      "claim_refs": [
+        "K04.01.03.D4.01",
+        "K04.01.03.D4.02"
+      ],
+      "fixture": "模拟操作即时准确，次日无测验",
+      "views": {
+        "forward": "仅即时表现",
+        "reverse": "保持未知",
+        "intervention": "安全独立延迟测验",
+        "counterexample": "模拟不证明资格"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.01.04.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.01.04",
+      "claim_refs": [
+        "K04.01.04.D4.01",
+        "K04.01.04.D4.02"
+      ],
+      "fixture": "分别完成两个步骤，合并任务失败",
+      "views": {
+        "forward": "综合证据不足",
+        "reverse": "协调或条件选择困难",
+        "intervention": "完整任务及分项观测",
+        "counterexample": "相加不保证综合"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.02.01.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.02.01",
+      "claim_refs": [
+        "K04.02.01.D4.01",
+        "K04.02.01.D4.02"
+      ],
+      "fixture": "看说明能做，撤去说明失败",
+      "views": {
+        "forward": "独立证据缺失",
+        "reverse": "可能需声明指导",
+        "intervention": "逐步撤提示并复测",
+        "counterexample": "速度不等于程序化"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.02.02.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.02.02",
+      "claim_refs": [
+        "K04.02.02.D4.01",
+        "K04.02.02.D4.02",
+        "K04.02.02.D4.03"
+      ],
+      "fixture": "主任务更快，副任务错误增加",
+      "views": {
+        "forward": "双任务权衡",
+        "reverse": "可能改变优先级",
+        "intervention": "同时比较两任务",
+        "counterexample": "不认定完全自动化"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.02.03.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.02.03",
+      "claim_refs": [
+        "K04.02.03.D4.01",
+        "K04.02.03.D4.02",
+        "K04.02.03.D4.03"
+      ],
+      "fixture": "同任务500ms准确95%变400ms准确80%",
+      "views": {
+        "forward": "权衡而非全面改进",
+        "reverse": "判准或速度选择变化",
+        "intervention": "固定准确门槛复测",
+        "counterexample": "不只按速度排序"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.02.04.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.02.04",
+      "claim_refs": [
+        "K04.02.04.D4.01",
+        "K04.02.04.D4.02"
+      ],
+      "fixture": "练习曲线有平台及反弹",
+      "views": {
+        "forward": "保留每次观测",
+        "reverse": "疲劳、换策略或任务差异",
+        "intervention": "匹配条件复测",
+        "counterexample": "不强制阶段"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.03.01.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.03.01",
+      "claim_refs": [
+        "K04.03.01.D4.01",
+        "K04.03.01.D4.02",
+        "K04.03.01.D4.03"
+      ],
+      "fixture": "合成x=2,r=.8,k=.2,e=1",
+      "views": {
+        "forward": "下一状态1.8",
+        "reverse": "参数和误差意义未实测",
+        "intervention": "比较候选更新",
+        "counterexample": "错误不一定改善"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.03.02.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.03.02",
+      "claim_refs": [
+        "K04.03.02.D4.01",
+        "K04.03.02.D4.02",
+        "K04.03.02.D4.03"
+      ],
+      "fixture": "展示反馈后下一题仍错",
+      "views": {
+        "forward": "展示与实际使用分开",
+        "reverse": "理解或应用困难",
+        "intervention": "要求解释并独立复测",
+        "counterexample": "展示非使用"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.03.03.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.03.03",
+      "claim_refs": [
+        "K04.03.03.D4.01",
+        "K04.03.03.D4.02"
+      ],
+      "fixture": "随机排列与成组排列练习",
+      "views": {
+        "forward": "记录排列及剂量",
+        "reverse": "差异可能受任务条件影响",
+        "intervention": "延迟和新任务比较",
+        "counterexample": "不默认随机最佳"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.03.04.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.03.04",
+      "claim_refs": [
+        "K04.03.04.D4.01",
+        "K04.03.04.D4.02"
+      ],
+      "fixture": "综合任务时间增加",
+      "views": {
+        "forward": "瓶颈未知",
+        "reverse": "子技能、资源、协调等",
+        "intervention": "分项与综合对照",
+        "counterexample": "不由时间确定原因"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.04.01.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.04.01",
+      "claim_refs": [
+        "K04.04.01.D4.01",
+        "K04.04.01.D4.02"
+      ],
+      "fixture": "新数字同规则的独立任务",
+      "views": {
+        "forward": "近迁移候选",
+        "reverse": "可能利用表面模板",
+        "intervention": "匹配新例及基线",
+        "counterexample": "重复原题非迁移"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.04.02.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.04.02",
+      "claim_refs": [
+        "K04.04.02.D4.01",
+        "K04.04.02.D4.02"
+      ],
+      "fixture": "课堂原则用于工作问题",
+      "views": {
+        "forward": "记录六类情境维度及内容",
+        "reverse": "可能是先备知识或资源",
+        "intervention": "独立目标与比较",
+        "counterexample": "近迁移不能外推"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.04.03.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.04.03",
+      "claim_refs": [
+        "K04.04.03.D4.01",
+        "K04.04.03.D4.02"
+      ],
+      "fixture": "旧语法规则误用于新构式",
+      "views": {
+        "forward": "可能负迁移",
+        "reverse": "需对照排除其他困难",
+        "intervention": "匹配先备条件测试",
+        "counterexample": "单一错误不证因果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.04.04.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.04.04",
+      "claim_refs": [
+        "K04.04.04.D4.01",
+        "K04.04.04.D4.02"
+      ],
+      "fixture": "学习时读字，测验要求独立听辨",
+      "views": {
+        "forward": "加工要求变化",
+        "reverse": "失败可能是声音识别",
+        "intervention": "分别训练及评价听辨",
+        "counterexample": "材料相同非加工相同"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.05.01.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.05.01",
+      "claim_refs": [
+        "K04.05.01.D4.01",
+        "K04.05.01.D4.02"
+      ],
+      "fixture": "棋局与随机棋子回忆",
+      "views": {
+        "forward": "分别记录有意义与随机布局",
+        "reverse": "组块解释候选",
+        "intervention": "控制呈现时间数量",
+        "counterexample": "不推一般容量"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.05.02.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.05.02",
+      "claim_refs": [
+        "K04.05.02.D4.01",
+        "K04.05.02.D4.02"
+      ],
+      "fixture": "专家遇表面相似但机制不同故障",
+      "views": {
+        "forward": "检查线索与推断",
+        "reverse": "模板误用",
+        "intervention": "近邻反例",
+        "counterexample": "身份不保证正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.05.03.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.05.03",
+      "claim_refs": [
+        "K04.05.03.D4.01",
+        "K04.05.03.D4.02"
+      ],
+      "fixture": "两种策略均可行但成本不同",
+      "views": {
+        "forward": "按条件比较",
+        "reverse": "缺真实资源信息",
+        "intervention": "核预算和目标",
+        "counterexample": "不默认最快"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.05.04.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.05.04",
+      "claim_refs": [
+        "K04.05.04.D4.01",
+        "K04.05.04.D4.02"
+      ],
+      "fixture": "熟练流程遇到新限制",
+      "views": {
+        "forward": "分别测常规与适应表现",
+        "reverse": "可能依赖原模板",
+        "intervention": "提供新约束独立任务",
+        "counterexample": "重复熟练非适应"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.06.01.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.06.01",
+      "claim_refs": [
+        "K04.06.01.D4.01",
+        "K04.06.01.D4.02"
+      ],
+      "fixture": "将对话分为词义选择与产出",
+      "views": {
+        "forward": "组件接口明确",
+        "reverse": "粒度仍待证",
+        "intervention": "分项和整体任务",
+        "counterexample": "分解非必要顺序"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.06.02.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.06.02",
+      "claim_refs": [
+        "K04.06.02.D4.01",
+        "K04.06.02.D4.02"
+      ],
+      "fixture": "两项独立任务正确，同时做出错",
+      "views": {
+        "forward": "协调证据不足",
+        "reverse": "共享资源或时序冲突",
+        "intervention": "匹配双任务",
+        "counterexample": "单项不代表协调"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.06.03.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.06.03",
+      "claim_refs": [
+        "K04.06.03.D4.01",
+        "K04.06.03.D4.02"
+      ],
+      "fixture": "陌生购物任务经提示后完成",
+      "views": {
+        "forward": "提示后迁移候选",
+        "reverse": "自发选择未证",
+        "intervention": "先独立后提示",
+        "counterexample": "不作无提示成功"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K04.06.04.CASE.01",
+      "owner": "K04",
+      "d3_id": "K04.06.04",
+      "claim_refs": [
+        "K04.06.04.D4.01",
+        "K04.06.04.D4.02"
+      ],
+      "fixture": "训练模拟通过，未到真实现场",
+      "views": {
+        "forward": "仅模拟证据",
+        "reverse": "实际条件未知",
+        "intervention": "有权人员合法安全评估",
+        "counterexample": "不授予职业资格"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ],
+  "numerical_cases": [
+    {
+      "id": "K04.FIT01",
+      "mode": "fitts",
+      "input": {
+        "A": 70,
+        "W": 10,
+        "a": 100,
+        "b": 50,
+        "unit_match": true,
+        "calibrated": true
+      },
+      "expected": {
+        "status": "OK",
+        "id": 3,
+        "mt": 250
+      },
+      "claim_ref": "K04.02.03.D4.01"
+    },
+    {
+      "id": "K04.FIT02",
+      "mode": "fitts",
+      "input": {
+        "A": 30,
+        "W": 10,
+        "a": 100,
+        "b": 50,
+        "unit_match": true,
+        "calibrated": true
+      },
+      "expected": {
+        "status": "OK",
+        "id": 2,
+        "mt": 200
+      },
+      "claim_ref": "K04.02.03.D4.01"
+    },
+    {
+      "id": "K04.FIT03",
+      "mode": "fitts",
+      "input": {
+        "A": 70,
+        "W": 0,
+        "a": 100,
+        "b": 50,
+        "unit_match": true,
+        "calibrated": true
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K04.02.03.D4.01"
+    },
+    {
+      "id": "K04.FIT04",
+      "mode": "fitts",
+      "input": {
+        "A": 70,
+        "W": 10,
+        "a": 100,
+        "b": 50,
+        "unit_match": false,
+        "calibrated": true
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K04.02.03.D4.01"
+    },
+    {
+      "id": "K04.FIT05",
+      "mode": "fitts",
+      "input": {
+        "A": 70,
+        "W": 10,
+        "a": 100,
+        "b": 50,
+        "unit_match": true,
+        "calibrated": false
+      },
+      "expected": {
+        "status": "UNKNOWN_CALIBRATION"
+      },
+      "claim_ref": "K04.02.03.D4.01"
+    },
+    {
+      "id": "K04.ERR01",
+      "mode": "adapt",
+      "input": {
+        "x": 2,
+        "r": 0.8,
+        "k": 0.2,
+        "e": 1
+      },
+      "expected": {
+        "status": "OK",
+        "next": 1.8
+      },
+      "claim_ref": "K04.03.01.D4.02"
+    },
+    {
+      "id": "K04.ERR02",
+      "mode": "adapt",
+      "input": {
+        "x": 2,
+        "r": 0.8,
+        "k": 0.2,
+        "e": 0
+      },
+      "expected": {
+        "status": "OK",
+        "next": 1.6
+      },
+      "claim_ref": "K04.03.01.D4.02"
+    },
+    {
+      "id": "K04.ERR03",
+      "mode": "adapt",
+      "input": {
+        "x": 2,
+        "r": 0.8,
+        "k": 0.2,
+        "e": -1
+      },
+      "expected": {
+        "status": "OK",
+        "next": 1.4
+      },
+      "claim_ref": "K04.03.01.D4.02"
+    },
+    {
+      "id": "K04.ERR04",
+      "mode": "adapt",
+      "input": {
+        "x": 2,
+        "r": 1.1,
+        "k": 0.2,
+        "e": 1
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K04.03.01.D4.02"
+    },
+    {
+      "id": "K04.SAT01",
+      "mode": "tradeoff",
+      "input": {
+        "before_t": 500,
+        "after_t": 400,
+        "before_acc": 0.95,
+        "after_acc": 0.8,
+        "matched": true
+      },
+      "expected": {
+        "status": "TRADEOFF"
+      },
+      "claim_ref": "K04.02.03.D4.03"
+    },
+    {
+      "id": "K04.SAT02",
+      "mode": "tradeoff",
+      "input": {
+        "before_t": 500,
+        "after_t": 400,
+        "before_acc": 0.95,
+        "after_acc": 0.95,
+        "matched": true
+      },
+      "expected": {
+        "status": "IMPROVEMENT_CANDIDATE"
+      },
+      "claim_ref": "K04.02.03.D4.03"
+    },
+    {
+      "id": "K04.SAT03",
+      "mode": "tradeoff",
+      "input": {
+        "before_t": 500,
+        "after_t": 400,
+        "before_acc": 0.95,
+        "after_acc": 0.95,
+        "matched": false
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "claim_ref": "K04.02.03.D4.03"
+    },
+    {
+      "id": "K04.SAT04",
+      "mode": "tradeoff",
+      "input": {
+        "before_t": 500,
+        "after_t": 400,
+        "before_acc": 0.95,
+        "after_acc": null,
+        "matched": true
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "claim_ref": "K04.02.03.D4.03"
+    },
+    {
+      "id": "K04.SAT05",
+      "mode": "tradeoff",
+      "input": {
+        "before_t": 500,
+        "after_t": 600,
+        "before_acc": 0.95,
+        "after_acc": 0.9,
+        "matched": true
+      },
+      "expected": {
+        "status": "WORSE_CANDIDATE"
+      },
+      "claim_ref": "K04.02.03.D4.03"
+    }
+  ]
+}
