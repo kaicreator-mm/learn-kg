@@ -67,3 +67,5 @@
 - [DB01 统一可读知识表达调查原型](drafts/db01-unified-pilot/README.md)（保留历史试点，未冻结正式schema）。
 
 - [DB01 统一格式语言实体与有界活动扩展](drafts/db01-unified-pilot/README.md)（调查原型）。
+
+- [K01 全19主题首轮实际专业内容调查稿](drafts/s01/K01/README.md)（D4候选、源定位与四视角案例，非正式K01完成收据）。
