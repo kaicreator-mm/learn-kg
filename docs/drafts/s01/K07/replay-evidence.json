@@ -1,0 +1,25 @@
+{
+  "owner": "K07",
+  "status": "BUILDER_REPLAY_PASS_SCOPED",
+  "tested_head": "1b425fed8ef7f57ec995862cbb3846388f7040e4",
+  "job_id": "job_01M8C7YZ3E00VEDE1XCJAQPVNJ",
+  "server": "aliyun-sg",
+  "node": "v24.21.0",
+  "exit_code": 0,
+  "syntax_check": "PASS",
+  "blob_checks": [
+    {
+      "path": "validate-synthetic.mjs",
+      "sha": "5668091859aaa54c6368c5c1eaab6ad78715a5d0"
+    },
+    {
+      "path": "logic-evidence.json",
+      "sha": "365e8b375091dea987cdc7f42b5948d8355e60ba"
+    }
+  ],
+  "stdout": "validate-synthetic.mjs 5668091859aaa54c6368c5c1eaab6ad78715a5d0\nlogic-evidence.json 365e8b375091dea987cdc7f42b5948d8355e60ba\nv24.21.0\n{\"passed\":22,\"total\":22}\n",
+  "passed": 22,
+  "total": 22,
+  "independent_oracle": false,
+  "limits": "Same 22 fixtures rerun, not 22 additional cases. Only builder-defined synthetic project guards; no independent professional qualification, live learner effects, full graph traversal, authorization system or budget. Temporary isolated directory, no SQLite artifacts."
+}

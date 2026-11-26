@@ -29,3 +29,6 @@
 专业区分：分类维度与必要先修、目标与活动、标准与个体能力、课程覆盖与掌握、推荐与必要关系、替代与等效、发展假设与实际轨迹、学习时长与学习量。Bloom原文pp215/216替代PDF页图核对（另一副本截图重定向登录）；CEFR为语言能力参照，不声明HSK等值。NRC科学学习进程有学科边界；EEF掌握学习低确定性，80–90%非普适阈值。螺旋组织使用二级专业综述，不证明效果；ERIC与EUR-Lex索引重开失败，未用作命题依据。跨域必要依赖、替代路径实证、标准原文完整描述、Bruner原著、直接标准设定研究、来源原始字节与权利仍需核证。
 
 [来源](sources.json) / [命题](claims.json) / [覆盖](coverage.json) / [案例](cases.json) / [跨域](cross-topic-links.json) / [组合设计](composition-design.json) / [逻辑证据](logic-evidence.json) / [可重跑脚本](validate-synthetic.mjs)。22项合成JS检查仅候选守卫，Builder预期，不是独立oracle。21组四视角与3组组合仍NOT_RUN。无正式收据、新Schema或SQLite文件。
+
+## Exact-HEAD replay
+原始逻辑证据记录首次JS执行状态；随后在 aliyun-sg Node v24.21.0 实际回放同一22项：两文件Git Blob一致、node --check通过、22/22通过、exit0。独立预期仍未取得；不重复累计测试数量。[回放证据](replay-evidence.json)。
