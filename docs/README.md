@@ -16,3 +16,9 @@
 
 ## D009 知识体系先行（当前候选入口）
 - [知识体系 R1](product/system/README.md)：通用19域、汉语7域及8类组合能力；D1–D3结构库存、非知识点验收。
+
+## D010 并行图数据库与 HSK 导入
+- [DB01 图数据库设计及数据契约](design/graph-database.md)
+- [HSK01 首批实际导入证据](implementation/hsk-import-r2.md)
+- [导入工具](../tools/hsk_import/README.md)
+任务 #4 DB01、#5 HSK01 与 #3 G01 并行；staging 不等于 accepted。

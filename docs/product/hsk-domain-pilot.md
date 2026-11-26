@@ -37,3 +37,6 @@ has_reading、has_sense、has_component、occurs_in_construction、listed_in_ver
 
 ## D009 当前候选分类
 [汉语学科 D1–D3](system/hsk-taxonomy.md) 为当前体系入口；HSK 是学科目标及覆盖映射，而不是语义分类树。Drive 文件仅参考，按专业体系主动补缺。
+
+## D010 实际导入
+#5 HSK01 已进行全量词汇序号和认读/书写字符记录的候选导入；任务、话题和语法保留所有正文非分隔页块并关联等级，后续做专业分列，能力描述为9记录。见 [R2证据](../implementation/hsk-import-r2.md)。不得将导入量等同知识覆盖、专业资格或真实学习效果。源文件及候选图留私有环境。
