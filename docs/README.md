@@ -38,3 +38,6 @@
 
 ## D013 R2 修正候选
 - [实施与证据合同](implementation/task-execution-contract.md) / [CQ覆盖账本](implementation/coverage-ledger.json)。审核前限制见 #6；SQLite实施基线，历史RDF仅迁移与保全。
+
+## D014 文本优先
+- [可读知识包与SQLite导入合同](design/text-knowledge-package.md) / [原创结构样例](drafts/text-package-example/records.json)。D014草案，版本待审HEAD不变，当前不生成SQLite文件。
