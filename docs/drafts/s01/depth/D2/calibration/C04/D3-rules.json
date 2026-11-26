@@ -1,0 +1,50 @@
+{
+  "status": "PROJECT_RULES_DRAFT",
+  "rules": [
+    {
+      "id": "D3-P08",
+      "refs": [
+        "K05.06.01.D4.01",
+        "K11.01.02.D4.01",
+        "K11.02.04.D4.01",
+        "K16.03.02.D4.01"
+      ],
+      "kind": "CANDIDATE_MODE_SELECTION",
+      "meaning": "给定目标及可行性筛选可选学习模式，而非统计最优策略；保留材料适用性与无障碍条件。"
+    },
+    {
+      "id": "D3-P09",
+      "refs": [
+        "K06.06.03.D4.01",
+        "K09.01.04.D4.01",
+        "K12.05.02.D4.01",
+        "K16.05.01.D4.01"
+      ],
+      "kind": "ERROR_HYPOTHESIS_ROUTING",
+      "meaning": "区分中断、缺失、单次错误及有对照的重复模式；只提出待检验假设，不诊断个人。"
+    },
+    {
+      "id": "D3-P10",
+      "refs": [
+        "K06.06.01.D4.01",
+        "K06.06.02.D4.01",
+        "K08.03.03.D4.01",
+        "K19.04.03.D4.01"
+      ],
+      "kind": "FEEDBACK_CANDIDATE",
+      "meaning": "目标反馈、过程提示、证据纠错分开；尊重本人选择，反馈不当独立证据。"
+    },
+    {
+      "id": "D3-P11",
+      "refs": [
+        "K08.04.02.D4.01",
+        "K16.02.04.D4.01",
+        "K11.02.04.D4.01",
+        "K19.03.02.D4.01"
+      ],
+      "kind": "OPT_IN_INCENTIVE",
+      "meaning": "鼓励、进展反思或自选小目标为候选，不能强制签到或奖励依赖；拒绝、退出及预算优先。"
+    }
+  ],
+  "limits": "Explicit project choices and candidate eligibility; no optimality, diagnosis, incentive delivery or educational effect. Caller booleans not authenticated; expected results same author."
+}
