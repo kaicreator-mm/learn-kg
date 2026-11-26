@@ -1,6 +1,6 @@
 # K07 学习目标、课程与能力体系：首轮调查
 
-基线 0c874360f2ff0bcde25b5623eb9e2c51bc1ff18b，仅S01调查，正式调度HOLD。21个D3、42候选、15来源定位（13正文来源用于命题，另2索引保留）、21组四视角、15研究锚点、3组合设计、22有限逻辑。证据分布 {"HTML_LOCATED_CANDIDATE":20,"PROJECT_POLICY":21,"PDF_LOCATED_CANDIDATE":1}。
+基线 0c874360f2ff0bcde25b5623eb9e2c51bc1ff18b，仅S01调查，正式调度HOLD。21个D3、42候选、15来源定位（12正文来源用于命题、1正文辅助交叉核对、另2索引保留）、21组四视角、15研究锚点、3组合设计、22有限逻辑。证据分布 {"HTML_LOCATED_CANDIDATE":20,"PROJECT_POLICY":21,"PDF_LOCATED_CANDIDATE":1}。
 
 | D3 | 主题 | 候选 |
 |---|---|---:|
