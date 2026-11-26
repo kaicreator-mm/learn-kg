@@ -1,0 +1,1295 @@
+{
+  "status": "ORIGINAL_SYNTHETIC_KNOWLEDGE_CASE_NOT_REAL_LEARNER_DATA",
+  "policy": {
+    "id": "R3-SHARED-RETRIEVAL-01",
+    "version": "v1",
+    "source_refs": [
+      "R2-S02",
+      "R2-S05"
+    ],
+    "purpose": "在已明确目标、初次教学和实际先备证据的条件下，先独立提取，失败后给最小有针对性反馈并渐撤，随后以新材料安排延迟复测。",
+    "conditions": [
+      "同目标构念与明确量规",
+      "独立/辅助证据分离",
+      "记录每次相关接触、练习与反馈时间",
+      "学习者同意且资源可及",
+      "策略参数是案例演示，不是普适建议"
+    ],
+    "decision_order": [
+      "先确认任务与构念可用、角色归属和权限；缺失或歧义先澄清",
+      "若目标组件新或独立证据不足，示范或区分性探查优先；若有独立正确基础且有保持目标，候选为无提示提取",
+      "出现错误，保留原始响应，选择可区分假设的最短任务；反馈指向过程而非人格，最小提示后逐级减少",
+      "延迟复测以最后一次相关接触结束时间计，记录完整性；题面未见且构念、量规、认知要求可比，独立作答",
+      "保留错误和缺失；按当前表现、保持与情境迁移分别记录，不晋升掌握"
+    ],
+    "alternatives": [
+      {
+        "id": "WORKED_EXAMPLE",
+        "when": "无先备证据或反复检索失败",
+        "limits": "有答案不能作为独立表现"
+      },
+      {
+        "id": "REREAD",
+        "when": "恢复缺失信息或材料初见",
+        "limits": "不替代独立提取；本案例不比较教育效果"
+      },
+      {
+        "id": "RETRIEVAL",
+        "when": "已经学过且有独立作答机会",
+        "limits": "不是所有复杂技能的充分练习"
+      },
+      {
+        "id": "DEFER",
+        "when": "超预算、用户拒绝、缺材料或授权",
+        "limits": "不将延期解释为低动机"
+      }
+    ],
+    "min_delay_minutes": 1440,
+    "delay_basis": "最后相关暴露结束时间（含教学、提示、复习、前次测验），本合成例24h，非经校准的阈值",
+    "novelty_basis": "固定候选任务目录及显式暴露记录；family标签自身不足以证明未见。",
+    "knowledge_outcome": "只允许任务得分与保持/迁移证据候选，实际教育效果和潜在掌握UNKNOWN",
+    "claim_refs": [
+      "K05.01.01.D4.01",
+      "K05.02.01.D4.01",
+      "K05.06.01.D4.01",
+      "K06.03.03.D4.01",
+      "K06.06.02.D4.01",
+      "K04.04.01.D4.01",
+      "K08.01.02.R2.20",
+      "K11.02.01.R2.10"
+    ]
+  },
+  "cases": [
+    {
+      "id": "R3-ZH-TRADE-01",
+      "subject": "zh",
+      "version": "candidate-v1",
+      "goal": "给定明确的同笔已完成商品货币交易，学习者能从指定人物视角独立选择买/卖并表达该参与者及物品关系。",
+      "construct": "书面交易义项与角色映射（受控表达）",
+      "rubric": {
+        "id": "ZH-TRADE-RUBRIC-v1",
+        "dimensions": [
+          "role_direction",
+          "lexical_choice",
+          "actor_object"
+        ],
+        "pass_rule": "三个维度均满足；不计总分为一般语言能力",
+        "excluded": [
+          "语音声调",
+          "独立手写笔顺",
+          "真实口语交际",
+          "HSK级别"
+        ]
+      },
+      "source_refs": [
+        "R2-S11",
+        "R2-S12",
+        "R2-S03"
+      ],
+      "topic_refs": [
+        "H03.01.04",
+        "H03.03.03",
+        "H03.04.02",
+        "H03.06.03",
+        "H04.01.02",
+        "H04.07.02",
+        "H06.04.02",
+        "H06.06.03",
+        "H07.02.03"
+      ],
+      "components": [
+        {
+          "id": "ZH-KC-ROLE",
+          "definition": "付款并取得货物者与交货并收款者的角色区分"
+        },
+        {
+          "id": "ZH-KC-LEX",
+          "definition": "买/卖普通商品交易义项与指定参与者角色映射"
+        },
+        {
+          "id": "ZH-KC-EXP",
+          "definition": "指定人物、目标动词、物品的受控书面表达"
+        }
+      ],
+      "relations": [
+        {
+          "from": "ZH-KC-ROLE",
+          "to": "ZH-KC-LEX",
+          "kind": "SUPPORTS_INTERPRETATION",
+          "condition": "已完成单笔商品货币交易、双方身份可识别",
+          "necessity": "NOT_ESTABLISHED"
+        },
+        {
+          "from": "ZH-KC-LEX",
+          "to": "ZH-KC-EXP",
+          "kind": "COMPONENT_OF_TARGET",
+          "condition": "仅此目标定义",
+          "necessity": "STRUCTURAL_NOT_LEARNING_ORDER"
+        }
+      ],
+      "roles": {
+        "learner": "L-ZH",
+        "coach": "C-ZH",
+        "peer": "PEER-ZH",
+        "assessor": "ASSESSOR-ZH",
+        "scope": "合成会话；真实身份未验证；独立评分禁止教练代答"
+      },
+      "resources": [
+        {
+          "id": "ZH-RES-01",
+          "kind": "原创交易卡",
+          "description": "两人物、商品流向、款项流向，不含目标买卖词；用于任务；示范资源另含正确答案",
+          "rights": "ORIGINAL_FIXTURE_NOT_RELEASE_APPROVAL"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "Z0",
+          "family": "F-BASE",
+          "context": "教材书面交易",
+          "prompt": "小林付给小王10元，小王交给小林一本书。指定小林，用买/卖填入句式：小林___了一本书；另写其角色。",
+          "actor": "小林",
+          "object": "书",
+          "goods_from": "小王",
+          "goods_to": "小林",
+          "money_from": "小林",
+          "money_to": "小王",
+          "characteristics": [
+            "completed_trade",
+            "role_given",
+            "text",
+            "controlled_production"
+          ],
+          "phase": "diagnostic",
+          "content_signature": "487f5a33721bbc6118fa6f59cc3b03135bde844ebe8e5393757a7cf40acc00f4",
+          "construct_id": "书面交易义项与角色映射（受控表达）",
+          "rubric_id": "ZH-TRADE-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "zh",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "Z1",
+          "family": "F-PRACTICE",
+          "context": "教材书面交易",
+          "prompt": "阿青付给阿文5元，阿文交给阿青一支笔。指定阿文：阿文___了一支笔；另写角色。",
+          "actor": "阿文",
+          "object": "笔",
+          "goods_from": "阿文",
+          "goods_to": "阿青",
+          "money_from": "阿青",
+          "money_to": "阿文",
+          "characteristics": [
+            "completed_trade",
+            "role_given",
+            "text",
+            "controlled_production"
+          ],
+          "phase": "guided",
+          "content_signature": "d582edc9aaeec8e2551459b01e8c58e7b7573adc5709222605c8fa9fab54c273",
+          "construct_id": "书面交易义项与角色映射（受控表达）",
+          "rubric_id": "ZH-TRADE-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "zh",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "Z2",
+          "family": "F-IMMEDIATE",
+          "context": "教材书面交易",
+          "prompt": "小赵交给小陈一本词典，小陈付给小赵30元。指定小赵：小赵___了一本词典；另写角色。",
+          "actor": "小赵",
+          "object": "词典",
+          "goods_from": "小赵",
+          "goods_to": "小陈",
+          "money_from": "小陈",
+          "money_to": "小赵",
+          "characteristics": [
+            "completed_trade",
+            "role_given",
+            "text",
+            "controlled_production"
+          ],
+          "phase": "immediate",
+          "content_signature": "d8abf9be65027ce76b51ba8dc78ce5bfee4318e25f9092e961dcdac9055b21e0",
+          "construct_id": "书面交易义项与角色映射（受控表达）",
+          "rubric_id": "ZH-TRADE-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "zh",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "Z3",
+          "family": "F-RETENTION",
+          "context": "教材书面交易",
+          "prompt": "小吴付给小郑8元，小郑交给小吴一个杯子。指定小吴：小吴___了一个杯子；另写角色。",
+          "actor": "小吴",
+          "object": "杯子",
+          "goods_from": "小郑",
+          "goods_to": "小吴",
+          "money_from": "小吴",
+          "money_to": "小郑",
+          "characteristics": [
+            "completed_trade",
+            "role_given",
+            "text",
+            "controlled_production"
+          ],
+          "phase": "retention",
+          "content_signature": "fd39c5b0a6b0cb440b093bf864c38e338d7c05c65fd4b1a12bde00e49211a129",
+          "construct_id": "书面交易义项与角色映射（受控表达）",
+          "rubric_id": "ZH-TRADE-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "zh",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "Z4",
+          "family": "F-TRANSFER",
+          "context": "二手市场书面情境",
+          "prompt": "二手摊主小苏把闲置台灯交给顾客小沈，小沈当面付给小苏20元。以摊主小苏为主语：小苏___了台灯；另写角色。",
+          "actor": "小苏",
+          "object": "台灯",
+          "goods_from": "小苏",
+          "goods_to": "小沈",
+          "money_from": "小沈",
+          "money_to": "小苏",
+          "characteristics": [
+            "completed_trade",
+            "role_given",
+            "text",
+            "controlled_production"
+          ],
+          "phase": "near_transfer",
+          "content_signature": "fb659876d6f45b2345302f99d25424fe43fdfe6536e4cfd9fd4903950f7785c0",
+          "construct_id": "书面交易义项与角色映射（受控表达）",
+          "rubric_id": "ZH-TRADE-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "zh",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "Z5",
+          "family": "F-NEGATIVE",
+          "context": "教材书面交易",
+          "prompt": "小杜付给小何3元，小何交给小杜一张明信片。指定小何：小何___了一张明信片；另写角色。",
+          "actor": "小何",
+          "object": "明信片",
+          "goods_from": "小何",
+          "goods_to": "小杜",
+          "money_from": "小杜",
+          "money_to": "小何",
+          "characteristics": [
+            "completed_trade",
+            "role_given",
+            "text",
+            "controlled_production"
+          ],
+          "phase": "retention",
+          "content_signature": "295c4710e2cfc65d0fc293051e4bf80cdbcb44b0e2c6d9c99691a26d5e547766",
+          "construct_id": "书面交易义项与角色映射（受控表达）",
+          "rubric_id": "ZH-TRADE-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "zh",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "Z-AMB",
+          "family": "F-AMB",
+          "context": "无交易信息",
+          "prompt": "他___了一本书。",
+          "actor": "他",
+          "object": "书",
+          "goods_from": null,
+          "goods_to": null,
+          "money_from": null,
+          "money_to": null,
+          "characteristics": [
+            "ambiguous"
+          ],
+          "phase": "invalid",
+          "content_signature": "2eb68a87324af2cfc4c8267cf5f12fba2dbfa7768b21ead9613e67eed2824e6d",
+          "construct_id": "书面交易义项与角色映射（受控表达）",
+          "rubric_id": "ZH-TRADE-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "zh",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        }
+      ],
+      "observations": [
+        {
+          "id": "Z-E0",
+          "task": "Z0",
+          "minute": 0,
+          "response": {
+            "actor": "小林",
+            "verb": "卖",
+            "object": "书",
+            "role": "PAY_RECEIVE"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "role_direction": 1,
+            "lexical_choice": 0,
+            "actor_object": 1
+          },
+          "note": "角色识别正确而动词选择反向；词义映射假设优先但仍需第二题区分"
+        },
+        {
+          "id": "Z-E1",
+          "task": "Z1",
+          "minute": 10,
+          "response": {
+            "actor": "阿文",
+            "verb": "卖",
+            "object": "笔",
+            "role": "GIVE_RECEIVE_MONEY"
+          },
+          "assistance": "HINT",
+          "expected": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "note": "提示：先看谁交货谁收款；不可作独立基线"
+        },
+        {
+          "id": "Z-E2",
+          "task": "Z2",
+          "minute": 20,
+          "response": {
+            "actor": "小赵",
+            "verb": "卖",
+            "object": "词典",
+            "role": "GIVE_RECEIVE_MONEY"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "note": "独立即时证据候选"
+        },
+        {
+          "id": "Z-E3",
+          "task": "Z3",
+          "minute": 1460,
+          "response": {
+            "actor": "小吴",
+            "verb": "买",
+            "object": "杯子",
+            "role": "PAY_RECEIVE"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "note": "合成记录无中途暴露；24小时证据候选"
+        },
+        {
+          "id": "Z-E4",
+          "task": "Z4",
+          "minute": 1470,
+          "response": {
+            "actor": "小苏",
+            "verb": "卖",
+            "object": "台灯",
+            "role": "GIVE_RECEIVE_MONEY"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "note": "新情境书面任务，近迁移候选，非真实交际"
+        },
+        {
+          "id": "Z-E5",
+          "task": "Z5",
+          "minute": 2910,
+          "response": {
+            "actor": "小何",
+            "verb": "买",
+            "object": "明信片",
+            "role": "GIVE_RECEIVE_MONEY"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "role_direction": 1,
+            "lexical_choice": 0,
+            "actor_object": 1
+          },
+          "note": "独立延迟错误保留为负证据，不因前次正确丢弃"
+        },
+        {
+          "id": "Z-E6",
+          "task": "Z-AMB",
+          "minute": 2920,
+          "response": {
+            "actor": "他",
+            "verb": "买",
+            "object": "书",
+            "role": "PAY_RECEIVE"
+          },
+          "assistance": "NONE",
+          "expected": "HOLD_AMBIGUOUS",
+          "note": "无法识别角色，不强制唯一答案"
+        }
+      ],
+      "diagnosis": {
+        "initial": [
+          "买卖词义映射反向",
+          "句子角色解析错误",
+          "材料歧义或未读清"
+        ],
+        "discriminating_probe": "Z0角色答案正确但词反向；另出Z1让学习者先指出交货收款者，再选择动词；如果角色错需重教交易关系；若角色对而词错优先词义对照。Z1提示下正确仅支持补救路径，Z2无提示才可独立记录。",
+        "feedback": "你指出了小林付款并取得书，但选了卖。先把付款取物和交物收款两种角色对照，再尝试另一人物；不提供下一题答案。",
+        "scaffold_fade": "完整例→角色问题提示→无提示受控表达；若角色与词仍混淆，回到区分性探查而不是无限重复。",
+        "remaining_unknown": "是否能在自由书面或口语任务独立使用，实际HSK等级、保持泛化与原因唯一性"
+      },
+      "plan": {
+        "budget_minutes": 12,
+        "alternatives": [
+          {
+            "id": "Z-DIAG",
+            "cost": 3,
+            "goal": "区分角色与词义",
+            "feasible": true
+          },
+          {
+            "id": "Z-WORKED",
+            "cost": 4,
+            "goal": "重建词义映射",
+            "feasible": true
+          },
+          {
+            "id": "Z-RETRIEVE",
+            "cost": 5,
+            "goal": "新题独立提取",
+            "feasible": true
+          },
+          {
+            "id": "Z-DRILL-20",
+            "cost": 20,
+            "goal": "重复原题",
+            "feasible": false
+          }
+        ],
+        "chosen": [
+          "Z-DIAG",
+          "Z-WORKED",
+          "Z-RETRIEVE"
+        ],
+        "reason": "初错角色正确词错，选择短探查和针对示范，再新题独立；20分钟超预算。成本为作者示例，不是实测。",
+        "option_comparison": [
+          {
+            "option": "diagnose+example+independent",
+            "action_ids": [
+              "Z-DIAG",
+              "Z-WORKED",
+              "Z-RETRIEVE"
+            ],
+            "cost": 12,
+            "feasible_budget": true,
+            "coverage": [
+              "discriminate_error",
+              "targeted_support",
+              "independent_observation"
+            ],
+            "selected": true
+          },
+          {
+            "option": "example+independent",
+            "action_ids": [
+              "Z-WORKED",
+              "Z-RETRIEVE"
+            ],
+            "cost": 9,
+            "feasible_budget": true,
+            "coverage": [
+              "targeted_support",
+              "independent_observation"
+            ],
+            "selected": false,
+            "reason": "未先区分初错的竞争解释，虽可行但不符合当前诊断目标"
+          },
+          {
+            "option": "independent_only",
+            "action_ids": [
+              "Z-RETRIEVE"
+            ],
+            "cost": 5,
+            "feasible_budget": true,
+            "coverage": [
+              "independent_observation"
+            ],
+            "selected": false,
+            "reason": "缺少已知错误的针对处理；若已有明确独立基础，可作为后续候选"
+          }
+        ]
+      },
+      "motivation": {
+        "value": "本人选择日常购物表达",
+        "autonomy": "可选教材/二手物品情境，允许拒绝提示或暂停",
+        "competence": "反馈指出角色识别已正确并给下一步，不把词误判归为人格",
+        "relatedness": "可选择同伴互演买方/卖方，独立评价另行",
+        "decline": "拒绝积分奖励仍可继续；若退出停止",
+        "reflection": "说出角色判断依据，下一目标仍由本人协商"
+      },
+      "accessibility": {
+        "alternate": "屏幕阅读器可读的角色/物品/钱流文字，目标仅书面语义关系，须确认实际可用；不把该文字任务当听辨或手写测试",
+        "counterexample": "要求真实声调辨识时，文字显示买/卖及拼音会改变构念，另设任务而非等值替代"
+      },
+      "transfer": {
+        "source": "Z2",
+        "target": "Z4",
+        "shared": "明确商品交易中买/卖角色",
+        "changed": "教材→二手市场书面叙事",
+        "distance": "CANDIDATE_NEAR_CONTEXT_CHANGE",
+        "equivalence": "结构匹配由作者设计，未独立校准",
+        "negative": "同样语句若只表示计划购买、借用或比喻卖力，不能由同笔已完成交易规则外推"
+      },
+      "claim_refs": [
+        "H03.01.04.D4.01",
+        "H03.03.03.D4.01",
+        "H03.04.02.D4.01",
+        "H03.06.03.D4.01",
+        "H04.01.02.D4.01",
+        "H04.07.02.D4.01",
+        "H06.04.02.D4.01",
+        "H06.06.03.D4.01",
+        "K09.01.01.R2.07",
+        "K12.03.05.R2.14"
+      ],
+      "claim_binding_status": "RESEARCH_INPUT_NOT_QUALIFICATION_OR_ENTAILMENT",
+      "exposure_log": [
+        {
+          "id": "initial-teaching",
+          "minute": -5,
+          "kind": "TEACHING",
+          "related": true,
+          "item": "worked-example-only"
+        },
+        {
+          "id": "targeted-feedback",
+          "minute": 11,
+          "kind": "FEEDBACK",
+          "related": true,
+          "item": "guided-example-only"
+        }
+      ]
+    },
+    {
+      "id": "R3-MATH-FRACTION-01",
+      "subject": "math-pilot",
+      "version": "candidate-v1",
+      "goal": "比较两个以同单位表示的正分数大小，独立给出关系及合法的共同单位或交叉乘积理由。",
+      "construct": "正分数数值比较与理由（非仅算法复述）",
+      "rubric": {
+        "id": "M-FRACTION-RUBRIC-v1",
+        "dimensions": [
+          "relation",
+          "valid_justification"
+        ],
+        "pass_rule": "两维均满足；数值关系正确但理由错误不能证明理解",
+        "excluded": [
+          "总体数学能力",
+          "跨不同实物单位实际量比较",
+          "分数加减乘除",
+          "真实职业应用"
+        ]
+      },
+      "source_refs": [
+        "R2-S10",
+        "R2-S02",
+        "R2-S03"
+      ],
+      "topic_refs": [
+        "K14.02.01",
+        "K14.02.02",
+        "K14.02.04",
+        "K14.02.05",
+        "K14.05.04"
+      ],
+      "components": [
+        {
+          "id": "M-KC-UNIT",
+          "definition": "分数是相对于同一单位的数值；分母为正"
+        },
+        {
+          "id": "M-KC-COMPARE",
+          "definition": "a/b与c/d，b,d>0，关系同ad与bc"
+        },
+        {
+          "id": "M-KC-REASON",
+          "definition": "说明等价变换或同单位比较理由"
+        }
+      ],
+      "relations": [
+        {
+          "from": "M-KC-UNIT",
+          "to": "M-KC-COMPARE",
+          "kind": "MATHEMATICAL_CONDITION",
+          "condition": "b,d>0；实际量比较时单位一致",
+          "necessity": "LOGICAL_TASK_CONDITION_NOT_LEARNING_SEQUENCE"
+        },
+        {
+          "from": "M-KC-COMPARE",
+          "to": "M-KC-REASON",
+          "kind": "COMPONENT_OF_TARGET",
+          "condition": "目标要求说明比较依据；交叉乘法不是唯一方法",
+          "necessity": "STRUCTURAL_NOT_LEARNING_ORDER"
+        }
+      ],
+      "roles": {
+        "learner": "L-M",
+        "coach": "C-M",
+        "peer": "PEER-M",
+        "assessor": "ASSESSOR-M",
+        "scope": "合成会话，不与汉语状态合并"
+      },
+      "resources": [
+        {
+          "id": "M-RES-01",
+          "kind": "原创同单位数轴与符号题",
+          "description": "同长度0到1数轴、分数标签；教学时展示等价变换，独立任务不显示答案",
+          "rights": "ORIGINAL_FIXTURE_NOT_RELEASE_APPROVAL"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "M0",
+          "family": "F-BASE",
+          "context": "符号比较",
+          "prompt": "比较3/5和2/3，并说明理由。",
+          "a": [
+            3,
+            5
+          ],
+          "b": [
+            2,
+            3
+          ],
+          "same_unit": true,
+          "characteristics": [
+            "positive_proper",
+            "unequal_num_den",
+            "same_unit",
+            "justify"
+          ],
+          "phase": "diagnostic",
+          "content_signature": "1dc4ce01bed6feb8e02c366a426a7466caa3f58b069eea9e872c7bfa80b0e277",
+          "construct_id": "正分数数值比较与理由（非仅算法复述）",
+          "rubric_id": "M-FRACTION-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "math-pilot",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "M1",
+          "family": "F-PRACTICE",
+          "context": "符号比较",
+          "prompt": "比较2/5和1/2，并解释。",
+          "a": [
+            2,
+            5
+          ],
+          "b": [
+            1,
+            2
+          ],
+          "same_unit": true,
+          "characteristics": [
+            "positive_proper",
+            "unequal_num_den",
+            "same_unit",
+            "justify"
+          ],
+          "phase": "guided",
+          "content_signature": "3501624b5e45f0287624b0ab8a4c64e08861a554449ea4b091c1309cb0f3254e",
+          "construct_id": "正分数数值比较与理由（非仅算法复述）",
+          "rubric_id": "M-FRACTION-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "math-pilot",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "M2",
+          "family": "F-IMMEDIATE",
+          "context": "符号比较",
+          "prompt": "比较4/7和3/5，并解释。",
+          "a": [
+            4,
+            7
+          ],
+          "b": [
+            3,
+            5
+          ],
+          "same_unit": true,
+          "characteristics": [
+            "positive_proper",
+            "unequal_num_den",
+            "same_unit",
+            "justify"
+          ],
+          "phase": "immediate",
+          "content_signature": "17c637a4ffaa493d387108a52b135daad96fa3a3fe6ef264ee212e71032df7ab",
+          "construct_id": "正分数数值比较与理由（非仅算法复述）",
+          "rubric_id": "M-FRACTION-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "math-pilot",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "M3",
+          "family": "F-RETENTION",
+          "context": "符号比较",
+          "prompt": "比较5/8和2/3，并解释。",
+          "a": [
+            5,
+            8
+          ],
+          "b": [
+            2,
+            3
+          ],
+          "same_unit": true,
+          "characteristics": [
+            "positive_proper",
+            "unequal_num_den",
+            "same_unit",
+            "justify"
+          ],
+          "phase": "retention",
+          "content_signature": "8c83e2073b08cd71c1c9f1a3212872f7947a2eee78593091b0ef3ebe2e66c931",
+          "construct_id": "正分数数值比较与理由（非仅算法复述）",
+          "rubric_id": "M-FRACTION-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "math-pilot",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "M4",
+          "family": "F-TRANSFER",
+          "context": "同规格量杯情境",
+          "prompt": "两只相同容量量杯，甲杯装3/4，乙杯装5/7，哪杯实际水更多？说明同容量条件及比较。",
+          "a": [
+            3,
+            4
+          ],
+          "b": [
+            5,
+            7
+          ],
+          "same_unit": true,
+          "characteristics": [
+            "positive_proper",
+            "unequal_num_den",
+            "same_unit",
+            "justify"
+          ],
+          "phase": "near_transfer",
+          "content_signature": "164d849379290e822ea045b3e04308db004e1cdb76337cf1c7debafc40718b8f",
+          "construct_id": "正分数数值比较与理由（非仅算法复述）",
+          "rubric_id": "M-FRACTION-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "math-pilot",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "M5",
+          "family": "F-NEGATIVE",
+          "context": "符号比较",
+          "prompt": "比较3/8和2/5，并解释。",
+          "a": [
+            3,
+            8
+          ],
+          "b": [
+            2,
+            5
+          ],
+          "same_unit": true,
+          "characteristics": [
+            "positive_proper",
+            "unequal_num_den",
+            "same_unit",
+            "justify"
+          ],
+          "phase": "retention",
+          "content_signature": "7f620af89d549cd4e4b973ee6d77ce3804f325e1a5509882d606b2779e88e114",
+          "construct_id": "正分数数值比较与理由（非仅算法复述）",
+          "rubric_id": "M-FRACTION-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "math-pilot",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        },
+        {
+          "id": "M-AMB",
+          "family": "F-AMB",
+          "context": "不同容量未知",
+          "prompt": "甲杯装3/4，乙杯装5/7，容量未知，哪杯实际水更多？",
+          "a": [
+            3,
+            4
+          ],
+          "b": [
+            5,
+            7
+          ],
+          "same_unit": null,
+          "characteristics": [
+            "unit_unknown"
+          ],
+          "phase": "invalid",
+          "content_signature": "29fce68ce4dd72dfd67d182c6cd78212c063c0345ca4c2483a5055bb2be3a1aa",
+          "construct_id": "正分数数值比较与理由（非仅算法复述）",
+          "rubric_id": "M-FRACTION-RUBRIC-v1",
+          "knowledge_version": "candidate-v1",
+          "subject": "math-pilot",
+          "comparability_status": "AUTHOR_CONTROLLED_CHARACTERISTICS_NOT_CALIBRATED"
+        }
+      ],
+      "observations": [
+        {
+          "id": "M-E0",
+          "task": "M0",
+          "minute": 0,
+          "response": {
+            "relation": ">",
+            "method": "NUMERATOR_ONLY",
+            "reason": "3比2大"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "relation": 0,
+            "valid_justification": 0
+          },
+          "note": "分子大小启发式候选；可能也有单位混淆"
+        },
+        {
+          "id": "M-E1",
+          "task": "M1",
+          "minute": 10,
+          "response": {
+            "relation": "<",
+            "method": "COMMON_DENOM",
+            "denominator": 10,
+            "left_n": 4,
+            "right_n": 5,
+            "reason": "同为十分之一单位"
+          },
+          "assistance": "HINT",
+          "expected": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "note": "教练提示同分母，辅助证据"
+        },
+        {
+          "id": "M-E2",
+          "task": "M2",
+          "minute": 20,
+          "response": {
+            "relation": "<",
+            "method": "CROSS",
+            "left_product": 20,
+            "right_product": 21,
+            "reason": "两分母为正，乘共同正数不改变不等号"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "note": "独立即时候选"
+        },
+        {
+          "id": "M-E3",
+          "task": "M3",
+          "minute": 1460,
+          "response": {
+            "relation": "<",
+            "method": "COMMON_DENOM",
+            "denominator": 24,
+            "left_n": 15,
+            "right_n": 16,
+            "reason": "分数化为同一正单位后比较分子"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "note": "独立延迟候选，题目新且无中间暴露"
+        },
+        {
+          "id": "M-E4",
+          "task": "M4",
+          "minute": 1470,
+          "response": {
+            "relation": ">",
+            "method": "CROSS",
+            "left_product": 21,
+            "right_product": 20,
+            "reason": "容量相同，两分母为正，比较21和20",
+            "same_unit_ack": true
+          },
+          "assistance": "NONE",
+          "expected": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "note": "近情境迁移候选"
+        },
+        {
+          "id": "M-E5",
+          "task": "M5",
+          "minute": 2910,
+          "response": {
+            "relation": ">",
+            "method": "NUMERATOR_ONLY",
+            "reason": "3比2大"
+          },
+          "assistance": "NONE",
+          "expected": {
+            "relation": 0,
+            "valid_justification": 0
+          },
+          "note": "保留独立延迟错误；不能由前次成功自动晋升掌握"
+        },
+        {
+          "id": "M-E6",
+          "task": "M-AMB",
+          "minute": 2920,
+          "response": {
+            "relation": ">",
+            "method": "CROSS",
+            "left_product": 21,
+            "right_product": 20,
+            "reason": "3/4>5/7"
+          },
+          "assistance": "NONE",
+          "expected": "HOLD_UNIT_UNKNOWN",
+          "note": "比例数值正确，不推出未知容量的实际水量"
+        }
+      ],
+      "diagnosis": {
+        "initial": [
+          "把分子当独立整数比较",
+          "不理解等分单位",
+          "乘法计算错误"
+        ],
+        "discriminating_probe": "让学习者先比3/5与2/5（同单位），再标出1/2与2/4同一点，最后单独算3×3及2×5。第一题不能独自排除分子启发式；数轴任务区分单位理解，乘积算术核对区分计算问题；这些探查需真实响应才排除假设。",
+        "feedback": "你比较了分子，却没有比较每份大小。画同单位数轴或将分数变成同分母，再比较；先做M1有支架，M2无提示。",
+        "scaffold_fade": "已解数轴/通分例→提示同单位→独立选择合法方法；允许数轴等合法解释，但本固定评分仅核两个结构化方法，未支持自由解释时转人工。",
+        "remaining_unknown": "自由数学证明、持久泛化及真实情境迁移，分数知识广度"
+      },
+      "plan": {
+        "budget_minutes": 12,
+        "alternatives": [
+          {
+            "id": "M-PROBE",
+            "cost": 3,
+            "goal": "区分单位概念/计算",
+            "feasible": true
+          },
+          {
+            "id": "M-EXAMPLE",
+            "cost": 4,
+            "goal": "图示或等价变换",
+            "feasible": true
+          },
+          {
+            "id": "M-RETRIEVE",
+            "cost": 5,
+            "goal": "无提示新题",
+            "feasible": true
+          },
+          {
+            "id": "M-20",
+            "cost": 20,
+            "goal": "重复原题",
+            "feasible": false
+          }
+        ],
+        "chosen": [
+          "M-PROBE",
+          "M-EXAMPLE",
+          "M-RETRIEVE"
+        ],
+        "reason": "初次分子启发式错误，先诊断而非只重读，选择同单位表示和无提示变式；预算为合成例",
+        "option_comparison": [
+          {
+            "option": "diagnose+example+independent",
+            "action_ids": [
+              "M-PROBE",
+              "M-EXAMPLE",
+              "M-RETRIEVE"
+            ],
+            "cost": 12,
+            "feasible_budget": true,
+            "coverage": [
+              "discriminate_error",
+              "targeted_support",
+              "independent_observation"
+            ],
+            "selected": true
+          },
+          {
+            "option": "example+independent",
+            "action_ids": [
+              "M-EXAMPLE",
+              "M-RETRIEVE"
+            ],
+            "cost": 9,
+            "feasible_budget": true,
+            "coverage": [
+              "targeted_support",
+              "independent_observation"
+            ],
+            "selected": false,
+            "reason": "未先区分初错的竞争解释，虽可行但不符合当前诊断目标"
+          },
+          {
+            "option": "independent_only",
+            "action_ids": [
+              "M-RETRIEVE"
+            ],
+            "cost": 5,
+            "feasible_budget": true,
+            "coverage": [
+              "independent_observation"
+            ],
+            "selected": false,
+            "reason": "缺少已知错误的针对处理；若已有明确独立基础，可作为后续候选"
+          }
+        ]
+      },
+      "motivation": {
+        "value": "本人选择量杯/配方场景的比较目标",
+        "autonomy": "可选数轴或通分方法，可拒绝积分",
+        "competence": "反馈聚焦单位和合法方法，提供适度难度",
+        "relatedness": "可选同伴互相解释，随后单独评分",
+        "decline": "选择暂停则保存计划，不自动重启",
+        "reflection": "说明何时比较实际量需相同整体"
+      },
+      "accessibility": {
+        "alternate": "键盘可输入的分数及文本等价变换，或无视觉要求的语音读数；若目标为空间数轴构建，替代任务须重新论证构念",
+        "counterexample": "用计算器代算交叉乘积可支持解释但不测独立乘法，记录辅助"
+      },
+      "transfer": {
+        "source": "M2",
+        "target": "M4",
+        "shared": "正分数大小关系",
+        "changed": "符号任务→同容量量杯场景",
+        "distance": "CANDIDATE_NEAR_CONTEXT_CHANGE",
+        "equivalence": "作者按单位、正分母及解释维度控制，不声称难度等值",
+        "negative": "M-AMB 不同容量未知时不能推断实际量；仅数值比例比较仍有效"
+      },
+      "claim_refs": [
+        "K14.02.01.D4.01",
+        "K14.02.02.D4.01",
+        "K14.02.04.D4.01",
+        "K14.02.05.D4.01",
+        "K03.03.02.R2.04",
+        "K09.01.01.R2.07",
+        "K11.01.03.R2.09",
+        "K12.04.02.R2.15"
+      ],
+      "claim_binding_status": "RESEARCH_INPUT_NOT_QUALIFICATION_OR_ENTAILMENT",
+      "exposure_log": [
+        {
+          "id": "initial-teaching",
+          "minute": -5,
+          "kind": "TEACHING",
+          "related": true,
+          "item": "worked-example-only"
+        },
+        {
+          "id": "targeted-feedback",
+          "minute": 11,
+          "kind": "FEEDBACK",
+          "related": true,
+          "item": "guided-example-only"
+        }
+      ]
+    }
+  ],
+  "history_cases": [
+    {
+      "id": "no_intervening_exposure",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [],
+      "expected": "RETENTION_POSITIVE_CANDIDATE"
+    },
+    {
+      "id": "practice_at_1430",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [
+        {
+          "minute": 1430,
+          "kind": "PRACTICE",
+          "related": true,
+          "item": "X"
+        }
+      ],
+      "expected": "HOLD_DELAY_FROM_LAST_EXPOSURE"
+    },
+    {
+      "id": "hint_at_1450",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [
+        {
+          "minute": 1450,
+          "kind": "FEEDBACK",
+          "related": true,
+          "item": "X"
+        }
+      ],
+      "expected": "HOLD_DELAY_FROM_LAST_EXPOSURE"
+    },
+    {
+      "id": "unseen_history_unknown",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": false,
+      "exposures": [],
+      "expected": "HOLD_EXPOSURE_HISTORY"
+    },
+    {
+      "id": "same_item_preview",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [
+        {
+          "minute": 21,
+          "kind": "PREVIEW_TARGET",
+          "related": true,
+          "item": "TARGET"
+        }
+      ],
+      "expected": "HOLD_ITEM_PREEXPOSED"
+    },
+    {
+      "id": "same_family_new_label_not_equivalent",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [],
+      "equivalence": false,
+      "expected": "HOLD_COMPARABILITY"
+    },
+    {
+      "id": "assisted_target",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [],
+      "assistance": "HINT",
+      "expected": "HOLD_ASSISTANCE"
+    },
+    {
+      "id": "wrong_delayed_kept",
+      "baseline": "E3",
+      "target": "E5",
+      "known_complete": true,
+      "exposures": [],
+      "expected": "RETENTION_NEGATIVE_CANDIDATE"
+    },
+    {
+      "id": "missing_response",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [],
+      "missing": true,
+      "expected": "UNKNOWN_MISSING"
+    },
+    {
+      "id": "near_context_change",
+      "baseline": "E2",
+      "target": "E4",
+      "known_complete": true,
+      "exposures": [],
+      "purpose": "TRANSFER",
+      "expected": "NEAR_TRANSFER_CANDIDATE"
+    },
+    {
+      "id": "transfer_not_retention",
+      "baseline": "E2",
+      "target": "E4",
+      "known_complete": true,
+      "exposures": [],
+      "purpose": "RETENTION",
+      "expected": "HOLD_COMPARABILITY"
+    },
+    {
+      "id": "scope_mismatch",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [],
+      "wrong_scope": true,
+      "expected": "HOLD_SCOPE"
+    },
+    {
+      "id": "duplicate_content_new_label",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [],
+      "reuse_baseline_content": true,
+      "expected": "HOLD_ITEM_PREEXPOSED"
+    },
+    {
+      "id": "unknown_relevance",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [
+        {
+          "minute": 1430,
+          "kind": "PRACTICE",
+          "related": null,
+          "item": "UNKNOWN"
+        }
+      ],
+      "expected": "HOLD_EXPOSURE_HISTORY"
+    },
+    {
+      "id": "unrelated_study",
+      "baseline": "E2",
+      "target": "E3",
+      "known_complete": true,
+      "exposures": [
+        {
+          "minute": 1430,
+          "kind": "PRACTICE",
+          "related": false,
+          "item": "OTHER-SUBJECT"
+        }
+      ],
+      "expected": "RETENTION_POSITIVE_CANDIDATE"
+    }
+  ],
+  "history_model": {
+    "event_clock": "synthetic elapsed minutes, observed end of exposure",
+    "default_complete_scope": "assume declared complete only within each finite fixture; real outside practice unknown",
+    "intervening_observations": "all prior same-construct case observations including tasks/feedback contribute exposure except current event; for independent baselines used E2 and E4, E3 between baseline and E4 is known and transfer not delayed test; E5 last practice E4",
+    "novelty": "compare exact item ID plus explicit prompt content digest or canonical signature; same/new family not sufficient, explicit characteristics and declared no preview required",
+    "unknown": "no real calibration, no claim actual student learned"
+  }
+}

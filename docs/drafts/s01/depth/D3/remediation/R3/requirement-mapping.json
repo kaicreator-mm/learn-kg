@@ -1,0 +1,1280 @@
+{
+  "status": "BOUNDED_108_REQUIREMENT_CANDIDATE_MAP_NOT_ACCEPTANCE",
+  "roots": {
+    "cases": "domain-cases.json",
+    "design": "composition-design.json"
+  },
+  "records": [
+    {
+      "contract": "P01",
+      "requirement_id": "P01.RQ01",
+      "original_scope": "模式定义与角色",
+      "evidence_paths": [
+        "/design/modes"
+      ],
+      "interpretation": "八类模式按主体、活动、组织、进阶和社会轴区分，存在重叠，非互斥分类",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P01",
+      "requirement_id": "P01.RQ02",
+      "original_scope": "目标/材料/情境适配",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "同目标初错需引导，已有独立证据才适合独立提取",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P01",
+      "requirement_id": "P01.RQ03",
+      "original_scope": "选择权与切换",
+      "evidence_paths": [
+        "/design/modes",
+        "/design/flow/control"
+      ],
+      "interpretation": "模式切换以证据、同意和预算为前提，可拒绝",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P01",
+      "requirement_id": "P01.RQ04",
+      "original_scope": "适用反例",
+      "evidence_paths": [
+        "/design/modes"
+      ],
+      "interpretation": "各模式分别列适用/不适用；真实效果仍待核",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P02",
+      "requirement_id": "P02.RQ01",
+      "original_scope": "目标协商",
+      "evidence_paths": [
+        "/cases/cases/0/goal",
+        "/cases/cases/1/goal"
+      ],
+      "interpretation": "协商具体书面语义与数学比较目标；不由策略自动决定",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P02",
+      "requirement_id": "P02.RQ02",
+      "original_scope": "诊断与先备激活",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "角色/词义与单位/运算分开探查",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P02",
+      "requirement_id": "P02.RQ03",
+      "original_scope": "资源和时间",
+      "evidence_paths": [
+        "/cases/cases/0/plan",
+        "/cases/cases/1/plan"
+      ],
+      "interpretation": "预算12，明确3+4+5及20分钟不可行",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P02",
+      "requirement_id": "P02.RQ04",
+      "original_scope": "计划及未知",
+      "evidence_paths": [
+        "/design/flow/control",
+        "/cases/policy"
+      ],
+      "interpretation": "暂停、缺条件留未知；竞争目标权重未获授权时询问",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P03",
+      "requirement_id": "P03.RQ01",
+      "original_scope": "活动类型目录",
+      "evidence_paths": [
+        "/design/activities"
+      ],
+      "interpretation": "14种活动分别有材料、产出、限制",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P03",
+      "requirement_id": "P03.RQ02",
+      "original_scope": "目标与对象绑定",
+      "evidence_paths": [
+        "/cases/cases/0/components",
+        "/cases/cases/1/components"
+      ],
+      "interpretation": "明确组件与任务目标；保留项目级组合为候选",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P03",
+      "requirement_id": "P03.RQ03",
+      "original_scope": "行为产出与独立性",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations"
+      ],
+      "interpretation": "独立和提示响应分别标识；仅合成作答",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P03",
+      "requirement_id": "P03.RQ04",
+      "original_scope": "观测和评分条件",
+      "evidence_paths": [
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric"
+      ],
+      "interpretation": "受控任务量规逐维评分，开放表达尚需人工",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P04",
+      "requirement_id": "P04.RQ01",
+      "original_scope": "步骤序列及分支",
+      "evidence_paths": [
+        "/design/flow/transitions"
+      ],
+      "interpretation": "11步10转移，事件条件与未知/失败暂停",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P04",
+      "requirement_id": "P04.RQ02",
+      "original_scope": "并行及子流程",
+      "evidence_paths": [
+        "/design/flow/subflows",
+        "/design/flow/parallel_contract"
+      ],
+      "interpretation": "材料及量规准备并行、ALL合流，失败不部分晋升；不宣称实际并发",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P04",
+      "requirement_id": "P04.RQ03",
+      "original_scope": "支架渐撤和重试",
+      "evidence_paths": [
+        "/design/flow/subflows/2",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "已解例→提示→独立，最多两轮；原观测保持",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P04",
+      "requirement_id": "P04.RQ04",
+      "original_scope": "预算/终止/暂停",
+      "evidence_paths": [
+        "/design/flow/control",
+        "/design/flow/parallel_contract"
+      ],
+      "interpretation": "退出优先、统一预算、未知暂停；实际权限与恢复未实测",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P05",
+      "requirement_id": "P05.RQ01",
+      "original_scope": "首学与提取",
+      "evidence_paths": [
+        "/cases/policy",
+        "/cases/cases/0/observations"
+      ],
+      "interpretation": "初学示范与后续独立提取分离",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P05",
+      "requirement_id": "P05.RQ02",
+      "original_scope": "间隔/交错/巩固",
+      "evidence_paths": [
+        "/cases/policy",
+        "/design/modes"
+      ],
+      "interpretation": "间隔与变式、练习/重读及示范替代；交错及巩固长期效果仍待核",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P05",
+      "requirement_id": "P05.RQ03",
+      "original_scope": "跨会话复习",
+      "evidence_paths": [
+        "/cases/history_model",
+        "/cases/history_cases"
+      ],
+      "interpretation": "明确最后相关接触、未知历史及跨会话版本",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P05",
+      "requirement_id": "P05.RQ04",
+      "original_scope": "保持及迁移",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer",
+        "/cases/history_cases"
+      ],
+      "interpretation": "延迟保持与新情境迁移分开，近迁移候选非真实迁移",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P06",
+      "requirement_id": "P06.RQ01",
+      "original_scope": "采集与评分",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations"
+      ],
+      "interpretation": "原始响应、量规维度及辅助分开",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P06",
+      "requirement_id": "P06.RQ02",
+      "original_scope": "差距及竞争解释",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "具体竞争解释及可区分任务；额外探查真实结果缺失时不排除全部假设",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P06",
+      "requirement_id": "P06.RQ03",
+      "original_scope": "提示纠错及重试",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/design/flow/subflows/2"
+      ],
+      "interpretation": "具体过程反馈、支架渐撤、有限重试",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P06",
+      "requirement_id": "P06.RQ04",
+      "original_scope": "独立复测与效果",
+      "evidence_paths": [
+        "/cases/history_cases"
+      ],
+      "interpretation": "独立复测、缺失与错误保留，不能推出反馈因果效果",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P07",
+      "requirement_id": "P07.RQ01",
+      "original_scope": "目标价值及适度挑战",
+      "evidence_paths": [
+        "/cases/cases/0/motivation",
+        "/cases/cases/1/motivation"
+      ],
+      "interpretation": "目标价值由本人选择，适度挑战与具体进步反馈",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P07",
+      "requirement_id": "P07.RQ02",
+      "original_scope": "自主选择和进步",
+      "evidence_paths": [
+        "/cases/cases/0/motivation",
+        "/design/modes"
+      ],
+      "interpretation": "拒绝奖励仍可学习；反馈不贴标签",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P07",
+      "requirement_id": "P07.RQ03",
+      "original_scope": "关系支持与反思",
+      "evidence_paths": [
+        "/cases/cases/1/motivation",
+        "/design/activities"
+      ],
+      "interpretation": "自愿同伴互教及独立反思",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P07",
+      "requirement_id": "P07.RQ04",
+      "original_scope": "暂停/恢复和拒绝",
+      "evidence_paths": [
+        "/design/flow/control"
+      ],
+      "interpretation": "拒绝/暂停与授权撤回区分，实际恢复未验证",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P08",
+      "requirement_id": "P08.RQ01",
+      "original_scope": "状态及不确定性",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "错误并不唯一确定潜变量，缺失保留未知",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P08",
+      "requirement_id": "P08.RQ02",
+      "original_scope": "模式切换和任务选择",
+      "evidence_paths": [
+        "/cases/policy/alternatives",
+        "/design/modes"
+      ],
+      "interpretation": "选择示范、提取、重读或延期；条件化切换",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P08",
+      "requirement_id": "P08.RQ03",
+      "original_scope": "升阶/降阶与求助",
+      "evidence_paths": [
+        "/cases/cases/0/plan",
+        "/cases/cases/1/plan"
+      ],
+      "interpretation": "初错先降支架、再升独立；比较可行与不可行成本",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P08",
+      "requirement_id": "P08.RQ04",
+      "original_scope": "未知/回退/停止",
+      "evidence_paths": [
+        "/design/flow/control",
+        "/cases/policy"
+      ],
+      "interpretation": "未知/预算/退出停止；模型漂移实测与回退策略未完成",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P09",
+      "requirement_id": "P09.RQ01",
+      "original_scope": "即时与延迟",
+      "evidence_paths": [
+        "/cases/history_cases",
+        "/cases/cases/0/observations"
+      ],
+      "interpretation": "即时/延迟成功及延迟失败分别记录",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P09",
+      "requirement_id": "P09.RQ02",
+      "original_scope": "陌生情境及综合任务",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer"
+      ],
+      "interpretation": "新情境和构念匹配条件；非真实复杂任务测量",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P09",
+      "requirement_id": "P09.RQ03",
+      "original_scope": "独立表现及评分",
+      "evidence_paths": [
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric"
+      ],
+      "interpretation": "独立受控评分，不互换两学科量尺",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P09",
+      "requirement_id": "P09.RQ04",
+      "original_scope": "总结及目标调整",
+      "evidence_paths": [
+        "/cases/cases/0/motivation/reflection",
+        "/cases/cases/1/motivation/reflection"
+      ],
+      "interpretation": "复盘后协商下一目标，不自动晋升",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P10",
+      "requirement_id": "P10.RQ01",
+      "original_scope": "跨日会话衔接",
+      "evidence_paths": [
+        "/design/flow/control/resume",
+        "/cases/history_model"
+      ],
+      "interpretation": "恢复检查点及最后暴露记录，跨日衔接",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P10",
+      "requirement_id": "P10.RQ02",
+      "original_scope": "检查点和恢复幂等",
+      "evidence_paths": [
+        "/design/flow/control/resume"
+      ],
+      "interpretation": "幂等/冲突合同，不宣称真实持久恢复",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P10",
+      "requirement_id": "P10.RQ03",
+      "original_scope": "可及性/授权/退出",
+      "evidence_paths": [
+        "/cases/cases/0/accessibility",
+        "/cases/cases/1/accessibility",
+        "/design/flow/control"
+      ],
+      "interpretation": "构念保护、退出优先及新授权检查",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "P10",
+      "requirement_id": "P10.RQ04",
+      "original_scope": "验证及版本追溯",
+      "evidence_paths": [
+        "/design/flow/control/resume"
+      ],
+      "interpretation": "版本身份与审查记录，实际平台审计仍待",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F01",
+      "requirement_id": "F01.RQ01",
+      "original_scope": "构念及多维目标",
+      "evidence_paths": [
+        "/cases/cases/0/construct",
+        "/cases/cases/1/construct"
+      ],
+      "interpretation": "目标分解为具体构念",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F01",
+      "requirement_id": "F01.RQ02",
+      "original_scope": "能力/知识/技能分解",
+      "evidence_paths": [
+        "/cases/cases/0/components",
+        "/cases/cases/1/components"
+      ],
+      "interpretation": "词义角色与数学单位/比较/理由分别绑定",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F01",
+      "requirement_id": "F01.RQ03",
+      "original_scope": "任务及量规",
+      "evidence_paths": [
+        "/cases/cases/0/tasks",
+        "/cases/cases/1/tasks"
+      ],
+      "interpretation": "任务及量规分别明确",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F01",
+      "requirement_id": "F01.RQ04",
+      "original_scope": "标准及成功证据",
+      "evidence_paths": [
+        "/cases/cases/0/rubric/excluded"
+      ],
+      "interpretation": "非HSK级别映射；HSK标准原始来源仍HOLD",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F02",
+      "requirement_id": "F02.RQ01",
+      "original_scope": "D4与学习对象",
+      "evidence_paths": [
+        "/cases/cases/0/components",
+        "/cases/cases/0/resources"
+      ],
+      "interpretation": "组件不等于活动或材料",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F02",
+      "requirement_id": "F02.RQ02",
+      "original_scope": "技能/任务/活动区别",
+      "evidence_paths": [
+        "/cases/cases/1/components",
+        "/design/activities"
+      ],
+      "interpretation": "技能、任务、活动产出区分",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F02",
+      "requirement_id": "F02.RQ03",
+      "original_scope": "单元/课程/项目",
+      "evidence_paths": [
+        "/design/flow/subflows"
+      ],
+      "interpretation": "有限活动组合；未构建完整课程/项目库",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F02",
+      "requirement_id": "F02.RQ04",
+      "original_scope": "关系语义及唯一身份",
+      "evidence_paths": [
+        "/cases/cases/0/relations",
+        "/cases/cases/1/relations"
+      ],
+      "interpretation": "必要、组成、推荐/未知边，不能由级别推先修",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F03",
+      "requirement_id": "F03.RQ01",
+      "original_scope": "模态与资源",
+      "evidence_paths": [
+        "/cases/cases/0/resources",
+        "/cases/cases/1/resources"
+      ],
+      "interpretation": "文本交易卡、数轴及等价表示",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F03",
+      "requirement_id": "F03.RQ02",
+      "original_scope": "选择与生成",
+      "evidence_paths": [
+        "/design/content_precheck"
+      ],
+      "interpretation": "原创生成题并具体检查",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F03",
+      "requirement_id": "F03.RQ03",
+      "original_scope": "质量/许可",
+      "evidence_paths": [
+        "/design/content_precheck/checks"
+      ],
+      "interpretation": "权利/来源未获独立资格，拒绝交付",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F03",
+      "requirement_id": "F03.RQ04",
+      "original_scope": "可及性及构念保护",
+      "evidence_paths": [
+        "/cases/cases/0/accessibility",
+        "/cases/cases/1/accessibility"
+      ],
+      "interpretation": "文字不代听辨，计算器不测独立运算；实际可及性待测",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F04",
+      "requirement_id": "F04.RQ01",
+      "original_scope": "阅读观看与问答",
+      "evidence_paths": [
+        "/design/activities"
+      ],
+      "interpretation": "阅读观看问答分别产出",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F04",
+      "requirement_id": "F04.RQ02",
+      "original_scope": "模仿练习与讨论",
+      "evidence_paths": [
+        "/design/activities"
+      ],
+      "interpretation": "模仿练习讨论及独立归属差别",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F04",
+      "requirement_id": "F04.RQ03",
+      "original_scope": "探索实验/角色扮演/创作",
+      "evidence_paths": [
+        "/design/activities"
+      ],
+      "interpretation": "探索、实验、角色扮演、创作的材料与证据限制",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F04",
+      "requirement_id": "F04.RQ04",
+      "original_scope": "教授/自解释/反思及独立性",
+      "evidence_paths": [
+        "/design/activities",
+        "/cases/cases/1/observations"
+      ],
+      "interpretation": "教授、自解释、反思和独立评价分开",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F05",
+      "requirement_id": "F05.RQ01",
+      "original_scope": "知识/技能/理解/迁移",
+      "evidence_paths": [
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric"
+      ],
+      "interpretation": "分维度观测与保持/迁移候选；未拟合潜状态",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F05",
+      "requirement_id": "F05.RQ02",
+      "original_scope": "认知/情绪/动机/调节",
+      "evidence_paths": [
+        "/cases/cases/0/motivation",
+        "/cases/cases/1/motivation"
+      ],
+      "interpretation": "选择/自述和实际任务证据分离，不估计情绪标签",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F05",
+      "requirement_id": "F05.RQ03",
+      "original_scope": "资源及发展条件",
+      "evidence_paths": [
+        "/cases/cases/0/accessibility",
+        "/cases/cases/1/accessibility"
+      ],
+      "interpretation": "资源与环境条件，不按年龄推断个体状态",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F05",
+      "requirement_id": "F05.RQ04",
+      "original_scope": "观察/自述/估计/判断及未知",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/history_cases"
+      ],
+      "interpretation": "原始观测、分数、解释及未知；不把分数作掌握",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F06",
+      "requirement_id": "F06.RQ01",
+      "original_scope": "知识缺口/误概念/混淆",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "词义/角色与单位/算术竞争解释",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F06",
+      "requirement_id": "F06.RQ02",
+      "original_scope": "技能瓶颈/提取/负荷",
+      "evidence_paths": [
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "同分母、数轴、算术探查区分瓶颈",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F06",
+      "requirement_id": "F06.RQ03",
+      "original_scope": "策略/任务/环境障碍",
+      "evidence_paths": [
+        "/cases/cases/0/accessibility",
+        "/cases/cases/1/accessibility"
+      ],
+      "interpretation": "材料/环境障碍与专业错误区分",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F06",
+      "requirement_id": "F06.RQ04",
+      "original_scope": "诊断区分/补救/复测/停止",
+      "evidence_paths": [
+        "/cases/history_cases",
+        "/design/flow/subflows/2"
+      ],
+      "interpretation": "补救后独立复测、预算和退出；不声称唯一原因",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F07",
+      "requirement_id": "F07.RQ01",
+      "original_scope": "学习者/教师/AI/同伴",
+      "evidence_paths": [
+        "/cases/cases/0/roles",
+        "/cases/cases/1/roles"
+      ],
+      "interpretation": "学习者、教练、同伴、评价者分开",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F07",
+      "requirement_id": "F07.RQ02",
+      "original_scope": "专家/评价者/管理者",
+      "evidence_paths": [
+        "/design/content_precheck/independent_receipts"
+      ],
+      "interpretation": "专业审核角色尚未实际授予，不能伪造资格",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F07",
+      "requirement_id": "F07.RQ03",
+      "original_scope": "课堂/家庭/移动/职场",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer"
+      ],
+      "interpretation": "教材、市场、量杯场景，家庭/职场真实资源未核",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F07",
+      "requirement_id": "F07.RQ04",
+      "original_scope": "真实/模拟、能力权限及资源",
+      "evidence_paths": [
+        "/design/flow/control",
+        "/cases/cases/1/roles"
+      ],
+      "interpretation": "合成角色不证明真实权限，真实操作未执行",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F08",
+      "requirement_id": "F08.RQ01",
+      "original_scope": "单项与组合技能",
+      "evidence_paths": [
+        "/cases/cases/0/components",
+        "/cases/cases/1/components"
+      ],
+      "interpretation": "组合目标要求多个分维度技能，不凭单项",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F08",
+      "requirement_id": "F08.RQ02",
+      "original_scope": "情境任务与实践",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer"
+      ],
+      "interpretation": "现实背景书面模拟，不当真实实践",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F08",
+      "requirement_id": "F08.RQ03",
+      "original_scope": "近远迁移及延迟",
+      "evidence_paths": [
+        "/cases/history_cases"
+      ],
+      "interpretation": "明确最后暴露、近情境变化与错误延迟候选；远迁移未测",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "F08",
+      "requirement_id": "F08.RQ04",
+      "original_scope": "独立性/泛化及资格边界",
+      "evidence_paths": [
+        "/cases/cases/0/rubric/excluded",
+        "/cases/cases/1/rubric/excluded"
+      ],
+      "interpretation": "独立性与范围，非资格",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "E01",
+      "requirement_id": "E01.RQ01",
+      "original_scope": "研究协议及版本",
+      "evidence_paths": [
+        "/design/external_improvement/version",
+        "/design/external_improvement/design"
+      ],
+      "interpretation": "有限研究协议、目标和比较",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "E01",
+      "requirement_id": "E01.RQ02",
+      "original_scope": "实际结果/失败/副作用",
+      "evidence_paths": [
+        "/design/external_improvement/outcome",
+        "/design/external_improvement/risk"
+      ],
+      "interpretation": "真实研究/负面与副作用尚未观察",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "E01",
+      "requirement_id": "E01.RQ03",
+      "original_scope": "证据和独立评价",
+      "evidence_paths": [
+        "/design/external_improvement/independent_review"
+      ],
+      "interpretation": "无独立实证评价收据",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "E01",
+      "requirement_id": "E01.RQ04",
+      "original_scope": "候选/审核/批准/回退",
+      "evidence_paths": [
+        "/design/external_improvement/decision",
+        "/design/external_improvement/negative"
+      ],
+      "interpretation": "未获伦理、结果及批准不得改正式版本",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A01",
+      "requirement_id": "A01.RQ01",
+      "original_scope": "目标分解",
+      "evidence_paths": [
+        "/cases/cases/0/goal",
+        "/cases/cases/1/goal"
+      ],
+      "interpretation": "两学科具体目标",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A01",
+      "requirement_id": "A01.RQ02",
+      "original_scope": "构念绑定",
+      "evidence_paths": [
+        "/cases/cases/0/construct",
+        "/cases/cases/1/construct"
+      ],
+      "interpretation": "构念明确且互不等值",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A01",
+      "requirement_id": "A01.RQ03",
+      "original_scope": "组件/依赖类型",
+      "evidence_paths": [
+        "/cases/cases/0/relations",
+        "/cases/cases/1/relations"
+      ],
+      "interpretation": "结构组成与学习必要性分开；通分非唯一方法",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A01",
+      "requirement_id": "A01.RQ04",
+      "original_scope": "证据追溯与拒绝",
+      "evidence_paths": [
+        "/cases/cases/0/source_refs",
+        "/cases/cases/1/source_refs"
+      ],
+      "interpretation": "来源及拒绝条件绑定；无正式来源资格",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A02",
+      "requirement_id": "A02.RQ01",
+      "original_scope": "对象与任务",
+      "evidence_paths": [
+        "/cases/cases/0/tasks",
+        "/cases/cases/1/tasks"
+      ],
+      "interpretation": "具体题干、角色、响应条件",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A02",
+      "requirement_id": "A02.RQ02",
+      "original_scope": "资源和交互",
+      "evidence_paths": [
+        "/cases/cases/0/resources",
+        "/design/activities"
+      ],
+      "interpretation": "资源与交互规格，辅助材料与独立任务分离",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A02",
+      "requirement_id": "A02.RQ03",
+      "original_scope": "观测规格",
+      "evidence_paths": [
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric"
+      ],
+      "interpretation": "分维度评分",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A02",
+      "requirement_id": "A02.RQ04",
+      "original_scope": "辅助与独立证据",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations"
+      ],
+      "interpretation": "实际合成响应的评分及提示边界",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A03",
+      "requirement_id": "A03.RQ01",
+      "original_scope": "观察评分与假设",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations"
+      ],
+      "interpretation": "独立错答原值与评分",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A03",
+      "requirement_id": "A03.RQ02",
+      "original_scope": "区分证据",
+      "evidence_paths": [
+        "/cases/cases/0/diagnosis",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "竞争解释和区分证据",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A03",
+      "requirement_id": "A03.RQ03",
+      "original_scope": "状态估计及模型条件",
+      "evidence_paths": [
+        "/cases/policy/knowledge_outcome"
+      ],
+      "interpretation": "保留有界证据候选；潜变量模型更新未做",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A03",
+      "requirement_id": "A03.RQ04",
+      "original_scope": "冲突/缺失/未知",
+      "evidence_paths": [
+        "/cases/history_cases"
+      ],
+      "interpretation": "缺失、历史未知、冲突阻断",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A04",
+      "requirement_id": "A04.RQ01",
+      "original_scope": "状态与策略条件",
+      "evidence_paths": [
+        "/cases/policy/alternatives",
+        "/cases/cases/1/diagnosis"
+      ],
+      "interpretation": "不同先备和误差触发不同策略",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A04",
+      "requirement_id": "A04.RQ02",
+      "original_scope": "目标/约束及备选",
+      "evidence_paths": [
+        "/cases/cases/0/plan",
+        "/cases/cases/1/plan"
+      ],
+      "interpretation": "明确12分钟预算及目标",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A04",
+      "requirement_id": "A04.RQ03",
+      "original_scope": "选择与理由",
+      "evidence_paths": [
+        "/cases/cases/0/plan/reason",
+        "/cases/cases/1/plan/reason"
+      ],
+      "interpretation": "比较示范/探查/独立提取与机械重复，理由可读",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A04",
+      "requirement_id": "A04.RQ04",
+      "original_scope": "停止/澄清/回退",
+      "evidence_paths": [
+        "/design/flow/control"
+      ],
+      "interpretation": "无可行项暂停，退出优先；实际回退未测",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A05",
+      "requirement_id": "A05.RQ01",
+      "original_scope": "教学活动及表现",
+      "evidence_paths": [
+        "/cases/cases/0/observations",
+        "/cases/cases/1/observations"
+      ],
+      "interpretation": "即时、辅助和独立结果分开",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A05",
+      "requirement_id": "A05.RQ02",
+      "original_scope": "延迟保持",
+      "evidence_paths": [
+        "/cases/history_cases"
+      ],
+      "interpretation": "以最后暴露及完整历史为必要条件，错误保留",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A05",
+      "requirement_id": "A05.RQ03",
+      "original_scope": "陌生情境与迁移",
+      "evidence_paths": [
+        "/cases/cases/0/transfer",
+        "/cases/cases/1/transfer"
+      ],
+      "interpretation": "双学科近情境例，非真实远迁移",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A05",
+      "requirement_id": "A05.RQ04",
+      "original_scope": "独立性及证据范围",
+      "evidence_paths": [
+        "/cases/policy",
+        "/cases/cases/0/rubric",
+        "/cases/cases/1/rubric"
+      ],
+      "interpretation": "共用策略但不复用知识/量规，真实教育效果HOLD",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A06",
+      "requirement_id": "A06.RQ01",
+      "original_scope": "内容/事实与来源",
+      "evidence_paths": [
+        "/design/content_precheck/candidate",
+        "/design/content_precheck/checks"
+      ],
+      "interpretation": "实际原创题目、事实、义项及来源初核",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A06",
+      "requirement_id": "A06.RQ02",
+      "original_scope": "答案和测量",
+      "evidence_paths": [
+        "/design/content_precheck/negative"
+      ],
+      "interpretation": "歧义题不设唯一答案，量规范围",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A06",
+      "requirement_id": "A06.RQ03",
+      "original_scope": "许可与可及性",
+      "evidence_paths": [
+        "/design/content_precheck/checks"
+      ],
+      "interpretation": "权利及实际可及性未核，不交付",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A06",
+      "requirement_id": "A06.RQ04",
+      "original_scope": "复核及候选交付",
+      "evidence_paths": [
+        "/design/content_precheck/independent_receipts"
+      ],
+      "interpretation": "R1门禁需独立收据，本例不伪造",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A07",
+      "requirement_id": "A07.RQ01",
+      "original_scope": "环境及角色",
+      "evidence_paths": [
+        "/cases/cases/0/accessibility",
+        "/cases/cases/1/accessibility"
+      ],
+      "interpretation": "具体材料和环境差异",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A07",
+      "requirement_id": "A07.RQ02",
+      "original_scope": "发展和差异证据",
+      "evidence_paths": [
+        "/cases/cases/0/motivation",
+        "/cases/cases/1/motivation"
+      ],
+      "interpretation": "依本人选择/先备，不由发展标签推断",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A07",
+      "requirement_id": "A07.RQ03",
+      "original_scope": "支持与构念保护",
+      "evidence_paths": [
+        "/cases/cases/0/accessibility",
+        "/cases/cases/1/accessibility"
+      ],
+      "interpretation": "替代交互与目标构念分离，重测另证",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A07",
+      "requirement_id": "A07.RQ04",
+      "original_scope": "自主选择与授权",
+      "evidence_paths": [
+        "/design/flow/control"
+      ],
+      "interpretation": "可拒绝支持，实际权限待核",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A08",
+      "requirement_id": "A08.RQ01",
+      "original_scope": "研究设计和证据",
+      "evidence_paths": [
+        "/design/external_improvement/design",
+        "/design/external_improvement/estimand"
+      ],
+      "interpretation": "各学科独立估计目标、比较及研究设计",
+      "status": "CANDIDATE_EXEMPLIFIED",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A08",
+      "requirement_id": "A08.RQ02",
+      "original_scope": "模型及策略版本",
+      "evidence_paths": [
+        "/design/external_improvement/candidate_policy",
+        "/design/external_improvement/version"
+      ],
+      "interpretation": "版本绑定候选策略与协议；无拟合/实证",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A08",
+      "requirement_id": "A08.RQ03",
+      "original_scope": "效果/偏差/局限",
+      "evidence_paths": [
+        "/design/external_improvement/analysis",
+        "/design/external_improvement/risk"
+      ],
+      "interpretation": "预先指定结果、脱落、区间及副作用；无实际数据",
+      "status": "CANDIDATE_PARTIAL",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "contract": "A08",
+      "requirement_id": "A08.RQ04",
+      "original_scope": "候选改进与拒绝",
+      "evidence_paths": [
+        "/design/external_improvement/decision"
+      ],
+      "interpretation": "保持基线，负面结果及回退，待独立批准",
+      "status": "CANDIDATE_HOLD",
+      "formal_receipt": "NOT_ISSUED"
+    }
+  ]
+}
