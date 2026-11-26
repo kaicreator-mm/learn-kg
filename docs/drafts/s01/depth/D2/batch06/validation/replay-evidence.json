@@ -1,0 +1,328 @@
+{
+  "tested_head": "69f86e032632423c7b156a0f05f4a8b9cf5ecc32",
+  "job_id": "job_01M8CE7EXJ00DEPZQTDKMW0BZR",
+  "server": "aliyun-sg",
+  "exit_code": 0,
+  "python": "3.12.3",
+  "syntax_check": "PASS",
+  "original_blobs_matched": 130,
+  "original_candidates": 1348,
+  "previous_depth_candidates": 187,
+  "new_candidates": 25,
+  "new_source_records": 11,
+  "changed_paths_under_batch06_only": 19,
+  "script_blob": "45e9828a6430aba35e86a184e74db79d28efd978",
+  "fixture_blob": "d4439d14304ed2909a3b2bec226e9d7321848eaa",
+  "total": 37,
+  "passed": 37,
+  "by_category": {
+    "ranking": 5,
+    "attrition": 3,
+    "drift": 4,
+    "risk": 6,
+    "cutoff": 5,
+    "loop": 14
+  },
+  "independent_oracle": false,
+  "qualification": "NOT_RUN",
+  "limits": "Bounded synthetic fixtures. No trained learner-state model, true drift detector, verified WWC rating, whole-pipeline leakage proof, real learner experiment, actual code execution or full D3 composition.",
+  "results": [
+    {
+      "id": "D2-B06-SYN-01",
+      "actual": {
+        "auc": 0.875,
+        "brier": 0.13,
+        "calibration": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-02",
+      "actual": {
+        "auc": 1,
+        "brier": 0.009999999999999998,
+        "calibration": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-03",
+      "actual": {
+        "auc": 1,
+        "brier": 0.16000000000000003,
+        "calibration": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-04",
+      "actual": {
+        "auc": "UNDEFINED",
+        "brier": 0.065,
+        "calibration": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-05",
+      "actual": {
+        "auc": 0.5,
+        "brier": 0.25,
+        "calibration": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-06",
+      "actual": {
+        "overall": 0.13333333333333333,
+        "differential": 0.1,
+        "wwc_rating": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-07",
+      "actual": {
+        "overall": 0.1,
+        "differential": 0,
+        "wwc_rating": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-08",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-09",
+      "actual": {
+        "input_signal": true,
+        "conditional_signal": "UNKNOWN",
+        "model_failure": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-10",
+      "actual": "HOLD_LABEL_EVIDENCE",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-11",
+      "actual": "HOLD_MEASUREMENT_IDENTITY",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-12",
+      "actual": {
+        "input_signal": false,
+        "conditional_signal": true,
+        "model_failure": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-13",
+      "actual": {
+        "offer": [
+          "review"
+        ],
+        "status": "CANDIDATE_ONLY",
+        "scenario_minima": [
+          [
+            "review"
+          ]
+        ],
+        "executed": false
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-14",
+      "actual": {
+        "offer": [],
+        "status": "HOLD_RANK_REVERSAL",
+        "scenario_minima": [
+          [
+            "review"
+          ],
+          [
+            "defer"
+          ]
+        ],
+        "executed": false
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-15",
+      "actual": {
+        "offer": [
+          "defer"
+        ],
+        "status": "CANDIDATE_ONLY",
+        "scenario_minima": [
+          [
+            "defer"
+          ]
+        ],
+        "executed": false
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-16",
+      "actual": "HOLD_NO_ELIGIBLE",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-17",
+      "actual": "HOLD_LOSS",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-18",
+      "actual": "STOP",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-19",
+      "actual": {
+        "history_attempts": 1,
+        "status": "SCOPED_HISTORY",
+        "leakage_free_globally": "NOT_ESTABLISHED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-20",
+      "actual": "HOLD_SAME_ATTEMPT",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-21",
+      "actual": "HOLD_TIME_CUTOFF",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-22",
+      "actual": "HOLD_DUPLICATE_ATTEMPT",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-23",
+      "actual": "HOLD_LEARNER_SCOPE",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-24",
+      "actual": {
+        "status": "HOLD_TARGET_EVIDENCE",
+        "observations": 1,
+        "remaining": 7,
+        "reflection": null,
+        "mastery": "NOT_INFERRED",
+        "model_update": "NOT_PERFORMED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-25",
+      "actual": {
+        "status": "OFFER_FEEDBACK",
+        "observations": 2,
+        "remaining": 6,
+        "reflection": null,
+        "mastery": "NOT_INFERRED",
+        "model_update": "NOT_PERFORMED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-26",
+      "actual": {
+        "status": "OFFER_PROBE",
+        "observations": 3,
+        "remaining": 3,
+        "reflection": null,
+        "mastery": "NOT_INFERRED",
+        "model_update": "NOT_PERFORMED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-27",
+      "actual": {
+        "status": "EVIDENCE_RECORDED",
+        "observations": 4,
+        "remaining": 2,
+        "reflection": {
+          "confidence": 0.9,
+          "observed": true
+        },
+        "mastery": "NOT_INFERRED",
+        "model_update": "NOT_PERFORMED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-28",
+      "actual": {
+        "status": "OFFER_PROBE",
+        "observations": 4,
+        "remaining": 2,
+        "reflection": null,
+        "mastery": "NOT_INFERRED",
+        "model_update": "NOT_PERFORMED"
+      },
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-29",
+      "actual": "HOLD_DELAY",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-30",
+      "actual": "HOLD_REPEATED_TASK",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-31",
+      "actual": "HOLD_TASK_VERSION",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-32",
+      "actual": "HOLD_DUPLICATE_ATTEMPT",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-33",
+      "actual": "HOLD_TIME_ORDER",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-34",
+      "actual": "HOLD_AFTER_STOP",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-35",
+      "actual": "HOLD_BUDGET",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-36",
+      "actual": "STOP",
+      "pass": true
+    },
+    {
+      "id": "D2-B06-SYN-37",
+      "actual": "HOLD_CONSENT",
+      "pass": true
+    }
+  ]
+}
