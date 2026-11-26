@@ -1,0 +1,105 @@
+{
+  "status": "SCOPE_DRAFT_NOT_MIGRATED",
+  "source_evidence": "docs/implementation/src01-preservation-evidence.json",
+  "archive_manifest_sha256": "7652d0b48b65179d56bcee96ebdcaa1f578d040e0fbcddbeff8da1ced26c70a2",
+  "mappings": [
+    {
+      "file": "LexicalRecord.jsonl",
+      "count": 11000,
+      "target_requirement_topics": [
+        "H07.03.03",
+        "H03.01.04",
+        "H03.03.01",
+        "H01.05.01"
+      ],
+      "rule": "原序号/词形/等级/读音词性原串；只作后续词条映射输入，不自动析出义项/读音或语法",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "HanCharacter.jsonl",
+      "count": 3088,
+      "target_requirement_topics": [
+        "H02.01.01",
+        "H07.03.04"
+      ],
+      "rule": "字符身份候选；规范字形、笔画、部件、读音须另证",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "CharacterMembership.jsonl",
+      "count": 4288,
+      "target_requirement_topics": [
+        "H07.03.04",
+        "H02.05.01",
+        "H02.05.02"
+      ],
+      "rule": "认读书写成员；3088/1200，保留合并级与序号，不推断掌握",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "SourceBlock.jsonl",
+      "count": 94,
+      "target_requirement_topics": [
+        "H07.03.01",
+        "H07.03.02",
+        "H07.03.05"
+      ],
+      "rule": "53任务/20话题/21语法页块；未分列，不当原子条目；以后跨H04/H05/H06映射",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "AbilityRecord.jsonl",
+      "count": 9,
+      "target_requirement_topics": [
+        "H07.02.01",
+        "H07.02.02",
+        "H07.02.03",
+        "H06.06.04"
+      ],
+      "rule": "等级描述原块，非学习者状态或真实表现",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "LevelBand.jsonl",
+      "count": 11,
+      "target_requirement_topics": [
+        "H07.01.03",
+        "H07.02.01",
+        "H07.03.04"
+      ],
+      "rule": "级别标签含合并级，非等距量尺/必需先修",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "SyllabusVersion.jsonl",
+      "count": 1,
+      "target_requirement_topics": [
+        "H07.01.02",
+        "H07.01.03",
+        "H07.01.04"
+      ],
+      "rule": "大纲身份与原始发布标签；实际考试时间单独建模",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "SourceRecord.jsonl",
+      "count": 3,
+      "target_requirement_topics": [
+        "H07.05.04"
+      ],
+      "rule": "RHSK01–03抽取文本来源，非原始PDF字节凭证",
+      "status": "NOT_RUN"
+    },
+    {
+      "file": "TaxonomyTopic.jsonl",
+      "count": 823,
+      "target_requirement_topics": [
+        "H07.04.03"
+      ],
+      "rule": "历史K/H分类库存，不是823条已证语言知识",
+      "status": "NOT_RUN"
+    }
+  ],
+  "qualification": "NOT_RUN",
+  "publication": "HOLD"
+}
