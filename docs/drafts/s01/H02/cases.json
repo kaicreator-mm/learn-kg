@@ -1,0 +1,405 @@
+{
+  "owner": "H02",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "H02.01.01.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.01.01",
+      "claim_refs": [
+        "H02.01.01.D4.01",
+        "H02.01.01.D4.02"
+      ],
+      "fixture": "同一个骨字不同字体",
+      "views": {
+        "forward": "Unicode编码字符而非具体字形；字体、地区字形与抽象字符需分开",
+        "reverse": "从观察到命题须排除条件和其他解释：字形视觉相似不证明同一字符",
+        "intervention": "按码点及目标字形规范分别识别",
+        "counterexample": "字形视觉相似不证明同一字符"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.01.02.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.01.02",
+      "claim_refs": [
+        "H02.01.02.D4.01",
+        "H02.01.02.D4.02"
+      ],
+      "fixture": "发：發展/頭髮",
+      "views": {
+        "forward": "简繁转换可能依词境，一对多和地域词汇差异使字符级转换不保证可逆",
+        "reverse": "从观察到命题须排除条件和其他解释：简繁转换不能假设双向无损",
+        "intervention": "从词义确定候选，未知时不擅选",
+        "counterexample": "简繁转换不能假设双向无损"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.01.03.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.01.03",
+      "claim_refs": [
+        "H02.01.03.D4.01",
+        "H02.01.03.D4.02"
+      ],
+      "fixture": "井与丼有部分重叠义",
+      "views": {
+        "forward": "Unihan语义变体属性可区分相同与部分重叠意义；不等于教学场景可任意替换",
+        "reverse": "从观察到命题须排除条件和其他解释：异体不必在任何场景可互换",
+        "intervention": "绑定来源、方向和义项条件",
+        "counterexample": "异体不必在任何场景可互换"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.01.04.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.01.04",
+      "claim_refs": [
+        "H02.01.04.D4.01",
+        "H02.01.04.D4.02"
+      ],
+      "fixture": "书 U+4E66",
+      "views": {
+        "forward": "代码点只标识编码对象；规范汉字、字形和笔顺由适用规范确定",
+        "reverse": "从观察到命题须排除条件和其他解释：代码点不是规范字形证明",
+        "intervention": "编码正确不自动证明规范书写",
+        "counterexample": "代码点不是规范字形证明"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.02.01.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.02.01",
+      "claim_refs": [
+        "H02.02.01.D4.01",
+        "H02.02.01.D4.02"
+      ],
+      "fixture": "马与馬",
+      "views": {
+        "forward": "笔画数依字形和计数规范，同一简繁对应字可有不同笔画数",
+        "reverse": "从观察到命题须排除条件和其他解释：不同字形的笔画数不默认一致",
+        "intervention": "固定具体字形及笔画规范",
+        "counterexample": "不同字形的笔画数不默认一致"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.02.02.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.02.02",
+      "claim_refs": [
+        "H02.02.02.D4.01",
+        "H02.02.02.D4.02"
+      ],
+      "fixture": "先写横再写竖与相反顺序",
+      "views": {
+        "forward": "笔顺描述笔画书写的有序序列，不等于最终图像；认读任务不测书写过程",
+        "reverse": "从观察到命题须排除条件和其他解释：认读正确不证明笔顺掌握",
+        "intervention": "有书写轨迹才评价笔顺",
+        "counterexample": "认读正确不证明笔顺掌握"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.02.03.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.02.03",
+      "claim_refs": [
+        "H02.02.03.D4.01",
+        "H02.02.03.D4.02"
+      ],
+      "fixture": "湖的氵、古、月分析",
+      "views": {
+        "forward": "部首是特定检字分类依据；部件是构形分析单位，一个字可有多个部件",
+        "reverse": "从观察到命题须排除条件和其他解释：部首不等于全部构形部件",
+        "intervention": "分别存部首及指定分解体系",
+        "counterexample": "部首不等于全部构形部件"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.02.04.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.02.04",
+      "claim_refs": [
+        "H02.02.04.D4.01",
+        "H02.02.04.D4.02"
+      ],
+      "fixture": "明 左右 / 志 上下",
+      "views": {
+        "forward": "字形结构可按左右、上下、包围等空间关系递归分析，形体分析不等于字源",
+        "reverse": "从观察到命题须排除条件和其他解释：视觉分解不自动等于字源分析",
+        "intervention": "记录分解层级和版本，不推导历史起源",
+        "counterexample": "视觉分解不自动等于字源分析"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.02.05.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.02.05",
+      "claim_refs": [
+        "H02.02.05.D4.01",
+        "H02.02.05.D4.02"
+      ],
+      "fixture": "清 qīng / 情 qíng / 请 qǐng",
+      "views": {
+        "forward": "形声字的声旁、形旁可提供概率性读音与意义线索，不保证现代读音或义项",
+        "reverse": "从观察到命题须排除条件和其他解释：声旁不保证实际读音",
+        "intervention": "按具体词核读音与义，不把青当固定调",
+        "counterexample": "声旁不保证实际读音"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.03.01.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.03.01",
+      "claim_refs": [
+        "H02.03.01.D4.01",
+        "H02.03.01.D4.02"
+      ],
+      "fixture": "重 zhòng 重要 / chóng 重复",
+      "views": {
+        "forward": "多音字应将候选读音绑定词语和义项而非只绑定抽象字",
+        "reverse": "从观察到命题须排除条件和其他解释：字表单个读音不覆盖全部词",
+        "intervention": "以具体词境作独立辨认",
+        "counterexample": "字表单个读音不覆盖全部词"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.03.02.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.03.02",
+      "claim_refs": [
+        "H02.03.02.D4.01",
+        "H02.03.02.D4.02"
+      ],
+      "fixture": "花：花朵 / 花钱",
+      "views": {
+        "forward": "一个字符可承担多个语素或义项；字义和词义的记录层次不同",
+        "reverse": "从观察到命题须排除条件和其他解释：同字出现不代表同一义项",
+        "intervention": "按上下文区分名词与动词用法",
+        "counterexample": "同字出现不代表同一义项"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.03.03.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.03.03",
+      "claim_refs": [
+        "H02.03.03.D4.01",
+        "H02.03.03.D4.02"
+      ],
+      "fixture": "公 gōng / 工 gōng",
+      "views": {
+        "forward": "音义配对需独立绑定读音和义项，相同音节可对应不同字符及词",
+        "reverse": "从观察到命题须排除条件和其他解释：读音相同不证明义相同",
+        "intervention": "用词义及场景辨识",
+        "counterexample": "读音相同不证明义相同"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.03.04.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.03.04",
+      "claim_refs": [
+        "H02.03.04.D4.01",
+        "H02.03.04.D4.02"
+      ],
+      "fixture": "葡萄是双字词，葡不独立表葡萄义",
+      "views": {
+        "forward": "字符是书写单位，语素是构词意义单位，词是语法词汇单位；三者不一一对应",
+        "reverse": "从观察到命题须排除条件和其他解释：不能把每个字当独立词",
+        "intervention": "不要逐字构造独立义项",
+        "counterexample": "不能把每个字当独立词"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.04.01.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.04.01",
+      "claim_refs": [
+        "H02.04.01.D4.01",
+        "H02.04.01.D4.02"
+      ],
+      "fixture": "未 / 末",
+      "views": {
+        "forward": "外形相近的编码字符不必有语义关系，也不证明实际学习者会混淆",
+        "reverse": "从观察到命题须排除条件和其他解释：形似不等于已证学习混淆",
+        "intervention": "用辨形任务记录个体误认",
+        "counterexample": "形似不等于已证学习混淆"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.04.02.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.04.02",
+      "claim_refs": [
+        "H02.04.02.D4.01",
+        "H02.04.02.D4.02"
+      ],
+      "fixture": "休 / 体 共享亻",
+      "views": {
+        "forward": "共享构件可帮助视觉分组，却不自动建立共同义项或相同音值",
+        "reverse": "从观察到命题须排除条件和其他解释：共享部件不证明语义相关",
+        "intervention": "按部件位置和词义分别记录",
+        "counterexample": "共享部件不证明语义相关"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.04.03.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.04.03",
+      "claim_refs": [
+        "H02.04.03.D4.01",
+        "H02.04.03.D4.02"
+      ],
+      "fixture": "把两个任意偏旁拼在一起",
+      "views": {
+        "forward": "构件组合需要位置与规范限制；视觉合成符号本身不证明生成合法汉字",
+        "reverse": "从观察到命题须排除条件和其他解释：任意拼合不能生成规范字",
+        "intervention": "核编码对象和字形规范",
+        "counterexample": "任意拼合不能生成规范字"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.04.04.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.04.04",
+      "claim_refs": [
+        "H02.04.04.D4.01",
+        "H02.04.04.D4.02"
+      ],
+      "fixture": "一次把未写成末",
+      "views": {
+        "forward": "形近、音近、义近应作为不同混淆候选；错误模式需重复独立观测",
+        "reverse": "从观察到命题须排除条件和其他解释：一次写错不能认定稳定混淆",
+        "intervention": "另设形音义分辨任务，不给稳定标签",
+        "counterexample": "一次写错不能认定稳定混淆"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.05.01.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.05.01",
+      "claim_refs": [
+        "H02.05.01.D4.01",
+        "H02.05.01.D4.02"
+      ],
+      "fixture": "能从选项认出字",
+      "views": {
+        "forward": "认读目标需明确是字形识别、读音还是词境意义；字表成员仅描述范围",
+        "reverse": "从观察到命题须排除条件和其他解释：认读字表成员不等于已掌握",
+        "intervention": "独立核读音及词境理解",
+        "counterexample": "认读字表成员不等于已掌握"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.05.02.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.05.02",
+      "claim_refs": [
+        "H02.05.02.D4.01",
+        "H02.05.02.D4.02"
+      ],
+      "fixture": "拼音输入选中正确汉字",
+      "views": {
+        "forward": "手写目标需明确字形、笔顺和工具；键入或选择正确不能证明手写",
+        "reverse": "从观察到命题须排除条件和其他解释：能认读不等于能书写",
+        "intervention": "按目标收集独立手写样本",
+        "counterexample": "能认读不等于能书写"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.05.03.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.05.03",
+      "claim_refs": [
+        "H02.05.03.D4.01",
+        "H02.05.03.D4.02"
+      ],
+      "fixture": "异体字显示正确但考试要求规范字",
+      "views": {
+        "forward": "规范字形应绑定标准、使用范围及版本；Unicode和字表的身份不同",
+        "reverse": "从观察到命题须排除条件和其他解释：规范字形与Unicode编码不是同一规范",
+        "intervention": "核适用规范，不全局替换",
+        "counterexample": "规范字形与Unicode编码不是同一规范"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "H02.05.04.CASE.01",
+      "owner": "H02",
+      "d3_id": "H02.05.04",
+      "claim_refs": [
+        "H02.05.04.D4.01",
+        "H02.05.04.D4.02"
+      ],
+      "fixture": "同一字楷体与宋体",
+      "views": {
+        "forward": "印刷体与手写可有允许的风格差异；非目标字体不直接判为错误",
+        "reverse": "从观察到命题须排除条件和其他解释：不可将非目标字体直接判错",
+        "intervention": "核实际评价目的和形体差异",
+        "counterexample": "不可将非目标字体直接判错"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}
