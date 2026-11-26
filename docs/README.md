@@ -51,3 +51,5 @@
 - [K01–K04 范围细化与来源核验](drafts/s01/README.md)；不代表D4知识完成或G01通过。
 
 - [S01 K01–K08累计细化](drafts/s01/README.md)，研究需求累计 197 / 648 D3（非知识完成率）。
+
+- [S01 K01–K12累计细化](drafts/s01/README.md)；[测量、估计、决策与任务边界](drafts/s01/measurement-decision-boundary.md)，研究需求累计 313 / 648 D3（非知识完成率）。
