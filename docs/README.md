@@ -53,3 +53,5 @@
 - [S01 K01–K08累计细化](drafts/s01/README.md)，研究需求累计 197 / 648 D3（非知识完成率）。
 
 - [S01 K01–K12累计细化](drafts/s01/README.md)；[测量、估计、决策与任务边界](drafts/s01/measurement-decision-boundary.md)，研究需求累计 313 / 648 D3（非知识完成率）。
+
+- [S01 通用19域475主题需求全覆盖](drafts/s01/README.md)；[环境、学科、证据与治理组合边界](drafts/s01/context-evidence-governance-boundary.md)（调查草案，未完成专业资格）。
