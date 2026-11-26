@@ -1,17 +1,17 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "repo": "kaicreator-mm/learn-kg",
   "branch": "version/v0.1.0",
   "planning_base": "848a05488cbed08bd3d97c2d4bf46ab8d579a210",
-  "master_issue": 6,
+  "master_issue": 1,
   "version_issue": 2,
-  "status": "PLANNED",
+  "status": "REVIEW_PENDING",
   "semantics": {
-    "dependency": "predecessor accepted with recorded evidence; implementation may draft/speculate but cannot claim ready or complete downstream before prerequisites",
-    "review": "independent exact SHA, scoped P0/P1 closeout and explicit P2 disposition; re-review impacted scopes only",
-    "status": "READY means no unsatisfied DAG prerequisite, not executed; existing staging work partial",
-    "storage": "SQLite implementation baseline; final freeze G04",
-    "parallel": "disjoint modules in monorepo; integrate using exact-head CAS; no duplicate fact ownership"
+    "dependency": "typed prerequisite receipts, exact consumed content; CANDIDATE_READY allows candidate work, not qualification; QUALIFICATION_RECEIPTS require independent local verdicts; G03 verifies closure; G04/G05 exact gate receipts",
+    "review": "per-module independent qualification within batches; local qualification does not imply qualified dependency closure; stale transitive consumers must rebind/revalidate",
+    "status": "READY means structurally no prerequisites, dispatch policy separately controls execution; no existing work marked complete",
+    "storage": "SQLite baseline; G04 freeze; immutable package manifest atomic activation",
+    "parallel": "candidate interfaces and drafts parallel; exact-head CAS; no duplicate fact ownership"
   },
   "tasks": [
     {
@@ -20,10 +20,12 @@
       "issue": 3,
       "depends_on": [],
       "title": "专业范围与来源校准",
-      "deliverable": "K/H/P/F/E覆盖矩阵、来源定位与资格状态、CQ、D4需求及主责账本",
-      "acceptance": "既有ID保留，核对D001–D012全部范围；纠正错误/未经核实来源；候选不冒充事实",
+      "deliverable": "K/H/P/A/F/E范围库存、D2/D3/D4需求与主责、CQ01–26逐项路由、LC覆盖、来源及资格计划、HSK标准候选",
+      "acceptance": "按 coverage-ledger.json 模板生成机器可读清单，逐D3覆盖/遗漏理由、唯一主责、适用性、条件/反例/证据；核对D001–D013，不伪造事实",
       "kind": "implementation",
-      "status": "READY"
+      "status": "READY",
+      "requirements": [],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "G01",
@@ -33,10 +35,17 @@
         "S01"
       ],
       "title": "范围累计独立审核",
-      "deliverable": "范围裁决、P0/P1/P2与冻结清单",
-      "acceptance": "独立Reviewer绑定exact SHA；阻塞项清零，P2明确处置",
+      "deliverable": "范围及CQ/D4需求账本独立裁决",
+      "acceptance": "独立exact SHA；逐域、CQ、遗漏/不适用理由、来源发现状态完整；P0/P1关闭，P2明确处置；非专业命题资格",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "S01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "GATE_ACCEPTED"
     },
     {
       "id": "DB01",
@@ -44,10 +53,12 @@
       "issue": 4,
       "depends_on": [],
       "title": "SQLite分库与专业schema基线",
-      "deliverable": "包清单、稳定ID、通用/学科/过程逻辑表、类型绑定、版本与发布隔离、迁移设计",
-      "acceptance": "SQL原生约束、跨库引用验证、索引/事务、无关库不加载、禁止重复事实；SQLite为实施基线，G04最终冻结",
+      "deliverable": "SQLite分库、稳定ID及类型端点、结构化创作交换、版本依赖与不可变包发布设计",
+      "acceptance": "每连接FK开启；跨库引用由显式resolver检查（SQLite无跨文件原生FK）；单包单写者、不可变文件+验证manifest+原子激活指针/回退；私有/正式/个人隔离；不假定WAL ATTACH跨库原子性；详见实施合同",
       "kind": "implementation",
-      "status": "READY"
+      "status": "READY",
+      "requirements": [],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "DB02",
@@ -57,10 +68,17 @@
         "DB01"
       ],
       "title": "SQLite生成、验证及查询工具",
-      "deliverable": "迁移器、schema版本、事务、只读包、查询路由、备份与导出、正负测试",
-      "acceptance": "外键检查、缺失引用/版本冲突拒绝、重复导入可识别、权限/个人数据边界、可复现测试",
+      "deliverable": "schema/迁移/解析/生成工具、跨包resolver、查询路由、备份恢复、发布候选与负测试",
+      "acceptance": "实际SQLite本地FK及类型/孤儿/错误版本/缺失包拒绝、重复导入、故障中断/旧manifest恢复、拒绝候选或个人库进入正式包；查询不加载无关库，EXPLAIN与关系计数；正式发布仍HOLD",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "SRC01",
@@ -68,10 +86,12 @@
       "issue": 5,
       "depends_on": [],
       "title": "保全既有HSK来源和RDF staging",
-      "deliverable": "私有来源哈希、抽取文本、R2导入账本、可恢复导出、原PDF身份与权利风险登记",
-      "acceptance": "159708四元组/11000词汇记录/3088汉字等为待复核历史证据；实际回读及备份验证；无原始全文进入公开仓库；不可验证的原PDF/权利保持HOLD",
+      "deliverable": "非破坏性原始来源与RDF/抽取文本保全；备份manifest、hash、导出和独立恢复记录",
+      "acceptance": "实读既有数据、导出并在隔离位置恢复比对；原PDF身份/权利、文本hash与PDF hash区分；缺失明确BLOCKED/HOLD；禁止公开全文及删除原数据",
       "kind": "implementation",
-      "status": "READY"
+      "status": "READY",
+      "requirements": [],
+      "output_receipt": "PRESERVATION_VERIFIED"
     },
     {
       "id": "HSK01",
@@ -79,65 +99,138 @@
       "issue": 5,
       "depends_on": [
         "DB02",
-        "SRC01"
+        "SRC01",
+        "HS00",
+        "IF01"
       ],
       "title": "实际SQLite迁移与对账",
-      "deliverable": "私有staging SQLite、RDF到类型表字段映射、原文及定位保留、迁移报告",
-      "acceptance": "11000词汇记录、4288汉字等级成员、94源块、9能力、823分类节点逐类核验；差异有原因；不以四元组数量相等替代语义无损；scopeTopic语义复核；失败回滚",
+      "deliverable": "实际私有SQLite staging、RDF及源逐字段映射与差异账本",
+      "acceptance": "11000词汇记录/4288字等级成员/3088字/94源块/9能力/823分类节点对账；102括号级别、合并级、来源页序号/原始字段、来源身份与scopeTopic语义核查；未知字段保留；备份已验、失败回滚，不晋升",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "SRC01",
+          "receipt": "PRESERVATION_VERIFIED"
+        },
+        {
+          "task_id": "HS00",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "K01",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "学习理论与科学基础模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR01"
     },
     {
       "id": "K02",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "认知、记忆与注意模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR01"
     },
     {
       "id": "K03",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "知识结构与理解模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR01"
     },
     {
       "id": "K04",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "技能形成与迁移模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR01"
     },
     {
       "id": "K05",
@@ -146,13 +239,34 @@
       "depends_on": [
         "G01",
         "K02",
-        "K04"
+        "K04",
+        "IF01"
       ],
       "title": "学习策略与练习调度模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR02"
     },
     {
       "id": "K06",
@@ -161,13 +275,34 @@
       "depends_on": [
         "G01",
         "K03",
-        "K04"
+        "K04",
+        "IF01"
       ],
       "title": "教学设计与教学法模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR02"
     },
     {
       "id": "K07",
@@ -176,39 +311,86 @@
       "depends_on": [
         "G01",
         "K03",
-        "K04"
+        "K04",
+        "IF01"
       ],
       "title": "学习目标、课程与路径模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR02"
     },
     {
       "id": "K08",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "动机、元认知与自我调节模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR02"
     },
     {
       "id": "K09",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "教育测量与评价模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR03"
     },
     {
       "id": "K10",
@@ -217,13 +399,34 @@
       "depends_on": [
         "G01",
         "K02",
-        "K09"
+        "K09",
+        "IF01"
       ],
       "title": "学习者建模与知识追踪模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR03"
     },
     {
       "id": "K11",
@@ -233,13 +436,38 @@
         "G01",
         "K05",
         "K08",
-        "K10"
+        "K10",
+        "IF01"
       ],
       "title": "自适应决策与学习规划模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR03"
     },
     {
       "id": "K12",
@@ -249,26 +477,64 @@
         "G01",
         "K03",
         "K06",
-        "K09"
+        "K09",
+        "IF01"
       ],
       "title": "教学内容、练习与资源模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR03"
     },
     {
       "id": "K13",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "学习环境与社会文化模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR04"
     },
     {
       "id": "K14",
@@ -277,13 +543,34 @@
       "depends_on": [
         "G01",
         "K04",
-        "K06"
+        "K06",
+        "IF01"
       ],
       "title": "学科与情境学习模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR04"
     },
     {
       "id": "K15",
@@ -292,13 +579,34 @@
       "depends_on": [
         "G01",
         "K06",
-        "K09"
+        "K09",
+        "IF01"
       ],
       "title": "教育技术与智能辅导模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR04"
     },
     {
       "id": "K16",
@@ -307,26 +615,60 @@
       "depends_on": [
         "G01",
         "K02",
-        "K13"
+        "K13",
+        "IF01"
       ],
       "title": "个体差异与可及性模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K13",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR04"
     },
     {
       "id": "K17",
       "stream": "knowledge",
       "issue": 6,
       "depends_on": [
-        "G01"
+        "G01",
+        "IF01"
       ],
       "title": "学习研究方法与证据评价模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR05"
     },
     {
       "id": "K18",
@@ -334,13 +676,30 @@
       "issue": 6,
       "depends_on": [
         "G01",
-        "K02"
+        "K02",
+        "IF01"
       ],
       "title": "发展与学习生物基础模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR05"
     },
     {
       "id": "K19",
@@ -349,13 +708,34 @@
       "depends_on": [
         "G01",
         "K13",
-        "K17"
+        "K17",
+        "IF01"
       ],
       "title": "学习公平、伦理与治理模块专业深化",
-      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
-      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "K13",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K17",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "KR05"
     },
     {
       "id": "KR01",
@@ -368,10 +748,29 @@
         "K04"
       ],
       "title": "K模块累计独立审核 K01/K02/K03/K04",
-      "deliverable": "exact-SHA逐模块裁决与修订账本",
-      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "K01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "KR02",
@@ -384,10 +783,29 @@
         "K08"
       ],
       "title": "K模块累计独立审核 K05/K06/K07/K08",
-      "deliverable": "exact-SHA逐模块裁决与修订账本",
-      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "K05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "KR03",
@@ -400,10 +818,29 @@
         "K12"
       ],
       "title": "K模块累计独立审核 K09/K10/K11/K12",
-      "deliverable": "exact-SHA逐模块裁决与修订账本",
-      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K11",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K12",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "KR04",
@@ -416,10 +853,29 @@
         "K16"
       ],
       "title": "K模块累计独立审核 K13/K14/K15/K16",
-      "deliverable": "exact-SHA逐模块裁决与修订账本",
-      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "K13",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K14",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K15",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "KR05",
@@ -431,10 +887,25 @@
         "K19"
       ],
       "title": "K模块累计独立审核 K17/K18/K19",
-      "deliverable": "exact-SHA逐模块裁决与修订账本",
-      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "K17",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K18",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K19",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "H01",
@@ -442,13 +913,30 @@
       "issue": 5,
       "depends_on": [
         "G01",
-        "HSK01"
+        "HSK01",
+        "IF01"
       ],
       "title": "语音与音系模块专业深化",
-      "deliverable": "声母/韵母/声调、拼音、语音规则及听辨任务；不由字形推断读音",
-      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "deliverable": "声母/韵母/声调、拼音、语音规则及听辨任务；不由字形推断读音；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "HR01"
     },
     {
       "id": "H02",
@@ -457,13 +945,34 @@
       "depends_on": [
         "G01",
         "HSK01",
-        "H01"
+        "HS00",
+        "IF01"
       ],
       "title": "汉字与书写系统模块专业深化",
-      "deliverable": "认读/书写等级、字符身份、构形/部件、字音及证据；不猜造部件",
-      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "deliverable": "认读/书写等级、字符身份、构形/部件、字音及证据；不猜造部件；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "HS00",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "HR01"
     },
     {
       "id": "H03",
@@ -472,14 +981,34 @@
       "depends_on": [
         "G01",
         "HSK01",
-        "H01",
-        "H02"
+        "HS00",
+        "IF01"
       ],
       "title": "词汇、构词与词汇语义模块专业深化",
-      "deliverable": "11000词汇源记录保留，拼音/词性/义项按证据拆分，词义及搭配候选",
-      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "deliverable": "11000词汇源记录保留，拼音/词性/义项按证据拆分，词义及搭配候选；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "HS00",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "HR01"
     },
     {
       "id": "H04",
@@ -488,13 +1017,34 @@
       "depends_on": [
         "G01",
         "HSK01",
-        "H03"
+        "HS00",
+        "IF01"
       ],
       "title": "语法与构式模块专业深化",
-      "deliverable": "语法源块→可核证构式与条件、正反例；不可靠分列保持HOLD",
-      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "deliverable": "语法源块→可核证构式与条件、正反例；不可靠分列保持HOLD；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "HS00",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "HR01"
     },
     {
       "id": "H05",
@@ -503,14 +1053,44 @@
       "depends_on": [
         "G01",
         "HSK01",
+        "HS00",
+        "IF01",
         "H03",
         "H04"
       ],
       "title": "语用、语篇与交际模块专业深化",
-      "deliverable": "任务/话题源块→语用/语篇与场景，证据及边界",
-      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "deliverable": "任务/话题源块→语用/语篇与场景，证据及边界；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "HS00",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H04",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "HR02"
     },
     {
       "id": "H06",
@@ -523,13 +1103,50 @@
         "H02",
         "H03",
         "H04",
-        "H05"
+        "H05",
+        "IF01"
       ],
       "title": "语言技能与表现任务模块专业深化",
-      "deliverable": "听说读写译、技能与表现任务、标准化观测及评价",
-      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "deliverable": "听说读写译、技能与表现任务、标准化观测及评价；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "HR02"
     },
     {
       "id": "H07",
@@ -542,13 +1159,60 @@
         "H03",
         "H04",
         "H05",
-        "H06"
+        "H06",
+        "HS00",
+        "H01",
+        "IF01"
       ],
       "title": "规范、等级与课程映射模块专业深化",
-      "deliverable": "HSK版本/等级/范围、GF0025-2021与旧标准边界、能力映射；不等同先修或掌握",
-      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "deliverable": "HSK版本/等级/范围、GF0025-2021与旧标准边界、能力映射；不等同先修或掌握；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "HS00",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "HR02"
     },
     {
       "id": "HR01",
@@ -561,10 +1225,29 @@
         "H04"
       ],
       "title": "汉语基础模块累计审核",
-      "deliverable": "逐模块独立裁决与修订账本",
-      "acceptance": "exact SHA，来源/语义/导入一致性；P0/P1闭合",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "H01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H04",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "HR02",
@@ -576,10 +1259,25 @@
         "H07"
       ],
       "title": "交际、技能与标准累计审核",
-      "deliverable": "逐模块独立裁决与修订账本",
-      "acceptance": "exact SHA，标准/能力/任务/评价不混淆；P0/P1闭合",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "H05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H07",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "P01",
@@ -592,13 +1290,50 @@
         "K06",
         "K07",
         "K08",
-        "K13"
+        "K13",
+        "IF01"
       ],
       "title": "学习模式结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K13",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR01"
     },
     {
       "id": "P02",
@@ -611,13 +1346,50 @@
         "K08",
         "K09",
         "K10",
-        "K11"
+        "K11",
+        "IF01"
       ],
       "title": "目标与学习准备结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K11",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR01"
     },
     {
       "id": "P03",
@@ -630,13 +1402,50 @@
         "K04",
         "K05",
         "K06",
-        "K12"
+        "K12",
+        "IF01"
       ],
       "title": "学习活动单元结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K12",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR01"
     },
     {
       "id": "P04",
@@ -651,13 +1460,58 @@
         "K12",
         "P01",
         "P02",
-        "P03"
+        "P03",
+        "IF01"
       ],
       "title": "学习流程结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K11",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K12",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR01"
     },
     {
       "id": "P05",
@@ -672,13 +1526,58 @@
         "K10",
         "K11",
         "P03",
-        "P04"
+        "P04",
+        "IF01"
       ],
       "title": "练习与保持流程结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K11",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR01"
     },
     {
       "id": "P06",
@@ -692,13 +1591,54 @@
         "K10",
         "K12",
         "P03",
-        "P04"
+        "P04",
+        "IF01"
       ],
       "title": "观测与反馈流程结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K12",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR01"
     },
     {
       "id": "P07",
@@ -712,13 +1652,54 @@
         "K16",
         "K19",
         "P02",
-        "P03"
+        "P03",
+        "IF01"
       ],
       "title": "动机与激励流程结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K13",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K19",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR02"
     },
     {
       "id": "P08",
@@ -734,13 +1715,62 @@
         "P04",
         "P05",
         "P06",
-        "P07"
+        "P07",
+        "IF01"
       ],
       "title": "自适应调节流程结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K11",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR02"
     },
     {
       "id": "P09",
@@ -754,13 +1784,54 @@
         "K09",
         "K17",
         "P04",
-        "P06"
+        "P06",
+        "IF01"
       ],
       "title": "评价与迁移流程结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K17",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR02"
     },
     {
       "id": "P10",
@@ -776,13 +1847,62 @@
         "K17",
         "K19",
         "P08",
-        "P09"
+        "P09",
+        "IF01"
       ],
       "title": "连贯学习与治理结构化模板",
-      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
-      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；角色/守卫/预算/停止/恢复/幂等及竞争解释负例",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K11",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K15",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K17",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K19",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "qualification_gate": "PR02"
     },
     {
       "id": "PR01",
@@ -797,10 +1917,37 @@
         "P06"
       ],
       "title": "模式与流程模块累计审核",
-      "deliverable": "逐模块独立裁决",
-      "acceptance": "语义、条件、证据、循环与终止；exact SHA",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "P01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P06",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "PR02",
@@ -813,10 +1960,29 @@
         "P10"
       ],
       "title": "激励、调节与长期过程累计审核",
-      "deliverable": "逐模块独立裁决",
-      "acceptance": "真实观测与估计、选择权、保持/迁移与退出；exact SHA",
+      "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
+      "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "P07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P10",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "QUALIFICATION_RECEIPTS"
     },
     {
       "id": "F01",
@@ -831,13 +1997,57 @@
         "P02",
         "P09",
         "H06",
-        "H07"
+        "H07",
+        "IF01"
       ],
       "title": "目标与能力组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "F02",
@@ -851,13 +2061,73 @@
         "K12",
         "P03",
         "P04",
-        "H03"
+        "H03",
+        "IF01",
+        "H04",
+        "H05",
+        "H06",
+        "H07"
       ],
       "title": "对象与粒度组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K12",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H07",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "F03",
@@ -870,13 +2140,54 @@
         "K15",
         "K16",
         "K19",
-        "P03"
+        "P03",
+        "IF01",
+        "P04"
       ],
       "title": "资源与表达组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K12",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K15",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K19",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "F04",
@@ -892,13 +2203,61 @@
         "K13",
         "K15",
         "P03",
-        "P06"
+        "P06",
+        "IF01"
       ],
       "title": "学习交互组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K12",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K13",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K15",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "F05",
@@ -914,13 +2273,66 @@
         "K10",
         "K16",
         "K18",
-        "P08"
+        "P08",
+        "IF01",
+        "P10"
       ],
       "title": "学习者状态组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K18",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P10",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "F06",
@@ -938,13 +2350,69 @@
         "K16",
         "P06",
         "P08",
-        "H06"
+        "H06",
+        "IF01"
       ],
       "title": "障碍与补救组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K11",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "F07",
@@ -957,13 +2425,49 @@
         "K15",
         "K16",
         "K19",
-        "P10"
+        "P10",
+        "IF01"
       ],
       "title": "环境与角色组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K13",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K15",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K16",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K19",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "F08",
@@ -979,13 +2483,61 @@
         "K17",
         "P05",
         "P09",
-        "H06"
+        "H06",
+        "IF01"
       ],
       "title": "迁移与实践组合契约与实例",
-      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
-      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K14",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K17",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "E01",
@@ -996,13 +2548,41 @@
         "K15",
         "K17",
         "K19",
-        "P10"
+        "P10",
+        "IF01"
       ],
       "title": "外部改进闭环",
-      "deliverable": "评价协议、版本、候选修订、审核与发布/回退契约",
-      "acceptance": "个体观测不直接写正式库；证据/权限/版本隔离；实验效果不虚报",
+      "deliverable": "评价协议、版本、候选修订、审核与发布/回退契约；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "个体观测不直接写正式库；证据/权限/版本隔离；实验效果不虚报；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "K09",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K15",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K17",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K19",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A01",
@@ -1010,13 +2590,29 @@
       "issue": 6,
       "depends_on": [
         "F01",
-        "F02"
+        "F02",
+        "IF01"
       ],
       "title": "目标→构念→知识组件贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A02",
@@ -1025,13 +2621,48 @@
       "depends_on": [
         "F02",
         "F03",
-        "F04"
+        "F04",
+        "IF01",
+        "H04",
+        "H05",
+        "H06"
       ],
       "title": "知识→任务→观测贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H06",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A03",
@@ -1039,13 +2670,29 @@
       "issue": 6,
       "depends_on": [
         "F05",
-        "F06"
+        "F06",
+        "IF01"
       ],
       "title": "观测→诊断→状态贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A04",
@@ -1054,13 +2701,33 @@
       "depends_on": [
         "F05",
         "F06",
-        "P08"
+        "P08",
+        "IF01"
       ],
       "title": "状态→策略→规划贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A05",
@@ -1068,13 +2735,29 @@
       "issue": 6,
       "depends_on": [
         "F01",
-        "F08"
+        "F08",
+        "IF01"
       ],
       "title": "教学→表现→保持/迁移贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A06",
@@ -1083,13 +2766,48 @@
       "depends_on": [
         "F03",
         "F04",
-        "K19"
+        "K19",
+        "IF01",
+        "H03",
+        "H04",
+        "H05"
       ],
       "title": "内容生成→核查→交付贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "K19",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H05",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A07",
@@ -1097,13 +2815,29 @@
       "issue": 6,
       "depends_on": [
         "F05",
-        "F07"
+        "F07",
+        "IF01"
       ],
       "title": "环境/发展/差异→支持贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "A08",
@@ -1111,13 +2845,29 @@
       "issue": 6,
       "depends_on": [
         "F08",
-        "E01"
+        "E01",
+        "IF01"
       ],
       "title": "证据→模型/政策→实证评价贯通组合",
-      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
-      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "F08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "E01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "G03",
@@ -1141,13 +2891,98 @@
         "A06",
         "A07",
         "A08",
-        "E01"
+        "E01",
+        "IF01",
+        "HS00"
       ],
       "title": "跨域一致性与L1冻结",
-      "deliverable": "覆盖/主责/重复/缺口、专业证据、K/H/P/A/F/E组合审查",
-      "acceptance": "累计独立审核，P0/P1闭合，P2明确处置，范围内全部模块有裁决",
+      "deliverable": "逐模块资格收据与完整消费闭包、D3/D4和CQ覆盖账本、跨域一致性裁决及L1内容manifest",
+      "acceptance": "全部计划专业模块的局部资格与确切内容hash匹配；依赖消耗tuple逐层核验、STALE拒绝；F/A/E组合独立审查；所有P0/P1关闭、P2处置；形成不可变获准内容清单",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "KR01",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "KR02",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "KR03",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "KR04",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "KR05",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "HR01",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "HR02",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "PR01",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "PR02",
+          "receipt": "QUALIFICATION_RECEIPTS"
+        },
+        {
+          "task_id": "A01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "E01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "HS00",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "GATE_ACCEPTED"
     },
     {
       "id": "DB03",
@@ -1156,13 +2991,33 @@
       "depends_on": [
         "DB02",
         "HSK01",
-        "P04"
+        "P04",
+        "IF01"
       ],
       "title": "知识包生成与动态流程验证工具",
-      "deliverable": "声明式流程检查、跨库绑定、只读分发、预算/终止检查、基准及生成工具",
-      "acceptance": "真实SQLite执行，引用完整性、负例、查询计划与基准；不依赖任意脚本",
+      "deliverable": "全K/H/P/F/A/E canonical生成器、声明式流程验证器、包manifest与激活/恢复工具",
+      "acceptance": "实际加载有效/无效包；本地FK、跨库错类型/版本/孤儿、故障激活与回退、私有数据及候选隔离、重复导入、按需路由/索引计划/类型关联计数；覆盖生成输入所有视图，禁止手工重写知识",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "HSK01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "V01",
@@ -1180,13 +3035,109 @@
         "F08",
         "E01",
         "P10",
-        "H07"
+        "H07",
+        "V00",
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08"
       ],
       "title": "全生命周期贯通切片",
-      "deliverable": "LC01–LC12测试夹具及独立预期、HSK真实源实体、另一最小学科示范、过程消费测试适配器",
-      "acceptance": "实际执行可观察结果；合成输入标记，不宣称真实教学效果；不实现xLearn产品运行时",
+      "deliverable": "完整候选LC01–12/CQ01–26集成夹具、A01–08绑定、独立oracle与实际运行记录",
+      "acceptance": "候选tuple固定，HSK与最小第二学科；逐项预期/实际/负例/未运行理由，影响变更必须重验；不替代冻结后V02",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "DB03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "F08",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "E01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "P10",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "H07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "V00",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A04",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A05",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A06",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A07",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "A08",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "G04",
@@ -1198,10 +3149,25 @@
         "V01"
       ],
       "title": "L2数据和过程契约冻结",
-      "deliverable": "schema、查询/生成/迁移、过程、验证设计及包依赖审查",
-      "acceptance": "独立exact-SHA设计审核；SQLite、权限、证据及跨库约束满足；P0/P1闭合",
+      "deliverable": "冻结schema/接口、G03获准输入manifest、完整CQ/LC夹具与独立oracle、工具与执行环境基线",
+      "acceptance": "V01候选收据按最终冻结tuple对齐或有限重验；无陈旧引用；独立exact SHA裁决；冻结测试预期，不以实际输出反向改oracle",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G03",
+          "receipt": "GATE_ACCEPTED"
+        },
+        {
+          "task_id": "DB03",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "V01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "GATE_ACCEPTED"
     },
     {
       "id": "V02",
@@ -1211,10 +3177,17 @@
         "G04"
       ],
       "title": "最终生成与真实运行验证",
-      "deliverable": "精确版本知识包、LC01–LC12实跑、CQ覆盖、性能证据、迁移与恢复报告、消费样例",
-      "acceptance": "全量计划范围验收；可重复正负例、结果/源/代码/包hash绑定；合法公开范围之外仅私有",
+      "deliverable": "按G03/G04精确获准输入生成不可变SQLite包；逐CQ/LC实际执行结果与artifact、代码、schema、oracle、环境hash",
+      "acceptance": "所有适用CQ/LC实际正负例；不适用/实证HOLD有裁决且不冒充PASS；跨库故障回退、路由计数、查询计划与基准；全视图导入对账，公私范围核验；冻结后变更使相关收据失效",
       "kind": "implementation",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G04",
+          "receipt": "GATE_ACCEPTED"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY"
     },
     {
       "id": "G05",
@@ -1224,10 +3197,17 @@
         "V02"
       ],
       "title": "最终独立验收",
-      "deliverable": "独立验收、遗留账本与发布资格",
-      "acceptance": "exact-SHA、实际artifact、测试复现；所有阻塞闭合；不以CI代替专业审核",
+      "deliverable": "独立检查实际包字节与manifest、复跑关键测试、全部CQ/LC及遗留裁决",
+      "acceptance": "exact SHA与artifact hash匹配，冻结tuple/测试与资格闭包有效；P0/P1关闭、P2明确处置；明确工程证明与教育实证差别",
       "kind": "review",
-      "status": "PLANNED"
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "V02",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "GATE_ACCEPTED"
     },
     {
       "id": "REL01",
@@ -1237,9 +3217,96 @@
         "G05"
       ],
       "title": "版本发布裁定",
-      "deliverable": "版本清单、依赖与校验和、发布/回退说明、issue收尾",
-      "acceptance": "仅已审核范围晋升；发布权利满足；原#3–#5与#6验收记录一致",
+      "deliverable": "仅G05批准且合法的不可变版本包与manifest、原子激活/回退及发布记录",
+      "acceptance": "核对实际bytes和批准hash、权限/权利、历史版本保留、旧版恢复验证；不得激活候选或私有数据；#2–#6记录一致",
       "kind": "release",
+      "status": "PLANNED",
+      "requirements": [
+        {
+          "task_id": "G05",
+          "receipt": "GATE_ACCEPTED"
+        }
+      ],
+      "output_receipt": "RELEASED"
+    },
+    {
+      "id": "IF01",
+      "stream": "scope",
+      "issue": 6,
+      "depends_on": [
+        "S01",
+        "DB01",
+        "G01"
+      ],
+      "title": "早期共同语义接口",
+      "deliverable": "版本化F/P/A共享对象/角色/目标/观测/状态/类型与结构化创作交换合同；候选样例与验证规则",
+      "acceptance": "K/H/P/F/A/E共同引用，源→定位→命题→实体/关系→案例→验证的稳定ID、类型、条件、版本；错误类型/悬空引用/未知拒绝；非G04最终冻结",
+      "kind": "implementation",
+      "requirements": [
+        {
+          "task_id": "S01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "DB01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "G01",
+          "receipt": "GATE_ACCEPTED"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "status": "PLANNED"
+    },
+    {
+      "id": "HS00",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "S01",
+        "SRC01"
+      ],
+      "title": "HSK标准与来源记录早期接口",
+      "deliverable": "版本、来源记录身份、级别原串/合并级别、源页序号、字符与词汇源记录区别、字段解析边界",
+      "acceptance": "先于H模块形成候选接口；原PDF/权利未知HOLD；H07最终标准映射仍须完整专业证据",
+      "kind": "implementation",
+      "requirements": [
+        {
+          "task_id": "S01",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "SRC01",
+          "receipt": "PRESERVATION_VERIFIED"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
+      "status": "PLANNED"
+    },
+    {
+      "id": "V00",
+      "stream": "validation",
+      "issue": 6,
+      "depends_on": [
+        "DB02",
+        "IF01"
+      ],
+      "title": "可逆有限原型",
+      "deliverable": "少量原创/合成夹具、候选接口、包加载/流程步骤原型、预期与失败记录",
+      "acceptance": "仅验证候选技术可行性；明确限定案例ID、版本、环境及未验证项；不替代V01/V02，不晋升专业知识",
+      "kind": "implementation",
+      "requirements": [
+        {
+          "task_id": "DB02",
+          "receipt": "CANDIDATE_READY"
+        },
+        {
+          "task_id": "IF01",
+          "receipt": "CANDIDATE_READY"
+        }
+      ],
+      "output_receipt": "CANDIDATE_READY",
       "status": "PLANNED"
     }
   ],
@@ -1251,7 +3318,11 @@
     ],
     [
       "G01",
-      "DB02"
+      "DB02",
+      "HS00"
+    ],
+    [
+      "IF01"
     ],
     [
       "HSK01",
@@ -1262,7 +3333,8 @@
       "K08",
       "K09",
       "K13",
-      "K17"
+      "K17",
+      "V00"
     ],
     [
       "K05",
@@ -1273,7 +3345,10 @@
       "K18",
       "K19",
       "KR01",
-      "H01"
+      "H01",
+      "H02",
+      "H03",
+      "H04"
     ],
     [
       "K11",
@@ -1282,64 +3357,61 @@
       "K15",
       "KR02",
       "KR05",
-      "H02",
+      "H05",
+      "HR01",
       "P01"
     ],
     [
       "KR03",
       "KR04",
-      "H03",
+      "H06",
       "P02",
       "P03"
     ],
     [
-      "H04",
+      "H07",
       "P04",
-      "P07",
-      "F03"
+      "P07"
     ],
     [
-      "H05",
-      "HR01",
+      "HR02",
       "P05",
       "P06",
       "F02",
+      "F03",
       "DB03"
     ],
     [
-      "H06",
       "P08",
       "P09",
       "PR01",
       "F04"
     ],
     [
-      "H07",
       "P10",
-      "F05",
+      "F01",
       "F06",
       "F08",
       "A02",
       "A06"
     ],
     [
-      "HR02",
       "PR02",
-      "F01",
+      "F05",
       "F07",
       "E01",
-      "A03",
-      "A04"
-    ],
-    [
       "A01",
-      "A05",
-      "A07",
-      "A08",
-      "V01"
+      "A05"
     ],
     [
-      "G03"
+      "A03",
+      "A04",
+      "A07",
+      "A08"
+    ],
+    [
+      "G03",
+      "V01"
     ],
     [
       "G04"
@@ -1353,5 +3425,61 @@
     [
       "REL01"
     ]
-  ]
+  ],
+  "orchestration_issue": 6,
+  "correction_base": "c9667a7fe3476d2726854768122947d07c562271",
+  "review_comment_id": 7189271304,
+  "dispatch": {
+    "planning_gate": "HOLD_PENDING_SCOPED_REVIEW",
+    "allowed_before_review": {
+      "SRC01": "NONDESTRUCTIVE_PRESERVATION_ONLY",
+      "S01": "INVESTIGATION_AND_DRAFT_ONLY",
+      "DB01": "INVESTIGATION_AND_DRAFT_ONLY"
+    },
+    "receipt_namespace": "TASK:<id>",
+    "historical_case_aliases": {
+      "P01": "CASE-P01",
+      "P02": "CASE-P02",
+      "P03": "CASE-P03",
+      "P04": "CASE-P04"
+    }
+  },
+  "qualification_by_module": {
+    "K01": "KR01",
+    "K02": "KR01",
+    "K03": "KR01",
+    "K04": "KR01",
+    "K05": "KR02",
+    "K06": "KR02",
+    "K07": "KR02",
+    "K08": "KR02",
+    "K09": "KR03",
+    "K10": "KR03",
+    "K11": "KR03",
+    "K12": "KR03",
+    "K13": "KR04",
+    "K14": "KR04",
+    "K15": "KR04",
+    "K16": "KR04",
+    "K17": "KR05",
+    "K18": "KR05",
+    "K19": "KR05",
+    "H01": "HR01",
+    "H02": "HR01",
+    "H03": "HR01",
+    "H04": "HR01",
+    "H05": "HR02",
+    "H06": "HR02",
+    "H07": "HR02",
+    "P01": "PR01",
+    "P02": "PR01",
+    "P03": "PR01",
+    "P04": "PR01",
+    "P05": "PR01",
+    "P06": "PR01",
+    "P07": "PR02",
+    "P08": "PR02",
+    "P09": "PR02",
+    "P10": "PR02"
+  }
 }

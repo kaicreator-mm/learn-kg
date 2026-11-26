@@ -8,7 +8,7 @@
 - [阶段建设计划](implementation/knowledge-graph-plan.md)
 - [讨论决策记录](product/decision-index.md)
 
-主线 #1，版本 #2，当前任务 #3。以原始来源支撑专业事实，不以本项目提案作为专业证据。
+主线 #1，版本 #2，实施总控 #6（#3/#4/#5 并行）。以原始来源支撑专业事实，不以本项目提案作为专业证据。
 
 - [HSK 学科知识域与组合验证计划](product/hsk-domain-pilot.md)
 
@@ -18,7 +18,7 @@
 - [知识体系 R1](product/system/README.md)：通用19域、汉语7域及8类组合能力；D1–D3结构库存、非知识点验收。
 
 ## D010 并行图数据库与 HSK 导入
-- [DB01 图数据库设计及数据契约](design/graph-database.md)
+- [历史 RDF staging 设计（已由D013替代）](design/graph-database.md)
 - [HSK01 首批实际导入证据](implementation/hsk-import-r2.md)
 - [导入工具](../tools/hsk_import/README.md)
 任务 #4 DB01、#5 HSK01 与 #3 G01 并行；staging 不等于 accepted。
@@ -35,3 +35,6 @@
 
 ## D013 实施总控
 - [实施Task DAG](implementation/task-dag.md) / [机器可读JSON](implementation/task-dag.json)，总控 #6；#3/#4/#5并行复用。
+
+## D013 R2 修正候选
+- [实施与证据合同](implementation/task-execution-contract.md) / [CQ覆盖账本](implementation/coverage-ledger.json)。审核前限制见 #6；SQLite实施基线，历史RDF仅迁移与保全。

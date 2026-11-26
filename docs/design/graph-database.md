@@ -1,4 +1,6 @@
-# DB01 — 图数据库设计 R1（可执行基线，未冻结）
+# 历史 DB01 — RDF staging 设计 R1（D010，已被D013实施基线替代）
+
+当前 SQLite 实施入口见 [Task DAG](../implementation/task-dag.md) 与 [实施合同](../implementation/task-execution-contract.md)。下文仅作为已执行 RDF staging 的历史记录、保全与迁移输入，不是当前实现任务权威；不得删除原数据。
 D010 / #4。首版采用 RDF 1.1 数据模型、SPARQL 1.1 查询、PyOxigraph 0.5.13 嵌入式持久化（RocksDB）。选型理由：跨学科稳定IRI、显式语义、来源/命题分离、命名图隔离及 N-Quads/TriG 可移植。Neo4j 属性图便于关系遍历但非当前标准知识交换主模型；将来允许无损投影，不双写两套事实源。参考 https://pyoxigraph.readthedocs.io/en/stable/ 与 https://www.w3.org/TR/rdf11-primer/ ；未进行性能横向基准。
  
 ## 逻辑分层

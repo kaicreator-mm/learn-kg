@@ -33,3 +33,6 @@ G01：对照F01–F08/E01检查K/H/P/A专业覆盖、遗漏及唯一主责；新
 
 ## D013 实施调度基线（当前）
 详细节点、依赖与验收由 [Task DAG](task-dag.md) 和 [JSON](task-dag.json) 管理，Issue #6统一调度。此前G01–G05门禁保留；SQLite作为当前实施基线，G04冻结；RDF仅作为既有迁移输入，不再扩大专用RDF实现。首批 S01/DB01/SRC01 可并行，不将规划状态冒充完成。后续以实际证据更新调度及issue。
+
+## D013 R2（当前修正候选）
+实施按 [Task DAG R2](task-dag.md)、[实施合同](task-execution-contract.md)、[CQ覆盖账本](coverage-ledger.json)。R1审查REWORK_REQUIRED，全部修正待有限复审；原计划历史保留。G01专业范围、模块局部资格、G03闭包、G04契约、G05最终独立门禁不变。
