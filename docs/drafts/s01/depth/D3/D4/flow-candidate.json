@@ -1,0 +1,266 @@
+{
+  "status": "DRAFT_ONLY_NOT_EXECUTABLE_POLICY",
+  "version": "draft-d4-flow-1",
+  "id": "D4:LEARNING_CYCLE",
+  "entry": "PREPARE",
+  "terminal": [
+    "END",
+    "PAUSE",
+    "EXIT"
+  ],
+  "budget": {
+    "scope": "learner+session",
+    "unit": "estimated_minutes",
+    "max_turns": "REQUIRED_POSITIVE_BOUND",
+    "unknown": "PAUSE"
+  },
+  "steps": [
+    {
+      "id": "PREPARE",
+      "contract": "P02",
+      "meaning": "目标、构念、授权、先验状态及预算"
+    },
+    {
+      "id": "SELECT",
+      "contract": "P01",
+      "meaning": "选择可访问学习模式"
+    },
+    {
+      "id": "ACTIVITY",
+      "contract": "P03",
+      "meaning": "选择任务及活动规格"
+    },
+    {
+      "id": "OBSERVE",
+      "contract": "P06",
+      "meaning": "记录响应、缺失、提示及量规"
+    },
+    {
+      "id": "FEEDBACK",
+      "contract": "P06",
+      "meaning": "提供可操作反馈，保留原始观测"
+    },
+    {
+      "id": "ADAPT",
+      "contract": "P08",
+      "meaning": "依据不确定性选择补救或独立复测"
+    },
+    {
+      "id": "RETENTION",
+      "contract": "P05",
+      "meaning": "生成保持及迁移复测候选"
+    },
+    {
+      "id": "END",
+      "contract": "P10",
+      "meaning": "结束并保留计划"
+    },
+    {
+      "id": "PAUSE",
+      "contract": "P10",
+      "meaning": "暂停，保留未知原因"
+    },
+    {
+      "id": "EXIT",
+      "contract": "P10",
+      "meaning": "退出、停止后续动作"
+    }
+  ],
+  "guards": [
+    {
+      "id": "AUTHORIZED_AND_READY",
+      "contract": "P02",
+      "meaning": "明确授权、目标、构念、预算及准备条件",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "MODE_AVAILABLE",
+      "contract": "P01",
+      "meaning": "已选模式适合目标且可访问",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "TASK_VALID",
+      "contract": "P03",
+      "meaning": "任务绑定、量规、版本、权限及构念核对",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "OBSERVATION_VALID",
+      "contract": "P06",
+      "meaning": "观测真实且条件明确，辅助与独立分别保存",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "FEEDBACK_ALLOWED",
+      "contract": "P06",
+      "meaning": "反馈与原观测分离且获准",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "RETRY_ELIGIBLE",
+      "contract": "P08",
+      "meaning": "有证据支持的可逆探查/补救、预算及次数余量",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "RETEST_ELIGIBLE",
+      "contract": "P09",
+      "meaning": "独立复测的题族、时间、构念及量规条件满足",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "COMPLETE",
+      "contract": "P10",
+      "meaning": "学习会话完成，不等同掌握",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    },
+    {
+      "id": "MOTIVATION_OPT_IN",
+      "contract": "P07",
+      "meaning": "可拒绝的过程反馈、休息或求助，不作为进阶硬门槛",
+      "unknown": "HOLD",
+      "implementation": "DECLARATIVE_MEANING_ONLY"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "T1",
+      "from": "PREPARE",
+      "to": "SELECT",
+      "event": "PREPARED",
+      "guard": "AUTHORIZED_AND_READY",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T2",
+      "from": "SELECT",
+      "to": "ACTIVITY",
+      "event": "MODE_SELECTED",
+      "guard": "MODE_AVAILABLE",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T3",
+      "from": "ACTIVITY",
+      "to": "OBSERVE",
+      "event": "TASK_PRESENTED",
+      "guard": "TASK_VALID",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T4",
+      "from": "OBSERVE",
+      "to": "FEEDBACK",
+      "event": "OBSERVATION_RECORDED",
+      "guard": "OBSERVATION_VALID",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T5",
+      "from": "FEEDBACK",
+      "to": "ADAPT",
+      "event": "FEEDBACK_REVIEWED",
+      "guard": "FEEDBACK_ALLOWED",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T6",
+      "from": "ADAPT",
+      "to": "ACTIVITY",
+      "event": "RETRY",
+      "guard": "RETRY_ELIGIBLE",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T7",
+      "from": "ADAPT",
+      "to": "RETENTION",
+      "event": "SCHEDULE_RETEST",
+      "guard": "RETEST_ELIGIBLE",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T8",
+      "from": "ADAPT",
+      "to": "END",
+      "event": "FINISH",
+      "guard": "COMPLETE",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    },
+    {
+      "id": "T9",
+      "from": "RETENTION",
+      "to": "END",
+      "event": "PLAN_RECORDED",
+      "guard": "COMPLETE",
+      "priority": 10,
+      "unknown_branch": "PAUSE",
+      "failure_branch": "PAUSE",
+      "budget": "REQUIRE_REMAINING_TURN_AND_TIME",
+      "checkpoint": "RECORD_CANDIDATE_ONLY"
+    }
+  ],
+  "global_control": {
+    "event": "VERIFIED_EXIT",
+    "priority": 0,
+    "target": "EXIT",
+    "applies_to_nonterminal": true,
+    "scope": "session/subject/global; verified control independent of ordinary learning-event time",
+    "unknown": "PAUSE",
+    "reference": "P10"
+  },
+  "optional_interventions": [
+    {
+      "guard": "MOTIVATION_OPT_IN",
+      "contract": "P07",
+      "effect": "OFFER_OPTIONAL_SUPPORT_ONLY",
+      "may_change_mastery": false
+    }
+  ],
+  "limits": [
+    "No arbitrary executable expressions; guards are human-readable contract references and require separate qualified interpretation.",
+    "No actual learner state, authorization engine or educational effect; no implicit cross-subject equivalence.",
+    "Retention step schedules a candidate, does not measure retention; independent delayed observation is separately required."
+  ]
+}
