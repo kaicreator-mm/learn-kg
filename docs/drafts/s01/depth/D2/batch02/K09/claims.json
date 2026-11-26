@@ -1,0 +1,216 @@
+{
+  "owner": "K09",
+  "base": "03ce2317096be52cd2cf1975c85b3dd685fb0a96",
+  "prior_claim_blob": "0e737add866880e145abe4c58c3555873a7064aa",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K09.05.03.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.05.03",
+      "requirement_id": "K09.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "自适应测验循环依序执行选题、施测计分、能力估计和再次选题；最大信息规则在当前估计处比较未施测题目的信息。",
+      "conditions": [
+        "已校准题库、指定IRT模型及估计程序；非唯一策略"
+      ],
+      "negative_boundary": "当前估计不是已知真能力，不能仅按难度标签选题。",
+      "source_refs": [
+        "K09-B02-CAT"
+      ],
+      "source_locator": "l145–162",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "同一θ下题A信息.2、B信息.4且均可用",
+        "expected": "选B为最大信息候选",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.05.03.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.05.03",
+      "requirement_id": "K09.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "内容平衡与曝光控制可限制选题集合，信息最大化应在符合约束的候选集内进行。",
+      "conditions": [
+        "具体题库与规则须明确；约束筛选是项目操作化"
+      ],
+      "negative_boundary": "高信息题若违反内容或曝光约束不能自动入选。",
+      "source_refs": [
+        "K09-B02-ALICAT"
+      ],
+      "source_locator": "l77–82",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "A信息.9但已用，B信息.5且可用",
+        "expected": "B候选；没有可用题则HOLD",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.05.04.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.05.04",
+      "requirement_id": "K09.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "以测量精度为目标时可设定能力估计标准误阈值；分类决策与精度估计可以有不同终止目标。",
+      "conditions": [
+        "阈值和估计方法预先声明"
+      ],
+      "negative_boundary": "达到题数上限或题库用尽不证明达到精度。",
+      "source_refs": [
+        "K09-B02-CAT"
+      ],
+      "source_locator": "l169–175",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "SE=.4，目标.3，题库耗尽",
+        "expected": "停止原因EXHAUSTED，精度未达",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.05.04.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.05.04",
+      "requirement_id": "K09.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "在信息分布不均的题库中，固定SE目标可能难以达到；预测标准误减少量是研究比较的另一种停止依据。",
+      "conditions": [
+        "摘要级，不核公式及性能"
+      ],
+      "negative_boundary": "不从摘要推断PSER在所有题库优越。",
+      "source_refs": [
+        "K09-B02-STOP"
+      ],
+      "source_locator": "abstract",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "K09.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "极端θ处所有剩余题信息低",
+        "expected": "记录信息不足及停止原因",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.06.02.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.06.02",
+      "requirement_id": "K09.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "两名评分者在相同样本的名义分类上，po=对角线和/N，pe=Σ行边际比例×列边际比例，κ=(po−pe)/(1−pe)。",
+      "conditions": [
+        "同样本、类别对齐、N>0且pe≠1；未加权"
+      ],
+      "negative_boundary": "κ不是正确率，pe=1时公式未定义。",
+      "source_refs": [
+        "K09-B02-KAP"
+      ],
+      "source_locator": "l195–204",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "[[40,10],[10,40]]",
+        "expected": "po=.8,pe=.5,κ=.6",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.06.02.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.06.02",
+      "requirement_id": "K09.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "ICC选择依评定者抽样设计、单个或平均评分及一致性或绝对一致目标；报告需声明所用形式。",
+      "conditions": [
+        "连续/适用量尺、指定设计；不使用统一阈值"
+      ],
+      "negative_boundary": "高相关不保证绝对一致，不能混用不同ICC。",
+      "source_refs": [
+        "K09-B02-ICC"
+      ],
+      "source_locator": "l123–154",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "评分者B总比A多2分",
+        "expected": "一致性与绝对一致分别解释",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.07.03.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.07.03",
+      "requirement_id": "K09.07.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "有适用参考标准时，灵敏度=TP/(TP+FN)，特异度=TN/(TN+FP)；无参考标准时只能描述与比较方法的一致程度。",
+      "conditions": [
+        "参考标准与目标构念、样本、分母明确；数学迁移"
+      ],
+      "negative_boundary": "教育筛查非医学诊断；不能把未经验证的教师标签当真值。",
+      "source_refs": [
+        "K09-B02-FDA"
+      ],
+      "source_locator": "l459–463,484–494",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.07.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "TP=18,FN=2,FP=8,TN=72",
+        "expected": "灵敏度.9、特异度.9",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.07.03.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.07.03",
+      "requirement_id": "K09.07.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "在固定灵敏度Se、特异度Sp且目标总体基率π已知时，PPV=Seπ/[Seπ+(1−Sp)(1−π)]，分母为0时未定义。",
+      "conditions": [
+        "二元参考状态、稳定条件概率；Bayes代数推导"
+      ],
+      "negative_boundary": "基率改变会改变PPV；不以单一筛查概率裁定能力。",
+      "source_refs": [
+        "K09-B02-FDA"
+      ],
+      "source_locator": "l175–181; probability derivation",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.07.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "Se=Sp=.9，π=.1与.5",
+        "expected": "PPV=.5与.9",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

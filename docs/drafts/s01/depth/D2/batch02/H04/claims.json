@@ -1,0 +1,320 @@
+{
+  "owner": "H04",
+  "base": "03ce2317096be52cd2cf1975c85b3dd685fb0a96",
+  "prior_claim_blob": "ba0096e08aa382bd917837c112f145cbb450d647",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H04.01.01.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.01.01",
+      "requirement_id": "H04.01.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "词组结构与词项身份应分别分析：离合形式可在字典中作为词项，却在句中具有动宾短语分布。",
+      "conditions": [
+        "指定词汇性标准与语境；分析有争议"
+      ],
+      "negative_boundary": "不是所有双音动词都可拆分。",
+      "source_refs": [
+        "H04-B02-LEX"
+      ],
+      "source_locator": "l183–198",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.01.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "睡觉/睡了一个好觉",
+        "expected": "记录词项与句法构式两个层次",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.02.01.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.02.01",
+      "requirement_id": "H04.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "陈述形式在特定对话中可承担确认请求功能，需结合后续应答判断。",
+      "conditions": [
+        "自然会话的确认请求子集"
+      ],
+      "negative_boundary": "不能把所有陈述句解释为问句。",
+      "source_refs": [
+        "H04-B02-RFC"
+      ],
+      "source_locator": "§4.1 l261–286",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "你昨天到了。对。",
+        "expected": "可能确认，须保留语境",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.02.02.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.02.02",
+      "requirement_id": "H04.02.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "正反问、附加吗问句和否定反问可承担确认请求；不同形式可表达不同知识立场。",
+      "conditions": [
+        "限定研究会话功能，不覆盖全部疑问句类型"
+      ],
+      "negative_boundary": "不得把反问一律理解为不需要回应。",
+      "source_refs": [
+        "H04-B02-RFC"
+      ],
+      "source_locator": "§2、4.1 l247–310",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.02.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "你不是已经提交了吗？",
+        "expected": "待回应确认或纠正",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.02.03.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.02.03",
+      "requirement_id": "H04.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "Lin的体选择分析以不与状态性情状、没与事件性情状的关系解释分布；并非简单过去/非过去区分。",
+      "conditions": [
+        "理论分析，PDF页图未成功核验"
+      ],
+      "negative_boundary": "不当普适规则，需区分情态、体和词项例外。",
+      "source_refs": [
+        "H04-B02-NEG"
+      ],
+      "source_locator": "§2 Eq6; p425–429",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H04.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "昨天我不舒服 / 昨天我没去",
+        "expected": "同一过去时间可使用不同否定",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.02.05.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.02.05",
+      "requirement_id": "H04.02.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "有在该研究中是常规体选择分析的词项例外，否定形式使用没有而非不有。",
+      "conditions": [
+        "限定普通领有/存在用法；PDF文本受限"
+      ],
+      "negative_boundary": "不从一个例外推广所有状态动词。",
+      "source_refs": [
+        "H04-B02-NEG"
+      ],
+      "source_locator": "p454 note1",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H04.02.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "我没有车 / 桌上没有书",
+        "expected": "区分领有者与处所",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.04.04.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.04.04",
+      "requirement_id": "H04.04.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "体选择和时间参照需分别记录，否定词不能单独编码事件发生的绝对时间。",
+      "conditions": [
+        "理论与例证，PDF文本受限"
+      ],
+      "negative_boundary": "不能把没必然等于过去时。",
+      "source_refs": [
+        "H04-B02-NEG"
+      ],
+      "source_locator": "p426; §2",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H04.04.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "到明天下午还没交就提醒我",
+        "expected": "条件参照可在未来",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.04.05.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.04.05",
+      "requirement_id": "H04.04.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "插入离合构式内的了可标动作体，与句末助词位置和功能区分；位置判断需结合完整结构。",
+      "conditions": [
+        "仅动后体例；句末了专门来源仍待补"
+      ],
+      "negative_boundary": "不能证明所有句末了均为变化。",
+      "source_refs": [
+        "H04-B02-SEP"
+      ],
+      "source_locator": "l179–193",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.04.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "唱了一首歌 / 要下雨了",
+        "expected": "分别标体与句末候选",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.05.03.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.05.03",
+      "requirement_id": "H04.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "结果式复合可由动作及结果状态组成，须区别实际达成的结果与尝试动作。",
+      "conditions": [
+        "该章分析；具体构式义和体条件另核"
+      ],
+      "negative_boundary": "有结果成分的否定或可能构式不表示结果实际实现。",
+      "source_refs": [
+        "H04-B02-TYPO"
+      ],
+      "source_locator": "l200–215",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "擦干了 / 没擦干",
+        "expected": "同一结果目标，不同实际断言",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.05.03.D4.04",
+      "owner": "H04",
+      "d3_id": "H04.05.03",
+      "requirement_id": "H04.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "东营官话研究区分不同结果补语与终结性关系，提示结果与事件终结性需要独立编码。",
+      "conditions": [
+        "摘要级，地域变体，不推广普通话"
+      ],
+      "negative_boundary": "不能据该文宣布所有普通话结果补语均非终结性。",
+      "source_refs": [
+        "H04-B02-DONG"
+      ],
+      "source_locator": "abstract l48",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "H04.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "特定地域结果式",
+        "expected": "保留变体及研究范围",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.06.01.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.06.01",
+      "requirement_id": "H04.06.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "并列关系的论元范围需要独立于连接词识别；多组候选成分可导致不同配对。",
+      "conditions": [
+        "显式篇章框架，不是所有句内并列语法"
+      ],
+      "negative_boundary": "不能仅按表面并列词推断成分平行。",
+      "source_refs": [
+        "H04-B02-DISC"
+      ],
+      "source_locator": "p1892 fig1/introduction",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.06.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "甲和乙来了，也有人走了。",
+        "expected": "分开名词并列及分句关系",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.06.02.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.06.02",
+      "requirement_id": "H04.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "关系标注需识别连接成分及其论元范围；语言表达的因果关系与K17实际因果识别是不同任务。",
+      "conditions": [
+        "篇章解析支持部分；因果边界为项目区分"
+      ],
+      "negative_boundary": "出现因为不证明现实原因。",
+      "source_refs": [
+        "H04-B02-DISC"
+      ],
+      "source_locator": "p1892 introduction",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "因为停电，他迟到了。",
+        "expected": "语言因果主张；现实证据待核",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.07.03.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.07.03",
+      "requirement_id": "H04.07.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "连接成分配对不唯一可产生结构歧义；保留候选论元范围直至语境或标注证据足够。",
+      "conditions": [
+        "明确显式篇章范围，非全部歧义"
+      ],
+      "negative_boundary": "不强制最长或最近配对。",
+      "source_refs": [
+        "H04-B02-DISC"
+      ],
+      "source_locator": "p1892 fig1",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.07.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "除了甲，还提到乙，也提到丙。",
+        "expected": "列出可行范围",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}
