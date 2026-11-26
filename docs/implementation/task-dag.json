@@ -1,0 +1,1357 @@
+{
+  "schema_version": 1,
+  "repo": "kaicreator-mm/learn-kg",
+  "branch": "version/v0.1.0",
+  "planning_base": "848a05488cbed08bd3d97c2d4bf46ab8d579a210",
+  "master_issue": 6,
+  "version_issue": 2,
+  "status": "PLANNED",
+  "semantics": {
+    "dependency": "predecessor accepted with recorded evidence; implementation may draft/speculate but cannot claim ready or complete downstream before prerequisites",
+    "review": "independent exact SHA, scoped P0/P1 closeout and explicit P2 disposition; re-review impacted scopes only",
+    "status": "READY means no unsatisfied DAG prerequisite, not executed; existing staging work partial",
+    "storage": "SQLite implementation baseline; final freeze G04",
+    "parallel": "disjoint modules in monorepo; integrate using exact-head CAS; no duplicate fact ownership"
+  },
+  "tasks": [
+    {
+      "id": "S01",
+      "stream": "scope",
+      "issue": 3,
+      "depends_on": [],
+      "title": "专业范围与来源校准",
+      "deliverable": "K/H/P/F/E覆盖矩阵、来源定位与资格状态、CQ、D4需求及主责账本",
+      "acceptance": "既有ID保留，核对D001–D012全部范围；纠正错误/未经核实来源；候选不冒充事实",
+      "kind": "implementation",
+      "status": "READY"
+    },
+    {
+      "id": "G01",
+      "stream": "gate",
+      "issue": 3,
+      "depends_on": [
+        "S01"
+      ],
+      "title": "范围累计独立审核",
+      "deliverable": "范围裁决、P0/P1/P2与冻结清单",
+      "acceptance": "独立Reviewer绑定exact SHA；阻塞项清零，P2明确处置",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "DB01",
+      "stream": "database",
+      "issue": 4,
+      "depends_on": [],
+      "title": "SQLite分库与专业schema基线",
+      "deliverable": "包清单、稳定ID、通用/学科/过程逻辑表、类型绑定、版本与发布隔离、迁移设计",
+      "acceptance": "SQL原生约束、跨库引用验证、索引/事务、无关库不加载、禁止重复事实；SQLite为实施基线，G04最终冻结",
+      "kind": "implementation",
+      "status": "READY"
+    },
+    {
+      "id": "DB02",
+      "stream": "database",
+      "issue": 4,
+      "depends_on": [
+        "DB01"
+      ],
+      "title": "SQLite生成、验证及查询工具",
+      "deliverable": "迁移器、schema版本、事务、只读包、查询路由、备份与导出、正负测试",
+      "acceptance": "外键检查、缺失引用/版本冲突拒绝、重复导入可识别、权限/个人数据边界、可复现测试",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "SRC01",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [],
+      "title": "保全既有HSK来源和RDF staging",
+      "deliverable": "私有来源哈希、抽取文本、R2导入账本、可恢复导出、原PDF身份与权利风险登记",
+      "acceptance": "159708四元组/11000词汇记录/3088汉字等为待复核历史证据；实际回读及备份验证；无原始全文进入公开仓库；不可验证的原PDF/权利保持HOLD",
+      "kind": "implementation",
+      "status": "READY"
+    },
+    {
+      "id": "HSK01",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "DB02",
+        "SRC01"
+      ],
+      "title": "实际SQLite迁移与对账",
+      "deliverable": "私有staging SQLite、RDF到类型表字段映射、原文及定位保留、迁移报告",
+      "acceptance": "11000词汇记录、4288汉字等级成员、94源块、9能力、823分类节点逐类核验；差异有原因；不以四元组数量相等替代语义无损；scopeTopic语义复核；失败回滚",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K01",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "学习理论与科学基础模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K02",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "认知、记忆与注意模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K03",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "知识结构与理解模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K04",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "技能形成与迁移模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K05",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K02",
+        "K04"
+      ],
+      "title": "学习策略与练习调度模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K06",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K03",
+        "K04"
+      ],
+      "title": "教学设计与教学法模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K07",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K03",
+        "K04"
+      ],
+      "title": "学习目标、课程与路径模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K08",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "动机、元认知与自我调节模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K09",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "教育测量与评价模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K10",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K02",
+        "K09"
+      ],
+      "title": "学习者建模与知识追踪模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K11",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K05",
+        "K08",
+        "K10"
+      ],
+      "title": "自适应决策与学习规划模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K12",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K03",
+        "K06",
+        "K09"
+      ],
+      "title": "教学内容、练习与资源模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K13",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "学习环境与社会文化模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K14",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K04",
+        "K06"
+      ],
+      "title": "学科与情境学习模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K15",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K06",
+        "K09"
+      ],
+      "title": "教育技术与智能辅导模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K16",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K02",
+        "K13"
+      ],
+      "title": "个体差异与可及性模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K17",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01"
+      ],
+      "title": "学习研究方法与证据评价模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K18",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K02"
+      ],
+      "title": "发展与学习生物基础模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "K19",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "K13",
+        "K17"
+      ],
+      "title": "学习公平、伦理与治理模块专业深化",
+      "deliverable": "全域D2–D4、逐原子知识及来源定位、条件/反例、关系/组合案例、CQ及验证",
+      "acceptance": "模块完整覆盖账本，主责明确；事实/模型/策略分离；有条件适用和负例，不按知识点数量验收",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "KR01",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "K01",
+        "K02",
+        "K03",
+        "K04"
+      ],
+      "title": "K模块累计独立审核 K01/K02/K03/K04",
+      "deliverable": "exact-SHA逐模块裁决与修订账本",
+      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "KR02",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "K05",
+        "K06",
+        "K07",
+        "K08"
+      ],
+      "title": "K模块累计独立审核 K05/K06/K07/K08",
+      "deliverable": "exact-SHA逐模块裁决与修订账本",
+      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "KR03",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "K09",
+        "K10",
+        "K11",
+        "K12"
+      ],
+      "title": "K模块累计独立审核 K09/K10/K11/K12",
+      "deliverable": "exact-SHA逐模块裁决与修订账本",
+      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "KR04",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "K13",
+        "K14",
+        "K15",
+        "K16"
+      ],
+      "title": "K模块累计独立审核 K13/K14/K15/K16",
+      "deliverable": "exact-SHA逐模块裁决与修订账本",
+      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "KR05",
+      "stream": "knowledge",
+      "issue": 6,
+      "depends_on": [
+        "K17",
+        "K18",
+        "K19"
+      ],
+      "title": "K模块累计独立审核 K17/K18/K19",
+      "deliverable": "exact-SHA逐模块裁决与修订账本",
+      "acceptance": "每个完整模块单独裁决；无中间小增量审核；P0/P1闭合，P2明确处置",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "H01",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "G01",
+        "HSK01"
+      ],
+      "title": "语音与音系模块专业深化",
+      "deliverable": "声母/韵母/声调、拼音、语音规则及听辨任务；不由字形推断读音",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "H02",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "G01",
+        "HSK01",
+        "H01"
+      ],
+      "title": "汉字与书写系统模块专业深化",
+      "deliverable": "认读/书写等级、字符身份、构形/部件、字音及证据；不猜造部件",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "H03",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "G01",
+        "HSK01",
+        "H01",
+        "H02"
+      ],
+      "title": "词汇、构词与词汇语义模块专业深化",
+      "deliverable": "11000词汇源记录保留，拼音/词性/义项按证据拆分，词义及搭配候选",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "H04",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "G01",
+        "HSK01",
+        "H03"
+      ],
+      "title": "语法与构式模块专业深化",
+      "deliverable": "语法源块→可核证构式与条件、正反例；不可靠分列保持HOLD",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "H05",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "G01",
+        "HSK01",
+        "H03",
+        "H04"
+      ],
+      "title": "语用、语篇与交际模块专业深化",
+      "deliverable": "任务/话题源块→语用/语篇与场景，证据及边界",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "H06",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "G01",
+        "HSK01",
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "title": "语言技能与表现任务模块专业深化",
+      "deliverable": "听说读写译、技能与表现任务、标准化观测及评价",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "H07",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "G01",
+        "HSK01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06"
+      ],
+      "title": "规范、等级与课程映射模块专业深化",
+      "deliverable": "HSK版本/等级/范围、GF0025-2021与旧标准边界、能力映射；不等同先修或掌握",
+      "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "HR01",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "H01",
+        "H02",
+        "H03",
+        "H04"
+      ],
+      "title": "汉语基础模块累计审核",
+      "deliverable": "逐模块独立裁决与修订账本",
+      "acceptance": "exact SHA，来源/语义/导入一致性；P0/P1闭合",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "HR02",
+      "stream": "hsk",
+      "issue": 5,
+      "depends_on": [
+        "H05",
+        "H06",
+        "H07"
+      ],
+      "title": "交际、技能与标准累计审核",
+      "deliverable": "逐模块独立裁决与修订账本",
+      "acceptance": "exact SHA，标准/能力/任务/评价不混淆；P0/P1闭合",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P01",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K13"
+      ],
+      "title": "学习模式结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P02",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11"
+      ],
+      "title": "目标与学习准备结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P03",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K12"
+      ],
+      "title": "学习活动单元结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P04",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K06",
+        "K07",
+        "K11",
+        "K12",
+        "P01",
+        "P02",
+        "P03"
+      ],
+      "title": "学习流程结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P05",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K02",
+        "K04",
+        "K05",
+        "K10",
+        "K11",
+        "P03",
+        "P04"
+      ],
+      "title": "练习与保持流程结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P06",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K06",
+        "K09",
+        "K10",
+        "K12",
+        "P03",
+        "P04"
+      ],
+      "title": "观测与反馈流程结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P07",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K08",
+        "K13",
+        "K16",
+        "K19",
+        "P02",
+        "P03"
+      ],
+      "title": "动机与激励流程结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P08",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P04",
+        "P05",
+        "P06",
+        "P07"
+      ],
+      "title": "自适应调节流程结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P09",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K04",
+        "K07",
+        "K09",
+        "K17",
+        "P04",
+        "P06"
+      ],
+      "title": "评价与迁移流程结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "P10",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "G01",
+        "DB01",
+        "K08",
+        "K11",
+        "K15",
+        "K16",
+        "K17",
+        "K19",
+        "P08",
+        "P09"
+      ],
+      "title": "连贯学习与治理结构化模板",
+      "deliverable": "可复用模式/活动/流程或策略、条件、角色、证据、状态转移、输入输出及案例",
+      "acceptance": "声明式、可执行契约；未知/替代/停止、预算与恢复、证据独立；不将模板执行等同教育效果",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "PR01",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "P05",
+        "P06"
+      ],
+      "title": "模式与流程模块累计审核",
+      "deliverable": "逐模块独立裁决",
+      "acceptance": "语义、条件、证据、循环与终止；exact SHA",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "PR02",
+      "stream": "process",
+      "issue": 6,
+      "depends_on": [
+        "P07",
+        "P08",
+        "P09",
+        "P10"
+      ],
+      "title": "激励、调节与长期过程累计审核",
+      "deliverable": "逐模块独立裁决",
+      "acceptance": "真实观测与估计、选择权、保持/迁移与退出；exact SHA",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F01",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K09",
+        "P02",
+        "P09",
+        "H06",
+        "H07"
+      ],
+      "title": "目标与能力组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F02",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K12",
+        "P03",
+        "P04",
+        "H03"
+      ],
+      "title": "对象与粒度组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F03",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K06",
+        "K12",
+        "K15",
+        "K16",
+        "K19",
+        "P03"
+      ],
+      "title": "资源与表达组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F04",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K04",
+        "K05",
+        "K06",
+        "K08",
+        "K12",
+        "K13",
+        "K15",
+        "P03",
+        "P06"
+      ],
+      "title": "学习交互组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F05",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K08",
+        "K09",
+        "K10",
+        "K16",
+        "K18",
+        "P08"
+      ],
+      "title": "学习者状态组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F06",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K06",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P06",
+        "P08",
+        "H06"
+      ],
+      "title": "障碍与补救组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F07",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K06",
+        "K13",
+        "K15",
+        "K16",
+        "K19",
+        "P10"
+      ],
+      "title": "环境与角色组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "F08",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "DB01",
+        "K04",
+        "K06",
+        "K07",
+        "K09",
+        "K14",
+        "K17",
+        "P05",
+        "P09",
+        "H06"
+      ],
+      "title": "迁移与实践组合契约与实例",
+      "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例",
+      "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "E01",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "K09",
+        "K15",
+        "K17",
+        "K19",
+        "P10"
+      ],
+      "title": "外部改进闭环",
+      "deliverable": "评价协议、版本、候选修订、审核与发布/回退契约",
+      "acceptance": "个体观测不直接写正式库；证据/权限/版本隔离；实验效果不虚报",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A01",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F01",
+        "F02"
+      ],
+      "title": "目标→构念→知识组件贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A02",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F02",
+        "F03",
+        "F04"
+      ],
+      "title": "知识→任务→观测贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A03",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F05",
+        "F06"
+      ],
+      "title": "观测→诊断→状态贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A04",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F05",
+        "F06",
+        "P08"
+      ],
+      "title": "状态→策略→规划贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A05",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F01",
+        "F08"
+      ],
+      "title": "教学→表现→保持/迁移贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A06",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F03",
+        "F04",
+        "K19"
+      ],
+      "title": "内容生成→核查→交付贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A07",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F05",
+        "F07"
+      ],
+      "title": "环境/发展/差异→支持贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "A08",
+      "stream": "composition",
+      "issue": 6,
+      "depends_on": [
+        "F08",
+        "E01"
+      ],
+      "title": "证据→模型/政策→实证评价贯通组合",
+      "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链",
+      "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "G03",
+      "stream": "gate",
+      "issue": 6,
+      "depends_on": [
+        "KR01",
+        "KR02",
+        "KR03",
+        "KR04",
+        "KR05",
+        "HR01",
+        "HR02",
+        "PR01",
+        "PR02",
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "E01"
+      ],
+      "title": "跨域一致性与L1冻结",
+      "deliverable": "覆盖/主责/重复/缺口、专业证据、K/H/P/A/F/E组合审查",
+      "acceptance": "累计独立审核，P0/P1闭合，P2明确处置，范围内全部模块有裁决",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "DB03",
+      "stream": "database",
+      "issue": 4,
+      "depends_on": [
+        "DB02",
+        "HSK01",
+        "P04"
+      ],
+      "title": "知识包生成与动态流程验证工具",
+      "deliverable": "声明式流程检查、跨库绑定、只读分发、预算/终止检查、基准及生成工具",
+      "acceptance": "真实SQLite执行，引用完整性、负例、查询计划与基准；不依赖任意脚本",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "V01",
+      "stream": "validation",
+      "issue": 6,
+      "depends_on": [
+        "DB03",
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "E01",
+        "P10",
+        "H07"
+      ],
+      "title": "全生命周期贯通切片",
+      "deliverable": "LC01–LC12测试夹具及独立预期、HSK真实源实体、另一最小学科示范、过程消费测试适配器",
+      "acceptance": "实际执行可观察结果；合成输入标记，不宣称真实教学效果；不实现xLearn产品运行时",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "G04",
+      "stream": "gate",
+      "issue": 6,
+      "depends_on": [
+        "G03",
+        "DB03",
+        "V01"
+      ],
+      "title": "L2数据和过程契约冻结",
+      "deliverable": "schema、查询/生成/迁移、过程、验证设计及包依赖审查",
+      "acceptance": "独立exact-SHA设计审核；SQLite、权限、证据及跨库约束满足；P0/P1闭合",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "V02",
+      "stream": "validation",
+      "issue": 6,
+      "depends_on": [
+        "G04"
+      ],
+      "title": "最终生成与真实运行验证",
+      "deliverable": "精确版本知识包、LC01–LC12实跑、CQ覆盖、性能证据、迁移与恢复报告、消费样例",
+      "acceptance": "全量计划范围验收；可重复正负例、结果/源/代码/包hash绑定；合法公开范围之外仅私有",
+      "kind": "implementation",
+      "status": "PLANNED"
+    },
+    {
+      "id": "G05",
+      "stream": "gate",
+      "issue": 6,
+      "depends_on": [
+        "V02"
+      ],
+      "title": "最终独立验收",
+      "deliverable": "独立验收、遗留账本与发布资格",
+      "acceptance": "exact-SHA、实际artifact、测试复现；所有阻塞闭合；不以CI代替专业审核",
+      "kind": "review",
+      "status": "PLANNED"
+    },
+    {
+      "id": "REL01",
+      "stream": "release",
+      "issue": 2,
+      "depends_on": [
+        "G05"
+      ],
+      "title": "版本发布裁定",
+      "deliverable": "版本清单、依赖与校验和、发布/回退说明、issue收尾",
+      "acceptance": "仅已审核范围晋升；发布权利满足；原#3–#5与#6验收记录一致",
+      "kind": "release",
+      "status": "PLANNED"
+    }
+  ],
+  "topological_waves": [
+    [
+      "S01",
+      "DB01",
+      "SRC01"
+    ],
+    [
+      "G01",
+      "DB02"
+    ],
+    [
+      "HSK01",
+      "K01",
+      "K02",
+      "K03",
+      "K04",
+      "K08",
+      "K09",
+      "K13",
+      "K17"
+    ],
+    [
+      "K05",
+      "K06",
+      "K07",
+      "K10",
+      "K16",
+      "K18",
+      "K19",
+      "KR01",
+      "H01"
+    ],
+    [
+      "K11",
+      "K12",
+      "K14",
+      "K15",
+      "KR02",
+      "KR05",
+      "H02",
+      "P01"
+    ],
+    [
+      "KR03",
+      "KR04",
+      "H03",
+      "P02",
+      "P03"
+    ],
+    [
+      "H04",
+      "P04",
+      "P07",
+      "F03"
+    ],
+    [
+      "H05",
+      "HR01",
+      "P05",
+      "P06",
+      "F02",
+      "DB03"
+    ],
+    [
+      "H06",
+      "P08",
+      "P09",
+      "PR01",
+      "F04"
+    ],
+    [
+      "H07",
+      "P10",
+      "F05",
+      "F06",
+      "F08",
+      "A02",
+      "A06"
+    ],
+    [
+      "HR02",
+      "PR02",
+      "F01",
+      "F07",
+      "E01",
+      "A03",
+      "A04"
+    ],
+    [
+      "A01",
+      "A05",
+      "A07",
+      "A08",
+      "V01"
+    ],
+    [
+      "G03"
+    ],
+    [
+      "G04"
+    ],
+    [
+      "V02"
+    ],
+    [
+      "G05"
+    ],
+    [
+      "REL01"
+    ]
+  ]
+}

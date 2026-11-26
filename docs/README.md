@@ -32,3 +32,6 @@
 - [八个补充体系、双闭环及十个逻辑子系统](product/system/learning-lifecycle-system.md)
 - [生命周期组合与数据契约](design/learning-lifecycle-contract.md)
 - [生命周期能力问题与验收矩阵](implementation/learning-lifecycle-acceptance.md)
+
+## D013 实施总控
+- [实施Task DAG](implementation/task-dag.md) / [机器可读JSON](implementation/task-dag.json)，总控 #6；#3/#4/#5并行复用。
