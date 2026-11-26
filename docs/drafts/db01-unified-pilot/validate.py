@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Research-only common package validator, finite model interpreter, and in-memory SQL projection."""
-import copy, hashlib, json, math, platform, sqlite3
+import copy, hashlib, json, math, platform, sqlite3, unicodedata
 from fractions import Fraction
 from pathlib import Path
 from importlib.metadata import version
@@ -10,7 +10,7 @@ from jsonschema.exceptions import ValidationError
 ROOT=Path(__file__).resolve().parent
 REPO=ROOT.parents[2]
 PREFIX="learn-kg.draft.unified."
-KINDS=("Source","EvidenceLocator","Claim","Element","ModelSpec","PolicySpec","Relation","Case","ValidationSpec")
+KINDS=("Source","EvidenceLocator","Claim","Element","ModelSpec","PolicySpec","Relation","Case","ValidationSpec","HanCharacter","Reading","Lexeme","Sense","ConditionSpec","TaskSpec","FlowSpec","ScenarioCase")
 FIELDS={"bkt_observation":{"p","G","S","T","observation","independent","single_component"},
 "recall":{"delta","half_life","unit"},"estimate_half_life":{"weights","features","unit"},
 "inverse_half_life":{"delta","p","unit"},"policy":{"p","target","authorized","applicable","cost_minutes","budget_minutes"}}
@@ -18,8 +18,8 @@ VARS={"prediction_correct":{"p","G","S"},"posterior_correct":{"p","G","S"},"post
 "recall":{"delta","half_life"},"estimate_half_life":{"weights","features"},"inverse_half_life":{"delta","p"}}
 GUARDS=["NOT_AUTHORIZED","MISSING_OR_INVALID_INPUT","NOT_APPLICABLE","PROBABILITY_ABOVE_TARGET","COST_EXCEEDS_BUDGET","ALWAYS"]
 ACTIONS=["REJECT_PERMISSION","UNKNOWN","UNKNOWN","WAIT","DEFER_BUDGET","SUGGEST_REVIEW"]
-REF_FIELDS={"source_ref":"Source","evidence_refs":"EvidenceLocator","claim_refs":"Claim","model_ref":"ModelSpec","element_ref":"Element","case_refs":"Case"}
-REL_TYPES={"defined_by_model":("Element","ModelSpec"),"informs_decision":("ModelSpec","PolicySpec")}
+REF_FIELDS={"source_ref":"Source","evidence_refs":"EvidenceLocator","claim_refs":"Claim","model_ref":"ModelSpec","element_ref":"Element","form_refs":"HanCharacter","reading_refs":"Reading","lexeme_ref":"Lexeme","condition_refs":"ConditionSpec","sense_ref":"Sense"}
+REL_TYPES={"defined_by_model":("Element","ModelSpec"),"informs_decision":("ModelSpec","PolicySpec"),"script_variant":("HanCharacter","HanCharacter"),"converse_in_context":("Sense","Sense")}
 def require(b,msg):
     if not b: raise ValueError(msg)
 def pairs(xs):
@@ -118,10 +118,111 @@ def validate(packages,m,schema):
                 if mode=="bkt_observation":
                     require(t["numeric_domain"]=="RATIONAL" and all(type(r["input"][x]) is str for x in ("p","G","S","T")) and r["input"]["observation"] in ("correct","incorrect","missing") and all(type(r["input"][x]) is bool for x in ("independent","single_component")),"BKT input contract")
                 elif mode!="policy":require(t["numeric_domain"]=="BINARY64","HLR domain")
-            if k=="ValidationSpec" and "target_ref" in r:resolve(r["target_ref"],"ModelSpec")
+            if k=="ValidationSpec":
+                if "target_ref" in r:resolve(r["target_ref"],"ModelSpec")
+                require(all(v["kind"] in ("Case","ScenarioCase") for v in r["case_refs"]),"invalid validation case kind")
+                for v in r["case_refs"]:resolve(v,v["kind"])
+            validate_extended(r,resolve)
             # Every ref is resolved including nested occurrences not covered by the explicit field matrix.
             for _,v in refwalk(r):resolve(v,v["kind"])
     return idx
+FLOW_OUTCOMES={"CORRECT","INCORRECT_RETRY","INCORRECT_EXHAUSTED","UNKNOWN","STOP"}
+TRADE_CONDITIONS={"domain":"MONEY_GOODS_TRANSACTION","same_transaction":True,"completed":True,"from_role":"BUYER","to_role":"SELLER"}
+
+def validate_extended(r,resolve):
+    k=r["kind"]
+    if k=="HanCharacter":
+        require(r["codepoint"]==f"U+{ord(r['character']):04X}","codepoint mismatch")
+    if k=="Reading":
+        marks={"\u0304":1,"\u0301":2,"\u030c":3,"\u0300":4}
+        found=[marks[x] for x in unicodedata.normalize("NFD",r["pinyin"]) if x in marks]
+        require(found==[r["tone"]],"pinyin tone mismatch")
+    if k=="Lexeme":
+        forms=[resolve(v,"HanCharacter")["character"] for v in r["form_refs"]]
+        require(len(set(forms))==len(forms) and r["lemma"] in forms,"invalid lexeme form")
+    if k=="ConditionSpec":
+        fields=[x["field"] for x in r["clauses"]]
+        require(len(fields)==len(set(fields)),"duplicate condition field")
+        require(all(type(x["equals"]) is type(TRADE_CONDITIONS[x["field"]]) for x in r["clauses"]),"condition value type")
+    if k=="Relation":
+        typ=r["relation_type"]
+        if typ=="script_variant":
+            a,b=resolve(r["from_ref"],"HanCharacter"),resolve(r["to_ref"],"HanCharacter")
+            require(a["script"]=="SIMPLIFIED" and b["script"]=="TRADITIONAL" and a["character"]!=b["character"],"variant endpoint mismatch")
+        if typ=="converse_in_context":
+            a,b=resolve(r["from_ref"],"Sense"),resolve(r["to_ref"],"Sense")
+            require(a["lexeme_ref"]!=b["lexeme_ref"] and a["domain"]==b["domain"]=="MONEY_GOODS_TRANSACTION","invalid converse endpoints")
+            require(len(r.get("condition_refs",[]))==1,"missing converse condition")
+            c=resolve(r["condition_refs"][0],"ConditionSpec")
+            require({x["field"]:x["equals"] for x in c["clauses"]}==TRADE_CONDITIONS,"unbounded converse relation")
+        else:require("condition_refs" not in r,"unsupported conditional relation")
+    if k=="TaskSpec":
+        sense=resolve(r["sense_ref"],"Sense");lex=resolve(sense["lexeme_ref"],"Lexeme")
+        forms={resolve(v,"HanCharacter")["character"] for v in lex["form_refs"]}
+        require(set(r["accepted_answers"])<=forms and len(set(r["accepted_answers"]))==len(r["accepted_answers"]),"task answer not a lexical form")
+    if k=="FlowSpec":
+        steps={x["id"]:x for x in r["steps"]};term={x["id"]:x["status"] for x in r["terminals"]}
+        require(len(steps)==len(r["steps"]) and len(term)==len(r["terminals"]) and not (steps.keys()&term.keys()) and r["entry"] in steps,"invalid flow state identities")
+        require(set(term.values())=={"ACTIVITY_COMPLETE","RETRY_EXHAUSTED","UNKNOWN","STOPPED"},"terminal coverage")
+        for step in steps.values():
+            resolve(step["task_ref"],"TaskSpec");trans={x["outcome"]:x["target"] for x in step["transitions"]}
+            require(set(trans)==FLOW_OUTCOMES and len(trans)==len(step["transitions"]),"missing or duplicate outcome")
+            require(all(t in steps or t in term for t in trans.values()),"unknown flow target")
+            require(trans["INCORRECT_RETRY"]==step["id"],"retry must be bounded self-loop")
+            for outcome,status in (("INCORRECT_EXHAUSTED","RETRY_EXHAUSTED"),("UNKNOWN","UNKNOWN"),("STOP","STOPPED")):
+                require(term.get(trans[outcome])==status,"invalid terminal outcome")
+            require(trans["CORRECT"] in steps or term.get(trans["CORRECT"])=="ACTIVITY_COMPLETE","invalid correct transition")
+        visited=set();at=r["entry"]
+        while at in steps:
+            require(at not in visited,"unbounded correct cycle");visited.add(at)
+            at=next(x["target"] for x in steps[at]["transitions"] if x["outcome"]=="CORRECT")
+        require(visited==set(steps) and term.get(at)=="ACTIVITY_COMPLETE","unreachable step or success")
+    if k=="ScenarioCase":
+        if r["mode"]=="relation_condition":
+            t=resolve(r["target_ref"],"Relation");require(t["relation_type"]=="converse_in_context" and set(r["input"])=={"context"} and set(r["expected"])=={"status"},"relation case contract")
+        else:
+            resolve(r["target_ref"],"FlowSpec");require(set(r["input"])=={"authorized","events"} and set(r["expected"])=={"status","state","processed","feedback_count","observations"},"flow case contract")
+
+def condition_result(rel,context,idx):
+    unknown=False
+    for cr in rel["condition_refs"]:
+        for clause in idx[key(cr)]["clauses"]:
+            field=clause["field"]
+            if field not in context:unknown=True
+            elif type(context[field]) is not type(clause["equals"]) or context[field]!=clause["equals"]:return {"status":"NOT_APPLICABLE"}
+    return {"status":"UNKNOWN" if unknown else "APPLIES"}
+
+def run_flow(flow,x,idx):
+    steps={s["id"]:s for s in flow["steps"]};term={s["id"]:s["status"] for s in flow["terminals"]}
+    at=flow["entry"];processed=0;feedback=0;observations=[];seen={};attempts={}
+    def result(status):return {"status":status,"state":at,"processed":processed,"feedback_count":feedback,"observations":observations}
+    if x["authorized"] is not True:return result("REJECT_PERMISSION")
+    for event in x["events"]:
+        eid=event["event_id"]
+        if eid in seen:
+            if seen[eid]!=event:return result("REJECT_EVENT_CONFLICT")
+            continue
+        if at in term:return result("REJECT_AFTER_TERMINAL")
+        if processed>=flow["max_events"]:return result("BUDGET_EXHAUSTED")
+        s=steps[at];task=idx[key(s["task_ref"])]
+        if event["event"]=="EXIT":outcome="STOP"
+        else:
+            if event["task_id"]!=task["stable_id"]:return result("REJECT_TASK")
+            if not event["independent"] or event["answer"]=="":outcome="UNKNOWN"
+            else:
+                correct=event["answer"] in task["accepted_answers"]
+                attempts[at]=attempts.get(at,0)+1
+                observations.append({"event_id":eid,"task_id":task["stable_id"],"result":"CORRECT" if correct else "INCORRECT"})
+                outcome="CORRECT" if correct else "INCORRECT_RETRY" if attempts[at]<s["max_attempts"] else "INCORRECT_EXHAUSTED"
+                if outcome=="INCORRECT_RETRY":feedback+=1
+        seen[eid]=event;processed+=1;at=next(t["target"] for t in s["transitions"] if t["outcome"]==outcome)
+    return result(term.get(at,"INCOMPLETE"))
+
+def run_scenario(r,idx):
+    t=idx[key(r["target_ref"])]
+    if r["mode"]=="relation_condition":return condition_result(t,r["input"]["context"],idx)
+    return run_flow(t,r["input"],idx)
+
 def finite(x):
     try:return type(x) in (int,float) and math.isfinite(x)
     except OverflowError:return False
@@ -248,10 +349,11 @@ CREATE INDEX refs_reverse ON refs(target_package,target_version,target_id,target
     return {"rows":len(idx),"record_roundtrip":len(idx),"references":refcount,"reference_roundtrip":refcount,"per_kind_rows":table_counts,"foreign_key_check":"PASS","cross_package_query":policy,"negative_tests":negative,"database":":memory:","sqlite_version":sqlite3.sqlite_version}
 def main():
     m=parse((ROOT/"manifest.json").read_bytes());schema=verified(ROOT/m["schema"]["file"],m["schema"]["sha256"]);Draft202012Validator.check_schema(schema)
-    p,opened=load_packages(m,[PREFIX+"bkt",PREFIX+"review"]);idx=validate(p,m,schema)
+    p,opened=load_packages(m,[PREFIX+"bkt",PREFIX+"review",PREFIX+"flow"]);idx=validate(p,m,schema)
     review,r_open=load_packages(m,[PREFIX+"review"]);validate(review,m,schema);require(r_open==["hlr.json","review.json"],"review route")
     bkt,b_open=load_packages(m,[PREFIX+"bkt"]);validate(bkt,m,schema);require(b_open==["bkt.json"],"BKT route")
-    legacy=legacy_roundtrip(p,m)
+    flow,flow_open=load_packages(m,[PREFIX+"flow"]);validate(flow,m,schema);require(flow_open==["chinese.json","flow.json"],"flow route")
+    legacy=legacy_roundtrip({k:v for k,v in p.items() if k in (PREFIX+"bkt",PREFIX+"hlr",PREFIX+"review")},m)
     results=[]
     for k,r in idx.items():
         if r["kind"]!="Case":continue
@@ -288,6 +390,22 @@ def main():
     reject("duplicate-key",lambda:parse(b'{"a":1,"a":2}'))
     cyc=copy.deepcopy(m);e=next(x for x in cyc["packages"] if x["package_id"]==PREFIX+"hlr");r=review_entry(cyc);e["dependencies"]=[{"package_id":r["package_id"],"version":r["version"],"sha256":r["sha256"]}]
     reject("dependency-cycle",lambda:validate_manifest(cyc))
+    change("codepoint-mismatch",lambda a,b:first(a,"HanCharacter").update(codepoint="U+0000"))
+    change("tone-mismatch",lambda a,b:first(a,"Reading").update(tone=1))
+    change("missing-condition",lambda a,b:next(r for r in a[PREFIX+"chinese"]["records"] if r["kind"]=="Relation" and r["relation_type"]=="converse_in_context").pop("condition_refs"))
+    change("duplicate-condition-field",lambda a,b:first(a,"ConditionSpec")["clauses"].append(copy.deepcopy(first(a,"ConditionSpec")["clauses"][0])))
+    change("wrong-task-answer",lambda a,b:first(a,"TaskSpec").update(accepted_answers=["非"]))
+    change("invalid-flow-task",lambda a,b:first(a,"FlowSpec")["steps"][0]["task_ref"].update(kind="Sense"))
+    change("unbounded-flow-cycle",lambda a,b:first(a,"FlowSpec")["steps"][0]["transitions"][0].update(target="buy"))
+    change("flow-retry-edge",lambda a,b:first(a,"FlowSpec")["steps"][0]["transitions"][1].update(target="sell"))
+    change("wrong-scenario-target",lambda a,b:first(a,"ScenarioCase")["target_ref"].update(kind="FlowSpec"))
+    scenarios=[]
+    for r in idx.values():
+        if r["kind"]!="ScenarioCase":continue
+        actual=run_scenario(r,idx);require(actual==r["expected"],"scenario mismatch "+r["stable_id"]);scenarios.append({"id":r["stable_id"],"mode":r["mode"],"expected":r["expected"],"actual":actual,"status":"PASS"})
+    limited=copy.deepcopy(next(r for r in idx.values() if r["kind"]=="FlowSpec"));limited["max_events"]=1
+    complete=next(r for r in idx.values() if r["stable_id"]=="flow:case:complete");budget=run_flow(limited,complete["input"],idx)
+    require(budget=={"status":"BUDGET_EXHAUSTED","state":"sell","processed":1,"feedback_count":0,"observations":[{"event_id":"e1","task_id":"flow:task:buy","result":"CORRECT"}]},"budget cap")
     sql=sql_project(p,idx,schema)
-    print(json.dumps({"scope":"DB01_INVESTIGATION_ONLY","python":platform.python_version(),"jsonschema":version("jsonschema"),"legacy_roundtrip":legacy,"records":len(idx),"routes":{"all":opened,"review":r_open,"bkt":b_open},"cases":results,"composition":comp,"negative_tests":negatives,"sql":sql,"files_sha256":{n:digest((ROOT/n).read_bytes()) for n in ("manifest.json","schema.json","bkt.json","hlr.json","review.json","validate.py")},"professional_qualification":"NOT_RUN","persistent_sqlite_generated":False},ensure_ascii=False))
+    print(json.dumps({"scope":"DB01_INVESTIGATION_ONLY","python":platform.python_version(),"jsonschema":version("jsonschema"),"legacy_roundtrip":legacy,"records":len(idx),"routes":{"all":opened,"review":r_open,"bkt":b_open,"flow":flow_open},"cases":results,"composition":comp,"scenarios":scenarios,"budget_cap":budget,"negative_tests":negatives,"sql":sql,"files_sha256":{n:digest((ROOT/n).read_bytes()) for n in ("manifest.json","schema.json","bkt.json","hlr.json","review.json","chinese.json","flow.json","validate.py")},"professional_qualification":"NOT_RUN","persistent_sqlite_generated":False},ensure_ascii=False))
 if __name__=="__main__":main()
