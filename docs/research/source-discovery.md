@@ -18,3 +18,6 @@
 - S008 HSK 大纲入口：https://www.chinesetest.cn/syllabus
 - S009 官方全球正式开考公告（2026-12-13）：https://old.chinesetest.cn/gonewcontent.do?flag=kdnew&id=51336883
 以上 2026-11-26 页面发现，均 DISCOVERED；不得混同标准、考试大纲、试行及正式生效日期；原文件版本、精确条目、许可和旧版映射待资格核验。
+
+## 用户提供的 HSK 资料（2026-11-26）
+见 [HSK 资料登记](hsk-source-intake.md)：RHSK01–18 为文件登记 ID，不是新增独立来源 ID；RHSK01–03 初读正文，原文身份/版次、页码视觉核对、完整性与许可仍待核验。其余仅元数据登记。后续与 S005–S009 做来源谱系合并；不公开私人 Drive 链接或附件。

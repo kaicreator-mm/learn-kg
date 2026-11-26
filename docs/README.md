@@ -11,3 +11,5 @@
 主线 #1，版本 #2，当前任务 #3。以原始来源支撑专业事实，不以本项目提案作为专业证据。
 
 - [HSK 学科知识域与组合验证计划](product/hsk-domain-pilot.md)
+
+- [HSK 用户资料登记、原文初读及来源风险](research/hsk-source-intake.md)
