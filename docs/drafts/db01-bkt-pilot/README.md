@@ -13,3 +13,6 @@
 [records.json](records.json) 包含 24条带稳定ID的记录：来源、定位、6个命题（含项目策略）、模型实体、声明式公式、类型关系、10个算例、验证规格。[schema.json](schema.json) 为严格JSON Schema草案；[validate.py](validate.py) 仅探索性验证工具，使用有限运算符和精确有理数，不执行任意代码。输入字段、公式参数、模型引用、证据链接均明确，后续可确定性映射到DB01专业表；未实现正式导入器。缺失、提示、多组件、非法参数、零似然、无判别力等反例；不由数值正确推出实际教育效果。运行证据另记，不改变候选记录资格。
  
 本样例覆盖QD4-06/07候选的局部内容，仍需独立专业审核、逐主题完整性、参数拟合/校准与实际CQ06组合测试。SOURCE→LOCATOR→CLAIM→ELEMENT/MODEL/RELATION→CASE→VALIDATION链为试验格式，不宣布完成K10或G01。
+
+## 已实际执行（调查试点）
+精确测试HEAD 3dcc4016c2ad33faa878b60fa2bcc84efa897c38；Gateway job job_01M8BZWKAD00ZT4E1BP6Q6H0BS 成功，exit 0，Python 3.12.3/jsonschema 4.10.3。先验证三个Git Blob，再执行py_compile及validate.py：24记录通过结构/类型引用检查，10/10算例精确一致、9/9负例拒绝；[实际证据](validation-evidence.json)。初次整体传输超长度上限，分段重传后实际hash验证成功。预期由Builder手算，未做独立专业审核；strategy-no-threshold仅数值重复，不能算策略判定通过。原PDF截图失败，正式来源资格、参数校准、跨包schema、导入及CQ06完整组合均NOT_RUN。无SQLite文件、无DB02或K10完成收据。
