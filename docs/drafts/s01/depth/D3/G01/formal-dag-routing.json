@@ -1,0 +1,637 @@
+{
+  "base": "3542989d2c4d67ecfe0b5f8b3f49b344a792913b",
+  "dag_blob": "6bb0c6d34a241760280f0a37c7b34af79b904a05",
+  "scope": "DRAFT_ONLY; preserve formal task namespace",
+  "formal_tasks": [
+    {
+      "task_id": "G01",
+      "title": "范围累计独立审核",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "S01"
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "title": "人类可读知识源格式与SQLite导入映射设计",
+      "status": "READY",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": []
+    },
+    {
+      "task_id": "P01",
+      "title": "学习模式结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K13",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P02",
+      "title": "目标与学习准备结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P03",
+      "title": "学习活动单元结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K12",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P04",
+      "title": "学习流程结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K07",
+        "K11",
+        "K12",
+        "P01",
+        "P02",
+        "P03",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P05",
+      "title": "练习与保持流程结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K02",
+        "K04",
+        "K05",
+        "K10",
+        "K11",
+        "P03",
+        "P04",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P06",
+      "title": "观测与反馈流程结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K09",
+        "K10",
+        "K12",
+        "P03",
+        "P04",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P07",
+      "title": "动机与激励流程结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K13",
+        "K16",
+        "K19",
+        "P02",
+        "P03",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P08",
+      "title": "自适应调节流程结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P09",
+      "title": "评价与迁移流程结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K04",
+        "K07",
+        "K09",
+        "K17",
+        "P04",
+        "P06",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "P10",
+      "title": "连贯学习与治理结构化模板",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K11",
+        "K15",
+        "K16",
+        "K17",
+        "K19",
+        "P08",
+        "P09",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "F01",
+      "title": "目标与能力组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K09",
+        "P02",
+        "P09",
+        "H06",
+        "H07",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "F02",
+      "title": "对象与粒度组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K12",
+        "P03",
+        "P04",
+        "H03",
+        "IF01",
+        "H04",
+        "H05",
+        "H06",
+        "H07"
+      ]
+    },
+    {
+      "task_id": "F03",
+      "title": "资源与表达组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K06",
+        "K12",
+        "K15",
+        "K16",
+        "K19",
+        "P03",
+        "IF01",
+        "P04"
+      ]
+    },
+    {
+      "task_id": "F04",
+      "title": "学习交互组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K04",
+        "K05",
+        "K06",
+        "K08",
+        "K12",
+        "K13",
+        "K15",
+        "P03",
+        "P06",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "F05",
+      "title": "学习者状态组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K08",
+        "K09",
+        "K10",
+        "K16",
+        "K18",
+        "P08",
+        "IF01",
+        "P10"
+      ]
+    },
+    {
+      "task_id": "F06",
+      "title": "障碍与补救组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K06",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P06",
+        "P08",
+        "H06",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "F07",
+      "title": "环境与角色组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K06",
+        "K13",
+        "K15",
+        "K16",
+        "K19",
+        "P10",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "F08",
+      "title": "迁移与实践组合契约与实例",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "DB01",
+        "K04",
+        "K06",
+        "K07",
+        "K09",
+        "K14",
+        "K17",
+        "P05",
+        "P09",
+        "H06",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "E01",
+      "title": "外部改进闭环",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "K09",
+        "K15",
+        "K17",
+        "K19",
+        "P10",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "A01",
+      "title": "目标→构念→知识组件贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F01",
+        "F02",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "A02",
+      "title": "知识→任务→观测贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F02",
+        "F03",
+        "F04",
+        "IF01",
+        "H04",
+        "H05",
+        "H06"
+      ]
+    },
+    {
+      "task_id": "A03",
+      "title": "观测→诊断→状态贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F05",
+        "F06",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "A04",
+      "title": "状态→策略→规划贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F05",
+        "F06",
+        "P08",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "A05",
+      "title": "教学→表现→保持/迁移贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F01",
+        "F08",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "A06",
+      "title": "内容生成→核查→交付贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F03",
+        "F04",
+        "K19",
+        "IF01",
+        "H03",
+        "H04",
+        "H05"
+      ]
+    },
+    {
+      "task_id": "A07",
+      "title": "环境/发展/差异→支持贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F05",
+        "F07",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "A08",
+      "title": "证据→模型/政策→实证评价贯通组合",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "F08",
+        "E01",
+        "IF01"
+      ]
+    },
+    {
+      "task_id": "G03",
+      "title": "跨域一致性与L1冻结",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "KR01",
+        "KR02",
+        "KR03",
+        "KR04",
+        "KR05",
+        "HR01",
+        "HR02",
+        "PR01",
+        "PR02",
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "E01",
+        "IF01",
+        "HS00"
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "title": "早期共同语义接口",
+      "status": "PLANNED",
+      "receipt": "NOT_ISSUED_BY_DRAFT",
+      "dependencies": [
+        "S01",
+        "DB01",
+        "G01"
+      ]
+    }
+  ],
+  "rule_routes": [
+    {
+      "rule": "D3-P01",
+      "possible_tasks": [
+        "P09",
+        "F04",
+        "A02"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P02",
+      "possible_tasks": [
+        "P09",
+        "F08",
+        "A05"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P03",
+      "possible_tasks": [
+        "P06",
+        "F04",
+        "A03"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P04",
+      "possible_tasks": [
+        "P06",
+        "F04",
+        "A02",
+        "A03"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P05",
+      "possible_tasks": [
+        "P05",
+        "P09",
+        "A05"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P06",
+      "possible_tasks": [
+        "P06",
+        "P07",
+        "F06"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P07",
+      "possible_tasks": [
+        "P08",
+        "P10",
+        "F05",
+        "A03"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P08",
+      "possible_tasks": [
+        "P01",
+        "P02",
+        "A04"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P09",
+      "possible_tasks": [
+        "P06",
+        "F06",
+        "A03"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P10",
+      "possible_tasks": [
+        "P06",
+        "F04",
+        "A03"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P11",
+      "possible_tasks": [
+        "P07",
+        "F06"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P12",
+      "possible_tasks": [
+        "P04",
+        "P08",
+        "A04"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P13",
+      "possible_tasks": [
+        "P03",
+        "F02",
+        "A02"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P14",
+      "possible_tasks": [
+        "F01",
+        "F08",
+        "A01",
+        "A05"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    },
+    {
+      "rule": "D3-P15",
+      "possible_tasks": [
+        "P04",
+        "P10",
+        "A04"
+      ],
+      "status": "RESEARCH_INPUT_ONLY_NOT_TASK_COMPLETION"
+    }
+  ],
+  "limits": "D3-Pxx are prior synthetic rules, not TASK:Pxx. Folder G01 is local graph batch, not TASK:G01 independent scope gate. No receipt or dependency override. IF01/G01/DB01/P/F/A/E/G03 remain subject to formal DAG."
+}

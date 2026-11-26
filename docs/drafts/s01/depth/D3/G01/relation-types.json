@@ -1,0 +1,54 @@
+{
+  "namespace": "S01:D3:G01",
+  "status": "DRAFT_NOT_DB_SCHEMA",
+  "types": {
+    "HAS_TOPIC": {
+      "from": "MODULE",
+      "to": "TOPIC",
+      "class": "STRUCTURAL_ONLY"
+    },
+    "HAS_CLAIM": {
+      "from": "TOPIC",
+      "to": "CLAIM",
+      "class": "STRUCTURAL_ONLY"
+    },
+    "CITES_RECORDED_SOURCE": {
+      "from": "CLAIM",
+      "to": "SOURCE_RECORD",
+      "class": "RECORDED_CITATION_NOT_SUPPORT"
+    },
+    "INFORMS_TASK_DESIGN": {
+      "from": "TOPIC",
+      "to": "TOPIC",
+      "class": "PROJECT_SEMANTIC_CANDIDATE"
+    },
+    "CONSTRAINS_INTERPRETATION": {
+      "from": "TOPIC",
+      "to": "TOPIC",
+      "class": "PROJECT_SEMANTIC_CANDIDATE"
+    },
+    "INFORMS_FEEDBACK": {
+      "from": "TOPIC",
+      "to": "TOPIC",
+      "class": "PROJECT_SEMANTIC_CANDIDATE"
+    },
+    "INFORMS_PLAN": {
+      "from": "TOPIC",
+      "to": "TOPIC",
+      "class": "PROJECT_SEMANTIC_CANDIDATE"
+    },
+    "REQUIRES_DISTINCT_EVIDENCE": {
+      "from": "TOPIC",
+      "to": "TOPIC",
+      "class": "PROJECT_SEMANTIC_CANDIDATE"
+    },
+    "SCOPES_ONLY_NOT_MASTERY": {
+      "from": "TOPIC",
+      "to": "TOPIC",
+      "class": "PROJECT_SEMANTIC_CANDIDATE"
+    }
+  },
+  "unknown": "REJECT",
+  "qualification": "NOT_RUN",
+  "materialization": "No accepted edge; no implicit inverse/transitivity, prerequisite, causation, mastery, equivalence or conflict resolution. Conflicting scope holds until explicit evidence and independent gate."
+}

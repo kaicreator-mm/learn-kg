@@ -1,0 +1,309 @@
+{
+  "execution": "CODE_MODE_JS_DIRECT",
+  "base": "3542989d2c4d67ecfe0b5f8b3f49b344a792913b",
+  "checks": [
+    {
+      "id": "valid",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12.02.02",
+        "type": "INFORMS_TASK_DESIGN",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [
+          "目标为保持；区分自由回忆、线索及测试时距"
+        ],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "K05.01.01.D4.01",
+          "K12.02.02.D4.01"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": false,
+        "reversible": false,
+        "materialize_accepted": false
+      },
+      "expected": "CANDIDATE_ONLY",
+      "actual": "CANDIDATE_ONLY"
+    },
+    {
+      "id": "causal",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12.02.02",
+        "type": "CAUSES",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [
+          "目标为保持；区分自由回忆、线索及测试时距"
+        ],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "K05.01.01.D4.01",
+          "K12.02.02.D4.01"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": false,
+        "reversible": false,
+        "materialize_accepted": false
+      },
+      "expected": "TYPE_HOLD",
+      "actual": "TYPE_HOLD"
+    },
+    {
+      "id": "prerequisite",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12.02.02",
+        "type": "PREREQUISITE",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [
+          "目标为保持；区分自由回忆、线索及测试时距"
+        ],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "K05.01.01.D4.01",
+          "K12.02.02.D4.01"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": false,
+        "reversible": false,
+        "materialize_accepted": false
+      },
+      "expected": "TYPE_HOLD",
+      "actual": "TYPE_HOLD"
+    },
+    {
+      "id": "wrong-endpoint",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12",
+        "type": "INFORMS_TASK_DESIGN",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [
+          "目标为保持；区分自由回忆、线索及测试时距"
+        ],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "K05.01.01.D4.01",
+          "K12.02.02.D4.01"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": false,
+        "reversible": false,
+        "materialize_accepted": false
+      },
+      "expected": "ENDPOINT_HOLD",
+      "actual": "ENDPOINT_HOLD"
+    },
+    {
+      "id": "missing-claim",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12.02.02",
+        "type": "INFORMS_TASK_DESIGN",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [
+          "目标为保持；区分自由回忆、线索及测试时距"
+        ],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "missing"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": false,
+        "reversible": false,
+        "materialize_accepted": false
+      },
+      "expected": "PROVENANCE_HOLD",
+      "actual": "PROVENANCE_HOLD"
+    },
+    {
+      "id": "transitive",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12.02.02",
+        "type": "INFORMS_TASK_DESIGN",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [
+          "目标为保持；区分自由回忆、线索及测试时距"
+        ],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "K05.01.01.D4.01",
+          "K12.02.02.D4.01"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": true,
+        "reversible": false,
+        "materialize_accepted": false
+      },
+      "expected": "PROMOTION_HOLD",
+      "actual": "PROMOTION_HOLD"
+    },
+    {
+      "id": "accepted",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12.02.02",
+        "type": "INFORMS_TASK_DESIGN",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [
+          "目标为保持；区分自由回忆、线索及测试时距"
+        ],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "K05.01.01.D4.01",
+          "K12.02.02.D4.01"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": false,
+        "reversible": false,
+        "materialize_accepted": true
+      },
+      "expected": "PROMOTION_HOLD",
+      "actual": "PROMOTION_HOLD"
+    },
+    {
+      "id": "boundary",
+      "input": {
+        "id": "D3G-R01",
+        "from": "K05.01.01",
+        "to": "K12.02.02",
+        "type": "INFORMS_TASK_DESIGN",
+        "meaning": "主动回忆策略映射到自由或线索回忆任务",
+        "conditions": [],
+        "negative_boundary": "不将回忆任务的完成率视为长期保持",
+        "claim_refs": [
+          "K05.01.01.D4.01",
+          "K12.02.02.D4.01"
+        ],
+        "status": "PROJECT_SEMANTIC_CANDIDATE",
+        "qualification": "NOT_RUN",
+        "transitive": false,
+        "reversible": false,
+        "materialize_accepted": false
+      },
+      "expected": "BOUNDARY_HOLD",
+      "actual": "BOUNDARY_HOLD"
+    }
+  ],
+  "pathCases": [
+    {
+      "id": "feedback-to-plan",
+      "sequence": [
+        "K06.06.03",
+        "K06.06.02",
+        "K08.03.03",
+        "K11.01.02"
+      ],
+      "expected": "CANDIDATE_EXPLANATION_PATH_ONLY",
+      "actual": {
+        "status": "CANDIDATE_EXPLANATION_PATH_ONLY",
+        "edges": [
+          "D3G-R08",
+          "D3G-R09",
+          "D3G-R10"
+        ],
+        "materialize_accepted": false
+      }
+    },
+    {
+      "id": "retest-to-evidence",
+      "sequence": [
+        "K12.05.02",
+        "K11.05.03",
+        "K09.01.03",
+        "K10.01.02"
+      ],
+      "expected": "CANDIDATE_EXPLANATION_PATH_ONLY",
+      "actual": {
+        "status": "CANDIDATE_EXPLANATION_PATH_ONLY",
+        "edges": [
+          "D3G-R12",
+          "D3G-R13",
+          "D3G-R05"
+        ],
+        "materialize_accepted": false
+      }
+    },
+    {
+      "id": "chinese-confusion-to-feedback",
+      "sequence": [
+        "H02.04.04",
+        "K06.06.03",
+        "K06.06.02"
+      ],
+      "expected": "CANDIDATE_EXPLANATION_PATH_ONLY",
+      "actual": {
+        "status": "CANDIDATE_EXPLANATION_PATH_ONLY",
+        "edges": [
+          "D3G-R17",
+          "D3G-R08"
+        ],
+        "materialize_accepted": false
+      }
+    },
+    {
+      "id": "shortcut-no-inference",
+      "sequence": [
+        "K06.06.03",
+        "K11.01.02"
+      ],
+      "expected": "NO_EXPLICIT_EDGE_HOLD",
+      "actual": {
+        "status": "NO_EXPLICIT_EDGE_HOLD",
+        "missing": [
+          "K06.06.03",
+          "K11.01.02"
+        ]
+      }
+    },
+    {
+      "id": "reverse-not-authorized",
+      "sequence": [
+        "K11.01.02",
+        "K08.03.03"
+      ],
+      "expected": "NO_EXPLICIT_EDGE_HOLD",
+      "actual": {
+        "status": "NO_EXPLICIT_EDGE_HOLD",
+        "missing": [
+          "K11.01.02",
+          "K08.03.03"
+        ]
+      }
+    },
+    {
+      "id": "scope-not-state",
+      "sequence": [
+        "H07.03.03",
+        "H06.06.04",
+        "K10.01.02"
+      ],
+      "expected": "NO_EXPLICIT_EDGE_HOLD",
+      "actual": {
+        "status": "NO_EXPLICIT_EDGE_HOLD",
+        "missing": [
+          "H06.06.04",
+          "K10.01.02"
+        ]
+      }
+    }
+  ],
+  "passed": 14,
+  "independent_oracle": false,
+  "limits": "Fixed author-written cases test structure, explicit path and promotion prevention only. Not general inference completeness or empirical validation."
+}
