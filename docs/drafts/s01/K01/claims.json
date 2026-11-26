@@ -8,17 +8,18 @@
       "d3_id": "K01.01.01",
       "requirement_id": "K01.01.01.RQ01",
       "claim_type": "DEFINITION",
-      "statement": "训练表现是特定时间与任务条件下可观察的行为结果；不能直接读取长期学习状态。",
+      "statement": "将训练期间或结束后即刻的表现作为特定测量条件下的观察结果；长期学习则涉及较持久的能力或知识变化。",
       "conditions": [
         "明确测量时点和任务条件"
       ],
       "negative_boundary": "训练时提示正确或速度提高不能据此证明长期保持",
       "source_refs": [
-        "K01-S01"
+        "K01-S33"
       ],
-      "evidence_status": "ABSTRACT_LIMITED",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "PDF p.176引言；定义保留时点条件"
     },
     {
       "stable_id": "K01.01.01.D4.02",
@@ -32,11 +33,12 @@
       ],
       "negative_boundary": "只测训练末次成绩而没有延迟或迁移测验时，长期变化保留未知",
       "source_refs": [
-        "K01-S01"
+        "K01-S33"
       ],
-      "evidence_status": "ABSTRACT_LIMITED",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "PDF p.176引言及综述范围"
     },
     {
       "stable_id": "K01.01.01.D4.03",
@@ -128,17 +130,19 @@
       "d3_id": "K01.01.04",
       "requirement_id": "K01.01.04.RQ01",
       "claim_type": "DEFINITION",
-      "statement": "关联学习研究事件之间的习得性关系；非关联学习传统上包括对刺激反应性的习惯化与敏化。",
+      "statement": "关联学习关注事件或行为与结果间的习得性关系；习惯化和敏化是传统非关联学习分类中的典型过程。",
       "conditions": [
         "行为学习分类；具体边界依研究范式"
       ],
       "negative_boundary": "反应改变不自动证明存在刺激间关联",
       "source_refs": [
-        "K01-S05"
+        "K01-S26",
+        "K01-S28"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Rankin §3.1区分双过程；Bouton两类关联学习；分类为跨源综合，非绝对划分"
     },
     {
       "stable_id": "K01.01.04.D4.02",
@@ -152,12 +156,12 @@
       ],
       "negative_boundary": "重复后反应低可能由运动疲劳造成",
       "source_refs": [
-        "K01-S04",
-        "K01-S05"
+        "K01-S26"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Rankin p.136 §2，刺激特异性及恢复可协助鉴别"
     },
     {
       "stable_id": "K01.01.04.D4.03",
@@ -165,18 +169,18 @@
       "d3_id": "K01.01.04",
       "requirement_id": "K01.01.04.RQ01",
       "claim_type": "DEFINITION",
-      "statement": "敏化是反应性增高的非关联学习候选解释，不能单凭增高判定其机制。",
+      "statement": "敏化是反应性增高的一种学习过程；习惯化与敏化可能同时影响同一反应的变化轨迹。",
       "conditions": [
         "控制刺激历史和基线"
       ],
       "negative_boundary": "即时唤醒、疲劳变化等竞争解释需排除",
       "source_refs": [
-        "K01-S05",
-        "K01-S23"
+        "K01-S26"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Rankin p.136 §3.1；只论双过程解释，不单凭反应增高判定"
     },
     {
       "stable_id": "K01.01.04.D4.04",
@@ -208,12 +212,13 @@
       ],
       "negative_boundary": "相邻呈现不证明已形成预测关系",
       "source_refs": [
-        "K01-S06",
-        "K01-S23"
+        "K01-S27",
+        "K01-S28"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Rescorla p.1概念对比；Bouton两类条件作用"
     },
     {
       "stable_id": "K01.02.01.D4.02",
@@ -221,17 +226,18 @@
       "d3_id": "K01.02.01",
       "requirement_id": "K01.02.01.RQ01",
       "claim_type": "EMPIRICAL_RESULT",
-      "statement": "随机安排中，结果在有无线索时概率相同的条件可出现有配对却没有相应条件反应的情形。",
+      "statement": "Rescorla 1968 年的动物条件作用实验中，有无条件线索时结果概率相同的组，在指定测试指标上没有或仅有很小的反应抑制；仅在有线索时出现结果的对照组出现明显条件反应。",
       "conditions": [
-        "所引经典条件作用研究的具体范式"
+        "Rescorla 1968的两项动物条件作用实验；以测试阶段反应抑制为指标，比较线索内外结果概率；不能外推到人类教学"
       ],
       "negative_boundary": "不能把结果一般化为所有任务中时间邻近均无作用",
       "source_refs": [
-        "K01-S06"
+        "K01-S27"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "p.1摘要、p.4 Experiment 2 Discussion；限定条件和指标，非所有学习的定律"
     },
     {
       "stable_id": "K01.02.01.D4.03",
@@ -261,11 +267,13 @@
       ],
       "negative_boundary": "后果与行为时间相邻不能独自证成行为受其强化",
       "source_refs": [
-        "K01-S07"
+        "K01-S28",
+        "K01-S29"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Noba行为-结果关系与加拿大版6.2开头"
     },
     {
       "stable_id": "K01.02.02.D4.02",
@@ -279,11 +287,12 @@
       ],
       "negative_boundary": "奖励意图或惩罚标签不是实际行为效应",
       "source_refs": [
-        "K01-S07"
+        "K01-S29"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Table 6.1 功能性后果定义"
     },
     {
       "stable_id": "K01.02.02.D4.03",
@@ -293,15 +302,16 @@
       "claim_type": "DEFINITION",
       "statement": "负强化指行为导致刺激撤除等变化且行为随后增多；负强化并非惩罚。",
       "conditions": [
-        "明确后果变化及行为方向；正负术语存在分析争议"
+        "明确刺激撤除/减弱与随后行为增多；采用教材功能性定义"
       ],
       "negative_boundary": "不把任何不舒服情境的解除视为已经证实强化",
       "source_refs": [
-        "K01-S25"
+        "K01-S29"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Table 6.1 负强化分类；不援引教材以外的争议结论"
     },
     {
       "stable_id": "K01.02.02.D4.04",
@@ -327,15 +337,16 @@
       "claim_type": "THEORY_FRAMEWORK",
       "statement": "强化安排是后果与行为发生关系的条件结构；不同安排需分别记录响应次数和时间规则。",
       "conditions": [
-        "操作性条件作用范式，具体安排细节待全文核证"
+        "操作性条件作用的行为-后果依存；明确响应次数或时间条件"
       ],
       "negative_boundary": "不从安排名称推导个体最优奖励策略",
       "source_refs": [
-        "K01-S22"
+        "K01-S29"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Table 6.2，明确比率与间隔；具体安排新命题见下"
     },
     {
       "stable_id": "K01.02.03.D4.02",
@@ -385,12 +396,12 @@
       ],
       "negative_boundary": "不能把该公式视为所有学习过程或神经机制的唯一解释",
       "source_refs": [
-        "K01-S09",
-        "K01-S10"
+        "K01-S30"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Variables中的方程；课程二级来源，原1972章待核"
     },
     {
       "stable_id": "K01.02.04.D4.02",
@@ -398,18 +409,18 @@
       "d3_id": "K01.02.04",
       "requirement_id": "K01.02.04.RQ01",
       "claim_type": "DEFINITION",
-      "statement": "在上述方程中，λ−ΣVⱼ是结果与模型当前合成预测的差值，正负号决定该试次修正方向。",
+      "statement": "在指定方程中，λ表示该结果所支持的联结强度渐近值，λ−ΣVⱼ为本次合成预测与目标的差；学习率乘积为正时该差决定更新符号。",
       "conditions": [
         "αᵢβ为非负且按指定参数化"
       ],
       "negative_boundary": "零误差的更新为零，不表示现实中所有学习停止",
       "source_refs": [
-        "K01-S09",
-        "K01-S10"
+        "K01-S30"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Variables方程与代数推导；零率另计"
     },
     {
       "stable_id": "K01.02.04.D4.03",
@@ -419,16 +430,16 @@
       "claim_type": "MATHEMATICAL_DERIVATION",
       "statement": "若αᵢβ>0且合成预测恰好为λ，则该线索的计算更新为零。",
       "conditions": [
-        "从候选公式演绎；仅方程内结论"
+        "从已核二级课程方程演绎；仅方程内结论"
       ],
       "negative_boundary": "若改变模型或引入额外机制，不可外推零更新",
       "source_refs": [
-        "K01-S09",
-        "K01-S10"
+        "K01-S30"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "由已核课程方程作原创演绎，不当独立实验结果"
     },
     {
       "stable_id": "K01.02.04.D4.04",
@@ -488,17 +499,18 @@
       "d3_id": "K01.03.02",
       "requirement_id": "K01.03.02.RQ01",
       "claim_type": "THEORY_FRAMEWORK",
-      "statement": "记忆研究常以编码、保持和提取划分解释功能，而非直接观察内部操作。",
+      "statement": "记忆研究中的编码、保持和提取是相互关联的解释功能；一项记忆行为不直接暴露这些内部过程。",
       "conditions": [
         "传统记忆模型的过程分类"
       ],
       "negative_boundary": "不把教学流程中的三个阶段硬映射为严格心理串行",
       "source_refs": [
-        "K01-S12"
+        "K01-S31"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Three Stages of the Learning/Memory Process"
     },
     {
       "stable_id": "K01.03.02.D4.02",
@@ -528,11 +540,12 @@
       ],
       "negative_boundary": "这是架构主张，不是已穷尽的人脑部件目录",
       "source_refs": [
-        "K01-S13"
+        "K01-S34"
       ],
-      "evidence_status": "ABSTRACT_LIMITED",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "p.1037 Fig.1和架构正文"
     },
     {
       "stable_id": "K01.03.03.D4.02",
@@ -546,11 +559,12 @@
       ],
       "negative_boundary": "不把程序执行顺序当作普适心理过程",
       "source_refs": [
-        "K01-S13"
+        "K01-S34"
       ],
-      "evidence_status": "ABSTRACT_LIMITED",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "p.1036摘要、p.1037架构正文；原文末尾限制"
     },
     {
       "stable_id": "K01.03.03.D4.03",
@@ -740,11 +754,12 @@
       ],
       "negative_boundary": "模型的计算输出不证明唯一算法或神经实现",
       "source_refs": [
-        "K01-S18"
+        "K01-S32"
       ],
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
-      "status": "DRAFT"
+      "status": "DRAFT",
+      "evidence_locator_note": "Marr/Poggio三层正文，明确二级来源"
     },
     {
       "stable_id": "K01.05.01.D4.02",
@@ -861,6 +876,215 @@
       "negative_boundary": "实验室单任务即时结果不足以认定真实工作或长期收益",
       "source_refs": [],
       "evidence_status": "PROJECT_POLICY",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.01.04.D4.05",
+      "owner": "K01",
+      "d3_id": "K01.01.04",
+      "requirement_id": "K01.01.04.RQ01",
+      "claim_type": "DEFINITION",
+      "statement": "习惯化的反应下降在停止重复刺激后可能部分或完全恢复；恢复幅度与观察窗口相关。",
+      "conditions": [
+        "Rankin综述所述现象；相同测量口径"
+      ],
+      "negative_boundary": "恢复不证明旧学习完全清除",
+      "source_refs": [
+        "K01-S26"
+      ],
+      "evidence_locator_note": "p.136 §3.2",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.02.01.D4.04",
+      "owner": "K01",
+      "d3_id": "K01.02.01",
+      "requirement_id": "K01.02.01.RQ01",
+      "claim_type": "MATHEMATICAL_DERIVATION",
+      "statement": "在合成二元事件计数中，可用ΔP=P(结果|线索)-P(结果|无线索)描述条件概率差。",
+      "conditions": [
+        "两个条件均有非零分母；固定事件定义及时间窗"
+      ],
+      "negative_boundary": "ΔP不是因果识别量，也不是条件反应实测",
+      "source_refs": [
+        "K01-S27"
+      ],
+      "evidence_locator_note": "p.1条件概率思想；公式为本项目描述性差值",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.02.02.D4.05",
+      "owner": "K01",
+      "d3_id": "K01.02.02",
+      "requirement_id": "K01.02.02.RQ01",
+      "claim_type": "DEFINITION",
+      "statement": "正负表示刺激的加入或撤除，强化和惩罚则按未来目标行为变化方向区分。",
+      "conditions": [
+        "明确后果与行为的依存关系及对照"
+      ],
+      "negative_boundary": "负强化与负惩罚的行为方向相反，不能按日常褒贬命名",
+      "source_refs": [
+        "K01-S29"
+      ],
+      "evidence_locator_note": "Table 6.1",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.02.03.D4.04",
+      "owner": "K01",
+      "d3_id": "K01.02.03",
+      "requirement_id": "K01.02.03.RQ01",
+      "claim_type": "DEFINITION",
+      "statement": "连续强化安排以每次符合要求的行为为给付条件；间歇安排并非每次都给付。",
+      "conditions": [
+        "给付事件的规则已声明"
+      ],
+      "negative_boundary": "给付安排不保证它实际具有强化功能",
+      "source_refs": [
+        "K01-S29"
+      ],
+      "evidence_locator_note": "Creating complex behaviours through operant conditioning",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.02.03.D4.05",
+      "owner": "K01",
+      "d3_id": "K01.02.03",
+      "requirement_id": "K01.02.03.RQ01",
+      "claim_type": "DEFINITION",
+      "statement": "固定比率FR在达到固定合格反应次数后给付；可变比率VR的所需次数变化。",
+      "conditions": [
+        "计数起点、合格反应及变化分布明确"
+      ],
+      "negative_boundary": "次数不等于经过时间；高频行为不等于学习效果",
+      "source_refs": [
+        "K01-S29"
+      ],
+      "evidence_locator_note": "Table 6.2",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.02.03.D4.06",
+      "owner": "K01",
+      "d3_id": "K01.02.03",
+      "requirement_id": "K01.02.03.RQ01",
+      "claim_type": "DEFINITION",
+      "statement": "固定间隔FI在固定时距届满后的首次合格反应给付；可变间隔VI的时距变化。",
+      "conditions": [
+        "给付之后重设间隔，实际反应仍为条件"
+      ],
+      "negative_boundary": "不是时间一到自动奖励；不将变动安排推荐为用户黏性策略",
+      "source_refs": [
+        "K01-S29"
+      ],
+      "evidence_locator_note": "Table 6.2",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.02.04.D4.05",
+      "owner": "K01",
+      "d3_id": "K01.02.04",
+      "requirement_id": "K01.02.04.RQ01",
+      "claim_type": "MATHEMATICAL_DERIVATION",
+      "statement": "基本共同误差模型中，已在场线索的合成预测达到λ且新增线索初值为零时，该新增线索的当次更新为零。",
+      "conditions": [
+        "固定基本RW方程；在场线索同时以更新前快照计算"
+      ],
+      "negative_boundary": "仅是理想化阻断预测；未验证真实阻断效应或竞争模型",
+      "source_refs": [
+        "K01-S30"
+      ],
+      "evidence_locator_note": "Variables方程及代数演绎",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.02.04.D4.06",
+      "owner": "K01",
+      "d3_id": "K01.02.04",
+      "requirement_id": "K01.02.04.RQ01",
+      "claim_type": "MATHEMATICAL_DERIVATION",
+      "statement": "若线索的学习率乘积为零，则即使共同误差非零，该线索在该试次也不发生模型更新。",
+      "conditions": [
+        "采用相同方程且参数零值作为数学边界"
+      ],
+      "negative_boundary": "不据此诊断真实学习者注意缺失",
+      "source_refs": [
+        "K01-S30"
+      ],
+      "evidence_locator_note": "Variables方程及边界演绎",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.03.02.D4.03",
+      "owner": "K01",
+      "d3_id": "K01.03.02",
+      "requirement_id": "K01.03.02.RQ01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "statement": "提取活动可能改变之后的记忆表现，编码、保持和提取不能被视为彼此隔离的流水线。",
+      "conditions": [
+        "Noba所述情景记忆概述；具体提取练习效应归K05"
+      ],
+      "negative_boundary": "不保证任意提取任务都提升保持",
+      "source_refs": [
+        "K01-S31"
+      ],
+      "evidence_locator_note": "Three Stages of the Learning/Memory Process",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.03.03.D4.04",
+      "owner": "K01",
+      "d3_id": "K01.03.03",
+      "requirement_id": "K01.03.03.RQ01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "statement": "ACT-R 5.0提出模块并行处理，而中心产生式系统在其模型中选择当前规则。",
+      "conditions": [
+        "限2004版本的架构描述"
+      ],
+      "negative_boundary": "不等于人脑所有过程均经同一串行中心；作者结论明确承认不完整",
+      "source_refs": [
+        "K01-S34"
+      ],
+      "evidence_locator_note": "p.1037 Fig.1及正文结论",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "status": "DRAFT"
+    },
+    {
+      "stable_id": "K01.05.01.D4.03",
+      "owner": "K01",
+      "d3_id": "K01.05.01",
+      "requirement_id": "K01.05.01.RQ01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "statement": "计算层描述待解决的问题，算法层说明所用表征及操作，实现层说明物理承载方式。",
+      "conditions": [
+        "Marr/Poggio解释框架的二级解读"
+      ],
+      "negative_boundary": "不同层回答不同问题，单一行为拟合不识别唯一实现",
+      "source_refs": [
+        "K01-S32"
+      ],
+      "evidence_locator_note": "三层说明段",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "qualification": "NOT_RUN",
       "status": "DRAFT"
     }
