@@ -1,0 +1,500 @@
+{
+  "owner": "K15",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K15.01.01.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.01.01",
+      "claim_refs": [
+        "K15.01.01.D4.01",
+        "K15.01.01.D4.02"
+      ],
+      "fixture": "同一内容叠加视频和动画",
+      "views": {
+        "forward": "多媒体设计应以任务目标和认知要求为依据，媒介组合不是效果保证",
+        "reverse": "多媒体可能增加无关负荷",
+        "intervention": "比较实际理解及无障碍使用",
+        "counterexample": "增加媒体数量不证明效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.01.02.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.01.02",
+      "claim_refs": [
+        "K15.01.02.D4.01",
+        "K15.01.02.D4.02"
+      ],
+      "fixture": "仿真仪器读数成功",
+      "views": {
+        "forward": "仿真结果依模型与交互假设，须分开评价仿真操作和真实技能",
+        "reverse": "保真度不足可能限制迁移",
+        "intervention": "在合法安全场景补实操证据",
+        "counterexample": "模拟成绩不代表实操资格"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.01.03.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.01.03",
+      "claim_refs": [
+        "K15.01.03.D4.01",
+        "K15.01.03.D4.02"
+      ],
+      "fixture": "手机离线完成任务",
+      "views": {
+        "forward": "移动学习受屏幕、输入、网络及时间条件约束；在线时间非能力证据",
+        "reverse": "无在线日志不代表未学",
+        "intervention": "允许同步并检查独立产出",
+        "counterexample": "移动端使用时长不等于学习"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.01.04.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.01.04",
+      "claim_refs": [
+        "K15.01.04.D4.01",
+        "K15.01.04.D4.02"
+      ],
+      "fixture": "两平台完成率不同",
+      "views": {
+        "forward": "在线及混合学习是实施形式，效果受内容、互动、支持及比较条件影响",
+        "reverse": "平台差异不等于因果",
+        "intervention": "控制目标、样本和实施差异",
+        "counterexample": "平台形式不能确定效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.02.01.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.02.01",
+      "claim_refs": [
+        "K15.02.01.D4.01",
+        "K15.02.01.D4.02"
+      ],
+      "fixture": "两个模块共享标签",
+      "views": {
+        "forward": "领域模型应明确实体、关系语义、版本与主责；未核证主题边不作为正式依赖",
+        "reverse": "标签共现不是先修",
+        "intervention": "只建研究锚点，正式关系另证",
+        "counterexample": "主题标签不能当正式知识关系"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.02.02.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.02.02",
+      "claim_refs": [
+        "K15.02.02.D4.01",
+        "K15.02.02.D4.02"
+      ],
+      "fixture": "固定策略适用于一类任务",
+      "views": {
+        "forward": "教学模型表达目标、条件、动作、反馈及停止规则；候选模型不等同已执行流程",
+        "reverse": "其他任务可能需不同策略",
+        "intervention": "遇未知条件停止或重规划",
+        "counterexample": "固定流程不普适"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.02.03.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.02.03",
+      "claim_refs": [
+        "K15.02.03.D4.01",
+        "K15.02.03.D4.02"
+      ],
+      "fixture": "接口返回p=.8",
+      "views": {
+        "forward": "学习者接口须区分观测与估计、来源和版本，权限及未知不可在边界丢失",
+        "reverse": "高概率可能校准不足",
+        "intervention": "保留模型及条件，不晋升事实",
+        "counterexample": "接口返回值不自动成为事实"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.02.04.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.02.04",
+      "claim_refs": [
+        "K15.02.04.D4.01",
+        "K15.02.04.D4.02"
+      ],
+      "fixture": "AI逐句完成回答",
+      "views": {
+        "forward": "对话辅导的提示、学习者自答与独立复测是不同交互证据",
+        "reverse": "流畅文本可能由AI生成",
+        "intervention": "区分生成者与学习者后测",
+        "counterexample": "对话流畅不等于教学有效"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.03.01.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.03.01",
+      "claim_refs": [
+        "K15.03.01.D4.01",
+        "K15.03.01.D4.02"
+      ],
+      "fixture": "重复上传同一事件",
+      "views": {
+        "forward": "xAPI Statement有actor、verb、object等语义及时间字段；采集许可及用途需另定",
+        "reverse": "事件存在不证明授权",
+        "intervention": "同ID同内容幂等，不同内容冲突",
+        "counterexample": "采集到事件不等于允许其他用途"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.03.02.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.03.02",
+      "claim_refs": [
+        "K15.03.02.D4.01",
+        "K15.03.02.D4.02"
+      ],
+      "fixture": "三次点击与三次正确",
+      "views": {
+        "forward": "指标需固定构念、分母、单位、时间窗及缺失政策，才可比较",
+        "reverse": "高点击可能是页面困难",
+        "intervention": "分别定义参与与能力指标",
+        "counterexample": "点击率不等于学习效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.03.03.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.03.03",
+      "claim_refs": [
+        "K15.03.03.D4.01",
+        "K15.03.03.D4.02"
+      ],
+      "fixture": "图表只靠颜色编码类别",
+      "views": {
+        "forward": "可视化须表达量尺及不确定性，并提供适合用户的访问途径",
+        "reverse": "视觉可读不代表结论有效",
+        "intervention": "提供文字或结构替代",
+        "counterexample": "图表精美不代表结论有效"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.03.04.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.03.04",
+      "claim_refs": [
+        "K15.03.04.D4.01",
+        "K15.03.04.D4.02"
+      ],
+      "fixture": "低登录与低分相关",
+      "views": {
+        "forward": "分析结果需按目标、证据条件和风险解释；相关输出不是行动处方",
+        "reverse": "可能由网络共同影响",
+        "intervention": "检查机会、测量和替代原因",
+        "counterexample": "统计相关不自动产生教学处方"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.04.01.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.04.01",
+      "claim_refs": [
+        "K15.04.01.D4.01",
+        "K15.04.01.D4.02"
+      ],
+      "fixture": "AI生成不存在的参考书",
+      "views": {
+        "forward": "生成内容须核事实、来源、权利及适用条件，不能自动成为知识",
+        "reverse": "多个模型重复错误仍无证据",
+        "intervention": "隔离并核权威来源",
+        "counterexample": "LLM输出不能自动晋升知识"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.04.02.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.04.02",
+      "claim_refs": [
+        "K15.04.02.D4.01",
+        "K15.04.02.D4.02"
+      ],
+      "fixture": "旧标准命中",
+      "views": {
+        "forward": "知识检索结果应绑定版本、范围及证据定位；未命中保留未知，命中不证明答案",
+        "reverse": "文本相似不等于支持",
+        "intervention": "核指定版本与主张对应",
+        "counterexample": "检索命中不证明回答正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.04.03.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.04.03",
+      "claim_refs": [
+        "K15.04.03.D4.01",
+        "K15.04.03.D4.02"
+      ],
+      "fixture": "模型给流畅理由但无来源",
+      "views": {
+        "forward": "解释应提供可核依据与限制，区分证据和模型内部机制",
+        "reverse": "生成理由可能非真实机制",
+        "intervention": "标明假设及人工纠错入口",
+        "counterexample": "流畅解释不证明事实"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.04.04.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.04.04",
+      "claim_refs": [
+        "K15.04.04.D4.01",
+        "K15.04.04.D4.02"
+      ],
+      "fixture": "高置信误判方言",
+      "views": {
+        "forward": "AI评分辅助须以目标构念、人工基准、错误和群体差异核证",
+        "reverse": "置信度不等于效度",
+        "intervention": "提交复核，不自动正式评分",
+        "counterexample": "模型分数不自动等于正式评价"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.04.05.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.04.05",
+      "claim_refs": [
+        "K15.04.05.D4.01",
+        "K15.04.05.D4.02"
+      ],
+      "fixture": "自动评语冒用教师身份",
+      "views": {
+        "forward": "AI治理应明确职责、升级和监督机制；人机合作不转移责任",
+        "reverse": "有人在环不代表有效监督",
+        "intervention": "标AI来源并由有权人复核",
+        "counterexample": "AI不得冒用教师或学习者身份"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.05.01.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.05.01",
+      "claim_refs": [
+        "K15.05.01.D4.01",
+        "K15.05.01.D4.02"
+      ],
+      "fixture": "满意度高但不能完成键盘操作",
+      "views": {
+        "forward": "可用性测试需观察目标任务成功、错误与访问障碍；与教育效果分离",
+        "reverse": "主观喜欢不代表学习",
+        "intervention": "按用户条件执行任务测试",
+        "counterexample": "满意度不等于学习效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.05.02.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.05.02",
+      "claim_refs": [
+        "K15.05.02.D4.01",
+        "K15.05.02.D4.02"
+      ],
+      "fixture": "解释指向某词",
+      "views": {
+        "forward": "可解释性需针对受众和使用风险表达依据及局限；事后解释不是因果验证",
+        "reverse": "注意力权重非因果",
+        "intervention": "查实际证据与模型限制",
+        "counterexample": "事后解释不必是模型真实机制"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.05.03.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.05.03",
+      "claim_refs": [
+        "K15.05.03.D4.01",
+        "K15.05.03.D4.02"
+      ],
+      "fixture": "用户撤回后自动继续",
+      "views": {
+        "forward": "可控性要求实际选择、授权、停止及回退；高便利性不能覆盖权限",
+        "reverse": "界面有按钮不证明生效",
+        "intervention": "阻止后续动作并记录",
+        "counterexample": "便利性不得绕过授权"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.05.04.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.05.04",
+      "claim_refs": [
+        "K15.05.04.D4.01",
+        "K15.05.04.D4.02"
+      ],
+      "fixture": "平台测试全通过",
+      "views": {
+        "forward": "教育效果须以目标、保持、迁移及比较设计测量；软件可用性不是教育增益",
+        "reverse": "性能改善非能力改善",
+        "intervention": "另测独立学习结果",
+        "counterexample": "系统运行通过不证明教育增益"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.05.05.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.05.05",
+      "claim_refs": [
+        "K15.05.05.D4.01",
+        "K15.05.05.D4.02"
+      ],
+      "fixture": "低成本任务不匹配目标",
+      "views": {
+        "forward": "成本比较需明示时间、算力、网络与机会成本及收益量尺；不能以低成本独裁决",
+        "reverse": "成本低不代表有效",
+        "intervention": "先筛可行及目标一致性",
+        "counterexample": "低成本不必然教育最优"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.06.01.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.06.01",
+      "claim_refs": [
+        "K15.06.01.D4.01",
+        "K15.06.01.D4.02"
+      ],
+      "fixture": "xAPI格式校验通过",
+      "views": {
+        "forward": "数据标准规定可交换结构及语义约束，兼容格式并不证明教育内容正确",
+        "reverse": "格式合法可含错误陈述",
+        "intervention": "另核事件定义和教育主张",
+        "counterexample": "标准兼容不保证专业正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.06.02.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.06.02",
+      "claim_refs": [
+        "K15.06.02.D4.01",
+        "K15.06.02.D4.02"
+      ],
+      "fixture": "离线作答次日上传",
+      "views": {
+        "forward": "xAPI通过actor、verb、object及上下文解释事件；时间和存储时间可能不同",
+        "reverse": "同名verb不证明同语义",
+        "intervention": "分开事件发生与存储时间",
+        "counterexample": "同名事件不证明语义相同"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.06.03.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.06.03",
+      "claim_refs": [
+        "K15.06.03.D4.01",
+        "K15.06.03.D4.02"
+      ],
+      "fixture": "导出时丢弃提示信息",
+      "views": {
+        "forward": "数据可移植性需明确字段映射、权限、版本与往返损失；可读取不是无损",
+        "reverse": "文件可打开但改变观测语义",
+        "intervention": "比较字段及引用对账",
+        "counterexample": "文件可打开不证明无损迁移"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K15.06.04.CASE.01",
+      "owner": "K15",
+      "d3_id": "K15.06.04",
+      "claim_refs": [
+        "K15.06.04.D4.01",
+        "K15.06.04.D4.02"
+      ],
+      "fixture": "重复发送事件且负载改变",
+      "views": {
+        "forward": "离线同步需要稳定ID、幂等与冲突处理；语义保留及授权另验",
+        "reverse": "HTTP成功不保证完整",
+        "intervention": "冲突隔离，禁止静默覆盖",
+        "counterexample": "同步成功不等于数据完整"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}
