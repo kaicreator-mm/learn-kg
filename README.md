@@ -4,6 +4,8 @@
 
 - [建设主线 #1](https://github.com/kaicreator-mm/learn_kg/issues/1)
 - [v0.1.0 研究与建设 #2](https://github.com/kaicreator-mm/learn_kg/issues/2)
+- [G01 当前研究任务 #3](https://github.com/kaicreator-mm/learn_kg/issues/3)
+- [v0.1.0 研究文档入口](https://github.com/kaicreator-mm/learn_kg/blob/version/v0.1.0/docs/README.md)
 
 采用 ADS v4.19 思路，以 GitHub 为唯一项目事实源。先研究、再形式化、后消费；按完整模块和阶段累计审核。
 
