@@ -46,3 +46,6 @@
 - [当前建设事实与缺口](implementation/documentation-baseline.md)
 - [SRC01 保全与可读归档](implementation/src01-readable-archive.md) / [机器可读证据](implementation/src01-preservation-evidence.json)
 - [S01结构库存](drafts/s01-scope-inventory.json) / [来源调查](drafts/s01-source-calibration.md) / [DB01导入映射](drafts/db01-sqlite-design.md)
+
+## S01 基础四域逐主题研究需求（调查草案）
+- [K01–K04 范围细化与来源核验](drafts/s01/README.md)；不代表D4知识完成或G01通过。
