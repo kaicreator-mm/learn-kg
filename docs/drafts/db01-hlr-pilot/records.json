@@ -1,0 +1,1238 @@
+{
+  "package_id": "learn-kg.draft.hlr",
+  "version": "0.0.1",
+  "status": "INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "hlr:source:acl2016",
+      "kind": "Source",
+      "owner": "K10",
+      "status": "DRAFT",
+      "title": "A Trainable Spaced Repetition Model for Language Learning",
+      "authors": [
+        "Burr Settles",
+        "Brendan Meeder"
+      ],
+      "doi": "10.18653/v1/P16-1174",
+      "year": 2016,
+      "url": "https://aclanthology.org/P16-1174.pdf",
+      "rights": "ACL Anthology states CC BY 4.0 for 2016 onward; original summaries and formulas only",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "hlr:locator:curve",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§3.3 p.1851 Eq.(1), Fig.4(a) p.1852",
+      "scope": "固定半衰期的指数预测和边界",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:locator:regression",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§3.3 p.1851 Eq.(2), §3.4 p.1852",
+      "scope": "特征向量和权重预测半衰期",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:locator:inverse",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§3.3 p.1852 left column",
+      "scope": "代数逆解与训练目标",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:locator:evaluation",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§4.1 p.1853 Table 2",
+      "scope": "历史日志评估的MAE与AUC",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:claim:curve",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.01",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "固定半衰期h时，回忆概率预测为2的负时距与半衰期比值次幂。",
+      "conditions": [
+        "时距非负、半衰期有限且为正",
+        "时间单位一致、给定同一对象与模型"
+      ],
+      "limitations": [
+        "零时距预测1是模型假设，不是实测保证",
+        "不是所有记忆均满足指数模型"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:locator:curve",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:half-life",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "claim_type": "DEFINITION",
+      "statement": "在该模型中，半衰期是预测回忆概率降至0.5的时距。",
+      "conditions": [
+        "模型形式固定、无中途复习"
+      ],
+      "limitations": [
+        "不是直接观测的生理常量"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:locator:curve",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:regression",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.05",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "HLR以特征向量和拟合权重的内积作为2的指数来估计半衰期。",
+      "conditions": [
+        "特征、权重、单位和模型版本匹配"
+      ],
+      "limitations": [
+        "权重需实际拟合与评估，不提供通用默认值"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:locator:regression",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:inverse",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "由指数方程可逆求半衰期h=-d/log2(p)，仅在d>0且0<p<1时得到有限正值。",
+      "conditions": [
+        "同一模型、正时距、概率严格介于0与1"
+      ],
+      "limitations": [
+        "样本正确率代入是估计而非直接测得半衰期",
+        "端点或零时距不作有限正值估计"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:locator:inverse",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:empirical",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.04",
+      "claim_type": "EMPIRICAL_RESULT",
+      "statement": "该研究在其历史日志评估中报告HLR的MAE为0.128，Leitner为0.235；两者AUC分别0.538和0.542。",
+      "conditions": [
+        "2016论文§4.1，约1290万学生-词语练习会话记录",
+        "前90%训练、后10%测试",
+        "比较限于论文中的算法版本和指标"
+      ],
+      "limitations": [
+        "预测误差下降不等于真实学习效果改善",
+        "不能推出汉语学习或其他数据集的效果"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:locator:evaluation",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:policy",
+      "kind": "Claim",
+      "owner": "K11",
+      "status": "DRAFT",
+      "topic": "K11.02.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "statement": "试点仅在回忆模型适用、目标阈值明确、权限有效且预算足够时建议到期复习；否则等待、澄清或拒绝。",
+      "conditions": [
+        "用户明确目标阈值",
+        "候选活动成本和预算同为分钟",
+        "允许复习且模型估计有效"
+      ],
+      "limitations": [
+        "阈值不是论文参数或最佳学习策略",
+        "不声称教学收益、不自动执行"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "stable_id": "hlr:element:hlr",
+      "kind": "Element",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "label": "固定半衰期曲线与HLR预测",
+      "model_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:curve",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:half-life",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:regression",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:inverse",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:empirical",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:model:hlr",
+      "kind": "ModelSpec",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "element_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:element:hlr",
+        "kind": "Element"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:curve",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:half-life",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:regression",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:inverse",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:empirical",
+          "kind": "Claim"
+        }
+      ],
+      "formulas": [
+        {
+          "name": "recall",
+          "expr": {
+            "op": "pow2",
+            "args": [
+              {
+                "op": "neg",
+                "args": [
+                  {
+                    "op": "div",
+                    "args": [
+                      {
+                        "var": "delta"
+                      },
+                      {
+                        "var": "half_life"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "estimate_half_life",
+          "expr": {
+            "op": "pow2",
+            "args": [
+              {
+                "op": "dot",
+                "args": [
+                  {
+                    "var": "weights"
+                  },
+                  {
+                    "var": "features"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "inverse_half_life",
+          "expr": {
+            "op": "neg",
+            "args": [
+              {
+                "op": "div",
+                "args": [
+                  {
+                    "var": "delta"
+                  },
+                  {
+                    "op": "log2",
+                    "args": [
+                      {
+                        "var": "p"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "time unit day in pilot",
+        "finite positive half-life",
+        "no intermediate practice between last event and prediction",
+        "feature and weight dimensions agree"
+      ],
+      "limits": [
+        "finite binary64 implementation; numeric overflow/underflow rejected",
+        "no fitting, actual learner or deployment"
+      ]
+    },
+    {
+      "stable_id": "hlr:policy:review",
+      "kind": "PolicySpec",
+      "owner": "K11",
+      "status": "DRAFT",
+      "topic": "K11.02.02",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:policy",
+          "kind": "Claim"
+        }
+      ],
+      "model_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "rules": [
+        {
+          "guard": "NOT_AUTHORIZED",
+          "action": "REJECT_PERMISSION"
+        },
+        {
+          "guard": "MISSING_OR_INVALID_INPUT",
+          "action": "UNKNOWN"
+        },
+        {
+          "guard": "NOT_APPLICABLE",
+          "action": "UNKNOWN"
+        },
+        {
+          "guard": "PROBABILITY_ABOVE_TARGET",
+          "action": "WAIT"
+        },
+        {
+          "guard": "COST_EXCEEDS_BUDGET",
+          "action": "DEFER_BUDGET"
+        },
+        {
+          "guard": "ALWAYS",
+          "action": "SUGGEST_REVIEW"
+        }
+      ],
+      "rule_order": "FIRST_MATCH",
+      "effect": "ADVICE_ONLY"
+    },
+    {
+      "stable_id": "hlr:relation:model-informs-policy",
+      "kind": "Relation",
+      "owner": "K11",
+      "status": "DRAFT",
+      "relation_type": "informs_decision",
+      "from_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "to_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:claim:policy",
+          "kind": "Claim"
+        }
+      ],
+      "conditions": [
+        "模型适用",
+        "用户目标明确",
+        "权限和预算满足"
+      ],
+      "transitive": false,
+      "reversible": false
+    },
+    {
+      "stable_id": "hlr:case:zero",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 0,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 1
+      },
+      "explanation": "指数零次幂"
+    },
+    {
+      "stable_id": "hlr:case:half",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 2,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.5
+      },
+      "explanation": "一个半衰期"
+    },
+    {
+      "stable_id": "hlr:case:double",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 4,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.25
+      },
+      "explanation": "两个半衰期"
+    },
+    {
+      "stable_id": "hlr:case:fraction",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 1,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.7071067811865476
+      },
+      "explanation": "1/sqrt(2)"
+    },
+    {
+      "stable_id": "hlr:case:negative-time",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": -1,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "负时距无效"
+    },
+    {
+      "stable_id": "hlr:case:zero-h",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 1,
+        "half_life": 0,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "半衰期须正"
+    },
+    {
+      "stable_id": "hlr:case:wrong-unit",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 24,
+        "half_life": 2,
+        "unit": "hour"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "试点固定day，不静默换算"
+    },
+    {
+      "stable_id": "hlr:case:underflow",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 2000,
+        "half_life": 1,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "explanation": "不把机器下溢当真实零概率"
+    },
+    {
+      "stable_id": "hlr:case:regression",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "estimate_half_life",
+      "input": {
+        "weights": [
+          1,
+          0.5
+        ],
+        "features": [
+          1,
+          2
+        ],
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 4
+      },
+      "explanation": "内积2，2^2"
+    },
+    {
+      "stable_id": "hlr:case:mismatch",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "estimate_half_life",
+      "input": {
+        "weights": [
+          1
+        ],
+        "features": [
+          1,
+          2
+        ],
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "向量维数不同"
+    },
+    {
+      "stable_id": "hlr:case:overflow",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "estimate_half_life",
+      "input": {
+        "weights": [
+          2000
+        ],
+        "features": [
+          1
+        ],
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "explanation": "浮点溢出拒绝"
+    },
+    {
+      "stable_id": "hlr:case:inverse",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 4,
+        "p": 0.25,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 2
+      },
+      "explanation": "log2(.25)=-2"
+    },
+    {
+      "stable_id": "hlr:case:inverse-one",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 4,
+        "p": 1,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "端点不能有限逆求"
+    },
+    {
+      "stable_id": "hlr:case:inverse-zero",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 4,
+        "p": 0,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "log(0)无定义"
+    },
+    {
+      "stable_id": "hlr:case:inverse-zero-time",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 0,
+        "p": 0.5,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "不产生零半衰期"
+    },
+    {
+      "stable_id": "hlr:case:policy-due",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "explanation": "低于目标且可行"
+    },
+    {
+      "stable_id": "hlr:case:policy-equal",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.5,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "explanation": "等于阈值按试点规则到期"
+    },
+    {
+      "stable_id": "hlr:case:policy-wait",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.75,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "WAIT"
+      },
+      "explanation": "高于阈值"
+    },
+    {
+      "stable_id": "hlr:case:policy-budget",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 3
+      },
+      "expected": {
+        "status": "DEFER_BUDGET"
+      },
+      "explanation": "预算不足"
+    },
+    {
+      "stable_id": "hlr:case:policy-permission",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": false,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "REJECT_PERMISSION"
+      },
+      "explanation": "权限优先"
+    },
+    {
+      "stable_id": "hlr:case:policy-unknown",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": null,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "无预测"
+    },
+    {
+      "stable_id": "hlr:case:policy-not-applicable",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": false,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "构念不适用"
+    },
+    {
+      "stable_id": "hlr:case:policy-unknown-target",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": null,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "无用户目标"
+    },
+    {
+      "stable_id": "hlr:case:policy-bad-target",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 1.1,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "阈值非法"
+    },
+    {
+      "stable_id": "hlr:case:policy-denied-unknown",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.hlr",
+        "version": "0.0.1",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": null,
+        "target": 0.5,
+        "authorized": false,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "REJECT_PERMISSION"
+      },
+      "explanation": "拒绝优先于未知"
+    },
+    {
+      "stable_id": "hlr:validation:pilot",
+      "kind": "ValidationSpec",
+      "owner": "K10",
+      "status": "DRAFT",
+      "case_refs": [
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:zero",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:half",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:double",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:fraction",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:negative-time",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:zero-h",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:wrong-unit",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:underflow",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:regression",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:mismatch",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:overflow",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:inverse",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:inverse-one",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:inverse-zero",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:inverse-zero-time",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-due",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-equal",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-wait",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-budget",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-permission",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-unknown",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-not-applicable",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-unknown-target",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-bad-target",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.hlr",
+          "version": "0.0.1",
+          "stable_id": "hlr:case:policy-denied-unknown",
+          "kind": "Case"
+        }
+      ],
+      "method": "Builder-authored expected cases; finite expression evaluation, explicit ordered policy and structural rejection",
+      "run_status": "NOT_RUN",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

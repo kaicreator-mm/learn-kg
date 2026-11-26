@@ -61,3 +61,5 @@
 - [S01 P/F/A/E 27视图研究需求](drafts/s01/process-view-requirements.md)；[CQ/LC正负夹具设计](drafts/s01/cq-lifecycle-fixture-requirements.json)（NOT_RUN）。
 
 - [DB01/S01 BKT 原子知识与格式试点](drafts/db01-bkt-pilot/README.md)（调查草案，非正式专业资格）。
+
+- [HLR与复习决策调查试点](drafts/db01-hlr-pilot/README.md)（专业候选与条件规则验证，不是正式模块资格）。
