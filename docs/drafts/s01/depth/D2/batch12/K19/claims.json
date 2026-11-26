@@ -1,0 +1,86 @@
+{
+  "owner": "K19",
+  "base": "7e4a62f2d083541f30fa6e7997d0290e9aba2c2f",
+  "prior_claim_blob": "c5122eaac758a950e64820bd5b38a42eadb53f90",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K19.02.02.D4.03",
+      "owner": "K19",
+      "d3_id": "K19.02.02",
+      "requirement_id": "K19.02.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "若以UK GDPR同意为依据，需要可理解的特定用途、主动选择及便捷撤回；撤回后不再依该同意继续相应处理。",
+      "conditions": [
+        "仅英国监管指导；适用法域、其他处理依据和保留义务另核。"
+      ],
+      "negative_boundary": "不因接受学习服务推定同意训练模型。",
+      "source_refs": [
+        "K19-B12-CONS"
+      ],
+      "source_locator": "l75,92–95,158–189",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K19.02.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "用户撤回可选研究用途同意",
+        "expected": "阻止该用途处理并留撤回记录",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K19.03.03.D4.03",
+      "owner": "K19",
+      "d3_id": "K19.03.03",
+      "requirement_id": "K19.03.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "模型解释、验证及文档与情境化输出解释应分别记录，并设置用户报告问题和申诉路径。",
+      "conditions": [
+        "Measure 2.9、3.3；非模型内部因果解释。"
+      ],
+      "negative_boundary": "不以自动生成的理由冒充验证依据。",
+      "source_refs": [
+        "K19-B12-RMF"
+      ],
+      "source_locator": "Map 1.4–1.6; Measure 1.1,2.9,2.13,3.3,4.1; l162–166,205,227,235,241–243",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K19.03.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "评分理由与量规不符",
+        "expected": "允许申诉并核证据",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K19.04.02.D4.03",
+      "owner": "K19",
+      "d3_id": "K19.04.02",
+      "requirement_id": "K19.04.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "应检验既有测量指标及评估流程的有效性，追踪实际部署风险；教育目标与代理指标须分别定义。",
+      "conditions": [
+        "Measure 2.13、3.1、4.1部分支持；教育代理构念需专证。"
+      ],
+      "negative_boundary": "登录量提高不等于知识增长。",
+      "source_refs": [
+        "K19-B12-RMF"
+      ],
+      "source_locator": "Map 1.4–1.6; Measure 1.1,2.9,2.13,3.3,4.1; l162–166,205,227,235,241–243",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K19.04.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "优化连续签到但独立测验下降",
+        "expected": "分列代理指标和学习结果",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

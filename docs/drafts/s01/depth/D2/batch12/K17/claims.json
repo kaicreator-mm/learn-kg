@@ -1,0 +1,34 @@
+{
+  "owner": "K17",
+  "base": "7e4a62f2d083541f30fa6e7997d0290e9aba2c2f",
+  "prior_claim_blob": "498623e8d47e2740f442a3a575e5076159effeb6",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K17.06.04.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.06.04",
+      "requirement_id": "K17.06.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "随机试验的分配效应与遵循干预效应是不同目标；按实际治疗分组或简单排除不遵循者可能破坏随机比较。",
+      "conditions": [
+        "Cochrane §8.4.4；缺失结局需另处理，非教育效应估计。"
+      ],
+      "negative_boundary": "不把完成课程者的平均成绩当ITT。",
+      "source_refs": [
+        "K17-B12-ITT"
+      ],
+      "source_locator": "§8.4.4,8.5 l244–259",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.06.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "100人随机分组，部分未完成",
+        "expected": "保留原分组并明确缺失与估计目标",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

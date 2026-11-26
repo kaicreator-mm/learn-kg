@@ -1,0 +1,112 @@
+{
+  "owner": "K15",
+  "base": "7e4a62f2d083541f30fa6e7997d0290e9aba2c2f",
+  "prior_claim_blob": "089e6b6b624fa4597bb4f133ca3876d684852b98",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K15.01.02.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.01.02",
+      "requirement_id": "K15.01.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "仿真设计需匹配目标技能与功能、概念或社会情境；更高保真度不保证更好结果，迁移需要单独评价。",
+      "conditions": [
+        "医疗教育综述；非所有仿真产品因果证据。"
+      ],
+      "negative_boundary": "仿真内成绩非真实场景胜任认证。",
+      "source_refs": [
+        "K15-B12-SIM"
+      ],
+      "source_locator": "l131–139",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.01.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "高保真模拟后无实地评估",
+        "expected": "实际迁移未知",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.02.04.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.02.04",
+      "requirement_id": "K15.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "逻辑辅导研究将训练期间的提示策略与后测结果分开评价；项目应区分提示、本人步骤与独立复测。",
+      "conditions": [
+        "摘要支持训练与后测分离；后测无辅助条件尚未核。"
+      ],
+      "negative_boundary": "不把提示后完成直接计独立掌握。",
+      "source_refs": [
+        "K15-B12-HINT"
+      ],
+      "source_locator": "l57–64 abstract",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "K15.02.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "系统提示下一步后答对",
+        "expected": "记录辅助，另测独立作答",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.03.04.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.03.04",
+      "requirement_id": "K15.03.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "AI输出需按用途及部署情境解释，测量指标应与风险对应，并保留不可测风险。",
+      "conditions": [
+        "NIST风险框架；教育行动授权是项目推论。"
+      ],
+      "negative_boundary": "预测分数不是直接行动授权。",
+      "source_refs": [
+        "K15-B12-RMF"
+      ],
+      "source_locator": "Map 1.4–1.6; Measure 1.1,2.9,2.13,3.3,4.1; l162–166,205,227,235,241–243",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.03.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "模型建议增加练习",
+        "expected": "先核目标、权限、成本及证据",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.05.01.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.05.01",
+      "requirement_id": "K15.05.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "可用性应使用代表性用户及任务，分别记录完成率、错误、耗时和满意度；学习效果需另设结果测量。",
+      "conditions": [
+        "产品测试方法，后半为教育评价边界。"
+      ],
+      "negative_boundary": "界面任务完成不证明学科能力提高。",
+      "source_refs": [
+        "K15-B12-USAB"
+      ],
+      "source_locator": "l126–131",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.05.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "成功提交练习但未做后测",
+        "expected": "只通过可用性证据",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

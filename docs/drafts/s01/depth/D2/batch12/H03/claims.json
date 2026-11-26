@@ -1,0 +1,112 @@
+{
+  "owner": "H03",
+  "base": "7e4a62f2d083541f30fa6e7997d0290e9aba2c2f",
+  "prior_claim_blob": "6997202e6408c5ed7b20f7a9902ce206fe70a43f",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H03.03.02.D4.03",
+      "owner": "H03",
+      "d3_id": "H03.03.02",
+      "requirement_id": "H03.03.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "现代汉语词类与句法功能不总一一对应；同一词的不同构式功能可在特定理论下分析为兼类或范畴化。",
+      "conditions": [
+        "正文抽取，页图失败；名动分立与包含等争议保留。"
+      ],
+      "negative_boundary": "不把每个功能位置自动视作独立同形词。",
+      "source_refs": [
+        "H03-B12-POS"
+      ],
+      "source_locator": "pp40–43抽取正文 l37–69,105–120；indices1/3页图超时/验证码",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H03.03.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "研究这个问题/进行研究",
+        "expected": "分别记录句法功能及待核词典义项",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H03.03.04.D4.03",
+      "owner": "H03",
+      "d3_id": "H03.03.04",
+      "requirement_id": "H03.03.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "汉语构式中可见名词谓语及动词短语承担主宾语，形式无显性词形变化不等于类别和功能相同。",
+      "conditions": [
+        "§1、§2.2抽取正文；词汇化判断仍需历时/词典证据。"
+      ],
+      "negative_boundary": "不由单次构式活用创建固定新义项。",
+      "source_refs": [
+        "H03-B12-POS"
+      ],
+      "source_locator": "pp40–43抽取正文 l37–69,105–120；indices1/3页图超时/验证码",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H03.03.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "今天是周一/今天周一",
+        "expected": "记录具体构式，不据此普遍转类",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H03.04.02.D4.03",
+      "owner": "H03",
+      "d3_id": "H03.04.02",
+      "requirement_id": "H03.04.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "语义研究可区分尺度反义与互补反义；实际使用可能不完全符合理论分类。",
+      "conditions": [
+        "仅塞尔维亚语料研究摘要，汉语实例为自造待核。"
+      ],
+      "negative_boundary": "不把所有反义关系建成逻辑否定。",
+      "source_refs": [
+        "H03-B12-ANT"
+      ],
+      "source_locator": "l170–172",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "H03.04.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "不热未必冷",
+        "expected": "保留中间尺度",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H03.05.04.D4.03",
+      "owner": "H03",
+      "d3_id": "H03.05.04",
+      "requirement_id": "H03.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "普通话语域差异可用多项共现语言特征描述，研究以20类口语及书面语料建立多维分析。",
+      "conditions": [
+        "pp39–40；特定语料与方法，未核单词语域分布。"
+      ],
+      "negative_boundary": "不把倾向变成绝对禁用规则。",
+      "source_refs": [
+        "H03-B12-REG"
+      ],
+      "source_locator": "印刷pp39–40, indices0–1页图；摘要、§1 l9–29",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "H03.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "同一请求在工作邮件和闲聊中表达不同",
+        "expected": "分别记录场景和证据",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}
