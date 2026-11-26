@@ -1,6 +1,6 @@
 # Learn-KG v0.1.0 文档索引
 
-状态：INTAKE / DRAFT，未冻结分类、未审核、未实现图谱。
+状态：DRAFT，分类未冻结、未完成独立审核；已建立 HSK 私有 staging 图，非正式发布。
 - [领域范围及能力问题](product/knowledge-scope.md)
 - [知识证据与案例合同](product/knowledge-quality-contract.md)
 - [首批案例需求](product/case-pilot.md)
@@ -22,3 +22,8 @@
 - [HSK01 首批实际导入证据](implementation/hsk-import-r2.md)
 - [导入工具](../tools/hsk_import/README.md)
 任务 #4 DB01、#5 HSK01 与 #3 G01 并行；staging 不等于 accepted。
+
+## D011 动态学习过程知识（候选）
+- [过程知识体系](product/system/learning-process-system.md)
+- [过程契约与运行边界](design/learning-process-contract.md)
+- [专业范围参考](research/learning-process-sources.md)
