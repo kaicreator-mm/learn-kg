@@ -1,0 +1,557 @@
+{
+  "owner": "K12",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K12.01.01.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.01.01",
+      "claim_refs": [
+        "K12.01.01.D4.01",
+        "K12.01.01.D4.02"
+      ],
+      "fixture": "一份讲义覆盖多个词义",
+      "views": {
+        "forward": "分别保存资源ID、版本、目标和命题ID",
+        "reverse": "检查任务条件：元数据规范，非学习效果",
+        "intervention": "对象身份、目标、版本、内容与资源区别",
+        "counterexample": "资源文件不等于知识实体"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.01.02.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.01.02",
+      "claim_refs": [
+        "K12.01.02.D4.01",
+        "K12.01.02.D4.02"
+      ],
+      "fixture": "题目同时出现A和B词",
+      "views": {
+        "forward": "不据共现判定两技能必要",
+        "reverse": "检查任务条件：映射是候选假设",
+        "intervention": "任务组件、观测证据、版本及映射条件",
+        "counterexample": "标签共现不证明技能依赖"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.01.03.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.01.03",
+      "claim_refs": [
+        "K12.01.03.D4.01",
+        "K12.01.03.D4.02"
+      ],
+      "fixture": "一篇对话含十个词和句法",
+      "views": {
+        "forward": "允许多对多目标映射",
+        "reverse": "检查任务条件：元数据非固定知识粒度标准",
+        "intervention": "知识单位、活动、课时、项目与组合",
+        "counterexample": "不能固定每份材料包含一个组件"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.01.04.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.01.04",
+      "claim_refs": [
+        "K12.01.04.D4.01",
+        "K12.01.04.D4.02"
+      ],
+      "fixture": "资源自报CC许可但无权利证据",
+      "views": {
+        "forward": "许可未知保持HOLD",
+        "reverse": "检查任务条件：字段声明需核证",
+        "intervention": "作者、许可、语言、版本、可及性及来源",
+        "counterexample": "元数据完整不证明事实正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.02.01.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.02.01",
+      "claim_refs": [
+        "K12.02.01.D4.01",
+        "K12.02.01.D4.02"
+      ],
+      "fixture": "单选题提交两个选项",
+      "views": {
+        "forward": "按基数规则拒绝，不自动评分",
+        "reverse": "检查任务条件：QTI交换语义，非效度",
+        "intervention": "选项、干扰项、猜测、构念及评分",
+        "counterexample": "选择正确不等于自由产出"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.02.02.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.02.02",
+      "claim_refs": [
+        "K12.02.02.D4.01",
+        "K12.02.02.D4.02"
+      ],
+      "fixture": "看首字母后答对",
+      "views": {
+        "forward": "不与无提示正确混算",
+        "reverse": "检查任务条件：具体回忆策略由K05主责",
+        "intervention": "自由/线索回忆、提示条件、答案规则",
+        "counterexample": "混合提示条件不能直接比较"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.02.03.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.02.03",
+      "claim_refs": [
+        "K12.02.03.D4.01",
+        "K12.02.03.D4.02"
+      ],
+      "fixture": "表达流畅但因果错误",
+      "views": {
+        "forward": "按目标关系和反例分别评价",
+        "reverse": "检查任务条件：评分效度由K09主责",
+        "intervention": "构念、关键关系、机制、量规及反例",
+        "counterexample": "表达流畅不等于正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.02.04.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.02.04",
+      "claim_refs": [
+        "K12.02.04.D4.01",
+        "K12.02.04.D4.02"
+      ],
+      "fixture": "两个不同但等价程序",
+      "views": {
+        "forward": "按语义验证或人工复核",
+        "reverse": "检查任务条件：具体答案空间需专业核证",
+        "intervention": "生成目标、约束、可接受产物及部分评分",
+        "counterexample": "标准答案唯一性需证据"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.02.05.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.02.05",
+      "claim_refs": [
+        "K12.02.05.D4.01",
+        "K12.02.05.D4.02"
+      ],
+      "fixture": "模拟客户投诉满分",
+      "views": {
+        "forward": "不自动签发真实职业资格",
+        "reverse": "检查任务条件：任务条件及归属明确",
+        "intervention": "真实/模拟条件、独立性及评分证据",
+        "counterexample": "模拟不代表真实资格"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.03.01.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.03.01",
+      "claim_refs": [
+        "K12.03.01.D4.01",
+        "K12.03.01.D4.02"
+      ],
+      "fixture": "错误项全部荒谬",
+      "views": {
+        "forward": "检查与真实错误的相关性",
+        "reverse": "检查任务条件：具体干扰项理论与公平证据待补",
+        "intervention": "近邻错误、可区分性、合理性与公平",
+        "counterexample": "不能用无关难度人为区分"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.03.02.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.03.02",
+      "claim_refs": [
+        "K12.03.02.D4.01",
+        "K12.03.02.D4.02"
+      ],
+      "fixture": "文字更长但题目更易",
+      "views": {
+        "forward": "不只用字数定难度",
+        "reverse": "检查任务条件：语言、任务复杂度及样本分别记录",
+        "intervention": "语言负荷、组件复杂度、任务情境及校准",
+        "counterexample": "长度不直接决定难度"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.03.03.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.03.03",
+      "claim_refs": [
+        "K12.03.03.D4.01",
+        "K12.03.03.D4.02"
+      ],
+      "fixture": "提示直接泄露完整答案",
+      "views": {
+        "forward": "标记辅助表现，独立复测",
+        "reverse": "检查任务条件：规范§2.5；提示效果非规范证据",
+        "intervention": "分层提示、最小帮助、答案泄漏与日志",
+        "counterexample": "提示不能隐含完整答案"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.03.04.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.03.04",
+      "claim_refs": [
+        "K12.03.04.D4.01",
+        "K12.03.04.D4.02"
+      ],
+      "fixture": "1/2与0.5表示同一数",
+      "views": {
+        "forward": "按明确数值规则接受，不随意做字符串比较",
+        "reverse": "检查任务条件：具体容差及允许答案由专业定义",
+        "intervention": "精确、多解、等价、容差及人工复核",
+        "counterexample": "字符串不等不一定是语义错误"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.03.05.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.03.05",
+      "claim_refs": [
+        "K12.03.05.D4.01",
+        "K12.03.05.D4.02"
+      ],
+      "fixture": "题目问最大值但未给范围",
+      "views": {
+        "forward": "返回HOLD_AMBIGUOUS",
+        "reverse": "检查任务条件：项目守卫，待独立专业审核",
+        "intervention": "多种解释、缺失条件、审查及修订",
+        "counterexample": "歧义题不能强行唯一评分"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.04.01.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.04.01",
+      "claim_refs": [
+        "K12.04.01.D4.01",
+        "K12.04.01.D4.02"
+      ],
+      "fixture": "例题1+2=3后复制",
+      "views": {
+        "forward": "换条件独立求解",
+        "reverse": "检查任务条件：2007指南摘要；非所有材料",
+        "intervention": "专业正确性、步骤、解释和迁移条件",
+        "counterexample": "模仿例题不能证明理解"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.04.02.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.04.02",
+      "claim_refs": [
+        "K12.04.02.D4.01",
+        "K12.04.02.D4.02"
+      ],
+      "fixture": "单个特殊情境反例",
+      "views": {
+        "forward": "不否定不同前提下的命题",
+        "reverse": "检查任务条件：项目知识质量合同",
+        "intervention": "目标命题、违例条件、近邻比较",
+        "counterexample": "反例不任意外推所有命题"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.04.03.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.04.03",
+      "claim_refs": [
+        "K12.04.03.D4.01",
+        "K12.04.03.D4.02"
+      ],
+      "fixture": "听辨测验转录会泄露答案",
+      "views": {
+        "forward": "提供识别及经验证的替代方案，不直接给答案",
+        "reverse": "检查任务条件：SC1.1.1 test例外不是免除其他无障碍要求",
+        "intervention": "模态、可及性、目标构念及替代文本",
+        "counterexample": "图像装饰不等于学习支持"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.04.04.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.04.04",
+      "claim_refs": [
+        "K12.04.04.D4.01",
+        "K12.04.04.D4.02"
+      ],
+      "fixture": "仿真操作成功但现实缺许可",
+      "views": {
+        "forward": "仅报告仿真条件",
+        "reverse": "检查任务条件：直接模拟效度来源待补",
+        "intervention": "假设、保真度、操作条件及外推",
+        "counterexample": "仿真成绩不能代替实操资格"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.04.05.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.04.05",
+      "claim_refs": [
+        "K12.04.05.D4.01",
+        "K12.04.05.D4.02"
+      ],
+      "fixture": "无权限操作真实设备",
+      "views": {
+        "forward": "拒绝真实操作，提供合规替代",
+        "reverse": "检查任务条件：项目约束",
+        "intervention": "场景、角色、授权、安全及评价",
+        "counterexample": "不能安排无权限或危险实际操作"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.05.01.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.05.01",
+      "claim_refs": [
+        "K12.05.01.D4.01",
+        "K12.05.01.D4.02"
+      ],
+      "fixture": "整数题模板参数使分母为零",
+      "views": {
+        "forward": "拒绝非法实例并保留参数",
+        "reverse": "检查任务条件：2023综述；生成模型与校准分离",
+        "intervention": "参数、适用范围、生成约束及验证",
+        "counterexample": "模板可运行不证明题目有效"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.05.02.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.05.02",
+      "claim_refs": [
+        "K12.05.02.D4.01",
+        "K12.05.02.D4.02"
+      ],
+      "fixture": "仅将人名替换",
+      "views": {
+        "forward": "标记同题族并独立测迁移",
+        "reverse": "检查任务条件：AIG综述；题族局部依赖需另测",
+        "intervention": "保持目标、改变维度及难度/答案校验",
+        "counterexample": "只改字词不证明真正迁移"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.05.03.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.05.03",
+      "claim_refs": [
+        "K12.05.03.D4.01",
+        "K12.05.03.D4.02"
+      ],
+      "fixture": "模型生成答案与题意冲突",
+      "views": {
+        "forward": "隔离生成稿，复核后再资格化",
+        "reverse": "检查任务条件：综述及UNESCO指导摘要；不自动准入LLM内容",
+        "intervention": "输入证据、生成范围、审核及拒绝",
+        "counterexample": "LLM输出不能直接成为正式知识"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.05.04.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.05.04",
+      "claim_refs": [
+        "K12.05.04.D4.01",
+        "K12.05.04.D4.02"
+      ],
+      "fixture": "生成器标难度高级",
+      "views": {
+        "forward": "保留估计未校准状态",
+        "reverse": "检查任务条件：不把标签当估计参数",
+        "intervention": "目标难度、候选特征、试测和校准",
+        "counterexample": "主观难度标签不等于IRT参数"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.05.05.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.05.05",
+      "claim_refs": [
+        "K12.05.05.D4.01",
+        "K12.05.05.D4.02"
+      ],
+      "fixture": "三个模型给同一错误日期",
+      "views": {
+        "forward": "以权威来源核证或HOLD",
+        "reverse": "检查任务条件：项目证据合同",
+        "intervention": "原始来源、可核验定位、计算及冲突处理",
+        "counterexample": "多模型一致不等于事实证据"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.06.01.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.06.01",
+      "claim_refs": [
+        "K12.06.01.D4.01",
+        "K12.06.01.D4.02"
+      ],
+      "fixture": "已评分题发现答案错误",
+      "views": {
+        "forward": "创建新版本，标记旧版本影响",
+        "reverse": "检查任务条件：项目追溯合同",
+        "intervention": "稳定身份、版本、兼容、退役及引用",
+        "counterexample": "不得覆盖历史任务版本"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.06.02.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.06.02",
+      "claim_refs": [
+        "K12.06.02.D4.01",
+        "K12.06.02.D4.02"
+      ],
+      "fixture": "学习者无法使用音频",
+      "views": {
+        "forward": "提供可及且目标匹配的替代",
+        "reverse": "检查任务条件：规范和项目条件；语言水平需另核",
+        "intervention": "目标、水平、语言、环境与资源约束",
+        "counterexample": "不可及材料不得强制使用"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.06.03.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.06.03",
+      "claim_refs": [
+        "K12.06.03.D4.01",
+        "K12.06.03.D4.02"
+      ],
+      "fixture": "所有组件有题但均带答案",
+      "views": {
+        "forward": "报告独立证据缺口",
+        "reverse": "检查任务条件：测量三角；集合检查仅结构",
+        "intervention": "目标、组件、条件、案例与缺口账本",
+        "counterexample": "关联数不能证明覆盖有效"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.06.04.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.06.04",
+      "claim_refs": [
+        "K12.06.04.D4.01",
+        "K12.06.04.D4.02"
+      ],
+      "fixture": "模板运行通过但题目事实错",
+      "views": {
+        "forward": "不晋升正式题库",
+        "reverse": "检查任务条件：2023综述；权利和可及性另核",
+        "intervention": "专业、测量、可及性、权利及实际证据",
+        "counterexample": "合成测试不证明教学效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K12.06.05.CASE.01",
+      "owner": "K12",
+      "d3_id": "K12.06.05",
+      "claim_refs": [
+        "K12.06.05.D4.01",
+        "K12.06.05.D4.02"
+      ],
+      "fixture": "冻结题库答案静默变更",
+      "views": {
+        "forward": "拒绝覆盖，发布新版本及影响说明",
+        "reverse": "检查任务条件：项目版本合同",
+        "intervention": "错误、漂移、影响引用、重验和历史保留",
+        "counterexample": "不得静默修改已冻结答案"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}
