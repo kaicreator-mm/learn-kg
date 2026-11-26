@@ -1,0 +1,69 @@
+{
+  "status": "BUILDER_REPLAY_PASS_SCOPED",
+  "tested_head": "d413b97dc115024562e3486423bb3c4a5048ca7d",
+  "server": "aliyun-sg",
+  "job_id": "job_01M8C94NP600XWE90JG4T02BVH",
+  "node": "v24.21.0",
+  "exit_code": 0,
+  "syntax_check": "PASS_4_OF_4",
+  "blob_checks": [
+    {
+      "path": "K09/validate-synthetic.mjs",
+      "sha": "ba431c67156839247ae40c1ad17e628afddd09ed"
+    },
+    {
+      "path": "K09/logic-evidence.json",
+      "sha": "2b4cfc5a3a001cc8da0d31953d5820dd8d8c2b0c"
+    },
+    {
+      "path": "K10/validate-synthetic.mjs",
+      "sha": "8a188e3c87f4f7172cc0b1c81709e41fa9a2ab45"
+    },
+    {
+      "path": "K10/logic-evidence.json",
+      "sha": "4cf3ddab4b7f1a0f4146004f4e39fd7b2e1259df"
+    },
+    {
+      "path": "K11/validate-synthetic.mjs",
+      "sha": "03cc223fc7aa5befbf0a64b5b25b91bf7ae0a77a"
+    },
+    {
+      "path": "K11/logic-evidence.json",
+      "sha": "fdf6a6c9b2cb54742f32a114c82a6e7fe4a982a1"
+    },
+    {
+      "path": "K12/validate-synthetic.mjs",
+      "sha": "1e853cde61a62192b85ebfa4374f54b94380796f"
+    },
+    {
+      "path": "K12/logic-evidence.json",
+      "sha": "7789434b624da43052bfb92855309a2ee2be5bdb"
+    }
+  ],
+  "modules": [
+    {
+      "module": "K09",
+      "passed": 18,
+      "total": 18
+    },
+    {
+      "module": "K10",
+      "passed": 19,
+      "total": 19
+    },
+    {
+      "module": "K11",
+      "passed": 19,
+      "total": 19
+    },
+    {
+      "module": "K12",
+      "passed": 19,
+      "total": 19
+    }
+  ],
+  "passed": 75,
+  "total": 75,
+  "independent_oracle": false,
+  "limits": "same 75 Builder fixtures rerun; BKT/HLR overlap prior investigation examples, no count of unique independent tests; no actual learning, calibration, permissions, budget persistence or full graph execution"
+}
