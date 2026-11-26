@@ -155,7 +155,7 @@
       "status": "DRAFT",
       "qualification": "NOT_RUN",
       "example": {
-        "fixture": "跑了两圈步（自然性另核）改用跑了一会儿步",
+        "fixture": "跑了一会儿步（合成例；具体可接受性仍待语料或专家核证）",
         "expected": "活动整体义与句法角色分开",
         "validation": "DESIGN_ONLY"
       }
@@ -270,16 +270,17 @@
       "d3_id": "H03.05.01",
       "requirement_id": "H03.05.01.RQ01",
       "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
-      "statement": "汉语动名搭配研究线索显示需区分短语频率和关联指标，并控制单词频率等条件；PMI可作为候选数学指标log2[P(x,y)/(P(x)P(y))]。",
+      "statement": "搭配关联指标和共现频次是不同量。PMI=log2[P(x,y)/(P(x)P(y))]；汉语搭配预印本比较多种指标并报告低频阈值可影响PMI提取结果。",
       "conditions": [
-        "仅索引；公式是一般概率定义，具体窗口/语料实现另核"
+        "同一明确事件空间、合法联合概率；实际窗口/依存频次的分母和计数定义需另核；预印本非独立复制"
       ],
       "negative_boundary": "高PMI不保证高频、自然性或语义适切；零联合概率不填0。",
       "source_refs": [
-        "H03-B02-COL"
+        "H03-B02-COL",
+        "H03-B02-COLLFORM"
       ],
-      "source_locator": "index methods",
-      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "source_locator": "ChinaRxiv preprint §2.1.2 Table1, §3.1; original COL source remains INDEX_ONLY",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
       "base_claim_ref": "H03.05.01.D4.01",
       "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
       "status": "DRAFT",
@@ -313,6 +314,32 @@
       "example": {
         "fixture": "他在看表。",
         "expected": "保留钟表与表格等合理候选",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H03.05.01.D4.04",
+      "owner": "H03",
+      "d3_id": "H03.05.01",
+      "requirement_id": "H03.05.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "在相同二元事件计数口径下，Dice=2f_xy/(f_x+f_y)，与PMI关注不同尺度；汉语搭配预印本比较多个指标，结果依样本、频率阈值、标注与提取方式而变。",
+      "conditions": [
+        "同一事件空间，非负计数、联合不超过边际、分母非零；真实窗口计数可能不满足此假设；预印本"
+      ],
+      "negative_boundary": "不得把单一统计指标当作搭配自然性、教学价值或正式词义关系；不同计数口径不可直接合并。",
+      "source_refs": [
+        "H03-B02-COLLFORM"
+      ],
+      "source_locator": "§2.1.2 Table1, §3.2",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H03.05.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "N=1000,fx=100,fy=200,fxy=40",
+        "expected": "PMI=1 bit，Dice=4/15；未证明词汇合宜",
         "validation": "DESIGN_ONLY"
       }
     }
