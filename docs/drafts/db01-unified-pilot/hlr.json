@@ -1,0 +1,727 @@
+{
+  "schema_version": "draft-unified-1",
+  "package_id": "learn-kg.draft.unified.hlr",
+  "version": "0.0.2",
+  "status": "INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "hlr:source:acl2016",
+      "kind": "Source",
+      "owner": "K10",
+      "status": "DRAFT",
+      "title": "A Trainable Spaced Repetition Model for Language Learning",
+      "authors": [
+        "Burr Settles",
+        "Brendan Meeder"
+      ],
+      "year": 2016,
+      "url": "https://aclanthology.org/P16-1174.pdf",
+      "rights": "ACL Anthology states CC BY 4.0 for 2016 onward; original summaries and formulas only",
+      "qualification": "NOT_RUN",
+      "identifier": "10.18653/v1/P16-1174"
+    },
+    {
+      "stable_id": "hlr:locator:curve",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§3.3 p.1851 Eq.(1), Fig.4(a) p.1852",
+      "scope": "固定半衰期的指数预测和边界",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:locator:regression",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§3.3 p.1851 Eq.(2), §3.4 p.1852",
+      "scope": "特征向量和权重预测半衰期",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:locator:inverse",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§3.3 p.1852 left column",
+      "scope": "代数逆解与训练目标",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:locator:evaluation",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:source:acl2016",
+        "kind": "Source"
+      },
+      "location": "§4.1 p.1853 Table 2",
+      "scope": "历史日志评估的MAE与AUC",
+      "verification": "TEXT_AND_PAGE_IMAGE_READ"
+    },
+    {
+      "stable_id": "hlr:claim:curve",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.01",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "固定半衰期h时，回忆概率预测为2的负时距与半衰期比值次幂。",
+      "conditions": [
+        "时距非负、半衰期有限且为正",
+        "时间单位一致、给定同一对象与模型"
+      ],
+      "limitations": [
+        "零时距预测1是模型假设，不是实测保证",
+        "不是所有记忆均满足指数模型"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:locator:curve",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:half-life",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "claim_type": "DEFINITION",
+      "statement": "在该模型中，半衰期是预测回忆概率降至0.5的时距。",
+      "conditions": [
+        "模型形式固定、无中途复习"
+      ],
+      "limitations": [
+        "不是直接观测的生理常量"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:locator:curve",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:regression",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.05",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "HLR以特征向量和拟合权重的内积作为2的指数来估计半衰期。",
+      "conditions": [
+        "特征、权重、单位和模型版本匹配"
+      ],
+      "limitations": [
+        "权重需实际拟合与评估，不提供通用默认值"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:locator:regression",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:inverse",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "由指数方程可逆求半衰期h=-d/log2(p)，仅在d>0且0<p<1时得到有限正值。",
+      "conditions": [
+        "同一模型、正时距、概率严格介于0与1"
+      ],
+      "limitations": [
+        "样本正确率代入是估计而非直接测得半衰期",
+        "端点或零时距不作有限正值估计"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:locator:inverse",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:claim:empirical",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.04",
+      "claim_type": "EMPIRICAL_RESULT",
+      "statement": "该研究在其历史日志评估中报告HLR的MAE为0.128，Leitner为0.235；两者AUC分别0.538和0.542。",
+      "conditions": [
+        "2016论文§4.1，约1290万学生-词语练习会话记录",
+        "前90%训练、后10%测试",
+        "比较限于论文中的算法版本和指标"
+      ],
+      "limitations": [
+        "预测误差下降不等于真实学习效果改善",
+        "不能推出汉语学习或其他数据集的效果"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:locator:evaluation",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:element:hlr",
+      "kind": "Element",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "label": "固定半衰期曲线与HLR预测",
+      "model_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:curve",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:half-life",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:regression",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:inverse",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:empirical",
+          "kind": "Claim"
+        }
+      ]
+    },
+    {
+      "stable_id": "hlr:model:hlr",
+      "kind": "ModelSpec",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.03.02",
+      "element_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:element:hlr",
+        "kind": "Element"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:curve",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:half-life",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:regression",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:inverse",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:empirical",
+          "kind": "Claim"
+        }
+      ],
+      "formulas": [
+        {
+          "name": "recall",
+          "expr": {
+            "op": "pow2",
+            "args": [
+              {
+                "op": "neg",
+                "args": [
+                  {
+                    "op": "div",
+                    "args": [
+                      {
+                        "var": "delta"
+                      },
+                      {
+                        "var": "half_life"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "estimate_half_life",
+          "expr": {
+            "op": "pow2",
+            "args": [
+              {
+                "op": "dot",
+                "args": [
+                  {
+                    "var": "weights"
+                  },
+                  {
+                    "var": "features"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "inverse_half_life",
+          "expr": {
+            "op": "neg",
+            "args": [
+              {
+                "op": "div",
+                "args": [
+                  {
+                    "var": "delta"
+                  },
+                  {
+                    "op": "log2",
+                    "args": [
+                      {
+                        "var": "p"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "time unit day in pilot",
+        "finite positive half-life",
+        "no intermediate practice between last event and prediction",
+        "feature and weight dimensions agree"
+      ],
+      "limits": [
+        "finite binary64 implementation; numeric overflow/underflow rejected",
+        "no fitting, actual learner or deployment"
+      ],
+      "numeric_domain": "BINARY64"
+    },
+    {
+      "stable_id": "hlr:case:zero",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 0,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 1
+      },
+      "explanation": "指数零次幂"
+    },
+    {
+      "stable_id": "hlr:case:half",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 2,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.5
+      },
+      "explanation": "一个半衰期"
+    },
+    {
+      "stable_id": "hlr:case:double",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 4,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.25
+      },
+      "explanation": "两个半衰期"
+    },
+    {
+      "stable_id": "hlr:case:fraction",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 1,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.7071067811865476
+      },
+      "explanation": "1/sqrt(2)"
+    },
+    {
+      "stable_id": "hlr:case:negative-time",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": -1,
+        "half_life": 2,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "负时距无效"
+    },
+    {
+      "stable_id": "hlr:case:zero-h",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 1,
+        "half_life": 0,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "半衰期须正"
+    },
+    {
+      "stable_id": "hlr:case:wrong-unit",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 24,
+        "half_life": 2,
+        "unit": "hour"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "试点固定day，不静默换算"
+    },
+    {
+      "stable_id": "hlr:case:underflow",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "recall",
+      "input": {
+        "delta": 2000,
+        "half_life": 1,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "explanation": "不把机器下溢当真实零概率"
+    },
+    {
+      "stable_id": "hlr:case:regression",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "estimate_half_life",
+      "input": {
+        "weights": [
+          1,
+          0.5
+        ],
+        "features": [
+          1,
+          2
+        ],
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 4
+      },
+      "explanation": "内积2，2^2"
+    },
+    {
+      "stable_id": "hlr:case:mismatch",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "estimate_half_life",
+      "input": {
+        "weights": [
+          1
+        ],
+        "features": [
+          1,
+          2
+        ],
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "向量维数不同"
+    },
+    {
+      "stable_id": "hlr:case:overflow",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "estimate_half_life",
+      "input": {
+        "weights": [
+          2000
+        ],
+        "features": [
+          1
+        ],
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_NUMERIC_RANGE"
+      },
+      "explanation": "浮点溢出拒绝"
+    },
+    {
+      "stable_id": "hlr:case:inverse",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 4,
+        "p": 0.25,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "OK",
+        "value": 2
+      },
+      "explanation": "log2(.25)=-2"
+    },
+    {
+      "stable_id": "hlr:case:inverse-one",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 4,
+        "p": 1,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "端点不能有限逆求"
+    },
+    {
+      "stable_id": "hlr:case:inverse-zero",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 4,
+        "p": 0,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "log(0)无定义"
+    },
+    {
+      "stable_id": "hlr:case:inverse-zero-time",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "mode": "inverse_half_life",
+      "input": {
+        "delta": 0,
+        "p": 0.5,
+        "unit": "day"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "explanation": "不产生零半衰期"
+    }
+  ]
+}

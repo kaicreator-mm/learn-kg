@@ -63,3 +63,5 @@
 - [DB01/S01 BKT 原子知识与格式试点](drafts/db01-bkt-pilot/README.md)（调查草案，非正式专业资格）。
 
 - [HLR与复习决策调查试点](drafts/db01-hlr-pilot/README.md)（专业候选与条件规则验证，不是正式模块资格）。
+
+- [DB01 统一可读知识表达调查原型](drafts/db01-unified-pilot/README.md)（保留历史试点，未冻结正式schema）。

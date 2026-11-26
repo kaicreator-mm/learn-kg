@@ -1,0 +1,4 @@
+# DB01 可读知识统一表达调查原型
+基线 3bae04c5fe5871f22c3a12c415ddc520a51dbeed；沿用D014，原BKT/HLR记录及证据不修改。统一schema draft-unified-1；65条原记录按稳定ID转换，三逻辑测试包：BKT、HLR模型、复习策略/跨模块验证。后者依赖HLR，依赖以目标包ID、版本、内容SHA256绑定。此分拆只用于跨包解析验证，不决定正式物理库或专业主责。K10验证规格含K10/K11案例，放在review测试包避免反向依赖，仍保留原owner。统一Source.identifier、Case.target_ref与mode、ModelSpec.numeric_domain/input_policy；不覆盖原来源资格，不丢原字段。保持原模型公式、条件、限制、案例预期；运行期统一求值器/有限策略解释及SQLite内存映射另见验证脚本。所有候选均DRAFT，原验证规格NOT_RUN；既有证据不随格式变化自动晋升。仅调查原型，不冻结IF01/DB01、完成DB02或公开受限源，不生成SQLite文件。
+ 
+[统一schema](schema.json) / [manifest](manifest.json) / [BKT](bkt.json) / [HLR](hlr.json) / [复习策略及组合验证](review.json)。正式实施门禁仍HOLD。

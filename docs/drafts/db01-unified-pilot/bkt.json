@@ -1,0 +1,1401 @@
+{
+  "schema_version": "draft-unified-1",
+  "package_id": "learn-kg.draft.unified.bkt",
+  "version": "0.0.2",
+  "status": "INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "bkt:source:corbett-anderson",
+      "kind": "Source",
+      "owner": "K10",
+      "status": "DRAFT",
+      "title": "Knowledge tracing: Modeling the acquisition of procedural knowledge",
+      "authors": [
+        "Albert T. Corbett",
+        "John R. Anderson"
+      ],
+      "identifier": "10.1007/BF01099821",
+      "url": "https://perso.liris.cnrs.fr/pierre-antoine.champin/2014/m2iade-ia2/_static/893CorbettAnderson1995.pdf",
+      "bibliography": "User Modeling and User-Adapted Interaction 4:253–278; publisher/index year discrepancy 1994/1995 retained",
+      "access": "EXTRACTED_TEXT_ONLY",
+      "rights": "NO_SOURCE_REPUBLICATION",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "bkt:locator:model",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:source:corbett-anderson",
+        "kind": "Source"
+      },
+      "location": "§3, printed pp.260–261, Figure 4",
+      "scope": "two-state assumptions and four parameter definitions",
+      "verification": "TEXT_READ_SCREENSHOT_FAILED"
+    },
+    {
+      "stable_id": "bkt:locator:update",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:source:corbett-anderson",
+        "kind": "Source"
+      },
+      "location": "§3, printed p.261, Eq.(1) and following discussion",
+      "scope": "posterior then acquisition transition; transition independent of correct/incorrect in the basic model",
+      "verification": "TEXT_READ_SCREENSHOT_FAILED"
+    },
+    {
+      "stable_id": "bkt:locator:prediction",
+      "kind": "EvidenceLocator",
+      "owner": "K10",
+      "status": "DRAFT",
+      "source_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:source:corbett-anderson",
+        "kind": "Source"
+      },
+      "location": "§4.1, printed p.263, correct-response prediction",
+      "scope": "mixture of conditional response probabilities",
+      "verification": "TEXT_READ_SCREENSHOT_FAILED"
+    },
+    {
+      "stable_id": "bkt:claim:state",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_type": "MODEL_ASSUMPTION",
+      "statement": "在基本单组件BKT中，潜在学习状态为已习得或未习得；基本版本不建模遗忘。",
+      "conditions": [
+        "同一已映射知识组件",
+        "基本无遗忘模型",
+        "参数及任务适用条件明确"
+      ],
+      "limitations": [
+        "潜在状态不是直接观察",
+        "不证明真实认知机制"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:locator:model",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "bkt:claim:emission",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.02",
+      "claim_type": "DEFINITION",
+      "statement": "G为未习得状态下答对的条件概率，S为已习得状态下答错的条件概率。",
+      "conditions": [
+        "二元观察",
+        "条件概率属于指定模型及组件"
+      ],
+      "limitations": [
+        "不能由一次答对或答错识别个人猜测或滑移"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:locator:model",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "bkt:claim:posterior",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "根据二元结果的条件概率以贝叶斯规则更新潜在状态的概率；零似然不能定义条件后验。",
+      "conditions": [
+        "先验与条件概率在[0,1]",
+        "证据可归属同一组件",
+        "观测似然非零"
+      ],
+      "limitations": [
+        "不是对知识掌握的直接观测",
+        "不用于缺失或不合构念的观测"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:locator:model",
+          "kind": "EvidenceLocator"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:locator:update",
+          "kind": "EvidenceLocator"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:locator:prediction",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "bkt:claim:transition",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "观察更新之后，下一次机会的学习状态概率等于后验加上尚未习得的概率乘以学习转移概率。",
+      "conditions": [
+        "基本无遗忘版本",
+        "转移参数T在[0,1]",
+        "一次有效学习机会",
+        "基础版本的T不依赖当前对错"
+      ],
+      "limitations": [
+        "T不等于因果教学效应",
+        "非普适保持或迁移模型"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:locator:update",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "bkt:claim:prediction",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_type": "MATHEMATICAL_MODEL",
+      "statement": "给定潜在状态先验，答对概率是两个状态下答对条件概率的加权和。",
+      "conditions": [
+        "同一组件和二元观测机制",
+        "固定G与S"
+      ],
+      "limitations": [
+        "答对概率不等于习得概率"
+      ],
+      "evidence_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:locator:prediction",
+          "kind": "EvidenceLocator"
+        }
+      ]
+    },
+    {
+      "stable_id": "bkt:claim:guard",
+      "kind": "Claim",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_type": "ENGINEERING_POLICY",
+      "statement": "试点仅接受明确独立且有效、已映射到单组件的二元观测；未满足则返回UNKNOWN或拒绝。",
+      "conditions": [
+        "本项目保守输入策略，不是原论文规则"
+      ],
+      "limitations": [
+        "不得将提示正确、缺失、未授权或多组件任务直接更新为独立掌握"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "stable_id": "bkt:element:basic",
+      "kind": "Element",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "element_type": "ProbabilisticModel",
+      "label": "基本无遗忘单组件 BKT",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "model_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      }
+    },
+    {
+      "stable_id": "bkt:model:basic",
+      "kind": "ModelSpec",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "element_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:element:basic",
+        "kind": "Element"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "parameters": [
+        {
+          "name": "p",
+          "meaning": "本次观测前习得概率",
+          "range": [
+            0,
+            1
+          ],
+          "unit": "probability"
+        },
+        {
+          "name": "G",
+          "meaning": "未习得时答对概率",
+          "range": [
+            0,
+            1
+          ],
+          "unit": "probability"
+        },
+        {
+          "name": "S",
+          "meaning": "已习得时答错概率",
+          "range": [
+            0,
+            1
+          ],
+          "unit": "probability"
+        },
+        {
+          "name": "T",
+          "meaning": "有效机会后的学习转移概率",
+          "range": [
+            0,
+            1
+          ],
+          "unit": "probability"
+        }
+      ],
+      "formulas": [
+        {
+          "name": "prediction_correct",
+          "expr": {
+            "op": "add",
+            "args": [
+              {
+                "op": "mul",
+                "args": [
+                  {
+                    "var": "p"
+                  },
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "const": "1"
+                      },
+                      {
+                        "var": "S"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "const": "1"
+                      },
+                      {
+                        "var": "p"
+                      }
+                    ]
+                  },
+                  {
+                    "var": "G"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "posterior_correct",
+          "expr": {
+            "op": "div",
+            "args": [
+              {
+                "op": "mul",
+                "args": [
+                  {
+                    "var": "p"
+                  },
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "const": "1"
+                      },
+                      {
+                        "var": "S"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "var": "p"
+                      },
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "const": "1"
+                          },
+                          {
+                            "var": "S"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "const": "1"
+                          },
+                          {
+                            "var": "p"
+                          }
+                        ]
+                      },
+                      {
+                        "var": "G"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "posterior_incorrect",
+          "expr": {
+            "op": "div",
+            "args": [
+              {
+                "op": "mul",
+                "args": [
+                  {
+                    "var": "p"
+                  },
+                  {
+                    "var": "S"
+                  }
+                ]
+              },
+              {
+                "op": "add",
+                "args": [
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "var": "p"
+                      },
+                      {
+                        "var": "S"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "mul",
+                    "args": [
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "const": "1"
+                          },
+                          {
+                            "var": "p"
+                          }
+                        ]
+                      },
+                      {
+                        "op": "sub",
+                        "args": [
+                          {
+                            "const": "1"
+                          },
+                          {
+                            "var": "G"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "next_prior",
+          "expr": {
+            "op": "add",
+            "args": [
+              {
+                "var": "posterior"
+              },
+              {
+                "op": "mul",
+                "args": [
+                  {
+                    "op": "sub",
+                    "args": [
+                      {
+                        "const": "1"
+                      },
+                      {
+                        "var": "posterior"
+                      }
+                    ]
+                  },
+                  {
+                    "var": "T"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "numeric_domain": "RATIONAL",
+      "input_policy": {
+        "missing": "UNKNOWN",
+        "not_independent": "UNKNOWN",
+        "unmapped": "UNKNOWN",
+        "zero_likelihood": "REJECT_ZERO_LIKELIHOOD",
+        "invalid_parameter": "REJECT_PARAMETER",
+        "no_forgetting": true,
+        "not_calibrated_for_any_population": true
+      }
+    },
+    {
+      "stable_id": "bkt:relation:defined-by",
+      "kind": "Relation",
+      "owner": "K10",
+      "status": "DRAFT",
+      "relation_type": "defined_by_model",
+      "from_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:element:basic",
+        "kind": "Element"
+      },
+      "to_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "conditions": [
+        "仅试点单组件模型定义"
+      ],
+      "transitive": false,
+      "reversible": false
+    },
+    {
+      "stable_id": "bkt:case:correct",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "FORWARD",
+      "input": {
+        "p": "2/5",
+        "G": "1/5",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "correct",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "31/40"
+      },
+      "explanation": "P(C)=9/25+3/25；后验=(9/25)/(12/25)，随后加未习得剩余的1/10。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:incorrect",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "REVERSE",
+      "input": {
+        "p": "2/5",
+        "G": "1/5",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "incorrect",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "1/13",
+        "next_prior": "11/65"
+      },
+      "explanation": "P(I)=1/25+12/25；后验=(1/25)/(13/25)，随后转移。一个错误不确定实际原因。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:non-discriminating",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "p": "2/5",
+        "G": "4/5",
+        "S": "1/5",
+        "T": "1/10",
+        "observation": "correct",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "4/5",
+        "posterior": "2/5",
+        "next_prior": "23/50"
+      },
+      "explanation": "两种潜在状态答对似然相同，观察本身不改变后验；转移另计。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:missing",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "BOUNDARY",
+      "input": {
+        "p": "2/5",
+        "G": "1/5",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "missing",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "无结果不可当错误。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:hint",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "BOUNDARY",
+      "input": {
+        "p": "2/5",
+        "G": "1/5",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "correct",
+        "independent": false,
+        "single_component": true
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "保守独立观测政策不把提示成功计入。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:multi",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "BOUNDARY",
+      "input": {
+        "p": "2/5",
+        "G": "1/5",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "correct",
+        "independent": true,
+        "single_component": false
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "组件映射不足，不把一次观测更新所有组件。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:zero-likelihood",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "p": "0",
+        "G": "0",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "correct",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "REJECT_ZERO_LIKELIHOOD"
+      },
+      "explanation": "模型认为答对事件概率为零；不能伪造条件后验。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:invalid-parameter",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "BOUNDARY",
+      "input": {
+        "p": "2/5",
+        "G": "11/10",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "correct",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "REJECT_PARAMETER"
+      },
+      "explanation": "概率超过1必须拒绝。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:certain-transition",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "FORWARD",
+      "input": {
+        "p": "2/5",
+        "G": "1/5",
+        "S": "1/10",
+        "T": "1",
+        "observation": "correct",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "1"
+      },
+      "explanation": "有效机会后模型T=1使下一先验为1；不是现实保证。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:case:strategy-no-threshold",
+      "kind": "Case",
+      "owner": "K10",
+      "status": "DRAFT",
+      "topic": "K10.02.01",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:state",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:emission",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:posterior",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:transition",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:prediction",
+          "kind": "Claim"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "view": "INTERVENTION",
+      "input": {
+        "p": "2/5",
+        "G": "1/5",
+        "S": "1/10",
+        "T": "1/10",
+        "observation": "correct",
+        "independent": true,
+        "single_component": true
+      },
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "31/40"
+      },
+      "explanation": "计算只提供估计，不能从后验推唯一最优复习间隔或硬编码掌握阈值。",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "mode": "bkt_observation"
+    },
+    {
+      "stable_id": "bkt:validation:arithmetic",
+      "kind": "ValidationSpec",
+      "owner": "K10",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.bkt",
+        "version": "0.0.2",
+        "stable_id": "bkt:model:basic",
+        "kind": "ModelSpec"
+      },
+      "case_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:correct",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:incorrect",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:non-discriminating",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:missing",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:hint",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:multi",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:zero-likelihood",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:invalid-parameter",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:certain-transition",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.bkt",
+          "version": "0.0.2",
+          "stable_id": "bkt:case:strategy-no-threshold",
+          "kind": "Case"
+        }
+      ],
+      "method": "固定有理数算例；声明式表达式求值和手算期望精确比较；结构/引用/输入负例；本轮仅调查原型",
+      "run_status": "NOT_RUN",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}
