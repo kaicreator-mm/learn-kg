@@ -1,0 +1,274 @@
+{
+  "owner": "K10",
+  "base": "422e96bcd39c562f23c9701dd112cfcc3a1ab315",
+  "scope": "SYNTHETIC_BUILDER_ONLY",
+  "independent_oracle": false,
+  "limitations": "BKT/HLR旧试点不重复纳入独立新增公式或历史测试统计；本轮19夹具含重复数值重新执行，区分本批断言与去重历史。无拟合、真实校准、训练、模型效用或完整路由。",
+  "records": [
+    {
+      "id": "K10-LOGIC-1",
+      "input": {
+        "mode": "bkt",
+        "p": 0.4,
+        "g": 0.2,
+        "s": 0.1,
+        "t": 0.1,
+        "obs": "correct"
+      },
+      "expected": 0.775,
+      "actual": 0.775,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-2",
+      "input": {
+        "mode": "bkt",
+        "p": 0.4,
+        "g": 0.2,
+        "s": 0.1,
+        "t": 0.1,
+        "obs": "wrong"
+      },
+      "expected": 0.16923076923076924,
+      "actual": 0.16923076923076924,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-3",
+      "input": {
+        "mode": "bkt",
+        "p": 1,
+        "g": 0,
+        "s": 0,
+        "t": 0.1,
+        "obs": "wrong"
+      },
+      "expected": "ZERO_LIKELIHOOD",
+      "actual": "ZERO_LIKELIHOOD",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-4",
+      "input": {
+        "mode": "bkt",
+        "p": 0.4,
+        "g": 0.2,
+        "s": 0.1,
+        "t": 0.1,
+        "obs": "missing"
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-5",
+      "input": {
+        "mode": "hlr",
+        "dt": 8,
+        "h": 4,
+        "sameUnit": true
+      },
+      "expected": 0.25,
+      "actual": 0.25,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-6",
+      "input": {
+        "mode": "hlr",
+        "dt": 0,
+        "h": 4,
+        "sameUnit": true
+      },
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-7",
+      "input": {
+        "mode": "hlr",
+        "dt": 4,
+        "h": 0,
+        "sameUnit": true
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-8",
+      "input": {
+        "mode": "hlr",
+        "dt": 4,
+        "h": 4,
+        "sameUnit": false
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-9",
+      "input": {
+        "mode": "inverse",
+        "dt": 4,
+        "p": 0.5
+      },
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-10",
+      "input": {
+        "mode": "inverse",
+        "dt": 4,
+        "p": 1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-11",
+      "input": {
+        "mode": "pfa",
+        "k": [
+          {
+            "b": -1,
+            "g": 0.5,
+            "r": -0.3,
+            "s": 2,
+            "f": 0
+          }
+        ]
+      },
+      "expected": 0.5,
+      "actual": 0.5,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-12",
+      "input": {
+        "mode": "pfa",
+        "k": [
+          {
+            "b": 0,
+            "g": 1,
+            "r": 0,
+            "s": -1,
+            "f": 0
+          }
+        ]
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-13",
+      "input": {
+        "mode": "pfa",
+        "k": [
+          {
+            "b": -1,
+            "g": 0,
+            "r": 0,
+            "s": 1,
+            "f": 0
+          },
+          {
+            "b": 1,
+            "g": 0,
+            "r": 0,
+            "s": 1,
+            "f": 0
+          }
+        ]
+      },
+      "expected": 0.5,
+      "actual": 0.5,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-14",
+      "input": {
+        "mode": "brier",
+        "rows": [
+          {
+            "p": 0.9,
+            "y": 1
+          },
+          {
+            "p": 0.1,
+            "y": 0
+          }
+        ]
+      },
+      "expected": 0.01,
+      "actual": 0.009999999999999998,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-15",
+      "input": {
+        "mode": "brier",
+        "rows": [
+          {
+            "p": 0.9,
+            "y": 0
+          }
+        ]
+      },
+      "expected": 0.81,
+      "actual": 0.81,
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-16",
+      "input": {
+        "mode": "brier",
+        "rows": []
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-17",
+      "input": {
+        "mode": "time",
+        "feature": 8,
+        "cutoff": 10
+      },
+      "expected": "AVAILABLE",
+      "actual": "AVAILABLE",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-18",
+      "input": {
+        "mode": "time",
+        "feature": 11,
+        "cutoff": 10
+      },
+      "expected": "LEAKAGE",
+      "actual": "LEAKAGE",
+      "pass": true
+    },
+    {
+      "id": "K10-LOGIC-19",
+      "input": {
+        "mode": "time",
+        "feature": 10,
+        "cutoff": 10
+      },
+      "expected": "AVAILABLE",
+      "actual": "AVAILABLE",
+      "pass": true
+    }
+  ],
+  "passed": 19
+}
