@@ -1,0 +1,760 @@
+{
+  "owner": "K02",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K02.01.01.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.01.01",
+      "claim_refs": [
+        "K02.01.01.D4.01",
+        "K02.01.01.D4.02",
+        "K02.01.01.D4.03"
+      ],
+      "fixture": "两路语音中报告一路内容，另一路只能报告音高",
+      "views": {
+        "forward": "区分语义和物理报告",
+        "reverse": "早期过滤、衰减或测量不灵敏",
+        "intervention": "改变目标语义及报告方式",
+        "counterexample": "未报告不等于零加工"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.01.02.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.01.02",
+      "claim_refs": [
+        "K02.01.02.D4.01",
+        "K02.01.02.D4.02",
+        "K02.01.02.D4.03",
+        "K02.01.02.D4.04"
+      ],
+      "fixture": "信号在场100次命中80，缺席100次误报20",
+      "views": {
+        "forward": "计算H/F与d′、c，分开敏感度和判准",
+        "reverse": "高命中也可能是宽松判准",
+        "intervention": "固定刺激并平衡在场/缺席试次",
+        "counterexample": "全部回答有信号不能认定高敏感度"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.01.03.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.01.03",
+      "claim_refs": [
+        "K02.01.03.D4.01",
+        "K02.01.03.D4.02"
+      ],
+      "fixture": "熟悉字体能认字，陌生字体错误",
+      "views": {
+        "forward": "分别记录熟悉与新变式",
+        "reverse": "可能依赖模板、局部特征或视觉条件",
+        "intervention": "控制清晰度并设计变体",
+        "counterexample": "同一字的训练原样正确不证明泛化"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.02.01.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.02.01",
+      "claim_refs": [
+        "K02.02.01.D4.01",
+        "K02.02.01.D4.02",
+        "K02.02.01.D4.03"
+      ],
+      "fixture": "安静与干扰条件下辨别同一词",
+      "views": {
+        "forward": "对比正确率和时长",
+        "reverse": "干扰、语言熟练或设备都可能解释",
+        "intervention": "匹配音量和词项并复测",
+        "counterexample": "不同难度词表不能归因注意"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.02.02.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.02.02",
+      "claim_refs": [
+        "K02.02.02.D4.01",
+        "K02.02.02.D4.02",
+        "K02.02.02.D4.03"
+      ],
+      "fixture": "前后两个相等时段命中下降且误报也下降",
+      "views": {
+        "forward": "分开记录两率和时点",
+        "reverse": "判准变严或敏感度变化皆可能",
+        "intervention": "固定事件比例并允许休息",
+        "counterexample": "漏报上升不能直接诊断注意缺陷"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.02.03.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.02.03",
+      "claim_refs": [
+        "K02.02.03.D4.01",
+        "K02.02.03.D4.02",
+        "K02.02.03.D4.03"
+      ],
+      "fixture": "混合任务切换正确试次均值620ms，重复500ms",
+      "views": {
+        "forward": "差120ms且另记错误率",
+        "reverse": "准备时距或任务难度可能解释",
+        "intervention": "匹配刺激与准备条件",
+        "counterexample": "不同独立任务时差不是切换成本"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.02.04.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.02.04",
+      "claim_refs": [
+        "K02.02.04.D4.01",
+        "K02.02.04.D4.02"
+      ],
+      "fixture": "不一致刺激比一致刺激慢",
+      "views": {
+        "forward": "记录冲突差和正确率",
+        "reverse": "阅读速度、冲突控制及规则理解均可能",
+        "intervention": "匹配颜色识别及阅读基线",
+        "counterexample": "单任务不概括全部执行功能"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.03.01.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.03.01",
+      "claim_refs": [
+        "K02.03.01.D4.01",
+        "K02.03.01.D4.02",
+        "K02.03.01.D4.03"
+      ],
+      "fixture": "熟悉数字按日期组块后可复现更多数字",
+      "views": {
+        "forward": "记录组块规则与计数单位",
+        "reverse": "熟悉知识或策略变化并非容量扩大",
+        "intervention": "比较陌生材料及精度",
+        "counterexample": "不能按四个项目设硬限制"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.03.02.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.03.02",
+      "claim_refs": [
+        "K02.03.02.D4.01",
+        "K02.03.02.D4.02",
+        "K02.03.02.D4.03"
+      ],
+      "fixture": "保持词序时并行复述无关词导致表现下降",
+      "views": {
+        "forward": "记录言语保持与并行干扰",
+        "reverse": "复述受限或一般双任务成本",
+        "intervention": "对比非言语等难度干扰",
+        "counterexample": "一次结果不确证神经模块"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.03.03.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.03.03",
+      "claim_refs": [
+        "K02.03.03.D4.01",
+        "K02.03.03.D4.02",
+        "K02.03.03.D4.03"
+      ],
+      "fixture": "位置复现与颜色记忆在干扰条件下变化不同",
+      "views": {
+        "forward": "分离视觉与空间观察",
+        "reverse": "编码策略和共享资源均可能",
+        "intervention": "匹配颜色/位置负荷",
+        "counterexample": "偏好图形不证明固定学习风格"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.03.04.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.03.04",
+      "claim_refs": [
+        "K02.03.04.D4.01",
+        "K02.03.04.D4.02",
+        "K02.03.04.D4.03",
+        "K02.03.04.D4.04"
+      ],
+      "fixture": "负荷增加时回忆精度变差",
+      "views": {
+        "forward": "在指定模型下比较预测",
+        "reverse": "槽位、资源或混合模型均可解释部分结果",
+        "intervention": "设计不同负荷下误差分布",
+        "counterexample": "相同准确率不证唯一模型"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.04.01.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.04.01",
+      "claim_refs": [
+        "K02.04.01.D4.01",
+        "K02.04.01.D4.02",
+        "K02.04.01.D4.03"
+      ],
+      "fixture": "学习者记得事件但日期与日志不一致",
+      "views": {
+        "forward": "事件内容与来源准确度分开",
+        "reverse": "时间混淆或后续信息影响",
+        "intervention": "核对日志并允许未知",
+        "counterexample": "信心高不证明来源正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.04.02.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.04.02",
+      "claim_refs": [
+        "K02.04.02.D4.01",
+        "K02.04.02.D4.02"
+      ],
+      "fixture": "识别词形却不能解释词义",
+      "views": {
+        "forward": "再认与语义理解分开",
+        "reverse": "熟悉性或词义缺口",
+        "intervention": "要求释义和新语境选择",
+        "counterexample": "词形正确不是概念理解"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.04.03.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.04.03",
+      "claim_refs": [
+        "K02.04.03.D4.01",
+        "K02.04.03.D4.02"
+      ],
+      "fixture": "学习者能口述操作但延迟后不能独立完成",
+      "views": {
+        "forward": "保持表现与语言报告分开",
+        "reverse": "工具、程序或任务理解问题",
+        "intervention": "复测同条件独立执行",
+        "counterexample": "快速演示不证明长期保持"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.04.04.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.04.04",
+      "claim_refs": [
+        "K02.04.04.D4.01",
+        "K02.04.04.D4.02"
+      ],
+      "fixture": "间接启动任务有效但直接报告失败",
+      "views": {
+        "forward": "分别保存两种测验",
+        "reverse": "直接测量灵敏度不足或显性策略",
+        "intervention": "信息匹配并核意识报告",
+        "counterexample": "口述失败不证明无意识机制"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.05.01.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.05.01",
+      "claim_refs": [
+        "K02.05.01.D4.01",
+        "K02.05.01.D4.02",
+        "K02.05.01.D4.03"
+      ],
+      "fixture": "同时间学习词义，建立准确联系或重复字形",
+      "views": {
+        "forward": "分开记录编码方式与测试",
+        "reverse": "既有知识、联系质量可能影响",
+        "intervention": "控制材料与时间再延迟测试",
+        "counterexample": "冗长错误解释不是有效精加工"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.05.02.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.05.02",
+      "claim_refs": [
+        "K02.05.02.D4.01",
+        "K02.05.02.D4.02"
+      ],
+      "fixture": "将词汇按情境分类后独立重建",
+      "views": {
+        "forward": "区别提供结构与自主组织",
+        "reverse": "熟悉类别或提示帮助",
+        "intervention": "改变组织顺序做检索",
+        "counterexample": "图表漂亮不证明记忆改善"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.05.03.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.05.03",
+      "claim_refs": [
+        "K02.05.03.D4.01",
+        "K02.05.03.D4.02"
+      ],
+      "fixture": "学习词时同时提供图片线索",
+      "views": {
+        "forward": "绑定图片及目标编码条件",
+        "reverse": "图片可能与多个词重叠",
+        "intervention": "去图片再测独立产出",
+        "counterexample": "图片提示成功不能替代独立回忆"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.05.04.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.05.04",
+      "claim_refs": [
+        "K02.05.04.D4.01",
+        "K02.05.04.D4.02"
+      ],
+      "fixture": "学习者把既有语法规则用于不适用构式",
+      "views": {
+        "forward": "记录旧解释和反例",
+        "reverse": "规则过度泛化或题意误解",
+        "intervention": "补相关先备测试",
+        "counterexample": "同年级不能推相同先备"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.06.01.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.06.01",
+      "claim_refs": [
+        "K02.06.01.D4.01",
+        "K02.06.01.D4.02"
+      ],
+      "fixture": "同一个模糊提示对应多个词，唯一线索更有效",
+      "views": {
+        "forward": "比较线索匹配和区分性",
+        "reverse": "竞争目标或编码差异",
+        "intervention": "改用明确线索再无提示复测",
+        "counterexample": "提示答对不证明无提示保持"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.06.02.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.06.02",
+      "claim_refs": [
+        "K02.06.02.D4.01",
+        "K02.06.02.D4.02"
+      ],
+      "fixture": "学习A后学相似B，A回忆下降",
+      "views": {
+        "forward": "记录A/B顺序与目标",
+        "reverse": "倒摄干扰或时间和疲劳",
+        "intervention": "等时距无B对照",
+        "counterexample": "时间经过不能唯一解释遗忘"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.06.03.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.06.03",
+      "claim_refs": [
+        "K02.06.03.D4.01",
+        "K02.06.03.D4.02",
+        "K02.06.03.D4.03"
+      ],
+      "fixture": "同一学习内容1日及7日不同回忆率",
+      "views": {
+        "forward": "分别存任务/间隔/指标",
+        "reverse": "衰减、干扰或线索变化",
+        "intervention": "比较同条件多个延迟",
+        "counterexample": "不得使用历史节省曲线作为个体概率"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.06.04.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.06.04",
+      "claim_refs": [
+        "K02.06.04.D4.01",
+        "K02.06.04.D4.02",
+        "K02.06.04.D4.03"
+      ],
+      "fixture": "多选正确，线索回忆正确，自由回忆失败",
+      "views": {
+        "forward": "三类观测分开",
+        "reverse": "提示有效或独立检索不足",
+        "intervention": "设置新项目无提示测验",
+        "counterexample": "多选分不能替代自由回忆"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.06.05.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.06.05",
+      "claim_refs": [
+        "K02.06.05.D4.01",
+        "K02.06.05.D4.02",
+        "K02.06.05.D4.03"
+      ],
+      "fixture": "首学25次再学20次达到同一标准",
+      "views": {
+        "forward": "节省量20%",
+        "reverse": "不同学习史或标准会影响成本",
+        "intervention": "固定准则及单位复测",
+        "counterexample": "首学成本为零拒绝；负节省保留"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.07.01.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.07.01",
+      "claim_refs": [
+        "K02.07.01.D4.01",
+        "K02.07.01.D4.02"
+      ],
+      "fixture": "同一长句对新手需处理多关系，对熟练者可整合",
+      "views": {
+        "forward": "按任务和先备知识分析",
+        "reverse": "复杂关系或规则不熟",
+        "intervention": "先测必要知识再给候选分段",
+        "counterexample": "字数不是内在负荷"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.07.02.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.07.02",
+      "claim_refs": [
+        "K02.07.02.D4.01",
+        "K02.07.02.D4.02"
+      ],
+      "fixture": "跨屏查找说明与同屏说明比较",
+      "views": {
+        "forward": "记录目标无关导航加工",
+        "reverse": "设备、可及性或理解差异",
+        "intervention": "等内容同目标比较",
+        "counterexample": "删掉必要解释不算改善"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.07.03.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.07.03",
+      "claim_refs": [
+        "K02.07.03.D4.01",
+        "K02.07.03.D4.02"
+      ],
+      "fixture": "新手例题帮助明显，熟练者例题占时且成绩下降",
+      "views": {
+        "forward": "检验方法×已有知识交互",
+        "reverse": "任务难度或先备分组误差",
+        "intervention": "分层随机或匹配比较并允许支架回退",
+        "counterexample": "高学历不自动撤支架"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K02.07.04.CASE.01",
+      "owner": "K02",
+      "d3_id": "K02.07.04",
+      "claim_refs": [
+        "K02.07.04.D4.01",
+        "K02.07.04.D4.02",
+        "K02.07.04.D4.03"
+      ],
+      "fixture": "主观负荷较高但任务正确率相同",
+      "views": {
+        "forward": "自评与行为指标分离",
+        "reverse": "动机、难度、努力或量表误差",
+        "intervention": "使用适用量表及匹配对照",
+        "counterexample": "单个瞳孔值不能决定负荷类别"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ],
+  "numerical_cases": [
+    {
+      "id": "K02.SDT01",
+      "mode": "sdt",
+      "input": {
+        "hits": 80,
+        "signal": 100,
+        "false_alarms": 20,
+        "noise": 100
+      },
+      "expected": {
+        "status": "OK",
+        "d": 1.683242467,
+        "c": 0
+      },
+      "claim_ref": "K02.01.02.D4.02"
+    },
+    {
+      "id": "K02.SDT02",
+      "mode": "sdt",
+      "input": {
+        "hits": 80,
+        "signal": 100,
+        "false_alarms": 50,
+        "noise": 100
+      },
+      "expected": {
+        "status": "OK",
+        "d": 0.841621234,
+        "c": -0.420810617
+      },
+      "claim_ref": "K02.01.02.D4.02"
+    },
+    {
+      "id": "K02.SDT03",
+      "mode": "sdt",
+      "input": {
+        "hits": 50,
+        "signal": 100,
+        "false_alarms": 50,
+        "noise": 100
+      },
+      "expected": {
+        "status": "OK",
+        "d": 0,
+        "c": 0
+      },
+      "claim_ref": "K02.01.02.D4.02"
+    },
+    {
+      "id": "K02.SDT04",
+      "mode": "sdt",
+      "input": {
+        "hits": 100,
+        "signal": 100,
+        "false_alarms": 20,
+        "noise": 100
+      },
+      "expected": {
+        "status": "REJECT_BOUNDARY_RATE"
+      },
+      "claim_ref": "K02.01.02.D4.02"
+    },
+    {
+      "id": "K02.SDT05",
+      "mode": "sdt",
+      "input": {
+        "hits": 0,
+        "signal": 0,
+        "false_alarms": 20,
+        "noise": 100
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K02.01.02.D4.02"
+    },
+    {
+      "id": "K02.SDT06",
+      "mode": "sdt",
+      "input": {
+        "hits": 110,
+        "signal": 100,
+        "false_alarms": 20,
+        "noise": 100
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K02.01.02.D4.02"
+    },
+    {
+      "id": "K02.SAV01",
+      "mode": "savings",
+      "input": {
+        "initial": 25,
+        "relearn": 20,
+        "unit_match": true,
+        "criterion_match": true
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.2
+      },
+      "claim_ref": "K02.06.05.D4.02"
+    },
+    {
+      "id": "K02.SAV02",
+      "mode": "savings",
+      "input": {
+        "initial": 20,
+        "relearn": 25,
+        "unit_match": true,
+        "criterion_match": true
+      },
+      "expected": {
+        "status": "OK",
+        "value": -0.25
+      },
+      "claim_ref": "K02.06.05.D4.02"
+    },
+    {
+      "id": "K02.SAV03",
+      "mode": "savings",
+      "input": {
+        "initial": 0,
+        "relearn": 5,
+        "unit_match": true,
+        "criterion_match": true
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K02.06.05.D4.02"
+    },
+    {
+      "id": "K02.SAV04",
+      "mode": "savings",
+      "input": {
+        "initial": 25,
+        "relearn": 20,
+        "unit_match": true,
+        "criterion_match": false
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K02.06.05.D4.02"
+    },
+    {
+      "id": "K02.SAV05",
+      "mode": "savings",
+      "input": {
+        "initial": 25,
+        "relearn": 20,
+        "unit_match": false,
+        "criterion_match": true
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K02.06.05.D4.02"
+    },
+    {
+      "id": "K02.SW01",
+      "mode": "switch",
+      "input": {
+        "switch_rt": 620,
+        "repeat_rt": 500,
+        "matched": true
+      },
+      "expected": {
+        "status": "OK",
+        "value": 120
+      },
+      "claim_ref": "K02.02.03.D4.02"
+    },
+    {
+      "id": "K02.SW02",
+      "mode": "switch",
+      "input": {
+        "switch_rt": 620,
+        "repeat_rt": 500,
+        "matched": false
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "claim_ref": "K02.02.03.D4.02"
+    },
+    {
+      "id": "K02.SW03",
+      "mode": "switch",
+      "input": {
+        "switch_rt": 480,
+        "repeat_rt": 500,
+        "matched": true
+      },
+      "expected": {
+        "status": "OK",
+        "value": -20
+      },
+      "claim_ref": "K02.02.03.D4.02"
+    }
+  ]
+}

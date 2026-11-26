@@ -1,0 +1,169 @@
+{
+  "scope": "BUILDER_SYNTHETIC_ARITHMETIC_ONLY",
+  "base": "59f4fc3cbfb86cb3b4f6f06be48d5bf0ab1e4a36",
+  "method": "实际JS运行：标准正态CDF = 0.5 + 从0到x的exp(-t²/2)/sqrt(2π)积分（4096段复合Simpson，[-8,8]二分60次）；仅测试所列内部概率，不声称生产级极端尾部；节省与切换差直接计算。预期为建设者固定手算或标准正态分位数；绝对容差1e-7。",
+  "results": [
+    {
+      "id": "K02.SDT01",
+      "actual": {
+        "status": "OK",
+        "d": 1.6832424671458381,
+        "c": 1.1102230246251565e-16
+      },
+      "expected": {
+        "status": "OK",
+        "d": 1.683242467,
+        "c": 0
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SDT02",
+      "actual": {
+        "status": "OK",
+        "d": 0.8416212335729191,
+        "c": -0.4208106167864594
+      },
+      "expected": {
+        "status": "OK",
+        "d": 0.841621234,
+        "c": -0.420810617
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SDT03",
+      "actual": {
+        "status": "OK",
+        "d": 0,
+        "c": 7.632783294297951e-17
+      },
+      "expected": {
+        "status": "OK",
+        "d": 0,
+        "c": 0
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SDT04",
+      "actual": {
+        "status": "REJECT_BOUNDARY_RATE"
+      },
+      "expected": {
+        "status": "REJECT_BOUNDARY_RATE"
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SDT05",
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SDT06",
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SAV01",
+      "actual": {
+        "status": "OK",
+        "value": 0.2
+      },
+      "expected": {
+        "status": "OK",
+        "value": 0.2
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SAV02",
+      "actual": {
+        "status": "OK",
+        "value": -0.25
+      },
+      "expected": {
+        "status": "OK",
+        "value": -0.25
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SAV03",
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SAV04",
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SAV05",
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SW01",
+      "actual": {
+        "status": "OK",
+        "value": 120
+      },
+      "expected": {
+        "status": "OK",
+        "value": 120
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SW02",
+      "actual": {
+        "status": "REJECT_INPUT"
+      },
+      "expected": {
+        "status": "REJECT_INPUT"
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    },
+    {
+      "id": "K02.SW03",
+      "actual": {
+        "status": "OK",
+        "value": -20
+      },
+      "expected": {
+        "status": "OK",
+        "value": -20
+      },
+      "status": "PASS_CALCULATION_ONLY"
+    }
+  ],
+  "qualification": "NOT_RUN",
+  "limits": "无独立oracle、真实测量、拟合、正式统一运行时；端点拒绝是项目策略，实际SDT论文图像未核；无SQLite"
+}
