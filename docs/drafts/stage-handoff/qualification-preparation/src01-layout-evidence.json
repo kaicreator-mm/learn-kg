@@ -1,0 +1,418 @@
+{
+  "status": "SRC01_LAYOUT_RECONCILIATION_PARTIAL_NOT_PRESERVATION_RECEIPT",
+  "base": "6fcd93a6cd74c22e9b002613bfad3d0f2a4a1fae",
+  "pdf": {
+    "source": "RHSK01",
+    "sha256": "ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941",
+    "pages": 406
+  },
+  "method": {
+    "parser": "PyMuPDF 1.26.7",
+    "script_git_blob": "655db656fa7a0b718bb1b47cfd4a13eb94e4379f",
+    "script_sha256": "e01b5d9672bf57caf4f0d82b70b026308903f2115ab703e6b97a02317074de4d",
+    "printed_page_to_zero_based_index": "printed_page+2",
+    "visual_review": "Rendered and inspected all 14 discrepancy pages in four contact sheets; tables contain merged/continuation cells, not sufficient to verify all individual characters or infer semantic parentage."
+  },
+  "discrepancies": {
+    "normalization": "NFC remove whitespace; compare SHA256 of ordered string and SHA256 of sorted character multiset, independently from historical private extraction (JSON and importer hash verified) and current exact PDF. All 14 ordered and all 14 multiset digests differ; not solely reordering. Page 67 equal length also differs. No cause of specific glyph mismatch inferred.",
+    "columns": [
+      "printed_page",
+      "historical_normalized_chars",
+      "current_normalized_chars",
+      "ordered_equal",
+      "multiset_equal"
+    ],
+    "rows": [
+      [
+        61,
+        161,
+        157,
+        false,
+        false
+      ],
+      [
+        64,
+        182,
+        178,
+        false,
+        false
+      ],
+      [
+        67,
+        197,
+        193,
+        false,
+        false
+      ],
+      [
+        68,
+        201,
+        197,
+        false,
+        false
+      ],
+      [
+        69,
+        183,
+        176,
+        false,
+        false
+      ],
+      [
+        71,
+        176,
+        172,
+        false,
+        false
+      ],
+      [
+        73,
+        253,
+        245,
+        false,
+        false
+      ],
+      [
+        75,
+        186,
+        181,
+        false,
+        false
+      ],
+      [
+        386,
+        367,
+        361,
+        false,
+        false
+      ],
+      [
+        388,
+        227,
+        218,
+        false,
+        false
+      ],
+      [
+        394,
+        406,
+        402,
+        false,
+        false
+      ],
+      [
+        395,
+        381,
+        377,
+        false,
+        false
+      ],
+      [
+        397,
+        51,
+        49,
+        false,
+        false
+      ],
+      [
+        399,
+        231,
+        227,
+        false,
+        false
+      ]
+    ],
+    "status": "HOLD_ORIGINAL_EXTRACTION_RECONCILIATION"
+  },
+  "layout": {
+    "pages": 41,
+    "expected_shape": 41,
+    "topic": {
+      "printed_pages": [
+        56,
+        75
+      ],
+      "pages": 20,
+      "rows_including_headers_and_summary": 454,
+      "grid_positions": 1362,
+      "merged_or_undetected_boxes": 629
+    },
+    "grammar": {
+      "printed_pages": [
+        383,
+        403
+      ],
+      "pages": 21,
+      "rows_including_headers_and_summary": 613,
+      "grid_positions": 2452,
+      "merged_or_undetected_boxes": 1266
+    },
+    "private_sidecar": {
+      "format": "one page per JSONL record including coordinates/raw extracted strings/null cell geometry",
+      "bytes": 542844,
+      "sha256": "7e8bcf0e3def7610397c415e5df62b3f253963d203b7e04478e90feddae37c52",
+      "safe_summary_sha256": "122bbb87c2d1f0ce9ad227685085ee3e70063ce618e2f1c36e460b8cb10cf9a4",
+      "byte_identical_second_run": true,
+      "retention": "TRANSIENT_PRIVATE_WORKING_COPY_NOT_DURABLE_BACKUP"
+    },
+    "metrics_columns": [
+      "printed_page",
+      "rows",
+      "columns",
+      "missing_boxes"
+    ],
+    "metrics": [
+      [
+        56,
+        26,
+        3,
+        35
+      ],
+      [
+        57,
+        7,
+        3,
+        5
+      ],
+      [
+        58,
+        25,
+        3,
+        35
+      ],
+      [
+        59,
+        12,
+        3,
+        10
+      ],
+      [
+        60,
+        26,
+        3,
+        39
+      ],
+      [
+        61,
+        26,
+        3,
+        34
+      ],
+      [
+        62,
+        6,
+        3,
+        5
+      ],
+      [
+        63,
+        26,
+        3,
+        39
+      ],
+      [
+        64,
+        28,
+        3,
+        38
+      ],
+      [
+        65,
+        27,
+        3,
+        37
+      ],
+      [
+        66,
+        26,
+        3,
+        38
+      ],
+      [
+        67,
+        28,
+        3,
+        39
+      ],
+      [
+        68,
+        22,
+        3,
+        29
+      ],
+      [
+        69,
+        25,
+        3,
+        33
+      ],
+      [
+        70,
+        27,
+        3,
+        42
+      ],
+      [
+        71,
+        20,
+        3,
+        26
+      ],
+      [
+        72,
+        26,
+        3,
+        40
+      ],
+      [
+        73,
+        27,
+        3,
+        42
+      ],
+      [
+        74,
+        27,
+        3,
+        41
+      ],
+      [
+        75,
+        17,
+        3,
+        22
+      ],
+      [
+        383,
+        28,
+        4,
+        43
+      ],
+      [
+        384,
+        32,
+        4,
+        62
+      ],
+      [
+        385,
+        13,
+        4,
+        22
+      ],
+      [
+        386,
+        35,
+        4,
+        57
+      ],
+      [
+        387,
+        32,
+        4,
+        57
+      ],
+      [
+        388,
+        14,
+        4,
+        23
+      ],
+      [
+        389,
+        32,
+        4,
+        54
+      ],
+      [
+        390,
+        34,
+        4,
+        79
+      ],
+      [
+        391,
+        33,
+        4,
+        71
+      ],
+      [
+        392,
+        33,
+        4,
+        60
+      ],
+      [
+        393,
+        31,
+        4,
+        76
+      ],
+      [
+        394,
+        34,
+        4,
+        80
+      ],
+      [
+        395,
+        33,
+        4,
+        62
+      ],
+      [
+        396,
+        35,
+        4,
+        77
+      ],
+      [
+        397,
+        5,
+        4,
+        8
+      ],
+      [
+        398,
+        35,
+        4,
+        65
+      ],
+      [
+        399,
+        16,
+        4,
+        32
+      ],
+      [
+        400,
+        25,
+        4,
+        37
+      ],
+      [
+        401,
+        37,
+        4,
+        104
+      ],
+      [
+        402,
+        37,
+        4,
+        102
+      ],
+      [
+        403,
+        39,
+        4,
+        95
+      ]
+    ]
+  },
+  "boundaries": [
+    "No raw text, PDF, table images, private file IDs or links included in GitHub.",
+    "No overwrite of previous source, no automatic cell fill or semantic relationship, no claim full textual/layout accuracy or HSK qualification.",
+    "SRC01 PARTIAL; no dispatch receipt; no persistent SQLite or migration."
+  ]
+}
