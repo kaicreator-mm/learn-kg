@@ -1,0 +1,86 @@
+{
+  "owner": "K17",
+  "base": "0d28ad2fa0febe195b442c40f2203e52b87a05fa",
+  "prior_claim_blob": "498623e8d47e2740f442a3a575e5076159effeb6",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K17.02.06.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.02.06",
+      "requirement_id": "K17.02.06.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "p值描述指定模型下观察结果的相容程度，而非假设正确的后验概率；解释必须保留模型及检验条件。",
+      "conditions": [
+        "ASA原则的二手全文解释；不提供具体检验有效性。"
+      ],
+      "negative_boundary": "p=.03不表示零假设为真的概率是3%。",
+      "source_refs": [
+        "K17-B07-STAT"
+      ],
+      "source_locator": "ASA六原则讨论，lines 132–150",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.02.06.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两项不同样本量研究同p值",
+        "expected": "不推断效应相同",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.01.04.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.01.04",
+      "requirement_id": "K17.01.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "显著性不能替代效应大小或重要性；评价教育干预需分别保留估计、量尺和不确定性。",
+      "conditions": [
+        "二手解释；教育应用为项目推论。"
+      ],
+      "negative_boundary": "不因p值更小断言学习收益更大。",
+      "source_refs": [
+        "K17-B07-STAT"
+      ],
+      "source_locator": "ASA六原则讨论，lines 132–150",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.01.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "A p=.001效应.02，B p=.04效应.4",
+        "expected": "报告效应与区间，不能按p值排收益",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.01.04.D4.04",
+      "owner": "K17",
+      "d3_id": "K17.01.04",
+      "requirement_id": "K17.01.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "选择性报告会损害统计解释；结果记录需保留检验集合与分析选择。",
+      "conditions": [
+        "ASA六原则讨论；项目数据字段设计。"
+      ],
+      "negative_boundary": "不以事后最小p值当预定单一检验。",
+      "source_refs": [
+        "K17-B07-STAT"
+      ],
+      "source_locator": "ASA六原则讨论，lines 132–150",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.01.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "十项探索性测量仅汇报最小p",
+        "expected": "标记探索及选择过程",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

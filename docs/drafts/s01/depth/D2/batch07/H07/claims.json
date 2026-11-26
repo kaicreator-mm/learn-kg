@@ -1,0 +1,112 @@
+{
+  "owner": "H07",
+  "base": "0d28ad2fa0febe195b442c40f2203e52b87a05fa",
+  "prior_claim_blob": "4939a31fc992b87fb1215fcb69dc97b0f0464bfe",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H07.01.01.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.01.01",
+      "requirement_id": "H07.01.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "GF0025-2021是等级标准；HSK7–9为依据该标准设计的考试，考试按表现评定等级。",
+      "conditions": [
+        "公开专题说明；非现行完整大纲。"
+      ],
+      "negative_boundary": "依据关系不等同文件或成员身份相同。",
+      "source_refs": [
+        "H07-B07-HSK"
+      ],
+      "source_locator": "标准说明及HSK7–9, lines 43–51,70–78",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.01.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两个文件均有九级",
+        "expected": "保留文件角色及版本",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H07.02.01.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.02.01",
+      "requirement_id": "H07.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "等级标准以定性能力描述、语言任务及数量基准共同刻画水平，五项技能不等同词汇数量。",
+      "conditions": [
+        "专题说明3+5与四维基准；具体量化表另核。"
+      ],
+      "negative_boundary": "达到词量不自动取得对应水平。",
+      "source_refs": [
+        "H07-B07-HSK"
+      ],
+      "source_locator": "标准说明及HSK7–9, lines 43–51,70–78",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "背完指定词表但不会交际",
+        "expected": "只记录词表覆盖",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H07.02.01.D4.04",
+      "owner": "H07",
+      "d3_id": "H07.02.01",
+      "requirement_id": "H07.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "标准抽取文本的§2.2–2.7分别定义水平、三等九级、四维基准、交际能力、话题任务和量化指标。",
+      "conditions": [
+        "仅抽取文本，PDF截图失败；不核表格行列。"
+      ],
+      "negative_boundary": "不将文本抽取视作原始页图确认。",
+      "source_refs": [
+        "H07-B07-GF"
+      ],
+      "source_locator": "抽取 §2.2–2.7, lines 78–101; indices 5,6 screenshot redirect loop",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H07.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "高等级条目来自未核表格",
+        "expected": "不拆分或晋升",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H07.05.02.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.05.02",
+      "requirement_id": "H07.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "公开专题分别记载2021-07-01标准实施及2022-11-26 HSK7–9首次考试。",
+      "conditions": [
+        "专题历史事件；不据此宣布2026新版正式开考。"
+      ],
+      "negative_boundary": "标准实施和考试事件分开。",
+      "source_refs": [
+        "H07-B07-HSK"
+      ],
+      "source_locator": "标准说明及HSK7–9, lines 43–51,70–78",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "标准实施时间早于考试",
+        "expected": "记录两类事件",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}
