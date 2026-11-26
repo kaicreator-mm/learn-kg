@@ -198,8 +198,8 @@ def sql_project(p,idx,schema):
     # Only a memory connection. No physical database, ATTACH, export or persistence.
     db=sqlite3.connect(":memory:");db.execute("PRAGMA foreign_keys=ON")
     require(db.execute("PRAGMA foreign_keys").fetchone()==(1,),"foreign keys disabled")
-    db.executescript("""CREATE TABLE registry(package_id TEXT,version TEXT,stable_id TEXT,kind TEXT NOT NULL,owner TEXT NOT NULL,status TEXT NOT NULL,PRIMARY KEY(package_id,version,stable_id),UNIQUE(package_id,version,stable_id,kind));
-CREATE TABLE refs(src_package TEXT,src_version TEXT,src_id TEXT,path TEXT,target_package TEXT,target_version TEXT,target_id TEXT,target_kind TEXT,PRIMARY KEY(src_package,src_version,src_id,path),FOREIGN KEY(src_package,src_version,src_id) REFERENCES registry(package_id,version,stable_id),FOREIGN KEY(target_package,target_version,target_id,target_kind) REFERENCES registry(package_id,version,stable_id,kind));
+    db.executescript("""CREATE TABLE registry(package_id TEXT NOT NULL,version TEXT NOT NULL,stable_id TEXT NOT NULL,kind TEXT NOT NULL,owner TEXT NOT NULL,status TEXT NOT NULL,PRIMARY KEY(package_id,version,stable_id),UNIQUE(package_id,version,stable_id,kind));
+CREATE TABLE refs(src_package TEXT NOT NULL,src_version TEXT NOT NULL,src_id TEXT NOT NULL,path TEXT NOT NULL,target_package TEXT NOT NULL,target_version TEXT NOT NULL,target_id TEXT NOT NULL,target_kind TEXT NOT NULL,PRIMARY KEY(src_package,src_version,src_id,path),FOREIGN KEY(src_package,src_version,src_id) REFERENCES registry(package_id,version,stable_id),FOREIGN KEY(target_package,target_version,target_id,target_kind) REFERENCES registry(package_id,version,stable_id,kind));
 CREATE INDEX refs_reverse ON refs(target_package,target_version,target_id,target_kind);""")
     columns={}
     for kind in KINDS:
@@ -207,8 +207,8 @@ CREATE INDEX refs_reverse ON refs(target_package,target_version,target_id,target
         # Scalar SQL columns, JSON text only for structurally nested attributes; no whole-record payload column.
         types={n:("TEXT" if props[n].get("type")=="string" or "const" in props[n] and isinstance(props[n]["const"],str) or "enum" in props[n] else "INTEGER" if props[n].get("type") in ("integer","boolean") else "JSON") for n in names}
         columns[kind]=types
-        decl=", ".join('"'+n+'" '+("TEXT CHECK ("'+n+'" IS NULL OR json_valid("'+n+'"))' if t=="JSON" else t) for n,t in types.items())
-        db.execute('CREATE TABLE "k_'+kind+'"(package_id TEXT,version TEXT,stable_id TEXT,kind TEXT NOT NULL CHECK(kind=\''+kind+'\'),'+decl+',PRIMARY KEY(package_id,version,stable_id),FOREIGN KEY(package_id,version,stable_id,kind) REFERENCES registry(package_id,version,stable_id,kind))')
+        decl=", ".join(f'"{n}" '+(f'TEXT CHECK ("{n}" IS NULL OR json_valid("{n}"))' if t=="JSON" else t) for n,t in types.items())
+        db.execute('CREATE TABLE "k_'+kind+'"(package_id TEXT NOT NULL,version TEXT NOT NULL,stable_id TEXT NOT NULL,kind TEXT NOT NULL CHECK(kind=\''+kind+'\'),'+decl+',PRIMARY KEY(package_id,version,stable_id),FOREIGN KEY(package_id,version,stable_id,kind) REFERENCES registry(package_id,version,stable_id,kind))')
     for k,r in idx.items():db.execute("INSERT INTO registry VALUES(?,?,?,?,?,?)",(*k,r["kind"],r["owner"],r["status"]))
     refcount=0
     for k,r in idx.items():
