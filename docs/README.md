@@ -27,3 +27,8 @@
 - [过程知识体系](product/system/learning-process-system.md)
 - [过程契约与运行边界](design/learning-process-contract.md)
 - [专业范围参考](research/learning-process-sources.md)
+
+## D012 完整学习生命周期（已采纳范围，专业内容待深化）
+- [八个补充体系、双闭环及十个逻辑子系统](product/system/learning-lifecycle-system.md)
+- [生命周期组合与数据契约](design/learning-lifecycle-contract.md)
+- [生命周期能力问题与验收矩阵](implementation/learning-lifecycle-acceptance.md)
