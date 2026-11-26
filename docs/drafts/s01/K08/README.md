@@ -36,3 +36,6 @@
 PDF页图实际核对：Eccles/Wigfield手稿p2、Ryan/Deci p2 Fig1、Bandura p308、Flavell p906。Elliot及Steel PubMed重开仅一行，Hidi作者机构仅摘要，Lally/归属等摘要或索引受限；直接情绪/习惯/努力调节实证、量表及跨文化效度待补。来源原始字节、权利未核。24项合成逻辑为Builder预期，非独立oracle；26组四视角与3组组合仍NOT_RUN。无正式收据、新Schema或SQLite文件。
 
 [来源](sources.json) / [命题](claims.json) / [覆盖](coverage.json) / [案例](cases.json) / [跨域](cross-topic-links.json) / [组合设计](composition-design.json) / [逻辑证据](logic-evidence.json) / [重跑脚本](validate-synthetic.mjs)。
+
+## Exact-HEAD replay
+aliyun-sg Node v24.21.0；两文件Git Blob一致，node --check PASS，24/24同批夹具实际重跑，exit0。非独立oracle，不重复累计。[回放证据](replay-evidence.json)。
