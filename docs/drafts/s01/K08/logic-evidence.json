@@ -1,0 +1,512 @@
+{
+  "owner": "K08",
+  "base": "2f29f2b65e59bfa6c404052e8da3d86b94330ea0",
+  "scope": "SYNTHETIC_PROJECT_RULES_ONLY",
+  "execution": "ACTUAL_JS_BUILDER_EXECUTION",
+  "independent_oracle": false,
+  "limitations": "校准仅合成同尺度百分数预测与观察，平均有符号偏差/平均绝对误差以整数分子分母表示，不是概率校准模型、信度或人格判定；matched、授权及成本为合成输入，不验证实际权限、情绪、预算、选择质量及学习结果。脚本保存，首次同函数执行。",
+  "records": [
+    {
+      "id": "K08-LOGIC-01",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 80,
+            "actual": 60,
+            "matched": true
+          },
+          {
+            "id": "B",
+            "pred": 40,
+            "actual": 60,
+            "matched": true
+          }
+        ]
+      },
+      "expected": {
+        "n": 2,
+        "biasNumerator": 0,
+        "absoluteNumerator": 40,
+        "denominator": 2,
+        "unit": "percentage_points"
+      },
+      "actual": {
+        "n": 2,
+        "biasNumerator": 0,
+        "absoluteNumerator": 40,
+        "denominator": 2,
+        "unit": "percentage_points"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-02",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 90,
+            "actual": 70,
+            "matched": true
+          }
+        ]
+      },
+      "expected": {
+        "n": 1,
+        "biasNumerator": 20,
+        "absoluteNumerator": 20,
+        "denominator": 1,
+        "unit": "percentage_points"
+      },
+      "actual": {
+        "n": 1,
+        "biasNumerator": 20,
+        "absoluteNumerator": 20,
+        "denominator": 1,
+        "unit": "percentage_points"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-03",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 30,
+            "actual": 60,
+            "matched": true
+          }
+        ]
+      },
+      "expected": {
+        "n": 1,
+        "biasNumerator": -30,
+        "absoluteNumerator": 30,
+        "denominator": 1,
+        "unit": "percentage_points"
+      },
+      "actual": {
+        "n": 1,
+        "biasNumerator": -30,
+        "absoluteNumerator": 30,
+        "denominator": 1,
+        "unit": "percentage_points"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-04",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 0,
+            "actual": 0,
+            "matched": true
+          },
+          {
+            "id": "B",
+            "pred": 100,
+            "actual": 100,
+            "matched": true
+          }
+        ]
+      },
+      "expected": {
+        "n": 2,
+        "biasNumerator": 0,
+        "absoluteNumerator": 0,
+        "denominator": 2,
+        "unit": "percentage_points"
+      },
+      "actual": {
+        "n": 2,
+        "biasNumerator": 0,
+        "absoluteNumerator": 0,
+        "denominator": 2,
+        "unit": "percentage_points"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-05",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 80,
+            "actual": 60,
+            "matched": false
+          }
+        ]
+      },
+      "expected": "HOLD_MISMATCH",
+      "actual": "HOLD_MISMATCH",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-06",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 101,
+            "actual": 60,
+            "matched": true
+          }
+        ]
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-07",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 50,
+            "actual": 50,
+            "matched": true
+          },
+          {
+            "id": "A",
+            "pred": 50,
+            "actual": 50,
+            "matched": true
+          }
+        ]
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-08",
+      "input": {
+        "mode": "calibration",
+        "pairs": []
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-09",
+      "input": {
+        "mode": "calibration",
+        "pairs": [
+          {
+            "id": "A",
+            "pred": 50,
+            "actual": null,
+            "matched": true
+          }
+        ]
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-10",
+      "input": {
+        "mode": "support",
+        "choice": "pause",
+        "evidence": "observed_only",
+        "authorized": false,
+        "budget": 0
+      },
+      "expected": "RESPECT_PAUSE",
+      "actual": "RESPECT_PAUSE",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-11",
+      "input": {
+        "mode": "support",
+        "choice": "continue",
+        "evidence": "observed_only",
+        "authorized": true,
+        "budget": 1
+      },
+      "expected": "CONTINUE_CANDIDATE_NO_EMOTION_INFERENCE",
+      "actual": "CONTINUE_CANDIDATE_NO_EMOTION_INFERENCE",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-12",
+      "input": {
+        "mode": "support",
+        "choice": "unknown",
+        "evidence": "reported",
+        "authorized": true,
+        "budget": 1
+      },
+      "expected": "ASK_OPTIONAL_PREFERENCE",
+      "actual": "ASK_OPTIONAL_PREFERENCE",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-13",
+      "input": {
+        "mode": "support",
+        "choice": "help",
+        "evidence": "reported",
+        "authorized": true,
+        "budget": 1
+      },
+      "expected": "OFFER_HELP_NOT_MASTERY",
+      "actual": "OFFER_HELP_NOT_MASTERY",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-14",
+      "input": {
+        "mode": "support",
+        "choice": "help",
+        "evidence": "reported",
+        "authorized": false,
+        "budget": 1
+      },
+      "expected": "HOLD_AUTH",
+      "actual": "HOLD_AUTH",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-15",
+      "input": {
+        "mode": "support",
+        "choice": "continue",
+        "evidence": "reported",
+        "authorized": true,
+        "budget": 0
+      },
+      "expected": "STOP_BUDGET",
+      "actual": "STOP_BUDGET",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-16",
+      "input": {
+        "mode": "support",
+        "choice": "continue",
+        "evidence": "unknown",
+        "authorized": true,
+        "budget": -1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-17",
+      "input": {
+        "mode": "support",
+        "choice": "continue",
+        "evidence": "diagnosed_by_log",
+        "authorized": true,
+        "budget": 1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-18",
+      "input": {
+        "mode": "conflict",
+        "options": [
+          {
+            "id": "A",
+            "cost": 3
+          },
+          {
+            "id": "B",
+            "cost": 5
+          }
+        ],
+        "budget": 5,
+        "selected": null
+      },
+      "expected": {
+        "available": [
+          "A",
+          "B"
+        ],
+        "status": "USER_CHOICE_REQUIRED"
+      },
+      "actual": {
+        "available": [
+          "A",
+          "B"
+        ],
+        "status": "USER_CHOICE_REQUIRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-19",
+      "input": {
+        "mode": "conflict",
+        "options": [
+          {
+            "id": "A",
+            "cost": 3
+          },
+          {
+            "id": "B",
+            "cost": 5
+          }
+        ],
+        "budget": 4,
+        "selected": "B"
+      },
+      "expected": {
+        "available": [
+          "A"
+        ],
+        "status": "SELECTED_OVER_BUDGET"
+      },
+      "actual": {
+        "available": [
+          "A"
+        ],
+        "status": "SELECTED_OVER_BUDGET"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-20",
+      "input": {
+        "mode": "conflict",
+        "options": [
+          {
+            "id": "A",
+            "cost": 3
+          },
+          {
+            "id": "B",
+            "cost": 5
+          }
+        ],
+        "budget": 5,
+        "selected": "B"
+      },
+      "expected": {
+        "available": [
+          "A",
+          "B"
+        ],
+        "status": "SELECTED_CANDIDATE"
+      },
+      "actual": {
+        "available": [
+          "A",
+          "B"
+        ],
+        "status": "SELECTED_CANDIDATE"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-21",
+      "input": {
+        "mode": "conflict",
+        "options": [
+          {
+            "id": "A",
+            "cost": 3
+          }
+        ],
+        "budget": 2,
+        "selected": null
+      },
+      "expected": {
+        "available": [],
+        "status": "NO_FEASIBLE_OPTION"
+      },
+      "actual": {
+        "available": [],
+        "status": "NO_FEASIBLE_OPTION"
+      },
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-22",
+      "input": {
+        "mode": "conflict",
+        "options": [
+          {
+            "id": "A",
+            "cost": 3
+          }
+        ],
+        "budget": 5,
+        "selected": "Z"
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-23",
+      "input": {
+        "mode": "conflict",
+        "options": [
+          {
+            "id": "A",
+            "cost": 3
+          },
+          {
+            "id": "A",
+            "cost": 2
+          }
+        ],
+        "budget": 5,
+        "selected": null
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K08-LOGIC-24",
+      "input": {
+        "mode": "conflict",
+        "options": [
+          {
+            "id": "A",
+            "cost": 0
+          }
+        ],
+        "budget": 0,
+        "selected": null
+      },
+      "expected": {
+        "available": [
+          "A"
+        ],
+        "status": "USER_CHOICE_REQUIRED"
+      },
+      "actual": {
+        "available": [
+          "A"
+        ],
+        "status": "USER_CHOICE_REQUIRED"
+      },
+      "pass": true
+    }
+  ],
+  "passed": 24
+}
