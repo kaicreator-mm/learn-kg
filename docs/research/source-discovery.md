@@ -1,0 +1,12 @@
+# 首批来源发现登记（2026-11-26）
+ 
+以下为已找到公开书目/页面的入口，状态均 DISCOVERED；本轮没有逐 Claim 原文核证、许可确认或专业接受。后续补精确原文定位、独立来源谱系、争议与外推限制。
+ 
+| ID | 来源 | 类型 / 候选域 | 入口 |
+|---|---|---|---|
+| S001 | National Academies of Sciences, Engineering, and Medicine. How People Learn II: Learners, Contexts, and Cultures (2018) | 共识综合报告；K01–K08、K13/K14/K16/K17 | https://www.nationalacademies.org/read/24783 |
+| S002 | Dunlosky et al. Improving Students’ Learning With Effective Learning Techniques (2013) | 学习策略综述；K05/K06/K17 | https://doi.org/10.1177/1529100612453266 |
+| S003 | AERA/APA/NCME. Standards for Educational and Psychological Testing (2014) | 测量标准；K09/K16/K17 | https://ncme.org/resources/books/testing-standards/ |
+| S004 | Corbett & Anderson. Knowledge tracing: Modeling the acquisition of procedural knowledge (1995) | 原始模型研究；K10 | https://doi.org/10.1007/BF01099821 |
+ 
+待发现（尚无 source ID）：认知心理学与记忆教材、间隔效应元分析、技能习得与迁移、认知负荷、动机/自我调节、教学设计、掌握学习、IRT、遗忘与复习调度模型（含 FSRS/SM-2）、知识追踪比较、教育数据标准、智能辅导效果、语言/职业学习、无障碍及因果研究。每域必须有专业来源与反向证据发现；不凭软件文档证明教学效果。
