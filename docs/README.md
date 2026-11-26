@@ -13,3 +13,6 @@
 - [HSK 学科知识域与组合验证计划](product/hsk-domain-pilot.md)
 
 - [HSK 用户资料登记、原文初读及来源风险](research/hsk-source-intake.md)
+
+## D009 知识体系先行（当前候选入口）
+- [知识体系 R1](product/system/README.md)：通用19域、汉语7域及8类组合能力；D1–D3结构库存、非知识点验收。

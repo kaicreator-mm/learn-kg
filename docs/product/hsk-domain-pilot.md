@@ -34,3 +34,6 @@ has_reading、has_sense、has_component、occurs_in_construction、listed_in_ver
 
 ## 用户提供的原文资料
 [资料初读与来源登记](../research/hsk-source-intake.md) 已发现完整大纲的任务、话题、词汇、汉字、语法五大纲；优先从任务/话题及能力目标反向连接字词语法与多技能证据，而非仅做词汇表。大纲封面自述2025-11发布、2026-07实施，与先前正式考试日程是不同待校准字段，不直接推断考试全面启用日期。
+
+## D009 当前候选分类
+[汉语学科 D1–D3](system/hsk-taxonomy.md) 为当前体系入口；HSK 是学科目标及覆盖映射，而不是语义分类树。Drive 文件仅参考，按专业体系主动补缺。

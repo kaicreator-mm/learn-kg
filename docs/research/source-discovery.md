@@ -21,3 +21,6 @@
 
 ## 用户提供的 HSK 资料（2026-11-26）
 见 [HSK 资料登记](hsk-source-intake.md)：RHSK01–18 为文件登记 ID，不是新增独立来源 ID；RHSK01–03 初读正文，原文身份/版次、页码视觉核对、完整性与许可仍待核验。其余仅元数据登记。后续与 S005–S009 做来源谱系合并；不公开私人 Drive 链接或附件。
+
+## D009 专业体系范围来源
+新增 S010–S019 的发现记录与范围对照见 [system-scope-calibration](system-scope-calibration.md)。Drive 原件只作参考。尚未逐命题核验或认定独立来源数量。
