@@ -1,0 +1,778 @@
+[
+  {
+    "topic": "K01.01.01",
+    "target_claim": "K01.01.01.D4.01",
+    "input": "两次独立延迟测验均使用新题，但甲训练时有提示、乙无提示；甲训练成绩高、延迟成绩低。",
+    "expected": "区分两时点的观察；训练差含提示差异，不能解释为学习效应。",
+    "negative_boundary": "若延迟题构念不同，连保持比较也HOLD。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.01.02",
+    "target_claim": "K01.01.02.D4.01",
+    "input": "能写出自行车平衡原理的甲不能独立骑行；乙能骑但不能陈述原理。",
+    "expected": "分别保存陈述与操作证据；任务表现分离不自动证明两套神经系统。",
+    "negative_boundary": "若乙靠辅助装置完成，独立技能未知。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.01.03",
+    "target_claim": "K01.01.03.D4.01",
+    "input": "分类正确但不能报告所询问的抽象规则；另一个测验发现能辨认训练实例。",
+    "expected": "实例信息和规则意识分别测试；不能报告规则不证明无意识。",
+    "negative_boundary": "直接测验灵敏度不足或所问信息不同，隐性解释HOLD。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.01.04",
+    "target_claim": "K01.01.04.D4.02",
+    "input": "重复听到同音反应降低，改变频率后反应恢复；相同音再次呈现仍低。",
+    "expected": "刺激特异性支持习惯化候选；另控制感受器适应和运动疲劳。",
+    "negative_boundary": "若所有刺激的运动响应都下降，不能据此认定习惯化。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.02.01",
+    "target_claim": "K01.02.01.D4.02",
+    "input": "甲线索在场10/20次结果出现、无线索10/20；乙在场10/20、无线索0/20。",
+    "expected": "两者线索同现次数相同，乙条件概率差为0.5，甲为0；预测关系不同。",
+    "negative_boundary": "只有同现计数且无线索分母缺失时HOLD；差值不是因果量。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.02.02",
+    "target_claim": "K01.02.02.D4.02",
+    "input": "自愿练习后取消一项额外操作，随后该练习频率增加；另一个人收到徽章但频率无变化。",
+    "expected": "前者是撤除后行为增加的负强化候选；后者不能仅凭徽章认定强化。",
+    "negative_boundary": "未控制任务难度、时段或行为测量，因果效应未知。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.02.03",
+    "target_claim": "K01.02.03.D4.05",
+    "input": "FR3在第三个合格响应给付；FI3分钟在第3分钟以后首个响应给付；2分钟已做3次。",
+    "expected": "FR条件满足、FI未满足，规则不等价。",
+    "negative_boundary": "3分钟时无合格响应，FI不自动给付；不据此推荐奖励方案。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.02.04",
+    "target_claim": "K01.02.04.D4.01",
+    "input": "λ=1，A强度0.7，B强度0.2，A和B同时出现，A学习率乘积0.2，B为0.4。",
+    "expected": "共同误差0.1，A更新0.02，B更新0.04；同一旧预测计算。",
+    "negative_boundary": "若B缺席不得把B计入误差或更新；参数未给出则HOLD。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.03.01",
+    "target_claim": "K01.03.01.D4.02",
+    "input": "两个分类模型在训练样例上完全同预测，但一个用原型距离、另一个用具体样例。",
+    "expected": "用模型对非典型新样本的不同预测区分表征假设。",
+    "negative_boundary": "相同训练输出不识别内部表征；无区分性测试HOLD。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.03.02",
+    "target_claim": "K01.03.02.D4.01",
+    "input": "学习后无提示回忆失败，给原编码线索后正确。",
+    "expected": "检索条件影响表现；至少不能仅凭首次失败断言未编码。",
+    "negative_boundary": "线索直接提供答案则不能视为独立保持证据。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.03.03",
+    "target_claim": "K01.03.03.D4.01",
+    "input": "某ACT-R实现拟合平均反应时，另一架构也拟合；二者对新任务缓冲约束预测不同。",
+    "expected": "先冻结新任务预测、参数与指标，再比较；原拟合非架构唯一证据。",
+    "negative_boundary": "若参数在测试后重新调优，标为事后拟合。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.04.01",
+    "target_claim": "K01.04.01.D4.02",
+    "input": "先有错误解释，教师给可理解反例与部分指导，学习者重述新解释。",
+    "expected": "建构与指导可共同发生；再检验无提示新例及延迟理由。",
+    "negative_boundary": "仅重述教师说法不能证明知识重组或指导效果。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.04.02",
+    "target_claim": "K01.04.02.D4.01",
+    "input": "在固定商店对话中答对，换商品和角色后无法选择表达。",
+    "expected": "区分原情境脚本复现与改变情境后的使用；设计匹配构念的变式。",
+    "negative_boundary": "新任务要求额外词汇而未控制，不能只归因情境依赖。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.04.03",
+    "target_claim": "K01.04.03.D4.01",
+    "input": "班组使用同一任务工具，但角色分工和评价规则不一致。",
+    "expected": "记录对象、工具、角色、规则与共同体；冲突是活动系统假设的分析输入。",
+    "negative_boundary": "一次争执或工具更换不证明活动系统扩展性转变。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.04.04",
+    "target_claim": "K01.04.04.D4.02",
+    "input": "合作完成文章，甲负责查词，乙负责造句；事后只测共同成品。",
+    "expected": "产物归组，独立构念分别测；不能给两人相同独立能力标签。",
+    "negative_boundary": "缺个人贡献或独立测验，个人能力HOLD。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.05.01",
+    "target_claim": "K01.05.01.D4.01",
+    "input": "两套算法同样求正确最短路径，一个枚举，一个用图搜索。",
+    "expected": "计算目标相同、算法不同；不推出相同物理实现。",
+    "negative_boundary": "只有正确结果不能确认算法或神经解释。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.05.02",
+    "target_claim": "K01.05.02.D4.01",
+    "input": "理论A预测干扰只降低正确率，B预测反应变慢且准确不变；事前冻结相同任务。",
+    "expected": "分别测准确与时间，若两者皆变则两个简单预测均不足。",
+    "negative_boundary": "事后为A添加时间预测，另记修订不得回填原oracle。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.05.03",
+    "target_claim": "K01.05.03.D4.01",
+    "input": "理论预测固定条件下正确率提高，实验失败且测验评分版本改变。",
+    "expected": "先核辅助假设和测量可比性；保留失败，独立重测。",
+    "negative_boundary": "不能无条件否定理论，也不能事后删除失败。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K01.05.04",
+    "target_claim": "K01.05.04.D4.01",
+    "input": "初学者即时词形再认改善；拟把策略推广给熟练者的独立语篇产出。",
+    "expected": "人群、任务、时间和结果均变；新应用需另证。",
+    "negative_boundary": "无外推证据时保持候选，不以均值授予个体资格。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.01.01",
+    "target_claim": "K02.01.01.D4.01",
+    "input": "注意目标通道时未选通道语义启动存在但不能正确报告内容。",
+    "expected": "报告与间接加工证据分开；比较早期/衰减/晚期预测。",
+    "negative_boundary": "单一报告失败不能判完全未加工。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.01.02",
+    "target_claim": "K02.01.02.D4.02",
+    "input": "信号100试次命中80、无信号100试次误报20；另一条件命中95、误报60。",
+    "expected": "分别计算敏感性与判准，不以命中率单独判辨别改善。",
+    "negative_boundary": "端点0或1而未声明校正规则时HOLD。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.01.03",
+    "target_claim": "K02.01.03.D4.01",
+    "input": "同一个模糊字形在不同语句中被读成不同词。",
+    "expected": "输入不变而预期变化支持上下文影响候选；比较无语境基线。",
+    "negative_boundary": "不能由一次错读断言纯自上而下机制。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.02.01",
+    "target_claim": "K02.02.01.D4.01",
+    "input": "双任务中有干扰组反应更慢但正确率相同。",
+    "expected": "速度与正确率均报告；选择性干扰可能而非已识别机制。",
+    "negative_boundary": "目标刺激强度变化则不作同条件比较。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.02.02",
+    "target_claim": "K02.02.02.D4.02",
+    "input": "连续三个时段命中下降、误报也下降、反应时升高。",
+    "expected": "可能判准更保守而非敏感性下降；分别计算并保留动机与疲劳解释。",
+    "negative_boundary": "无无信号试次，无法估计误报或判准。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.02.03",
+    "target_claim": "K02.02.03.D4.02",
+    "input": "单任务重复RT500，混合块重复RT620，混合块切换RT770毫秒。",
+    "expected": "局部切换成本150毫秒，混合成本120毫秒，二者分开。",
+    "negative_boundary": "若错误率或刺激分布不可比，差值仅描述。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.02.04",
+    "target_claim": "K02.02.04.D4.01",
+    "input": "冲突题比匹配题慢且错更多，学习者阅读速度也不同。",
+    "expected": "竞争解释包括阅读熟练度与规则冲突；补匹配阅读及非阅读控制。",
+    "negative_boundary": "单一任务不可当纯抑制能力。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.03.01",
+    "target_claim": "K02.03.01.D4.01",
+    "input": "甲记住四组熟悉三字词，乙记住七个独立生字。",
+    "expected": "计数单位不同；不得直接称甲容量12大于乙7。",
+    "negative_boundary": "需控制组块熟悉、呈现和目标精度。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.03.02",
+    "target_claim": "K02.03.02.D4.01",
+    "input": "并行发音降低词序回忆，但无言语视觉任务也降低。",
+    "expected": "控制任务一般负担；额外语音特异性干扰需与匹配非发音任务对比。",
+    "negative_boundary": "不能以发音任务的单一下降独证语音环路。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.03.03",
+    "target_claim": "K02.03.03.D4.01",
+    "input": "短时保持颜色时空间追踪干扰较小，位置保持时较大。",
+    "expected": "区分颜色与位置保持，比较双任务资源假设。",
+    "negative_boundary": "若两任务基础难度不匹配，特异性结论HOLD。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.03.04",
+    "target_claim": "K02.03.04.D4.03",
+    "input": "增加项目数后平均精度下降；有模型以槽位混合解释，另一连续资源解释。",
+    "expected": "需要项目级错误分布或区分性预测；均值不足区分。",
+    "negative_boundary": "不将一个模型的拟合当唯一真实容量。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.04.01",
+    "target_claim": "K02.04.01.D4.02",
+    "input": "看过蓝色物体，随后读到红色描述，延迟时报告红色且自信。",
+    "expected": "区分原事件、后来信息与来源判断；高信心非准确性证据。",
+    "negative_boundary": "无原事件记录不能判来源误归。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.04.02",
+    "target_claim": "K02.04.02.D4.01",
+    "input": "能正确判断词义但记不得何时学会。",
+    "expected": "一般意义知识表现可存在而事件记忆未取出；分别考核。",
+    "negative_boundary": "记不起学习日期不证明完全无事件痕迹。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.04.03",
+    "target_claim": "K02.04.03.D4.01",
+    "input": "重复键序速度保持，无法说出序列；另可口述但执行慢。",
+    "expected": "技能表现和陈述报告分别保存；练习过的序列不证明广泛技能。",
+    "negative_boundary": "若用相同外部提示，独立保持未知。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.04.04",
+    "target_claim": "K02.04.04.D4.01",
+    "input": "旧词在间接补全任务占优，直接再认接近机会水平。",
+    "expected": "直接/间接测量可能分离；检查信息对应和测量灵敏度。",
+    "negative_boundary": "直接测验较难不能证明无意识记忆。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.05.01",
+    "target_claim": "K02.05.01.D4.01",
+    "input": "两组等时学习，甲解释两个词义关系，乙重复读；测试要求原词回忆和新语境应用。",
+    "expected": "两个指标分别比较；加工活动差异不预设任意测试同方向。",
+    "negative_boundary": "若解释组额外接触答案，时间相同仍非暴露等价。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.05.02",
+    "target_claim": "K02.05.02.D4.01",
+    "input": "词表按类别呈现，测试随机顺序；学员能自主重建类别。",
+    "expected": "呈现组织和独立生成组织区分；随机测试可减少排序线索。",
+    "negative_boundary": "仅按原顺序复述不证明形成结构。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.05.03",
+    "target_claim": "K02.05.03.D4.01",
+    "input": "同一提示关联五个相似目标，另提示仅关联一个目标且匹配原编码。",
+    "expected": "比较匹配及区分性，避免仅增加提示数量。",
+    "negative_boundary": "独特提示若不匹配编码亦可能无效。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.05.04",
+    "target_claim": "K02.05.04.D4.01",
+    "input": "会整数大小比较的学习者用分母越大分数越大解释同分子分数。",
+    "expected": "相关先验可能负迁移，采用同分子与同分母对照揭示规则。",
+    "negative_boundary": "不能由年龄或错误一题推断全部先验。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.06.01",
+    "target_claim": "K02.06.01.D4.01",
+    "input": "同一目标在通用提示下失败、特异提示下成功；后来无提示又失败。",
+    "expected": "线索辅助与独立回忆分列，不能晋升独立掌握。",
+    "negative_boundary": "特异提示含答案时不能当检索证据。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.06.02",
+    "target_claim": "K02.06.02.D4.01",
+    "input": "A后学B，A测试降低；B组有A前置时B测试也降低。",
+    "expected": "前者是倒摄干扰候选，后者前摄；控制暴露及对照。",
+    "negative_boundary": "两组练习时长不同不识别干扰因果。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.06.03",
+    "target_claim": "K02.06.03.D4.01",
+    "input": "同样延迟下节省率40%，自由回忆率10%。",
+    "expected": "两指标不等价，不能用节省曲线代替自由回忆概率。",
+    "negative_boundary": "样本和任务更换时不外推参数。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.06.04",
+    "target_claim": "K02.06.04.D4.02",
+    "input": "再认姓氏失败，提供已编码的完整名字前半后能产生姓氏。",
+    "expected": "线索回忆可成功而再认失败，比较匹配条件。",
+    "negative_boundary": "不能由此一般宣称回忆比再认容易。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.06.05",
+    "target_claim": "K02.06.05.D4.02",
+    "input": "初学10次、再学6次达到同标准；另一材料初学1次再学1次。",
+    "expected": "节省分别40%和0%；后一项成本下限使节省不反映保持差。",
+    "negative_boundary": "标准变更、初学成本零或缺失时拒绝。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.07.01",
+    "target_claim": "K02.07.01.D4.01",
+    "input": "初学者需同时处理四个关系，熟练者将四个合并为熟悉单位。",
+    "expected": "同任务内在复杂度与相关先验有关；不能按元素数量固定赋负荷。",
+    "negative_boundary": "若熟练者只会熟悉实例，不能泛化组块。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.07.02",
+    "target_claim": "K02.07.02.D4.01",
+    "input": "图与说明分开导致反复翻页；把必要说明紧邻图后导航减少。",
+    "expected": "比较额外操作而保留必要信息与无障碍。",
+    "negative_boundary": "删除必要文字造成失败不是降低外在负荷的成功。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.07.03",
+    "target_claim": "K02.07.03.D4.01",
+    "input": "例题帮助新手，但熟练者在重复完整说明时表现下降。",
+    "expected": "候选交互效应，按具体领域先备分层并延迟复测。",
+    "negative_boundary": "只有两个人且任务不同，不能认定普遍反转。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K02.07.04",
+    "target_claim": "K02.07.04.D4.02",
+    "input": "主观努力高且正确率高，另一人努力低但正确率低。",
+    "expected": "努力评分不等于负荷类型或理解；结合任务、指标和测量效度。",
+    "negative_boundary": "不能直接相加三类自报分数来判断机制。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.01.01",
+    "target_claim": "K03.01.01.D4.01",
+    "input": "学员知道三个日期但不能解释事件间关系；另一人解释框架但日期错误。",
+    "expected": "分别评价事实准确和概念结构；不能以一种补偿另一种。",
+    "negative_boundary": "来源陈述冲突时不静默覆盖事实。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.01.02",
+    "target_claim": "K03.01.02.D4.03",
+    "input": "定义T需要A且B；对象只有A，另一对象A与B皆满足。",
+    "expected": "前者不能确认为T，后者仅在A∧B充分定义时成立。",
+    "negative_boundary": "条件是否充分未定时HOLD，不反推必要性。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.01.03",
+    "target_claim": "K03.01.03.D4.01",
+    "input": "直接上下位A→B、B→C，且A与X相关。",
+    "expected": "可在明确传递闭包查询中得到A→C；不新增直接边，也不把相关当上下位。",
+    "negative_boundary": "无明确传递语义的关系不得闭包。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.01.04",
+    "target_claim": "K03.01.04.D4.01",
+    "input": "相同解题模板执行两次产生不同答卷，第二次暂停后恢复。",
+    "expected": "模板、两次活动实例、产物和实际事件各自身份；模板不等于事件。",
+    "negative_boundary": "不能从模板定义声称某实例已经执行。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.01.05",
+    "target_claim": "K03.01.05.D4.02",
+    "input": "规则只有分母相同时可比较分子，输入分母不同或未知。",
+    "expected": "不同分母时该规则不适用，未知时HOLD；不能输出比较结论。",
+    "negative_boundary": "不适用不等于结论假，换规则需另有条件。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.02.01",
+    "target_claim": "K03.02.01.D4.03",
+    "input": "一材料同时属于语言练习与听觉资源，两分类维度不同。",
+    "expected": "保留多维成员关系；不存在声明互斥则可多属。",
+    "negative_boundary": "不能由同属类别推断两个对象等价。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.02.02",
+    "target_claim": "K03.02.02.D4.01",
+    "input": "典型鸟和不会飞的真成员、会飞的非成员用于分类。",
+    "expected": "典型度与成员资格分开；飞行特征不是必要且充分条件。",
+    "negative_boundary": "规则未定义或样本边缘时保留未知。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.02.03",
+    "target_claim": "K03.02.03.D4.01",
+    "input": "原型模型与最近实例模型对远离均值但接近罕见样例的新样本预测不同。",
+    "expected": "冻结两预测，再测该样本；不以训练样本拟合区分。",
+    "negative_boundary": "参数事后拟合不作独立区分性证据。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.02.04",
+    "target_claim": "K03.02.04.D4.01",
+    "input": "术语界限在两标准中不同，同一对象有边缘特征。",
+    "expected": "保留标准版本和不同判别；无标准不能给唯一成员身份。",
+    "negative_boundary": "未知边缘不是自动非成员。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.03.01",
+    "target_claim": "K03.03.01.D4.02",
+    "input": "一个活动包含两个步骤，一个步骤又包含三个操作。",
+    "expected": "只有在同一组成语义且角色允许时可查询间接部分；不推先修。",
+    "negative_boundary": "步骤先后不是必要前置能力证据。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.03.02",
+    "target_claim": "K03.03.02.D4.02",
+    "input": "目标有路径(A且B)或C；A已证、B未知、C已证。",
+    "expected": "存在已证替代路径C，目标可行候选；B仍未知，不断言A必要。",
+    "negative_boundary": "若C未证，A∧B未知不能给不可行或已可行。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.03.03",
+    "target_claim": "K03.03.03.D4.01",
+    "input": "记录符合字段类型但命题称所有词都只有一义。",
+    "expected": "结构约束通过不证事实真；专业反例可拒绝命题资格。",
+    "negative_boundary": "缺字段的记录先拒绝结构消费。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.03.04",
+    "target_claim": "K03.03.04.D4.02",
+    "input": "练习时长与成绩正相关，分组同时有先备差异。",
+    "expected": "观察关联而非已识别练习效应；K17检查混杂与设计。",
+    "negative_boundary": "不能由时间先后生成因果边。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.03.05",
+    "target_claim": "K03.03.05.D4.01",
+    "input": "用水流比喻电路，映射流量与电流关系，但水的颜色无对应。",
+    "expected": "保留关系映射与失配；新电路结论需目标域验证。",
+    "negative_boundary": "外观相似不支持结构类比。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.04.01",
+    "target_claim": "K03.04.01.D4.02",
+    "input": "概念图两节点连线无连接词，另一图有带适用条件的命题。",
+    "expected": "前者只知邻接，后者可检验具体关系；还需新例验证。",
+    "negative_boundary": "连接多不代表解释正确。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.04.02",
+    "target_claim": "K03.04.02.D4.01",
+    "input": "若A则B，观察B，另一原因C也产生B。",
+    "expected": "A是可解释候选非必然结论；需要区分性证据。",
+    "negative_boundary": "B不能反推A；若A真且规则真可演绎B。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.04.03",
+    "target_claim": "K03.04.03.D4.01",
+    "input": "两答案都正确，一用守恒推导、一列计算结果。",
+    "expected": "按目标区分机制或推导证据与结果；不要求所有解释同一种因果。",
+    "negative_boundary": "推导条件错误即使结果碰巧正确也不算充分。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.04.04",
+    "target_claim": "K03.04.04.D4.02",
+    "input": "模型新版本改关系方向，旧验证绑定旧规则。",
+    "expected": "保留历史结果且旧消费资格不能直接用于新方向；重新验证。",
+    "negative_boundary": "不能覆盖原结果或只改版本标签。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.05.01",
+    "target_claim": "K03.05.01.D4.01",
+    "input": "多道同分子题均用整数比较分母，且能陈述规则；一道同分母题正确。",
+    "expected": "形成有条件的错误规则候选，另用反例及延迟复测。",
+    "negative_boundary": "偶发错误或提示后正确不证稳定误概念。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.05.02",
+    "target_claim": "K03.05.02.D4.01",
+    "input": "学习者先预测，反例测量超出其理解范围。",
+    "expected": "反例不保证产生可理解冲突，先核读图与实验条件再提供替代。",
+    "negative_boundary": "无原预测无法判断解释是否冲突。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.05.03",
+    "target_claim": "K03.05.03.D4.02",
+    "input": "训练后正确解释，延迟新题恢复旧解释。",
+    "expected": "记为条件化或不稳定重组候选，保存新旧证据。",
+    "negative_boundary": "即时正确不能宣布旧概念消失。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.05.04",
+    "target_claim": "K03.05.04.D4.02",
+    "input": "答对分数比较但只说“老师说的”，另一人推导同单位条件。",
+    "expected": "结果、理由和适用条件分别评分；不能只按答对授予解释资格。",
+    "negative_boundary": "仅背规则不证明迁移。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.06.01",
+    "target_claim": "K03.06.01.D4.02",
+    "input": "训练规则在同分母题正确，在异分母同样使用。",
+    "expected": "可变条件KC需适用与不适用例；当前条件范围过宽候选。",
+    "negative_boundary": "不从单题推断KC稳定存在。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.06.02",
+    "target_claim": "K03.06.02.D4.01",
+    "input": "专家算题时省略中间步骤，初学者出声报告多个操作。",
+    "expected": "用任务变式与错误证据校验组件分解；专家报告非完整清单。",
+    "negative_boundary": "口述缺少步骤不证明心理步骤不存在。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.06.03",
+    "target_claim": "K03.06.03.D4.02",
+    "input": "两个子任务均独立正确但组合题错，组合另增加阅读负担。",
+    "expected": "整合性KC缺口和阅读负担皆候选，匹配额外负担再测。",
+    "negative_boundary": "不可把单项概率乘积当综合能力。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K03.06.04",
+    "target_claim": "K03.06.04.D4.02",
+    "input": "某学习者不会算法A，但用替代算法B独立完成目标任务。",
+    "expected": "在声明允许B的条件下反驳A必要性；仍可作为推荐路径。",
+    "negative_boundary": "一次未成功不能证明所有替代前置无效。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.01.01",
+    "target_claim": "K04.01.01.D4.01",
+    "input": "能复述公式且熟悉题正确，陌生同构题不能选择公式。",
+    "expected": "条件选择与执行、声明报告分列，认知技能未完整证成。",
+    "negative_boundary": "提示公式后正确只支持辅助表现。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.01.02",
+    "target_claim": "K04.01.02.D4.01",
+    "input": "熟悉说话者音素辨别好，陌生说话者下降，噪声也不同。",
+    "expected": "在匹配噪声下比较说话者变式与竞争音；保留感知与任务因素。",
+    "negative_boundary": "不能用熟悉刺激准确代表泛化。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.01.03",
+    "target_claim": "K04.01.03.D4.01",
+    "input": "训练中有轨迹提示且精度高，次日撤提示后精度低。",
+    "expected": "区分训练表现与独立保持；匹配任务与安全条件。",
+    "negative_boundary": "辅助依赖不能被称为独立动作能力。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.01.04",
+    "target_claim": "K04.01.04.D4.02",
+    "input": "两项子技能分别成功，组合时争用同一工具并超时。",
+    "expected": "评估资源协调及联合目标，保留单项证据。",
+    "negative_boundary": "不能从子技能通过直接晋升复合技能。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.02.01",
+    "target_claim": "K04.02.01.D4.01",
+    "input": "练习先看步骤卡，之后不看卡但只能在原情境做。",
+    "expected": "撤指导后的程序执行是有限候选；改变条件检验选择和编译边界。",
+    "negative_boundary": "不凭速度变化识别ACT编译机制。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.02.02",
+    "target_claim": "K04.02.02.D4.02",
+    "input": "主任务双任务下加速，次任务错误率从5%升30%。",
+    "expected": "存在优先级/速度准确权衡，不能认定资源需求下降。",
+    "negative_boundary": "需双任务双指标与单任务基线。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.02.03",
+    "target_claim": "K04.02.03.D4.01",
+    "input": "A=8,W=2；同距离W=4，其他条件不变。",
+    "expected": "ID分别log2(5)与log2(3)，模型在正斜率时预测前者较慢。",
+    "negative_boundary": "实际准确与有效宽度未知时不能给真实吞吐量。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.02.04",
+    "target_claim": "K04.02.04.D4.01",
+    "input": "训练早期时快时慢，后期稳定；改变任务又出现错误。",
+    "expected": "阶段标签只作局部解释，保留条件改变与学习轨迹。",
+    "negative_boundary": "不以次数阈值硬判自主阶段。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.03.01",
+    "target_claim": "K04.03.01.D4.02",
+    "input": "x=0.5,r=0.8,k=0.2,e=-0.5（明确校正方向）。",
+    "expected": "下一状态0.3；负向更新和保留同时作用。",
+    "negative_boundary": "误差符号定义未知则不计算；模型不证明真实机制。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.03.02",
+    "target_claim": "K04.03.02.D4.01",
+    "input": "实时提示使当次准确高，结束反馈组延迟独立任务更好。",
+    "expected": "反馈时机、内容与保持分开，不能按训练末次决定最佳。",
+    "negative_boundary": "分组材料或提示量不同则保留混杂。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.03.03",
+    "target_claim": "K04.03.03.D4.01",
+    "input": "随机练习组训练较差、延迟变式较好，成组练习相反。",
+    "expected": "分开习得、保持、迁移及环境，需匹配总练习。",
+    "negative_boundary": "单一合成例不证所有技能随机练习优势。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.03.04",
+    "target_claim": "K04.03.04.D4.02",
+    "input": "同一综合任务慢，独立子技能均快，切换工具时耗时长。",
+    "expected": "协调或资源切换瓶颈候选，测试减少切换的匹配条件。",
+    "negative_boundary": "不把瓶颈归为一般速度差。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.04.01",
+    "target_claim": "K04.04.01.D4.01",
+    "input": "练习同分母分数，新题换数值但仍同分母，未见原题。",
+    "expected": "内容构念保留且表面变化，是声明维度的近迁移候选。",
+    "negative_boundary": "原题重复非迁移；需独立新题。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.04.02",
+    "target_claim": "K04.04.02.D4.01",
+    "input": "课堂公式训练后测试工作场景，领域近但社会角色、工具与模态变。",
+    "expected": "逐维记录迁移距离与结果；不能给单一无定义远迁移标签。",
+    "negative_boundary": "缺基线/对照不声称训练造成收益。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.04.03",
+    "target_claim": "K04.04.03.D4.01",
+    "input": "整数比较策略用于同分子分数导致错误；训练纠正后独立新例正确。",
+    "expected": "先前策略可能负迁移，比较规则与对照；保留纠正后证据。",
+    "negative_boundary": "观察差不等于因果效应。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.04.04",
+    "target_claim": "K04.04.04.D4.01",
+    "input": "训练做词义判断或押韵判断，测试分词义与押韵两类。",
+    "expected": "在处理匹配的条件下检验交互，不凭一种测试认定通用加工深度。",
+    "negative_boundary": "不得外推原实验之外的所有学习任务。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.05.01",
+    "target_claim": "K04.05.01.D4.01",
+    "input": "熟练者在有结构布局优势明显，随机布局优势小。",
+    "expected": "领域结构组块是候选解释；匹配项目数、时间与基础辨别。",
+    "negative_boundary": "不推断普适工作记忆容量更高。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.05.02",
+    "target_claim": "K04.05.02.D4.01",
+    "input": "两个表面相似故障，一个由供电、一个由信号中断造成。",
+    "expected": "检验机制相关线索与决策；表面识别不代表诊断正确。",
+    "negative_boundary": "不能从熟悉模式推断因果。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.05.03",
+    "target_claim": "K04.05.03.D4.01",
+    "input": "同一目标有快但依赖特定材料的方法和慢但稳健方法，当前材料未知。",
+    "expected": "比较适用条件与资源，先澄清；不按速度默认策略。",
+    "negative_boundary": "高风险任务缺条件不建议执行。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.05.04",
+    "target_claim": "K04.05.04.D4.01",
+    "input": "常规题快准，遇新约束仍机械使用旧策略。",
+    "expected": "常规效率已见，适应性需新约束解释和改选证据。",
+    "negative_boundary": "不能以常规效率授予适应性专长。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.06.01",
+    "target_claim": "K04.06.01.D4.01",
+    "input": "分练两步后整体中间结果接口不匹配。",
+    "expected": "补接口及组合验证；部分练习不是整体练习替代。",
+    "negative_boundary": "分解粒度与目标不对应时重审。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.06.02",
+    "target_claim": "K04.06.02.D4.01",
+    "input": "双手单独均快，组合时一手定位另一手操作，角色反转失败。",
+    "expected": "区分非对称协调、时序和单手能力；测明确角色。",
+    "negative_boundary": "单手成绩不能预测双手协作。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.06.03",
+    "target_claim": "K04.06.03.D4.02",
+    "input": "原任务无提示成功，新任务先失败、提示后成功、第三个独立新例失败。",
+    "expected": "记录自发与提示后迁移不同，独立泛化仍未知。",
+    "negative_boundary": "不把提示后成功当已独立迁移。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  },
+  {
+    "topic": "K04.06.04",
+    "target_claim": "K04.06.04.D4.02",
+    "input": "模拟器中练习高分，真实任务缺授权且环境改变。",
+    "expected": "仅模拟候选证据；保留真实评价的授权、安全和情境条件。",
+    "negative_boundary": "不为验证知识而实际执行未授权风险操作。",
+    "status": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+  }
+]

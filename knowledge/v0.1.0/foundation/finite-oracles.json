@@ -1,0 +1,22 @@
+[
+ {"id":"K01.F01.RW01","claim":"K01.02.04.D4.01","mode":"rw2","input":{"lambda":"1","a":"7/10","b":"1/5","rate_a":"1/5","rate_b":"2/5"},"expected":["1/50","1/25"]},
+ {"id":"K01.F01.RW02","claim":"K01.02.04.D4.01","mode":"rw2","input":{"lambda":"1","a":"1","b":"0","rate_a":"1/5","rate_b":"2/5"},"expected":["0","0"]},
+ {"id":"K01.F01.RW03","claim":"K01.02.04.D4.01","mode":"rw2","input":{"lambda":"1","a":"7/10","rate_a":"1/5","rate_b":"2/5"},"expected":"HOLD"},
+ {"id":"K02.F01.SDT01","claim":"K02.01.02.D4.02","mode":"sdt","input":{"hit":80,"signal":100,"fa":20,"noise":100},"expected":[1.683242467,0]},
+ {"id":"K02.F01.SDT02","claim":"K02.01.02.D4.03","mode":"sdt","input":{"hit":95,"signal":100,"fa":60,"noise":100},"expected":[1.391506523,-0.949100365]},
+ {"id":"K02.F01.SDT03","claim":"K02.01.02.D4.02","mode":"sdt","input":{"hit":100,"signal":100,"fa":20,"noise":100},"expected":"HOLD"},
+ {"id":"K02.F01.SW01","claim":"K02.02.03.D4.05","mode":"switch","input":{"single":500,"mixed_repeat":620,"mixed_switch":770},"expected":[150,120]},
+ {"id":"K02.F01.SAV01","claim":"K02.06.05.D4.02","mode":"savings","input":{"initial":10,"relearn":6,"same_standard":true},"expected":"2/5"},
+ {"id":"K02.F01.SAV02","claim":"K02.06.05.D4.02","mode":"savings","input":{"initial":1,"relearn":1,"same_standard":true},"expected":"0"},
+ {"id":"K02.F01.SAV03","claim":"K02.06.05.D4.02","mode":"savings","input":{"initial":0,"relearn":0,"same_standard":true},"expected":"HOLD"},
+ {"id":"K03.F01.PATH01","claim":"K03.03.02.D4.02","mode":"paths","input":[["TRUE","UNKNOWN"],["TRUE"]],"expected":"TRUE"},
+ {"id":"K03.F01.PATH02","claim":"K03.03.02.D4.02","mode":"paths","input":[["TRUE","UNKNOWN"],["FALSE"]],"expected":"UNKNOWN"},
+ {"id":"K03.F01.PATH03","claim":"K03.03.02.D4.02","mode":"paths","input":[[]],"expected":"HOLD"},
+ {"id":"K03.F01.KC01","claim":"K03.06.03.D4.05","mode":"ratio","input":{"hard":"2/5","simple":"4/5","assumptions":true},"expected":"1/2"},
+ {"id":"K03.F01.KC02","claim":"K03.06.03.D4.05","mode":"ratio","input":{"hard":"4/5","simple":"2/5","assumptions":true},"expected":"HOLD"},
+ {"id":"K04.F01.MOTOR01","claim":"K04.03.01.D4.02","mode":"motor","input":{"x":"1/2","r":"4/5","k":"1/5","e":"-1/2","sign_defined":true},"expected":"3/10"},
+ {"id":"K04.F01.MOTOR02","claim":"K04.03.01.D4.02","mode":"motor","input":{"x":"1/2","r":"4/5","k":"1/5","e":"-1/2","sign_defined":false},"expected":"HOLD"},
+ {"id":"K04.F01.FIT01","claim":"K04.02.03.D4.01","mode":"fitts_id","input":{"A":8,"W":2,"unit_match":true},"expected":2.321928095},
+ {"id":"K04.F01.FIT02","claim":"K04.02.03.D4.01","mode":"fitts_id","input":{"A":8,"W":4,"unit_match":true},"expected":1.584962501},
+ {"id":"K04.F01.FIT03","claim":"K04.02.03.D4.01","mode":"fitts_id","input":{"A":8,"W":0,"unit_match":true},"expected":"HOLD"}
+]
