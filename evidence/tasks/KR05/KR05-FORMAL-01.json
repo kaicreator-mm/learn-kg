@@ -1,0 +1,95 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "reviewer": "chatgpt-web:learn-kg-kr03-05-independent-delta-reviewer",
+  "branch": "version/v0.1.0",
+  "base": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "exact_head": "33dd5b1702b83adc64ff2b3a608a25010d31ed14",
+  "version": "33dd5b1702b83adc64ff2b3a608a25010d31ed14",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "KR05",
+  "attempt_id": "KR05-FORMAL-01",
+  "receipt_id": "TASK:KR05:KR05-FORMAL-01",
+  "input": [
+    {
+      "task_id": "K17",
+      "receipt_id": "TASK:K17:K17-FORMAL-01",
+      "content_digest": "28a750df57293d2ef2576b571118bb2dedcfeaf7f1005942b02eb4ba6b991d8f",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K17/K17-FORMAL-01.json",
+          "sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0"
+        }
+      ]
+    },
+    {
+      "task_id": "K18",
+      "receipt_id": "TASK:K18:K18-FORMAL-01",
+      "content_digest": "dfacac2cb72e97684993d4d9636f756a1446e0cfaabedd9accac083e3a93e2c6",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K18/K18-FORMAL-01.json",
+          "sha256": "571a88aaedf0159d078a0b112ee1779cea89c2dc4883a612ee12a23bf5eded4c"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/K17/K17-QUALIFICATION-01.json",
+      "sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/K18/K18-QUALIFICATION-01.json",
+      "sha256": "a4f0f69869649c6eee8a46fe87a3981a33301a15119893b7196c7cfd34f3e920",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+      "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+      "type": "QUALIFIED_LOCAL"
+    }
+  ],
+  "state": "QUALIFICATION_RECEIPTS",
+  "receipt_type": "QUALIFICATION_RECEIPTS",
+  "content_digest": "5e4ddf80e5bbc8028219d8a8aad9ee8ef649b77ab38ce7ce9e236e83a88824c2",
+  "scope_restriction": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "limits": "Restricted local candidate only; no unrestricted source qualification, full D3 adequacy, canonical semantic closure, CQ/LC, rights, G03 or release. P3 source pinning and historical absolute path metadata remain unresolved."
+  },
+  "validation": {
+    "review_task_comment": 7222377071,
+    "review_result_comment": 7222775779,
+    "review_body_sha256": "af6e0aff718f4f5cc70d0e1cdd5d551b782e60984db0e2f87d7a6f0836cf75eb",
+    "tree": "09d95f994f989fbe07cc7e4c48bdc13cc09d5e14",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 2,
+    "previous_p2_closed_scoped": 2,
+    "verdict": "ACCEPT_SCOPED"
+  },
+  "issues": [
+    "Restricted local candidate only; no unrestricted source qualification, full D3 adequacy, canonical semantic closure, CQ/LC, rights, G03 or release. P3 source pinning and historical absolute path metadata remain unresolved."
+  ],
+  "next": "G03 exact restricted scope closure required."
+}

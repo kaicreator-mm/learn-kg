@@ -1,0 +1,54 @@
+{
+  "status": "INDEPENDENT_FINITE_ACCEPT_SCOPED",
+  "reviewed_head": "33dd5b1702b83adc64ff2b3a608a25010d31ed14",
+  "reviewed_tree": "09d95f994f989fbe07cc7e4c48bdc13cc09d5e14",
+  "validation": {
+    "review_task_comment": 7222377071,
+    "review_result_comment": 7222775779,
+    "review_body_sha256": "af6e0aff718f4f5cc70d0e1cdd5d551b782e60984db0e2f87d7a6f0836cf75eb",
+    "tree": "09d95f994f989fbe07cc7e4c48bdc13cc09d5e14",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 2,
+    "previous_p2_closed_scoped": 2
+  },
+  "new_independent_count": 79,
+  "groups": {
+    "model_guards": 7,
+    "cross_new_and_completed_X01": 16,
+    "dependency_guards": 56
+  },
+  "affected_cross_regressions": 9,
+  "unchanged_cross": 18,
+  "cross_total": 43,
+  "previous_115_not_recounted": true,
+  "bindings": 36,
+  "dependencies": 14,
+  "sql_records": 25,
+  "unit_tests": 4,
+  "files": [
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-spec-guard-fixtures.json",
+      "sha256": "505d6d5b0d118b8a4558b968d83472b495f9aa7f3bcb0a62cbe7050f16b65b8d"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-spec-guard-results.json",
+      "sha256": "50d2a4753c3c9433b231456fbdf8452977aea1b4884b126c1a6aeaba742a3a1e"
+    },
+    {
+      "path": "docs/implementation/kr03-05-batch/cross-fixtures.json",
+      "sha256": "eb17085569f1c8dde2ef84e81e195f8eacdbebadf6ce4bf678eb8f331d1050bd"
+    },
+    {
+      "path": "docs/implementation/kr03-05-formal/cross-current-results.json",
+      "sha256": "009dd2977b36bd1b45125fb46e82fe89e4417dac130dc58985b4d7e92ce76f4e"
+    },
+    {
+      "path": "docs/implementation/kr03-05-formal/dependency-witness.json",
+      "sha256": "c108c625e0cf5c82cd60e2baeb2fcc0487d32ba4b030fe5c818a16afff421868"
+    }
+  ],
+  "limits": "Restricted local candidate only; no unrestricted source qualification, full D3 adequacy, canonical semantic closure, CQ/LC, rights, G03 or release. P3 source pinning and historical absolute path metadata remain unresolved."
+}

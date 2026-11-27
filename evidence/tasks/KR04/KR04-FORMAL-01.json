@@ -1,0 +1,112 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "reviewer": "chatgpt-web:learn-kg-kr03-05-independent-delta-reviewer",
+  "branch": "version/v0.1.0",
+  "base": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "exact_head": "33dd5b1702b83adc64ff2b3a608a25010d31ed14",
+  "version": "33dd5b1702b83adc64ff2b3a608a25010d31ed14",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "KR04",
+  "attempt_id": "KR04-FORMAL-01",
+  "receipt_id": "TASK:KR04:KR04-FORMAL-01",
+  "input": [
+    {
+      "task_id": "K13",
+      "receipt_id": "TASK:K13:K13-FORMAL-01",
+      "content_digest": "ad575d23624642747536f31d08b0be614ebe60cc613b9334eb90f52a924545f1",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K13/K13-FORMAL-01.json",
+          "sha256": "a3a7d30d7652a4d9a911557015f9d53bbb6642705feff70e60580937d37a988f"
+        }
+      ]
+    },
+    {
+      "task_id": "K14",
+      "receipt_id": "TASK:K14:K14-FORMAL-01",
+      "content_digest": "995477414c90ad677ec9a7045e60e88a19773ca0c3a3a1e8af34053851b75c8b",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K14/K14-FORMAL-01.json",
+          "sha256": "a74a0694f1983ce0e09636e258808af1bb5d60f53b7bd96310fb414b96135803"
+        }
+      ]
+    },
+    {
+      "task_id": "K15",
+      "receipt_id": "TASK:K15:K15-FORMAL-01",
+      "content_digest": "62f3ba123ff2b8b29b3bdd59736b36408aabbbf75bd732a78ab1ce7b0a25fed6",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K15/K15-FORMAL-01.json",
+          "sha256": "d2498fa5b6e509805ba1d4a3d9a56b2077bcc39c78d0f1810b63ef108599cc45"
+        }
+      ]
+    },
+    {
+      "task_id": "K16",
+      "receipt_id": "TASK:K16:K16-FORMAL-01",
+      "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+          "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/K13/K13-QUALIFICATION-01.json",
+      "sha256": "12b8e2628f4ff6232d5147c3dd77828e2f34b7323a9a734c44644a70f04171cf",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/K14/K14-QUALIFICATION-01.json",
+      "sha256": "3d84ff57b332cbdbab188b64083c7e98837c1e18f9124eddc1a2d1ee2fe6b789",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/K15/K15-QUALIFICATION-01.json",
+      "sha256": "1d61eb0cb86363760a4d151ba80731706b5fab4cf353961d93e5cb21cb49291e",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+      "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+      "type": "QUALIFIED_LOCAL"
+    }
+  ],
+  "state": "QUALIFICATION_RECEIPTS",
+  "receipt_type": "QUALIFICATION_RECEIPTS",
+  "content_digest": "9874d8dd4979b7d93ffc75be7e87eea8d32335cffac70ad5ac4f3b1829af6b83",
+  "scope_restriction": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "limits": "Restricted local candidate only; no unrestricted source qualification, full D3 adequacy, canonical semantic closure, CQ/LC, rights, G03 or release. P3 source pinning and historical absolute path metadata remain unresolved."
+  },
+  "validation": {
+    "review_task_comment": 7222377071,
+    "review_result_comment": 7222775779,
+    "review_body_sha256": "af6e0aff718f4f5cc70d0e1cdd5d551b782e60984db0e2f87d7a6f0836cf75eb",
+    "tree": "09d95f994f989fbe07cc7e4c48bdc13cc09d5e14",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 2,
+    "previous_p2_closed_scoped": 2,
+    "verdict": "ACCEPT_SCOPED"
+  },
+  "issues": [
+    "Restricted local candidate only; no unrestricted source qualification, full D3 adequacy, canonical semantic closure, CQ/LC, rights, G03 or release. P3 source pinning and historical absolute path metadata remain unresolved."
+  ],
+  "next": "G03 exact restricted scope closure required."
+}

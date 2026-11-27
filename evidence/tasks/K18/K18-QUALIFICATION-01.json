@@ -1,0 +1,232 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "reviewer": "chatgpt-web:learn-kg-kr03-05-independent-delta-reviewer",
+  "branch": "version/v0.1.0",
+  "base": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "exact_head": "33dd5b1702b83adc64ff2b3a608a25010d31ed14",
+  "version": "33dd5b1702b83adc64ff2b3a608a25010d31ed14",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "K18",
+  "attempt_id": "K18-QUALIFICATION-01",
+  "receipt_id": "TASK:K18:K18-QUALIFICATION-01",
+  "input": [
+    {
+      "task_id": "K18",
+      "receipt_id": "TASK:K18:K18-FORMAL-01",
+      "content_digest": "dfacac2cb72e97684993d4d9636f756a1446e0cfaabedd9accac083e3a93e2c6",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K18/K18-FORMAL-01.json",
+          "sha256": "571a88aaedf0159d078a0b112ee1779cea89c2dc4883a612ee12a23bf5eded4c"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/K18/K18-FORMAL-01.json",
+      "sha256": "571a88aaedf0159d078a0b112ee1779cea89c2dc4883a612ee12a23bf5eded4c",
+      "type": "REVIEWED_CANDIDATE_RECEIPT"
+    }
+  ],
+  "state": "QUALIFIED_LOCAL",
+  "receipt_type": "QUALIFIED_LOCAL",
+  "content_digest": "226df342527c026e3aea649ac2feb9924f3731432e2fa4763c3e287adc828f2f",
+  "reviewed_content_digest": "dfacac2cb72e97684993d4d9636f756a1446e0cfaabedd9accac083e3a93e2c6",
+  "consumed_tuple": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "K02",
+      "receipt_id": "TASK:K02:K02-FORMAL-03",
+      "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K02/K02-FORMAL-03.json",
+          "sha256": "5c6f1a7b0c5b271495370ce6cdc63ec595dcad6137f6b3a16ac90e3eece92713"
+        },
+        {
+          "path": "evidence/tasks/K02/K02-QUALIFICATION-01.json",
+          "sha256": "90b250a76d43dd836682428e682b69673cf4f63f54f27fc019f77ba549793da8"
+        }
+      ],
+      "qualification_receipt_id": "TASK:K02:K02-QUALIFICATION-01",
+      "qualification_scope": "LOCAL"
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "scope": "Exact reviewed restricted scope",
+  "scope_restriction": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "package_version": "0.1.0-domain-development-candidate-2",
+    "learning_core_manifest_sha256": "6f9b35f0bd6fc971186105c7378750e55d249682d8685a355602fca073a23402",
+    "evidence_manifest_sha256": "277d5c897103f5bde84ef3831b774d2bbd345d1c781c126b3cc612822bfcee9c",
+    "coverage_sha256": "41c34cdc8b6fa4713723b948e725e57a7e4273bf67374443316dbd57bd10a14d",
+    "candidate_claim_ids": [
+      "K18.01.01.D4.02",
+      "K18.01.01.DD.01",
+      "K18.01.02.D4.02",
+      "K18.01.02.DD.01",
+      "K18.01.03.D4.02",
+      "K18.01.03.DD.01",
+      "K18.01.04.D4.02",
+      "K18.01.04.DD.01",
+      "K18.01.05.D4.02",
+      "K18.01.05.DD.01",
+      "K18.02.01.D4.02",
+      "K18.02.01.DD.01",
+      "K18.02.02.D4.02",
+      "K18.02.02.DD.01",
+      "K18.02.03.D4.02",
+      "K18.02.03.DD.01",
+      "K18.02.04.D4.02",
+      "K18.02.04.DD.01",
+      "K18.03.01.D4.02",
+      "K18.03.01.DD.01",
+      "K18.03.01.DD.S01",
+      "K18.03.02.D4.02",
+      "K18.03.02.DD.01",
+      "K18.03.03.D4.02",
+      "K18.03.03.DD.01",
+      "K18.03.04.D4.01",
+      "K18.03.04.D4.02",
+      "K18.03.04.DD.01",
+      "K18.04.01.D4.02",
+      "K18.04.01.DD.01",
+      "K18.04.02.D4.02",
+      "K18.04.02.DD.01",
+      "K18.04.03.D4.02",
+      "K18.04.03.DD.01",
+      "K18.04.03.DD.S01",
+      "K18.05.01.D4.02",
+      "K18.05.01.DD.01",
+      "K18.05.02.D4.02",
+      "K18.05.02.DD.01",
+      "K18.05.03.D4.01",
+      "K18.05.03.D4.02",
+      "K18.05.03.DD.01"
+    ],
+    "excluded_hold_claim_ids": [
+      "K18.01.01.D4.01",
+      "K18.01.02.D4.01",
+      "K18.01.03.D4.01",
+      "K18.01.04.D4.01",
+      "K18.01.04.D4.03",
+      "K18.01.05.D4.01",
+      "K18.01.05.D4.03",
+      "K18.02.01.D4.01",
+      "K18.02.02.D4.01",
+      "K18.02.03.D4.01",
+      "K18.02.03.D4.03",
+      "K18.02.04.D4.01",
+      "K18.03.01.D4.01",
+      "K18.03.02.D4.01",
+      "K18.03.02.D4.03",
+      "K18.03.03.D4.01",
+      "K18.03.03.D4.03",
+      "K18.04.01.D4.01",
+      "K18.04.01.D4.03",
+      "K18.04.02.D4.01",
+      "K18.04.02.D4.03",
+      "K18.04.03.D4.01",
+      "K18.05.01.D4.01",
+      "K18.05.02.D4.01",
+      "K18.05.02.D4.03"
+    ],
+    "candidate_claim_count": 42,
+    "excluded_hold_claim_count": 25,
+    "source_limited_candidate_claim_ids": [
+      "K18.03.01.DD.S01",
+      "K18.04.03.DD.S01"
+    ],
+    "model_claim_ids": [],
+    "source_checked_topic_count": 2,
+    "topics_with_case_but_no_validation": 16,
+    "view_binding_policy": "RESEARCH_INPUT_NOT_ENTAILMENT_OR_QUALIFICATION",
+    "active_view_bindings": [
+      {
+        "topic": "K18.05.03",
+        "claim_id": "K18.05.03.D4.01",
+        "claim_status": "CANDIDATE",
+        "view": [
+          "F05",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/14/bindings/3"
+        ],
+        "disposition": "ACTIVE_BINDING_APPLICABILITY_REVIEW_PENDING"
+      },
+      {
+        "topic": "K18.05.03",
+        "claim_id": "K18.05.03.D4.01",
+        "claim_status": "CANDIDATE",
+        "view": [
+          "A07",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/24/bindings/2"
+        ],
+        "disposition": "ACTIVE_BINDING_APPLICABILITY_REVIEW_PENDING"
+      }
+    ],
+    "held_view_bindings": [],
+    "scope_ledger": "docs/implementation/kr03-05-batch/scope-ledger.json",
+    "scope_ledger_sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "permitted_use": "Two cited sleep/environment propositions and voluntary reversible support rules only. No diagnosis, clinical prediction, or inference about an individual from learning data.",
+    "limitations": [
+      "Candidate readiness is not independent qualification or unrestricted professional adequacy.",
+      "All HOLD claims and held view bindings are excluded from this candidate scope.",
+      "No source-rights clearance, publication, empirical learner-effect, or release claim.",
+      "CQ/LC remain NOT_RUN; historical semantic anchors and cross-version relation closure remain pending.",
+      "The 27 active cross-view bindings are research inputs only, not entailment or qualification."
+    ],
+    "upstream_restriction": "K02 is QUALIFIED_LOCAL; do not infer qualification of any other module.",
+    "historical_scope_ledger": "/tmp/learn-kg-kr01-r3.oKU3JS/docs/implementation/kr03-05-batch/scope-ledger.json",
+    "registration_limits": "Restricted local candidate only; no unrestricted source qualification, full D3 adequacy, canonical semantic closure, CQ/LC, rights, G03 or release. P3 source pinning and historical absolute path metadata remain unresolved."
+  },
+  "validation": {
+    "review_task_comment": 7222377071,
+    "review_result_comment": 7222775779,
+    "review_body_sha256": "af6e0aff718f4f5cc70d0e1cdd5d551b782e60984db0e2f87d7a6f0836cf75eb",
+    "tree": "09d95f994f989fbe07cc7e4c48bdc13cc09d5e14",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 2,
+    "previous_p2_closed_scoped": 2,
+    "verdict": "QUALIFIED_LOCAL_RESTRICTED"
+  },
+  "issues": [
+    "Restricted local candidate only; no unrestricted source qualification, full D3 adequacy, canonical semantic closure, CQ/LC, rights, G03 or release. P3 source pinning and historical absolute path metadata remain unresolved."
+  ],
+  "next": "G03 exact restricted scope closure required."
+}

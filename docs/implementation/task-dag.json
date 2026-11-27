@@ -416,7 +416,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR03",
       "current_receipt": "evidence/tasks/K09/K09-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K09/K09-QUALIFICATION-01.json"
     },
     {
       "id": "K10",
@@ -454,7 +455,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR03",
       "current_receipt": "evidence/tasks/K10/K10-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K10/K10-QUALIFICATION-01.json"
     },
     {
       "id": "K11",
@@ -497,7 +499,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR03",
       "current_receipt": "evidence/tasks/K11/K11-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K11/K11-QUALIFICATION-01.json"
     },
     {
       "id": "K12",
@@ -540,7 +543,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR03",
       "current_receipt": "evidence/tasks/K12/K12-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K12/K12-QUALIFICATION-01.json"
     },
     {
       "id": "K13",
@@ -568,7 +572,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR04",
       "current_receipt": "evidence/tasks/K13/K13-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K13/K13-QUALIFICATION-01.json"
     },
     {
       "id": "K14",
@@ -606,7 +611,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR04",
       "current_receipt": "evidence/tasks/K14/K14-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K14/K14-QUALIFICATION-01.json"
     },
     {
       "id": "K15",
@@ -644,7 +650,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR04",
       "current_receipt": "evidence/tasks/K15/K15-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K15/K15-QUALIFICATION-01.json"
     },
     {
       "id": "K16",
@@ -682,7 +689,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR04",
       "current_receipt": "evidence/tasks/K16/K16-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K16/K16-QUALIFICATION-01.json"
     },
     {
       "id": "K17",
@@ -710,7 +718,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR05",
       "current_receipt": "evidence/tasks/K17/K17-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K17/K17-QUALIFICATION-01.json"
     },
     {
       "id": "K18",
@@ -743,7 +752,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR05",
       "current_receipt": "evidence/tasks/K18/K18-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K18/K18-QUALIFICATION-01.json"
     },
     {
       "id": "K19",
@@ -781,7 +791,8 @@
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR05",
       "current_receipt": "evidence/tasks/K19/K19-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/K19/K19-QUALIFICATION-01.json"
     },
     {
       "id": "KR01",
@@ -870,7 +881,7 @@
       "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
       "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "READY",
+      "status": "QUALIFICATION_RECEIPTS",
       "requirements": [
         {
           "task_id": "K09",
@@ -889,7 +900,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "QUALIFICATION_RECEIPTS"
+      "output_receipt": "QUALIFICATION_RECEIPTS",
+      "current_receipt": "evidence/tasks/KR03/KR03-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "KR04",
@@ -905,7 +918,7 @@
       "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
       "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "READY",
+      "status": "QUALIFICATION_RECEIPTS",
       "requirements": [
         {
           "task_id": "K13",
@@ -924,7 +937,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "QUALIFICATION_RECEIPTS"
+      "output_receipt": "QUALIFICATION_RECEIPTS",
+      "current_receipt": "evidence/tasks/KR04/KR04-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "KR05",
@@ -939,7 +954,7 @@
       "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
       "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "READY",
+      "status": "QUALIFICATION_RECEIPTS",
       "requirements": [
         {
           "task_id": "K17",
@@ -954,7 +969,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "QUALIFICATION_RECEIPTS"
+      "output_receipt": "QUALIFICATION_RECEIPTS",
+      "current_receipt": "evidence/tasks/KR05/KR05-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "H01",
@@ -3527,7 +3544,7 @@
       "status": "BUILDER_CORRECTED_STRUCTURAL_CHECKS_PASS",
       "disposition": "G03 requires V01 and DB03 CANDIDATE_READY receipts; G04 independently freezes actual evidence."
     },
-    "current_task_state_note": "K01–K19 current candidate receipts; KR01/KR02 restricted/local qualifications retained; KR03–KR05 ready for batch review; P01 restricted candidate; P02/P03 etc only as exact requirements allow. SRC01 blocked.",
+    "current_task_state_note": "K01–K19 local/restricted qualifications registered, KR01–KR05 receipts current. P01–P03 restricted candidates, P04/P07 READY. No global gate or source/rights/CQ/LC closure.",
     "source_evidence_restriction": {
       "path": "docs/implementation/source-evidence-correction/trace-disposition.json",
       "sha256": "fe267d992a90e2535e3635744c36923b90fe2978d083ca497d3ed1171532c3f8",
