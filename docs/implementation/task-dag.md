@@ -133,3 +133,7 @@ Independent ACCEPT_SCOPED #6 comment 7214923937 / #2 7214924825, exact HEAD 607a
 ### DB02 scoped candidate
 
 DB02 CANDIDATE_READY (FORMAL-01; 33/33 builder tests, 38 record kinds, exact replay); V00 READY. Candidate research only, no persistent SQLite or release/approval authority.
+
+### V00 finite prototype
+
+V00 CANDIDATE_READY (FORMAL-01; 12/12 synthetic flow cases, byte-identical exact replay, DB02 33/33). No CQ/LC, learner or final qualification. V01 waits for remaining receipts.

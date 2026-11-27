@@ -1,0 +1,89 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-v00-20261127",
+  "branch": "version/v0.1.0",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "planning_authority": {
+    "exact_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+    "review_comment": 7211695681
+  },
+  "task_id": "V00",
+  "attempt_id": "V00-FORMAL-01",
+  "receipt_id": "TASK:V00:V00-FORMAL-01",
+  "role": "BUILDER_NON_REVIEWER",
+  "base": "3db17e22417b14251d6c073812a36d05fddd9f4d",
+  "exact_head": "def2372fc9db4cce7c90e8ad14e0e2a6f9d2bd50",
+  "version": "def2372fc9db4cce7c90e8ad14e0e2a6f9d2bd50",
+  "input": [
+    {
+      "task_id": "DB02",
+      "receipt_id": "TASK:DB02:DB02-FORMAL-01",
+      "content_digest": "cea96c131b002f2c4908bd18111665eca0abad2259b2d30963020502a9ea673f",
+      "version": "2a644511c1373a8ccd17155d8dfac52ebfd6ce8e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB02/DB02-FORMAL-01.json",
+          "sha256": "352aa43f6e4039c92aba0c80235ef92325bd2bc3ac1419805bc09c5ec0a76130"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/v00/README.md",
+      "sha256": "8811af781ce10124f646e3c424ce243b118df8e87ccd6fb30a205fff9c5d6adc",
+      "type": "MARKDOWN"
+    },
+    {
+      "path": "docs/implementation/v00/fixtures.json",
+      "sha256": "8c7dffbfe22638b23dbc1eff17f13207ef925f7ad1f1b04d8a4389afe4862820",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/v00/results.json",
+      "sha256": "7aaf2866ff50e5f70e03dc46726429e22dde6b81c8db966ec85a442cc113f421",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "tools/knowledge_import/v00_prototype.py",
+      "sha256": "8cd56588094433358a687102a48ab815c220f8427de6f7ab36f2c4f6b74e8b5c",
+      "type": "PYTHON_TOOL"
+    }
+  ],
+  "content_digest": "90cd75ab087b2f4b11e98c292d0ea7b77d63fa39f9ae788d6771530b5580d443",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "validation": {
+    "actual_success_job": "job_01M8ECN2BC00VDAQS4E3E610C6",
+    "exact_checkout_replay_job": "job_01M8ECNKT300E3WM0EHE6SD3AK",
+    "tree": "69c46d3ce2655058f788a35a7ef3714e0eee0155",
+    "python": "3.12.3",
+    "sqlite": "3.45.1",
+    "fixtures": 12,
+    "result": "12/12 PASS_BUILDER_ONLY",
+    "replay_byte_identity": "MATCH",
+    "db02_regression": "33/33 PASS",
+    "persistent_sqlite": false,
+    "independent_oracle": "NOT_RUN",
+    "CQ_LC": "NOT_RUN"
+  },
+  "issues": [
+    "Synthetic bounded two-step acyclic flow; only ALL boolean EQ and numeric GE supported, no generic engine, real learner data or actual learning effectiveness.",
+    "No professional qualification, final CQ/LC acceptance or release authority. V01/V02 remain separate."
+  ],
+  "next": "V01 waits for all remaining declared prerequisites."
+}
