@@ -561,5 +561,35 @@
       "own_performance": true
     },
     "expected": "HOLD"
+  },
+  {
+    "id": "X42",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X43",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 1,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "HOLD"
   }
 ]

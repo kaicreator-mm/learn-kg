@@ -21,10 +21,10 @@ This is a shared knowledge-package execution contract, not a claim that a generi
 ## P2-02 — self-contained cross adapter and fail-closed domains
 
 - X01 now carries explicit p/s/g/t values and a canonical parameter-preset digest; its 41/50 output is derived only from those fixture inputs and the bound BKT ModelSpec.
-- Schedule adapter rejects booleans/non-numeric inputs, target outside [0,1], negative budget/cost, and nonpositive half-life; the half-life rule is enforced by the shared ModelSpec guard.
+- Schedule adapter rejects booleans/non-numeric inputs, target outside (0,1), negative budget/cost, and nonpositive half-life; the half-life rule is enforced by the shared ModelSpec guard.
 - Transfer adapter requires a positive integer day count (booleans, strings and floats HOLD), strict boolean flags and nonempty target identities.
-- Added invalid X29–X41 fixtures covering target=2, negative budget/cost, boolean half-life/cost/target, days=true, days="1", days=0, days=1.0, and invalid BKT probability/boolean parameters.
-- Builder replay: 41/41 cross fixtures; 36 exact source/receipt bindings retained.
+- Added invalid X29–X41 fixtures covering target=2, negative budget/cost, boolean half-life/cost/target, days=true, days="1", days=0, days=1.0, and invalid BKT probability/boolean parameters. X42–X43 additionally reject both target endpoints.
+- Builder replay: 43/43 cross fixtures; 36 exact source/receipt bindings retained.
 
 These are bounded synthetic adapter tests only. Cross-version bindings are not canonical graph edges or generic runtime guarantees.
 

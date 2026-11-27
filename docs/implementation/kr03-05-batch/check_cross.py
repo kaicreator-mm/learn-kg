@@ -57,7 +57,7 @@ def evaluate(mode,x,recs):
   try:
    v={k:strict_number(x[k]) for k in ('half_life','lag')}
    target=strict_number(x['target']);budget=strict_number(x['budget']);cost=strict_number(x['cost'])
-   if target<0 or target>1 or budget<0 or cost<0:return 'HOLD'
+   if target<=0 or target>=1 or budget<0 or cost<0:return 'HOLD'
    m=recs['K10.HLR.FIXED']
    validate_model_parameters(m,v,DOMAIN,model_id='K10.HLR.FIXED')
    p=ast(m['formulas'][0]['expr'],v)

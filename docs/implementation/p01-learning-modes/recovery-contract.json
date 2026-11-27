@@ -1,0 +1,95 @@
+{
+  "schema_version": "learn-kg-p01-recovery-1",
+  "status": "CANDIDATE",
+  "states": [
+    "OFFERED",
+    "SELECTED",
+    "ACTIVE",
+    "PAUSED",
+    "COMPLETE",
+    "STOPPED",
+    "HELD",
+    "FAILED"
+  ],
+  "transitions": [
+    {
+      "from": "OFFERED",
+      "to": "SELECTED",
+      "event": "LEARNER_SELECTS_MODE",
+      "guard": "learner_opt_in AND goal_match AND accessibility_ready"
+    },
+    {
+      "from": "SELECTED",
+      "to": "ACTIVE",
+      "event": "START",
+      "guard": "exact mode-flow binding and valid inputs"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "PAUSED",
+      "event": "PAUSE_REQUESTED",
+      "guard": "learner requested pause"
+    },
+    {
+      "from": "PAUSED",
+      "to": "ACTIVE",
+      "event": "RESUME_REQUESTED",
+      "guard": "explicit learner resume AND same mode AND valid checkpoint AND idempotency key AND remaining budget"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "COMPLETE",
+      "event": "COMPLETE",
+      "guard": "required evidence recorded and scope unchanged"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "STOPPED",
+      "event": "STOP_REQUESTED",
+      "guard": "learner stop; no automatic resume"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "HELD",
+      "event": "UNKNOWN_OR_MISSING",
+      "guard": "unknown input, missing evidence or invalid condition"
+    },
+    {
+      "from": "ACTIVE",
+      "to": "FAILED",
+      "event": "INVARIANT_VIOLATION",
+      "guard": "invalid state transition or corrupted checkpoint"
+    }
+  ],
+  "resume": {
+    "preserve": [
+      "mode_id",
+      "flow_id",
+      "current_step",
+      "budget_remaining",
+      "committed_evidence_ids"
+    ],
+    "require": [
+      "learner_resume=true",
+      "same_mode=true",
+      "checkpoint_valid=true",
+      "duplicate_event=false"
+    ],
+    "new_execution": true
+  },
+  "idempotency": {
+    "key_fields": [
+      "flow_id",
+      "checkpoint_id",
+      "event_id"
+    ],
+    "duplicate_event": "NO_DUPLICATE_SIDE_EFFECT"
+  },
+  "limits": [
+    "PAUSE is resumable only through a new explicit invocation using the same checkpoint.",
+    "STOPPED, HELD and FAILED are not auto-resumed.",
+    "Unknown state is HOLD; no implicit fallback mode.",
+    "max_events and activity budgets remain bounded.",
+    "No knowledge write, diagnosis or learning-effect assertion."
+  ]
+}

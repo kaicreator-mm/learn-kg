@@ -1,0 +1,512 @@
+[
+  {
+    "case_id": "CASE_GUIDED_CONCEPT_PRACTICE_FORWARD_01",
+    "mode_id": "GUIDED_CONCEPT_PRACTICE",
+    "view": "FORWARD",
+    "input": {
+      "mode_id": "GUIDED_CONCEPT_PRACTICE",
+      "learner_opt_in": true,
+      "goal_match": true,
+      "accessibility_ready": true,
+      "identity_used": false,
+      "unknown_input": false,
+      "assisted_evidence": {
+        "evidence_id": "A1",
+        "support": "HINTED"
+      },
+      "independent_evidence": {
+        "evidence_id": "I1",
+        "support": "NONE"
+      }
+    },
+    "expected": "COMPLETE_WITH_DISTINCT_EVIDENCE"
+  },
+  {
+    "case_id": "CASE_GUIDED_CONCEPT_PRACTICE_REVERSE_02",
+    "mode_id": "GUIDED_CONCEPT_PRACTICE",
+    "view": "REVERSE",
+    "input": {
+      "mode_id": "GUIDED_CONCEPT_PRACTICE",
+      "pause_requested": true,
+      "learner_resume": true,
+      "checkpoint_valid": true,
+      "same_mode": true,
+      "duplicate_event": false,
+      "budget_remaining": 1
+    },
+    "expected": "RESUME_SAME_CHECKPOINT_NO_DUPLICATE"
+  },
+  {
+    "case_id": "CASE_GUIDED_CONCEPT_PRACTICE_INTERVENTION_03",
+    "mode_id": "GUIDED_CONCEPT_PRACTICE",
+    "view": "INTERVENTION",
+    "input": {
+      "mode_id": "GUIDED_CONCEPT_PRACTICE",
+      "retry_requested": true,
+      "learner_opt_in": true,
+      "budget_remaining": 1
+    },
+    "expected": "RETRY_CONSUMES_ONE_BUDGET"
+  },
+  {
+    "case_id": "CASE_GUIDED_CONCEPT_PRACTICE_COUNTEREXAMPLE_04",
+    "mode_id": "GUIDED_CONCEPT_PRACTICE",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "GUIDED_CONCEPT_PRACTICE",
+      "learner_opt_in": false,
+      "identity_used": false,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_GUIDED_CONCEPT_PRACTICE_COUNTEREXAMPLE_05",
+    "mode_id": "GUIDED_CONCEPT_PRACTICE",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "GUIDED_CONCEPT_PRACTICE",
+      "learner_opt_in": true,
+      "identity_used": true,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_GUIDED_CONCEPT_PRACTICE_COMPOSITION_06",
+    "mode_id": "GUIDED_CONCEPT_PRACTICE",
+    "view": "COMPOSITION",
+    "input": {
+      "mode_id": "GUIDED_CONCEPT_PRACTICE",
+      "cross_mode_switch_requested": true,
+      "current_mode_paused": false,
+      "learner_selected_new_mode": false
+    },
+    "expected": "PAUSE_REQUIRE_EXPLICIT_NEW_SELECTION"
+  },
+  {
+    "case_id": "CASE_RETRIEVAL_SPACED_REVIEW_FORWARD_01",
+    "mode_id": "RETRIEVAL_SPACED_REVIEW",
+    "view": "FORWARD",
+    "input": {
+      "mode_id": "RETRIEVAL_SPACED_REVIEW",
+      "learner_opt_in": true,
+      "goal_match": true,
+      "accessibility_ready": true,
+      "identity_used": false,
+      "unknown_input": false,
+      "assisted_evidence": {
+        "evidence_id": "A1",
+        "support": "HINTED"
+      },
+      "independent_evidence": {
+        "evidence_id": "I1",
+        "support": "NONE"
+      }
+    },
+    "expected": "COMPLETE_WITH_DISTINCT_EVIDENCE"
+  },
+  {
+    "case_id": "CASE_RETRIEVAL_SPACED_REVIEW_REVERSE_02",
+    "mode_id": "RETRIEVAL_SPACED_REVIEW",
+    "view": "REVERSE",
+    "input": {
+      "mode_id": "RETRIEVAL_SPACED_REVIEW",
+      "pause_requested": true,
+      "learner_resume": true,
+      "checkpoint_valid": true,
+      "same_mode": true,
+      "duplicate_event": false,
+      "budget_remaining": 1
+    },
+    "expected": "RESUME_SAME_CHECKPOINT_NO_DUPLICATE"
+  },
+  {
+    "case_id": "CASE_RETRIEVAL_SPACED_REVIEW_INTERVENTION_03",
+    "mode_id": "RETRIEVAL_SPACED_REVIEW",
+    "view": "INTERVENTION",
+    "input": {
+      "mode_id": "RETRIEVAL_SPACED_REVIEW",
+      "retry_requested": true,
+      "learner_opt_in": true,
+      "budget_remaining": 1
+    },
+    "expected": "RETRY_CONSUMES_ONE_BUDGET"
+  },
+  {
+    "case_id": "CASE_RETRIEVAL_SPACED_REVIEW_COUNTEREXAMPLE_04",
+    "mode_id": "RETRIEVAL_SPACED_REVIEW",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "RETRIEVAL_SPACED_REVIEW",
+      "learner_opt_in": false,
+      "identity_used": false,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_RETRIEVAL_SPACED_REVIEW_COUNTEREXAMPLE_05",
+    "mode_id": "RETRIEVAL_SPACED_REVIEW",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "RETRIEVAL_SPACED_REVIEW",
+      "learner_opt_in": true,
+      "identity_used": true,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_RETRIEVAL_SPACED_REVIEW_COMPOSITION_06",
+    "mode_id": "RETRIEVAL_SPACED_REVIEW",
+    "view": "COMPOSITION",
+    "input": {
+      "mode_id": "RETRIEVAL_SPACED_REVIEW",
+      "cross_mode_switch_requested": true,
+      "current_mode_paused": false,
+      "learner_selected_new_mode": false
+    },
+    "expected": "PAUSE_REQUIRE_EXPLICIT_NEW_SELECTION"
+  },
+  {
+    "case_id": "CASE_DELIBERATE_SKILL_PRACTICE_FORWARD_01",
+    "mode_id": "DELIBERATE_SKILL_PRACTICE",
+    "view": "FORWARD",
+    "input": {
+      "mode_id": "DELIBERATE_SKILL_PRACTICE",
+      "learner_opt_in": true,
+      "goal_match": true,
+      "accessibility_ready": true,
+      "identity_used": false,
+      "unknown_input": false,
+      "assisted_evidence": {
+        "evidence_id": "A1",
+        "support": "HINTED"
+      },
+      "independent_evidence": {
+        "evidence_id": "I1",
+        "support": "NONE"
+      }
+    },
+    "expected": "COMPLETE_WITH_DISTINCT_EVIDENCE"
+  },
+  {
+    "case_id": "CASE_DELIBERATE_SKILL_PRACTICE_REVERSE_02",
+    "mode_id": "DELIBERATE_SKILL_PRACTICE",
+    "view": "REVERSE",
+    "input": {
+      "mode_id": "DELIBERATE_SKILL_PRACTICE",
+      "pause_requested": true,
+      "learner_resume": true,
+      "checkpoint_valid": true,
+      "same_mode": true,
+      "duplicate_event": false,
+      "budget_remaining": 1
+    },
+    "expected": "RESUME_SAME_CHECKPOINT_NO_DUPLICATE"
+  },
+  {
+    "case_id": "CASE_DELIBERATE_SKILL_PRACTICE_INTERVENTION_03",
+    "mode_id": "DELIBERATE_SKILL_PRACTICE",
+    "view": "INTERVENTION",
+    "input": {
+      "mode_id": "DELIBERATE_SKILL_PRACTICE",
+      "retry_requested": true,
+      "learner_opt_in": true,
+      "budget_remaining": 1
+    },
+    "expected": "RETRY_CONSUMES_ONE_BUDGET"
+  },
+  {
+    "case_id": "CASE_DELIBERATE_SKILL_PRACTICE_COUNTEREXAMPLE_04",
+    "mode_id": "DELIBERATE_SKILL_PRACTICE",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "DELIBERATE_SKILL_PRACTICE",
+      "learner_opt_in": false,
+      "identity_used": false,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_DELIBERATE_SKILL_PRACTICE_COUNTEREXAMPLE_05",
+    "mode_id": "DELIBERATE_SKILL_PRACTICE",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "DELIBERATE_SKILL_PRACTICE",
+      "learner_opt_in": true,
+      "identity_used": true,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_DELIBERATE_SKILL_PRACTICE_COMPOSITION_06",
+    "mode_id": "DELIBERATE_SKILL_PRACTICE",
+    "view": "COMPOSITION",
+    "input": {
+      "mode_id": "DELIBERATE_SKILL_PRACTICE",
+      "cross_mode_switch_requested": true,
+      "current_mode_paused": false,
+      "learner_selected_new_mode": false
+    },
+    "expected": "PAUSE_REQUIRE_EXPLICIT_NEW_SELECTION"
+  },
+  {
+    "case_id": "CASE_SELF_REGULATED_STUDY_FORWARD_01",
+    "mode_id": "SELF_REGULATED_STUDY",
+    "view": "FORWARD",
+    "input": {
+      "mode_id": "SELF_REGULATED_STUDY",
+      "learner_opt_in": true,
+      "goal_match": true,
+      "accessibility_ready": true,
+      "identity_used": false,
+      "unknown_input": false,
+      "assisted_evidence": {
+        "evidence_id": "A1",
+        "support": "HINTED"
+      },
+      "independent_evidence": {
+        "evidence_id": "I1",
+        "support": "NONE"
+      }
+    },
+    "expected": "COMPLETE_WITH_DISTINCT_EVIDENCE"
+  },
+  {
+    "case_id": "CASE_SELF_REGULATED_STUDY_REVERSE_02",
+    "mode_id": "SELF_REGULATED_STUDY",
+    "view": "REVERSE",
+    "input": {
+      "mode_id": "SELF_REGULATED_STUDY",
+      "pause_requested": true,
+      "learner_resume": true,
+      "checkpoint_valid": true,
+      "same_mode": true,
+      "duplicate_event": false,
+      "budget_remaining": 1
+    },
+    "expected": "RESUME_SAME_CHECKPOINT_NO_DUPLICATE"
+  },
+  {
+    "case_id": "CASE_SELF_REGULATED_STUDY_INTERVENTION_03",
+    "mode_id": "SELF_REGULATED_STUDY",
+    "view": "INTERVENTION",
+    "input": {
+      "mode_id": "SELF_REGULATED_STUDY",
+      "retry_requested": true,
+      "learner_opt_in": true,
+      "budget_remaining": 1
+    },
+    "expected": "RETRY_CONSUMES_ONE_BUDGET"
+  },
+  {
+    "case_id": "CASE_SELF_REGULATED_STUDY_COUNTEREXAMPLE_04",
+    "mode_id": "SELF_REGULATED_STUDY",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "SELF_REGULATED_STUDY",
+      "learner_opt_in": false,
+      "identity_used": false,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_SELF_REGULATED_STUDY_COUNTEREXAMPLE_05",
+    "mode_id": "SELF_REGULATED_STUDY",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "SELF_REGULATED_STUDY",
+      "learner_opt_in": true,
+      "identity_used": true,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_SELF_REGULATED_STUDY_COMPOSITION_06",
+    "mode_id": "SELF_REGULATED_STUDY",
+    "view": "COMPOSITION",
+    "input": {
+      "mode_id": "SELF_REGULATED_STUDY",
+      "cross_mode_switch_requested": true,
+      "current_mode_paused": false,
+      "learner_selected_new_mode": false
+    },
+    "expected": "PAUSE_REQUIRE_EXPLICIT_NEW_SELECTION"
+  },
+  {
+    "case_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_FORWARD_01",
+    "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+    "view": "FORWARD",
+    "input": {
+      "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+      "learner_opt_in": true,
+      "goal_match": true,
+      "accessibility_ready": true,
+      "identity_used": false,
+      "unknown_input": false,
+      "assisted_evidence": {
+        "evidence_id": "A1",
+        "support": "HINTED"
+      },
+      "independent_evidence": {
+        "evidence_id": "I1",
+        "support": "NONE"
+      }
+    },
+    "expected": "COMPLETE_WITH_DISTINCT_EVIDENCE"
+  },
+  {
+    "case_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_REVERSE_02",
+    "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+    "view": "REVERSE",
+    "input": {
+      "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+      "pause_requested": true,
+      "learner_resume": true,
+      "checkpoint_valid": true,
+      "same_mode": true,
+      "duplicate_event": false,
+      "budget_remaining": 1
+    },
+    "expected": "RESUME_SAME_CHECKPOINT_NO_DUPLICATE"
+  },
+  {
+    "case_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_INTERVENTION_03",
+    "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+    "view": "INTERVENTION",
+    "input": {
+      "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+      "retry_requested": true,
+      "learner_opt_in": true,
+      "budget_remaining": 1
+    },
+    "expected": "RETRY_CONSUMES_ONE_BUDGET"
+  },
+  {
+    "case_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_COUNTEREXAMPLE_04",
+    "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+      "learner_opt_in": false,
+      "identity_used": false,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_COUNTEREXAMPLE_05",
+    "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+      "learner_opt_in": true,
+      "identity_used": true,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_COMPOSITION_06",
+    "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+    "view": "COMPOSITION",
+    "input": {
+      "mode_id": "COLLABORATIVE_DIALOGIC_STUDY",
+      "cross_mode_switch_requested": true,
+      "current_mode_paused": false,
+      "learner_selected_new_mode": false
+    },
+    "expected": "PAUSE_REQUIRE_EXPLICIT_NEW_SELECTION"
+  },
+  {
+    "case_id": "CASE_INTEGRATED_PROJECT_TRANSFER_FORWARD_01",
+    "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+    "view": "FORWARD",
+    "input": {
+      "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+      "learner_opt_in": true,
+      "goal_match": true,
+      "accessibility_ready": true,
+      "identity_used": false,
+      "unknown_input": false,
+      "assisted_evidence": {
+        "evidence_id": "A1",
+        "support": "HINTED"
+      },
+      "independent_evidence": {
+        "evidence_id": "I1",
+        "support": "NONE"
+      }
+    },
+    "expected": "COMPLETE_WITH_DISTINCT_EVIDENCE"
+  },
+  {
+    "case_id": "CASE_INTEGRATED_PROJECT_TRANSFER_REVERSE_02",
+    "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+    "view": "REVERSE",
+    "input": {
+      "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+      "pause_requested": true,
+      "learner_resume": true,
+      "checkpoint_valid": true,
+      "same_mode": true,
+      "duplicate_event": false,
+      "budget_remaining": 1
+    },
+    "expected": "RESUME_SAME_CHECKPOINT_NO_DUPLICATE"
+  },
+  {
+    "case_id": "CASE_INTEGRATED_PROJECT_TRANSFER_INTERVENTION_03",
+    "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+    "view": "INTERVENTION",
+    "input": {
+      "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+      "retry_requested": true,
+      "learner_opt_in": true,
+      "budget_remaining": 1
+    },
+    "expected": "RETRY_CONSUMES_ONE_BUDGET"
+  },
+  {
+    "case_id": "CASE_INTEGRATED_PROJECT_TRANSFER_COUNTEREXAMPLE_04",
+    "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+      "learner_opt_in": false,
+      "identity_used": false,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_INTEGRATED_PROJECT_TRANSFER_COUNTEREXAMPLE_05",
+    "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+    "view": "COUNTEREXAMPLE",
+    "input": {
+      "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+      "learner_opt_in": true,
+      "identity_used": true,
+      "unknown_input": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "case_id": "CASE_INTEGRATED_PROJECT_TRANSFER_COMPOSITION_06",
+    "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+    "view": "COMPOSITION",
+    "input": {
+      "mode_id": "INTEGRATED_PROJECT_TRANSFER",
+      "cross_mode_switch_requested": true,
+      "current_mode_paused": false,
+      "learner_selected_new_mode": false
+    },
+    "expected": "PAUSE_REQUIRE_EXPLICIT_NEW_SELECTION"
+  }
+]

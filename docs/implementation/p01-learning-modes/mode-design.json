@@ -1,0 +1,357 @@
+{
+  "schema_version": "learn-kg-p01-mode-design-1",
+  "modes": [
+    {
+      "id": "GUIDED_CONCEPT_PRACTICE",
+      "label": "引导式概念练习",
+      "purpose": "围绕学习者选择的概念目标，组合目标确认、示范、引导练习、独立检查与反思。",
+      "skill": "SKILL_CONCEPTUAL_TASK",
+      "claims": [
+        "K06.01.02.D4.01",
+        "K06.06.01.D4.01",
+        "K06.06.02.D4.01",
+        "K07.02.04.D4.01",
+        "K07.04.01.D4.01",
+        "K08.04.01.D4.01"
+      ],
+      "topics": [
+        "K05.04",
+        "K05.05",
+        "K06.01",
+        "K06.02",
+        "K06.06",
+        "K07.01",
+        "K07.02",
+        "K07.04"
+      ],
+      "switch": "仅在学习者请求、可访问性失效或学习者同意的替代建议后暂停当前模式，再由学习者明确选择新模式。",
+      "boundaries": [
+        "不将示范后一次正确响应等同掌握。",
+        "掌握标准必须是当前目标和任务特定的，不映射为通用能力等级。"
+      ]
+    },
+    {
+      "id": "RETRIEVAL_SPACED_REVIEW",
+      "label": "提取与间隔复习",
+      "purpose": "以无提示提取、辅助反馈和可调整的后续复习安排支持当前目标；不预设统一间隔。",
+      "skill": "SKILL_RETRIEVAL_TASK",
+      "claims": [
+        "K05.01.01.D4.01",
+        "K05.02.01.D4.01",
+        "K05.02.04.D4.01",
+        "K06.06.01.D4.01",
+        "K08.04.04.D4.01"
+      ],
+      "topics": [
+        "K05.01",
+        "K05.02",
+        "K05.06",
+        "K06.06",
+        "K08.04"
+      ],
+      "switch": "当学习者请求改变节奏、材料或活动时，先暂停并保留复习检查点；后续间隔必须重新确认，不自动套用固定计划。",
+      "boundaries": [
+        "不把再认当作自由回忆。",
+        "不宣称对所有材料和延迟都存在同一最佳间隔。",
+        "辅助响应与无提示独立响应分别记录。"
+      ]
+    },
+    {
+      "id": "DELIBERATE_SKILL_PRACTICE",
+      "label": "刻意技能练习",
+      "purpose": "将目标限定为可观察的子技能任务，使用有限尝试、任务/过程反馈和独立检查。",
+      "skill": "SKILL_TASK_PERFORMANCE",
+      "claims": [
+        "K05.03.01.R9.S01",
+        "K06.06.02.D4.01",
+        "K06.06.04.D4.01",
+        "K07.04.01.D4.01",
+        "K07.04.03.D4.01"
+      ],
+      "topics": [
+        "K05.03",
+        "K06.03",
+        "K06.06",
+        "K07.04"
+      ],
+      "switch": "预算耗尽、目标不匹配或学习者请求改变策略时暂停；不得将重试次数扩展为无限循环。",
+      "boundaries": [
+        "反馈描述任务和过程，不贴人格或能力标签。",
+        "一次子技能任务的结果不推广为整个领域能力。"
+      ]
+    },
+    {
+      "id": "SELF_REGULATED_STUDY",
+      "label": "自我调节学习",
+      "purpose": "支持学习者设定当前目标、选择策略、监控过程并进行反思；由学习者决定是否采纳建议。",
+      "skill": "SKILL_SELF_REGULATION",
+      "claims": [
+        "K08.01.01.R9.S01",
+        "K08.02.01.D4.01",
+        "K08.03.01.D4.03",
+        "K08.03.03.D4.01",
+        "K08.04.01.D4.01",
+        "K08.04.02.D4.01",
+        "K08.04.04.D4.01",
+        "K08.04.05.D4.01",
+        "K08.05.04.R9.S01",
+        "K07.05.02.D4.01"
+      ],
+      "topics": [
+        "K05.06",
+        "K06.01",
+        "K07.05",
+        "K08.01",
+        "K08.02",
+        "K08.03",
+        "K08.04",
+        "K08.05"
+      ],
+      "switch": "当学习者不希望继续自我监控、报告负担过高或目标改变时，允许暂停、降低记录粒度或改选其他模式。",
+      "boundaries": [
+        "自我报告是主观信息，不是客观表现或临床评估。",
+        "不推断人格、动机特质、心理健康或稳定自我效能。"
+      ]
+    },
+    {
+      "id": "COLLABORATIVE_DIALOGIC_STUDY",
+      "label": "协作对话学习",
+      "purpose": "在自愿参与和明确任务边界下组织同伴解释、对话、反馈及个人退出检查。",
+      "skill": "SKILL_DIALOGIC_REASONING",
+      "claims": [
+        "K06.06.02.D4.01",
+        "K08.06.03.R9.S01",
+        "K13.02.01.SR.S01",
+        "K13.02.02.SR.S01",
+        "K13.02.04.SR.S01"
+      ],
+      "topics": [
+        "K06.05",
+        "K06.07",
+        "K08.02",
+        "K08.06",
+        "K13.01",
+        "K13.02",
+        "K13.03",
+        "K13.04",
+        "K13.05"
+      ],
+      "switch": "所有参与者可退出或暂停；语言、文化工具和群体安排由参与者明确选择，不按身份自动分组。",
+      "boundaries": [
+        "K13来源命题仅按受限候选范围使用，不作身份推断或因果诊断。",
+        "群体讨论表现不替代个人独立检查。",
+        "不得强迫披露个人文化、语言或家庭背景。"
+      ]
+    },
+    {
+      "id": "INTEGRATED_PROJECT_TRANSFER",
+      "label": "综合项目与迁移练习",
+      "purpose": "将多个已明确的任务组件整合为项目，并在指定的新任务中单独观察表现。",
+      "skill": "SKILL_TRANSFER_TASK",
+      "claims": [
+        "K05.03.01.R9.S01",
+        "K05.05.04.R9.S01",
+        "K06.04.03.R9.S01",
+        "K07.04.03.D4.01",
+        "K08.04.05.D4.01",
+        "K13.02.04.SR.S01"
+      ],
+      "topics": [
+        "K05.03",
+        "K05.05",
+        "K06.04",
+        "K07.02",
+        "K07.04",
+        "K08.04",
+        "K13.02",
+        "K13.05"
+      ],
+      "switch": "项目范围、资源或新任务条件变化时暂停并重新确认；不得在未重新授权时扩大任务范围。",
+      "boundaries": [
+        "单一新任务只形成该任务的观察记录，不证明一般迁移。",
+        "发现学习/项目模式不被解释为无指导条件下必然有效。",
+        "文化回应只作为学习者选择的上下文，不推断个人身份。"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "ROLE_LEARNER",
+      "label": "学习者",
+      "claims": [
+        "K08.04.01.D4.01",
+        "K08.04.05.D4.01"
+      ],
+      "cap": [
+        "能够理解当前目标、选择或拒绝模式，并发出暂停/停止/切换请求。"
+      ],
+      "perm": [
+        "SELECT_MODE",
+        "DECLINE_MODE",
+        "PAUSE",
+        "STOP",
+        "REQUEST_SWITCH",
+        "REVIEW_OWN_EVIDENCE"
+      ]
+    },
+    {
+      "id": "ROLE_FACILITATOR",
+      "label": "教师或促进者",
+      "claims": [
+        "K06.06.02.D4.01",
+        "K06.07.02.D4.01"
+      ],
+      "cap": [
+        "能够解释任务、提供任务/过程反馈并审查任务证据。"
+      ],
+      "perm": [
+        "OFFER_ALTERNATIVE",
+        "EXPLAIN_TASK",
+        "PROVIDE_TASK_FEEDBACK",
+        "REVIEW_TASK_EVIDENCE"
+      ]
+    },
+    {
+      "id": "ROLE_ORCHESTRATOR",
+      "label": "流程编排器",
+      "claims": [
+        "K07.05.02.D4.01",
+        "K06.07.04.R9.S01"
+      ],
+      "cap": [
+        "能够校验契约、执行预算、持久化检查点和去重事件。"
+      ],
+      "perm": [
+        "VALIDATE_CONTRACT",
+        "ENFORCE_BUDGET",
+        "PERSIST_CHECKPOINT",
+        "DEDUPE_EVENTS"
+      ]
+    },
+    {
+      "id": "ROLE_PEER",
+      "label": "同伴参与者",
+      "claims": [
+        "K13.02.02.SR.S01",
+        "K13.02.04.SR.S01"
+      ],
+      "cap": [
+        "能够自愿参与解释、对话或反馈，并保留退出权。"
+      ],
+      "perm": [
+        "OPT_IN_TO_DIALOGUE",
+        "OFFER_EXPLANATION",
+        "DECLINE_OR_EXIT"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "id": "SKILL_CONCEPTUAL_TASK",
+      "label": "当前概念任务表现",
+      "claims": [
+        "K06.01.02.D4.01",
+        "K07.02.04.D4.01"
+      ],
+      "boundary": "仅描述当前明确概念任务，不代表通用智力或稳定能力。"
+    },
+    {
+      "id": "SKILL_RETRIEVAL_TASK",
+      "label": "当前提取任务表现",
+      "claims": [
+        "K05.01.01.D4.01",
+        "K05.02.01.D4.01"
+      ],
+      "boundary": "区分再认、辅助提取和无提示回忆，不外推至所有材料。"
+    },
+    {
+      "id": "SKILL_TASK_PERFORMANCE",
+      "label": "当前子技能任务表现",
+      "claims": [
+        "K06.06.02.D4.01",
+        "K07.04.01.D4.01"
+      ],
+      "boundary": "只描述任务和过程，不生成个人能力标签。"
+    },
+    {
+      "id": "SKILL_SELF_REGULATION",
+      "label": "当前自我调节行为",
+      "claims": [
+        "K08.03.03.D4.01",
+        "K08.04.01.D4.01",
+        "K08.04.05.D4.01"
+      ],
+      "boundary": "行为和自我报告是情境性记录，不推断人格或临床状态。"
+    },
+    {
+      "id": "SKILL_DIALOGIC_REASONING",
+      "label": "当前对话任务参与",
+      "claims": [
+        "K06.06.02.D4.01",
+        "K13.02.04.SR.S01"
+      ],
+      "boundary": "群体参与不替代个人表现；文化上下文不得推断。"
+    },
+    {
+      "id": "SKILL_TRANSFER_TASK",
+      "label": "当前新任务表现",
+      "claims": [
+        "K05.03.01.R9.S01",
+        "K07.04.03.D4.01"
+      ],
+      "boundary": "仅为指定新任务观察，不宣称一般迁移。"
+    }
+  ],
+  "observations": [
+    {
+      "id": "OBS_ASSISTED_RESPONSE",
+      "label": "辅助响应观察",
+      "skill": "SKILL_TASK_PERFORMANCE",
+      "claims": [
+        "K06.06.01.D4.01",
+        "K06.06.02.D4.01"
+      ],
+      "method": "记录任务响应、提示/示范/帮助等级及具体任务身份。",
+      "unit": "task_response_with_support_level",
+      "independence": "辅助响应必须与无提示独立响应分开保存；不得作为独立掌握证据。"
+    },
+    {
+      "id": "OBS_INDEPENDENT_RESPONSE",
+      "label": "无提示独立响应观察",
+      "skill": "SKILL_TASK_PERFORMANCE",
+      "claims": [
+        "K05.01.01.D4.01",
+        "K06.06.01.D4.01",
+        "K07.04.01.D4.01"
+      ],
+      "method": "在记录提示状态和任务身份后，记录无提示响应。",
+      "unit": "task_response_without_hint",
+      "independence": "仅表示该任务中无提示作答；不自动等于长期保持或跨任务迁移。"
+    },
+    {
+      "id": "OBS_SELF_REPORT",
+      "label": "学习者自我报告",
+      "skill": "SKILL_SELF_REGULATION",
+      "claims": [
+        "K08.03.01.D4.03",
+        "K08.04.01.D4.01",
+        "K08.04.05.D4.01"
+      ],
+      "method": "由学习者自愿提供目标、感受、策略选择或反思。",
+      "unit": "learner_report",
+      "independence": "主观自我报告，不替代行为观察、任务表现或临床评估。"
+    },
+    {
+      "id": "OBS_TRANSFER_TASK",
+      "label": "指定新任务观察",
+      "skill": "SKILL_TRANSFER_TASK",
+      "claims": [
+        "K05.03.01.R9.S01",
+        "K07.04.03.D4.01"
+      ],
+      "method": "记录明确的新任务、变化条件、资源、提示和独立程度。",
+      "unit": "new_task_performance",
+      "independence": "一次新任务仅支持该任务观察，不建立普遍迁移或因果结论。"
+    }
+  ]
+}
