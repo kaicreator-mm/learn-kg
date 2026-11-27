@@ -35,7 +35,7 @@ for sh in m['shards']:
    for row in c['source_refs']:
     sid,sref,field,location,access,rights=row;s=at(sref)
     key=c['id'],sid
-    src.append(dict(source_id=sid,source_title=s['title'],historical_url=s.get('url'),historical_location=rec.get(field) if field else None,historical_location_status=location,historical_access=access,rights=rights,recheck=checks.get(key),disposition='NEW_LOCATOR_CANDIDATE_LIMITED' if key in checks else 'REVIEW_REQUIRED_LOCATOR_MISSING' if 'MISSING' in location else 'REVIEW_REQUIRED_HISTORICAL_LOCATOR'))
+    src.append(dict(source_id=sid,source_title=s['title'],historical_url=s.get('url'),historical_location=rec.get(field) if field else None,historical_location_status=location,historical_access=access,rights=rights,recheck=checks.get(key),disposition='UNVERIFIED_LOCATOR_LEAD' if key in checks else 'REVIEW_REQUIRED_LOCATOR_MISSING' if 'MISSING' in location else 'REVIEW_REQUIRED_HISTORICAL_LOCATOR'))
    cands.append(dict(claim_id=c['id'],claim_type=c['claim_type'],statement=rec.get('claim',rec.get('statement')),source_status=c['source_status'],source_associations=src,claim_pointer=c['record'],case_refs=c['case_refs'],historical_validation_refs=c['validation_refs'],qualification='NOT_RUN'))
   rows.append(dict(topic=t['d3_id'],owner=t['owner'],requirement_id=t['requirement_id'],label=req['label'],research_requirement=req['research_requirement'],negative_boundary=req['negative_boundary'],claims=cands,case_ids=t['topic_case_refs'],historical_relations=t['topic_relation_refs'],status='PREPARATION_NOT_ADEQUACY_VERDICT'))
 assert len(rows)==100
@@ -44,8 +44,8 @@ assert set(checks)<=seen
 out={}
 for o in MODS:
  rr=[r for r in rows if r['owner']==o];cc=[c for r in rr for c in r['claims']];ss=[s for c in cc for s in c['source_associations']]
- out[o]=dict(topics=len(rr),claims=len(cc),source_associations=len(ss),missing_historical=sum('MISSING' in s['historical_location_status'] for s in ss),historical_located=sum('MISSING' not in s['historical_location_status'] for s in ss),new_limited_locator_checks=sum(s['recheck'] is not None for s in ss),topics_without_any_new_check=sum(not any(s['recheck'] for c in r['claims'] for s in c['source_associations']) for r in rr))
+ out[o]=dict(topics=len(rr),claims=len(cc),source_associations=len(ss),missing_historical=sum('MISSING' in s['historical_location_status'] for s in ss),historical_located=sum('MISSING' not in s['historical_location_status'] for s in ss),unverified_locator_leads=sum(s['recheck'] is not None for s in ss),new_limited_locator_checks=0,topics_without_any_new_check=len(rr))
  write(P/(o+'-research-inventory.json'),rr)
 assert sum(x['claims'] for x in out.values())==242
-write(P/'summary.json',dict(status='PREPARATION_ONLY_NOT_FORMAL_MODULE_DELIVERY',ledger_manifest_sha256=sha(Q/'ledger-manifest.json'),source_inputs=sorted(inputs,key=lambda x:x['path']),modules=out,limited_source_checks=len(checks),source_access_failure=['K05-S08 PubMed returned no usable abstract','K07-S07 NASEM body find timed out; no new verified locator'],qualification='NOT_RUN'))
+write(P/'summary.json',dict(status='PREPARATION_ONLY_NOT_FORMAL_MODULE_DELIVERY',ledger_manifest_sha256=sha(Q/'ledger-manifest.json'),source_inputs=sorted(inputs,key=lambda x:x['path']),modules=out,unverified_locator_leads=len(checks),limited_source_checks=0,source_access_failure=[],qualification='NOT_RUN'))
 print(out)
