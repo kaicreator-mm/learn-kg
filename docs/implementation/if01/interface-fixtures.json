@@ -1,0 +1,2255 @@
+{
+  "contexts": {
+    "ma": {
+      "activity": {
+        "kind": "Activity",
+        "owner": "P03",
+        "package_id": "learning-process",
+        "stable_id": "ma:activity",
+        "version": "if01-synthetic-1"
+      },
+      "composition": {
+        "kind": "CompositionSpec",
+        "owner": "A02",
+        "package_id": "learning-process",
+        "stable_id": "ma:composition",
+        "version": "if01-synthetic-1"
+      },
+      "construct": {
+        "kind": "Competency",
+        "owner": "MATH01",
+        "package_id": "other-subject",
+        "stable_id": "ma:competency",
+        "version": "if01-synthetic-1"
+      },
+      "flow": {
+        "kind": "FlowSpec",
+        "owner": "P04",
+        "package_id": "learning-process",
+        "stable_id": "ma:flow",
+        "version": "if01-synthetic-1"
+      },
+      "goal": {
+        "kind": "Goal",
+        "owner": "MATH01",
+        "package_id": "other-subject",
+        "stable_id": "ma:goal",
+        "version": "if01-synthetic-1"
+      },
+      "object": {
+        "kind": "LearningObject",
+        "owner": "MATH01",
+        "package_id": "other-subject",
+        "stable_id": "ma:object",
+        "version": "if01-synthetic-1"
+      },
+      "obs": {
+        "kind": "ObservationSpec",
+        "owner": "MATH01",
+        "package_id": "other-subject",
+        "stable_id": "ma:obs",
+        "version": "if01-synthetic-1"
+      },
+      "resource": {
+        "kind": "Resource",
+        "owner": "MATH01",
+        "package_id": "other-subject",
+        "stable_id": "ma:resource",
+        "version": "if01-synthetic-1"
+      },
+      "state": {
+        "kind": "StateDimension",
+        "owner": "F05",
+        "package_id": "learning-process",
+        "stable_id": "ma:state",
+        "version": "if01-synthetic-1"
+      },
+      "task": {
+        "kind": "TaskSpec",
+        "owner": "MATH01",
+        "package_id": "other-subject",
+        "stable_id": "ma:task",
+        "version": "if01-synthetic-1"
+      }
+    },
+    "zh": {
+      "activity": {
+        "kind": "Activity",
+        "owner": "P03",
+        "package_id": "learning-process",
+        "stable_id": "zh:activity",
+        "version": "if01-synthetic-1"
+      },
+      "composition": {
+        "kind": "CompositionSpec",
+        "owner": "A02",
+        "package_id": "learning-process",
+        "stable_id": "zh:composition",
+        "version": "if01-synthetic-1"
+      },
+      "construct": {
+        "kind": "Competency",
+        "owner": "H03",
+        "package_id": "chinese",
+        "stable_id": "zh:competency",
+        "version": "if01-synthetic-1"
+      },
+      "flow": {
+        "kind": "FlowSpec",
+        "owner": "P04",
+        "package_id": "learning-process",
+        "stable_id": "zh:flow",
+        "version": "if01-synthetic-1"
+      },
+      "goal": {
+        "kind": "Goal",
+        "owner": "H03",
+        "package_id": "chinese",
+        "stable_id": "zh:goal",
+        "version": "if01-synthetic-1"
+      },
+      "object": {
+        "kind": "LearningObject",
+        "owner": "H03",
+        "package_id": "chinese",
+        "stable_id": "zh:object",
+        "version": "if01-synthetic-1"
+      },
+      "obs": {
+        "kind": "ObservationSpec",
+        "owner": "H03",
+        "package_id": "chinese",
+        "stable_id": "zh:obs",
+        "version": "if01-synthetic-1"
+      },
+      "resource": {
+        "kind": "Resource",
+        "owner": "H03",
+        "package_id": "chinese",
+        "stable_id": "zh:resource",
+        "version": "if01-synthetic-1"
+      },
+      "state": {
+        "kind": "StateDimension",
+        "owner": "F05",
+        "package_id": "learning-process",
+        "stable_id": "zh:state",
+        "version": "if01-synthetic-1"
+      },
+      "task": {
+        "kind": "TaskSpec",
+        "owner": "H03",
+        "package_id": "chinese",
+        "stable_id": "zh:task",
+        "version": "if01-synthetic-1"
+      }
+    }
+  },
+  "packages": {
+    "chinese": {
+      "deps": [
+        "learning-core"
+      ],
+      "manifest": {
+        "dependencies": [
+          {
+            "manifest_sha256": "81cb54fd009a91d31245e4af4934b5dfce98c492183ac7ec0ac9cd5f18cad20b",
+            "package_id": "learning-core",
+            "version": "if01-synthetic-1"
+          }
+        ],
+        "owners": [
+          "H03"
+        ],
+        "package_id": "chinese",
+        "record_sha256": "e76cb3009c1ab35c02a0be9dbbd6519ad4bde1e4fe4855f08040148ab18acb55",
+        "rights": "HOLD",
+        "status": "CANDIDATE",
+        "version": "if01-synthetic-1"
+      },
+      "manifest_sha256": "34e3dbe7902740c1ff8ed6790cbe7e273fb233b9876c0ebf5a055158584fabf9",
+      "owners": [
+        "H03"
+      ],
+      "records": [
+        {
+          "case_refs": [],
+          "claim_type": "ENGINEERING_POLICY",
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Claim",
+          "locator_refs": [],
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "H03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "refinement_of": null,
+          "requirement_id": "H03:fixture",
+          "source_status": "ORIGINAL_SYNTHETIC_FIXTURE",
+          "stable_id": "zh:claim",
+          "statement": "Only synthetic typed object comparison; no domain result qualification.",
+          "status": "CANDIDATE",
+          "supersedes_refs": [],
+          "topic_id": "H03",
+          "validation_refs": []
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "definition": "A separately scoped fixture object",
+          "element_type": "SYNTHETIC_SUBJECT_OBJECT",
+          "kind": "Element",
+          "label": "synthetic written word discrimination",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "H03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:element",
+          "status": "CANDIDATE",
+          "topic_id": "H03"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "dimensions": [
+            "independent discrimination"
+          ],
+          "evidence_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "Competency",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "H03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:competency",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "H03",
+            "package_id": "chinese",
+            "stable_id": "zh:competency",
+            "version": "if01-synthetic-1"
+          },
+          "independence_requirement": "No prompt giving answer",
+          "kind": "ObservationSpec",
+          "method": "Independent fixture response; assistance must be recorded separately",
+          "missing": "UNKNOWN_NOT_ZERO",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "H03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:obs",
+          "status": "CANDIDATE",
+          "unit": "binary response under specified rubric"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "H03",
+            "package_id": "chinese",
+            "stable_id": "zh:competency",
+            "version": "if01-synthetic-1"
+          },
+          "kind": "Goal",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "H03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "scope": "zh only",
+          "stable_id": "zh:goal",
+          "status": "CANDIDATE",
+          "success_evidence_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ]
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "component_refs": [],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "granularity": "one fixture item",
+          "kind": "LearningObject",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "H03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:object",
+          "status": "CANDIDATE",
+          "target_refs": [
+            {
+              "kind": "Element",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:element",
+              "version": "if01-synthetic-1"
+            }
+          ]
+        },
+        {
+          "accessibility": [
+            "written fixture only"
+          ],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Resource",
+          "modality_refs": [
+            {
+              "kind": "Modality",
+              "owner": "K16",
+              "package_id": "learning-core",
+              "stable_id": "core:modality",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "H03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "resource_identity": "zh:synthetic-prompt",
+          "rights": "HOLD",
+          "stable_id": "zh:resource",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "H03",
+            "package_id": "chinese",
+            "stable_id": "zh:competency",
+            "version": "if01-synthetic-1"
+          },
+          "independence_requirement": "unassisted",
+          "kind": "TaskSpec",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "object_refs": [
+            {
+              "kind": "LearningObject",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:object",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "H03",
+          "prompt": "synthetic written word discrimination",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "scoring_spec": "Expected response specified by the future fixture oracle; no score asserted",
+          "stable_id": "zh:task",
+          "status": "CANDIDATE"
+        }
+      ]
+    },
+    "learning-core": {
+      "deps": [],
+      "manifest": {
+        "dependencies": [],
+        "owners": [
+          "K03",
+          "K04",
+          "K06",
+          "K07",
+          "K09",
+          "K10",
+          "K13",
+          "K16"
+        ],
+        "package_id": "learning-core",
+        "record_sha256": "4a594f0a70ec671a8e48ba7bd3079919b11678178fd716d410e4f1fb9ff3147f",
+        "rights": "HOLD",
+        "status": "CANDIDATE",
+        "version": "if01-synthetic-1"
+      },
+      "manifest_sha256": "81cb54fd009a91d31245e4af4934b5dfce98c492183ac7ec0ac9cd5f18cad20b",
+      "owners": [
+        "K03",
+        "K04",
+        "K06",
+        "K07",
+        "K09",
+        "K10",
+        "K13",
+        "K16"
+      ],
+      "records": [
+        {
+          "case_refs": [],
+          "claim_type": "ENGINEERING_POLICY",
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Claim",
+          "locator_refs": [],
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "K03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "refinement_of": null,
+          "requirement_id": "K03:fixture",
+          "source_status": "ORIGINAL_SYNTHETIC_FIXTURE",
+          "stable_id": "core:claim",
+          "statement": "Synthetic object type must not be equated with a learner state.",
+          "status": "CANDIDATE",
+          "supersedes_refs": [],
+          "topic_id": "K03",
+          "validation_refs": []
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "K03",
+              "package_id": "learning-core",
+              "stable_id": "core:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "definition": "Typed domain content",
+          "kind": "KnowledgeType",
+          "label": "domain object",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "K03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "core:kt",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "K03",
+              "package_id": "learning-core",
+              "stable_id": "core:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "SkillType",
+          "label": "independent discrimination",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "K04",
+          "performance_boundary": "Requires an independent specified task",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "core:skill",
+          "status": "CANDIDATE"
+        },
+        {
+          "capability_requirements": [
+            "read written prompt"
+          ],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "K03",
+              "package_id": "learning-core",
+              "stable_id": "core:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Modality",
+          "label": "written",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "not_equivalent_to": [
+            "spoken production"
+          ],
+          "owner": "K16",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "core:modality",
+          "status": "CANDIDATE"
+        },
+        {
+          "capability_requirements": [
+            "respond or refuse"
+          ],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "K03",
+              "package_id": "learning-core",
+              "stable_id": "core:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Role",
+          "label": "learner",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "K13",
+          "permission_requirements": [
+            "actual consent resolved externally"
+          ],
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "core:role",
+          "status": "CANDIDATE"
+        },
+        {
+          "capabilities": [
+            "display text"
+          ],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "K03",
+              "package_id": "learning-core",
+              "stable_id": "core:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "constraints": [
+            "no actual learner data"
+          ],
+          "kind": "Environment",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "K13",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "core:env",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "K03",
+              "package_id": "learning-core",
+              "stable_id": "core:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "clauses": [
+            {
+              "field": "input_complete",
+              "op": "EQ",
+              "value": true
+            }
+          ],
+          "combination": "ALL",
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "ConditionSpec",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "K06",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "core:condition",
+          "status": "CANDIDATE",
+          "unknown": "HOLD"
+        }
+      ]
+    },
+    "learning-process": {
+      "deps": [
+        "learning-core",
+        "chinese",
+        "other-subject"
+      ],
+      "manifest": {
+        "dependencies": [
+          {
+            "manifest_sha256": "81cb54fd009a91d31245e4af4934b5dfce98c492183ac7ec0ac9cd5f18cad20b",
+            "package_id": "learning-core",
+            "version": "if01-synthetic-1"
+          },
+          {
+            "manifest_sha256": "34e3dbe7902740c1ff8ed6790cbe7e273fb233b9876c0ebf5a055158584fabf9",
+            "package_id": "chinese",
+            "version": "if01-synthetic-1"
+          },
+          {
+            "manifest_sha256": "6fa747bbba71fa1292b196101ee075552c1213746056c88980d48a25a131a06c",
+            "package_id": "other-subject",
+            "version": "if01-synthetic-1"
+          }
+        ],
+        "owners": [
+          "P01",
+          "P03",
+          "P04",
+          "P06",
+          "P08",
+          "F04",
+          "F05",
+          "A02",
+          "E01"
+        ],
+        "package_id": "learning-process",
+        "record_sha256": "45551e509d496ee21c295f2bf533c1a96703e68de6a592b0f864b5e594884e67",
+        "rights": "HOLD",
+        "status": "CANDIDATE",
+        "version": "if01-synthetic-1"
+      },
+      "manifest_sha256": "ae1d8e2662a61ed1520d081171226a9bb85d61bb1323d35ac6dae3fda8e40cd1",
+      "owners": [
+        "P01",
+        "P03",
+        "P04",
+        "P06",
+        "P08",
+        "F04",
+        "F05",
+        "A02",
+        "E01"
+      ],
+      "records": [
+        {
+          "case_refs": [],
+          "claim_type": "ENGINEERING_POLICY",
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Claim",
+          "locator_refs": [],
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "P04",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "refinement_of": null,
+          "requirement_id": "P04:fixture",
+          "source_status": "ORIGINAL_SYNTHETIC_FIXTURE",
+          "stable_id": "p:claim",
+          "statement": "A bounded candidate flow must stop or hold on missing evidence.",
+          "status": "CANDIDATE",
+          "supersedes_refs": [],
+          "topic_id": "P04",
+          "validation_refs": []
+        },
+        {
+          "budget": 2,
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "goal_refs": [
+            {
+              "kind": "Goal",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:goal",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "Activity",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "object_refs": [
+            {
+              "kind": "LearningObject",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:object",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "P03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "resource_refs": [
+            {
+              "kind": "Resource",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:resource",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "role_refs": [
+            {
+              "kind": "Role",
+              "owner": "K13",
+              "package_id": "learning-core",
+              "stable_id": "core:role",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "stable_id": "zh:activity",
+          "status": "CANDIDATE",
+          "stop_condition": "learner STOP or budget exhausted"
+        },
+        {
+          "activity_ref": {
+            "kind": "Activity",
+            "owner": "P03",
+            "package_id": "learning-process",
+            "stable_id": "zh:activity",
+            "version": "if01-synthetic-1"
+          },
+          "assistance_policy": "separate assistance from independent performance",
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "input_contract": "scoped task response",
+          "kind": "Interaction",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "output_contract": "observation reference or HOLD",
+          "owner": "F04",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "role_refs": [
+            {
+              "kind": "Role",
+              "owner": "K13",
+              "package_id": "learning-core",
+              "stable_id": "core:role",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "stable_id": "zh:interaction",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "H03",
+            "package_id": "chinese",
+            "stable_id": "zh:competency",
+            "version": "if01-synthetic-1"
+          },
+          "effect": "DEFINITION_ONLY",
+          "estimator_ref": null,
+          "kind": "StateDimension",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "F05",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:state",
+          "status": "CANDIDATE",
+          "uncertainty": "no estimate or calibration asserted"
+        },
+        {
+          "activity_refs": [
+            {
+              "kind": "Activity",
+              "owner": "P03",
+              "package_id": "learning-process",
+              "stable_id": "zh:activity",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "goal_refs": [
+            {
+              "kind": "Goal",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:goal",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "Mode",
+          "learner_choice": true,
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "P01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "role_refs": [
+            {
+              "kind": "Role",
+              "owner": "K13",
+              "package_id": "learning-core",
+              "stable_id": "core:role",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "selection_condition_refs": [
+            {
+              "kind": "ConditionSpec",
+              "owner": "K06",
+              "package_id": "learning-core",
+              "stable_id": "core:condition",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "stable_id": "zh:mode",
+          "status": "CANDIDATE",
+          "switch_condition": "learner requests switch or condition no longer holds"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "effect": "ADVICE_ONLY",
+          "kind": "PolicySpec",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "P06",
+          "policy_type": "FEEDBACK",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "rules": [
+            {
+              "action": "REQUEST_OBSERVATION",
+              "condition_ref": {
+                "kind": "ConditionSpec",
+                "owner": "K06",
+                "package_id": "learning-core",
+                "stable_id": "core:condition",
+                "version": "if01-synthetic-1"
+              },
+              "priority": 0,
+              "reason": "obtain separate evidence"
+            }
+          ],
+          "stable_id": "zh:policy",
+          "status": "CANDIDATE",
+          "unknown_action": "CLARIFY"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "effect": "TEMPLATE_ONLY",
+          "entry": "s1",
+          "kind": "FlowSpec",
+          "max_events": 4,
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "P04",
+          "parallel_joins": [],
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:flow",
+          "status": "CANDIDATE",
+          "steps": [
+            {
+              "activity_ref": {
+                "kind": "Activity",
+                "owner": "P03",
+                "package_id": "learning-process",
+                "stable_id": "zh:activity",
+                "version": "if01-synthetic-1"
+              },
+              "checkpoint": true,
+              "id": "s1",
+              "max_attempts": 2
+            }
+          ],
+          "stop_terminal": "stop",
+          "terminals": [
+            {
+              "id": "done",
+              "outcome": "COMPLETE"
+            },
+            {
+              "id": "hold",
+              "outcome": "HOLD"
+            },
+            {
+              "id": "stop",
+              "outcome": "STOP"
+            },
+            {
+              "id": "pause",
+              "outcome": "PAUSE"
+            }
+          ],
+          "transitions": [
+            {
+              "condition_ref": {
+                "kind": "ConditionSpec",
+                "owner": "K06",
+                "package_id": "learning-core",
+                "stable_id": "core:condition",
+                "version": "if01-synthetic-1"
+              },
+              "consumes_budget": true,
+              "event": "COMPLETE",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "done"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "UNKNOWN",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "hold"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "STOP",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "stop"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "PAUSE",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "pause"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "BUDGET_EXHAUSTED",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "stop"
+            }
+          ],
+          "unknown_terminal": "hold"
+        },
+        {
+          "alternative_refs": [],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "condition_refs": [
+            {
+              "kind": "ConditionSpec",
+              "owner": "K06",
+              "package_id": "learning-core",
+              "stable_id": "core:condition",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "effect": "CANDIDATE_DECISION_ONLY",
+          "evidence_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "failure_policy": "HOLD if context or typed reference does not match",
+          "input_refs": [
+            {
+              "kind": "LearningObject",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:object",
+              "version": "if01-synthetic-1"
+            },
+            {
+              "kind": "TaskSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:task",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "CompositionSpec",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "output_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "A02",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:composition",
+          "status": "CANDIDATE",
+          "view_id": "A02"
+        },
+        {
+          "budget": 2,
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "goal_refs": [
+            {
+              "kind": "Goal",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:goal",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "Activity",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "object_refs": [
+            {
+              "kind": "LearningObject",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:object",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "P03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "resource_refs": [
+            {
+              "kind": "Resource",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:resource",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "role_refs": [
+            {
+              "kind": "Role",
+              "owner": "K13",
+              "package_id": "learning-core",
+              "stable_id": "core:role",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "stable_id": "ma:activity",
+          "status": "CANDIDATE",
+          "stop_condition": "learner STOP or budget exhausted"
+        },
+        {
+          "activity_ref": {
+            "kind": "Activity",
+            "owner": "P03",
+            "package_id": "learning-process",
+            "stable_id": "ma:activity",
+            "version": "if01-synthetic-1"
+          },
+          "assistance_policy": "separate assistance from independent performance",
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "input_contract": "scoped task response",
+          "kind": "Interaction",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "output_contract": "observation reference or HOLD",
+          "owner": "F04",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "role_refs": [
+            {
+              "kind": "Role",
+              "owner": "K13",
+              "package_id": "learning-core",
+              "stable_id": "core:role",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "stable_id": "ma:interaction",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "MATH01",
+            "package_id": "other-subject",
+            "stable_id": "ma:competency",
+            "version": "if01-synthetic-1"
+          },
+          "effect": "DEFINITION_ONLY",
+          "estimator_ref": null,
+          "kind": "StateDimension",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "F05",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "ma:state",
+          "status": "CANDIDATE",
+          "uncertainty": "no estimate or calibration asserted"
+        },
+        {
+          "activity_refs": [
+            {
+              "kind": "Activity",
+              "owner": "P03",
+              "package_id": "learning-process",
+              "stable_id": "ma:activity",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "goal_refs": [
+            {
+              "kind": "Goal",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:goal",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "Mode",
+          "learner_choice": true,
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "P01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "role_refs": [
+            {
+              "kind": "Role",
+              "owner": "K13",
+              "package_id": "learning-core",
+              "stable_id": "core:role",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "selection_condition_refs": [
+            {
+              "kind": "ConditionSpec",
+              "owner": "K06",
+              "package_id": "learning-core",
+              "stable_id": "core:condition",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "stable_id": "ma:mode",
+          "status": "CANDIDATE",
+          "switch_condition": "learner requests switch or condition no longer holds"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "effect": "ADVICE_ONLY",
+          "kind": "PolicySpec",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "P06",
+          "policy_type": "FEEDBACK",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "rules": [
+            {
+              "action": "REQUEST_OBSERVATION",
+              "condition_ref": {
+                "kind": "ConditionSpec",
+                "owner": "K06",
+                "package_id": "learning-core",
+                "stable_id": "core:condition",
+                "version": "if01-synthetic-1"
+              },
+              "priority": 0,
+              "reason": "obtain separate evidence"
+            }
+          ],
+          "stable_id": "ma:policy",
+          "status": "CANDIDATE",
+          "unknown_action": "CLARIFY"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "effect": "TEMPLATE_ONLY",
+          "entry": "s1",
+          "kind": "FlowSpec",
+          "max_events": 4,
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "P04",
+          "parallel_joins": [],
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "ma:flow",
+          "status": "CANDIDATE",
+          "steps": [
+            {
+              "activity_ref": {
+                "kind": "Activity",
+                "owner": "P03",
+                "package_id": "learning-process",
+                "stable_id": "ma:activity",
+                "version": "if01-synthetic-1"
+              },
+              "checkpoint": true,
+              "id": "s1",
+              "max_attempts": 2
+            }
+          ],
+          "stop_terminal": "stop",
+          "terminals": [
+            {
+              "id": "done",
+              "outcome": "COMPLETE"
+            },
+            {
+              "id": "hold",
+              "outcome": "HOLD"
+            },
+            {
+              "id": "stop",
+              "outcome": "STOP"
+            },
+            {
+              "id": "pause",
+              "outcome": "PAUSE"
+            }
+          ],
+          "transitions": [
+            {
+              "condition_ref": {
+                "kind": "ConditionSpec",
+                "owner": "K06",
+                "package_id": "learning-core",
+                "stable_id": "core:condition",
+                "version": "if01-synthetic-1"
+              },
+              "consumes_budget": true,
+              "event": "COMPLETE",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "done"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "UNKNOWN",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "hold"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "STOP",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "stop"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "PAUSE",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "pause"
+            },
+            {
+              "condition_ref": null,
+              "consumes_budget": false,
+              "event": "BUDGET_EXHAUSTED",
+              "from_step": "s1",
+              "priority": 0,
+              "to_step": "stop"
+            }
+          ],
+          "unknown_terminal": "hold"
+        },
+        {
+          "alternative_refs": [],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "condition_refs": [
+            {
+              "kind": "ConditionSpec",
+              "owner": "K06",
+              "package_id": "learning-core",
+              "stable_id": "core:condition",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "effect": "CANDIDATE_DECISION_ONLY",
+          "evidence_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "failure_policy": "HOLD if context or typed reference does not match",
+          "input_refs": [
+            {
+              "kind": "LearningObject",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:object",
+              "version": "if01-synthetic-1"
+            },
+            {
+              "kind": "TaskSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:task",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "CompositionSpec",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "output_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "A02",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "ma:composition",
+          "status": "CANDIDATE",
+          "view_id": "A02"
+        },
+        {
+          "budget": 2,
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "goal_refs": [
+            {
+              "kind": "Goal",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:goal",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "Activity",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "object_refs": [
+            {
+              "kind": "LearningObject",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:object",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "P03",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "resource_refs": [
+            {
+              "kind": "Resource",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:resource",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "role_refs": [
+            {
+              "kind": "Role",
+              "owner": "K13",
+              "package_id": "learning-core",
+              "stable_id": "core:role",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "stable_id": "zh:comparator",
+          "status": "CANDIDATE",
+          "stop_condition": "same stop contract"
+        },
+        {
+          "approval_required": true,
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "P04",
+              "package_id": "learning-process",
+              "stable_id": "p:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "comparator_ref": {
+            "kind": "Activity",
+            "owner": "P03",
+            "package_id": "learning-process",
+            "stable_id": "zh:comparator",
+            "version": "if01-synthetic-1"
+          },
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "effect": "NO_DIRECT_KNOWLEDGE_WRITE",
+          "estimand": "synthetic difference in specified independent response; no estimate",
+          "followup": "design only",
+          "goal_ref": {
+            "kind": "Goal",
+            "owner": "H03",
+            "package_id": "chinese",
+            "stable_id": "zh:goal",
+            "version": "if01-synthetic-1"
+          },
+          "intervention_ref": {
+            "kind": "Activity",
+            "owner": "P03",
+            "package_id": "learning-process",
+            "stable_id": "zh:activity",
+            "version": "if01-synthetic-1"
+          },
+          "kind": "EvaluationProtocol",
+          "measurement_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "H03",
+              "package_id": "chinese",
+              "stable_id": "zh:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "E01",
+          "population_scope": "no actual learner population",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "zh:protocol",
+          "status": "CANDIDATE",
+          "uncertainty": "not evaluated"
+        }
+      ]
+    },
+    "other-subject": {
+      "deps": [
+        "learning-core"
+      ],
+      "manifest": {
+        "dependencies": [
+          {
+            "manifest_sha256": "81cb54fd009a91d31245e4af4934b5dfce98c492183ac7ec0ac9cd5f18cad20b",
+            "package_id": "learning-core",
+            "version": "if01-synthetic-1"
+          }
+        ],
+        "owners": [
+          "MATH01"
+        ],
+        "package_id": "other-subject",
+        "record_sha256": "6b71620c0c95d2b78bd6a2897af3b95658f82dbc3d6cc69322aca4a14d845d56",
+        "rights": "HOLD",
+        "status": "CANDIDATE",
+        "version": "if01-synthetic-1"
+      },
+      "manifest_sha256": "6fa747bbba71fa1292b196101ee075552c1213746056c88980d48a25a131a06c",
+      "owners": [
+        "MATH01"
+      ],
+      "records": [
+        {
+          "case_refs": [],
+          "claim_type": "ENGINEERING_POLICY",
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Claim",
+          "locator_refs": [],
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "MATH01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "refinement_of": null,
+          "requirement_id": "MATH01:fixture",
+          "source_status": "ORIGINAL_SYNTHETIC_FIXTURE",
+          "stable_id": "ma:claim",
+          "statement": "Only synthetic typed object comparison; no domain result qualification.",
+          "status": "CANDIDATE",
+          "supersedes_refs": [],
+          "topic_id": "MATH01",
+          "validation_refs": []
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "definition": "A separately scoped fixture object",
+          "element_type": "SYNTHETIC_SUBJECT_OBJECT",
+          "kind": "Element",
+          "label": "synthetic equal-unit fraction discrimination",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "MATH01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "ma:element",
+          "status": "CANDIDATE",
+          "topic_id": "MATH01"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "dimensions": [
+            "independent discrimination"
+          ],
+          "evidence_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "kind": "Competency",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "MATH01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "ma:competency",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "MATH01",
+            "package_id": "other-subject",
+            "stable_id": "ma:competency",
+            "version": "if01-synthetic-1"
+          },
+          "independence_requirement": "No prompt giving answer",
+          "kind": "ObservationSpec",
+          "method": "Independent fixture response; assistance must be recorded separately",
+          "missing": "UNKNOWN_NOT_ZERO",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "MATH01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "ma:obs",
+          "status": "CANDIDATE",
+          "unit": "binary response under specified rubric"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "MATH01",
+            "package_id": "other-subject",
+            "stable_id": "ma:competency",
+            "version": "if01-synthetic-1"
+          },
+          "kind": "Goal",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "MATH01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "scope": "ma only",
+          "stable_id": "ma:goal",
+          "status": "CANDIDATE",
+          "success_evidence_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:obs",
+              "version": "if01-synthetic-1"
+            }
+          ]
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "component_refs": [],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "granularity": "one fixture item",
+          "kind": "LearningObject",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "MATH01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "stable_id": "ma:object",
+          "status": "CANDIDATE",
+          "target_refs": [
+            {
+              "kind": "Element",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:element",
+              "version": "if01-synthetic-1"
+            }
+          ]
+        },
+        {
+          "accessibility": [
+            "written fixture only"
+          ],
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "kind": "Resource",
+          "modality_refs": [
+            {
+              "kind": "Modality",
+              "owner": "K16",
+              "package_id": "learning-core",
+              "stable_id": "core:modality",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "owner": "MATH01",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "resource_identity": "ma:synthetic-prompt",
+          "rights": "HOLD",
+          "stable_id": "ma:resource",
+          "status": "CANDIDATE"
+        },
+        {
+          "claim_refs": [
+            {
+              "kind": "Claim",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:claim",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "conditions": [
+            "SYNTHETIC_INTERFACE_FIXTURE_ONLY"
+          ],
+          "construct_ref": {
+            "kind": "Competency",
+            "owner": "MATH01",
+            "package_id": "other-subject",
+            "stable_id": "ma:competency",
+            "version": "if01-synthetic-1"
+          },
+          "independence_requirement": "unassisted",
+          "kind": "TaskSpec",
+          "negative_boundary": "No empirical result, qualification or learner identity is asserted.",
+          "object_refs": [
+            {
+              "kind": "LearningObject",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:object",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "observation_refs": [
+            {
+              "kind": "ObservationSpec",
+              "owner": "MATH01",
+              "package_id": "other-subject",
+              "stable_id": "ma:obs",
+              "version": "if01-synthetic-1"
+            }
+          ],
+          "owner": "MATH01",
+          "prompt": "synthetic equal-unit fraction discrimination",
+          "provenance": [
+            {
+              "json_pointer": "/semantic_boundaries",
+              "source_path": "docs/implementation/if01/interface-contract.json",
+              "source_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+              "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
+            }
+          ],
+          "scoring_spec": "Expected response specified by the future fixture oracle; no score asserted",
+          "stable_id": "ma:task",
+          "status": "CANDIDATE"
+        }
+      ]
+    }
+  },
+  "status": "SYNTHETIC_ONLY"
+}

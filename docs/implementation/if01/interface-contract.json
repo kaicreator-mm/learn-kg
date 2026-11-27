@@ -1,0 +1,1746 @@
+{
+  "endpoint_rules": {
+    "Activity": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "goal_refs/*": [
+        "Goal"
+      ],
+      "object_refs/*": [
+        "LearningObject"
+      ],
+      "observation_refs/*": [
+        "ObservationSpec"
+      ],
+      "resource_refs/*": [
+        "Resource"
+      ],
+      "role_refs/*": [
+        "Role"
+      ]
+    },
+    "Case": {
+      "oracle_ref": [
+        "Validation"
+      ],
+      "target_refs/*": [
+        "Activity",
+        "Claim",
+        "Competency",
+        "CompositionSpec",
+        "ConditionSpec",
+        "Construction",
+        "Element",
+        "Environment",
+        "EvaluationProtocol",
+        "FlowSpec",
+        "Goal",
+        "HanCharacter",
+        "Interaction",
+        "KnowledgeType",
+        "LearningObject",
+        "Lexeme",
+        "Modality",
+        "Mode",
+        "ModelSpec",
+        "ObservationSpec",
+        "PolicySpec",
+        "Reading",
+        "Requirement",
+        "Resource",
+        "Role",
+        "Sense",
+        "SkillType",
+        "SourceMembership",
+        "Standard",
+        "StandardBand",
+        "StateDimension",
+        "TaskSpec",
+        "Topic",
+        "ref",
+        "Claim",
+        "Locator",
+        "Relation"
+      ]
+    },
+    "Claim": {
+      "case_refs/*": [
+        "Case"
+      ],
+      "locator_refs/*": [
+        "Locator"
+      ],
+      "refinement_of": [
+        "Claim"
+      ],
+      "supersedes_refs/*": [
+        "Claim"
+      ],
+      "validation_refs/*": [
+        "Validation"
+      ]
+    },
+    "Competency": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "evidence_refs/*": [
+        "ObservationSpec",
+        "TaskSpec",
+        "Validation",
+        "Claim"
+      ]
+    },
+    "CompositionSpec": {
+      "alternative_refs/*": [
+        "Activity",
+        "Claim",
+        "Competency",
+        "CompositionSpec",
+        "ConditionSpec",
+        "Construction",
+        "Element",
+        "Environment",
+        "EvaluationProtocol",
+        "FlowSpec",
+        "Goal",
+        "HanCharacter",
+        "Interaction",
+        "KnowledgeType",
+        "LearningObject",
+        "Lexeme",
+        "Modality",
+        "Mode",
+        "ModelSpec",
+        "ObservationSpec",
+        "PolicySpec",
+        "Reading",
+        "Requirement",
+        "Resource",
+        "Role",
+        "Sense",
+        "SkillType",
+        "SourceMembership",
+        "Standard",
+        "StandardBand",
+        "StateDimension",
+        "TaskSpec",
+        "Topic",
+        "ref"
+      ],
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "condition_refs/*": [
+        "ConditionSpec"
+      ],
+      "evidence_refs/*": [
+        "Claim",
+        "Case",
+        "Validation",
+        "ObservationSpec"
+      ],
+      "input_refs/*": [
+        "Activity",
+        "Claim",
+        "Competency",
+        "CompositionSpec",
+        "ConditionSpec",
+        "Construction",
+        "Element",
+        "Environment",
+        "EvaluationProtocol",
+        "FlowSpec",
+        "Goal",
+        "HanCharacter",
+        "Interaction",
+        "KnowledgeType",
+        "LearningObject",
+        "Lexeme",
+        "Modality",
+        "Mode",
+        "ModelSpec",
+        "ObservationSpec",
+        "PolicySpec",
+        "Reading",
+        "Requirement",
+        "Resource",
+        "Role",
+        "Sense",
+        "SkillType",
+        "SourceMembership",
+        "Standard",
+        "StandardBand",
+        "StateDimension",
+        "TaskSpec",
+        "Topic",
+        "ref"
+      ],
+      "output_refs/*": [
+        "Activity",
+        "Claim",
+        "Competency",
+        "CompositionSpec",
+        "ConditionSpec",
+        "Construction",
+        "Element",
+        "Environment",
+        "EvaluationProtocol",
+        "FlowSpec",
+        "Goal",
+        "HanCharacter",
+        "Interaction",
+        "KnowledgeType",
+        "LearningObject",
+        "Lexeme",
+        "Modality",
+        "Mode",
+        "ModelSpec",
+        "ObservationSpec",
+        "PolicySpec",
+        "Reading",
+        "Requirement",
+        "Resource",
+        "Role",
+        "Sense",
+        "SkillType",
+        "SourceMembership",
+        "Standard",
+        "StandardBand",
+        "StateDimension",
+        "TaskSpec",
+        "Topic",
+        "ref"
+      ]
+    },
+    "ConditionSpec": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "Construction": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "condition_refs/*": [
+        "ConditionSpec"
+      ]
+    },
+    "Element": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "Environment": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "EvaluationProtocol": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "comparator_ref": [
+        "Activity",
+        "FlowSpec",
+        "PolicySpec"
+      ],
+      "goal_ref": [
+        "Goal"
+      ],
+      "intervention_ref": [
+        "Activity",
+        "FlowSpec",
+        "PolicySpec"
+      ],
+      "measurement_refs/*": [
+        "ObservationSpec",
+        "TaskSpec",
+        "Validation"
+      ]
+    },
+    "FlowSpec": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "steps/*/activity_ref": [
+        "Activity"
+      ],
+      "transitions/*/condition_ref": [
+        "ConditionSpec"
+      ]
+    },
+    "Goal": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "construct_ref": [
+        "Competency",
+        "KnowledgeType",
+        "SkillType"
+      ],
+      "success_evidence_refs/*": [
+        "ObservationSpec",
+        "TaskSpec",
+        "Validation"
+      ]
+    },
+    "HanCharacter": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "Interaction": {
+      "activity_ref": [
+        "Activity"
+      ],
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "observation_refs/*": [
+        "ObservationSpec"
+      ],
+      "role_refs/*": [
+        "Role"
+      ]
+    },
+    "KnowledgeType": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "LearningObject": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "component_refs/*": [
+        "LearningObject"
+      ],
+      "target_refs/*": [
+        "Element",
+        "HanCharacter",
+        "Reading",
+        "Lexeme",
+        "Sense",
+        "Construction",
+        "Standard",
+        "StandardBand",
+        "SourceMembership",
+        "KnowledgeType",
+        "SkillType",
+        "Competency"
+      ]
+    },
+    "Lexeme": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "form_refs/*": [
+        "HanCharacter",
+        "Element"
+      ],
+      "reading_refs/*": [
+        "Reading"
+      ]
+    },
+    "Locator": {
+      "source_ref": [
+        "Source"
+      ]
+    },
+    "Modality": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "Mode": {
+      "activity_refs/*": [
+        "Activity"
+      ],
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "goal_refs/*": [
+        "Goal"
+      ],
+      "role_refs/*": [
+        "Role"
+      ],
+      "selection_condition_refs/*": [
+        "ConditionSpec"
+      ]
+    },
+    "ModelSpec": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "ObservationSpec": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "construct_ref": [
+        "Competency",
+        "KnowledgeType",
+        "SkillType"
+      ]
+    },
+    "PolicySpec": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "rules/*/condition_ref": [
+        "ConditionSpec"
+      ]
+    },
+    "Reading": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "Relation": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "condition_refs/*": [
+        "ConditionSpec"
+      ],
+      "from_ref": [
+        "Activity",
+        "Claim",
+        "Competency",
+        "CompositionSpec",
+        "ConditionSpec",
+        "Construction",
+        "Element",
+        "Environment",
+        "EvaluationProtocol",
+        "FlowSpec",
+        "Goal",
+        "HanCharacter",
+        "Interaction",
+        "KnowledgeType",
+        "LearningObject",
+        "Lexeme",
+        "Modality",
+        "Mode",
+        "ModelSpec",
+        "ObservationSpec",
+        "PolicySpec",
+        "Reading",
+        "Requirement",
+        "Resource",
+        "Role",
+        "Sense",
+        "SkillType",
+        "SourceMembership",
+        "Standard",
+        "StandardBand",
+        "StateDimension",
+        "TaskSpec",
+        "Topic",
+        "ref",
+        "Locator",
+        "Case"
+      ],
+      "to_ref": [
+        "Activity",
+        "Claim",
+        "Competency",
+        "CompositionSpec",
+        "ConditionSpec",
+        "Construction",
+        "Element",
+        "Environment",
+        "EvaluationProtocol",
+        "FlowSpec",
+        "Goal",
+        "HanCharacter",
+        "Interaction",
+        "KnowledgeType",
+        "LearningObject",
+        "Lexeme",
+        "Modality",
+        "Mode",
+        "ModelSpec",
+        "ObservationSpec",
+        "PolicySpec",
+        "Reading",
+        "Requirement",
+        "Resource",
+        "Role",
+        "Sense",
+        "SkillType",
+        "SourceMembership",
+        "Standard",
+        "StandardBand",
+        "StateDimension",
+        "TaskSpec",
+        "Topic",
+        "ref",
+        "Claim"
+      ]
+    },
+    "Requirement": {
+      "topic_ref": [
+        "Topic"
+      ]
+    },
+    "Resource": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "modality_refs/*": [
+        "Modality"
+      ]
+    },
+    "Role": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "Sense": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "lexeme_ref": [
+        "Lexeme"
+      ]
+    },
+    "SkillType": {
+      "claim_refs/*": [
+        "Claim"
+      ]
+    },
+    "SourceMembership": {
+      "band_ref": [
+        "StandardBand"
+      ],
+      "semantic_refs/*": [
+        "Element",
+        "HanCharacter",
+        "Reading",
+        "Lexeme",
+        "Sense",
+        "Construction",
+        "Standard",
+        "StandardBand",
+        "SourceMembership",
+        "KnowledgeType",
+        "SkillType",
+        "Competency"
+      ],
+      "source_ref": [
+        "Source"
+      ],
+      "standard_ref": [
+        "Standard"
+      ]
+    },
+    "Standard": {
+      "source_refs/*": [
+        "Source"
+      ]
+    },
+    "StandardBand": {
+      "standard_ref": [
+        "Standard"
+      ]
+    },
+    "StateDimension": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "construct_ref": [
+        "Competency",
+        "KnowledgeType",
+        "SkillType"
+      ],
+      "estimator_ref": [
+        "ModelSpec"
+      ],
+      "observation_refs/*": [
+        "ObservationSpec"
+      ]
+    },
+    "TaskSpec": {
+      "claim_refs/*": [
+        "Claim"
+      ],
+      "construct_ref": [
+        "Competency",
+        "KnowledgeType",
+        "SkillType"
+      ],
+      "object_refs/*": [
+        "LearningObject"
+      ],
+      "observation_refs/*": [
+        "ObservationSpec"
+      ]
+    },
+    "Topic": {
+      "parent_ref": [
+        "Topic"
+      ]
+    },
+    "Validation": {
+      "case_refs/*": [
+        "Case"
+      ],
+      "target_refs/*": [
+        "Activity",
+        "Claim",
+        "Competency",
+        "CompositionSpec",
+        "ConditionSpec",
+        "Construction",
+        "Element",
+        "Environment",
+        "EvaluationProtocol",
+        "FlowSpec",
+        "Goal",
+        "HanCharacter",
+        "Interaction",
+        "KnowledgeType",
+        "LearningObject",
+        "Lexeme",
+        "Modality",
+        "Mode",
+        "ModelSpec",
+        "ObservationSpec",
+        "PolicySpec",
+        "Reading",
+        "Requirement",
+        "Resource",
+        "Role",
+        "Sense",
+        "SkillType",
+        "SourceMembership",
+        "Standard",
+        "StandardBand",
+        "StateDimension",
+        "TaskSpec",
+        "Topic",
+        "ref",
+        "Claim",
+        "Locator",
+        "Relation"
+      ]
+    }
+  },
+  "inputs": {
+    "DB01": {
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e"
+    },
+    "G01": {
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a"
+    },
+    "S01": {
+      "content_digest": "82aa24a189e3d4ad12a2d7d6e8a128f946a899c10a48d1aac45ddb7b7747ddc7",
+      "path": "evidence/tasks/S01/S01-FORMAL-01.json",
+      "receipt_id": "TASK:S01:S01-FORMAL-01",
+      "sha256": "29833f32e3e073bb6a3d7b24bfd3eb08816c3b94944c47a7850ccbdb53bf0ff0",
+      "version": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f"
+    }
+  },
+  "interface_version": "learn-kg-if01-1",
+  "limits": [
+    "Interface baseline gives required record shapes and reference endpoints; owner modules refine domain-specific knowledge and versioned semantic extensions. Not final ontology or runtime engine.",
+    "Finite fixtures are original synthetic demonstrations, not actual HSK evidence or second-subject qualification/CQ25. No real observations or authorization."
+  ],
+  "mapping_sha256": "f249a50282ae762c43b41fbceb057ece7f3c528a597e2f46a9e7d206769ae62a",
+  "owner_policy": {
+    "evidence_custodian": "EVIDENCE",
+    "future_subject": "explicit separate domain/version; no invented qualification",
+    "professional_owners": [
+      "H01",
+      "H02",
+      "H03",
+      "H04",
+      "H05",
+      "H06",
+      "H07",
+      "K01",
+      "K02",
+      "K03",
+      "K04",
+      "K05",
+      "K06",
+      "K07",
+      "K08",
+      "K09",
+      "K10",
+      "K11",
+      "K12",
+      "K13",
+      "K14",
+      "K15",
+      "K16",
+      "K17",
+      "K18",
+      "K19"
+    ],
+    "stable_identity": "package_id, version, stable_id unique within a package; expected kind and owner checked separately. Reference version and direct dependency manifest digest must match current manifest. No inference from name or bare ID. Preserve original D3 owner.",
+    "view_owners": [
+      "A01",
+      "A02",
+      "A03",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A08",
+      "E01",
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P09",
+      "P10"
+    ]
+  },
+  "relation_endpoints": {
+    "component_of": [
+      [
+        "LearningObject",
+        "LearningObject"
+      ]
+    ],
+    "converse_in_context": [
+      [
+        "Sense",
+        "Sense"
+      ]
+    ],
+    "defined_by_model": [
+      [
+        "Element",
+        "ModelSpec"
+      ]
+    ],
+    "evidence_for": [
+      [
+        "Locator",
+        "Claim"
+      ]
+    ],
+    "example_of": [
+      [
+        "Case",
+        "Claim"
+      ]
+    ],
+    "informs_decision": [
+      [
+        "ModelSpec",
+        "PolicySpec"
+      ],
+      [
+        "Claim",
+        "PolicySpec"
+      ]
+    ],
+    "necessary_prerequisite": [
+      [
+        "Element",
+        "Element"
+      ],
+      [
+        "SkillType",
+        "SkillType"
+      ]
+    ],
+    "recommended_sequence": [
+      [
+        "Element",
+        "Element"
+      ],
+      [
+        "SkillType",
+        "SkillType"
+      ]
+    ],
+    "scope_topic": [
+      [
+        "SourceMembership",
+        "Topic"
+      ]
+    ],
+    "script_variant": [
+      [
+        "HanCharacter",
+        "HanCharacter"
+      ]
+    ],
+    "standard_member": [
+      [
+        "SourceMembership",
+        "StandardBand"
+      ]
+    ],
+    "taxonomy_parent": [
+      [
+        "Topic",
+        "Topic"
+      ]
+    ]
+  },
+  "schema_sha256": "909a5c5e2bac142eddd9375d584b7ad07c716dc03b475a5f2942ce77354cc4cd",
+  "schema_version": "learn-kg-canonical-candidate-1",
+  "semantic_boundaries": {
+    "composition": "specific versioned inputs and output types, assumptions/alternatives/negative boundaries, never infer qualification from input type alone; scope/subject/construct/measurement bindings checked",
+    "evaluation": "comparison/intervention and estimand, followup, uncertainty, independent approval; no automatic training/promotion or actual learner data",
+    "flow": "entry, explicit event transition, guard, priority, unknown/stop/pause terminal, bounded event/attempt budgets, checkpoints; parallel joins have explicit member IDs/mode/resume policy; definition only, runtime implementation/independent CQ later",
+    "goal": "construct and success evidence required; standard membership not proof of capability",
+    "knowledge_skill": "knowledge content and observable skill distinct; type-level reuse, not copy subject facts",
+    "object": "part membership does not imply prerequisite; granularity and conditions explicit",
+    "observation": "observation specification distinct from actual event, score, estimate, self-report; missing not zero, prompt/assistance and version matter",
+    "policy": "advice only, no implicit state writes; distinct priority and bounded unknown fallback; budget/learner refusal cannot be overridden",
+    "publication": "candidate research use only, rights HOLD and no release; immutable text manifest and typed receipt; no persistent SQLite",
+    "resource": "modality not equivalence, rights and capability applicability checked; descriptions not content authority",
+    "roles": "permission requirement is not actual permission; only downstream authorized execution may use it",
+    "state": "state dimension is definition only; estimates require specific model/evidence/time/uncertainty; no individual data in package"
+  },
+  "shared_objects": [
+    "Goal",
+    "Competency",
+    "KnowledgeType",
+    "SkillType",
+    "LearningObject",
+    "Resource",
+    "Modality",
+    "Activity",
+    "Interaction",
+    "Role",
+    "Environment",
+    "ObservationSpec",
+    "StateDimension",
+    "ConditionSpec",
+    "PolicySpec",
+    "TaskSpec",
+    "Mode",
+    "FlowSpec",
+    "CompositionSpec",
+    "EvaluationProtocol"
+  ],
+  "status": "IF01_SHARED_CANDIDATE_NOT_G04_FREEZE",
+  "view_routes": [
+    {
+      "candidate_object_kinds": [
+        "Mode",
+        "Goal",
+        "Role",
+        "ConditionSpec"
+      ],
+      "owner": "P01",
+      "professional_topic_refs": [
+        "K05.06.01",
+        "K06.04.04",
+        "K07.01.01",
+        "K08.01.02",
+        "K13.05.02"
+      ],
+      "required_scope_ids": [
+        "P01.RQ01",
+        "P01.RQ02",
+        "P01.RQ03",
+        "P01.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K13",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "Goal",
+        "Competency",
+        "ObservationSpec",
+        "Activity"
+      ],
+      "owner": "P02",
+      "professional_topic_refs": [
+        "K07.03.01",
+        "K07.05.01",
+        "K08.04.01",
+        "K09.01.01",
+        "K10.01.05",
+        "K11.01.04"
+      ],
+      "required_scope_ids": [
+        "P02.RQ01",
+        "P02.RQ02",
+        "P02.RQ03",
+        "P02.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "Activity",
+        "TaskSpec",
+        "LearningObject",
+        "Interaction"
+      ],
+      "owner": "P03",
+      "professional_topic_refs": [
+        "K03.06.02",
+        "K04.01.04",
+        "K05.01.01",
+        "K06.02.02",
+        "K12.02.03"
+      ],
+      "required_scope_ids": [
+        "P03.RQ01",
+        "P03.RQ02",
+        "P03.RQ03",
+        "P03.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K12",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "FlowSpec",
+        "Activity",
+        "ConditionSpec"
+      ],
+      "owner": "P04",
+      "professional_topic_refs": [
+        "K06.03.03",
+        "K07.03.03",
+        "K11.04.02",
+        "K12.05.01"
+      ],
+      "required_scope_ids": [
+        "P04.RQ01",
+        "P04.RQ02",
+        "P04.RQ03",
+        "P04.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K07",
+        "K11",
+        "K12",
+        "P01",
+        "P02",
+        "P03",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "FlowSpec",
+        "PolicySpec",
+        "TaskSpec",
+        "ObservationSpec"
+      ],
+      "owner": "P05",
+      "professional_topic_refs": [
+        "K02.06.03",
+        "K04.04.01",
+        "K05.02.01",
+        "K10.03.01",
+        "K11.02.04"
+      ],
+      "required_scope_ids": [
+        "P05.RQ01",
+        "P05.RQ02",
+        "P05.RQ03",
+        "P05.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K02",
+        "K04",
+        "K05",
+        "K10",
+        "K11",
+        "P03",
+        "P04",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "ObservationSpec",
+        "PolicySpec",
+        "TaskSpec",
+        "Interaction"
+      ],
+      "owner": "P06",
+      "professional_topic_refs": [
+        "K06.06.01",
+        "K09.01.04",
+        "K10.01.02",
+        "K12.03.03"
+      ],
+      "required_scope_ids": [
+        "P06.RQ01",
+        "P06.RQ02",
+        "P06.RQ03",
+        "P06.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K09",
+        "K10",
+        "K12",
+        "P03",
+        "P04",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "Mode",
+        "PolicySpec",
+        "Role",
+        "ConditionSpec"
+      ],
+      "owner": "P07",
+      "professional_topic_refs": [
+        "K08.01.02",
+        "K08.02.03",
+        "K13.04.04",
+        "K16.05.03",
+        "K19.03.02"
+      ],
+      "required_scope_ids": [
+        "P07.RQ01",
+        "P07.RQ02",
+        "P07.RQ03",
+        "P07.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K13",
+        "K16",
+        "K19",
+        "P02",
+        "P03",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "StateDimension",
+        "PolicySpec",
+        "Activity",
+        "ConditionSpec"
+      ],
+      "owner": "P08",
+      "professional_topic_refs": [
+        "K09.05.04",
+        "K10.06.06",
+        "K11.03.01",
+        "K11.05.01",
+        "K16.03.04"
+      ],
+      "required_scope_ids": [
+        "P08.RQ01",
+        "P08.RQ02",
+        "P08.RQ03",
+        "P08.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "TaskSpec",
+        "ObservationSpec",
+        "Validation",
+        "Goal"
+      ],
+      "owner": "P09",
+      "professional_topic_refs": [
+        "K04.04.02",
+        "K07.04.01",
+        "K09.07.02",
+        "K17.06.03"
+      ],
+      "required_scope_ids": [
+        "P09.RQ01",
+        "P09.RQ02",
+        "P09.RQ03",
+        "P09.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K04",
+        "K07",
+        "K09",
+        "K17",
+        "P04",
+        "P06",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "FlowSpec",
+        "Role",
+        "Environment",
+        "StateDimension"
+      ],
+      "owner": "P10",
+      "professional_topic_refs": [
+        "K08.05.04",
+        "K11.05.04",
+        "K15.06.04",
+        "K16.03.04",
+        "K17.06.04",
+        "K19.03.02"
+      ],
+      "required_scope_ids": [
+        "P10.RQ01",
+        "P10.RQ02",
+        "P10.RQ03",
+        "P10.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K11",
+        "K15",
+        "K16",
+        "K17",
+        "K19",
+        "P08",
+        "P09",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "Goal",
+        "Competency",
+        "ObservationSpec"
+      ],
+      "owner": "F01",
+      "professional_topic_refs": [
+        "K03.01.02",
+        "K04.01.04",
+        "K07.01.01",
+        "K09.01.01",
+        "H06.06.03",
+        "H07.02.03"
+      ],
+      "required_scope_ids": [
+        "F01.RQ01",
+        "F01.RQ02",
+        "F01.RQ03",
+        "F01.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K09",
+        "P02",
+        "P09",
+        "H06",
+        "H07",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "LearningObject",
+        "KnowledgeType",
+        "SkillType"
+      ],
+      "owner": "F02",
+      "professional_topic_refs": [
+        "K03.03.01",
+        "K03.03.02",
+        "K04.06.01",
+        "K07.02.05",
+        "K12.01.03",
+        "H03.01.04"
+      ],
+      "required_scope_ids": [
+        "F02.RQ01",
+        "F02.RQ02",
+        "F02.RQ03",
+        "F02.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K12",
+        "P03",
+        "P04",
+        "H03",
+        "IF01",
+        "H04",
+        "H05",
+        "H06",
+        "H07"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "Resource",
+        "Modality",
+        "ConditionSpec"
+      ],
+      "owner": "F03",
+      "professional_topic_refs": [
+        "K06.02.02",
+        "K12.04.03",
+        "K15.01.01",
+        "K16.04.03",
+        "K19.05.03"
+      ],
+      "required_scope_ids": [
+        "F03.RQ01",
+        "F03.RQ02",
+        "F03.RQ03",
+        "F03.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K06",
+        "K12",
+        "K15",
+        "K16",
+        "K19",
+        "P03",
+        "IF01",
+        "P04"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "Interaction",
+        "Activity",
+        "Role",
+        "ObservationSpec"
+      ],
+      "owner": "F04",
+      "professional_topic_refs": [
+        "K04.01.04",
+        "K05.04.01",
+        "K06.05.04",
+        "K08.04.03",
+        "K12.02.04",
+        "K13.05.02",
+        "K15.02.04"
+      ],
+      "required_scope_ids": [
+        "F04.RQ01",
+        "F04.RQ02",
+        "F04.RQ03",
+        "F04.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K04",
+        "K05",
+        "K06",
+        "K08",
+        "K12",
+        "K13",
+        "K15",
+        "P03",
+        "P06",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "ObservationSpec",
+        "StateDimension",
+        "ModelSpec"
+      ],
+      "owner": "F05",
+      "professional_topic_refs": [
+        "K02.06.04",
+        "K03.05.01",
+        "K04.04.01",
+        "K08.03.02",
+        "K09.02.03",
+        "K10.01.04",
+        "K16.05.01",
+        "K18.05.03"
+      ],
+      "required_scope_ids": [
+        "F05.RQ01",
+        "F05.RQ02",
+        "F05.RQ03",
+        "F05.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K08",
+        "K09",
+        "K10",
+        "K16",
+        "K18",
+        "P08",
+        "IF01",
+        "P10"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "StateDimension",
+        "PolicySpec",
+        "TaskSpec"
+      ],
+      "owner": "F06",
+      "professional_topic_refs": [
+        "K02.06.02",
+        "K03.05.01",
+        "K04.03.04",
+        "K06.06.03",
+        "K09.01.03",
+        "K10.02.04",
+        "K11.05.02",
+        "K16.02.04",
+        "H01.03.01",
+        "H03.03.03"
+      ],
+      "required_scope_ids": [
+        "F06.RQ01",
+        "F06.RQ02",
+        "F06.RQ03",
+        "F06.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K06",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P06",
+        "P08",
+        "H06",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "Role",
+        "Environment",
+        "Modality"
+      ],
+      "owner": "F07",
+      "professional_topic_refs": [
+        "K06.07.01",
+        "K13.04.02",
+        "K15.05.03",
+        "K16.03.03",
+        "K19.02.03"
+      ],
+      "required_scope_ids": [
+        "F07.RQ01",
+        "F07.RQ02",
+        "F07.RQ03",
+        "F07.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K06",
+        "K13",
+        "K15",
+        "K16",
+        "K19",
+        "P10",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "TaskSpec",
+        "Goal",
+        "ObservationSpec"
+      ],
+      "owner": "F08",
+      "professional_topic_refs": [
+        "K04.04.01",
+        "K04.04.02",
+        "K06.02.03",
+        "K07.04.01",
+        "K09.01.03",
+        "K14.05.04",
+        "K17.06.03",
+        "H06.06.02"
+      ],
+      "required_scope_ids": [
+        "F08.RQ01",
+        "F08.RQ02",
+        "F08.RQ03",
+        "F08.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "DB01",
+        "K04",
+        "K06",
+        "K07",
+        "K09",
+        "K14",
+        "K17",
+        "P05",
+        "P09",
+        "H06",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "EvaluationProtocol",
+        "Goal",
+        "ObservationSpec",
+        "Validation"
+      ],
+      "owner": "E01",
+      "professional_topic_refs": [
+        "K09.02.05",
+        "K15.05.04",
+        "K17.05.05",
+        "K17.06.01",
+        "K19.02.05",
+        "K19.03.04"
+      ],
+      "required_scope_ids": [
+        "E01.RQ01",
+        "E01.RQ02",
+        "E01.RQ03",
+        "E01.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "K09",
+        "K15",
+        "K17",
+        "K19",
+        "P10",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "Goal",
+        "Competency",
+        "LearningObject"
+      ],
+      "owner": "A01",
+      "professional_topic_refs": [
+        "K03.03.02",
+        "K07.03.01",
+        "K09.01.01",
+        "H07.04.01"
+      ],
+      "required_scope_ids": [
+        "A01.RQ01",
+        "A01.RQ02",
+        "A01.RQ03",
+        "A01.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F01",
+        "F02",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "LearningObject",
+        "TaskSpec",
+        "ObservationSpec"
+      ],
+      "owner": "A02",
+      "professional_topic_refs": [
+        "K03.06.02",
+        "K06.02.02",
+        "K09.01.03",
+        "K12.02.01",
+        "H06.01.01"
+      ],
+      "required_scope_ids": [
+        "A02.RQ01",
+        "A02.RQ02",
+        "A02.RQ03",
+        "A02.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F02",
+        "F03",
+        "F04",
+        "IF01",
+        "H04",
+        "H05",
+        "H06"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "ObservationSpec",
+        "StateDimension"
+      ],
+      "owner": "A03",
+      "professional_topic_refs": [
+        "K02.06.04",
+        "K04.03.04",
+        "K09.02.03",
+        "K10.02.01",
+        "K16.05.01"
+      ],
+      "required_scope_ids": [
+        "A03.RQ01",
+        "A03.RQ02",
+        "A03.RQ03",
+        "A03.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F05",
+        "F06",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "StateDimension",
+        "PolicySpec",
+        "Activity"
+      ],
+      "owner": "A04",
+      "professional_topic_refs": [
+        "K05.06.01",
+        "K08.04.02",
+        "K10.06.06",
+        "K11.04.01"
+      ],
+      "required_scope_ids": [
+        "A04.RQ01",
+        "A04.RQ02",
+        "A04.RQ03",
+        "A04.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F05",
+        "F06",
+        "P08",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "TaskSpec",
+        "ObservationSpec"
+      ],
+      "owner": "A05",
+      "professional_topic_refs": [
+        "K04.04.02",
+        "K06.03.04",
+        "K09.07.02",
+        "K17.06.03"
+      ],
+      "required_scope_ids": [
+        "A05.RQ01",
+        "A05.RQ02",
+        "A05.RQ03",
+        "A05.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F01",
+        "F08",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "Resource",
+        "TaskSpec",
+        "Validation"
+      ],
+      "owner": "A06",
+      "professional_topic_refs": [
+        "K12.03.05",
+        "K12.05.05",
+        "K15.04.01",
+        "K19.05.03",
+        "H04.07.03"
+      ],
+      "required_scope_ids": [
+        "A06.RQ01",
+        "A06.RQ02",
+        "A06.RQ03",
+        "A06.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F03",
+        "F04",
+        "K19",
+        "IF01",
+        "H03",
+        "H04",
+        "H05"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "Environment",
+        "Role",
+        "PolicySpec"
+      ],
+      "owner": "A07",
+      "professional_topic_refs": [
+        "K08.01.02",
+        "K13.04.02",
+        "K16.04.03",
+        "K18.05.03",
+        "K19.03.02"
+      ],
+      "required_scope_ids": [
+        "A07.RQ01",
+        "A07.RQ02",
+        "A07.RQ03",
+        "A07.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F05",
+        "F07",
+        "IF01"
+      ]
+    },
+    {
+      "candidate_object_kinds": [
+        "CompositionSpec",
+        "EvaluationProtocol",
+        "Validation"
+      ],
+      "owner": "A08",
+      "professional_topic_refs": [
+        "K09.02.04",
+        "K10.06.01",
+        "K11.06.01",
+        "K17.03.02",
+        "K19.05.01"
+      ],
+      "required_scope_ids": [
+        "A08.RQ01",
+        "A08.RQ02",
+        "A08.RQ03",
+        "A08.RQ04"
+      ],
+      "status": "CANDIDATE_INTERFACE_ONLY",
+      "task_dependencies": [
+        "F08",
+        "E01",
+        "IF01"
+      ]
+    }
+  ]
+}
