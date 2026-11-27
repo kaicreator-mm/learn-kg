@@ -1,0 +1,72 @@
+{
+  "status": "PRIVATE_REFERENCE_METADATA_AND_TWO_HEADER_SAMPLES",
+  "as_of": "2026-11-27",
+  "folder_label": "HSK-Test",
+  "levels": [
+    {
+      "level": 1,
+      "folders": 34,
+      "marked_missing_listening": 0,
+      "sample": "11556: one PDF"
+    },
+    {
+      "level": 2,
+      "folders": 30,
+      "marked_missing_listening": 1,
+      "sample": "21440: one PDF"
+    },
+    {
+      "level": 3,
+      "folders": 32,
+      "marked_missing_listening": 1,
+      "sample": "31438: one PDF"
+    },
+    {
+      "level": 4,
+      "folders": 32,
+      "marked_missing_listening": 2,
+      "sample": "41438: one PDF"
+    },
+    {
+      "level": 5,
+      "folders": 35,
+      "marked_missing_listening": 0,
+      "sample": "51331: PDF and answer DOCX"
+    },
+    {
+      "level": 6,
+      "folders": 32,
+      "marked_missing_listening": 0,
+      "sample": "61553D: questions and writing PDF"
+    }
+  ],
+  "folder_count": 195,
+  "marked_missing_listening_count": 4,
+  "sample_folders_read": 6,
+  "limits": "Direct Drive folder metadata only, no raw exam contents, answer correctness, provenance, years, distinct-form count, authenticity, license or audio completeness verified. Folder labels and filenames are not standard membership. No Drive IDs, raw private content or download links in repository. Two readable document headers were inspected; counts are sample-specific, not general examination specifications. Listening question presence does not establish playable audio.",
+  "pipeline": [
+    "Private raw inventory with file/version hashes and form identity; distinguish actual exam, sample/mock, answer key, transcript, audio, writing insert and duplicate representation.",
+    "Join by verified paper identity and section/item number, not filename alone. Detect missing/ambiguous audio/key, conflicts and scan-only files. Preserve all raw variants with provenance.",
+    "Annotate language objects, task construct, response mode, permitted aids, scoring and version; map to H01–H07 by conditional evidence, no inferred level equivalence or authoritative vocabulary membership.",
+    "Use K09/K12/K17 for task analysis and validation; no empirical difficulty/discrimination/IRT calibration without response data and design. Keep learner data separate.",
+    "Deduplicate by bytes and normalized item identity; separate paper-family groups for learning/evaluation split, no answer leakage. Rights/publication HOLD, private source remains outside GitHub. Existing SRC01/HS00/HSK01 blockers unchanged."
+  ],
+  "header_samples": [
+    {
+      "level": 2,
+      "label": "21440",
+      "listening": 35,
+      "reading": 25,
+      "audio_verified": false
+    },
+    {
+      "level": 6,
+      "label": "61553D",
+      "listening": 50,
+      "reading": 50,
+      "writing": 1,
+      "audio_verified": false
+    }
+  ],
+  "issue_comment_id": 7218170808
+}

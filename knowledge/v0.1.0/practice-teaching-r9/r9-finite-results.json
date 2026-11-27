@@ -1,0 +1,206 @@
+{
+  "fixture_sha256": "d6c4775453100114c304352b8723460d6f2ae5f636d50db67f7dfbdf7dcf8850",
+  "results": [
+    {
+      "id": "RV01-01",
+      "claim": "K05.03.02.PT.01",
+      "actual": "WRONG_SELECTION_CORRECT_SELECTED_EXECUTION",
+      "expected": "WRONG_SELECTION_CORRECT_SELECTED_EXECUTION",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV01-02",
+      "claim": "K05.03.02.PT.01",
+      "actual": "CORRECT_SELECTION_WRONG_EXECUTION",
+      "expected": "CORRECT_SELECTION_WRONG_EXECUTION",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV01-03",
+      "claim": "K05.03.02.PT.01",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV01-04",
+      "claim": "K05.03.02.PT.01",
+      "actual": "BOTH_WRONG",
+      "expected": "BOTH_WRONG",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV01-05",
+      "claim": "K05.03.02.PT.01",
+      "actual": "BOTH_CORRECT_IN_FIXTURE",
+      "expected": "BOTH_CORRECT_IN_FIXTURE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV01-06",
+      "claim": "K05.03.02.PT.01",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV01-07",
+      "claim": "K05.03.02.PT.01",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV01-08",
+      "claim": "K05.03.02.PT.01",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV02-01",
+      "claim": "K05.02.04.PT.01",
+      "actual": {
+        "A": {
+          "feasible": true,
+          "cost": 20,
+          "retention": 4,
+          "prediction": "UNKNOWN"
+        },
+        "B": {
+          "feasible": false,
+          "reason": "BUDGET_EXCEEDED"
+        },
+        "C": {
+          "feasible": true,
+          "cost": 10,
+          "retention": 4,
+          "prediction": "UNKNOWN"
+        }
+      },
+      "expected": {
+        "A": {
+          "feasible": true,
+          "cost": 20,
+          "retention": 4,
+          "prediction": "UNKNOWN"
+        },
+        "B": {
+          "feasible": false,
+          "reason": "BUDGET_EXCEEDED"
+        },
+        "C": {
+          "feasible": true,
+          "cost": 10,
+          "retention": 4,
+          "prediction": "UNKNOWN"
+        }
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV02-02",
+      "claim": "K05.02.04.PT.01",
+      "actual": {
+        "A": {
+          "feasible": false,
+          "reason": "INVALID_WINDOW"
+        },
+        "B": {
+          "feasible": false,
+          "reason": "INVALID_WINDOW"
+        },
+        "C": {
+          "feasible": false,
+          "reason": "INVALID_WINDOW"
+        }
+      },
+      "expected": {
+        "A": {
+          "feasible": false,
+          "reason": "INVALID_WINDOW"
+        },
+        "B": {
+          "feasible": false,
+          "reason": "INVALID_WINDOW"
+        },
+        "C": {
+          "feasible": false,
+          "reason": "INVALID_WINDOW"
+        }
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV02-03",
+      "claim": "K05.02.04.PT.01",
+      "actual": "UNKNOWN",
+      "expected": "UNKNOWN",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV02-04",
+      "claim": "K05.02.04.PT.01",
+      "actual": {
+        "C": {
+          "feasible": true,
+          "cost": 10,
+          "retention": 4,
+          "prediction": "UNKNOWN"
+        }
+      },
+      "expected": {
+        "C": {
+          "feasible": true,
+          "cost": 10,
+          "retention": 4,
+          "prediction": "UNKNOWN"
+        }
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV03-01",
+      "claim": "K07.02.02.PT.01",
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV03-02",
+      "claim": "K07.02.02.PT.01",
+      "actual": "NO_COUNTEREXAMPLE",
+      "expected": "NO_COUNTEREXAMPLE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV03-03",
+      "claim": "K07.02.02.PT.01",
+      "actual": "REFUTES_NECESSITY_IN_SCOPE",
+      "expected": "REFUTES_NECESSITY_IN_SCOPE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV03-04",
+      "claim": "K07.02.02.PT.01",
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV03-05",
+      "claim": "K07.02.02.PT.01",
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "RV03-06",
+      "claim": "K07.02.02.PT.01",
+      "actual": "NO_COUNTEREXAMPLE",
+      "expected": "NO_COUNTEREXAMPLE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    }
+  ],
+  "limit": "Finite authored cases only; no independent verdict or psychological cause, fitted retention model, learner inference."
+}

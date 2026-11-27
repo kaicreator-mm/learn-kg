@@ -1,0 +1,33 @@
+{
+ "status":"AUTHOR_FROZEN_CROSS_INPUT_DISCRIMINATION_FIXTURES",
+ "cases":[
+  {"pair":"X01","name":"matching_recall","input":{"goal":"recall","test":"recall","independent":true,"options":false,"scoring_contract_equal":true},"expected":"RECALL_EVIDENCE_CANDIDATE"},
+  {"pair":"X01","name":"recognition_is_not_recall","input":{"goal":"recall","test":"recognition","independent":true,"options":true,"scoring_contract_equal":true},"expected":"RECALL_NOT_ESTABLISHED"},
+  {"pair":"X01","name":"cue_contamination","input":{"goal":"recall","test":"recall","independent":true,"options":true,"scoring_contract_equal":true},"expected":"HOLD"},
+  {"pair":"X01","name":"unknown_contract","input":{"goal":"recall","test":"recall","independent":true,"options":false},"expected":"HOLD"},
+  {"pair":"X02","name":"components_only","input":{"component_pass":[true,true],"whole_result":null,"whole_independent":null,"whole_target_matches":true},"expected":"REQUEST_WHOLE_TASK"},
+  {"pair":"X02","name":"whole_failure","input":{"component_pass":[true,true],"whole_result":false,"whole_independent":true,"whole_target_matches":true},"expected":"COMPONENT_SUCCESS_WHOLE_NOT_MET"},
+  {"pair":"X02","name":"whole_success","input":{"component_pass":[true,true],"whole_result":true,"whole_independent":true,"whole_target_matches":true},"expected":"WHOLE_EVIDENCE_CANDIDATE"},
+  {"pair":"X02","name":"assisted_whole","input":{"component_pass":[true,true],"whole_result":true,"whole_independent":false,"whole_target_matches":true},"expected":"HOLD"},
+  {"pair":"X03","name":"delayed_same_task","input":{"last_exposure_day":3,"test_day":10,"target_delay_days":7,"context_same":true,"independent":true},"expected":"RETENTION_EVIDENCE_CANDIDATE"},
+  {"pair":"X03","name":"acquisition","input":{"last_exposure_day":3,"test_day":3,"target_delay_days":7,"context_same":true,"independent":true},"expected":"DELAY_NOT_MET"},
+  {"pair":"X03","name":"changed_context","input":{"last_exposure_day":3,"test_day":10,"target_delay_days":7,"context_same":false,"independent":true},"expected":"TRANSFER_OBSERVATION_SEPARATE"},
+  {"pair":"X03","name":"negative_delay","input":{"last_exposure_day":3,"test_day":2,"target_delay_days":7,"context_same":true,"independent":true},"expected":"HOLD"},
+  {"pair":"X04","name":"observed_step_map","input":{"target":"T","observation_target":"T","steps":["s1","s2"],"observed_steps":["s1","s2"],"whole_observed":true},"expected":"TASK_ANALYSIS_WITNESS_CANDIDATE"},
+  {"pair":"X04","name":"missing_whole","input":{"target":"T","observation_target":"T","steps":["s1","s2"],"observed_steps":["s1","s2"],"whole_observed":false},"expected":"REQUEST_WHOLE_OBSERVATION"},
+  {"pair":"X04","name":"missing_step","input":{"target":"T","observation_target":"T","steps":["s1","s2"],"observed_steps":["s1"],"whole_observed":true},"expected":"REQUEST_STEP_OBSERVATION"},
+  {"pair":"X04","name":"wrong_target","input":{"target":"T","observation_target":"U","steps":["s1","s2"],"observed_steps":["s1","s2"],"whole_observed":true},"expected":"HOLD"},
+  {"pair":"X05","name":"joint_gap","input":{"solo":[9,9],"joint":4,"total":10,"criterion":8,"matched":true,"independent":true},"expected":"JOINT_DIFFICULTY_HYPOTHESIS_ONLY"},
+  {"pair":"X05","name":"component_gap","input":{"solo":[4,9],"joint":4,"total":10,"criterion":8,"matched":true,"independent":true},"expected":"COMPONENT_GAP_POSSIBLE"},
+  {"pair":"X05","name":"joint_met","input":{"solo":[9,9],"joint":9,"total":10,"criterion":8,"matched":true,"independent":true},"expected":"JOINT_RULE_MET"},
+  {"pair":"X05","name":"not_matched","input":{"solo":[9,9],"joint":4,"total":10,"criterion":8,"matched":false,"independent":true},"expected":"HOLD"},
+  {"pair":"X06","name":"counterexample","input":{"target":"B","observed_target":"B","allowed_route":true,"same_conditions":true,"prerequisite_ability":"ABSENT","target_result":"MET","independent":true},"expected":"REFUTES_NECESSITY_IN_SCOPE"},
+  {"pair":"X06","name":"no_attendance_only","input":{"target":"B","observed_target":"B","allowed_route":true,"same_conditions":true,"prerequisite_ability":"UNKNOWN","target_result":"MET","independent":true},"expected":"HOLD"},
+  {"pair":"X06","name":"prerequisite_present","input":{"target":"B","observed_target":"B","allowed_route":true,"same_conditions":true,"prerequisite_ability":"PRESENT","target_result":"MET","independent":true},"expected":"NO_COUNTEREXAMPLE"},
+  {"pair":"X06","name":"different_scope","input":{"target":"B","observed_target":"B","allowed_route":true,"same_conditions":false,"prerequisite_ability":"ABSENT","target_result":"MET","independent":true},"expected":"HOLD"},
+  {"pair":"X07","name":"integrated_met","input":{"component_results":[true,true],"integration_result":true,"independent":true,"same_rubric":true},"expected":"INTEGRATED_EVIDENCE_CANDIDATE"},
+  {"pair":"X07","name":"components_without_integrated","input":{"component_results":[true,true],"integration_result":null,"independent":true,"same_rubric":true},"expected":"REQUEST_INTEGRATED_TASK"},
+  {"pair":"X07","name":"integration_below","input":{"component_results":[true,true],"integration_result":false,"independent":true,"same_rubric":true},"expected":"INTEGRATED_RULE_NOT_MET"},
+  {"pair":"X07","name":"assisted_integration","input":{"component_results":[true,true],"integration_result":true,"independent":false,"same_rubric":true},"expected":"HOLD"}
+ ]
+}

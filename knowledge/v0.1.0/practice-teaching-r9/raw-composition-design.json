@@ -1,0 +1,513 @@
+{
+  "status": "AUTHOR_FROZEN_SYNTHETIC_RAW_OBSERVATION_CONTRACT",
+  "scope": "Narrow advice-only examples; no learning diagnosis, mastery qualification or general policy evaluator.",
+  "contracts": [
+    {
+      "id": "K05.PT.COMP.01",
+      "mode": "compare",
+      "boundary": "Both observations use same target, material, opportunities, delay, assessment format and independent conditions. Distinct practice strategies. Bounded selection is descriptive, not causal; no comparison if required fields invalid or unequal.",
+      "base": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": 7,
+          "total": 10
+        }
+      },
+      "cases": [
+        {
+          "name": "matched",
+          "patch": {},
+          "expected": {
+            "action": "SUGGEST",
+            "reason": "MATCHED_DESCRIPTIVE_COMPARISON",
+            "preferred": "retrieval"
+          }
+        },
+        {
+          "name": "tie",
+          "patch": {
+            "b.correct": 4
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "NO_OBSERVED_ADVANTAGE"
+          }
+        },
+        {
+          "name": "immediate_vs_delay",
+          "patch": {
+            "b.delay_days": 0
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "UNMATCHED"
+          }
+        },
+        {
+          "name": "assisted",
+          "patch": {
+            "b.independent": false
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "UNMATCHED"
+          }
+        },
+        {
+          "name": "missing_score",
+          "patch": {
+            "b.correct": null
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "wrong_count_type",
+          "patch": {
+            "b.correct": true
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "different_denominator",
+          "patch": {
+            "b.total": 20
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "UNMATCHED"
+          }
+        },
+        {
+          "name": "same_strategy",
+          "patch": {
+            "b.strategy": "restudy"
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "UNMATCHED"
+          }
+        },
+        {
+          "name": "zero_opportunities",
+          "patch": {
+            "a.opportunities": 0,
+            "b.opportunities": 0
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "reverse",
+          "patch": {
+            "a.correct": 9
+          },
+          "expected": {
+            "action": "SUGGEST",
+            "reason": "MATCHED_DESCRIPTIVE_COMPARISON",
+            "preferred": "restudy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "K06.PT.COMP.01",
+      "mode": "remediate",
+      "boundary": "A specific independent assessment gap is observed under a declared criterion. Support suggestion requires affirmative learner permission and enough budget for the bounded intervention plus new assessment; no automated execution.",
+      "base": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "cases": [
+        {
+          "name": "gap",
+          "patch": {},
+          "expected": {
+            "action": "SUGGEST",
+            "reason": "BOUNDED_REMEDIATION"
+          }
+        },
+        {
+          "name": "met",
+          "patch": {
+            "correct": 8
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "NO_CONFIRMED_GAP"
+          }
+        },
+        {
+          "name": "assist",
+          "patch": {
+            "independent": false
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "mismatch",
+          "patch": {
+            "observed_target": "copied_example"
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "low_sample",
+          "patch": {
+            "total": 6
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "refused",
+          "patch": {
+            "consent": false
+          },
+          "expected": {
+            "action": "STOP",
+            "reason": "NO_PERMISSION"
+          }
+        },
+        {
+          "name": "budget",
+          "patch": {
+            "budget_min": 14
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INSUFFICIENT_BUDGET"
+          }
+        },
+        {
+          "name": "unknown_permission",
+          "patch": {
+            "consent": null
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "NO_PERMISSION"
+          }
+        },
+        {
+          "name": "unknown_tools",
+          "patch": {
+            "tools_allowed": null
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "zero_retest",
+          "patch": {
+            "retest_min": 0
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_PLAN"
+          }
+        }
+      ]
+    },
+    {
+      "id": "K07.PT.COMP.01",
+      "mode": "progress",
+      "boundary": "One declared criterion with sufficient independent evidence; prerequisite requirements are explicitly supplied by reviewed path contract, not graph transitivity. A nonnecessary recommendation never becomes a required prerequisite. No qualification inferred.",
+      "base": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": true
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "cases": [
+        {
+          "name": "met",
+          "patch": {},
+          "expected": {
+            "action": "SUGGEST",
+            "reason": "DECLARED_RULE_MET"
+          }
+        },
+        {
+          "name": "below",
+          "patch": {
+            "correct": 7
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "BELOW_RULE"
+          }
+        },
+        {
+          "name": "missing_necessary",
+          "patch": {
+            "evidence": {}
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "PREREQUISITE_UNCONFIRMED"
+          }
+        },
+        {
+          "name": "false_necessary",
+          "patch": {
+            "evidence": {
+              "A": false
+            }
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "PREREQUISITE_UNCONFIRMED"
+          }
+        },
+        {
+          "name": "wrong_type",
+          "patch": {
+            "evidence": {
+              "A": 1
+            }
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "PREREQUISITE_UNCONFIRMED"
+          }
+        },
+        {
+          "name": "unknown_scope",
+          "patch": {
+            "prerequisite_scope_confirmed": null
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "PREREQUISITE_UNCONFIRMED"
+          }
+        },
+        {
+          "name": "small_sample",
+          "patch": {
+            "total": 7,
+            "correct": 7
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        },
+        {
+          "name": "declared_no_necessary",
+          "patch": {
+            "necessary": [],
+            "evidence": {}
+          },
+          "expected": {
+            "action": "SUGGEST",
+            "reason": "DECLARED_RULE_MET"
+          }
+        },
+        {
+          "name": "duplicate_necessary",
+          "patch": {
+            "necessary": [
+              "A",
+              "A"
+            ]
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "PREREQUISITE_UNCONFIRMED"
+          }
+        },
+        {
+          "name": "wrong_count",
+          "patch": {
+            "correct": true
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_OBSERVATION"
+          }
+        }
+      ]
+    },
+    {
+      "id": "K08.PT.COMP.01",
+      "mode": "revise",
+      "boundary": "The learner confirms this exact proposed plan identity and revision; known nonnegative task costs within budget. Preserve observation and self-attribution separately; never infer motive from behavior or execute automatically.",
+      "base": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": true,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "cases": [
+        {
+          "name": "confirmed",
+          "patch": {},
+          "expected": {
+            "action": "SUGGEST",
+            "reason": "CONFIRMED_FEASIBLE_PLAN"
+          }
+        },
+        {
+          "name": "refused",
+          "patch": {
+            "consent": false
+          },
+          "expected": {
+            "action": "STOP",
+            "reason": "NO_EXACT_PERMISSION"
+          }
+        },
+        {
+          "name": "unknown",
+          "patch": {
+            "consent": null
+          },
+          "expected": {
+            "action": "STOP",
+            "reason": "NO_EXACT_PERMISSION"
+          }
+        },
+        {
+          "name": "stale_confirmation",
+          "patch": {
+            "confirmed_revision": 1
+          },
+          "expected": {
+            "action": "STOP",
+            "reason": "NO_EXACT_PERMISSION"
+          }
+        },
+        {
+          "name": "other_plan",
+          "patch": {
+            "confirmed_plan_id": "P2"
+          },
+          "expected": {
+            "action": "STOP",
+            "reason": "NO_EXACT_PERMISSION"
+          }
+        },
+        {
+          "name": "over_budget",
+          "patch": {
+            "budget_min": 24
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INSUFFICIENT_BUDGET"
+          }
+        },
+        {
+          "name": "bad_cost",
+          "patch": {
+            "costs_min": [
+              10,
+              -1
+            ]
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_PLAN"
+          }
+        },
+        {
+          "name": "missing_observation",
+          "patch": {
+            "observation_id": null
+          },
+          "expected": {
+            "action": "CLARIFY",
+            "reason": "INVALID_PLAN"
+          }
+        },
+        {
+          "name": "boolean_revision",
+          "patch": {
+            "revision": true,
+            "confirmed_revision": true
+          },
+          "expected": {
+            "action": "STOP",
+            "reason": "NO_EXACT_PERMISSION"
+          }
+        },
+        {
+          "name": "exact_budget",
+          "patch": {
+            "budget_min": 25
+          },
+          "expected": {
+            "action": "SUGGEST",
+            "reason": "CONFIRMED_FEASIBLE_PLAN"
+          }
+        }
+      ]
+    }
+  ]
+}
