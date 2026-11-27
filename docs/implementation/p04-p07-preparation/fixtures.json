@@ -1,0 +1,1608 @@
+[
+  {
+    "id": "P04.PREP.01",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "COMPLETE"
+  },
+  {
+    "id": "P04.PREP.02",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "COMPLETE"
+  },
+  {
+    "id": "P04.PREP.03",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.04",
+    "owner": "P04",
+    "input": {
+      "budget": 5,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "COMPLETE"
+  },
+  {
+    "id": "P04.PREP.05",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 2,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.06",
+    "owner": "P04",
+    "input": {
+      "budget": 4,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.07",
+    "owner": "P04",
+    "input": {
+      "budget": true,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.08",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": false,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.09",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "FAILED"
+        }
+      ]
+    },
+    "expected": "FAILED"
+  },
+  {
+    "id": "P04.PREP.10",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "PAUSE"
+        }
+      ]
+    },
+    "expected": "PAUSE"
+  },
+  {
+    "id": "P04.PREP.11",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "HOLD"
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.12",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": false,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.13",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": false
+        },
+        {
+          "id": "r",
+          "type": "RETRY",
+          "version": "V1",
+          "cost": 1,
+          "target_match": true,
+          "learner_opt_in": true
+        },
+        {
+          "id": "z2",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "COMPLETE"
+  },
+  {
+    "id": "P04.PREP.14",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": false
+        },
+        {
+          "id": "r",
+          "type": "RETRY",
+          "version": "V1",
+          "cost": 1,
+          "target_match": true,
+          "learner_opt_in": true
+        },
+        {
+          "id": "z2",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": false
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.15",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "f",
+          "type": "FADE",
+          "version": "V1",
+          "cost": 1,
+          "independent_evidence": true,
+          "risk_acceptable": true,
+          "reversible": true,
+          "learner_opt_in": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "COMPLETE"
+  },
+  {
+    "id": "P04.PREP.16",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "f",
+          "type": "FADE",
+          "version": "V1",
+          "cost": 1,
+          "independent_evidence": false,
+          "risk_acceptable": true,
+          "reversible": true,
+          "learner_opt_in": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.17",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "p",
+          "type": "PAUSE",
+          "version": "V1",
+          "cost": 1
+        }
+      ]
+    },
+    "expected": "PAUSE"
+  },
+  {
+    "id": "P04.PREP.18",
+    "owner": "P04",
+    "input": {
+      "budget": 5,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "p",
+          "type": "PAUSE",
+          "version": "V1",
+          "cost": 1
+        },
+        {
+          "id": "q",
+          "type": "RESUME",
+          "version": "V1",
+          "cost": 1,
+          "learner_resume": true,
+          "checkpoint": "p"
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "COMPLETE"
+  },
+  {
+    "id": "P04.PREP.19",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "p",
+          "type": "PAUSE",
+          "version": "V1",
+          "cost": 1
+        },
+        {
+          "id": "q",
+          "type": "RESUME",
+          "version": "V1",
+          "cost": 1,
+          "learner_resume": true,
+          "checkpoint": "other"
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.20",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "p",
+          "type": "PAUSE",
+          "version": "V1",
+          "cost": 1
+        },
+        {
+          "id": "q",
+          "type": "RESUME",
+          "version": "V2",
+          "cost": 1,
+          "learner_resume": true,
+          "checkpoint": "p"
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": 1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P04.PREP.21",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "p",
+          "type": "PAUSE",
+          "version": "V1",
+          "cost": 1
+        },
+        {
+          "id": "t",
+          "type": "STOP",
+          "version": "V1",
+          "cost": 1
+        }
+      ]
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "P04.PREP.22",
+    "owner": "P04",
+    "input": {
+      "budget": 8,
+      "version": "V1",
+      "authorized": true,
+      "goal_confirmed": true,
+      "events": [
+        {
+          "id": "s",
+          "type": "START",
+          "version": "V1",
+          "cost": 1,
+          "mode_match": true,
+          "resource_ready": true
+        },
+        {
+          "id": "a",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "A",
+          "valid_observation": true
+        },
+        {
+          "id": "b",
+          "type": "MEMBER",
+          "version": "V1",
+          "cost": 1,
+          "member": "B",
+          "valid_observation": true
+        },
+        {
+          "id": "u",
+          "type": "SUBFLOW",
+          "version": "V1",
+          "cost": 1,
+          "result": "COMPLETE"
+        },
+        {
+          "id": "z",
+          "type": "ASSESS",
+          "version": "V1",
+          "cost": -1,
+          "independent": true,
+          "task_criteria_met": true
+        }
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P07.PREP.23",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "SUGGEST_ADJUST_CHALLENGE"
+  },
+  {
+    "id": "P07.PREP.24",
+    "owner": "P07",
+    "input": {
+      "exit": true,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": null,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "P07.PREP.25",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": true,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "DEFER"
+  },
+  {
+    "id": "P07.PREP.26",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": true,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "PAUSE"
+  },
+  {
+    "id": "P07.PREP.27",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": true,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true,
+      "resume_requested": true
+    },
+    "expected": "SUGGEST_ADJUST_CHALLENGE"
+  },
+  {
+    "id": "P07.PREP.28",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": false,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P07.PREP.29",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": true,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P07.PREP.30",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 0,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P07.PREP.31",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P07.PREP.32",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": false,
+      "target_match": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P07.PREP.33",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": null,
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "CLARIFY"
+  },
+  {
+    "id": "P07.PREP.34",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "REFLECT",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "SUGGEST_REFLECT"
+  },
+  {
+    "id": "P07.PREP.35",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "REST",
+      "accessible": true,
+      "target_match": true
+    },
+    "expected": "SUGGEST_REST"
+  },
+  {
+    "id": "P07.PREP.36",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "REQUEST_SUPPORT",
+      "accessible": true,
+      "target_match": true,
+      "no_answer_substitution": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P07.PREP.37",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "REQUEST_SUPPORT",
+      "accessible": true,
+      "target_match": true,
+      "no_answer_substitution": true
+    },
+    "expected": "SUGGEST_REQUEST_SUPPORT"
+  },
+  {
+    "id": "P07.PREP.38",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true,
+      "progress_requested": true,
+      "previous": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": 2
+      },
+      "current": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": 3
+      }
+    },
+    "expected": "DESCRIBE_TASK_CHANGE_ONLY"
+  },
+  {
+    "id": "P07.PREP.39",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true,
+      "progress_requested": true,
+      "previous": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": 2
+      },
+      "current": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "HINT",
+        "unit": "POINT",
+        "score": 3
+      }
+    },
+    "expected": "REQUEST_OBSERVATION"
+  },
+  {
+    "id": "P07.PREP.40",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true,
+      "progress_requested": true,
+      "previous": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": 2
+      },
+      "current": {
+        "goal": "G1",
+        "scoring_version": "S2",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": 3
+      }
+    },
+    "expected": "REQUEST_OBSERVATION"
+  },
+  {
+    "id": "P07.PREP.41",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true,
+      "progress_requested": true,
+      "previous": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": 2
+      },
+      "current": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": true
+      }
+    },
+    "expected": "REQUEST_OBSERVATION"
+  },
+  {
+    "id": "P07.PREP.42",
+    "owner": "P07",
+    "input": {
+      "exit": false,
+      "declined": false,
+      "paused": false,
+      "goal_confirmed": true,
+      "authorized": true,
+      "budget": 3,
+      "cost": 1,
+      "selected": "ADJUST_CHALLENGE",
+      "accessible": true,
+      "target_match": true,
+      "progress_requested": true,
+      "previous": null,
+      "current": {
+        "goal": "G1",
+        "scoring_version": "S1",
+        "support": "NONE",
+        "unit": "POINT",
+        "score": 3
+      }
+    },
+    "expected": "REQUEST_OBSERVATION"
+  }
+]

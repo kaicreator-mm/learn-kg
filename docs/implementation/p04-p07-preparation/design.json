@@ -1,0 +1,27 @@
+{
+  "status": "PREPARATION_ONLY_NOT_CANDIDATE_READY",
+  "P04": {
+    "claims": ["K06.03.03.PT.01","K06.03.02.PT.01","K07.03.03.PT.01","K11.04.02.TR.01","K11.05.04.TR.01","K12.05.02.TR.01"],
+    "process_refs": ["FLOW_GUIDED_CONCEPT_PRACTICE","P02.PREPARATION","P03.EXPLANATION","P03.PRODUCTION","P03.PROBLEM_SOLVING","P03.REFLECTION"],
+    "requirements": {
+      "P04.RQ01": "完成目标与准备确认后进入两个可分别观测的任务；完整组合证据单列；替代路径必须同目标、同评价条件。",
+      "P04.RQ02": "并行逻辑成员 A/B 可任意顺序提交、ALL join 必须两项有效完成；子流程返回 COMPLETE 才进入综合评价，PAUSE/HOLD/FAILED 原样保留；仅模拟逻辑并行，不承诺并发执行。",
+      "P04.RQ03": "错误支持与独立复测分开；最多一次补救重试，渐撤需要任务特定独立证据、风险可接受、可恢复及学习者同意；辅助成功不自动渐撤。",
+      "P04.RQ04": "每个动作扣除实际同单位整数成本，预算冻结；停止优先，未知拒绝；暂停保留检查点，恢复要求本人请求、版本与检查点完全一致，重复事件不再次扣费。"
+    },
+    "limits": {"max_events":12,"max_retries":1,"join":"ALL","budget_unit":"MINUTE","max_support_level":2},
+    "states":["READY","ACTIVE","JOINED","REMEDIATION","EVALUATE","PAUSED","COMPLETE","STOP","HOLD","FAILED"]
+  },
+  "P07": {
+    "claims": ["K08.02.03.D4.02","K08.02.05.D4.02","K08.04.04.D4.02","K08.05.04.PT.01","K13.04.04.SR.01","K16.03.02.TG.01","K16.05.03.TG.01","K19.03.02.TG.01","K19.02.01.TG.01"],
+    "process_refs": ["P02.GOAL","P02.PLAN","P03.REFLECTION"],
+    "requirements": {
+      "P07.RQ01": "先询问本人认可目标和当前困难；只在明确选择和目标匹配时提供可逆挑战调整，缺少自述不推断低动机。",
+      "P07.RQ02": "进度反馈只描述同目标、同评分版本、同辅助条件的真实任务观察；不声称人格、能力或因果进步；候选选项由本人决定。",
+      "P07.RQ03": "求助与反思分别由本人选择；帮助须可及且不代答，拒绝记录不要求敏感解释；不把自述或参与量当学习效果。",
+      "P07.RQ04": "明确退出立即停止建议；拒绝或暂停不自动恢复；本人重新选择且预算、权限、条件匹配才提供下一候选；无可行选项保留未知或停止。"
+    },
+    "options":["ADJUST_CHALLENGE","REFLECT","REQUEST_SUPPORT","REST"],
+    "limits":{"max_offers":1,"budget_unit":"MINUTE","no_auto_resume":true}
+  }
+}
