@@ -1,0 +1,983 @@
+[
+  {
+    "owner": "F03",
+    "name": "AUDIO_LISTENING_SYNTHETIC",
+    "input": {
+      "permission": true,
+      "rights": "PUBLIC_AUTHORIZED",
+      "accessible": true,
+      "publication": false,
+      "modality": "AUDIO",
+      "required_construct": "LISTENING"
+    },
+    "expected": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK"
+  },
+  {
+    "owner": "F03",
+    "name": "TEXT_READING_SYNTHETIC",
+    "input": {
+      "permission": true,
+      "rights": "PUBLIC_AUTHORIZED",
+      "accessible": true,
+      "publication": false,
+      "modality": "TEXT",
+      "required_construct": "READING"
+    },
+    "expected": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK"
+  },
+  {
+    "owner": "F03",
+    "name": "TEXT_FOR_LISTENING_REJECT",
+    "input": {
+      "permission": true,
+      "rights": "PUBLIC_AUTHORIZED",
+      "accessible": true,
+      "publication": false,
+      "modality": "TEXT",
+      "required_construct": "LISTENING"
+    },
+    "expected": "REJECT_CONSTRUCT_SUBSTITUTION"
+  },
+  {
+    "owner": "F03",
+    "name": "RIGHTS_UNKNOWN_HOLD",
+    "input": {
+      "permission": true,
+      "rights": "HOLD",
+      "accessible": true,
+      "publication": false,
+      "modality": "AUDIO",
+      "required_construct": "LISTENING"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F03",
+    "name": "ACCESS_UNAVAILABLE_HOLD",
+    "input": {
+      "permission": true,
+      "rights": "PRIVATE_ONLY",
+      "accessible": false,
+      "publication": false,
+      "modality": "AUDIO",
+      "required_construct": "LISTENING"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F03",
+    "name": "PRIVATE_TO_PUBLIC_REFUSE",
+    "input": {
+      "permission": true,
+      "rights": "PRIVATE_ONLY",
+      "accessible": true,
+      "publication": true,
+      "modality": "AUDIO",
+      "required_construct": "LISTENING"
+    },
+    "expected": "REFUSE_PUBLICATION"
+  },
+  {
+    "owner": "F04",
+    "name": "UNASSISTED_INDEPENDENT",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": true
+    },
+    "expected": "INDEPENDENT_OBSERVATION"
+  },
+  {
+    "owner": "F04",
+    "name": "HINTED_NOT_INDEPENDENT",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [
+        {
+          "id": "H1",
+          "task_version": "T1",
+          "type": "HINT",
+          "event_time": 10,
+          "recorded_at": 25
+        }
+      ],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": false
+    },
+    "expected": "ASSISTED_NOT_INDEPENDENT"
+  },
+  {
+    "owner": "F04",
+    "name": "IDENTICAL_DUPLICATE_HINT_IDEMPOTENT",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [
+        {
+          "id": "H1",
+          "task_version": "T1",
+          "type": "HINT",
+          "event_time": 10,
+          "recorded_at": 25
+        },
+        {
+          "id": "H1",
+          "task_version": "T1",
+          "type": "HINT",
+          "event_time": 10,
+          "recorded_at": 25
+        }
+      ],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": true
+    },
+    "expected": "ASSISTED_NOT_INDEPENDENT"
+  },
+  {
+    "owner": "F04",
+    "name": "EVENT_AND_STORAGE_TIMES_SEPARATE",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [
+        {
+          "id": "H1",
+          "task_version": "T1",
+          "type": "HINT",
+          "event_time": 100,
+          "recorded_at": 20
+        }
+      ],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": true
+    },
+    "expected": "ASSISTED_NOT_INDEPENDENT"
+  },
+  {
+    "owner": "F04",
+    "name": "GENERATED_ANSWER_NOT_EVIDENCE",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": true,
+      "independent_retest": true
+    },
+    "expected": "NOT_LEARNER_EVIDENCE"
+  },
+  {
+    "owner": "F04",
+    "name": "MISSING_INITIAL_UNKNOWN",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [],
+      "initial_response": null,
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": true
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "owner": "F04",
+    "name": "ROLE_DENIED_HOLD",
+    "input": {
+      "role_authorized": false,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F04",
+    "name": "VERSION_MISMATCH_HOLD",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S2",
+      "expected_scoring_version": "S1",
+      "hint_events": [],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F04",
+    "name": "CONFLICTING_DUPLICATE_HINT_HOLD",
+    "input": {
+      "role_authorized": true,
+      "task_version": "T1",
+      "expected_task_version": "T1",
+      "scoring_version": "S1",
+      "expected_scoring_version": "S1",
+      "hint_events": [
+        {
+          "id": "H1",
+          "task_version": "T1",
+          "type": "HINT",
+          "event_time": 10,
+          "recorded_at": 25
+        },
+        {
+          "id": "H1",
+          "task_version": "T1",
+          "type": "HINT",
+          "event_time": 11,
+          "recorded_at": 25
+        }
+      ],
+      "initial_response": "A",
+      "final_response": "A",
+      "generated_answer": false,
+      "independent_retest": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F05",
+    "name": "SEPARATE_CHANNELS",
+    "input": {
+      "response": {
+        "status": "OBSERVED",
+        "value": "response",
+        "task_version": "T1"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": "S1",
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "NOT_RUN"
+      }
+    },
+    "expected": {
+      "channels": {
+        "response": {
+          "status": "OBSERVED",
+          "value": "response",
+          "task_version": "T1"
+        },
+        "self_report": {
+          "status": "UNKNOWN",
+          "reason": "MISSING"
+        },
+        "score": {
+          "status": "SCORED",
+          "value": 0.75,
+          "scoring_version": "S1",
+          "denominator": 4
+        },
+        "estimate": {
+          "status": "NOT_ESTIMATED"
+        }
+      },
+      "combined_mastery": "NOT_INFERRED"
+    }
+  },
+  {
+    "owner": "F05",
+    "name": "MISSING_SELF_REPORT_UNKNOWN",
+    "input": {
+      "response": {
+        "status": "OBSERVED",
+        "value": "response",
+        "task_version": "T1"
+      },
+      "self_report": {
+        "status": "NOT_ADMINISTERED"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": "S1",
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "NOT_RUN"
+      }
+    },
+    "expected": {
+      "channels": {
+        "response": {
+          "status": "OBSERVED",
+          "value": "response",
+          "task_version": "T1"
+        },
+        "self_report": {
+          "status": "UNKNOWN",
+          "reason": "NOT_ADMINISTERED"
+        },
+        "score": {
+          "status": "SCORED",
+          "value": 0.75,
+          "scoring_version": "S1",
+          "denominator": 4
+        },
+        "estimate": {
+          "status": "NOT_ESTIMATED"
+        }
+      },
+      "combined_mastery": "NOT_INFERRED"
+    }
+  },
+  {
+    "owner": "F05",
+    "name": "MISSING_SCORE_UNKNOWN",
+    "input": {
+      "response": {
+        "status": "OBSERVED",
+        "value": "response",
+        "task_version": "T1"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      },
+      "estimate": {
+        "status": "NOT_RUN"
+      }
+    },
+    "expected": {
+      "channels": {
+        "response": {
+          "status": "OBSERVED",
+          "value": "response",
+          "task_version": "T1"
+        },
+        "self_report": {
+          "status": "UNKNOWN",
+          "reason": "MISSING"
+        },
+        "score": {
+          "status": "UNKNOWN",
+          "reason": "MISSING"
+        },
+        "estimate": {
+          "status": "NOT_ESTIMATED"
+        }
+      },
+      "combined_mastery": "NOT_INFERRED"
+    }
+  },
+  {
+    "owner": "F05",
+    "name": "UNPINNED_MODEL_HOLD",
+    "input": {
+      "response": {
+        "status": "OBSERVED",
+        "value": "response",
+        "task_version": "T1"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": "S1",
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "OBSERVED",
+        "model_id": "M1",
+        "model_version": "V1",
+        "model_pin_verified": false
+      }
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F05",
+    "name": "SCORING_VERSION_MISMATCH_HOLD",
+    "input": {
+      "response": {
+        "status": "OBSERVED",
+        "value": "response",
+        "task_version": "T1"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": null,
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "NOT_RUN"
+      }
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F05",
+    "name": "RESPONSE_MISSING_UNKNOWN",
+    "input": {
+      "response": {
+        "status": "MISSING"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": "S1",
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "NOT_RUN"
+      }
+    },
+    "expected": {
+      "channels": {
+        "response": {
+          "status": "UNKNOWN",
+          "reason": "MISSING"
+        },
+        "self_report": {
+          "status": "UNKNOWN",
+          "reason": "MISSING"
+        },
+        "score": {
+          "status": "SCORED",
+          "value": 0.75,
+          "scoring_version": "S1",
+          "denominator": 4
+        },
+        "estimate": {
+          "status": "NOT_ESTIMATED"
+        }
+      },
+      "combined_mastery": "NOT_INFERRED"
+    }
+  },
+  {
+    "owner": "F05",
+    "name": "RESPONSE_INVALID_UNKNOWN",
+    "input": {
+      "response": {
+        "status": "INVALID"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": "S1",
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "NOT_RUN"
+      }
+    },
+    "expected": {
+      "channels": {
+        "response": {
+          "status": "UNKNOWN",
+          "reason": "INVALID"
+        },
+        "self_report": {
+          "status": "UNKNOWN",
+          "reason": "MISSING"
+        },
+        "score": {
+          "status": "SCORED",
+          "value": 0.75,
+          "scoring_version": "S1",
+          "denominator": 4
+        },
+        "estimate": {
+          "status": "NOT_ESTIMATED"
+        }
+      },
+      "combined_mastery": "NOT_INFERRED"
+    }
+  },
+  {
+    "owner": "F05",
+    "name": "RESPONSE_NOT_ADMINISTERED_UNKNOWN",
+    "input": {
+      "response": {
+        "status": "NOT_ADMINISTERED"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": "S1",
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "NOT_RUN"
+      }
+    },
+    "expected": {
+      "channels": {
+        "response": {
+          "status": "UNKNOWN",
+          "reason": "NOT_ADMINISTERED"
+        },
+        "self_report": {
+          "status": "UNKNOWN",
+          "reason": "MISSING"
+        },
+        "score": {
+          "status": "SCORED",
+          "value": 0.75,
+          "scoring_version": "S1",
+          "denominator": 4
+        },
+        "estimate": {
+          "status": "NOT_ESTIMATED"
+        }
+      },
+      "combined_mastery": "NOT_INFERRED"
+    }
+  },
+  {
+    "owner": "F05",
+    "name": "MODEL_OUTPUT_UNBOUND_HOLD",
+    "input": {
+      "response": {
+        "status": "OBSERVED",
+        "value": "response",
+        "task_version": "T1"
+      },
+      "self_report": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0.75,
+        "scoring_version": "S1",
+        "denominator": 4
+      },
+      "estimate": {
+        "status": "OBSERVED",
+        "model_id": "M1",
+        "model_version": "V1",
+        "model_pin_verified": true
+      }
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "F07",
+    "name": "AUTHORIZED_ACCESSIBLE_OPTION",
+    "input": {
+      "identity_verified": true,
+      "role": "LEARNER",
+      "permission": true,
+      "accessible": true,
+      "capability_match": true,
+      "learner_selected": true,
+      "exit": false
+    },
+    "expected": "SUGGEST_ONLY_NO_EXECUTION"
+  },
+  {
+    "owner": "F07",
+    "name": "ROLE_PERMISSION_DENIED",
+    "input": {
+      "identity_verified": true,
+      "role": "LEARNER",
+      "permission": false,
+      "accessible": true,
+      "capability_match": true,
+      "learner_selected": true,
+      "exit": false
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "owner": "F07",
+    "name": "IDENTITY_UNKNOWN_CLARIFY",
+    "input": {
+      "identity_verified": null,
+      "role": "LEARNER",
+      "permission": true,
+      "accessible": true,
+      "capability_match": true,
+      "learner_selected": true,
+      "exit": false
+    },
+    "expected": "CLARIFY"
+  },
+  {
+    "owner": "F07",
+    "name": "ACCESS_UNAVAILABLE_DEFER",
+    "input": {
+      "identity_verified": true,
+      "role": "LEARNER",
+      "permission": true,
+      "accessible": false,
+      "capability_match": true,
+      "learner_selected": true,
+      "exit": false
+    },
+    "expected": "DEFER"
+  },
+  {
+    "owner": "F07",
+    "name": "USER_EXIT_STOP",
+    "input": {
+      "identity_verified": true,
+      "role": "LEARNER",
+      "permission": null,
+      "accessible": true,
+      "capability_match": true,
+      "learner_selected": true,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "F07",
+    "name": "NO_LEARNER_SELECTION_CLARIFY",
+    "input": {
+      "identity_verified": true,
+      "role": "LEARNER",
+      "permission": true,
+      "accessible": true,
+      "capability_match": true,
+      "learner_selected": false,
+      "exit": false
+    },
+    "expected": "CLARIFY"
+  },
+  {
+    "owner": "E01",
+    "name": "VALID_FROZEN_PROTOCOL_CANDIDATE_ONLY",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "CANDIDATE_ANALYSIS_ONLY_NO_RELEASE"
+  },
+  {
+    "owner": "E01",
+    "name": "APPROVAL_MISSING_HOLD",
+    "input": {
+      "approved": false,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "E01",
+    "name": "COMPARATOR_MISSING_HOLD",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": false,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "E01",
+    "name": "SIMULATION_NOT_EFFECT",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "SIMULATED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "SIMULATION_ONLY_NOT_EFFECT"
+  },
+  {
+    "owner": "E01",
+    "name": "ASSIGNMENT_UNVERIFIED_DESCRIPTIVE_ONLY",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": false,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "OBSERVATIONAL",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE"
+  },
+  {
+    "owner": "E01",
+    "name": "DIRECT_KNOWLEDGE_WRITE_REFUSE",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": true,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "owner": "E01",
+    "name": "FOLLOWUP_MISSING_HOLD",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": false,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "E01",
+    "name": "IDENTICAL_POLICY_VERSIONS_HOLD",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CURRENT_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "E01",
+    "name": "INVALID_ANALYSIS_PLAN_HOLD",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V1",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "not-a-sha256",
+      "followup_days": 28
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "E01",
+    "name": "POLICY_VERSION_MISMATCH_HOLD",
+    "input": {
+      "approved": true,
+      "protocol_frozen": true,
+      "population_defined": true,
+      "outcome_defined": true,
+      "comparator_pinned": true,
+      "followup_complete": true,
+      "independent_review": true,
+      "assignment_verified": true,
+      "data_kind": "OBSERVED",
+      "direct_knowledge_write": false,
+      "protocol_id": "E01.PROTOCOL",
+      "protocol_version": "V1",
+      "assignment_unit": "LEARNER",
+      "assignment_method": "RANDOMIZED",
+      "intervention_version": "CANDIDATE_V1",
+      "comparator_version": "CURRENT_V1",
+      "current_policy_version": "CURRENT_V1",
+      "candidate_policy_version": "CANDIDATE_V0",
+      "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+      "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "followup_days": 28
+    },
+    "expected": "HOLD"
+  }
+]

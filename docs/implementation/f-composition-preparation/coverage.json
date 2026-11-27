@@ -1,0 +1,179 @@
+{
+  "status": "PREPARATION_ONLY_NOT_REGISTERED",
+  "package_version": "0.1.0-process-candidate-3",
+  "manifest_sha256": "89ea0e55ac51a7d53181044f6a3a9fa9013dd71fdb2e57663ef28b0a8d88afdd",
+  "migrated_p_records": 1312,
+  "new_records": 135,
+  "new_f_cases": 40,
+  "sql_builder_cases": 40,
+  "static_cross_module_bindings": 5,
+  "modules": [
+    {
+      "owner": "F03",
+      "title": "资源与表达组合",
+      "records": 23,
+      "builder_cases": 6,
+      "cq": "CQ17",
+      "lc": "LC03",
+      "requirements": [
+        {
+          "id": "F03.RQ01",
+          "scope": "资源身份、版本、目标和命题分离；资源形态不是教学效果",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F03.RQ02",
+          "scope": "模态/通道能力与构念要求匹配；文字不等价于听辨",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F03.RQ03",
+          "scope": "可及性、真实可用性和目标保持分别核验；替代改变构念时另立任务",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F03.RQ04",
+          "scope": "未知权利保持HOLD；PRIVATE_ONLY资源不得进入公开包；当前导入器拒绝PRIVATE_ONLY记录；正例仅为无实际媒体字节的合成授权描述。",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        }
+      ],
+      "status": "PREPARATION_ONLY"
+    },
+    {
+      "owner": "F04",
+      "title": "学习交互组合",
+      "records": 27,
+      "builder_cases": 9,
+      "cq": "CQ18",
+      "lc": "LC04",
+      "requirements": [
+        {
+          "id": "F04.RQ01",
+          "scope": "提示前、提示事件、最终响应和独立复测分开记录",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F04.RQ02",
+          "scope": "识别、自由回忆、提示回忆与生成答案不可混为同一观测",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F04.RQ03",
+          "scope": "提示事件具有稳定ID、任务版本、发生时间和记录时间；相同事件幂等，冲突隔离；缺答/无效/未施测与错误互斥",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F04.RQ04",
+          "scope": "任务/评分版本和角色权限匹配；未知、歧义及冲突不强行评分",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        }
+      ],
+      "status": "PREPARATION_ONLY"
+    },
+    {
+      "owner": "F05",
+      "title": "学习者状态组合",
+      "records": 29,
+      "builder_cases": 9,
+      "cq": "CQ19",
+      "lc": "LC05",
+      "requirements": [
+        {
+          "id": "F05.RQ01",
+          "scope": "原始响应、自述、评分、帮助和模型估计独立表达",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F05.RQ02",
+          "scope": "缺失保持UNKNOWN；缺答/无效/未施测/错误不折叠",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F05.RQ03",
+          "scope": "估计绑定模型身份、版本、尺度、适用条件及不确定性",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F05.RQ04",
+          "scope": "没有已核验估计器时只定义状态维度，不计算或推断掌握",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        }
+      ],
+      "status": "PREPARATION_ONLY"
+    },
+    {
+      "owner": "F07",
+      "title": "环境与角色组合",
+      "records": 24,
+      "builder_cases": 6,
+      "cq": "CQ21",
+      "lc": "LC07",
+      "requirements": [
+        {
+          "id": "F07.RQ01",
+          "scope": "角色能力、身份、用途、范围、期限和权限分别验证",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F07.RQ02",
+          "scope": "环境能力、真实可及性和构念适配分开",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F07.RQ03",
+          "scope": "支持由本人或适用授权主体选择，可拒绝和撤回",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "F07.RQ04",
+          "scope": "未授权拒绝、未知澄清、退出停止；建议不代表执行授权",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        }
+      ],
+      "status": "PREPARATION_ONLY"
+    },
+    {
+      "owner": "E01",
+      "title": "外部改进闭环",
+      "records": 32,
+      "builder_cases": 10,
+      "cq": "CQ24",
+      "lc": "LC10",
+      "requirements": [
+        {
+          "id": "E01.RQ01",
+          "scope": "预先固定问题、人群、处理版本、比较策略、主要结果、时间点、分配单位/方法、分析计划摘要和估计量",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "E01.RQ02",
+          "scope": "分配效应与实际接受处理分开；模拟、描述和因果估计分开",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "E01.RQ03",
+          "scope": "个体记录不直接写入正式知识；候选修订必须版本化、可审查、可回退",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        },
+        {
+          "id": "E01.RQ04",
+          "scope": "证据、授权、独立复核和发布是不同阶段；无证据不声称长期收益",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        }
+      ],
+      "status": "PREPARATION_ONLY"
+    }
+  ],
+  "rights": "HOLD",
+  "independent_review": "NOT_RUN",
+  "cq": "NOT_RUN",
+  "lc": "NOT_RUN",
+  "release": "NOT_ELIGIBLE",
+  "limits": [
+    "No runtime executor, scheduler, external action, learner diagnosis or automatic knowledge write",
+    "No rights or publication promotion",
+    "No CQ/LC execution or G03/G04/G05 acceptance",
+    "No empirical effectiveness claim; all fixtures are synthetic contract witnesses",
+    "P01-P10 prior receipts are not current for v3 until exact tuple rebinding and independent delta review"
+  ]
+}
