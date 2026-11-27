@@ -129,3 +129,7 @@ R2 independent comment 7214381381: K01/K02/K04 ACCEPT_SCOPED; K03 residual P1 R2
 ### KR01 closeout
 
 Independent ACCEPT_SCOPED #6 comment 7214923937 / #2 7214924825, exact HEAD 607a21b9133cdc1bbc1cd45cba5d8f7bf5b06c1b. K01–K04 local qualification receipts registered separately, current FORMAL-03 candidate consumption unchanged. KR01 QUALIFICATION_RECEIPTS (8/8 original, two residual closed, P0/P1/P2=0). Local scope only; K01 optional HOLD, rights, G03 closure, CQ/LC, release remain unapproved.
+
+### DB02 scoped candidate
+
+DB02 CANDIDATE_READY (FORMAL-01; 33/33 builder tests, 38 record kinds, exact replay); V00 READY. Candidate research only, no persistent SQLite or release/approval authority.

@@ -1,0 +1,116 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-db02-20261127",
+  "branch": "version/v0.1.0",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "planning_authority": {
+    "exact_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+    "review_comment": 7211695681
+  },
+  "task_id": "DB02",
+  "attempt_id": "DB02-FORMAL-01",
+  "receipt_id": "TASK:DB02:DB02-FORMAL-01",
+  "role": "BUILDER_NON_REVIEWER",
+  "base": "4c2f9226675b8154293444a5fb1d984e619d2e1b",
+  "exact_head": "2a644511c1373a8ccd17155d8dfac52ebfd6ce8e",
+  "version": "2a644511c1373a8ccd17155d8dfac52ebfd6ce8e",
+  "input": [
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/db02/README.md",
+      "sha256": "3e1ac503052d29653ca22af3962daf56e5e975cd45d537b99a014182eab6d072",
+      "type": "MARKDOWN"
+    },
+    {
+      "path": "docs/implementation/db02/validation-partial.json",
+      "sha256": "945cd724ac77a60f369deacd5abc4ec81578bf431fd76cdd90bf5e40fad2695a",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/db02/validation-r2.json",
+      "sha256": "da35002c73305b6bf0b7535eaf0b6dbcc59c2c82aaeb47c37568fb0e113f2e21",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "tools/knowledge_import/candidate_pointer.py",
+      "sha256": "b53c1bacf4cd63e501866f236a0cb20052c72f22673a3b27e9fb5313ffc1f3b4",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "tools/knowledge_import/importer.py",
+      "sha256": "3375388b3e3eef3b7ede1c25ac25a85851a4d1ef9644fe959331d4c7fe1f9110",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "tools/knowledge_import/test_importer.py",
+      "sha256": "469da36bdc95cd5eb98655b3553be3d0f773b123b2f23936cdbfbed1d801aa5e",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "tools/knowledge_import/test_mapping_witness.py",
+      "sha256": "f4b951064e8ed82f984adba156f74760d85760b2a6deb954baeb4b2c9bb657e9",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "tools/knowledge_import/test_pointer.py",
+      "sha256": "af40a8bb34f624cf247b5bdbe4d1171c76c6b1f4f2b6dacd2d1ea7d7a33c6755",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "tools/knowledge_import/test_replay.py",
+      "sha256": "c92133a5a526e8da6b9878c38682ae01d6d19bc4c60dbb46caa87e98b2a67f6b",
+      "type": "PYTHON_TOOL"
+    }
+  ],
+  "content_digest": "cea96c131b002f2c4908bd18111665eca0abad2259b2d30963020502a9ea673f",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "validation": {
+    "exact_checkout_replay_job": "job_01M8ECHEG100EVHSNCX4KAYVF9",
+    "tree": "bd4f2d2ddf8a20e05f8ecf5f68763019583fc68f",
+    "result": "33/33 PASS_BUILDER_ONLY",
+    "all_38_kind_mapping_witnesses": true,
+    "missing_required_field_negative": 38,
+    "cross_domain_negative": 3,
+    "repeat_imports": "MATCH_ALL_TABLES_AND_REPORT",
+    "pointer_interrupt_recovery": "PASS_TEMP_TEXT_FIXTURE",
+    "actual_snapshot_isolation_job": "job_01M8EC86P7006RBV932NA3FEGP",
+    "persistent_sqlite": false,
+    "physical_cross_db_crash": "HOLD_NOT_AUTHORIZED",
+    "approval_authority": "NOT_IMPLEMENTED_FAIL_CLOSED",
+    "independent_gate": "NOT_RUN"
+  },
+  "issues": [
+    "IF01 is an additional actual consumed contract, not a new DAG dependency; current receipt explicitly pinned.",
+    "D014 candidate research scope only; no production or approved/public release authority. Other-subject package, mutable-root hardening, full flow evaluator, complete professional/CQ/LC semantics remain downstream.",
+    "First commit attempt failed only because git author identity absent; tests passed before the commit attempt. Retried with explicit controller identity and clean exact replay."
+  ],
+  "next": "V00 eligible with DB02 and IF01 current receipts."
+}

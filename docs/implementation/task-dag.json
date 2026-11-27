@@ -74,14 +74,15 @@
       "deliverable": "规范解析、语义校验、导入API/CLI、SQLite DDL与映射、拒绝原因、可复现测试",
       "acceptance": "文本先校验；内存SQLite实际FK、类型/孤儿/版本/缺包拒绝、重复导入、路由/EXPLAIN；默认不写数据库文件。持久输出仅下游显式选择，当前不执行；物理跨库崩溃测试未授权则HOLD，不伪报；文本manifest激活/恢复测试",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "DB01",
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/DB02/DB02-FORMAL-01.json"
     },
     {
       "id": "SRC01",
@@ -3330,7 +3331,7 @@
         }
       ],
       "output_receipt": "CANDIDATE_READY",
-      "status": "PLANNED"
+      "status": "READY"
     }
   ],
   "topological_waves": [
