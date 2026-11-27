@@ -1,6 +1,46 @@
 {
   "status": "BUILDER_SQL_CONSUMPTION_ONLY",
   "case_count": 68,
+  "model_spec_guard_case_count": 7,
+  "model_spec_guard_fixture_sha256": "505d6d5b0d118b8a4558b968d83472b495f9aa7f3bcb0a62cbe7050f16b65b8d",
+  "model_domain_contract_sha256": "a15505baa6252af5ba0b11bf87fccaba18dd8ebfcea4fd6832c90a655cdf614c",
+  "model_spec_guard_results": [
+    {
+      "id": "BRIER_FRACTIONAL_LABEL",
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "id": "BRIER_BOOLEAN_LABEL",
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "id": "BRIER_VALID_BINARY_LABELS",
+      "actual": "PASS",
+      "expected": "PASS"
+    },
+    {
+      "id": "HLR_ZERO_HALF_LIFE",
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "id": "HLR_VALID_POSITIVE_HALF_LIFE",
+      "actual": "PASS",
+      "expected": "PASS"
+    },
+    {
+      "id": "RECTANGLE_ZERO_SIDE",
+      "actual": "HOLD",
+      "expected": "HOLD"
+    },
+    {
+      "id": "RECTANGLE_VALID_POSITIVE_SIDES",
+      "actual": "PASS",
+      "expected": "PASS"
+    }
+  ],
   "ast_evaluated": 8,
   "model_guards": 12,
   "policy_cases": 7,

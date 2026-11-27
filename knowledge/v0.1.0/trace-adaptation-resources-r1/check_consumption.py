@@ -6,6 +6,8 @@ sys.path.insert(0,str(ROOT))
 from tools.knowledge_import.importer import Importer,ManifestPin
 from tools.knowledge_import.v00_prototype import load_record
 from run_finite import evaluate,n,prob,need
+from tools.knowledge_import.model_spec import load_domain_contract,validate_model_parameters,ModelParameterError
+DOMAIN=load_domain_contract(P/'model-domain-constraints.json')
 V='0.1.0-trace-adaptation-resources-candidate-1'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def load(p):return json.loads(p.read_text())
@@ -30,18 +32,17 @@ def model_values(im,mode,x):
    need(type(x['correct']) is bool and x['matching_observation'] is True and x['transition']=='NO_FORGETTING_AFTER_OBSERVATION')
    v={k:prob(x[k]) for k in ('p','s','g','t')};mid='K10.BKT.'+('CORRECT' if x['correct'] else 'INCORRECT')
   elif mode=='hlr':
-   v={k:n(x[k]) for k in ('half_life','lag')};need(v['half_life']>0 and v['lag']>=0 and x['matched_unit'] is True);mid='K10.HLR.FIXED'
+   v={k:n(x[k]) for k in ('half_life','lag')};need(x['matched_unit'] is True);mid='K10.HLR.FIXED'
   elif mode=='brier':
-   need(len(x['p'])==len(x['y'])==2 and all(type(z) is int and z in (0,1) for z in x['y']) and x['same_target'] is True)
-   v={k:prob(z) for k,z in zip(('p0','p1','y0','y1'),x['p']+x['y'])};mid='K10.BRIER.TWO'
+   need(len(x['p'])==len(x['y'])==2 and x['same_target'] is True)
+   v={'p0':prob(x['p'][0]),'p1':prob(x['p'][1]),'y0':x['y'][0],'y1':x['y'][1]};mid='K10.BRIER.TWO'
   elif mode=='discount':
    need(len(x['rewards'])==3 and x['same_unit'] is True);v={'gamma':prob(x['gamma'])}|{k:n(z) for k,z in zip(('r0','r1','r2'),x['rewards'])};mid='K11.REWARD.THREE'
   elif mode=='rectangle':
-   v={k:n(x[k]) for k in ('a','b')};need(v['a']>0 and v['b']>0 and x['unit']=='CM');mid='K12.RECT.AREA'
+   v={k:n(x[k]) for k in ('a','b')};need(x['unit']=='CM');mid='K12.RECT.AREA'
   else:raise RuntimeError(mode)
-  m=load_record(im,ref('ModelSpec',mid,mid.split('.')[0]));need(m['missing_policy']=='HOLD' and set(v)=={p['name'] for p in m['parameters']})
-  for p in m['parameters']:
-   z=v[p['name']];need(p['lower'] is None or z>=n(p['lower']));need(p['upper'] is None or z<=n(p['upper']))
+  m=load_record(im,ref('ModelSpec',mid,mid.split('.')[0]));need(m['missing_policy']=='HOLD')
+  v=validate_model_parameters(m,v,DOMAIN,model_id=mid)
   binary=m['numeric_domain']=='BINARY64'
   if binary:v={k:float(z) for k,z in v.items()}
   r={f['name']:ast(f['expr'],v,binary) for f in m['formulas']}
@@ -86,7 +87,17 @@ def main():
    if f['mode']=='selection':
     action=policy(im,x);assert action==('CLARIFY' if result=='HOLD' else result),(f['id'],action,result);row['policy_action']=action
    out.append(row)
-  result={'status':'BUILDER_SQL_CONSUMPTION_ONLY','case_count':len(out),'ast_evaluated':sum(x.get('model_result')=='AST_EVALUATED' for x in out),'model_guards':sum(x.get('model_result')=='GUARD_OR_DOMAIN_REJECT' for x in out),'policy_cases':sum('policy_action' in x for x in out),'fixture_sha256':sha(P/'finite-fixtures.json'),'manifest_sha256':sha(P/'learning-core.manifest.json'),'results':out,'limits':'Finite adapter, no generic interpreter, model fit or independent verdict.'}
+  guard_fixtures=load(P/'model-spec-guard-fixtures.json');guard_results=[]
+  for fixture in guard_fixtures:
+   model=load_record(im,ref('ModelSpec',fixture['model'],fixture['model'].split('.')[0]))
+   try:
+    validate_model_parameters(model,fixture['values'],DOMAIN,model_id=fixture['model']);actual='PASS'
+   except ModelParameterError:
+    actual='HOLD'
+   assert actual==fixture['expected'],(fixture['id'],actual,fixture['expected'])
+   guard_results.append({'id':fixture['id'],'actual':actual,'expected':fixture['expected']})
+  (P/'model-spec-guard-results.json').write_text(json.dumps({'status':'BUILDER_SHARED_MODEL_DOMAIN_GUARD_ONLY','fixture_sha256':sha(P/'model-spec-guard-fixtures.json'),'contract_sha256':sha(P/'model-domain-constraints.json'),'case_count':len(guard_results),'results':guard_results},ensure_ascii=False,indent=2)+'\n')
+  result={'status':'BUILDER_SQL_CONSUMPTION_ONLY','case_count':len(out),'model_spec_guard_case_count':len(guard_results),'model_spec_guard_fixture_sha256':sha(P/'model-spec-guard-fixtures.json'),'model_domain_contract_sha256':sha(P/'model-domain-constraints.json'),'model_spec_guard_results':guard_results,'ast_evaluated':sum(x.get('model_result')=='AST_EVALUATED' for x in out),'model_guards':sum(x.get('model_result')=='GUARD_OR_DOMAIN_REJECT' for x in out),'policy_cases':sum('policy_action' in x for x in out),'fixture_sha256':sha(P/'finite-fixtures.json'),'manifest_sha256':sha(P/'learning-core.manifest.json'),'results':out,'limits':'Finite adapter, no generic interpreter, model fit or independent verdict.'}
   (P/'consumption-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print({k:v for k,v in result.items() if k!='results'})
  finally:im.close()
 if __name__=='__main__':main()

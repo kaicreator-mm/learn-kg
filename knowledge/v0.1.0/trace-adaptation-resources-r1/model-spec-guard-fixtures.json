@@ -1,0 +1,9 @@
+[
+  {"id":"BRIER_FRACTIONAL_LABEL","model":"K10.BRIER.TWO","values":{"p0":0.5,"p1":0.5,"y0":0.5,"y1":1},"expected":"HOLD"},
+  {"id":"BRIER_BOOLEAN_LABEL","model":"K10.BRIER.TWO","values":{"p0":0.5,"p1":0.5,"y0":true,"y1":1},"expected":"HOLD"},
+  {"id":"BRIER_VALID_BINARY_LABELS","model":"K10.BRIER.TWO","values":{"p0":0.5,"p1":0.75,"y0":0,"y1":1},"expected":"PASS"},
+  {"id":"HLR_ZERO_HALF_LIFE","model":"K10.HLR.FIXED","values":{"lag":1,"half_life":0},"expected":"HOLD"},
+  {"id":"HLR_VALID_POSITIVE_HALF_LIFE","model":"K10.HLR.FIXED","values":{"lag":0,"half_life":1},"expected":"PASS"},
+  {"id":"RECTANGLE_ZERO_SIDE","model":"K12.RECT.AREA","values":{"a":0,"b":2},"expected":"HOLD"},
+  {"id":"RECTANGLE_VALID_POSITIVE_SIDES","model":"K12.RECT.AREA","values":{"a":1,"b":2},"expected":"PASS"}
+]

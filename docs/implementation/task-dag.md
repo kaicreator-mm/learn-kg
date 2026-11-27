@@ -150,3 +150,7 @@ After exact branch/head/tree/CAS and prerequisite-receipt checks, registered:
 - K18 evidence/tasks/K18/K18-FORMAL-01.json — CANDIDATE_READY, restricted; 42 candidate claims / 25 HOLD.
 
 The five receipts pin exact current direct-dependency receipts and qualifications, module/package manifests, JSONL shards, coverage, bounded source/depth material and the review's scope ledger. Their content digests cover canonical input/output tuples. This is candidate registration only: no QUALIFIED_LOCAL receipt, no source-rights clearance, no CQ/LC, no held-claim promotion, no G03 or release. K10/K11/K12/K15/K16/K19 remain preparation-only pending their exact formal prerequisites. The two P2 findings and one P3 source-pinning limitation remain open.
+
+## 2026-11-27 — KR03–KR05 P2 builder remediation
+
+The two P2 findings from independent review #6 comment 7221120084 now have bounded builder-side remediation in the current branch: P2-01 uses a shared versioned ModelSpec parameter-domain guard (7/7 explicit fixtures, 4/4 unit tests); P2-02 makes X01 self-contained and adds strict fail-closed cross-adapter domains (41/41 fixtures, 36 exact bindings). Both remain PENDING_INDEPENDENT_DELTA_REVIEW. P3-01 source-version/authority pinning remains OPEN. No qualification, source-rights, CQ/LC, G03 or release state is promoted. Details and hashes are recorded in docs/implementation/kr03-05-batch/p2-remediation.md and the K10/K12 validation/consumption receipts.

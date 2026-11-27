@@ -4,7 +4,9 @@ from fractions import Fraction as F
 P=pathlib.Path(__file__).resolve().parent; ROOT=P.parents[2]; sys.path.insert(0,str(ROOT))
 from tools.knowledge_import.importer import Importer,ManifestPin
 from tools.knowledge_import.v00_prototype import load_record
+from tools.knowledge_import.model_spec import load_domain_contract,validate_model_parameters,ModelParameterError
 B=ROOT/'knowledge/v0.1.0'
+DOMAIN=load_domain_contract(B/'trace-adaptation-resources-r1'/'model-domain-constraints.json')
 def load(p):return json.loads(p.read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def digest(x):return hashlib.sha256(json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -33,27 +35,45 @@ def ast(e,v):
  if op=='neg':return -a[0]
  if op=='pow':return a[0]**a[1]
  raise ValueError(op)
+def strict_number(value):
+ if type(value) not in (int,float):raise ValueError('strict non-bool numeric value required')
+ return F(str(value))
 def evaluate(mode,x,recs):
  if mode=='observation':
-  if not(x['kind']=='RESPONSE' and x['hint'] is False and x['correct'] is True and x['same_contract'] is True):return 'HOLD'
-  m=recs['K10.BKT.CORRECT'];assert m['missing_policy']=='HOLD'
-  v={k:F(z) for k,z in {'p':'1/2','s':'1/5','g':'1/5','t':'1/10'}.items()}
-  r={f['name']:ast(f['expr'],v) for f in m['formulas']}
-  return str(r['next_prior'])
+  if not(x.get('kind')=='RESPONSE' and type(x.get('hint')) is bool and x['hint'] is False and type(x.get('correct')) is bool and x['correct'] is True and type(x.get('same_contract')) is bool and x['same_contract'] is True):return 'HOLD'
+  params=x.get('model_parameters')
+  if not isinstance(params,dict) or set(params)!={'p','s','g','t'}:return 'HOLD'
+  try:
+   v={k:strict_number(params[k]) for k in ('p','s','g','t')}
+   m=recs['K10.BKT.CORRECT']
+   validate_model_parameters(m,v,DOMAIN,model_id='K10.BKT.CORRECT')
+   calculated={f['name']:ast(f['expr'],v) for f in m['formulas']}
+   return str(calculated['next_prior'])
+  except (ValueError,TypeError,KeyError,ZeroDivisionError,OverflowError):return 'HOLD'
  if mode=='schedule':
+  if type(x.get('exit')) is not bool:return 'HOLD'
   if x['exit'] is True:return 'STOP'
-  if not(x['matched_unit'] is True and x['authorized'] is True):return 'HOLD'
-  m=recs['K10.HLR.FIXED'];assert m['missing_policy']=='HOLD'
-  p=ast(m['formulas'][0]['expr'],{'half_life':F(x['half_life']),'lag':F(x['lag'])})
-  if p>=F(x['target']):return 'DEFER'
-  return 'SUGGEST' if x['cost']<=x['budget'] else 'DEFER'
+  if type(x.get('matched_unit')) is not bool or x['matched_unit'] is not True or type(x.get('authorized')) is not bool or x['authorized'] is not True:return 'HOLD'
+  try:
+   v={k:strict_number(x[k]) for k in ('half_life','lag')}
+   target=strict_number(x['target']);budget=strict_number(x['budget']);cost=strict_number(x['cost'])
+   if target<0 or target>1 or budget<0 or cost<0:return 'HOLD'
+   m=recs['K10.HLR.FIXED']
+   validate_model_parameters(m,v,DOMAIN,model_id='K10.HLR.FIXED')
+   p=ast(m['formulas'][0]['expr'],v)
+   if p>=target:return 'DEFER'
+   return 'SUGGEST' if cost<=budget else 'DEFER'
+  except (ValueError,TypeError,KeyError,ZeroDivisionError,OverflowError):return 'HOLD'
  if mode=='task':
   if not x['rule'] or x['response_rule']!=x['rule']:return 'HOLD'
   if x['target']!=x['task']:return 'SEPARATE_CONSTRUCT'
   return 'ASSISTED_OBSERVATION' if x['hint'] is True else 'INDEPENDENT_OBSERVATION' if x['hint'] is False else 'HOLD'
  if mode=='transfer':
-  if x['own_performance'] is not True or x['prior_target']!=x['target'] or x['days']<=0 or x['new_task'] is not True:return 'HOLD'
-  return 'ASSISTED_NOT_INDEPENDENT' if x['assistance'] is True else 'TRANSFER_OBSERVATION_ONLY' if x['assistance'] is False else 'HOLD'
+  if type(x.get('days')) is not int or x['days']<=0:return 'HOLD'
+  if type(x.get('new_task')) is not bool or type(x.get('own_performance')) is not bool or type(x.get('assistance')) is not bool:return 'HOLD'
+  if not isinstance(x.get('target'),str) or not x['target'] or not isinstance(x.get('prior_target'),str) or not x['prior_target']:return 'HOLD'
+  if x['own_performance'] is not True or x['prior_target']!=x['target'] or x['new_task'] is not True:return 'HOLD'
+  return 'ASSISTED_NOT_INDEPENDENT' if x['assistance'] is True else 'TRANSFER_OBSERVATION_ONLY'
  if mode=='event':
   if x['authorized'] is not True or x['same_clock'] is not True or any(type(x[k]) is not int for k in ('event_time','available_at','prediction_time')):return 'HOLD'
   if x['available_at']<x['event_time']:return 'HOLD'
@@ -73,6 +93,7 @@ def evaluate(mode,x,recs):
   if x['risk']=='LOW' and x['human_review'] is True:return 'DESIGN_REVIEW_ONLY'
   return 'HOLD'
  raise ValueError(mode)
+
 def main():
  d=load(ROOT/'docs/implementation/task-dag.json');tasks={t['id']:t for t in d['tasks']}
  recs={};bindings={};ims={};indexes={};manifests={}
@@ -103,9 +124,10 @@ def main():
    bindings[id]=bound
   results=[]
   for x in load(P/'cross-fixtures.json'):
+   if x['id']=='X01':assert x.get('model_parameter_digest')==digest(x['input'].get('model_parameters')),'X01 model parameter preset digest'
    y=evaluate(x['mode'],x['input'],recs);assert y==x['expected'],(x['id'],y,x['expected'])
    results.append({'id':x['id'],'actual':y,'refs':groups[x['mode']]})
-  result={'status':'RESEARCH_CROSS_SNAPSHOT_WITNESS_BUILDER_ONLY','fixture_sha256':sha(P/'cross-fixtures.json'),'case_count':len(results),'bindings':bindings,'results':results,'limits':'Separate in-memory imports; finite hard-coded composition, not canonical cross-version edges, formal dependency consumption, CQ/LC, learner or qualification result.'}
+  result={'status':'RESEARCH_CROSS_SNAPSHOT_WITNESS_BUILDER_ONLY','fixture_sha256':sha(P/'cross-fixtures.json'),'case_count':len(results),'x01_model_parameter_digest':load(P/'cross-fixtures.json')[0]['model_parameter_digest'],'bindings':bindings,'results':results,'limits':'Separate in-memory imports; finite hard-coded composition, not canonical cross-version edges, formal dependency consumption, CQ/LC, learner or qualification result.'}
   (P/'cross-results.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('cross',len(results),'bindings',len(bindings))
  finally:
   for im in ims.values():im.close()

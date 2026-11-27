@@ -1,0 +1,38 @@
+{
+  "contract_id": "LEARN_KG_MODEL_DOMAIN_GUARD_V1",
+  "schema_version": "learn-kg-model-domain-guard-1",
+  "package_version": "0.1.0-trace-adaptation-resources-candidate-1",
+  "required_before_evaluation": true,
+  "default_policy": "APPLY_MODEL_SPEC_NUMERIC_BOUNDS_AND_REJECT_NON_NUMERIC_OR_BOOLEAN",
+  "constraints": {
+    "K10.BRIER.TWO": {
+      "parameters": {
+        "y0": {
+          "value_type": "INTEGER",
+          "allowed_values": [0, 1]
+        },
+        "y1": {
+          "value_type": "INTEGER",
+          "allowed_values": [0, 1]
+        }
+      }
+    },
+    "K10.HLR.FIXED": {
+      "parameters": {
+        "half_life": {
+          "lower_exclusive": true
+        }
+      }
+    },
+    "K12.RECT.AREA": {
+      "parameters": {
+        "a": {
+          "lower_exclusive": true
+        },
+        "b": {
+          "lower_exclusive": true
+        }
+      }
+    }
+  }
+}

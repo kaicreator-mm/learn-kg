@@ -2,3 +2,14 @@
 85 exact G01 D3 topics; 201 preserved historical claims, 85 new project/synthetic methods and 12 narrow source propositions with actual observed passages or HLR page image. BKT primary PDF retrieval failed; only finite declared two-state probability math, not primary-source qualification. QTI guide distinct identity from inaccessible full ASI model. Source coverage 12/85, other source claims HOLD, no empirical fit/effect or release authority. 28 historical anchors dispositioned, three D4 samples exact identity with finite fixtures, two local HLR method identities; actual integration obligations remain.
 
 Actual in-memory import and finite consumption checks in import-receipt.json and consumption-results.json. 68 finite builder cases; 8 scalar AST evaluations and 12 model guard/domain rejects, 7 typed policy checks (overlap with total). Initial duplicate Element identity rejected; fixed by using model-specific IDs. Added explicit unknown-conflict and whitespace-version negatives. Independent expectations pending. No current formal dependency consumption: K10 requires K09, K11 K10, K12 K09; this is preparation, not current candidate receipt. No persistent SQLite.
+
+## ModelSpec parameter-domain execution contract
+
+A consumer must load model-domain-constraints.json and call the shared
+tools.knowledge_import.model_spec.validate_model_parameters guard before evaluating
+any ModelSpec formula. The guard enforces the ModelSpec's inclusive numeric bounds,
+rejects booleans/non-numeric inputs, and applies the stricter model-specific rules:
+Brier labels are integer 0/1; fixed HLR half-life is strictly positive; rectangle
+dimensions are strictly positive. Adapter-local checks are not a substitute for
+this shared contract. The finite guard fixtures are synthetic contract tests only;
+they do not establish empirical or learner-effect validity.

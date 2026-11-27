@@ -142,5 +142,21 @@
     "K12.06.05"
   ],
   "typed_refs": 2838,
-  "version": "0.1.0-trace-adaptation-resources-candidate-1"
+  "version": "0.1.0-trace-adaptation-resources-candidate-1",
+  "model_domain_guard": {
+    "status": "BUILDER_SHARED_MODEL_DOMAIN_GUARD_ONLY",
+    "contract": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-domain-constraints.json",
+    "contract_sha256": "a15505baa6252af5ba0b11bf87fccaba18dd8ebfcea4fd6832c90a655cdf614c",
+    "fixture": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-spec-guard-fixtures.json",
+    "fixture_sha256": "505d6d5b0d118b8a4558b968d83472b495f9aa7f3bcb0a62cbe7050f16b65b8d",
+    "result_sha256": "50d2a4753c3c9433b231456fbdf8452977aea1b4884b126c1a6aeaba742a3a1e",
+    "cases": 7,
+    "passed": 7,
+    "limits": "Builder contract tests only; no generic runtime or empirical claim."
+  },
+  "p2_disposition": {
+    "P2-01": "BUILDER_REMEDIATED_PENDING_INDEPENDENT_DELTA_REVIEW",
+    "P2-02": "BUILDER_REMEDIATED_PENDING_INDEPENDENT_DELTA_REVIEW",
+    "P3-01": "OPEN_SOURCE_VERSION_AND_AUTHORITY_PINNING"
+  }
 }

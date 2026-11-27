@@ -1,30 +1,565 @@
 [
-{"id":"X01","mode":"observation","input":{"kind":"RESPONSE","hint":false,"correct":true,"same_contract":true},"expected":"41/50"},
-{"id":"X02","mode":"observation","input":{"kind":"RESPONSE","hint":true,"correct":true,"same_contract":true},"expected":"HOLD"},
-{"id":"X03","mode":"observation","input":{"kind":"MISSING","hint":false,"correct":null,"same_contract":true},"expected":"HOLD"},
-{"id":"X04","mode":"schedule","input":{"half_life":4,"lag":4,"matched_unit":true,"target":"3/4","exit":false,"authorized":true,"budget":8,"cost":6},"expected":"SUGGEST"},
-{"id":"X05","mode":"schedule","input":{"half_life":4,"lag":4,"matched_unit":true,"target":"3/4","exit":false,"authorized":true,"budget":5,"cost":6},"expected":"DEFER"},
-{"id":"X06","mode":"schedule","input":{"half_life":4,"lag":4,"matched_unit":true,"target":"3/4","exit":true,"authorized":true,"budget":8,"cost":6},"expected":"STOP"},
-{"id":"X07","mode":"schedule","input":{"half_life":4,"lag":4,"matched_unit":null,"target":"3/4","exit":false,"authorized":true,"budget":8,"cost":6},"expected":"HOLD"},
-{"id":"X08","mode":"task","input":{"target":"free_recall","task":"free_recall","hint":false,"rule":"v1","response_rule":"v1"},"expected":"INDEPENDENT_OBSERVATION"},
-{"id":"X09","mode":"task","input":{"target":"free_recall","task":"recognition","hint":false,"rule":"v1","response_rule":"v1"},"expected":"SEPARATE_CONSTRUCT"},
-{"id":"X10","mode":"task","input":{"target":"free_recall","task":"free_recall","hint":true,"rule":"v1","response_rule":"v1"},"expected":"ASSISTED_OBSERVATION"},
-{"id":"X11","mode":"task","input":{"target":"free_recall","task":"free_recall","hint":false,"rule":"v1","response_rule":null},"expected":"HOLD"},
-{"id":"X12","mode":"transfer","input":{"target":"operate","prior_target":"operate","days":7,"new_task":true,"assistance":false,"own_performance":true},"expected":"TRANSFER_OBSERVATION_ONLY"},
-{"id":"X13","mode":"transfer","input":{"target":"operate","prior_target":"operate","days":7,"new_task":true,"assistance":true,"own_performance":true},"expected":"ASSISTED_NOT_INDEPENDENT"},
-{"id":"X14","mode":"transfer","input":{"target":"operate","prior_target":"operate","days":7,"new_task":true,"assistance":false,"own_performance":null},"expected":"HOLD"},
-{"id":"X15","mode":"event","input":{"event_time":9,"available_at":10,"prediction_time":10,"same_clock":true,"event_id":"r1","old_id":"r1","payload":"a","old_payload":"a","authorized":true},"expected":"DUPLICATE_NO_UPDATE"},
-{"id":"X16","mode":"event","input":{"event_time":9,"available_at":11,"prediction_time":10,"same_clock":true,"event_id":"r2","old_id":"r1","payload":"b","old_payload":"a","authorized":true},"expected":"EXCLUDE_FUTURE_OR_UNAVAILABLE"},
-{"id":"X17","mode":"event","input":{"event_time":9,"available_at":10,"prediction_time":10,"same_clock":true,"event_id":"r1","old_id":"r1","payload":"b","old_payload":"a","authorized":true},"expected":"CONFLICT_HOLD"},
-{"id":"X18","mode":"event","input":{"event_time":9,"available_at":null,"prediction_time":10,"same_clock":true,"event_id":"r2","old_id":"r1","payload":"b","old_payload":"a","authorized":true},"expected":"HOLD"},
-{"id":"X19","mode":"inclusion","input":{"target":"ratio","adapted_target":"ratio","observed_access":true,"individual_evidence":true},"expected":"CANDIDATE_SUPPORT"},
-{"id":"X20","mode":"inclusion","input":{"target":"decoding","adapted_target":"listening","observed_access":true,"individual_evidence":true},"expected":"SEPARATE_CONSTRUCT"},
-{"id":"X21","mode":"inclusion","input":{"target":"ratio","adapted_target":"ratio","observed_access":true,"individual_evidence":null},"expected":"HOLD"},
-{"id":"X22","mode":"development","input":{"age":12,"target":"decode","observed_target":"decode","independent":true,"response":"CORRECT"},"expected":"TASK_EVIDENCE_ONLY"},
-{"id":"X23","mode":"development","input":{"age":12,"target":"decode","observed_target":"decode","independent":false,"response":"CORRECT"},"expected":"ASSISTED_NOT_INDEPENDENT"},
-{"id":"X24","mode":"development","input":{"age":12,"target":"decode","observed_target":null,"independent":null,"response":null},"expected":"HOLD"},
-{"id":"X25","mode":"governance","input":{"purpose":"practice","granted_purpose":"practice","withdrawn":false,"human_review":true,"risk":"HIGH","assignment_random":false},"expected":"HOLD_HIGH_RISK_CAUSAL_CLAIM"},
-{"id":"X26","mode":"governance","input":{"purpose":"practice","granted_purpose":"practice","withdrawn":true,"human_review":true,"risk":"LOW","assignment_random":true},"expected":"STOP"},
-{"id":"X27","mode":"governance","input":{"purpose":"training","granted_purpose":"practice","withdrawn":false,"human_review":true,"risk":"LOW","assignment_random":true},"expected":"HOLD_PURPOSE"},
-{"id":"X28","mode":"governance","input":{"purpose":"practice","granted_purpose":"practice","withdrawn":false,"human_review":true,"risk":"LOW","assignment_random":true},"expected":"DESIGN_REVIEW_ONLY"}
+  {
+    "id": "X01",
+    "mode": "observation",
+    "input": {
+      "kind": "RESPONSE",
+      "hint": false,
+      "correct": true,
+      "same_contract": true,
+      "model_parameters": {
+        "p": 0.5,
+        "s": 0.2,
+        "g": 0.2,
+        "t": 0.1
+      }
+    },
+    "expected": "41/50",
+    "model_parameter_digest": "43a2d36dbf2d62dce54e742026c4b3081646594b77b1efeedf78a7aa9d553556"
+  },
+  {
+    "id": "X02",
+    "mode": "observation",
+    "input": {
+      "kind": "RESPONSE",
+      "hint": true,
+      "correct": true,
+      "same_contract": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X03",
+    "mode": "observation",
+    "input": {
+      "kind": "MISSING",
+      "hint": false,
+      "correct": null,
+      "same_contract": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X04",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "SUGGEST"
+  },
+  {
+    "id": "X05",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": 5,
+      "cost": 6
+    },
+    "expected": "DEFER"
+  },
+  {
+    "id": "X06",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": true,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "X07",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": null,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X08",
+    "mode": "task",
+    "input": {
+      "target": "free_recall",
+      "task": "free_recall",
+      "hint": false,
+      "rule": "v1",
+      "response_rule": "v1"
+    },
+    "expected": "INDEPENDENT_OBSERVATION"
+  },
+  {
+    "id": "X09",
+    "mode": "task",
+    "input": {
+      "target": "free_recall",
+      "task": "recognition",
+      "hint": false,
+      "rule": "v1",
+      "response_rule": "v1"
+    },
+    "expected": "SEPARATE_CONSTRUCT"
+  },
+  {
+    "id": "X10",
+    "mode": "task",
+    "input": {
+      "target": "free_recall",
+      "task": "free_recall",
+      "hint": true,
+      "rule": "v1",
+      "response_rule": "v1"
+    },
+    "expected": "ASSISTED_OBSERVATION"
+  },
+  {
+    "id": "X11",
+    "mode": "task",
+    "input": {
+      "target": "free_recall",
+      "task": "free_recall",
+      "hint": false,
+      "rule": "v1",
+      "response_rule": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X12",
+    "mode": "transfer",
+    "input": {
+      "target": "operate",
+      "prior_target": "operate",
+      "days": 7,
+      "new_task": true,
+      "assistance": false,
+      "own_performance": true
+    },
+    "expected": "TRANSFER_OBSERVATION_ONLY"
+  },
+  {
+    "id": "X13",
+    "mode": "transfer",
+    "input": {
+      "target": "operate",
+      "prior_target": "operate",
+      "days": 7,
+      "new_task": true,
+      "assistance": true,
+      "own_performance": true
+    },
+    "expected": "ASSISTED_NOT_INDEPENDENT"
+  },
+  {
+    "id": "X14",
+    "mode": "transfer",
+    "input": {
+      "target": "operate",
+      "prior_target": "operate",
+      "days": 7,
+      "new_task": true,
+      "assistance": false,
+      "own_performance": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X15",
+    "mode": "event",
+    "input": {
+      "event_time": 9,
+      "available_at": 10,
+      "prediction_time": 10,
+      "same_clock": true,
+      "event_id": "r1",
+      "old_id": "r1",
+      "payload": "a",
+      "old_payload": "a",
+      "authorized": true
+    },
+    "expected": "DUPLICATE_NO_UPDATE"
+  },
+  {
+    "id": "X16",
+    "mode": "event",
+    "input": {
+      "event_time": 9,
+      "available_at": 11,
+      "prediction_time": 10,
+      "same_clock": true,
+      "event_id": "r2",
+      "old_id": "r1",
+      "payload": "b",
+      "old_payload": "a",
+      "authorized": true
+    },
+    "expected": "EXCLUDE_FUTURE_OR_UNAVAILABLE"
+  },
+  {
+    "id": "X17",
+    "mode": "event",
+    "input": {
+      "event_time": 9,
+      "available_at": 10,
+      "prediction_time": 10,
+      "same_clock": true,
+      "event_id": "r1",
+      "old_id": "r1",
+      "payload": "b",
+      "old_payload": "a",
+      "authorized": true
+    },
+    "expected": "CONFLICT_HOLD"
+  },
+  {
+    "id": "X18",
+    "mode": "event",
+    "input": {
+      "event_time": 9,
+      "available_at": null,
+      "prediction_time": 10,
+      "same_clock": true,
+      "event_id": "r2",
+      "old_id": "r1",
+      "payload": "b",
+      "old_payload": "a",
+      "authorized": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X19",
+    "mode": "inclusion",
+    "input": {
+      "target": "ratio",
+      "adapted_target": "ratio",
+      "observed_access": true,
+      "individual_evidence": true
+    },
+    "expected": "CANDIDATE_SUPPORT"
+  },
+  {
+    "id": "X20",
+    "mode": "inclusion",
+    "input": {
+      "target": "decoding",
+      "adapted_target": "listening",
+      "observed_access": true,
+      "individual_evidence": true
+    },
+    "expected": "SEPARATE_CONSTRUCT"
+  },
+  {
+    "id": "X21",
+    "mode": "inclusion",
+    "input": {
+      "target": "ratio",
+      "adapted_target": "ratio",
+      "observed_access": true,
+      "individual_evidence": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X22",
+    "mode": "development",
+    "input": {
+      "age": 12,
+      "target": "decode",
+      "observed_target": "decode",
+      "independent": true,
+      "response": "CORRECT"
+    },
+    "expected": "TASK_EVIDENCE_ONLY"
+  },
+  {
+    "id": "X23",
+    "mode": "development",
+    "input": {
+      "age": 12,
+      "target": "decode",
+      "observed_target": "decode",
+      "independent": false,
+      "response": "CORRECT"
+    },
+    "expected": "ASSISTED_NOT_INDEPENDENT"
+  },
+  {
+    "id": "X24",
+    "mode": "development",
+    "input": {
+      "age": 12,
+      "target": "decode",
+      "observed_target": null,
+      "independent": null,
+      "response": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X25",
+    "mode": "governance",
+    "input": {
+      "purpose": "practice",
+      "granted_purpose": "practice",
+      "withdrawn": false,
+      "human_review": true,
+      "risk": "HIGH",
+      "assignment_random": false
+    },
+    "expected": "HOLD_HIGH_RISK_CAUSAL_CLAIM"
+  },
+  {
+    "id": "X26",
+    "mode": "governance",
+    "input": {
+      "purpose": "practice",
+      "granted_purpose": "practice",
+      "withdrawn": true,
+      "human_review": true,
+      "risk": "LOW",
+      "assignment_random": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "X27",
+    "mode": "governance",
+    "input": {
+      "purpose": "training",
+      "granted_purpose": "practice",
+      "withdrawn": false,
+      "human_review": true,
+      "risk": "LOW",
+      "assignment_random": true
+    },
+    "expected": "HOLD_PURPOSE"
+  },
+  {
+    "id": "X28",
+    "mode": "governance",
+    "input": {
+      "purpose": "practice",
+      "granted_purpose": "practice",
+      "withdrawn": false,
+      "human_review": true,
+      "risk": "LOW",
+      "assignment_random": true
+    },
+    "expected": "DESIGN_REVIEW_ONLY"
+  },
+  {
+    "id": "X29",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 2.0,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X30",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": -1,
+      "cost": 2
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X31",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": -2
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X32",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": -6
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X33",
+    "mode": "schedule",
+    "input": {
+      "half_life": true,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X34",
+    "mode": "transfer",
+    "input": {
+      "target": "operate",
+      "prior_target": "operate",
+      "days": true,
+      "new_task": true,
+      "assistance": false,
+      "own_performance": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X35",
+    "mode": "transfer",
+    "input": {
+      "target": "operate",
+      "prior_target": "operate",
+      "days": "1",
+      "new_task": true,
+      "assistance": false,
+      "own_performance": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X36",
+    "mode": "transfer",
+    "input": {
+      "target": "operate",
+      "prior_target": "operate",
+      "days": 0,
+      "new_task": true,
+      "assistance": false,
+      "own_performance": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X37",
+    "mode": "observation",
+    "input": {
+      "kind": "RESPONSE",
+      "hint": false,
+      "correct": true,
+      "same_contract": true,
+      "model_parameters": {
+        "p": 1.1,
+        "s": 0.2,
+        "g": 0.2,
+        "t": 0.1
+      }
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X38",
+    "mode": "observation",
+    "input": {
+      "kind": "RESPONSE",
+      "hint": false,
+      "correct": true,
+      "same_contract": true,
+      "model_parameters": {
+        "p": true,
+        "s": 0.2,
+        "g": 0.2,
+        "t": 0.1
+      }
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X39",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": 0.75,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X40",
+    "mode": "schedule",
+    "input": {
+      "half_life": 4,
+      "lag": 4,
+      "matched_unit": true,
+      "target": true,
+      "exit": false,
+      "authorized": true,
+      "budget": 8,
+      "cost": 6
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "X41",
+    "mode": "transfer",
+    "input": {
+      "target": "operate",
+      "prior_target": "operate",
+      "days": 1.0,
+      "new_task": true,
+      "assistance": false,
+      "own_performance": true
+    },
+    "expected": "HOLD"
+  }
 ]
