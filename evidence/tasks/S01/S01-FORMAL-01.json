@@ -1,0 +1,67 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-d013-r3r-s01-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "be5c9c4b032d04070c0ad4643222df4a0c828f06",
+  "exact_head": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "input": [],
+  "planning_authority": {
+    "exact_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+    "review_comment": 7211695681
+  },
+  "time": "2026-11-27",
+  "independent_qualification": "NOT_RUN",
+  "task_id": "S01",
+  "attempt_id": "S01-FORMAL-01",
+  "receipt_id": "TASK:S01:S01-FORMAL-01",
+  "output": [
+    {
+      "path": "docs/implementation/s01/README.md",
+      "sha256": "4edbf80b0a8502a596b8d7c9abbf0c28d6000a05f6c014394497cde4adae424d",
+      "type": "MARKDOWN"
+    },
+    {
+      "path": "docs/implementation/s01/verify_scope.py",
+      "sha256": "7141c0aca44abc13ab7edf0c33e7142ab93b1ea26e31f58b0ee98bed84e3ff6c",
+      "type": "VALIDATION_TOOL"
+    },
+    {
+      "path": "docs/implementation/s01/scope-candidate.json",
+      "sha256": "d58db38891f78a9d94cdfdcc18d84caafe77f7c50e35df7f9cbe61baaa000501",
+      "type": "SCOPE_CANDIDATE_MANIFEST"
+    }
+  ],
+  "content_digest": "82aa24a189e3d4ad12a2d7d6e8a128f946a899c10a48d1aac45ddb7b7747ddc7",
+  "version": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "validation": {
+    "job": "job_01M8DX99C300VF9JT0YTXB4TB4",
+    "actual_checkout_head": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f",
+    "tree": "2186412206602af16cac11fd58c225e461cfcb08",
+    "scope_manifest_byte_replay": "MATCH",
+    "counts": {
+      "D1": 26,
+      "D2": 149,
+      "D3": 648,
+      "claim_records": 1743,
+      "current_candidates": 1740,
+      "owners": 53,
+      "CQ": 26,
+      "LC": 12,
+      "input_hashes": 299,
+      "shards": 13,
+      "required_module_fields": 16
+    },
+    "scope": "same-author structural scope, not professional review"
+  },
+  "issues": [
+    "G01 independent range gate pending",
+    "source detail and professional adequacy explicitly pending",
+    "all 26 CQ / 12 LC NOT_RUN; no formal source or HSK qualification"
+  ],
+  "next": "G01"
+}

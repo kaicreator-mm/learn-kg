@@ -23,9 +23,10 @@
       "deliverable": "K/H/P/A/F/E范围库存、D2/D3/D4需求与主责、CQ01–26逐项路由、LC覆盖、来源及资格计划、HSK标准候选",
       "acceptance": "按 coverage-ledger.json 模板生成机器可读清单，逐D3覆盖/遗漏理由、唯一主责、适用性、条件/反例/证据；核对D001–D015，不伪造事实",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/S01/S01-FORMAL-01.json"
     },
     {
       "id": "G01",
@@ -38,7 +39,7 @@
       "deliverable": "范围及CQ/D4需求账本独立裁决",
       "acceptance": "独立exact SHA；逐域、CQ、遗漏/不适用理由、来源发现状态完整；P0/P1关闭，P2明确处置；非专业命题资格",
       "kind": "review",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "S01",
@@ -89,9 +90,10 @@
       "deliverable": "非破坏性原始来源与RDF/抽取文本保全；备份manifest、hash、导出和独立恢复记录",
       "acceptance": "实读既有数据、导出并在隔离位置恢复比对；原PDF身份/权利、文本hash与PDF hash区分；缺失明确BLOCKED/HOLD；禁止公开全文及删除原数据",
       "kind": "implementation",
-      "status": "READY",
+      "status": "BLOCKED",
       "requirements": [],
-      "output_receipt": "PRESERVATION_VERIFIED"
+      "output_receipt": "PRESERVATION_VERIFIED",
+      "current_nonqualifying_evidence": "evidence/tasks/SRC01/SRC01-FORMAL-PARTIAL-01.json"
     },
     {
       "id": "HSK01",
@@ -3464,7 +3466,8 @@
       "id": "R3R-P2-01",
       "status": "BUILDER_CORRECTED_STRUCTURAL_CHECKS_PASS",
       "disposition": "G03 requires V01 and DB03 CANDIDATE_READY receipts; G04 independently freezes actual evidence."
-    }
+    },
+    "current_task_state_note": "S01 current CANDIDATE_READY, G01 READY for independent review, DB01 READY, SRC01 BLOCKED (partial nonqualifying evidence). All other dependencies remain PLANNED."
   },
   "qualification_by_module": {
     "K01": "KR01",
