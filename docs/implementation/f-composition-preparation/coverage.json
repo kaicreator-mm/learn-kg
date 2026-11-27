@@ -1,14 +1,14 @@
 {
   "status": "PREPARATION_ONLY_NOT_REGISTERED",
   "package_version": "0.1.0-process-candidate-3",
-  "manifest_sha256": "243c92eec70ce8f54058beae7b41d43d5a430c8f1835596b36705b3878352a1f",
+  "manifest_sha256": "a5f7a42acb0f7067738f83c7fddf7317a41e75bf7765b39ca060c1926db8c9a4",
   "migrated_p_records": 1312,
-  "new_records": 272,
-  "total_records": 1584,
-  "new_composition_cases": 97,
-  "f_e_cases": 71,
-  "a07_cases_out_of_review_scope": 26,
-  "sql_builder_cases": 97,
+  "new_records": 324,
+  "total_records": 1636,
+  "new_composition_cases": 121,
+  "f_e_cases": 89,
+  "a07_cases_out_of_review_scope": 32,
+  "sql_builder_cases": 121,
   "static_cross_module_bindings": 6,
   "nested_typed_bindings": [
     {
@@ -46,7 +46,8 @@
     "trusted_independent_review_resolver": "NOT_BOUND",
     "observed_data_analysis": "HOLD"
   },
-  "facilitator_authority_resolver": "NOT_BOUND; FACILITATOR_PATH_HOLD",
+  "learner_authority_resolver": "NOT_BOUND; F07_LEARNER_PATH_HOLD",
+  "facilitator_authority_resolver": "NOT_BOUND; F07_FACILITATOR_PATH_HOLD",
   "independent_review": {
     "issue": 10,
     "result": "REWORK_REQUIRED",
@@ -54,52 +55,69 @@
     "p1": 1,
     "p2": 4,
     "p3": 1,
-    "remediation_status": "BUILT_CANDIDATE_DELTA_REVIEW_PENDING"
+    "remediation_status": "NEW_CANDIDATE_DELTA_REVIEW_PENDING"
   },
-  "remediation": [
+  "prior_delta_reviews": [
     {
-      "finding": "P1-01",
-      "module": "F04",
-      "status": "REMEDIATED_CANDIDATE_PENDING_INDEPENDENT_DELTA_REVIEW"
+      "issue": 12,
+      "modules": [
+        "F03",
+        "F04"
+      ],
+      "result": "REWORK_REQUIRED",
+      "p0": 0,
+      "p1": 1,
+      "p2": 2,
+      "p3": 1
     },
     {
-      "finding": "P2-01",
-      "module": "F03",
-      "status": "REMEDIATED_CANDIDATE_PENDING_INDEPENDENT_DELTA_REVIEW"
+      "issue": 13,
+      "modules": [
+        "F05",
+        "F07"
+      ],
+      "result": "REWORK_REQUIRED",
+      "p0": 0,
+      "p1": 0,
+      "p2": 3,
+      "p3": 1
     },
     {
-      "finding": "P2-02",
-      "module": "F05",
-      "status": "REMEDIATED_CANDIDATE_PENDING_INDEPENDENT_DELTA_REVIEW"
+      "issue": 14,
+      "modules": [
+        "E01"
+      ],
+      "result": "REWORK_REQUIRED",
+      "p0": 0,
+      "p1": 1,
+      "p2": 2,
+      "p3": 0
     },
     {
-      "finding": "P2-03",
-      "module": "F07",
-      "status": "REVIEWER_AND_EXIT_FIXED; FACILITATOR_PATH_FAILS_CLOSED_UNTIL_TRUSTED_RESOLVER"
-    },
-    {
-      "finding": "P2-04",
-      "module": "E01",
-      "status": "PINNED_PROTOCOL_AND_FAIL_CLOSED; TRUSTED_APPROVAL_AND_REVIEW_RESOLVERS_UNBOUND"
-    },
-    {
-      "finding": "P3-01",
-      "module": "E01",
-      "status": "CASE_LIST_DEDUPLICATED_AND_ALIGNED"
+      "issue": 15,
+      "modules": [
+        "A07"
+      ],
+      "result": "REWORK_REQUIRED",
+      "p0": 0,
+      "p1": 2,
+      "p2": 2,
+      "p3": 0
     }
   ],
+  "remediation_status": "IMPLEMENTED_CANDIDATE_PENDING_NEW_INDEPENDENT_DELTA_REVIEW",
   "modules": [
     {
       "owner": "F03",
       "title": "资源与表达组合",
-      "records": 38,
-      "builder_cases": 12,
+      "records": 45,
+      "builder_cases": 15,
       "cq": "CQ17",
       "lc": "LC03",
       "requirements": [
         {
           "id": "F03.RQ01",
-          "scope": "资源身份、版本、目标和命题分离；资源形态不是教学效果",
+          "scope": "资源身份、版本、目标和命题分离；资源形态不是教学效果；VISUAL正例必须绑定精确资源身份/版本、视觉模态、构念、测试范围/结果和重算摘要；合成对象不代表真实无障碍认证",
           "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
@@ -123,14 +141,14 @@
     {
       "owner": "F04",
       "title": "学习交互组合",
-      "records": 45,
-      "builder_cases": 18,
+      "records": 59,
+      "builder_cases": 25,
       "cq": "CQ18",
       "lc": "LC04",
       "requirements": [
         {
           "id": "F04.RQ01",
-          "scope": "首次响应、提示、最终响应和独立复测为不同追加事件；独立复测必须是新变式、单独响应、无辅助，并绑定精确构念/评分/观察合同",
+          "scope": "首次响应、提示、最终响应和独立复测为不同追加事件；独立复测必须是新变式、单独响应、无辅助，并绑定精确构念/评分/观察合同；任务/评分版本非空且固定；事件/记录时间声明UTC时钟域、时钟身份、300秒最大偏差和追加记录顺序",
           "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
@@ -154,14 +172,14 @@
     {
       "owner": "F05",
       "title": "学习者状态组合",
-      "records": 33,
-      "builder_cases": 11,
+      "records": 35,
+      "builder_cases": 12,
       "cq": "CQ19",
       "lc": "LC05",
       "requirements": [
         {
           "id": "F05.RQ01",
-          "scope": "原始响应、自述、评分、帮助和模型估计独立表达",
+          "scope": "原始响应、自述、评分、帮助和模型估计独立表达；expected_scoring_version必须等于组合合同固定的S1，不允许caller同时改写预期与实际版本",
           "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
@@ -185,14 +203,14 @@
     {
       "owner": "F07",
       "title": "环境与角色组合",
-      "records": 43,
-      "builder_cases": 14,
+      "records": 50,
+      "builder_cases": 17,
       "cq": "CQ21",
       "lc": "LC07",
       "requirements": [
         {
           "id": "F07.RQ01",
-          "scope": "角色能力、身份、用途、范围、期限、会话、被授权学习者和实际权限分别验证；审核者只读；促进者授权必须由可信解析器核验",
+          "scope": "角色能力、身份、用途、范围、期限、会话、被授权学习者和实际权限分别验证；审核者只读；促进者授权必须由可信解析器核验；无可信学习者/促进者身份授权解析器时不得SUGGEST；政策机器合同不得保留绕过语义校验器的SUGGEST规则",
           "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
@@ -216,14 +234,14 @@
     {
       "owner": "E01",
       "title": "外部改进闭环",
-      "records": 45,
-      "builder_cases": 16,
+      "records": 54,
+      "builder_cases": 20,
       "cq": "CQ24",
       "lc": "LC10",
       "requirements": [
         {
           "id": "E01.RQ01",
-          "scope": "预先固定人群身份/纳入排除、处理/比较版本、主要结果、分配单位/方法、28日随访、估计量；规范JSON字符串槽位与只读分析计划文件SHA256精确绑定",
+          "scope": "预先固定人群身份/纳入排除、处理/比较版本、主要结果、分配单位/方法、28日随访、估计量；规范JSON字符串槽位与只读分析计划文件SHA256精确绑定；审批与独立复核身份必须不同且在evaluation_time有效、artifact路径安全并匹配字节摘要；无可信resolver时候选策略不得SUGGEST；协议投影由验证器逐字段比较",
           "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
@@ -247,30 +265,30 @@
     {
       "owner": "A07",
       "title": "环境/发展/差异→支持贯通组合",
-      "records": 68,
-      "builder_cases": 26,
+      "records": 81,
+      "builder_cases": 32,
       "cq": "CQ13",
       "lc": null,
       "requirements": [
         {
           "id": "A07.RQ01",
-          "scope": "区分身份、角色、权限、设备/连接环境、实际可及性和本人选择；环境能力必须绑定当前环境配置及测试摘要；环境障碍不得误判为知识缺口",
-          "status": "CANDIDATE_EXEMPLIFIED"
+          "scope": "区分身份、角色、权限、设备/连接环境、实际可及性和本人选择；环境能力必须绑定当前环境配置及测试摘要；环境障碍不得误判为知识缺口；exit必须精确false；消费F07完整事件/角色授权/环境证据和上游守卫；环境绑定任务/版本/时效；构念审查对象重算摘要并绑定任务/评估身份",
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
           "id": "A07.RQ02",
           "scope": "只使用任务相关观测和本人明确自述；缺失保持UNKNOWN；不按年龄、发展标签、诊断或固定学习风格推断个体；不做发展阶段判断",
-          "status": "CANDIDATE_PARTIAL"
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
           "id": "A07.RQ03",
           "scope": "支持选项必须经过任务级构念审查；改变目标构念时只能作为单独练习，不可替代原测量或合并评分",
-          "status": "CANDIDATE_EXEMPLIFIED"
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
         },
         {
           "id": "A07.RQ04",
           "scope": "本人明确请求事件及选择、身份与权限均需核验；退出停止；建议仅ADVICE_ONLY，不执行、不写状态",
-          "status": "CANDIDATE_PARTIAL"
+          "status": "PARTIAL_RESTRICTED_CANDIDATE"
         }
       ],
       "status": "PREPARATION_ONLY"
@@ -283,7 +301,7 @@
   "release": "NOT_ELIGIBLE",
   "p_candidate3_exact_rebind": "PENDING_FOR_P01_P10",
   "p_migration_delta_review": "PENDING",
-  "a07_independent_review": "NOT_RUN",
+  "a07_independent_review": "REWORK_REQUIRED_PREVIOUS_SNAPSHOT; NEW_DELTA_REVIEW_PENDING",
   "limits": [
     "No runtime executor, scheduler, external action, learner diagnosis or automatic knowledge write",
     "No rights or publication promotion",
@@ -297,8 +315,8 @@
       "total": 37
     },
     "semantic_boundary_unit_tests": {
-      "passed": 19,
-      "total": 19
+      "passed": 29,
+      "total": 29
     },
     "deterministic_replay": {
       "status": "PASS",

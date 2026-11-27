@@ -3,7 +3,7 @@
   "status": "EXACT_PREPARATION_BINDING_ONLY",
   "package_id": "learning-process",
   "version": "0.1.0-process-candidate-3",
-  "manifest_sha256": "243c92eec70ce8f54058beae7b41d43d5a430c8f1835596b36705b3878352a1f",
+  "manifest_sha256": "a5f7a42acb0f7067738f83c7fddf7317a41e75bf7765b39ca060c1926db8c9a4",
   "task_dependencies": [
     "F05",
     "F07",
@@ -14,64 +14,172 @@
       "stable_id": "F05.COMPOSITION",
       "kind": "CompositionSpec",
       "owner": "F05",
-      "record_sha256": "cfaa250b20e975ef56295dfeff9bb9783b1b436c9a264ff8cdace8753d06a1e7"
+      "record_sha256": "4b411872376556d8489625015ba1ec2acf06fdf0a0c13273cdf02fc499accc35"
     },
     {
       "stable_id": "F05.STATE.RESPONSE",
       "kind": "StateDimension",
       "owner": "F05",
-      "record_sha256": "3ac251b0d50695656c1505f20bf558d685ad95a3bf8128c6b8bd3ca7d488ca56"
+      "record_sha256": "d49a91a5767bf72fab3768c360cece1af08760f242304bed34dbafdcb7e51024"
     },
     {
       "stable_id": "F05.STATE.SELF_REPORT",
       "kind": "StateDimension",
       "owner": "F05",
-      "record_sha256": "f6a2c9e2a3679c4a28bca491ebd7942381a586e64e2adf762b497c632e564948"
+      "record_sha256": "8b48a3173b42e61b493fa7b7dc8d65fe58effd04fd9bbd28d8ce0cbfe505820a"
     },
     {
       "stable_id": "F05.STATE.SCORE",
       "kind": "StateDimension",
       "owner": "F05",
-      "record_sha256": "6a988a61decd5663e020282ac975216245e44d6831ad85b8a28aaf58960a9e83"
+      "record_sha256": "d538823c42594643bf07887595c7478d3ce321b7a9fe8d2afa47ac97ea2121ea"
     },
     {
       "stable_id": "F05.STATE.ESTIMATE",
       "kind": "StateDimension",
       "owner": "F05",
-      "record_sha256": "8bb9d92480f959a7f5e3ef6da6b889b7d5d81f492292a3435c48291975015b48"
+      "record_sha256": "60de1d0f3ec1e57f017a5530b588c2f9bb01671f7f8bb39fc6c1685867e77e1d"
     },
     {
       "stable_id": "F07.COMPOSITION",
       "kind": "CompositionSpec",
       "owner": "F07",
-      "record_sha256": "2c652b923ce18816d57bf9b06102fafcd0a8ed6233820c5706583de44a6dc1f1"
+      "record_sha256": "1431f5996f40ee5737b7d71e3e3437bf26d0470014905c1f6c44ed8ef758f13b"
     },
     {
       "stable_id": "F07.POLICY",
       "kind": "PolicySpec",
       "owner": "F07",
-      "record_sha256": "a5f65ed7100b09655ff242de83dd9ed904704f1eaeaf2952a161732813f46740"
+      "record_sha256": "6e3f112d527004e0fcd023b379661acaa2bd6c5c32cbf6b11a440fb91631bbac"
+    },
+    {
+      "stable_id": "F07.GUARD.EXIT",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "cfc393dd1e4e21bbc77a3f7bd5d299bb1bb4182526e87695f949a295f15423e0"
+    },
+    {
+      "stable_id": "F07.GUARD.EXIT_UNKNOWN",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "d3404bff0bdd8bb13348dffb8893043758008e1069102cb39a862896cd7d8a93"
+    },
+    {
+      "stable_id": "F07.GUARD.REVIEWER",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "c1a147e889699a7bbdeec43b5ebcbd77f55ab88ddac1b6ff04efdbfc491d647c"
+    },
+    {
+      "stable_id": "F07.GUARD.DENY",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "fb7b9f0070ff0592f2c6632be9bb1752abbfaba81330feef15f5a18cfb79ef4c"
+    },
+    {
+      "stable_id": "F07.GUARD.UNAVAILABLE",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "171f6373187b3843b2c3a5ec0abffec6ed7077597f6b703d76ada1ec914ec279"
+    },
+    {
+      "stable_id": "F07.GUARD.LEARNER_AUTH_UNBOUND",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "ee6b3651ec2bcf2097c53e063c3a502e288ff8e0d5cd3c13d96d3aa719b56446"
+    },
+    {
+      "stable_id": "F07.GUARD.FACILITATOR_UNBOUND",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "f93268029c67c1629ee22d6742d3fdc36eff674e0a4d4350a956177f9f0e9a7f"
+    },
+    {
+      "stable_id": "F07.GUARD.OFFER_LEARNER",
+      "kind": "ConditionSpec",
+      "owner": "F07",
+      "record_sha256": "8e263187c6295716a78fe71f81f4bb05a12a3729435751d9bdea6e39327cc768"
     }
   ],
   "inherited_claim_refs": [
     {
-      "ref": "kind",
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "kind": "Claim",
+        "stable_id": "K10.01.04.TR.01",
+        "owner": "K10"
+      },
+      "inherited_from": "F05"
+    },
+    {
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-measurement-candidate-4",
+        "kind": "Claim",
+        "stable_id": "K09.01.01.ME.01",
+        "owner": "K09"
+      },
+      "inherited_from": "F05"
+    },
+    {
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1",
+        "kind": "Claim",
+        "stable_id": "K16.01.04.TG.01",
+        "owner": "K16"
+      },
+      "inherited_from": "F05"
+    },
+    {
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-measurement-candidate-4",
+        "kind": "Claim",
+        "stable_id": "K09.02.05.ME.01",
+        "owner": "K09"
+      },
+      "inherited_from": "F05"
+    },
+    {
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1",
+        "kind": "Claim",
+        "stable_id": "K19.02.03.TG.01",
+        "owner": "K19"
+      },
       "inherited_from": "F07"
     },
     {
-      "ref": "owner",
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1",
+        "kind": "Claim",
+        "stable_id": "K19.03.02.TG.01",
+        "owner": "K19"
+      },
       "inherited_from": "F07"
     },
     {
-      "ref": "package_id",
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-social-research-candidate-2",
+        "kind": "Claim",
+        "stable_id": "K13.04.02.SR.01",
+        "owner": "K13"
+      },
       "inherited_from": "F07"
     },
     {
-      "ref": "stable_id",
-      "inherited_from": "F07"
-    },
-    {
-      "ref": "version",
+      "ref": {
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1",
+        "kind": "Claim",
+        "stable_id": "K16.04.03.TG.01",
+        "owner": "K16"
+      },
       "inherited_from": "F07"
     }
   ],
