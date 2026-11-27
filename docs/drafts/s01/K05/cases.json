@@ -1,0 +1,481 @@
+{
+  "owner": "K05",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K05.01.01.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.01.01",
+      "claim_refs": [
+        "K05.01.01.D4.01",
+        "K05.01.01.D4.02"
+      ],
+      "fixture": "读完一段说明后闭卷说出关键因果",
+      "views": {
+        "forward": "即时回忆与一周保持可反向排序",
+        "reverse": "可能是提取困难或评分不一致",
+        "intervention": "等时随机对照并分开即时和延迟测验",
+        "counterexample": "即时阅读组更高不否定延迟收益"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.01.02.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.01.02",
+      "claim_refs": [
+        "K05.01.02.D4.01",
+        "K05.01.02.D4.02"
+      ],
+      "fixture": "四选一认出术语但不能自行定义",
+      "views": {
+        "forward": "再认与自由产出是不同观察",
+        "reverse": "可能依赖选项线索或猜测",
+        "intervention": "另设无选项解释题",
+        "counterexample": "四选一正确但无提示答错"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.01.03.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.01.03",
+      "claim_refs": [
+        "K05.01.03.D4.01",
+        "K05.01.03.D4.02"
+      ],
+      "fixture": "闭卷列出文章论点但漏一个细节",
+      "views": {
+        "forward": "记录漏答和保持时间",
+        "reverse": "可能提取失败、评分不一致或未编码",
+        "intervention": "等价材料重复测验并规定评分",
+        "counterexample": "漏答不能推出永久无知识"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.01.04.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.01.04",
+      "claim_refs": [
+        "K05.01.04.D4.01",
+        "K05.01.04.D4.02"
+      ],
+      "fixture": "误选相似词义后看到纠正",
+      "views": {
+        "forward": "反馈呈现与之后正确产出不同",
+        "reverse": "仍可能记住错误选项",
+        "intervention": "独立延迟题验证修正",
+        "counterexample": "展示答案后立即照抄"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.02.01.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.02.01",
+      "claim_refs": [
+        "K05.02.01.D4.01",
+        "K05.02.01.D4.02"
+      ],
+      "fixture": "同样两次学习相隔一天或一周",
+      "views": {
+        "forward": "计算学习间隔和保持间隔",
+        "reverse": "低分可能源于间隔过长或其他因素",
+        "intervention": "等量练习在相同保持期限比较",
+        "counterexample": "把最大间隔直接当最优"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.02.02.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.02.02",
+      "claim_refs": [
+        "K05.02.02.D4.01",
+        "K05.02.02.D4.02"
+      ],
+      "fixture": "考前连续重读与隔日复习",
+      "views": {
+        "forward": "即时优势不构成长时优势",
+        "reverse": "差异可能来自策略或时间分配",
+        "intervention": "同策略同总量另测集中与分散",
+        "counterexample": "将重读/测试效应误当纯间隔效应"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.02.03.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.02.03",
+      "claim_refs": [
+        "K05.02.03.D4.01",
+        "K05.02.03.D4.02"
+      ],
+      "fixture": "等距0/2/4/6与扩展0/1/3/6",
+      "views": {
+        "forward": "两计划末次时点相同",
+        "reverse": "差异还可能来自首次间隔",
+        "intervention": "控制次数、首末时点和反馈后对照",
+        "counterexample": "仅因间隔递增就自动选用"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.02.04.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.02.04",
+      "claim_refs": [
+        "K05.02.04.D4.01",
+        "K05.02.04.D4.02"
+      ],
+      "fixture": "下周测验和半年后工作应用",
+      "views": {
+        "forward": "分别保存目标日期及末次学习日期",
+        "reverse": "期限不同不说明记忆能力不同",
+        "intervention": "向K10请求带校准范围的状态估计",
+        "counterexample": "把截止日换算成固定回忆概率"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.03.01.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.03.01",
+      "claim_refs": [
+        "K05.03.01.D4.01",
+        "K05.03.01.D4.02"
+      ],
+      "fixture": "相似几何题混合后辨别所需公式",
+      "views": {
+        "forward": "独立分类与解题同时观察",
+        "reverse": "可能是辨别困难或计算错误",
+        "intervention": "按类别相似性分层比较",
+        "counterexample": "随机混合不相关词汇未获收益"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.03.02.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.03.02",
+      "claim_refs": [
+        "K05.03.02.D4.01",
+        "K05.03.02.D4.02"
+      ],
+      "fixture": "先连续练习一种键盘动作，再换下一种",
+      "views": {
+        "forward": "组块是安排结构，不是效果判断",
+        "reverse": "练习流畅可能来自短时重复",
+        "intervention": "与同量交错计划比较保持",
+        "counterexample": "组块适合初次熟悉但不能保证迁移"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.03.03.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.03.03",
+      "claim_refs": [
+        "K05.03.03.D4.01",
+        "K05.03.03.D4.02"
+      ],
+      "fixture": "保持同一操作规则而更换对象大小",
+      "views": {
+        "forward": "区分材料变式和目标规则改变",
+        "reverse": "失败可能由新环境或规则变化导致",
+        "intervention": "保留目标技能并测新对象",
+        "counterexample": "更改目标能力却声称同一技能迁移"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.03.04.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.03.04",
+      "claim_refs": [
+        "K05.03.04.D4.01",
+        "K05.03.04.D4.02"
+      ],
+      "fixture": "分别练装配两动作后做整套流程",
+      "views": {
+        "forward": "部件成绩不代表整体协调",
+        "reverse": "整体失败可能来自衔接",
+        "intervention": "练习连接段并作独立整套测验",
+        "counterexample": "每步满分但组合次序错误"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.04.01.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.04.01",
+      "claim_refs": [
+        "K05.04.01.D4.01",
+        "K05.04.01.D4.02"
+      ],
+      "fixture": "解释方程移项为何保持等式",
+      "views": {
+        "forward": "检查解释是否说明关系",
+        "reverse": "长答案可能只是重复规则",
+        "intervention": "用错误推理要求解释纠正",
+        "counterexample": "冗长复述不含因果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.04.02.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.04.02",
+      "claim_refs": [
+        "K05.04.02.D4.01",
+        "K05.04.02.D4.02"
+      ],
+      "fixture": "问为何冰浮在水面而不只背结论",
+      "views": {
+        "forward": "答案须有相关理由",
+        "reverse": "错误前提可产生流畅错误解释",
+        "intervention": "补必要背景后重新解释",
+        "counterexample": "编造原因不能作为正确证据"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.04.03.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.04.03",
+      "claim_refs": [
+        "K05.04.03.D4.01",
+        "K05.04.03.D4.02"
+      ],
+      "fixture": "根据已知词根生成目标词义",
+      "views": {
+        "forward": "区分生成成功与猜测",
+        "reverse": "可能凭熟悉度猜对",
+        "intervention": "对生成内容纠错并延迟无提示测",
+        "counterexample": "错造词义且无纠正"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.04.04.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.04.04",
+      "claim_refs": [
+        "K05.04.04.D4.01",
+        "K05.04.04.D4.02"
+      ],
+      "fixture": "比较两种资源分配冲突的共同约束",
+      "views": {
+        "forward": "映射角色关系而非表面主题",
+        "reverse": "可能仅识别相似名词",
+        "intervention": "换表面背景保留结构的任务",
+        "counterexample": "同为谈判但约束相反"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.05.01.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.05.01",
+      "claim_refs": [
+        "K05.05.01.D4.01",
+        "K05.05.01.D4.02"
+      ],
+      "fixture": "画出供需变化的因果关系图",
+      "views": {
+        "forward": "节点和有向关系分别评价",
+        "reverse": "连线可能无意义或方向错误",
+        "intervention": "独立解释每条关键关系",
+        "counterexample": "节点多但关系错误"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.05.02.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.05.02",
+      "claim_refs": [
+        "K05.05.02.D4.01",
+        "K05.05.02.D4.02"
+      ],
+      "fixture": "边听边抄与用自己的话记要点",
+      "views": {
+        "forward": "记录方式与复习行为分开",
+        "reverse": "差异可能来自时间或原有知识",
+        "intervention": "同样时间和材料做后测",
+        "counterexample": "只比较笔记页数"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.05.03.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.05.03",
+      "claim_refs": [
+        "K05.05.03.D4.01",
+        "K05.05.03.D4.02"
+      ],
+      "fixture": "压缩一段论证并保留论据",
+      "views": {
+        "forward": "检查主张、支持及遗漏",
+        "reverse": "压缩可能删除必要条件",
+        "intervention": "对照原文回答推断题",
+        "counterexample": "字数少却改变原意"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.05.04.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.05.04",
+      "claim_refs": [
+        "K05.05.04.D4.01",
+        "K05.05.04.D4.02"
+      ],
+      "fixture": "用示意图与文字解释水循环",
+      "views": {
+        "forward": "检查图文语义对应",
+        "reverse": "装饰图可能没有信息",
+        "intervention": "用图或文字独立解释关键关系",
+        "counterexample": "仅凭喜欢图片判定学习类型"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.05.05.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.05.05",
+      "claim_refs": [
+        "K05.05.05.D4.01",
+        "K05.05.05.D4.02"
+      ],
+      "fixture": "读完整例题后解结构相同新题",
+      "views": {
+        "forward": "记录是否独立选择步骤",
+        "reverse": "可能照搬步骤而不理解",
+        "intervention": "撤去解答后新题检查",
+        "counterexample": "跟着例题复制结果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.06.01.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.06.01",
+      "claim_refs": [
+        "K05.06.01.D4.01",
+        "K05.06.01.D4.02"
+      ],
+      "fixture": "词汇回忆与口语交互采用不同任务",
+      "views": {
+        "forward": "目标能力先定义",
+        "reverse": "单词得分不说明交互能力",
+        "intervention": "为口语目标另设互动产出",
+        "counterexample": "用背词正确率代替对话评分"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.06.02.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.06.02",
+      "claim_refs": [
+        "K05.06.02.D4.01",
+        "K05.06.02.D4.02"
+      ],
+      "fixture": "汉字词义学习与相似图形分类",
+      "views": {
+        "forward": "记录类别结构及材料",
+        "reverse": "差异可能不是策略本身",
+        "intervention": "在同材料下做受控比较",
+        "counterexample": "用绘画分类效应直接估算单词收益"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.06.03.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.06.03",
+      "claim_refs": [
+        "K05.06.03.D4.01",
+        "K05.06.03.D4.02"
+      ],
+      "fixture": "两种等时计划，一种更费主观努力",
+      "views": {
+        "forward": "记录时间成本和可比较终测",
+        "reverse": "费力可能来自无效负荷",
+        "intervention": "用等时收益和机会成本比较",
+        "counterexample": "只因困难就提高任务负荷"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K05.06.04.CASE.01",
+      "owner": "K05",
+      "d3_id": "K05.06.04",
+      "claim_refs": [
+        "K05.06.04.D4.01",
+        "K05.06.04.D4.02"
+      ],
+      "fixture": "今天满分但七天后无提示低分",
+      "views": {
+        "forward": "两个时点不合并为掌握结论",
+        "reverse": "可能存在遗忘或测量差异",
+        "intervention": "独立等价延迟任务",
+        "counterexample": "立即满分即宣告长期掌握"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "owner": "K15",
+  "base": "325953f7c9d79a31417d94bba83244c5a9eccc45",
+  "prior_claim_blob": "089e6b6b624fa4597bb4f133ca3876d684852b98",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K15.01.03.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.01.03",
+      "requirement_id": "K15.01.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "移动或在线学习机会受连接成本、可及性与环境条件限制；使用时长不应作为唯一评价指标。",
+      "conditions": [
+        "政策综合；时长界限是测量推论。"
+      ],
+      "negative_boundary": "不能从掉线判断知识掌握。",
+      "source_refs": [
+        "K15-B08-GEM"
+      ],
+      "source_locator": "l79–93",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.01.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "手机断网后自动保存",
+        "expected": "记为中断",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.01.04.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.01.04",
+      "requirement_id": "K15.01.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "教育技术试点需考虑真实部署环境、完整成本和受众差异。",
+      "conditions": [
+        "报告建议，非线上线下平均效应比较。"
+      ],
+      "negative_boundary": "不因线上形式判定优于线下。",
+      "source_refs": [
+        "K15-B08-GEM"
+      ],
+      "source_locator": "l79–93",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.01.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "试点仅有高速网学生",
+        "expected": "限制外推",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.05.04.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.05.04",
+      "requirement_id": "K15.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "技术采用需独立评价其收益及成本；学习成效证据应与可用性或部署指标区分。",
+      "conditions": [
+        "政策建议及项目测量推论。"
+      ],
+      "negative_boundary": "登录成功非教育效果。",
+      "source_refs": [
+        "K15-B08-GEM"
+      ],
+      "source_locator": "l79–93",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "平台活跃率增加",
+        "expected": "保持学习增益待核",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.06.03.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.06.03",
+      "requirement_id": "K15.06.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "OneRoster 1.2分列名册、成绩和资源服务，支持REST及CSV；资源描述的传输并不等同资源本体访问。",
+      "conditions": [
+        "官方导读；字段映射与往返另验。"
+      ],
+      "negative_boundary": "不能宣称任意知识图谱无损互操作。",
+      "source_refs": [
+        "K15-B08-ROSTER"
+      ],
+      "source_locator": "l28–35",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.06.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "传出资源描述但文件无权限",
+        "expected": "记录引用存在与访问失败",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.04.03.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.04.03",
+      "requirement_id": "K15.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "模型解释须有验证及记录，输出按其使用情境解读；解释字段与真实证据关联另验。",
+      "conditions": [
+        "Measure 2.9；项目评分解释要求。"
+      ],
+      "negative_boundary": "不能把事后文字解释当内部因果证明。",
+      "source_refs": [
+        "K15-B08-NIST"
+      ],
+      "source_locator": "Measure 2.1–2.13, 3.1–3.3; l211–241",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "AI给出未绑定量规的理由",
+        "expected": "要求依据复核",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.05.02.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.05.02",
+      "requirement_id": "K15.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "验证集、指标及验证工具应有记录，并说明泛化限制；解释可核性与评分可靠性需分别验证。",
+      "conditions": [
+        "Measure 2.1/2.5/2.9。"
+      ],
+      "negative_boundary": "不因可解释界面推断模型可靠。",
+      "source_refs": [
+        "K15-B08-NIST"
+      ],
+      "source_locator": "Measure 2.1–2.13, 3.1–3.3; l211–241",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "新题型未在验证集出现",
+        "expected": "限制结论范围",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

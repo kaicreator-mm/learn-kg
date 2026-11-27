@@ -1,0 +1,2797 @@
+{
+  "module": "H04",
+  "base": "3542989d2c4d67ecfe0b5f8b3f49b344a792913b",
+  "status": "DRAFT_GRAPH_INDEX_NOT_SEMANTIC_QUALIFICATION",
+  "inputs": [
+    {
+      "path": "docs/drafts/s01/H04/claims.json",
+      "blob": "ba0096e08aa382bd917837c112f145cbb450d647"
+    },
+    {
+      "path": "docs/drafts/s01/H04/coverage.json",
+      "blob": "dc3cbfccc8bf9dc3b9dc405caeb97c3c0137f0fb"
+    },
+    {
+      "path": "docs/drafts/s01/H04/sources.json",
+      "blob": "ffa5fda01957d0edba9b447256892ddc72584218"
+    },
+    {
+      "path": "docs/drafts/s01/H04/cross-topic-links.json",
+      "blob": "876f4d4c7be201d9ae8817ed492d7f9bb658e520"
+    }
+  ],
+  "anchor_file_status": "PRESENT",
+  "nodes": [
+    {
+      "id": "H04",
+      "type": "MODULE",
+      "owner": "H04",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.01.01",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "词组",
+      "requirement_id": "H04.01.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.01.02",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "句法成分",
+      "requirement_id": "H04.01.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.01.03",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "依存",
+      "requirement_id": "H04.01.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.01.04",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "语序",
+      "requirement_id": "H04.01.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.02.01",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "陈述",
+      "requirement_id": "H04.02.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.02.02",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "疑问",
+      "requirement_id": "H04.02.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.02.03",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "否定",
+      "requirement_id": "H04.02.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.02.04",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "祈使",
+      "requirement_id": "H04.02.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.02.05",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "存在",
+      "requirement_id": "H04.02.05.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.03.01",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "把字句",
+      "requirement_id": "H04.03.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.03.02",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "被字句",
+      "requirement_id": "H04.03.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.03.03",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "双宾",
+      "requirement_id": "H04.03.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.03.04",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "兼语",
+      "requirement_id": "H04.03.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.03.05",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "连动",
+      "requirement_id": "H04.03.05.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.04.01",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "了",
+      "requirement_id": "H04.04.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.04.02",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "过",
+      "requirement_id": "H04.04.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.04.03",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "着",
+      "requirement_id": "H04.04.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.04.04",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "时间表达",
+      "requirement_id": "H04.04.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.04.05",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "状态变化",
+      "requirement_id": "H04.04.05.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.05.01",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "定语",
+      "requirement_id": "H04.05.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.05.02",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "状语",
+      "requirement_id": "H04.05.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.05.03",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "结果",
+      "requirement_id": "H04.05.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.05.04",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "趋向",
+      "requirement_id": "H04.05.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.05.05",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "程度",
+      "requirement_id": "H04.05.05.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.05.06",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "可能",
+      "requirement_id": "H04.05.06.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.06.01",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "并列",
+      "requirement_id": "H04.06.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.06.02",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "因果",
+      "requirement_id": "H04.06.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.06.03",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "条件",
+      "requirement_id": "H04.06.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.06.04",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "让步",
+      "requirement_id": "H04.06.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.06.05",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "目的",
+      "requirement_id": "H04.06.05.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.06.06",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "范围",
+      "requirement_id": "H04.06.06.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.07.01",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "可接受性",
+      "requirement_id": "H04.07.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.07.02",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "语境约束",
+      "requirement_id": "H04.07.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.07.03",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "歧义",
+      "requirement_id": "H04.07.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.07.04",
+      "type": "TOPIC",
+      "owner": "H04",
+      "label": "构式对比",
+      "requirement_id": "H04.07.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "H04.01.01.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.01",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "词组结构类型与功能类型不同：偏正、动宾等结构可承担句中不同功能",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "多字序列不必构成独立词组",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.01.01.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.01",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "分别分析中心、修饰及整体句法作用；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "多字序列不必构成独立词组",
+      "source_refs": []
+    },
+    {
+      "id": "H04.01.02.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.02",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "句法成分是句中的关系角色而不是词类；名词短语可在不同句中作主语或宾语",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "正文定位仍需逐命题核证"
+      ],
+      "negative_boundary": "词类不等于句法成分",
+      "source_refs": [
+        "H04-S2"
+      ]
+    },
+    {
+      "id": "H04.01.02.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.02",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "保留同词不同句法功能；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "词类不等于句法成分",
+      "source_refs": []
+    },
+    {
+      "id": "H04.01.03.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.03",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "UD依存标注描述词之间的中心与依附关系；标签属于分析框架而非必要学习关系",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "正文定位仍需逐命题核证"
+      ],
+      "negative_boundary": "依存树不等同教学先修图",
+      "source_refs": [
+        "H04-S2"
+      ]
+    },
+    {
+      "id": "H04.01.03.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.03",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "保留框架版本，禁止映射成硬先修；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "依存树不等同教学先修图",
+      "source_refs": []
+    },
+    {
+      "id": "H04.01.04.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.04",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "普通话典型主谓宾顺序可因构式及信息组织而改变，合法性需在具体条件下判断",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "不能用唯一语序否定全部变体",
+      "source_refs": [
+        "H04-S5"
+      ]
+    },
+    {
+      "id": "H04.01.04.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.01.04",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "比较论元、谓语和构式条件；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "不能用唯一语序否定全部变体",
+      "source_refs": []
+    },
+    {
+      "id": "H04.02.01.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.01",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "陈述句以表达命题为常见功能；语法可接受性与命题真假不同",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "陈述形式不保证事实真实",
+      "source_refs": []
+    },
+    {
+      "id": "H04.02.01.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.01",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "分别判断形式和事实；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "陈述形式不保证事实真实",
+      "source_refs": []
+    },
+    {
+      "id": "H04.02.02.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.02",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "疑问句可使用吗、疑问词、选择或正反形式；语用上也可能表达反问或邀请",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "问句不一定索取信息",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.02.02.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.02",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "按疑问范围及语境确定所求信息；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "问句不一定索取信息",
+      "source_refs": []
+    },
+    {
+      "id": "H04.02.03.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.03",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "不与没的选择依事件、体貌和情态等条件；不一般可用于意愿或习惯，没常否定事件发生",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "不能逐字互换否定标记",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.02.03.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.03",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "给时间和意愿语境，不机械替换；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "不能逐字互换否定标记",
+      "source_refs": []
+    },
+    {
+      "id": "H04.02.04.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.04",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "祈使句的指令强度、礼貌和主语省略依交际场景，形式不直接决定是否失礼",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "祈使形式不等于不礼貌",
+      "source_refs": []
+    },
+    {
+      "id": "H04.02.04.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.04",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "核角色、语气及请求负担；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "祈使形式不等于不礼貌",
+      "source_refs": []
+    },
+    {
+      "id": "H04.02.05.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.05",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "处所存在与领有均可用有，但前置成分及信息结构不同",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "有字句不一定是存在构式",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.02.05.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.02.05",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "识别处所与领有者，分别建构式；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "有字句不一定是存在构式",
+      "source_refs": []
+    },
+    {
+      "id": "H04.03.01.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.01",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "把构式常将受影响论元置于谓语前，并对谓语及语境提出限制；不只容许定指宾语",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "正文定位仍需逐命题核证"
+      ],
+      "negative_boundary": "有把字不自动判为把字句",
+      "source_refs": [
+        "H04-S5"
+      ]
+    },
+    {
+      "id": "H04.03.01.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.01",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "按论元和谓语分析，排除量词用法；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "有把字不自动判为把字句",
+      "source_refs": []
+    },
+    {
+      "id": "H04.03.02.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.02",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "被动构式可显式或省略施事；长短被在UD中有不同标注，受事凸显不必带负面评价",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "正文定位仍需逐命题核证"
+      ],
+      "negative_boundary": "被动形式不必表达负面",
+      "source_refs": [
+        "H04-S4"
+      ]
+    },
+    {
+      "id": "H04.03.02.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.02",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "分别存受事、施事及形式，不强制负面义；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "被动形式不必表达负面",
+      "source_refs": []
+    },
+    {
+      "id": "H04.03.03.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.03",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "双宾结构常包含接受者与转移物等不同论元角色；两个相邻名词不足确认",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "两个名词不一定构成双宾",
+      "source_refs": []
+    },
+    {
+      "id": "H04.03.03.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.03",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "核动词许可及两个宾语的关系；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "两个名词不一定构成双宾",
+      "source_refs": []
+    },
+    {
+      "id": "H04.03.04.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.04",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "兼语分析中一个成分兼有前谓词宾语与后谓词主语的关系，须验证角色",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "表面词序不足以确定兼语",
+      "source_refs": []
+    },
+    {
+      "id": "H04.03.04.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.04",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "区分邀请对象与帮忙施事；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "表面词序不足以确定兼语",
+      "source_refs": []
+    },
+    {
+      "id": "H04.03.05.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.05",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "连动结构可有共享主语的多动作序列及目的等关系；动词相邻不必构成连动",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "谓词连续不一定是连动",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.03.05.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.03.05",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "分析事件先后及目的，排除动补；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "谓词连续不一定是连动",
+      "source_refs": []
+    },
+    {
+      "id": "H04.04.01.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.01",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "动后了与句末了有不同语法语义；句末可出现分析重叠，不能统一译作过去时",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "正文定位仍需逐命题核证"
+      ],
+      "negative_boundary": "不能把所有了等同过去时",
+      "source_refs": [
+        "H04-S3"
+      ]
+    },
+    {
+      "id": "H04.04.01.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.01",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "按位置、参照时点和新情状判别；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "不能把所有了等同过去时",
+      "source_refs": []
+    },
+    {
+      "id": "H04.04.02.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.02",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "动后过常表达经历体；过亦有其他词汇用法，不能按字符判断",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "正文定位仍需逐命题核证"
+      ],
+      "negative_boundary": "出现过字不必表示经历体",
+      "source_refs": [
+        "H04-S3"
+      ]
+    },
+    {
+      "id": "H04.04.02.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.02",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "用语境区分经历与路径；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "出现过字不必表示经历体",
+      "source_refs": []
+    },
+    {
+      "id": "H04.04.03.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.03",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "着可用于持续状态或动作等体貌表达；与其他字词读法用法分开",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "正文定位仍需逐命题核证"
+      ],
+      "negative_boundary": "不能将着统一映射一种时态",
+      "source_refs": [
+        "H04-S3"
+      ]
+    },
+    {
+      "id": "H04.04.03.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.03",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "核动后体标记及词项身份；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "不能将着统一映射一种时态",
+      "source_refs": []
+    },
+    {
+      "id": "H04.04.04.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.04",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "汉语时间参照可由时间词、上下文及体标记共同表达；体貌不等同英语时态",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "时间表达与英语时态不一一对应",
+      "source_refs": [
+        "H04-S3"
+      ]
+    },
+    {
+      "id": "H04.04.04.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.04",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "分开事件时间和完成性；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "时间表达与英语时态不一一对应",
+      "source_refs": []
+    },
+    {
+      "id": "H04.04.05.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.05",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "句末了可用于标记新情状，但状态变化解释需要语境，非任意了均表示变化",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "变化意义不能由单字推断",
+      "source_refs": [
+        "H04-S3"
+      ]
+    },
+    {
+      "id": "H04.04.05.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.04.05",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "核此前状态及话语条件；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "变化意义不能由单字推断",
+      "source_refs": []
+    },
+    {
+      "id": "H04.05.01.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.01",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "定语修饰名词性中心，的可在一定条件下出现或省略",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "定语不必以的结尾",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.05.01.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.01",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "检查修饰类型和允许省略条件；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "定语不必以的结尾",
+      "source_refs": []
+    },
+    {
+      "id": "H04.05.02.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.02",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "状语通常修饰谓词或分句，位置和范围需分析；词类不唯一决定状语",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "状语与补语不能按词类机械判断",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.05.02.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.02",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "标明修饰对象及作用域；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "状语与补语不能按词类机械判断",
+      "source_refs": []
+    },
+    {
+      "id": "H04.05.03.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.03",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "结果补语表达动作导致的结果，区别仅描述后续动作的序列",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "相邻两动词不必是结果补语",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.05.03.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.03",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "核事件和结果状态联系；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "相邻两动词不必是结果补语",
+      "source_refs": []
+    },
+    {
+      "id": "H04.05.04.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.04",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "趋向补语可表达空间方向或引申意义，来去的参照点依语境",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "趋向形式不必表示实际移动",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.05.04.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.04",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "区分实际位移与引申；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "趋向形式不必表示实际移动",
+      "source_refs": []
+    },
+    {
+      "id": "H04.05.05.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.05",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "程度/状态补语与程度副词分属不同句法位置，得后成分可描写动作状态",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "高程度不等于语法正确",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.05.05.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.05",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "比较评价对象及结构；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "高程度不等于语法正确",
+      "source_refs": []
+    },
+    {
+      "id": "H04.05.06.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.06",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "可能补语常以V得/不+C表示结果可达性，与能的情态用法不完全相同",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "可能补语不等同所有能字表达",
+      "source_refs": []
+    },
+    {
+      "id": "H04.05.06.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.05.06",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "分离理解能力、许可和机会；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "可能补语不等同所有能字表达",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.01.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.01",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "并列结构连接功能可比的成分或分句，连接手段可显式或隐式",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "逗号不必表示并列",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.06.01.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.01",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "核句法平行及语义关系；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "逗号不必表示并列",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.02.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.02",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "因果复句表达说话者提出的因果关系，但语言形式不是独立因果证据",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "语言表达因果不证明真实因果",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.02.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.02",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "区分语言关系及实际事实核证；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "语言表达因果不证明真实因果",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.03.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.03",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "条件句的前件与后件可表达条件关系，具体必要充分性和反事实由语境决定",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "有如果不保证逻辑蕴含成立",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.06.03.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.03",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "不从如果一词生成逻辑双向蕴含；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "有如果不保证逻辑蕴含成立",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.04.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.04",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "让步构式表达预期与后件之间的冲突，关联词可不成对出现",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "关联词不总是成对出现",
+      "source_refs": [
+        "H04-S1"
+      ]
+    },
+    {
+      "id": "H04.06.04.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.04",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "核预期与实际表达；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "关联词不总是成对出现",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.05.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.05",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "目的构式表达行为者意图的预期结果，不断言目标实现",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "目的不证明实际效果",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.05.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.05",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "区分目的、动作与结果证据；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "目的不证明实际效果",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.06.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.06",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "否定、数量和情态的作用域可产生不同解释，线性词序并非充分消歧依据",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "词序相同不保证范围唯一",
+      "source_refs": []
+    },
+    {
+      "id": "H04.06.06.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.06.06",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "区分非全称与全体否定；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "词序相同不保证范围唯一",
+      "source_refs": []
+    },
+    {
+      "id": "H04.07.01.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.01",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "可接受性判断应固定语体、方言、语境和任务；低频可能是内容稀有而非句法不合法",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "低频不能直接判不合语法",
+      "source_refs": []
+    },
+    {
+      "id": "H04.07.01.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.01",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "以对比任务及独立语料核证；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "低频不能直接判不合语法",
+      "source_refs": []
+    },
+    {
+      "id": "H04.07.02.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.02",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "构式选择受信息状态和语境影响，即使近义表达也可能不具完全相同的话语功能",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "脱离语境不能强制唯一答案",
+      "source_refs": [
+        "H04-S5"
+      ]
+    },
+    {
+      "id": "H04.07.02.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.02",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "提供明确对比场景，保留可接受变体；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "脱离语境不能强制唯一答案",
+      "source_refs": []
+    },
+    {
+      "id": "H04.07.03.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.03",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "歧义可来自结构、词义、指称和作用域；缺少消歧证据应保留多个解释",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "不能把合法多解题判唯一",
+      "source_refs": []
+    },
+    {
+      "id": "H04.07.03.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.03",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "根据上下文确认，不强制唯一解析；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "不能把合法多解题判唯一",
+      "source_refs": []
+    },
+    {
+      "id": "H04.07.04.D4.01",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.04",
+      "claim_type": "PROFESSIONAL_CANDIDATE",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "构式对比需控制事件和论元，分别比较形式、语义及使用条件；表面同形不充分",
+      "conditions": [
+        "现代汉语指定分析与交际条件；示例为原创合成夹具",
+        "直接专业研究及例证待核"
+      ],
+      "negative_boundary": "形式相似不等于功能等价",
+      "source_refs": [
+        "H04-S5"
+      ]
+    },
+    {
+      "id": "H04.07.04.D4.02",
+      "type": "CLAIM",
+      "owner": "H04",
+      "topic": "H04.07.04",
+      "claim_type": "PROJECT_RULE",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "固定受事施事与语境再比较；缺少条件保留UNKNOWN。",
+      "conditions": [
+        "候选项目规则，非实证"
+      ],
+      "negative_boundary": "形式相似不等于功能等价",
+      "source_refs": []
+    },
+    {
+      "id": "H04-S1",
+      "type": "SOURCE_RECORD",
+      "owner": "H04",
+      "title": "GF0025-2021 教育部PDF",
+      "url": "https://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/W020210329527301787356.pdf",
+      "access_recorded": "PDF_TEXT_LIMITED",
+      "locator": "附录A §A.2.1.9–A.2.5，印刷183–187页抽取；页图0/4重定向失败，未核图及原字节",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "H04-S2",
+      "type": "SOURCE_RECORD",
+      "owner": "H04",
+      "title": "UD Chinese v2",
+      "url": "https://universaldependencies.org/zh/index.html",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "POS、依存关系及动后体标记；仅该标注框架",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "H04-S3",
+      "type": "SOURCE_RECORD",
+      "owner": "H04",
+      "title": "Predicting Chinese Preschoolers’ Acquisition of Aspect Markers, 2022",
+      "url": "https://www.mdpi.com/2226-471X/7/2/133",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "§grammatical aspect, l201–208, verbal vs sentence-final le; 学前儿童研究不能直接泛化二语习得",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "H04-S4",
+      "type": "SOURCE_RECORD",
+      "owner": "H04",
+      "title": "UD Chinese ADP v2",
+      "url": "https://universaldependencies.org/zh/pos/ADP.html",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "把、长被ADP与短被AUX的标注区分",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "H04-S5",
+      "type": "SOURCE_RECORD",
+      "owner": "H04",
+      "title": "KU Leuven ba-construction project summary",
+      "url": "https://research.kuleuven.be/portal/en/project/3H200667",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "项目摘要：处置、受影响及变异；非论文全文",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    }
+  ],
+  "edges": [
+    {
+      "id": "HAS_TOPIC:H04:H04.01.01:H04.01.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.01.01",
+      "origin": "H04.01.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.01.02:H04.01.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.01.02",
+      "origin": "H04.01.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.01.03:H04.01.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.01.03",
+      "origin": "H04.01.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.01.04:H04.01.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.01.04",
+      "origin": "H04.01.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.02.01:H04.02.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.02.01",
+      "origin": "H04.02.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.02.02:H04.02.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.02.02",
+      "origin": "H04.02.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.02.03:H04.02.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.02.03",
+      "origin": "H04.02.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.02.04:H04.02.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.02.04",
+      "origin": "H04.02.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.02.05:H04.02.05.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.02.05",
+      "origin": "H04.02.05.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.03.01:H04.03.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.03.01",
+      "origin": "H04.03.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.03.02:H04.03.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.03.02",
+      "origin": "H04.03.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.03.03:H04.03.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.03.03",
+      "origin": "H04.03.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.03.04:H04.03.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.03.04",
+      "origin": "H04.03.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.03.05:H04.03.05.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.03.05",
+      "origin": "H04.03.05.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.04.01:H04.04.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.04.01",
+      "origin": "H04.04.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.04.02:H04.04.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.04.02",
+      "origin": "H04.04.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.04.03:H04.04.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.04.03",
+      "origin": "H04.04.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.04.04:H04.04.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.04.04",
+      "origin": "H04.04.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.04.05:H04.04.05.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.04.05",
+      "origin": "H04.04.05.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.05.01:H04.05.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.05.01",
+      "origin": "H04.05.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.05.02:H04.05.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.05.02",
+      "origin": "H04.05.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.05.03:H04.05.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.05.03",
+      "origin": "H04.05.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.05.04:H04.05.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.05.04",
+      "origin": "H04.05.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.05.05:H04.05.05.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.05.05",
+      "origin": "H04.05.05.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.05.06:H04.05.06.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.05.06",
+      "origin": "H04.05.06.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.06.01:H04.06.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.06.01",
+      "origin": "H04.06.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.06.02:H04.06.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.06.02",
+      "origin": "H04.06.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.06.03:H04.06.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.06.03",
+      "origin": "H04.06.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.06.04:H04.06.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.06.04",
+      "origin": "H04.06.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.06.05:H04.06.05.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.06.05",
+      "origin": "H04.06.05.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.06.06:H04.06.06.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.06.06",
+      "origin": "H04.06.06.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.07.01:H04.07.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.07.01",
+      "origin": "H04.07.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.07.02:H04.07.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.07.02",
+      "origin": "H04.07.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.07.03:H04.07.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.07.03",
+      "origin": "H04.07.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:H04:H04.07.04:H04.07.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "H04",
+      "to": "H04.07.04",
+      "origin": "H04.07.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.01:H04.01.01.D4.01:H04.01.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.01",
+      "to": "H04.01.01.D4.01",
+      "origin": "H04.01.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.01.01.D4.01:H04-S1:H04.01.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.01.01.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.01.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.01:H04.01.01.D4.02:H04.01.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.01",
+      "to": "H04.01.01.D4.02",
+      "origin": "H04.01.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.02:H04.01.02.D4.01:H04.01.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.02",
+      "to": "H04.01.02.D4.01",
+      "origin": "H04.01.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.01.02.D4.01:H04-S2:H04.01.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.01.02.D4.01",
+      "to": "H04-S2",
+      "origin": "H04.01.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.02:H04.01.02.D4.02:H04.01.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.02",
+      "to": "H04.01.02.D4.02",
+      "origin": "H04.01.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.03:H04.01.03.D4.01:H04.01.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.03",
+      "to": "H04.01.03.D4.01",
+      "origin": "H04.01.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.01.03.D4.01:H04-S2:H04.01.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.01.03.D4.01",
+      "to": "H04-S2",
+      "origin": "H04.01.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.03:H04.01.03.D4.02:H04.01.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.03",
+      "to": "H04.01.03.D4.02",
+      "origin": "H04.01.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.04:H04.01.04.D4.01:H04.01.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.04",
+      "to": "H04.01.04.D4.01",
+      "origin": "H04.01.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.01.04.D4.01:H04-S5:H04.01.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.01.04.D4.01",
+      "to": "H04-S5",
+      "origin": "H04.01.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.01.04:H04.01.04.D4.02:H04.01.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.01.04",
+      "to": "H04.01.04.D4.02",
+      "origin": "H04.01.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.01:H04.02.01.D4.01:H04.02.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.01",
+      "to": "H04.02.01.D4.01",
+      "origin": "H04.02.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.01:H04.02.01.D4.02:H04.02.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.01",
+      "to": "H04.02.01.D4.02",
+      "origin": "H04.02.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.02:H04.02.02.D4.01:H04.02.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.02",
+      "to": "H04.02.02.D4.01",
+      "origin": "H04.02.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.02.02.D4.01:H04-S1:H04.02.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.02.02.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.02.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.02:H04.02.02.D4.02:H04.02.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.02",
+      "to": "H04.02.02.D4.02",
+      "origin": "H04.02.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.03:H04.02.03.D4.01:H04.02.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.03",
+      "to": "H04.02.03.D4.01",
+      "origin": "H04.02.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.02.03.D4.01:H04-S1:H04.02.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.02.03.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.02.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.03:H04.02.03.D4.02:H04.02.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.03",
+      "to": "H04.02.03.D4.02",
+      "origin": "H04.02.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.04:H04.02.04.D4.01:H04.02.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.04",
+      "to": "H04.02.04.D4.01",
+      "origin": "H04.02.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.04:H04.02.04.D4.02:H04.02.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.04",
+      "to": "H04.02.04.D4.02",
+      "origin": "H04.02.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.05:H04.02.05.D4.01:H04.02.05.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.05",
+      "to": "H04.02.05.D4.01",
+      "origin": "H04.02.05.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.02.05.D4.01:H04-S1:H04.02.05.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.02.05.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.02.05.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.02.05:H04.02.05.D4.02:H04.02.05.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.02.05",
+      "to": "H04.02.05.D4.02",
+      "origin": "H04.02.05.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.01:H04.03.01.D4.01:H04.03.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.01",
+      "to": "H04.03.01.D4.01",
+      "origin": "H04.03.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.03.01.D4.01:H04-S5:H04.03.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.03.01.D4.01",
+      "to": "H04-S5",
+      "origin": "H04.03.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.01:H04.03.01.D4.02:H04.03.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.01",
+      "to": "H04.03.01.D4.02",
+      "origin": "H04.03.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.02:H04.03.02.D4.01:H04.03.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.02",
+      "to": "H04.03.02.D4.01",
+      "origin": "H04.03.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.03.02.D4.01:H04-S4:H04.03.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.03.02.D4.01",
+      "to": "H04-S4",
+      "origin": "H04.03.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.02:H04.03.02.D4.02:H04.03.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.02",
+      "to": "H04.03.02.D4.02",
+      "origin": "H04.03.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.03:H04.03.03.D4.01:H04.03.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.03",
+      "to": "H04.03.03.D4.01",
+      "origin": "H04.03.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.03:H04.03.03.D4.02:H04.03.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.03",
+      "to": "H04.03.03.D4.02",
+      "origin": "H04.03.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.04:H04.03.04.D4.01:H04.03.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.04",
+      "to": "H04.03.04.D4.01",
+      "origin": "H04.03.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.04:H04.03.04.D4.02:H04.03.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.04",
+      "to": "H04.03.04.D4.02",
+      "origin": "H04.03.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.05:H04.03.05.D4.01:H04.03.05.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.05",
+      "to": "H04.03.05.D4.01",
+      "origin": "H04.03.05.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.03.05.D4.01:H04-S1:H04.03.05.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.03.05.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.03.05.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.03.05:H04.03.05.D4.02:H04.03.05.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.03.05",
+      "to": "H04.03.05.D4.02",
+      "origin": "H04.03.05.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.01:H04.04.01.D4.01:H04.04.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.01",
+      "to": "H04.04.01.D4.01",
+      "origin": "H04.04.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.04.01.D4.01:H04-S3:H04.04.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.04.01.D4.01",
+      "to": "H04-S3",
+      "origin": "H04.04.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.01:H04.04.01.D4.02:H04.04.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.01",
+      "to": "H04.04.01.D4.02",
+      "origin": "H04.04.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.02:H04.04.02.D4.01:H04.04.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.02",
+      "to": "H04.04.02.D4.01",
+      "origin": "H04.04.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.04.02.D4.01:H04-S3:H04.04.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.04.02.D4.01",
+      "to": "H04-S3",
+      "origin": "H04.04.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.02:H04.04.02.D4.02:H04.04.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.02",
+      "to": "H04.04.02.D4.02",
+      "origin": "H04.04.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.03:H04.04.03.D4.01:H04.04.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.03",
+      "to": "H04.04.03.D4.01",
+      "origin": "H04.04.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.04.03.D4.01:H04-S3:H04.04.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.04.03.D4.01",
+      "to": "H04-S3",
+      "origin": "H04.04.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.03:H04.04.03.D4.02:H04.04.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.03",
+      "to": "H04.04.03.D4.02",
+      "origin": "H04.04.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.04:H04.04.04.D4.01:H04.04.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.04",
+      "to": "H04.04.04.D4.01",
+      "origin": "H04.04.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.04.04.D4.01:H04-S3:H04.04.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.04.04.D4.01",
+      "to": "H04-S3",
+      "origin": "H04.04.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.04:H04.04.04.D4.02:H04.04.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.04",
+      "to": "H04.04.04.D4.02",
+      "origin": "H04.04.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.05:H04.04.05.D4.01:H04.04.05.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.05",
+      "to": "H04.04.05.D4.01",
+      "origin": "H04.04.05.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.04.05.D4.01:H04-S3:H04.04.05.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.04.05.D4.01",
+      "to": "H04-S3",
+      "origin": "H04.04.05.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.04.05:H04.04.05.D4.02:H04.04.05.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.04.05",
+      "to": "H04.04.05.D4.02",
+      "origin": "H04.04.05.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.01:H04.05.01.D4.01:H04.05.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.01",
+      "to": "H04.05.01.D4.01",
+      "origin": "H04.05.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.05.01.D4.01:H04-S1:H04.05.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.05.01.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.05.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.01:H04.05.01.D4.02:H04.05.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.01",
+      "to": "H04.05.01.D4.02",
+      "origin": "H04.05.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.02:H04.05.02.D4.01:H04.05.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.02",
+      "to": "H04.05.02.D4.01",
+      "origin": "H04.05.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.05.02.D4.01:H04-S1:H04.05.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.05.02.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.05.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.02:H04.05.02.D4.02:H04.05.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.02",
+      "to": "H04.05.02.D4.02",
+      "origin": "H04.05.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.03:H04.05.03.D4.01:H04.05.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.03",
+      "to": "H04.05.03.D4.01",
+      "origin": "H04.05.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.05.03.D4.01:H04-S1:H04.05.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.05.03.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.05.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.03:H04.05.03.D4.02:H04.05.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.03",
+      "to": "H04.05.03.D4.02",
+      "origin": "H04.05.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.04:H04.05.04.D4.01:H04.05.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.04",
+      "to": "H04.05.04.D4.01",
+      "origin": "H04.05.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.05.04.D4.01:H04-S1:H04.05.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.05.04.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.05.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.04:H04.05.04.D4.02:H04.05.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.04",
+      "to": "H04.05.04.D4.02",
+      "origin": "H04.05.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.05:H04.05.05.D4.01:H04.05.05.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.05",
+      "to": "H04.05.05.D4.01",
+      "origin": "H04.05.05.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.05.05.D4.01:H04-S1:H04.05.05.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.05.05.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.05.05.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.05:H04.05.05.D4.02:H04.05.05.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.05",
+      "to": "H04.05.05.D4.02",
+      "origin": "H04.05.05.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.06:H04.05.06.D4.01:H04.05.06.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.06",
+      "to": "H04.05.06.D4.01",
+      "origin": "H04.05.06.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.05.06:H04.05.06.D4.02:H04.05.06.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.05.06",
+      "to": "H04.05.06.D4.02",
+      "origin": "H04.05.06.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.01:H04.06.01.D4.01:H04.06.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.01",
+      "to": "H04.06.01.D4.01",
+      "origin": "H04.06.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.06.01.D4.01:H04-S1:H04.06.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.06.01.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.06.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.01:H04.06.01.D4.02:H04.06.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.01",
+      "to": "H04.06.01.D4.02",
+      "origin": "H04.06.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.02:H04.06.02.D4.01:H04.06.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.02",
+      "to": "H04.06.02.D4.01",
+      "origin": "H04.06.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.02:H04.06.02.D4.02:H04.06.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.02",
+      "to": "H04.06.02.D4.02",
+      "origin": "H04.06.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.03:H04.06.03.D4.01:H04.06.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.03",
+      "to": "H04.06.03.D4.01",
+      "origin": "H04.06.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.06.03.D4.01:H04-S1:H04.06.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.06.03.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.06.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.03:H04.06.03.D4.02:H04.06.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.03",
+      "to": "H04.06.03.D4.02",
+      "origin": "H04.06.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.04:H04.06.04.D4.01:H04.06.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.04",
+      "to": "H04.06.04.D4.01",
+      "origin": "H04.06.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.06.04.D4.01:H04-S1:H04.06.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.06.04.D4.01",
+      "to": "H04-S1",
+      "origin": "H04.06.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.04:H04.06.04.D4.02:H04.06.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.04",
+      "to": "H04.06.04.D4.02",
+      "origin": "H04.06.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.05:H04.06.05.D4.01:H04.06.05.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.05",
+      "to": "H04.06.05.D4.01",
+      "origin": "H04.06.05.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.05:H04.06.05.D4.02:H04.06.05.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.05",
+      "to": "H04.06.05.D4.02",
+      "origin": "H04.06.05.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.06:H04.06.06.D4.01:H04.06.06.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.06",
+      "to": "H04.06.06.D4.01",
+      "origin": "H04.06.06.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.06.06:H04.06.06.D4.02:H04.06.06.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.06.06",
+      "to": "H04.06.06.D4.02",
+      "origin": "H04.06.06.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.01:H04.07.01.D4.01:H04.07.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.01",
+      "to": "H04.07.01.D4.01",
+      "origin": "H04.07.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.01:H04.07.01.D4.02:H04.07.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.01",
+      "to": "H04.07.01.D4.02",
+      "origin": "H04.07.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.02:H04.07.02.D4.01:H04.07.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.02",
+      "to": "H04.07.02.D4.01",
+      "origin": "H04.07.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.07.02.D4.01:H04-S5:H04.07.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.07.02.D4.01",
+      "to": "H04-S5",
+      "origin": "H04.07.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.02:H04.07.02.D4.02:H04.07.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.02",
+      "to": "H04.07.02.D4.02",
+      "origin": "H04.07.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.03:H04.07.03.D4.01:H04.07.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.03",
+      "to": "H04.07.03.D4.01",
+      "origin": "H04.07.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.03:H04.07.03.D4.02:H04.07.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.03",
+      "to": "H04.07.03.D4.02",
+      "origin": "H04.07.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.04:H04.07.04.D4.01:H04.07.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.04",
+      "to": "H04.07.04.D4.01",
+      "origin": "H04.07.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:H04.07.04.D4.01:H04-S5:H04.07.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "H04.07.04.D4.01",
+      "to": "H04-S5",
+      "origin": "H04.07.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:H04.07.04:H04.07.04.D4.02:H04.07.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "H04.07.04",
+      "to": "H04.07.04.D4.02",
+      "origin": "H04.07.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    }
+  ],
+  "anchors": [
+    {
+      "id": "H04-L1",
+      "from": "H04.04.01",
+      "target": "QD4-13",
+      "reason": "研究对账与跨层引用，非正式关系",
+      "status": "RESEARCH_ANCHOR_NOT_FORMAL_RELATION",
+      "qualification": "NOT_RUN",
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "H04-L2",
+      "from": "H04.01.03",
+      "target": "K03",
+      "reason": "研究对账与跨层引用，非正式关系",
+      "status": "RESEARCH_ANCHOR_NOT_FORMAL_RELATION",
+      "qualification": "NOT_RUN",
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "H04-L3",
+      "from": "H04.03.01",
+      "target": "H03",
+      "reason": "研究对账与跨层引用，非正式关系",
+      "status": "RESEARCH_ANCHOR_NOT_FORMAL_RELATION",
+      "qualification": "NOT_RUN",
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "H04-L4",
+      "from": "H04.07.02",
+      "target": "H05",
+      "reason": "研究对账与跨层引用，非正式关系",
+      "status": "RESEARCH_ANCHOR_NOT_FORMAL_RELATION",
+      "qualification": "NOT_RUN",
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "H04-L5",
+      "from": "H04.07.03",
+      "target": "K12",
+      "reason": "研究对账与跨层引用，非正式关系",
+      "status": "RESEARCH_ANCHOR_NOT_FORMAL_RELATION",
+      "qualification": "NOT_RUN",
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    }
+  ],
+  "issues": []
+}

@@ -1,0 +1,320 @@
+{
+  "owner": "H02",
+  "base": "f8b1c2f2736726e429678fc04430821bc18de470",
+  "prior_claim_blob": "c13fca353566dbf218291690fb6912a071903812",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H02.02.01.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.02.01",
+      "requirement_id": "H02.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "规范笔画数需绑定具体字形及规范；五类主笔形编码是分类，不能凭数字值相加计算笔画数。",
+      "conditions": [
+        "GF0023抽取文本受限；具体字项另核"
+      ],
+      "negative_boundary": "不能将编码字符或笔形序号直接当笔画数。",
+      "source_refs": [
+        "H02-B03-STROKE"
+      ],
+      "source_locator": "§3.1–3.3",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H02.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "合成序列[1,2,5]",
+        "expected": "长度3；非真实字笔顺",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.02.02.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.02.02",
+      "requirement_id": "H02.02.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "GF0023-2020文本给出规范字、笔顺、字表序号及UCS字段，笔顺记录是有序类别序列，非无序笔画集合。",
+      "conditions": [
+        "只核抽取文本；不复制全表；实际轨迹评价另证"
+      ],
+      "negative_boundary": "同笔画集合不同顺序不保证符合规范。",
+      "source_refs": [
+        "H02-B03-STROKE"
+      ],
+      "source_locator": "§1–3及表结构文本",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H02.02.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "合成[1,2,5]与[2,1,5]",
+        "expected": "顺序不同",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.02.03.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.02.03",
+      "requirement_id": "H02.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "检字部首与余笔数是Unicode检索属性，不能直接作为唯一的构件分析树；一条部首记录不能穷尽构件。",
+      "conditions": [
+        "固定Unicode版本，具体字段适用另核"
+      ],
+      "negative_boundary": "不将检索键转为字源或意义关系。",
+      "source_refs": [
+        "H02-B03-UH41"
+      ],
+      "source_locator": "§2.1.1 kRSUnicode/kTotalStrokes",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "同一字的检索记录与构件树",
+        "expected": "独立保存",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.02.04.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.02.04",
+      "requirement_id": "H02.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "IDS使用前缀运算符及规定的操作数个数描述相对布局，可递归构造；不同分解可描述同一字形，标准不规定非相同IDS的等价关系。",
+      "conditions": [
+        "Unicode17，合成子集用于检查"
+      ],
+      "negative_boundary": "语法有效不代表字源正确、编码存在或分解唯一。",
+      "source_refs": [
+        "H02-B03-U17"
+      ],
+      "source_locator": "§18.2 l459–478",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.02.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "⿰木⿱日日",
+        "expected": "结构描述候选，不生成正式字符",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.02.05.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.02.05",
+      "requirement_id": "H02.02.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "规则性比较单字与其声旁的读音，一致性则描述指定声旁家族的读音分布；两者不能互换。",
+      "conditions": [
+        "明确是否包含声调、样本字表和声旁本身"
+      ],
+      "negative_boundary": "声旁一致性不保证未知字实际读音。",
+      "source_refs": [
+        "H02-B03-FAMILY"
+      ],
+      "source_locator": "p19 引论",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.02.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "合成声旁读音A，家族A,A,B,B,B",
+        "expected": "对一个A字规则；A一致性2/5",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.02.05.D4.04",
+      "owner": "H02",
+      "d3_id": "H02.02.05",
+      "requirement_id": "H02.02.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "研究正式统计把多音形声字的不同读音分别处理，声旁家族成员含声旁本身，一致值比较声韵而不计调，并排除特定多音声旁样本。",
+      "conditions": [
+        "2015研究的操作化，不等于所有一致性定义"
+      ],
+      "negative_boundary": "不能混用引论计调例与正式不计调统计。",
+      "source_refs": [
+        "H02-B03-FAMILY"
+      ],
+      "source_locator": "p20 §2.1 (2),(6),(8),(9)",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.02.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "合成 qing1,qing2,qing3,jiang1",
+        "expected": "不计调qing占3/4，计调qing1占1/4",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.03.01.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.03.01",
+      "requirement_id": "H02.03.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "同一编码字可关联多个辞书条目位置及多读音；应保存原顺序与来源身份，词项实际读音仍须按词境核验。",
+      "conditions": [
+        "Unihan provisional 字段，非词典全量导入"
+      ],
+      "negative_boundary": "读音候选存在不证明任何词境可用。",
+      "source_refs": [
+        "H02-B03-UH41"
+      ],
+      "source_locator": "kHanyuPinyin l556–565",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.03.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "重的多个读音候选",
+        "expected": "重要与重复分别核",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.04.02.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.04.02",
+      "requirement_id": "H02.04.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "共享声旁可形成家族统计，但家族边的意义限于指定构形分析及读音分布，不自动构成同音或同义关系。",
+      "conditions": [
+        "历史字表及读音口径"
+      ],
+      "negative_boundary": "不因共有构件建立意义等价。",
+      "source_refs": [
+        "H02-B03-FAMILY"
+      ],
+      "source_locator": "p19–20",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.04.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "清、情、请",
+        "expected": "分别保存声韵调",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.04.03.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.04.03",
+      "requirement_id": "H02.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "IDS语法接受描述未编码字的序列；描述有效与目标字已编码、规范或可渲染是不同条件。",
+      "conditions": [
+        "标准允许递归；本项目检查仅有限子集"
+      ],
+      "negative_boundary": "不得把任意合法布局当规范字或自动生成码点。",
+      "source_refs": [
+        "H02-B03-U17"
+      ],
+      "source_locator": "§18.2 l448–503",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "⿰木木",
+        "expected": "描述结构；实际字符映射另证",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.05.02.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.05.02",
+      "requirement_id": "H02.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "笔顺是规范书写的目标之一，考察真实书写过程需要轨迹或直接观察；静态成品仅支持有限形体判断。",
+      "conditions": [
+        "标准文本受限；任务设计为项目推论"
+      ],
+      "negative_boundary": "键盘输入不能证明笔顺。",
+      "source_refs": [
+        "H02-B03-STROKE"
+      ],
+      "source_locator": "§1–3；MOE24索引",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H02.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "提交正确汉字文本，无轨迹",
+        "expected": "笔顺UNKNOWN",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.05.03.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.05.03",
+      "requirement_id": "H02.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "GF0023-2020文本范围为《通用规范汉字表》8105字，发布2020-11-23、实施2021-03-01；规范身份与UCS编码分离。",
+      "conditions": [
+        "仅抽取文本，页图失败；不声明全量读取"
+      ],
+      "negative_boundary": "不推广至全部Unicode汉字。",
+      "source_refs": [
+        "H02-B03-STROKE"
+      ],
+      "source_locator": "封面、§1–2",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "base_claim_ref": "H02.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "超出指定字表的编码字",
+        "expected": "规范成员资格未知",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.05.04.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.05.04",
+      "requirement_id": "H02.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "规范书写教育区分正楷与规范行楷目标；具体字形和评分条件应注明所采用书体及规范。",
+      "conditions": [
+        "索引级；无具体评分规则"
+      ],
+      "negative_boundary": "不能把非目标字体一概判错。",
+      "source_refs": [
+        "H02-B03-MOE24"
+      ],
+      "source_locator": "政策索引摘要",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "base_claim_ref": "H02.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "宋体印刷与楷书手写",
+        "expected": "按实际目标评价",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "owner": "K16",
+  "base": "43430ad3bc026d832715d5178f80b37f0549404d",
+  "prior_claim_blob": "2a9b58066a56eb9909ced2ab4d7b14c3e2640eb9",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K16.01.02.D4.03",
+      "owner": "K16",
+      "d3_id": "K16.01.02",
+      "requirement_id": "K16.01.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "教学需要考虑先备知识、语言认知技能、动机和情境的交互；能力评价应使用明确学习模型。",
+      "conditions": [
+        "结论7-1/7-5；分数合成规则是项目保守推论。"
+      ],
+      "negative_boundary": "不从不同构念分数任意推断总体能力。",
+      "source_refs": [
+        "K16-B09-SCHOOL"
+      ],
+      "source_locator": "conclusions 7-1,7-2,7-5, HTML l642–660",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K16.01.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "阅读和数学各自得分",
+        "expected": "不默认平均作为一般能力",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K16.05.04.D4.03",
+      "owner": "K16",
+      "d3_id": "K16.05.04",
+      "requirement_id": "K16.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "匹配假说的研究需比较不同学习者类别在匹配及不匹配条件中的表现，并用共同结果测量考察交叉。",
+      "conditions": [
+        "元分析纳入标准；有交叉方向不等于统计显著或因果识别。"
+      ],
+      "negative_boundary": "偏好问卷不足以验证匹配增益。",
+      "source_refs": [
+        "K16-B09-STYLE"
+      ],
+      "source_locator": "methods l429; crossover l607–611; discussion/conclusion l648–653,691–695",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K16.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两类学习者分别分配图示/文字",
+        "expected": "比较各类别内处理差异",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K16.05.04.D4.04",
+      "owner": "K16",
+      "d3_id": "K16.05.04",
+      "requirement_id": "K16.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "2024元分析42项结果中11项出现至少两类匹配优势方向；作者强调大部分无交叉且研究质量有限。",
+      "conditions": [
+        "原文方向计数，并非11个显著交互；未重算原始数据。"
+      ],
+      "negative_boundary": "不宣称学习风格绝无效应或普遍有效。",
+      "source_refs": [
+        "K16-B09-STYLE"
+      ],
+      "source_locator": "methods l429; crossover l607–611; discussion/conclusion l648–653,691–695",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K16.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "A组与B组均喜欢图示",
+        "expected": "不按偏好标签强制分流",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

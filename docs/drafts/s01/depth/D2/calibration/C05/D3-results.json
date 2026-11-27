@@ -1,0 +1,810 @@
+{
+  "execution": "DIRECT_JS_FUNCTION_IN_CODE_MODE",
+  "cases": [
+    {
+      "id": "plan-valid",
+      "rule": "D3-P12",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "remaining": 5,
+        "cost": 2,
+        "prerequisitesMet": true,
+        "accessible": true,
+        "goalMatch": true
+      },
+      "expected": "NEXT_TASK_CANDIDATE",
+      "actual": "NEXT_TASK_CANDIDATE",
+      "pass": true
+    },
+    {
+      "id": "plan-budget",
+      "rule": "D3-P12",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "remaining": 5,
+        "cost": 6,
+        "prerequisitesMet": true,
+        "accessible": true,
+        "goalMatch": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "plan-zero",
+      "rule": "D3-P12",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "remaining": 5,
+        "cost": 0,
+        "prerequisitesMet": true,
+        "accessible": true,
+        "goalMatch": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "plan-exit",
+      "rule": "D3-P12",
+      "input": {
+        "exit": true,
+        "permission": true,
+        "versionMatch": true,
+        "remaining": 5,
+        "cost": 2,
+        "prerequisitesMet": true,
+        "accessible": true,
+        "goalMatch": true
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "pass": true
+    },
+    {
+      "id": "plan-access",
+      "rule": "D3-P12",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "remaining": 5,
+        "cost": 2,
+        "prerequisitesMet": true,
+        "accessible": false,
+        "goalMatch": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "plan-stale",
+      "rule": "D3-P12",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": false,
+        "remaining": 5,
+        "cost": 2,
+        "prerequisitesMet": true,
+        "accessible": true,
+        "goalMatch": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "variant-valid",
+      "rule": "D3-P13",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "rubricVerified": true,
+        "changeControlled": true,
+        "family": "F1",
+        "item": "i2",
+        "previousItem": "i1",
+        "difficultyEquivalenceVerified": false
+      },
+      "expected": "VARIANT_CANDIDATE_UNCALIBRATED",
+      "actual": "VARIANT_CANDIDATE_UNCALIBRATED",
+      "pass": true
+    },
+    {
+      "id": "variant-calibrated",
+      "rule": "D3-P13",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "rubricVerified": true,
+        "changeControlled": true,
+        "family": "F1",
+        "item": "i2",
+        "previousItem": "i1",
+        "difficultyEquivalenceVerified": true
+      },
+      "expected": "CALIBRATED_VARIANT_CANDIDATE",
+      "actual": "CALIBRATED_VARIANT_CANDIDATE",
+      "pass": true
+    },
+    {
+      "id": "variant-repeat",
+      "rule": "D3-P13",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "rubricVerified": true,
+        "changeControlled": true,
+        "family": "F1",
+        "item": "i1",
+        "previousItem": "i1",
+        "difficultyEquivalenceVerified": false
+      },
+      "expected": "REPEAT_ONLY",
+      "actual": "REPEAT_ONLY",
+      "pass": true
+    },
+    {
+      "id": "variant-target",
+      "rule": "D3-P13",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": false,
+        "rubricVerified": true,
+        "changeControlled": true,
+        "family": "F1",
+        "item": "i2",
+        "previousItem": "i1",
+        "difficultyEquivalenceVerified": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "variant-rubric",
+      "rule": "D3-P13",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "rubricVerified": false,
+        "changeControlled": true,
+        "family": "F1",
+        "item": "i2",
+        "previousItem": "i1",
+        "difficultyEquivalenceVerified": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "variant-uncontrolled",
+      "rule": "D3-P13",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "rubricVerified": true,
+        "changeControlled": false,
+        "family": "F1",
+        "item": "i2",
+        "previousItem": "i1",
+        "difficultyEquivalenceVerified": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "domain-shared",
+      "rule": "D3-P14",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "sourceDomain": "zh",
+        "targetDomain": "math",
+        "sharedMechanism": true,
+        "constructMatch": false
+      },
+      "expected": "REUSE_MECHANISM_ONLY",
+      "actual": "REUSE_MECHANISM_ONLY",
+      "pass": true
+    },
+    {
+      "id": "domain-no-shared",
+      "rule": "D3-P14",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "sourceDomain": "zh",
+        "targetDomain": "math",
+        "sharedMechanism": false,
+        "constructMatch": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "domain-same",
+      "rule": "D3-P14",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "sourceDomain": "zh",
+        "targetDomain": "zh",
+        "sharedMechanism": true,
+        "constructMatch": true
+      },
+      "expected": "SAME_CONSTRUCT_CANDIDATE",
+      "actual": "SAME_CONSTRUCT_CANDIDATE",
+      "pass": true
+    },
+    {
+      "id": "domain-different-skill",
+      "rule": "D3-P14",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "sourceDomain": "zh",
+        "targetDomain": "zh",
+        "sharedMechanism": true,
+        "constructMatch": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "domain-missing",
+      "rule": "D3-P14",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "sourceDomain": "zh",
+        "targetDomain": "",
+        "sharedMechanism": true,
+        "constructMatch": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "domain-no-permission",
+      "rule": "D3-P14",
+      "input": {
+        "exit": false,
+        "permission": false,
+        "versionMatch": true,
+        "sourceDomain": "zh",
+        "targetDomain": "math",
+        "sharedMechanism": true,
+        "constructMatch": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    }
+  ],
+  "sessions": [
+    {
+      "id": "assistance-then-independent",
+      "session": {
+        "budget": 10,
+        "version": "v1",
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "HINT",
+          "result": "CORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "b",
+          "digest": "b1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        }
+      ],
+      "expected": {
+        "remaining": 6,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "b",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "NOT_INDEPENDENT",
+          "INDEPENDENT_CANDIDATE"
+        ]
+      },
+      "actual": {
+        "remaining": 6,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "b",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "NOT_INDEPENDENT",
+          "INDEPENDENT_CANDIDATE"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "retry-and-conflict",
+      "session": {
+        "budget": 10,
+        "version": "v1",
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a2",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        }
+      ],
+      "expected": {
+        "remaining": 8,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "INDEPENDENT_CANDIDATE",
+          "DUPLICATE_NO_UPDATE",
+          "CONFLICT_HOLD"
+        ]
+      },
+      "actual": {
+        "remaining": 8,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "INDEPENDENT_CANDIDATE",
+          "DUPLICATE_NO_UPDATE",
+          "CONFLICT_HOLD"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "interrupt-and-stop",
+      "session": {
+        "budget": 10,
+        "version": "v1",
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": true,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "b",
+          "digest": "b1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        }
+      ],
+      "expected": {
+        "remaining": 8,
+        "stopped": true,
+        "candidates": [],
+        "trace": [
+          "MISSING_OBSERVATION",
+          "STOP",
+          "STOPPED"
+        ]
+      },
+      "actual": {
+        "remaining": 8,
+        "stopped": true,
+        "candidates": [],
+        "trace": [
+          "MISSING_OBSERVATION",
+          "STOP",
+          "STOPPED"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "stale-and-cross-domain",
+      "session": {
+        "budget": 10,
+        "version": "v1",
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v0",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "math",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        }
+      ],
+      "expected": {
+        "remaining": 8,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "HOLD",
+          "HOLD",
+          "INDEPENDENT_CANDIDATE"
+        ]
+      },
+      "actual": {
+        "remaining": 8,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "HOLD",
+          "HOLD",
+          "INDEPENDENT_CANDIDATE"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "budget-exhaustion",
+      "session": {
+        "budget": 2,
+        "version": "v1",
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "b",
+          "digest": "b1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": true
+        }
+      ],
+      "expected": {
+        "remaining": 0,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "INDEPENDENT_CANDIDATE",
+          "HOLD"
+        ]
+      },
+      "actual": {
+        "remaining": 0,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "CORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "INDEPENDENT_CANDIDATE",
+          "HOLD"
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "wrong-and-rubric",
+      "session": {
+        "budget": 10,
+        "version": "v1",
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "a",
+          "digest": "a1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "INCORRECT",
+          "rubricVerified": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "b",
+          "digest": "b1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "interrupted": false,
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "result": "CORRECT",
+          "rubricVerified": false
+        }
+      ],
+      "expected": {
+        "remaining": 6,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "INCORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "INDEPENDENT_CANDIDATE",
+          "RUBRIC_HOLD"
+        ]
+      },
+      "actual": {
+        "remaining": 6,
+        "stopped": false,
+        "candidates": [
+          {
+            "eventId": "a",
+            "result": "INCORRECT",
+            "construct": "word-meaning"
+          }
+        ],
+        "trace": [
+          "INDEPENDENT_CANDIDATE",
+          "RUBRIC_HOLD"
+        ]
+      },
+      "pass": true
+    }
+  ],
+  "passed": 24,
+  "failed": 0,
+  "runner_file_replay": "NOT_RUN",
+  "independent_oracle": false
+}

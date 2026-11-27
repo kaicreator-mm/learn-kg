@@ -1,0 +1,578 @@
+{
+  "status": "SYNTHETIC_DECLARED_IDENTITIES_NOT_AUTHENTICATION",
+  "content_base": {
+    "content_id": "content-1",
+    "content_digest": "digest-1",
+    "version": "v1",
+    "current_version": "v1",
+    "author_id": "author",
+    "authorized": true,
+    "receipts": {
+      "fact": {
+        "receipt_id": "r-fact",
+        "evidence_id": "e-fact",
+        "content_id": "content-1",
+        "digest": "digest-1",
+        "version": "v1",
+        "reviewer_id": "reviewer",
+        "review_role": "QUALIFIED_REVIEWER",
+        "independent": true,
+        "decision": "PASS"
+      },
+      "domain_language": {
+        "receipt_id": "r-domain_language",
+        "evidence_id": "e-domain_language",
+        "content_id": "content-1",
+        "digest": "digest-1",
+        "version": "v1",
+        "reviewer_id": "reviewer",
+        "review_role": "QUALIFIED_REVIEWER",
+        "independent": true,
+        "decision": "PASS"
+      },
+      "rubric": {
+        "receipt_id": "r-rubric",
+        "evidence_id": "e-rubric",
+        "content_id": "content-1",
+        "digest": "digest-1",
+        "version": "v1",
+        "reviewer_id": "reviewer",
+        "review_role": "QUALIFIED_REVIEWER",
+        "independent": true,
+        "decision": "PASS"
+      },
+      "source": {
+        "receipt_id": "r-source",
+        "evidence_id": "e-source",
+        "content_id": "content-1",
+        "digest": "digest-1",
+        "version": "v1",
+        "reviewer_id": "reviewer",
+        "review_role": "QUALIFIED_REVIEWER",
+        "independent": true,
+        "decision": "PASS"
+      },
+      "rights": {
+        "receipt_id": "r-rights",
+        "evidence_id": "e-rights",
+        "content_id": "content-1",
+        "digest": "digest-1",
+        "version": "v1",
+        "reviewer_id": "reviewer",
+        "review_role": "QUALIFIED_REVIEWER",
+        "independent": true,
+        "decision": "PASS"
+      },
+      "accessibility": {
+        "receipt_id": "r-accessibility",
+        "evidence_id": "e-accessibility",
+        "content_id": "content-1",
+        "digest": "digest-1",
+        "version": "v1",
+        "reviewer_id": "reviewer",
+        "review_role": "QUALIFIED_REVIEWER",
+        "independent": true,
+        "decision": "PASS"
+      }
+    }
+  },
+  "improvement_base": {
+    "authorized": true,
+    "ethics": "CLEARED",
+    "withdrawn": false,
+    "protocol_id": "p",
+    "evaluated_protocol_id": "p",
+    "protocol_version": "v1",
+    "evaluated_protocol": "v1",
+    "current_protocol_version": "v1",
+    "candidate_id": "c",
+    "tested_candidate_id": "c",
+    "candidate_version": "v2",
+    "tested_version": "v2",
+    "current_candidate_version": "v2",
+    "outcomes_prespecified": true,
+    "comparison_appropriate": true,
+    "attrition_assessed": true,
+    "construct_comparable": true,
+    "safety_outcome": "ACCEPTABLE",
+    "outcome": "SUPPORTED",
+    "independent_review": "ACCEPT_SCOPED",
+    "author_id": "author",
+    "reviewer_id": "reviewer",
+    "reviewer_role": "QUALIFIED_REVIEWER",
+    "review_receipt_id": "rr",
+    "evaluation_evidence_id": "ev",
+    "review_binding": [
+      "p",
+      "v1",
+      "c",
+      "v2",
+      "ev"
+    ],
+    "human_approval": true,
+    "approver_id": "owner",
+    "approval_receipt_id": "ar",
+    "approval_binding": [
+      "c",
+      "v2",
+      "rr"
+    ]
+  },
+  "content": [
+    {
+      "id": "valid",
+      "expect": "ELIGIBLE_FOR_SEPARATE_DELIVERY_REVIEW",
+      "set": [],
+      "remove": []
+    },
+    {
+      "id": "missing_all_versions",
+      "expect": "HOLD_CONTENT_ID",
+      "set": [],
+      "remove": [
+        "version",
+        "current_version",
+        "receipts.fact.version",
+        "receipts.domain_language.version",
+        "receipts.rubric.version",
+        "receipts.source.version",
+        "receipts.rights.version",
+        "receipts.accessibility.version"
+      ]
+    },
+    {
+      "id": "null_version",
+      "expect": "HOLD_CONTENT_ID",
+      "set": [
+        [
+          "version",
+          null
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "empty_version",
+      "expect": "HOLD_CONTENT_ID",
+      "set": [
+        [
+          "version",
+          ""
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "stale_content",
+      "expect": "HOLD_CONTENT_ID",
+      "set": [
+        [
+          "current_version",
+          "v2"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "missing_content_id",
+      "expect": "HOLD_CONTENT_ID",
+      "set": [],
+      "remove": [
+        "content_id"
+      ]
+    },
+    {
+      "id": "missing_receipt",
+      "expect": "HOLD_INCOMPLETE",
+      "set": [],
+      "remove": [
+        "receipts.source"
+      ]
+    },
+    {
+      "id": "receipt_missing_version",
+      "expect": "HOLD_RECEIPT_ID",
+      "set": [],
+      "remove": [
+        "receipts.fact.version"
+      ]
+    },
+    {
+      "id": "receipt_empty_id",
+      "expect": "HOLD_RECEIPT_ID",
+      "set": [
+        [
+          "receipts.fact.receipt_id",
+          " "
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "missing_evidence",
+      "expect": "HOLD_RECEIPT_ID",
+      "set": [],
+      "remove": [
+        "receipts.fact.evidence_id"
+      ]
+    },
+    {
+      "id": "duplicate_receipt",
+      "expect": "HOLD_RECEIPT_ID",
+      "set": [
+        [
+          "receipts.rubric.receipt_id",
+          "r-fact"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "wrong_version",
+      "expect": "HOLD_RECEIPT_SCOPE",
+      "set": [
+        [
+          "receipts.rubric.version",
+          "v0"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "wrong_digest",
+      "expect": "HOLD_RECEIPT_SCOPE",
+      "set": [
+        [
+          "receipts.fact.digest",
+          "other"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "wrong_content",
+      "expect": "HOLD_RECEIPT_SCOPE",
+      "set": [
+        [
+          "receipts.source.content_id",
+          "other"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "author_self_review",
+      "expect": "HOLD_RECEIPT_SCOPE",
+      "set": [
+        [
+          "receipts.fact.reviewer_id",
+          "author"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "independence_unknown",
+      "expect": "HOLD_RECEIPT_SCOPE",
+      "set": [
+        [
+          "receipts.fact.independent",
+          null
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "failed_check",
+      "expect": "REJECT_CANDIDATE",
+      "set": [
+        [
+          "receipts.rights.decision",
+          "FAIL"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "unknown_check",
+      "expect": "HOLD_UNKNOWN",
+      "set": [
+        [
+          "receipts.source.decision",
+          "UNKNOWN"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "unknown_auth",
+      "expect": "HOLD_AUTH",
+      "set": [
+        [
+          "authorized",
+          null
+        ]
+      ],
+      "remove": []
+    }
+  ],
+  "improvement": [
+    {
+      "id": "valid",
+      "expect": "ELIGIBLE_FOR_SEPARATE_RELEASE_DECISION",
+      "set": [],
+      "remove": []
+    },
+    {
+      "id": "missing_all_versions",
+      "expect": "HOLD_VERSION",
+      "set": [],
+      "remove": [
+        "protocol_version",
+        "evaluated_protocol",
+        "candidate_version",
+        "tested_version"
+      ]
+    },
+    {
+      "id": "null_protocol",
+      "expect": "HOLD_VERSION",
+      "set": [
+        [
+          "protocol_version",
+          null
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "empty_candidate",
+      "expect": "HOLD_VERSION",
+      "set": [
+        [
+          "candidate_version",
+          ""
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "wrong_protocol_id",
+      "expect": "HOLD_VERSION",
+      "set": [
+        [
+          "evaluated_protocol_id",
+          "other"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "stale_protocol",
+      "expect": "HOLD_VERSION",
+      "set": [
+        [
+          "current_protocol_version",
+          "v2"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "wrong_candidate_id",
+      "expect": "HOLD_VERSION",
+      "set": [
+        [
+          "tested_candidate_id",
+          "other"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "stale_candidate",
+      "expect": "HOLD_VERSION",
+      "set": [
+        [
+          "current_candidate_version",
+          "v3"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "withdrawal_missing",
+      "expect": "HOLD_WITHDRAWAL",
+      "set": [],
+      "remove": [
+        "withdrawn"
+      ]
+    },
+    {
+      "id": "withdrawal_null",
+      "expect": "HOLD_WITHDRAWAL",
+      "set": [
+        [
+          "withdrawn",
+          null
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "withdrawal_wrong_type",
+      "expect": "HOLD_WITHDRAWAL",
+      "set": [
+        [
+          "withdrawn",
+          0
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "withdrawal_priority",
+      "expect": "STOP_AND_REVIEW",
+      "set": [
+        [
+          "withdrawn",
+          true
+        ],
+        [
+          "authorized",
+          false
+        ],
+        [
+          "ethics",
+          "UNKNOWN"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "unknown_auth",
+      "expect": "HOLD_ETHICS_AUTH",
+      "set": [
+        [
+          "authorized",
+          null
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "no_ethics",
+      "expect": "HOLD_ETHICS_AUTH",
+      "set": [
+        [
+          "ethics",
+          "UNKNOWN"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "no_comparison",
+      "expect": "EXPLORATORY_ONLY",
+      "set": [
+        [
+          "comparison_appropriate",
+          false
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "safety_unknown",
+      "expect": "HOLD_OR_ROLLBACK",
+      "set": [
+        [
+          "safety_outcome",
+          "UNKNOWN"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "negative",
+      "expect": "KEEP_BASELINE",
+      "set": [
+        [
+          "outcome",
+          "NEGATIVE"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "inconclusive",
+      "expect": "HOLD_INCONCLUSIVE",
+      "set": [
+        [
+          "outcome",
+          "UNKNOWN"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "author_self_review",
+      "expect": "HOLD_REVIEW",
+      "set": [
+        [
+          "reviewer_id",
+          "author"
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "missing_review_receipt",
+      "expect": "HOLD_REVIEW",
+      "set": [],
+      "remove": [
+        "review_receipt_id"
+      ]
+    },
+    {
+      "id": "stale_review_binding",
+      "expect": "HOLD_REVIEW",
+      "set": [
+        [
+          "review_binding",
+          [
+            "p",
+            "v0",
+            "c",
+            "v2",
+            "ev"
+          ]
+        ]
+      ],
+      "remove": []
+    },
+    {
+      "id": "missing_approval_receipt",
+      "expect": "HOLD_APPROVAL",
+      "set": [],
+      "remove": [
+        "approval_receipt_id"
+      ]
+    },
+    {
+      "id": "wrong_approval_binding",
+      "expect": "HOLD_APPROVAL",
+      "set": [
+        [
+          "approval_binding",
+          [
+            "c",
+            "v1",
+            "rr"
+          ]
+        ]
+      ],
+      "remove": []
+    }
+  ]
+}

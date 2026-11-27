@@ -1,0 +1,838 @@
+{
+  "status": "BOUNDED_RESIDUAL_DISPOSITION_NOT_ADEQUACY_PASS",
+  "targeted": [
+    {
+      "topic": "K06.03.01",
+      "requirement": "K06.03.01.RQ01",
+      "scope": "提示类型、最小帮助和观测分离",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "提示类型",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K06.03.01.D4.01"
+          ],
+          "case_paths": [
+            "/design/flow/subflows/2",
+            "/cases/cases/0/diagnosis"
+          ],
+          "rationale": "原理论区分提示/部分代做；R3示范、角色问题、无提示为具体类型，不是完整分类。"
+        },
+        {
+          "facet": "最小帮助",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K06.03.01.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/1/diagnosis",
+            "/design/flow/subflows/2"
+          ],
+          "rationale": "按诊断渐撤；没有证据确认最小帮助阈值或不同提示的效果。"
+        },
+        {
+          "facet": "观测分离",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K06.03.01.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/observations/1",
+            "/cases/cases/0/observations/2"
+          ],
+          "rationale": "Z-E1 HINT与Z-E2 NONE分开，记录时点与不同题；仅合成。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K06.03.02",
+      "requirement": "K06.03.02.RQ01",
+      "scope": "任务复杂度、步骤粒度、组合检查",
+      "previous_decision": "APPLICATION_OR_SOURCE_ADEQUACY_HOLD",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "任务复杂度",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K06.03.02.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/1/components"
+          ],
+          "rationale": "原小步原则，数学例分单位、比较、理由；未测复杂度。"
+        },
+        {
+          "facet": "步骤粒度",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K06.03.02.D4.01"
+          ],
+          "case_paths": [
+            "/design/flow/subflows/2"
+          ],
+          "rationale": "三阶段支架，不证明最佳粒度。"
+        },
+        {
+          "facet": "组合检查",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K06.03.02.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/1/rubric",
+            "/cases/cases/1/observations/2"
+          ],
+          "rationale": "独立M2要求比较与理由，分别计分；整体能力外推待核。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K06.03.03",
+      "requirement": "K06.03.03.RQ01",
+      "scope": "独立表现、错误和支架逐级调整",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "独立表现",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K06.03.03.D4.01",
+            "K06.03.03.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/observations/2",
+            "/cases/cases/1/observations/2"
+          ],
+          "rationale": "Z2/M2独立响应，渐撤不直接推掌握。"
+        },
+        {
+          "facet": "错误",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K06.03.03.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/diagnosis",
+            "/cases/cases/1/diagnosis"
+          ],
+          "rationale": "错误保留并进入区分性探查。"
+        },
+        {
+          "facet": "支架逐级调整",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K06.03.03.D4.01"
+          ],
+          "case_paths": [
+            "/design/flow/subflows/2"
+          ],
+          "rationale": "示范→最小提示→独立，实际阈值与有效性未验证。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K06.03.04",
+      "requirement": "K06.03.04.RQ01",
+      "scope": "无帮助条件、任务变式和评分",
+      "previous_decision": "APPLICATION_OR_SOURCE_ADEQUACY_HOLD",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "无帮助条件",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K06.03.04.D4.01",
+            "K06.03.04.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/observations/2",
+            "/cases/cases/1/observations/2"
+          ],
+          "rationale": "NONE为合成声明，区别辅助，不是实际身份核证。"
+        },
+        {
+          "facet": "任务变式",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K06.03.04.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/tasks/2",
+            "/cases/cases/0/tasks/3",
+            "/cases/cases/1/tasks/2",
+            "/cases/cases/1/tasks/3"
+          ],
+          "rationale": "有新题面及可比特征，未独立校准难度。"
+        },
+        {
+          "facet": "评分",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K06.03.04.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/rubric",
+            "/cases/cases/1/rubric",
+            "/r5/reason_contract"
+          ],
+          "rationale": "具体分维度，数学有限理由判定；一般表达需人工。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K09.01.01",
+      "requirement": "K09.01.01.RQ01",
+      "scope": "构念边界、维度、使用目的、可观察指标",
+      "previous_decision": "TARGETED_SUPPLEMENT_PENDING_REVIEW",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "构念边界",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.01.D4.01",
+            "K09.01.01.R2.07"
+          ],
+          "case_paths": [
+            "/cases/cases/0/construct",
+            "/cases/cases/1/construct"
+          ],
+          "rationale": "交易书面词义与正分数比较不同构念。"
+        },
+        {
+          "facet": "维度",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.01.R2.07"
+          ],
+          "case_paths": [
+            "/cases/cases/0/rubric",
+            "/cases/cases/1/rubric"
+          ],
+          "rationale": "各量规分别定义维度，不合并。"
+        },
+        {
+          "facet": "使用目的",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.01.R2.07"
+          ],
+          "case_paths": [
+            "/cases/cases/0/goal",
+            "/cases/cases/1/goal"
+          ],
+          "rationale": "受控教学诊断，不为等级资格。"
+        },
+        {
+          "facet": "可观察指标",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K09.01.01.R2.07"
+          ],
+          "case_paths": [
+            "/cases/cases/0/observations",
+            "/cases/cases/1/observations"
+          ],
+          "rationale": "有合成响应与量规，实际效度未知。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K09.01.02",
+      "requirement": "K09.01.02.RQ01",
+      "scope": "能力主张、证据模型、任务模型的映射及替代解释",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "能力主张",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.02.D4.01",
+            "K09.01.02.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/construct",
+            "/cases/cases/1/construct"
+          ],
+          "rationale": "限定两个构念，先明确主张。"
+        },
+        {
+          "facet": "证据模型",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K09.01.02.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/rubric",
+            "/cases/cases/1/rubric",
+            "/r5/reason_contract"
+          ],
+          "rationale": "有评分规则，未建正式ECD推断模型。"
+        },
+        {
+          "facet": "任务模型的映射",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K09.01.02.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/tasks",
+            "/cases/cases/1/tasks"
+          ],
+          "rationale": "有实际任务目录和构念标识，未核完整ECD任务模型。"
+        },
+        {
+          "facet": "替代解释",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.02.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/diagnosis",
+            "/cases/cases/1/diagnosis"
+          ],
+          "rationale": "角色/词义与单位/计算等竞争解释，不排除未观察原因。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K09.01.03",
+      "requirement": "K09.01.03.RQ01",
+      "scope": "任务要求、观测条件、独立性及证据充分性",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "任务要求",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.03.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/tasks",
+            "/cases/cases/1/tasks"
+          ],
+          "rationale": "任务要求角色/词义及分数比较/理由。"
+        },
+        {
+          "facet": "观测条件",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.03.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/observations",
+            "/cases/cases/1/observations"
+          ],
+          "rationale": "记录题面、条件、时间、响应。"
+        },
+        {
+          "facet": "独立性",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K09.01.03.D4.01",
+            "K09.01.03.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/accessibility",
+            "/cases/cases/1/accessibility",
+            "/r5/history_contract"
+          ],
+          "rationale": "辅助与合理便利区分；真实行为归属未核。"
+        },
+        {
+          "facet": "证据充分性",
+          "status": "HOLD",
+          "claim_refs": [
+            "K09.01.03.D4.01"
+          ],
+          "case_paths": [
+            "/cases/policy/knowledge_outcome"
+          ],
+          "rationale": "不能以两条合成实例推断真实充分性或一般掌握。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K09.01.04",
+      "requirement": "K09.01.04.RQ01",
+      "scope": "得分函数、允许答案、部分分、缺失及异常",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "得分函数",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.04.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/rubric",
+            "/cases/cases/1/rubric",
+            "/r5/reason_contract"
+          ],
+          "rationale": "角色/词义、关系/理由分维度。"
+        },
+        {
+          "facet": "允许答案",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K09.01.04.D4.01"
+          ],
+          "case_paths": [
+            "/r5/reason_contract"
+          ],
+          "rationale": "两个受控数学方法及人工复核；完整开放答题规则未形成。"
+        },
+        {
+          "facet": "部分分",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.04.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/observations/0",
+            "/r5/reason_contract"
+          ],
+          "rationale": "数值正确与理由错误分别记录。"
+        },
+        {
+          "facet": "缺失及异常",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K09.01.04.D4.01",
+            "K09.01.04.D4.02"
+          ],
+          "case_paths": [
+            "/cases/history_cases",
+            "/r5/history_contract"
+          ],
+          "rationale": "缺失、歧义与错误不同；异常冲突保留。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K12.03.02",
+      "requirement": "K12.03.02.RQ01",
+      "scope": "语言负荷、组件复杂度、任务情境及校准",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "语言负荷",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K12.03.02.D4.01",
+            "K12.03.02.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/tasks",
+            "/cases/cases/0/accessibility"
+          ],
+          "rationale": "不同句子理解、文字/听辨边界可辨；语言负荷未测量，不只用字数。"
+        },
+        {
+          "facet": "组件复杂度",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K12.03.02.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/1/components",
+            "/cases/cases/1/rubric"
+          ],
+          "rationale": "单位、比较、理由的组合可明示；没有校准复杂度。"
+        },
+        {
+          "facet": "任务情境",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K12.03.02.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/1/transfer",
+            "/cases/cases/0/transfer"
+          ],
+          "rationale": "符号与量杯、教材与二手市场变化分开记录，不声称等难。"
+        },
+        {
+          "facet": "校准",
+          "status": "HOLD",
+          "claim_refs": [
+            "K12.03.02.D4.01",
+            "K12.03.02.D4.02"
+          ],
+          "case_paths": [],
+          "rationale": "缺真实试测样本、参数和不确定性；不从候选特征生成难度值。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K12.03.03",
+      "requirement": "K12.03.03.RQ01",
+      "scope": "分层提示、最小帮助、答案泄漏与日志",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "分层提示",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K12.03.03.D4.01"
+          ],
+          "case_paths": [
+            "/design/flow/subflows/2"
+          ],
+          "rationale": "示范、最小提示、独立的候选层次。"
+        },
+        {
+          "facet": "最小帮助",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K12.03.03.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/0/diagnosis",
+            "/cases/cases/1/diagnosis"
+          ],
+          "rationale": "具体提示，但最小阈值未验证。"
+        },
+        {
+          "facet": "答案泄漏",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K12.03.03.D4.02"
+          ],
+          "case_paths": [
+            "/cases/policy",
+            "/r5/history_contract"
+          ],
+          "rationale": "显式目标预览及冲突阻断；未知语义近重复未解决。"
+        },
+        {
+          "facet": "日志",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K12.03.03.D4.02"
+          ],
+          "case_paths": [
+            "/cases/cases/0/observations",
+            "/cases/cases/1/exposure_log"
+          ],
+          "rationale": "辅助、响应、时间及暴露分记，非真实日志系统。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K12.03.04",
+      "requirement": "K12.03.04.RQ01",
+      "scope": "精确、多解、等价、容差及人工复核",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "精确",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K12.03.04.D4.01",
+            "K12.03.04.D4.02"
+          ],
+          "case_paths": [
+            "/r5/reason_contract"
+          ],
+          "rationale": "正分数关系用有理数及交叉乘积精确核算；不以理由关键词评分。"
+        },
+        {
+          "facet": "多解",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K12.03.04.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/1/diagnosis",
+            "/r5/reason_contract"
+          ],
+          "rationale": "通分/交叉乘积两合法方法；数轴等开放解留人工。"
+        },
+        {
+          "facet": "等价",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K12.03.04.D4.02"
+          ],
+          "case_paths": [
+            "/r5/reason_contract"
+          ],
+          "rationale": "Fraction验证同分母变换保持原分数，允许非最小公分母。"
+        },
+        {
+          "facet": "容差",
+          "status": "HOLD",
+          "claim_refs": [
+            "K12.03.04.D4.01"
+          ],
+          "case_paths": [],
+          "rationale": "此例有理数精确，不设计任意近似容差；其他测量任务须定义量尺、精度及允许误差。"
+        },
+        {
+          "facet": "人工复核",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K12.03.04.D4.02"
+          ],
+          "case_paths": [
+            "/r5/reason_contract"
+          ],
+          "rationale": "未知理由HOLD，不自动判错或对；真实人工流程未执行。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    },
+    {
+      "topic": "K12.05.04",
+      "requirement": "K12.05.04.RQ01",
+      "scope": "目标难度、候选特征、试测和校准",
+      "previous_decision": "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION",
+      "decision": "REQUIREMENT_FACETS_CANDIDATE_PARTIAL_OR_HOLD",
+      "facets": [
+        {
+          "facet": "目标难度",
+          "status": "PARTIAL",
+          "claim_refs": [
+            "K12.05.04.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/1/rubric"
+          ],
+          "rationale": "仅目标特征及量规，不设校准难度值。"
+        },
+        {
+          "facet": "候选特征",
+          "status": "CANDIDATE_EXAMPLE",
+          "claim_refs": [
+            "K12.05.04.D4.01"
+          ],
+          "case_paths": [
+            "/cases/cases/1/tasks"
+          ],
+          "rationale": "同单位、正分数等特征，标签非参数。"
+        },
+        {
+          "facet": "试测和校准",
+          "status": "HOLD",
+          "claim_refs": [
+            "K12.05.04.D4.01",
+            "K12.05.04.D4.02"
+          ],
+          "case_paths": [],
+          "rationale": "无真实样本、模型拟合或误差；保持未校准。"
+        }
+      ],
+      "qualification": "NOT_RUN"
+    }
+  ],
+  "unchanged_other_rows": {
+    "targeted_supplement": 26,
+    "policy_or_professional_hold": 22,
+    "application_or_source_hold": 90,
+    "note": "Targeted facet review also annotates two prior HOLD and one prior supplement; prior counts preserved, not additional topics."
+  },
+  "rule": "Historic R2 triage remains immutable. Generic retention is not professional adequacy completed; no automatic sufficiency, no new claims or qualification. Remaining 90/22 and generic pending are downstream work; specific partial/HOLD above likewise remain.",
+  "retention_pending_adequacy": [
+    {"topic":"K01.02.01","requirement":"K01.02.01.RQ01","original_claim_refs":["K01.02.01.D4.01","K01.02.01.D4.02","K01.02.01.D4.03","K01.02.01.D4.04"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.02.02","requirement":"K01.02.02.RQ01","original_claim_refs":["K01.02.02.D4.01","K01.02.02.D4.02","K01.02.02.D4.03","K01.02.02.D4.04","K01.02.02.D4.05"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.02.03","requirement":"K01.02.03.RQ01","original_claim_refs":["K01.02.03.D4.01","K01.02.03.D4.02","K01.02.03.D4.03","K01.02.03.D4.04","K01.02.03.D4.05","K01.02.03.D4.06"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.02.04","requirement":"K01.02.04.RQ01","original_claim_refs":["K01.02.04.D4.01","K01.02.04.D4.02","K01.02.04.D4.03","K01.02.04.D4.04","K01.02.04.D4.05","K01.02.04.D4.06"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.03.01","requirement":"K01.03.01.RQ01","original_claim_refs":["K01.03.01.D4.01","K01.03.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.03.02","requirement":"K01.03.02.RQ01","original_claim_refs":["K01.03.02.D4.01","K01.03.02.D4.02","K01.03.02.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.03.03","requirement":"K01.03.03.RQ01","original_claim_refs":["K01.03.03.D4.01","K01.03.03.D4.02","K01.03.03.D4.03","K01.03.03.D4.04"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.04.02","requirement":"K01.04.02.RQ01","original_claim_refs":["K01.04.02.D4.01","K01.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.04.03","requirement":"K01.04.03.RQ01","original_claim_refs":["K01.04.03.D4.01","K01.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.04.04","requirement":"K01.04.04.RQ01","original_claim_refs":["K01.04.04.D4.01","K01.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.05.01","requirement":"K01.05.01.RQ01","original_claim_refs":["K01.05.01.D4.01","K01.05.01.D4.02","K01.05.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.05.02","requirement":"K01.05.02.RQ01","original_claim_refs":["K01.05.02.D4.01","K01.05.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.05.03","requirement":"K01.05.03.RQ01","original_claim_refs":["K01.05.03.D4.01","K01.05.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K01.05.04","requirement":"K01.05.04.RQ01","original_claim_refs":["K01.05.04.D4.01","K01.05.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.01.01","requirement":"K02.01.01.RQ01","original_claim_refs":["K02.01.01.D4.01","K02.01.01.D4.02","K02.01.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.01.03","requirement":"K02.01.03.RQ01","original_claim_refs":["K02.01.03.D4.01","K02.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.02.01","requirement":"K02.02.01.RQ01","original_claim_refs":["K02.02.01.D4.01","K02.02.01.D4.02","K02.02.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.02.02","requirement":"K02.02.02.RQ01","original_claim_refs":["K02.02.02.D4.01","K02.02.02.D4.02","K02.02.02.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.03.01","requirement":"K02.03.01.RQ01","original_claim_refs":["K02.03.01.D4.01","K02.03.01.D4.02","K02.03.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.03.02","requirement":"K02.03.02.RQ01","original_claim_refs":["K02.03.02.D4.01","K02.03.02.D4.02","K02.03.02.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.03.03","requirement":"K02.03.03.RQ01","original_claim_refs":["K02.03.03.D4.01","K02.03.03.D4.02","K02.03.03.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.03.04","requirement":"K02.03.04.RQ01","original_claim_refs":["K02.03.04.D4.01","K02.03.04.D4.02","K02.03.04.D4.03","K02.03.04.D4.04"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.04.01","requirement":"K02.04.01.RQ01","original_claim_refs":["K02.04.01.D4.01","K02.04.01.D4.02","K02.04.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.04.02","requirement":"K02.04.02.RQ01","original_claim_refs":["K02.04.02.D4.01","K02.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.04.03","requirement":"K02.04.03.RQ01","original_claim_refs":["K02.04.03.D4.01","K02.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.04.04","requirement":"K02.04.04.RQ01","original_claim_refs":["K02.04.04.D4.01","K02.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.05.01","requirement":"K02.05.01.RQ01","original_claim_refs":["K02.05.01.D4.01","K02.05.01.D4.02","K02.05.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.05.02","requirement":"K02.05.02.RQ01","original_claim_refs":["K02.05.02.D4.01","K02.05.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.05.03","requirement":"K02.05.03.RQ01","original_claim_refs":["K02.05.03.D4.01","K02.05.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.05.04","requirement":"K02.05.04.RQ01","original_claim_refs":["K02.05.04.D4.01","K02.05.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.06.01","requirement":"K02.06.01.RQ01","original_claim_refs":["K02.06.01.D4.01","K02.06.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.06.02","requirement":"K02.06.02.RQ01","original_claim_refs":["K02.06.02.D4.01","K02.06.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.06.03","requirement":"K02.06.03.RQ01","original_claim_refs":["K02.06.03.D4.01","K02.06.03.D4.02","K02.06.03.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.06.04","requirement":"K02.06.04.RQ01","original_claim_refs":["K02.06.04.D4.01","K02.06.04.D4.02","K02.06.04.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.06.05","requirement":"K02.06.05.RQ01","original_claim_refs":["K02.06.05.D4.01","K02.06.05.D4.02","K02.06.05.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.07.01","requirement":"K02.07.01.RQ01","original_claim_refs":["K02.07.01.D4.01","K02.07.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.07.02","requirement":"K02.07.02.RQ01","original_claim_refs":["K02.07.02.D4.01","K02.07.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.07.03","requirement":"K02.07.03.RQ01","original_claim_refs":["K02.07.03.D4.01","K02.07.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K02.07.04","requirement":"K02.07.04.RQ01","original_claim_refs":["K02.07.04.D4.01","K02.07.04.D4.02","K02.07.04.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.01.01","requirement":"K03.01.01.RQ01","original_claim_refs":["K03.01.01.D4.01","K03.01.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.01.02","requirement":"K03.01.02.RQ01","original_claim_refs":["K03.01.02.D4.01","K03.01.02.D4.02","K03.01.02.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.01.03","requirement":"K03.01.03.RQ01","original_claim_refs":["K03.01.03.D4.01","K03.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.01.04","requirement":"K03.01.04.RQ01","original_claim_refs":["K03.01.04.D4.01","K03.01.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.02.01","requirement":"K03.02.01.RQ01","original_claim_refs":["K03.02.01.D4.01","K03.02.01.D4.02","K03.02.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.02.02","requirement":"K03.02.02.RQ01","original_claim_refs":["K03.02.02.D4.01","K03.02.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.02.03","requirement":"K03.02.03.RQ01","original_claim_refs":["K03.02.03.D4.01","K03.02.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.02.04","requirement":"K03.02.04.RQ01","original_claim_refs":["K03.02.04.D4.01","K03.02.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.03.03","requirement":"K03.03.03.RQ01","original_claim_refs":["K03.03.03.D4.01","K03.03.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.03.04","requirement":"K03.03.04.RQ01","original_claim_refs":["K03.03.04.D4.01","K03.03.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.03.05","requirement":"K03.03.05.RQ01","original_claim_refs":["K03.03.05.D4.01","K03.03.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.04.01","requirement":"K03.04.01.RQ01","original_claim_refs":["K03.04.01.D4.01","K03.04.01.D4.02","K03.04.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.04.02","requirement":"K03.04.02.RQ01","original_claim_refs":["K03.04.02.D4.01","K03.04.02.D4.02","K03.04.02.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.04.03","requirement":"K03.04.03.RQ01","original_claim_refs":["K03.04.03.D4.01","K03.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.04.04","requirement":"K03.04.04.RQ01","original_claim_refs":["K03.04.04.D4.01","K03.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.05.01","requirement":"K03.05.01.RQ01","original_claim_refs":["K03.05.01.D4.01","K03.05.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.05.02","requirement":"K03.05.02.RQ01","original_claim_refs":["K03.05.02.D4.01","K03.05.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.05.03","requirement":"K03.05.03.RQ01","original_claim_refs":["K03.05.03.D4.01","K03.05.03.D4.02","K03.05.03.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K03.05.04","requirement":"K03.05.04.RQ01","original_claim_refs":["K03.05.04.D4.01","K03.05.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.01.01","requirement":"K04.01.01.RQ01","original_claim_refs":["K04.01.01.D4.01","K04.01.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.01.02","requirement":"K04.01.02.RQ01","original_claim_refs":["K04.01.02.D4.01","K04.01.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.01.03","requirement":"K04.01.03.RQ01","original_claim_refs":["K04.01.03.D4.01","K04.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.01.04","requirement":"K04.01.04.RQ01","original_claim_refs":["K04.01.04.D4.01","K04.01.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.02.01","requirement":"K04.02.01.RQ01","original_claim_refs":["K04.02.01.D4.01","K04.02.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.02.03","requirement":"K04.02.03.RQ01","original_claim_refs":["K04.02.03.D4.01","K04.02.03.D4.02","K04.02.03.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.02.04","requirement":"K04.02.04.RQ01","original_claim_refs":["K04.02.04.D4.01","K04.02.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.03.01","requirement":"K04.03.01.RQ01","original_claim_refs":["K04.03.01.D4.01","K04.03.01.D4.02","K04.03.01.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.03.02","requirement":"K04.03.02.RQ01","original_claim_refs":["K04.03.02.D4.01","K04.03.02.D4.02","K04.03.02.D4.03"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.03.03","requirement":"K04.03.03.RQ01","original_claim_refs":["K04.03.03.D4.01","K04.03.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.03.04","requirement":"K04.03.04.RQ01","original_claim_refs":["K04.03.04.D4.01","K04.03.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.04.01","requirement":"K04.04.01.RQ01","original_claim_refs":["K04.04.01.D4.01","K04.04.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.04.02","requirement":"K04.04.02.RQ01","original_claim_refs":["K04.04.02.D4.01","K04.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.04.03","requirement":"K04.04.03.RQ01","original_claim_refs":["K04.04.03.D4.01","K04.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.05.01","requirement":"K04.05.01.RQ01","original_claim_refs":["K04.05.01.D4.01","K04.05.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.05.02","requirement":"K04.05.02.RQ01","original_claim_refs":["K04.05.02.D4.01","K04.05.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.05.03","requirement":"K04.05.03.RQ01","original_claim_refs":["K04.05.03.D4.01","K04.05.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.05.04","requirement":"K04.05.04.RQ01","original_claim_refs":["K04.05.04.D4.01","K04.05.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.06.01","requirement":"K04.06.01.RQ01","original_claim_refs":["K04.06.01.D4.01","K04.06.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.06.02","requirement":"K04.06.02.RQ01","original_claim_refs":["K04.06.02.D4.01","K04.06.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K04.06.04","requirement":"K04.06.04.RQ01","original_claim_refs":["K04.06.04.D4.01","K04.06.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K05.02.01","requirement":"K05.02.01.RQ01","original_claim_refs":["K05.02.01.D4.01","K05.02.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K05.03.02","requirement":"K05.03.02.RQ01","original_claim_refs":["K05.03.02.D4.01","K05.03.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K05.03.03","requirement":"K05.03.03.RQ01","original_claim_refs":["K05.03.03.D4.01","K05.03.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K05.03.04","requirement":"K05.03.04.RQ01","original_claim_refs":["K05.03.04.D4.01","K05.03.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K05.04.02","requirement":"K05.04.02.RQ01","original_claim_refs":["K05.04.02.D4.01","K05.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K05.05.03","requirement":"K05.05.03.RQ01","original_claim_refs":["K05.05.03.D4.01","K05.05.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K05.06.01","requirement":"K05.06.01.RQ01","original_claim_refs":["K05.06.01.D4.01","K05.06.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.01.02","requirement":"K06.01.02.RQ01","original_claim_refs":["K06.01.02.D4.01","K06.01.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.01.03","requirement":"K06.01.03.RQ01","original_claim_refs":["K06.01.03.D4.01","K06.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.02.02","requirement":"K06.02.02.RQ01","original_claim_refs":["K06.02.02.D4.01","K06.02.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.02.04","requirement":"K06.02.04.RQ01","original_claim_refs":["K06.02.04.D4.01","K06.02.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.04.01","requirement":"K06.04.01.RQ01","original_claim_refs":["K06.04.01.D4.01","K06.04.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.04.04","requirement":"K06.04.04.RQ01","original_claim_refs":["K06.04.04.D4.01","K06.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.05.01","requirement":"K06.05.01.RQ01","original_claim_refs":["K06.05.01.D4.01","K06.05.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.05.02","requirement":"K06.05.02.RQ01","original_claim_refs":["K06.05.02.D4.01","K06.05.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.05.03","requirement":"K06.05.03.RQ01","original_claim_refs":["K06.05.03.D4.01","K06.05.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.05.04","requirement":"K06.05.04.RQ01","original_claim_refs":["K06.05.04.D4.01","K06.05.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.06.01","requirement":"K06.06.01.RQ01","original_claim_refs":["K06.06.01.D4.01","K06.06.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.06.02","requirement":"K06.06.02.RQ01","original_claim_refs":["K06.06.02.D4.01","K06.06.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.06.04","requirement":"K06.06.04.RQ01","original_claim_refs":["K06.06.04.D4.01","K06.06.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.07.01","requirement":"K06.07.01.RQ01","original_claim_refs":["K06.07.01.D4.01","K06.07.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.07.02","requirement":"K06.07.02.RQ01","original_claim_refs":["K06.07.02.D4.01","K06.07.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K06.07.04","requirement":"K06.07.04.RQ01","original_claim_refs":["K06.07.04.D4.01","K06.07.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.01.03","requirement":"K07.01.03.RQ01","original_claim_refs":["K07.01.03.D4.01","K07.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.01.04","requirement":"K07.01.04.RQ01","original_claim_refs":["K07.01.04.D4.01","K07.01.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.02.01","requirement":"K07.02.01.RQ01","original_claim_refs":["K07.02.01.D4.01","K07.02.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.02.02","requirement":"K07.02.02.RQ01","original_claim_refs":["K07.02.02.D4.01","K07.02.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.02.03","requirement":"K07.02.03.RQ01","original_claim_refs":["K07.02.03.D4.01","K07.02.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.02.05","requirement":"K07.02.05.RQ01","original_claim_refs":["K07.02.05.D4.01","K07.02.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.03.01","requirement":"K07.03.01.RQ01","original_claim_refs":["K07.03.01.D4.01","K07.03.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.03.03","requirement":"K07.03.03.RQ01","original_claim_refs":["K07.03.03.D4.01","K07.03.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.03.04","requirement":"K07.03.04.RQ01","original_claim_refs":["K07.03.04.D4.01","K07.03.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.04.03","requirement":"K07.04.03.RQ01","original_claim_refs":["K07.04.03.D4.01","K07.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.04.04","requirement":"K07.04.04.RQ01","original_claim_refs":["K07.04.04.D4.01","K07.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K07.05.04","requirement":"K07.05.04.RQ01","original_claim_refs":["K07.05.04.D4.01","K07.05.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.01.01","requirement":"K08.01.01.RQ01","original_claim_refs":["K08.01.01.D4.01","K08.01.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.01.03","requirement":"K08.01.03.RQ01","original_claim_refs":["K08.01.03.D4.01","K08.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.02.02","requirement":"K08.02.02.RQ01","original_claim_refs":["K08.02.02.D4.01","K08.02.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.02.03","requirement":"K08.02.03.RQ01","original_claim_refs":["K08.02.03.D4.01","K08.02.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.02.04","requirement":"K08.02.04.RQ01","original_claim_refs":["K08.02.04.D4.01","K08.02.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.02.05","requirement":"K08.02.05.RQ01","original_claim_refs":["K08.02.05.D4.01","K08.02.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.03.02","requirement":"K08.03.02.RQ01","original_claim_refs":["K08.03.02.D4.01","K08.03.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.03.04","requirement":"K08.03.04.RQ01","original_claim_refs":["K08.03.04.D4.01","K08.03.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.04.02","requirement":"K08.04.02.RQ01","original_claim_refs":["K08.04.02.D4.01","K08.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.04.03","requirement":"K08.04.03.RQ01","original_claim_refs":["K08.04.03.D4.01","K08.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.04.04","requirement":"K08.04.04.RQ01","original_claim_refs":["K08.04.04.D4.01","K08.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.05.03","requirement":"K08.05.03.RQ01","original_claim_refs":["K08.05.03.D4.01","K08.05.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.05.04","requirement":"K08.05.04.RQ01","original_claim_refs":["K08.05.04.D4.01","K08.05.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.05.05","requirement":"K08.05.05.RQ01","original_claim_refs":["K08.05.05.D4.01","K08.05.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K08.06.03","requirement":"K08.06.03.RQ01","original_claim_refs":["K08.06.03.D4.01","K08.06.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K09.04.02","requirement":"K09.04.02.RQ01","original_claim_refs":["K09.04.02.D4.01","K09.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K09.04.03","requirement":"K09.04.03.RQ01","original_claim_refs":["K09.04.03.D4.01","K09.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K09.04.04","requirement":"K09.04.04.RQ01","original_claim_refs":["K09.04.04.D4.01","K09.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K09.06.04","requirement":"K09.06.04.RQ01","original_claim_refs":["K09.06.04.D4.01","K09.06.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K09.07.01","requirement":"K09.07.01.RQ01","original_claim_refs":["K09.07.01.D4.01","K09.07.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.01.02","requirement":"K10.01.02.RQ01","original_claim_refs":["K10.01.02.D4.01","K10.01.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.01.03","requirement":"K10.01.03.RQ01","original_claim_refs":["K10.01.03.D4.01","K10.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.01.04","requirement":"K10.01.04.RQ01","original_claim_refs":["K10.01.04.D4.01","K10.01.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.01.05","requirement":"K10.01.05.RQ01","original_claim_refs":["K10.01.05.D4.01","K10.01.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.02.01","requirement":"K10.02.01.RQ01","original_claim_refs":["K10.02.01.D4.01","K10.02.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.02.02","requirement":"K10.02.02.RQ01","original_claim_refs":["K10.02.02.D4.01","K10.02.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.02.03","requirement":"K10.02.03.RQ01","original_claim_refs":["K10.02.03.D4.01","K10.02.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.02.04","requirement":"K10.02.04.RQ01","original_claim_refs":["K10.02.04.D4.01","K10.02.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.03.01","requirement":"K10.03.01.RQ01","original_claim_refs":["K10.03.01.D4.01","K10.03.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.03.02","requirement":"K10.03.02.RQ01","original_claim_refs":["K10.03.02.D4.01","K10.03.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.03.03","requirement":"K10.03.03.RQ01","original_claim_refs":["K10.03.03.D4.01","K10.03.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.03.04","requirement":"K10.03.04.RQ01","original_claim_refs":["K10.03.04.D4.01","K10.03.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.03.05","requirement":"K10.03.05.RQ01","original_claim_refs":["K10.03.05.D4.01","K10.03.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.04.01","requirement":"K10.04.01.RQ01","original_claim_refs":["K10.04.01.D4.01","K10.04.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.04.02","requirement":"K10.04.02.RQ01","original_claim_refs":["K10.04.02.D4.01","K10.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.04.03","requirement":"K10.04.03.RQ01","original_claim_refs":["K10.04.03.D4.01","K10.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.04.04","requirement":"K10.04.04.RQ01","original_claim_refs":["K10.04.04.D4.01","K10.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.05.01","requirement":"K10.05.01.RQ01","original_claim_refs":["K10.05.01.D4.01","K10.05.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.05.02","requirement":"K10.05.02.RQ01","original_claim_refs":["K10.05.02.D4.01","K10.05.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.06.03","requirement":"K10.06.03.RQ01","original_claim_refs":["K10.06.03.D4.01","K10.06.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K10.06.06","requirement":"K10.06.06.RQ01","original_claim_refs":["K10.06.06.D4.01","K10.06.06.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.01.04","requirement":"K11.01.04.RQ01","original_claim_refs":["K11.01.04.D4.01","K11.01.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.01.05","requirement":"K11.01.05.RQ01","original_claim_refs":["K11.01.05.D4.01","K11.01.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.01.06","requirement":"K11.01.06.RQ01","original_claim_refs":["K11.01.06.D4.01","K11.01.06.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.02.02","requirement":"K11.02.02.RQ01","original_claim_refs":["K11.02.02.D4.01","K11.02.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.03.01","requirement":"K11.03.01.RQ01","original_claim_refs":["K11.03.01.D4.01","K11.03.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.03.03","requirement":"K11.03.03.RQ01","original_claim_refs":["K11.03.03.D4.01","K11.03.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.03.04","requirement":"K11.03.04.RQ01","original_claim_refs":["K11.03.04.D4.01","K11.03.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.04.01","requirement":"K11.04.01.RQ01","original_claim_refs":["K11.04.01.D4.01","K11.04.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.04.02","requirement":"K11.04.02.RQ01","original_claim_refs":["K11.04.02.D4.01","K11.04.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.04.03","requirement":"K11.04.03.RQ01","original_claim_refs":["K11.04.03.D4.01","K11.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.04.04","requirement":"K11.04.04.RQ01","original_claim_refs":["K11.04.04.D4.01","K11.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.04.05","requirement":"K11.04.05.RQ01","original_claim_refs":["K11.04.05.D4.01","K11.04.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K11.06.01","requirement":"K11.06.01.RQ01","original_claim_refs":["K11.06.01.D4.01","K11.06.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.01.03","requirement":"K12.01.03.RQ01","original_claim_refs":["K12.01.03.D4.01","K12.01.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.01.04","requirement":"K12.01.04.RQ01","original_claim_refs":["K12.01.04.D4.01","K12.01.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.02.02","requirement":"K12.02.02.RQ01","original_claim_refs":["K12.02.02.D4.01","K12.02.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.02.03","requirement":"K12.02.03.RQ01","original_claim_refs":["K12.02.03.D4.01","K12.02.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.02.05","requirement":"K12.02.05.RQ01","original_claim_refs":["K12.02.05.D4.01","K12.02.05.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.03.01","requirement":"K12.03.01.RQ01","original_claim_refs":["K12.03.01.D4.01","K12.03.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.04.03","requirement":"K12.04.03.RQ01","original_claim_refs":["K12.04.03.D4.01","K12.04.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.04.04","requirement":"K12.04.04.RQ01","original_claim_refs":["K12.04.04.D4.01","K12.04.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.05.01","requirement":"K12.05.01.RQ01","original_claim_refs":["K12.05.01.D4.01","K12.05.01.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.05.03","requirement":"K12.05.03.RQ01","original_claim_refs":["K12.05.03.D4.01","K12.05.03.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.06.02","requirement":"K12.06.02.RQ01","original_claim_refs":["K12.06.02.D4.01","K12.06.02.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"},
+    {"topic":"K12.06.04","requirement":"K12.06.04.RQ01","original_claim_refs":["K12.06.04.D4.01","K12.06.04.D4.02"],"decision":"RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED","qualification":"NOT_RUN"}
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "P01-keyboard",
+    "rule": "D3-P01",
+    "input": {
+      "observed_channel": "KEYBOARD",
+      "ordered_trace": [
+        1,
+        2
+      ],
+      "independent": true
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P01-image",
+    "rule": "D3-P01",
+    "input": {
+      "observed_channel": "HANDWRITING",
+      "independent": true
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P01-assisted",
+    "rule": "D3-P01",
+    "input": {
+      "observed_channel": "HANDWRITING",
+      "ordered_trace": [
+        1,
+        2
+      ],
+      "independent": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P01-trace",
+    "rule": "D3-P01",
+    "input": {
+      "observed_channel": "HANDWRITING",
+      "ordered_trace": [
+        1,
+        2
+      ],
+      "independent": true
+    },
+    "expected": "ELIGIBLE_FOR_SCORING"
+  },
+  {
+    "id": "P02-sim",
+    "rule": "D3-P02",
+    "input": {
+      "observed_channel": "SIMULATION",
+      "external_receipt": true
+    },
+    "expected": "SIMULATION_ONLY"
+  },
+  {
+    "id": "P02-missing",
+    "rule": "D3-P02",
+    "input": {
+      "observed_channel": "REAL",
+      "external_receipt": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P02-external",
+    "rule": "D3-P02",
+    "input": {
+      "observed_channel": "REAL",
+      "external_receipt": true
+    },
+    "expected": "EXTERNAL_RESULT_PRESENT"
+  },
+  {
+    "id": "P02-unknown",
+    "rule": "D3-P02",
+    "input": {
+      "external_receipt": true
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P03-ambiguous",
+    "rule": "D3-P03",
+    "input": {
+      "utterance": "你能过来吗",
+      "context_known": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P03-identity",
+    "rule": "D3-P03",
+    "input": {
+      "utterance": "谢谢",
+      "identity_label": "group-A",
+      "context_known": true
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P03-empty",
+    "rule": "D3-P03",
+    "input": {
+      "context_known": true,
+      "stated_intent": " "
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "P03-stated",
+    "rule": "D3-P03",
+    "input": {
+      "context_known": true,
+      "stated_intent": "邀请"
+    },
+    "expected": "STATED_INTENT_ONLY"
+  }
+]

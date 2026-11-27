@@ -1,0 +1,1154 @@
+{
+  "status": "BUILDER_SYNTHETIC_ONLY",
+  "base": "64d0dcde8b1c073ecadeb0ac857f7277d3759eb2",
+  "independent_oracle": false,
+  "qualification": "NOT_RUN",
+  "limits": "人工构造的数值、已知正态分位数参考值及明确的教学策略守卫；闭环采用固定算术任务、人工给定角色/时距/提示条件、合成答题，不是实际学习者、完整知识推理器或D3验收。transfer仅改变数值与标记条件，未证明跨情境真实迁移。预算为抽象单位；明确退出与授权优先；不估计心理状态。",
+  "cases": [
+    {
+      "id": "D2-B05-SYN-01",
+      "claim_refs": [
+        "K02.01.02.D4.05",
+        "K02.01.02.D4.06"
+      ],
+      "input": {
+        "mode": "sdt",
+        "hit": 8,
+        "miss": 2,
+        "fa": 2,
+        "cr": 8,
+        "policy": "reject"
+      },
+      "expected": {
+        "dprime": 1.6832424671458286,
+        "criterion": 0,
+        "raw": [
+          8,
+          2,
+          2,
+          8
+        ],
+        "policy": "reject"
+      }
+    },
+    {
+      "id": "D2-B05-SYN-02",
+      "claim_refs": [
+        "K02.01.02.D4.05",
+        "K02.01.02.D4.06"
+      ],
+      "input": {
+        "mode": "sdt",
+        "hit": 9,
+        "miss": 1,
+        "fa": 4,
+        "cr": 6,
+        "policy": "reject"
+      },
+      "expected": {
+        "dprime": 1.534898669923096,
+        "criterion": -0.514102231,
+        "raw": [
+          9,
+          1,
+          4,
+          6
+        ],
+        "policy": "reject"
+      }
+    },
+    {
+      "id": "D2-B05-SYN-03",
+      "claim_refs": [
+        "K02.01.02.D4.05"
+      ],
+      "input": {
+        "mode": "sdt",
+        "hit": 5,
+        "miss": 5,
+        "fa": 5,
+        "cr": 5,
+        "policy": "reject"
+      },
+      "expected": {
+        "dprime": 0,
+        "criterion": 0,
+        "raw": [
+          5,
+          5,
+          5,
+          5
+        ],
+        "policy": "reject"
+      }
+    },
+    {
+      "id": "D2-B05-SYN-04",
+      "claim_refs": [
+        "K02.01.02.D4.07"
+      ],
+      "input": {
+        "mode": "sdt",
+        "hit": 10,
+        "miss": 0,
+        "fa": 0,
+        "cr": 10,
+        "policy": "reject"
+      },
+      "expected": "HOLD_ENDPOINT"
+    },
+    {
+      "id": "D2-B05-SYN-05",
+      "claim_refs": [
+        "K02.01.02.D4.07"
+      ],
+      "input": {
+        "mode": "sdt",
+        "hit": 10,
+        "miss": 0,
+        "fa": 0,
+        "cr": 10,
+        "policy": "loglinear"
+      },
+      "expected": {
+        "dprime": 3.381243259169796,
+        "criterion": 0,
+        "raw": [
+          10,
+          0,
+          0,
+          10
+        ],
+        "policy": "loglinear"
+      }
+    },
+    {
+      "id": "D2-B05-SYN-06",
+      "claim_refs": [
+        "K02.01.02.D4.07"
+      ],
+      "input": {
+        "mode": "sdt",
+        "hit": 0,
+        "miss": 0,
+        "fa": 0,
+        "cr": 10,
+        "policy": "loglinear"
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B05-SYN-07",
+      "claim_refs": [
+        "K02.02.03.D4.05"
+      ],
+      "input": {
+        "mode": "switch",
+        "switch": 700,
+        "repeat": 600,
+        "single": 550,
+        "matched": true
+      },
+      "expected": {
+        "local": 100,
+        "mixing": 50,
+        "mechanism": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B05-SYN-08",
+      "claim_refs": [
+        "K02.02.03.D4.05"
+      ],
+      "input": {
+        "mode": "switch",
+        "switch": 700,
+        "repeat": 600,
+        "single": 550,
+        "matched": false
+      },
+      "expected": "HOLD_COMPARABILITY"
+    },
+    {
+      "id": "D2-B05-SYN-09",
+      "claim_refs": [
+        "K02.02.03.D4.05"
+      ],
+      "input": {
+        "mode": "switch",
+        "switch": 590,
+        "repeat": 600,
+        "single": 650,
+        "matched": true
+      },
+      "expected": {
+        "local": -10,
+        "mixing": -50,
+        "mechanism": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B05-SYN-10",
+      "claim_refs": [
+        "K03.06.03.D4.05"
+      ],
+      "input": {
+        "mode": "integrate",
+        "simple": 0.8,
+        "hard": 0.48,
+        "independent": true,
+        "matched": true,
+        "conjunctive": true,
+        "no_extra_error": true
+      },
+      "expected": {
+        "conditional_ratio": 0.6,
+        "individual_mastery": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B05-SYN-11",
+      "claim_refs": [
+        "K03.06.03.D4.05"
+      ],
+      "input": {
+        "mode": "integrate",
+        "simple": 0.8,
+        "hard": 0.48,
+        "independent": false,
+        "matched": true,
+        "conjunctive": true,
+        "no_extra_error": true
+      },
+      "expected": "HOLD_MODEL"
+    },
+    {
+      "id": "D2-B05-SYN-12",
+      "claim_refs": [
+        "K03.06.03.D4.05"
+      ],
+      "input": {
+        "mode": "integrate",
+        "simple": 0,
+        "hard": 0,
+        "independent": true,
+        "matched": true,
+        "conjunctive": true,
+        "no_extra_error": true
+      },
+      "expected": "HOLD_MODEL"
+    },
+    {
+      "id": "D2-B05-SYN-13",
+      "claim_refs": [
+        "K03.06.03.D4.05"
+      ],
+      "input": {
+        "mode": "integrate",
+        "simple": 0.5,
+        "hard": 0.6,
+        "independent": true,
+        "matched": true,
+        "conjunctive": true,
+        "no_extra_error": true
+      },
+      "expected": "HOLD_MODEL"
+    },
+    {
+      "id": "D2-B05-SYN-14",
+      "claim_refs": [
+        "K03.06.03.D4.05"
+      ],
+      "input": {
+        "mode": "integrate",
+        "simple": 0.8,
+        "hard": 0.48,
+        "independent": true,
+        "matched": true,
+        "conjunctive": true,
+        "no_extra_error": false
+      },
+      "expected": "HOLD_MODEL"
+    },
+    {
+      "id": "D2-B05-SYN-15",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": {
+        "decision": "OFFER_COMPOSITION_EXPLANATION",
+        "remaining": 6,
+        "observations": 3,
+        "mastery": "NOT_INFERRED",
+        "feedback_given": false
+      }
+    },
+    {
+      "id": "D2-B05-SYN-16",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": {
+        "decision": "OFFER_INDEPENDENT_PROBE",
+        "remaining": 4,
+        "observations": 3,
+        "mastery": "NOT_INFERRED",
+        "feedback_given": true
+      }
+    },
+    {
+      "id": "D2-B05-SYN-17",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          },
+          {
+            "id": "e",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              90,
+              4,
+              10
+            ],
+            "answer": 50,
+            "phase": "retest",
+            "support": "hinted",
+            "minutes": 0,
+            "task": "e"
+          },
+          {
+            "id": "f",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              80,
+              3,
+              15
+            ],
+            "answer": 35,
+            "phase": "delayed",
+            "support": "independent",
+            "minutes": 1440,
+            "task": "f"
+          },
+          {
+            "id": "g",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              120,
+              5,
+              14
+            ],
+            "answer": 50,
+            "phase": "transfer",
+            "support": "independent",
+            "minutes": 1500,
+            "task": "g"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": {
+        "decision": "OFFER_INDEPENDENT_PROBE",
+        "remaining": 1,
+        "observations": 6,
+        "mastery": "NOT_INFERRED",
+        "feedback_given": true
+      }
+    },
+    {
+      "id": "D2-B05-SYN-18",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          },
+          {
+            "id": "e",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              90,
+              4,
+              10
+            ],
+            "answer": 50,
+            "phase": "retest",
+            "support": "independent",
+            "minutes": 0,
+            "task": "e"
+          },
+          {
+            "id": "f",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              80,
+              3,
+              15
+            ],
+            "answer": 35,
+            "phase": "delayed",
+            "support": "independent",
+            "minutes": 1440,
+            "task": "f"
+          },
+          {
+            "id": "g",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              120,
+              5,
+              14
+            ],
+            "answer": 50,
+            "phase": "transfer",
+            "support": "independent",
+            "minutes": 1500,
+            "task": "g"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": {
+        "decision": "EVIDENCE_RECORDED",
+        "remaining": 1,
+        "observations": 6,
+        "mastery": "NOT_INFERRED",
+        "feedback_given": true
+      }
+    },
+    {
+      "id": "D2-B05-SYN-19",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          },
+          {
+            "id": "e",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              90,
+              4,
+              10
+            ],
+            "answer": 50,
+            "phase": "retest",
+            "support": "independent",
+            "minutes": 0,
+            "task": "e"
+          },
+          {
+            "id": "f",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              80,
+              3,
+              15
+            ],
+            "answer": 35,
+            "phase": "delayed",
+            "support": "independent",
+            "minutes": 60,
+            "task": "f"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": "HOLD_DELAY"
+    },
+    {
+      "id": "D2-B05-SYN-20",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          },
+          {
+            "id": "e",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              90,
+              4,
+              10
+            ],
+            "answer": 50,
+            "phase": "retest",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": "HOLD_REPEATED_ITEM"
+    },
+    {
+      "id": "D2-B05-SYN-21",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          },
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              90,
+              4,
+              10
+            ],
+            "answer": 50,
+            "phase": "retest",
+            "support": "independent",
+            "minutes": 0,
+            "task": "e"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": "HOLD_DUPLICATE"
+    },
+    {
+      "id": "D2-B05-SYN-22",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          }
+        ],
+        "budget": 4,
+        "consent": true
+      },
+      "expected": {
+        "decision": "HOLD_BUDGET",
+        "remaining": 1,
+        "observations": 3,
+        "mastery": "NOT_INFERRED",
+        "feedback_given": false
+      }
+    },
+    {
+      "id": "D2-B05-SYN-23",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [],
+        "budget": 9,
+        "consent": false
+      },
+      "expected": {
+        "decision": "STOP",
+        "remaining": 9,
+        "observations": 0,
+        "mastery": "NOT_INFERRED",
+        "feedback_given": false
+      }
+    },
+    {
+      "id": "D2-B05-SYN-24",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 64,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "stop",
+            "kind": "stop"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": "HOLD_AFTER_STOP"
+    },
+    {
+      "id": "D2-B05-SYN-25",
+      "claim_refs": [
+        "K03.06.03.D4.04",
+        "K03.06.01.D4.04",
+        "K07.04.02.D4.03",
+        "K04.06.03.D4.03",
+        "K01.01.01.D4.04",
+        "K07.04.01.D4.03"
+      ],
+      "input": {
+        "mode": "loop",
+        "events": [
+          {
+            "id": "a",
+            "kind": "task",
+            "target": "multiply",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 36,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "a"
+          },
+          {
+            "id": "b",
+            "kind": "task",
+            "target": "subtract",
+            "values": [
+              100,
+              36,
+              0
+            ],
+            "answer": 63,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "b"
+          },
+          {
+            "id": "c",
+            "kind": "task",
+            "target": "compose",
+            "values": [
+              100,
+              3,
+              12
+            ],
+            "answer": 1164,
+            "phase": "baseline",
+            "support": "independent",
+            "minutes": 0,
+            "task": "c"
+          },
+          {
+            "id": "d",
+            "kind": "feedback"
+          }
+        ],
+        "budget": 9,
+        "consent": true
+      },
+      "expected": "HOLD_DIAGNOSIS"
+    }
+  ]
+}

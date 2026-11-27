@@ -1,0 +1,459 @@
+{
+  "owner": "K15",
+  "base": "1f50da4b01a09b59e3af5fdfdf93b42278698be4",
+  "status": "SCOPE_DRAFT_NOT_CLAIMS",
+  "records": [
+    {
+      "d3_id": "K15.01.01",
+      "owner": "K15",
+      "label": "多媒体",
+      "requirement_id": "K15.01.01.RQ01",
+      "research_requirement": "媒介组合、认知负荷、目标与可及性",
+      "negative_boundary": "增加媒体数量不证明效果",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.01.02",
+      "owner": "K15",
+      "label": "仿真",
+      "requirement_id": "K15.01.02.RQ01",
+      "research_requirement": "模型假设、保真度、交互及技能迁移",
+      "negative_boundary": "模拟成绩不代表实操资格",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.01.03",
+      "owner": "K15",
+      "label": "移动",
+      "requirement_id": "K15.01.03.RQ01",
+      "research_requirement": "设备条件、碎片时间、离线及替代操作",
+      "negative_boundary": "移动端使用时长不等于学习",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.01.04",
+      "owner": "K15",
+      "label": "在线与混合学习",
+      "requirement_id": "K15.01.04.RQ01",
+      "research_requirement": "教学安排、支持、参与与比较条件",
+      "negative_boundary": "平台形式不能确定效果",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.02.01",
+      "owner": "K15",
+      "label": "领域模型",
+      "requirement_id": "K15.02.01.RQ01",
+      "research_requirement": "知识类型、主责、版本、依赖与引用",
+      "negative_boundary": "主题标签不能当正式知识关系",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.02.02",
+      "owner": "K15",
+      "label": "教学模型",
+      "requirement_id": "K15.02.02.RQ01",
+      "research_requirement": "策略、目标、条件、反馈及停止规则",
+      "negative_boundary": "固定流程不普适",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.02.03",
+      "owner": "K15",
+      "label": "学习者模型接口",
+      "requirement_id": "K15.02.03.RQ01",
+      "research_requirement": "观测、估计、权限、版本及未知传递",
+      "negative_boundary": "接口返回值不自动成为事实",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.02.04",
+      "owner": "K15",
+      "label": "对话辅导",
+      "requirement_id": "K15.02.04.RQ01",
+      "research_requirement": "角色、澄清、提示级别、独立回答及复测",
+      "negative_boundary": "对话流畅不等于教学有效",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.03.01",
+      "owner": "K15",
+      "label": "事件采集",
+      "requirement_id": "K15.03.01.RQ01",
+      "research_requirement": "事件身份、时间、来源、同意、去重与缺失",
+      "negative_boundary": "采集到事件不等于允许其他用途",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "重复事件、延迟事件、缺失事件、用途不匹配分别检查；不可静默覆盖。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.03.02",
+      "owner": "K15",
+      "label": "指标",
+      "requirement_id": "K15.03.02.RQ01",
+      "research_requirement": "分母、单位、构念、窗口与数据缺失",
+      "negative_boundary": "点击率不等于学习效果",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.03.03",
+      "owner": "K15",
+      "label": "可视化",
+      "requirement_id": "K15.03.03.RQ01",
+      "research_requirement": "目标用户、量尺、不确定性、可及性及解释",
+      "negative_boundary": "图表精美不代表结论有效",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.03.04",
+      "owner": "K15",
+      "label": "分析与反馈",
+      "requirement_id": "K15.03.04.RQ01",
+      "research_requirement": "证据来源、反馈目标、行动与效果复核",
+      "negative_boundary": "统计相关不自动产生教学处方",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.04.01",
+      "owner": "K15",
+      "label": "生成内容",
+      "requirement_id": "K15.04.01.RQ01",
+      "research_requirement": "来源、约束、版本、事实核验、权利及人工审查",
+      "negative_boundary": "LLM输出不能自动晋升知识",
+      "source_leads": [
+        "S039",
+        "S011"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "生成内容含虚构来源或未核验答案，拒绝晋升。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.04.02",
+      "owner": "K15",
+      "label": "知识检索",
+      "requirement_id": "K15.04.02.RQ01",
+      "research_requirement": "问题范围、版本、命中证据、缺失与拒答",
+      "negative_boundary": "检索命中不证明回答正确",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.04.03",
+      "owner": "K15",
+      "label": "解释",
+      "requirement_id": "K15.04.03.RQ01",
+      "research_requirement": "证据定位、条件、替代解释及用户理解",
+      "negative_boundary": "流畅解释不证明事实",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.04.04",
+      "owner": "K15",
+      "label": "评价辅助",
+      "requirement_id": "K15.04.04.RQ01",
+      "research_requirement": "评分构念、人类基准、误差、公平及复核",
+      "negative_boundary": "模型分数不自动等于正式评价",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.04.05",
+      "owner": "K15",
+      "label": "人机协同",
+      "requirement_id": "K15.04.05.RQ01",
+      "research_requirement": "职责、权限、人工复核、退出及异常升级",
+      "negative_boundary": "AI不得冒用教师或学习者身份",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.05.01",
+      "owner": "K15",
+      "label": "可用性",
+      "requirement_id": "K15.05.01.RQ01",
+      "research_requirement": "任务成功、错误、耗时及可及性测试",
+      "negative_boundary": "满意度不等于学习效果",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.05.02",
+      "owner": "K15",
+      "label": "可解释性",
+      "requirement_id": "K15.05.02.RQ01",
+      "research_requirement": "受众、依据、局限及纠错途径",
+      "negative_boundary": "事后解释不必是模型真实机制",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.05.03",
+      "owner": "K15",
+      "label": "可控性",
+      "requirement_id": "K15.05.03.RQ01",
+      "research_requirement": "用户选择、授权、停止、回退及变更记录",
+      "negative_boundary": "便利性不得绕过授权",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.05.04",
+      "owner": "K15",
+      "label": "学习效果",
+      "requirement_id": "K15.05.04.RQ01",
+      "research_requirement": "目标构念、延迟保持、迁移及对照设计",
+      "negative_boundary": "系统运行通过不证明教育增益",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.05.05",
+      "owner": "K15",
+      "label": "资源成本",
+      "requirement_id": "K15.05.05.RQ01",
+      "research_requirement": "时间、算力、网络、机会成本与收益",
+      "negative_boundary": "低成本不必然教育最优",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.06.01",
+      "owner": "K15",
+      "label": "内容标准",
+      "requirement_id": "K15.06.01.RQ01",
+      "research_requirement": "标准身份、版本、覆盖及映射约束",
+      "negative_boundary": "标准兼容不保证专业正确",
+      "source_leads": [
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.06.02",
+      "owner": "K15",
+      "label": "事件语义",
+      "requirement_id": "K15.06.02.RQ01",
+      "research_requirement": "角色、动作、对象、结果、上下文与时间",
+      "negative_boundary": "同名事件不证明语义相同",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.06.03",
+      "owner": "K15",
+      "label": "数据可移植性",
+      "requirement_id": "K15.06.03.RQ01",
+      "research_requirement": "格式、权限、版本、字段映射与对账",
+      "negative_boundary": "文件可打开不证明无损迁移",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "原文本记录与目标交换格式逐字段、关系及身份对账；丢失字段须报告。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K15.06.04",
+      "owner": "K15",
+      "label": "离线与协作",
+      "requirement_id": "K15.06.04.RQ01",
+      "research_requirement": "离线状态、重试、冲突、幂等及权限",
+      "negative_boundary": "同步成功不等于数据完整",
+      "source_leads": [
+        "S001",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

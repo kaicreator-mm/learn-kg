@@ -1,0 +1,164 @@
+{
+  "owner": "K11",
+  "base": "1e2796240fae404cc614081c2e6e8d6a2e659932",
+  "prior_claim_blob": "cada6da7e2987b48f7d6de0bc91ee7f1d836a101",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K11.02.03.D4.03",
+      "owner": "K11",
+      "d3_id": "K11.02.03",
+      "requirement_id": "K11.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "在有限状态和已给定后验、损失函数时，候选行动风险R(a)=Σ_s b(s)L(s,a)，仅在授权可行行动内比较。",
+      "conditions": [
+        "数学特例，损失单位一致，概率归一；教育损失为候选"
+      ],
+      "negative_boundary": "不能用风险排序授权行动或以任意权重决定学习目标。",
+      "source_refs": [
+        "K11-B06-DEC"
+      ],
+      "source_locator": "l95–99,126–128",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K11.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "b=(.3,.7)，行动损失(10,0)",
+        "expected": "期望损失3",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K11.02.03.D4.04",
+      "owner": "K11",
+      "d3_id": "K11.02.03",
+      "requirement_id": "K11.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "概率或损失只知范围时，可按多个合理参数情境比较排序；排序反转时保留未知或询问价值权重。",
+      "conditions": [
+        "有限情境敏感性为项目候选，不等同全面鲁棒最优"
+      ],
+      "negative_boundary": "不将缺失风险填零。",
+      "source_refs": [
+        "K11-B06-DEC"
+      ],
+      "source_locator": "l26–30,95–99",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K11.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "低风险估计与高风险估计产生相反排序",
+        "expected": "不强制唯一选择",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K11.06.02.D4.03",
+      "owner": "K11",
+      "d3_id": "K11.06.02",
+      "requirement_id": "K11.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "个体随机分配试验中总体流失率以初始分配样本为分母；差异流失率为两组流失率差的绝对值。",
+      "conditions": [
+        "适用该标准的个体RCT；排除条件另核"
+      ],
+      "negative_boundary": "总体低流失不自动排除选择偏差。",
+      "source_refs": [
+        "K11-B06-WWC"
+      ],
+      "source_locator": "p40 Figure6",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K11.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "A组100人缺10，B组50人缺10",
+        "expected": "总体20/150，差异10个百分点",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K11.06.02.D4.04",
+      "owner": "K11",
+      "d3_id": "K11.06.02",
+      "requirement_id": "K11.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "WWC使用总体与差异流失及边界假设评估潜在偏差；插补结果仍计入流失口径。",
+      "conditions": [
+        "镜像v5.0页图；未核全部技术附录或实际评级"
+      ],
+      "negative_boundary": "不能只按固定流失百分比给出WWC评级。",
+      "source_refs": [
+        "K11-B06-WWC"
+      ],
+      "source_locator": "pp40–41",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K11.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "100人中90实测、10插补",
+        "expected": "流失率10%，评级未知",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K11.05.02.D4.03",
+      "owner": "K11",
+      "d3_id": "K11.05.02",
+      "requirement_id": "K11.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "补救前要区分目标能力与额外任务要求；针对相同目标可设计识别与产出等不同证据任务。",
+      "conditions": [
+        "ECD设计方法，不证明补救效果"
+      ],
+      "negative_boundary": "单次错误不是唯一知识缺口。",
+      "source_refs": [
+        "K11-B06-ECD"
+      ],
+      "source_locator": "l398–400,426–431",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K11.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "会识别条件语句但不能构造",
+        "expected": "提供构造练习候选，后测确认",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K11.05.03.D4.03",
+      "owner": "K11",
+      "d3_id": "K11.05.03",
+      "requirement_id": "K11.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "复测应从证据需求选择任务，而非仅换表面词汇；识别和生成任务可测不同知识技能。",
+      "conditions": [
+        "同目标对齐与变式独立性另核"
+      ],
+      "negative_boundary": "不能把同题复现认作跨情境迁移。",
+      "source_refs": [
+        "K11-B06-ECD"
+      ],
+      "source_locator": "l426–436",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K11.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "新情境独立编写if条件",
+        "expected": "保留新任务身份和评价条件",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

@@ -1,16 +1,13 @@
 # Learn-KG
 
-人类学习科学知识图谱：研究学习、记忆、技能形成、教学、评估与自适应学习的专业知识及其适用条件，供学习系统（包括 xLearn）独立消费。
+面向完整人类学习生命周期的结构化知识系统，为 xLearn 等下游消费。通用学习科学(K)、学科专业知识(H为首个汉语实例)、动态学习过程(P)、跨域组合(A)、生命周期覆盖(F)及持续改进(E)分责维护。
 
 - [建设主线 #1](https://github.com/kaicreator-mm/learn-kg/issues/1)
-- [v0.1.0 研究与建设 #2](https://github.com/kaicreator-mm/learn-kg/issues/2)
-- [G01 当前研究任务 #3](https://github.com/kaicreator-mm/learn-kg/issues/3)
-- [v0.1.0 研究文档入口](https://github.com/kaicreator-mm/learn-kg/blob/version/v0.1.0/docs/README.md)
+- [v0.1.0 版本 #2](https://github.com/kaicreator-mm/learn-kg/issues/2)
+- [实施总控 #6](https://github.com/kaicreator-mm/learn-kg/issues/6)
+- [S01 范围 #3](https://github.com/kaicreator-mm/learn-kg/issues/3) · [DB01–03 #4](https://github.com/kaicreator-mm/learn-kg/issues/4) · [HSK #5](https://github.com/kaicreator-mm/learn-kg/issues/5)
+- [文档入口](docs/README.md) · [建设事实与缺口](docs/implementation/documentation-baseline.md) · [任务DAG](docs/implementation/task-dag.md)
 
-首个具体学科知识域为 HSK（汉语学习），与通用学习科学知识分层维护；[HSK 范围与验证计划](https://github.com/kaicreator-mm/learn-kg/blob/version/v0.1.0/docs/product/hsk-domain-pilot.md)。
+D014：人类可读UTF-8知识源文件优先（Markdown/JSON/JSONL候选），提供schema与SQLite导入能力，不直接生成SQLite文件。文本是唯一权威事实源；公开仓库不含私有原始数据或学习者记录。
 
-采用 ADS v4.19 思路，以 GitHub 为唯一项目事实源。先研究、再形式化、后消费；按完整模块和阶段累计审核。
-
-公开仓库仅包含可公开的知识、引用元数据及原创综合，不包含私有产品实现、学习者个人数据或未获许可全文。
-
-当前状态：初始化；尚无冻结分类、已验收图谱、运行时或发布版本。
+当前草案：候选专业框架、历史HSK私有RDF staging及已验证恢复/可读归档；正式文本专业包、导入器与学习闭环尚未完成。D013 R3-R独立规划已通过，D014纳入正式调度；候选成果仍待逐任务收据与专业资格。以GitHub exact SHA、任务证据和完整模块累计审核为准。

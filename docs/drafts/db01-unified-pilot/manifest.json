@@ -1,0 +1,76 @@
+{
+  "schema_version": "draft-unified-manifest-1",
+  "status": "INVESTIGATION_ONLY",
+  "schema": {
+    "file": "schema.json",
+    "sha256": "b8508ea54ce6540745db8102379db485948d6a3eb445167978a168ee68899971"
+  },
+  "legacy": [
+    {
+      "path": "docs/drafts/db01-bkt-pilot/records.json",
+      "git_blob": "f7d376ec246ff6108126f2be37d64b2843041568",
+      "sha256": "1a71c867aeeecdbe3e83567d8874062cd842698bba968801ea69eaa88c20e3a4",
+      "count": 24
+    },
+    {
+      "path": "docs/drafts/db01-hlr-pilot/records.json",
+      "git_blob": "b0341f965f1312eb559cad4235b5890eeb003cc3",
+      "sha256": "f547d3c841d8500ffc00f462559fa18057eca2f3f6d16478e3f6bdebe190ecd2",
+      "count": 41
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "learn-kg.draft.unified.bkt",
+      "version": "0.0.2",
+      "file": "bkt.json",
+      "sha256": "657ab5494a1f960ff926f1f55ff0b68e8280dc727b3fe62aea33cb42e9271235",
+      "count": 24,
+      "dependencies": []
+    },
+    {
+      "package_id": "learn-kg.draft.unified.hlr",
+      "version": "0.0.2",
+      "file": "hlr.json",
+      "sha256": "12246d38ae859cabbf687ff31d821d753f91a5e91154e8e29264272e59e82ec8",
+      "count": 27,
+      "dependencies": []
+    },
+    {
+      "package_id": "learn-kg.draft.unified.review",
+      "version": "0.0.2",
+      "file": "review.json",
+      "sha256": "e22e4c7a40246a7081a0d9630de7f6c6d3a8d1d6d38d31fd280afae1a1afade9",
+      "count": 14,
+      "dependencies": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "sha256": "12246d38ae859cabbf687ff31d821d753f91a5e91154e8e29264272e59e82ec8"
+        }
+      ]
+    },
+    {
+      "package_id": "learn-kg.draft.unified.chinese",
+      "version": "0.0.2",
+      "file": "chinese.json",
+      "sha256": "5cbba4da56888a18c3a7b466b04f052a76faf99028b7c28e1ecdf44dae2e695b",
+      "count": 31,
+      "dependencies": []
+    },
+    {
+      "package_id": "learn-kg.draft.unified.flow",
+      "version": "0.0.2",
+      "file": "flow.json",
+      "sha256": "08d7c325e8898d9bf396769438d5d04a7d1fc1fb0c1644e3216c37589f664194",
+      "count": 17,
+      "dependencies": [
+        {
+          "package_id": "learn-kg.draft.unified.chinese",
+          "version": "0.0.2",
+          "sha256": "5cbba4da56888a18c3a7b466b04f052a76faf99028b7c28e1ecdf44dae2e695b"
+        }
+      ]
+    }
+  ]
+}

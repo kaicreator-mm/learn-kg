@@ -1,0 +1,629 @@
+{
+  "schema_version": 1,
+  "base": "a4f084a26ae9153b2b2743ffd31ccf51b5d8d74c",
+  "status": "DESIGN_ONLY_NOT_RUN",
+  "items": [
+    {
+      "id": "CQ01",
+      "lc_id": null,
+      "owner": "A01",
+      "route": [
+        "A01",
+        "K03",
+        "K07",
+        "F01",
+        "F02"
+      ],
+      "original_expected_positive": "目标分解及必要/推荐依赖区分",
+      "original_expected_negative": "等级不推出先修",
+      "fixture_spec": {
+        "positive_input": "目标：购物中的独立表达；候选对象及必要/推荐两类边",
+        "expected_positive": "目标、构念、知识组件和两类边分别输出",
+        "negative_input": "仅给HSK等级或教材序列",
+        "expected_negative": "不生成必要先修"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ02",
+      "lc_id": null,
+      "owner": "A03",
+      "route": [
+        "A03",
+        "K02",
+        "K04",
+        "F06",
+        "P06"
+      ],
+      "original_expected_positive": "多候选解释及诊断区分证据",
+      "original_expected_negative": "单错不确定原因",
+      "fixture_spec": {
+        "positive_input": "一次买/卖相关错误，备选声调/意义/任务理解原因，独立区分证据",
+        "expected_positive": "输出多假设并按区分证据选择补测",
+        "negative_input": "仅有一次错误无区分证据",
+        "expected_negative": "保留多个解释或UNKNOWN"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ03",
+      "lc_id": null,
+      "owner": "A04",
+      "route": [
+        "A04",
+        "K05",
+        "K06",
+        "K11",
+        "P05"
+      ],
+      "original_expected_positive": "条件、目标及候选策略选择",
+      "original_expected_negative": "不满足条件拒绝",
+      "fixture_spec": {
+        "positive_input": "目标、材料、两候选策略及各自适用条件",
+        "expected_positive": "仅选择满足条件的策略并给出理由",
+        "negative_input": "移除所需资源或先备条件",
+        "expected_negative": "拒绝不满足条件的候选"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ04",
+      "lc_id": null,
+      "owner": "A05",
+      "route": [
+        "A05",
+        "K04",
+        "K09",
+        "F08",
+        "P09"
+      ],
+      "original_expected_positive": "即时/延迟/新任务独立评价",
+      "original_expected_negative": "即时成绩不推出迁移",
+      "fixture_spec": {
+        "positive_input": "训练即时、延迟和新情境任务三份独立证据",
+        "expected_positive": "按任务类别分别记录结论",
+        "negative_input": "只给即时正确记录",
+        "expected_negative": "保持/迁移UNKNOWN"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ05",
+      "lc_id": null,
+      "owner": "A03",
+      "route": [
+        "A03",
+        "K09",
+        "K10",
+        "F05"
+      ],
+      "original_expected_positive": "提示/耗时/答题观测与不确定估计",
+      "original_expected_negative": "缺失或提示正确不等于掌握",
+      "fixture_spec": {
+        "positive_input": "提示正确、独立正确、耗时、缺失及各自来源",
+        "expected_positive": "观察与估计分离，标记不确定性",
+        "negative_input": "缺失或只有提示成功",
+        "expected_negative": "不得晋升独立掌握"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ06",
+      "lc_id": null,
+      "owner": "K10",
+      "route": [
+        "K10",
+        "K02",
+        "K09",
+        "A03"
+      ],
+      "original_expected_positive": "冻结参数下独立BKT/回忆数值oracle及假设",
+      "original_expected_negative": "参数/独立性不满足拒绝或UNKNOWN",
+      "fixture_spec": {
+        "positive_input": "固定模型版本、BKT参数及回忆时距，独立手算oracle",
+        "expected_positive": "在模型条件下输出指定数值并对照容差",
+        "negative_input": "非法参数、零似然或不适用条件",
+        "expected_negative": "拒绝或UNKNOWN，不填默认值"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ07",
+      "lc_id": null,
+      "owner": "A04",
+      "route": [
+        "A04",
+        "K11",
+        "P08",
+        "F05"
+      ],
+      "original_expected_positive": "给定目标预算与候选任务的可判定选择",
+      "original_expected_negative": "超预算/未知目标停止",
+      "fixture_spec": {
+        "positive_input": "固定目标、候选活动条件、时间成本和预算",
+        "expected_positive": "只返回可行选择，记录成本与理由",
+        "negative_input": "超预算或无目标",
+        "expected_negative": "停止/澄清，不输出伪计划"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ08",
+      "lc_id": null,
+      "owner": "A06",
+      "route": [
+        "A06",
+        "K06",
+        "K12",
+        "F03",
+        "F06",
+        "P06"
+      ],
+      "original_expected_positive": "题型与目标绑定、反馈支架及复测",
+      "original_expected_negative": "无效题/提示泄漏拒绝",
+      "fixture_spec": {
+        "positive_input": "候选题、目标、答案及分层提示，独立变式复测",
+        "expected_positive": "验证题型与目标，反馈后独立复测",
+        "negative_input": "题目无效或提示直接泄漏答案",
+        "expected_negative": "拒绝当独立证据"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ09",
+      "lc_id": null,
+      "owner": "K09",
+      "route": [
+        "K09",
+        "K16",
+        "K19",
+        "A08"
+      ],
+      "original_expected_positive": "效度构念、信度/误差适用时独立oracle及公平反例",
+      "original_expected_negative": "分数差不直接推断偏差或能力",
+      "fixture_spec": {
+        "positive_input": "明确构念、评价条件及信度/误差独立算例（适用时）",
+        "expected_positive": "限定解释、误差和公平审查范围",
+        "negative_input": "仅给群体分数差",
+        "expected_negative": "不直接断定偏差或能力差"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ10",
+      "lc_id": null,
+      "owner": "K17",
+      "route": [
+        "K17",
+        "K19",
+        "A08"
+      ],
+      "original_expected_positive": "有混杂与适用群体反例的证据判定",
+      "original_expected_negative": "相关不推出因果",
+      "fixture_spec": {
+        "positive_input": "关联研究含显式混杂、样本范围及对照信息",
+        "expected_positive": "区分研究设计与可识别效应",
+        "negative_input": "只有相关系数",
+        "expected_negative": "禁止因果晋升"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ11",
+      "lc_id": null,
+      "owner": "A05",
+      "route": [
+        "A05",
+        "K04",
+        "K14",
+        "F08"
+      ],
+      "original_expected_positive": "两学科同类型策略及条件差异",
+      "original_expected_negative": "不兼容对象拒绝",
+      "fixture_spec": {
+        "positive_input": "汉语与最小数学任务的同类型策略绑定及不同条件",
+        "expected_positive": "可复用类型，保留学科语义和适用条件",
+        "negative_input": "不兼容对象类型",
+        "expected_negative": "拒绝错误绑定"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ12",
+      "lc_id": null,
+      "owner": "A04",
+      "route": [
+        "A04",
+        "K11",
+        "F06",
+        "P08"
+      ],
+      "original_expected_positive": "理由/替代/证据版本/拒绝可追溯",
+      "original_expected_negative": "未知不伪造结果",
+      "fixture_spec": {
+        "positive_input": "候选策略、状态版本、条件和拒绝原因",
+        "expected_positive": "输出可追溯理由、替代及证据版本",
+        "negative_input": "状态或条件未知",
+        "expected_negative": "不得伪造理由或结果"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ13",
+      "lc_id": null,
+      "owner": "A07",
+      "route": [
+        "A07",
+        "K08",
+        "K13",
+        "K16",
+        "F07",
+        "P07"
+      ],
+      "original_expected_positive": "自主选择、环境与可及性支持",
+      "original_expected_negative": "自述缺失不贴标签",
+      "fixture_spec": {
+        "positive_input": "用户明确选择、环境设备、支持选项及实际进步证据",
+        "expected_positive": "提供自主支持与可及选择",
+        "negative_input": "无用户自述或要求退出",
+        "expected_negative": "不贴动机标签，不强迫继续"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ14",
+      "lc_id": null,
+      "owner": "A08",
+      "route": [
+        "A08",
+        "K17",
+        "K15",
+        "E01"
+      ],
+      "original_expected_positive": "固定干预/对照/指标、实证与模拟区分",
+      "original_expected_negative": "离线或即时指标不证长期收益",
+      "fixture_spec": {
+        "positive_input": "干预版本、固定协议、比较条件、指标及真实/模拟标记",
+        "expected_positive": "按实际证据范围评价候选",
+        "negative_input": "仅离线模拟或即时指标",
+        "expected_negative": "长期学习收益保持未证"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ15",
+      "lc_id": "LC01",
+      "owner": "F01",
+      "route": [
+        "F01",
+        "A01",
+        "H06",
+        "H07"
+      ],
+      "original_expected_positive": "独立交际目标及量规",
+      "original_expected_negative": "词表覆盖非能力",
+      "fixture_spec": {
+        "positive_input": "购物交际目标、任务条件、独立性和量规",
+        "expected_positive": "输出独立交际目标与评价证据",
+        "negative_input": "只有词表覆盖",
+        "expected_negative": "不得判定交际能力达成"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ16",
+      "lc_id": "LC02",
+      "owner": "F02",
+      "route": [
+        "F02",
+        "A01",
+        "A02"
+      ],
+      "original_expected_positive": "原子/组合/任务调度",
+      "original_expected_negative": "不重复词汇或推导先修",
+      "fixture_spec": {
+        "positive_input": "买/卖稳定词条引用、辨别组合对象及任务",
+        "expected_positive": "组合引用原实体，区分组成/顺序/先修",
+        "negative_input": "重复建立词条或以等级推先修",
+        "expected_negative": "拒绝重复/错误边"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ17",
+      "lc_id": "LC03",
+      "owner": "F03",
+      "route": [
+        "F03",
+        "A06"
+      ],
+      "original_expected_positive": "合法可及且符合构念",
+      "original_expected_negative": "文本非等价听辨",
+      "fixture_spec": {
+        "positive_input": "带许可和构念标记的语音资源、设备能力",
+        "expected_positive": "仅交付合法可及并满足听辨构念的资源",
+        "negative_input": "无音频但有文本",
+        "expected_negative": "文本替代不计听辨等价"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ18",
+      "lc_id": "LC04",
+      "owner": "F04",
+      "route": [
+        "F04",
+        "F07",
+        "A02"
+      ],
+      "original_expected_positive": "角色、提示与独立表现",
+      "original_expected_negative": "生成答案非观测",
+      "fixture_spec": {
+        "positive_input": "引导对话与独立产出，角色/提示/实际产出记录",
+        "expected_positive": "区分AI产出和学习者观察",
+        "negative_input": "AI生成答案代替本人回答",
+        "expected_negative": "拒绝独立表现证据"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ19",
+      "lc_id": "LC05",
+      "owner": "F05",
+      "route": [
+        "F05",
+        "A03"
+      ],
+      "original_expected_positive": "观察/自述/评分/估计独立",
+      "original_expected_negative": "缺失非零或动机不足",
+      "fixture_spec": {
+        "positive_input": "原始观察、自述、评分、估计及时间/版本",
+        "expected_positive": "五类证据分别保存并允许冲突/未知",
+        "negative_input": "缺失自述或观察",
+        "expected_negative": "不填零、不诊断动机"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ20",
+      "lc_id": "LC06",
+      "owner": "F06",
+      "route": [
+        "F06",
+        "P06",
+        "P08",
+        "A03",
+        "A04"
+      ],
+      "original_expected_positive": "多原因诊断、补救复测",
+      "original_expected_negative": "无证据不定因，预算终止",
+      "fixture_spec": {
+        "positive_input": "混淆候选、区分任务、补救及变式复测预算",
+        "expected_positive": "选择有证据支持的补救并保留复测",
+        "negative_input": "无区分证据或预算耗尽",
+        "expected_negative": "UNKNOWN/停止"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ21",
+      "lc_id": "LC07",
+      "owner": "F07",
+      "route": [
+        "F07",
+        "P10",
+        "A07"
+      ],
+      "original_expected_positive": "能力/授权/环境适配",
+      "original_expected_negative": "拒绝无权任务",
+      "fixture_spec": {
+        "positive_input": "角色、设备、资源、授权及监督条件",
+        "expected_positive": "仅选择合法可执行活动",
+        "negative_input": "缺权限或必要监督",
+        "expected_negative": "拒绝执行"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ22",
+      "lc_id": "LC08",
+      "owner": "F08",
+      "route": [
+        "F08",
+        "P05",
+        "P09",
+        "A05"
+      ],
+      "original_expected_positive": "延迟、陌生情境、独立评价",
+      "original_expected_negative": "模拟非真实能力",
+      "fixture_spec": {
+        "positive_input": "训练任务、延迟及陌生购物情境、独立评分",
+        "expected_positive": "分别形成保持和迁移证据",
+        "negative_input": "模拟成功或仅同题复现",
+        "expected_negative": "不认定真实胜任或迁移"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ23",
+      "lc_id": "LC09",
+      "owner": "P10",
+      "route": [
+        "P10",
+        "P07",
+        "F05",
+        "A04"
+      ],
+      "original_expected_positive": "选择/真实进步/恢复幂等",
+      "original_expected_negative": "拒绝强制打卡/重复事件",
+      "fixture_spec": {
+        "positive_input": "自愿选择、客观进步、暂停检查点及重复事件ID",
+        "expected_positive": "恢复原会话版本、事件只更新一次",
+        "negative_input": "强制打卡、重复提交或退出",
+        "expected_negative": "拒绝强制行为及重复更新"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ24",
+      "lc_id": "LC10",
+      "owner": "E01",
+      "route": [
+        "E01",
+        "A08"
+      ],
+      "original_expected_positive": "固定协议、候选与回退",
+      "original_expected_negative": "禁止直接改正式库",
+      "fixture_spec": {
+        "positive_input": "固定评价协议、候选修改、批准状态、旧文本manifest",
+        "expected_positive": "只登记候选，批准后才发布并可回退",
+        "negative_input": "未批准候选直接替换正式文本",
+        "expected_negative": "拒绝发布、保留旧版本"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ25",
+      "lc_id": "LC11",
+      "owner": "A01",
+      "route": [
+        "A01",
+        "A02",
+        "A05",
+        "DB03"
+      ],
+      "original_expected_positive": "同类型策略跨两学科、无关库零打开",
+      "original_expected_negative": "不兼容/重复边拒绝",
+      "fixture_spec": {
+        "positive_input": "汉语与最小第二学科可读包、类型绑定及按需路由日志",
+        "expected_positive": "类型复用、各自实体分离、无关包零打开",
+        "negative_input": "错类型/重复事实边或无关包被打开",
+        "expected_negative": "拒绝绑定或报告路由失败"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    },
+    {
+      "id": "CQ26",
+      "lc_id": "LC12",
+      "owner": "DB03",
+      "route": [
+        "DB03",
+        "DB02",
+        "E01"
+      ],
+      "original_expected_positive": "稳定引用及恢复",
+      "original_expected_negative": "缺失/错版/孤儿与篡改拒绝",
+      "fixture_spec": {
+        "positive_input": "文本manifest、精确引用、导入映射、旧版及故障夹具",
+        "expected_positive": "验证版本、hash及恢复；后续内存导入对账",
+        "negative_input": "缺包、错版、孤儿、篡改或中断",
+        "expected_negative": "拒绝激活或回退，不声称物理库事务保证"
+      },
+      "fixture_digest": null,
+      "oracle_digest": null,
+      "actual_result": null,
+      "status": "NOT_RUN",
+      "scope": "DESIGN_ONLY"
+    }
+  ]
+}

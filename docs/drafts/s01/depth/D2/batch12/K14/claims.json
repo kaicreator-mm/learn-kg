@@ -1,0 +1,112 @@
+{
+  "owner": "K14",
+  "base": "7e4a62f2d083541f30fa6e7997d0290e9aba2c2f",
+  "prior_claim_blob": "570013c38c2f38f3b3969c83b75d561dd0991018",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K14.01.01.D4.03",
+      "owner": "K14",
+      "d3_id": "K14.01.01",
+      "requirement_id": "K14.01.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "语言能力描述按不同技能和模式记录持续表现，学习目标可随内容和使用情境调整。",
+      "conditions": [
+        "官方指南部分支持；一语和二语习得机制差异尚未证实。"
+      ],
+      "negative_boundary": "不由母语或学习经历直接赋级。",
+      "source_refs": [
+        "K14-B12-CAN"
+      ],
+      "source_locator": "l338–355,364",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K14.01.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "口语与阅读表现不同",
+        "expected": "分别记录",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K14.01.04.D4.03",
+      "owner": "K14",
+      "d3_id": "K14.01.04",
+      "requirement_id": "K14.01.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "水平描述指可独立控制的功能，高阶功能可在低阶阶段引入练习；不规定唯一教学顺序。",
+      "conditions": [
+        "官方指南，非习得顺序实证；仅补原命题的路径边界。"
+      ],
+      "negative_boundary": "等级标签不能直接转换成硬先修。",
+      "source_refs": [
+        "K14-B12-CAN"
+      ],
+      "source_locator": "l338–355,364",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K14.01.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "初学者接触复杂文本",
+        "expected": "允许有支持尝试",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K14.02.03.D4.03",
+      "owner": "K14",
+      "d3_id": "K14.02.03",
+      "requirement_id": "K14.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "全称蕴含命题∀x(P(x)→Q(x))可由满足P且不满足Q的一个反例推翻；只有若干满足实例不足以证明。",
+      "conditions": [
+        "经典逻辑；必须核定义域及前提。"
+      ],
+      "negative_boundary": "不把前提不满足的例子当反例。",
+      "source_refs": [
+        "K14-B12-PROOF"
+      ],
+      "source_locator": "l210–234",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K14.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "断言所有偶数都能被4整除，x=6",
+        "expected": "P真Q假，反驳",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K14.04.02.D4.03",
+      "owner": "K14",
+      "d3_id": "K14.04.02",
+      "requirement_id": "K14.04.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "模拟训练所需保真度依目标技能而异；技术技能与判断、协作的功能要求不同，实际能力应在对应条件验证。",
+      "conditions": [
+        "医疗教育综述；操作精度、安全及异常处理是项目评价维度，须行业专门证据。"
+      ],
+      "negative_boundary": "不将观看或仿真结业当安全操作授权。",
+      "source_refs": [
+        "K14-B12-SIM"
+      ],
+      "source_locator": "l131–139",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K14.04.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "模拟设备完成正常流程",
+        "expected": "真实操作和异常条件待验",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

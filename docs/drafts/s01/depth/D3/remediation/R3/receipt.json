@@ -1,0 +1,133 @@
+{
+  "R2": {
+    "original": 1712,
+    "new": 31,
+    "new_topics": 28,
+    "source_records": 14,
+    "split": 3,
+    "triage": {
+      "TARGETED_SUPPLEMENT_PENDING_REVIEW": 26,
+      "SUBSTANTIVE_ORIGINAL_RETAIN_PENDING_QUALIFICATION": 189,
+      "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 22,
+      "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 90
+    }
+  },
+  "R3": {
+    "cases": {
+      "R3-ZH-TRADE-01": {
+        "raw_scores": {
+          "Z-E0": {
+            "role_direction": 1,
+            "lexical_choice": 0,
+            "actor_object": 1
+          },
+          "Z-E1": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "Z-E2": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "Z-E3": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "Z-E4": {
+            "role_direction": 1,
+            "lexical_choice": 1,
+            "actor_object": 1
+          },
+          "Z-E5": {
+            "role_direction": 1,
+            "lexical_choice": 0,
+            "actor_object": 1
+          },
+          "Z-E6": "HOLD_AMBIGUOUS"
+        },
+        "history_cases": {
+          "no_intervening_exposure": "RETENTION_POSITIVE_CANDIDATE",
+          "practice_at_1430": "HOLD_DELAY_FROM_LAST_EXPOSURE",
+          "hint_at_1450": "HOLD_DELAY_FROM_LAST_EXPOSURE",
+          "unseen_history_unknown": "HOLD_EXPOSURE_HISTORY",
+          "same_item_preview": "HOLD_ITEM_PREEXPOSED",
+          "same_family_new_label_not_equivalent": "HOLD_COMPARABILITY",
+          "assisted_target": "HOLD_ASSISTANCE",
+          "wrong_delayed_kept": "RETENTION_NEGATIVE_CANDIDATE",
+          "missing_response": "UNKNOWN_MISSING",
+          "near_context_change": "NEAR_TRANSFER_CANDIDATE",
+          "transfer_not_retention": "HOLD_COMPARABILITY",
+          "scope_mismatch": "HOLD_SCOPE",
+          "duplicate_content_new_label": "HOLD_ITEM_PREEXPOSED",
+          "unknown_relevance": "HOLD_EXPOSURE_HISTORY",
+          "unrelated_study": "RETENTION_POSITIVE_CANDIDATE"
+        },
+        "plan_comparison": 3
+      },
+      "R3-MATH-FRACTION-01": {
+        "raw_scores": {
+          "M-E0": {
+            "relation": 0,
+            "valid_justification": 0
+          },
+          "M-E1": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "M-E2": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "M-E3": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "M-E4": {
+            "relation": 1,
+            "valid_justification": 1
+          },
+          "M-E5": {
+            "relation": 0,
+            "valid_justification": 0
+          },
+          "M-E6": "HOLD_UNIT_UNKNOWN"
+        },
+        "history_cases": {
+          "no_intervening_exposure": "RETENTION_POSITIVE_CANDIDATE",
+          "practice_at_1430": "HOLD_DELAY_FROM_LAST_EXPOSURE",
+          "hint_at_1450": "HOLD_DELAY_FROM_LAST_EXPOSURE",
+          "unseen_history_unknown": "HOLD_EXPOSURE_HISTORY",
+          "same_item_preview": "HOLD_ITEM_PREEXPOSED",
+          "same_family_new_label_not_equivalent": "HOLD_COMPARABILITY",
+          "assisted_target": "HOLD_ASSISTANCE",
+          "wrong_delayed_kept": "RETENTION_NEGATIVE_CANDIDATE",
+          "missing_response": "UNKNOWN_MISSING",
+          "near_context_change": "NEAR_TRANSFER_CANDIDATE",
+          "transfer_not_retention": "HOLD_COMPARABILITY",
+          "scope_mismatch": "HOLD_SCOPE",
+          "duplicate_content_new_label": "HOLD_ITEM_PREEXPOSED",
+          "unknown_relevance": "HOLD_EXPOSURE_HISTORY",
+          "unrelated_study": "RETENTION_POSITIVE_CANDIDATE"
+        },
+        "plan_comparison": 3
+      }
+    },
+    "modes": 8,
+    "activities": 14,
+    "flow_steps": 11,
+    "transitions": 10,
+    "mapping": {
+      "CANDIDATE_EXEMPLIFIED": 73,
+      "CANDIDATE_PARTIAL": 25,
+      "CANDIDATE_HOLD": 10
+    },
+    "formal_CQ": "26_NOT_RUN",
+    "content_gate": "HOLD",
+    "study": "NOT_RUN"
+  },
+  "status": "SAME_AUTHOR_FINITE_KNOWLEDGE_CHECKS_NOT_QUALIFICATION",
+  "persistent_db_files": 0
+}

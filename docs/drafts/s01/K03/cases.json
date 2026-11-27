@@ -1,0 +1,717 @@
+{
+  "owner": "K03",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K03.01.01.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.01.01",
+      "claim_refs": [
+        "K03.01.01.D4.01",
+        "K03.01.01.D4.02"
+      ],
+      "fixture": "同一产品规格在两个版本中不同",
+      "views": {
+        "forward": "按版本核对事实",
+        "reverse": "来源可能陈旧",
+        "intervention": "找版本原件",
+        "counterexample": "记载不等于真"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.01.02.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.01.02",
+      "claim_refs": [
+        "K03.01.02.D4.01",
+        "K03.01.02.D4.02",
+        "K03.01.02.D4.03"
+      ],
+      "fixture": "正方形与长方形",
+      "views": {
+        "forward": "正方形是长方形",
+        "reverse": "长方形未必正方形",
+        "intervention": "用反例辨别充分/必要",
+        "counterexample": "非正方形仍可为长方形"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.01.03.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.01.03",
+      "claim_refs": [
+        "K03.01.03.D4.01",
+        "K03.01.03.D4.02"
+      ],
+      "fixture": "鸟→动物，鸟→羽毛",
+      "views": {
+        "forward": "上下位与属性分开",
+        "reverse": "边语义须先查",
+        "intervention": "指定关系推理",
+        "counterexample": "有羽毛不推出先修"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.01.04.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.01.04",
+      "claim_refs": [
+        "K03.01.04.D4.01",
+        "K03.01.04.D4.02"
+      ],
+      "fixture": "设计两道题但无作答记录",
+      "views": {
+        "forward": "仅存在模板",
+        "reverse": "执行状态未知",
+        "intervention": "请求实际事件",
+        "counterexample": "不得标完成"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.01.05.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.01.05",
+      "claim_refs": [
+        "K03.01.05.D4.01",
+        "K03.01.05.D4.02"
+      ],
+      "fixture": "交易关系缺少完成状态",
+      "views": {
+        "forward": "UNKNOWN",
+        "reverse": "缺失不等于否定",
+        "intervention": "核对条件",
+        "counterexample": "不强行成立"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.02.01.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.02.01",
+      "claim_refs": [
+        "K03.02.01.D4.01",
+        "K03.02.01.D4.02",
+        "K03.02.01.D4.03"
+      ],
+      "fixture": "某词按词性和话题分类",
+      "views": {
+        "forward": "两个维度可共存",
+        "reverse": "类别方案不同",
+        "intervention": "记录分类版本",
+        "counterexample": "同类不证明先修"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.02.02.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.02.02",
+      "claim_refs": [
+        "K03.02.02.D4.01",
+        "K03.02.02.D4.02"
+      ],
+      "fixture": "企鹅不能飞仍是鸟",
+      "views": {
+        "forward": "非典型成员仍可成立",
+        "reverse": "原型特征非必要",
+        "intervention": "补非典型正例",
+        "counterexample": "不会飞不推出非鸟"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.02.03.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.02.03",
+      "claim_refs": [
+        "K03.02.03.D4.01",
+        "K03.02.03.D4.02"
+      ],
+      "fixture": "两个模型都认出训练样本",
+      "views": {
+        "forward": "不能区分模型",
+        "reverse": "可能依据原型或实例",
+        "intervention": "比较新变体",
+        "counterexample": "样本覆盖非完整外延"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.02.04.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.02.04",
+      "claim_refs": [
+        "K03.02.04.D4.01",
+        "K03.02.04.D4.02"
+      ],
+      "fixture": "近邻样例信息不足",
+      "views": {
+        "forward": "保留未知",
+        "reverse": "边界或证据缺失",
+        "intervention": "补关键属性",
+        "counterexample": "未知不是反例"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.03.01.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.03.01",
+      "claim_refs": [
+        "K03.03.01.D4.01",
+        "K03.03.01.D4.02"
+      ],
+      "fixture": "买卖辨别单元含两个词条",
+      "views": {
+        "forward": "组件保留身份",
+        "reverse": "课程组织非依赖",
+        "intervention": "独立测试组合",
+        "counterexample": "不从组成推顺序"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.03.02.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.03.02",
+      "claim_refs": [
+        "K03.03.02.D4.01",
+        "K03.03.02.D4.02",
+        "K03.03.02.D4.03"
+      ],
+      "fixture": "目标可用A+B或C",
+      "views": {
+        "forward": "任一路径满足即可候选可行",
+        "reverse": "缺B不排除C",
+        "intervention": "核查独立路径",
+        "counterexample": "推荐不作必要"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.03.03.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.03.03",
+      "claim_refs": [
+        "K03.03.03.D4.01",
+        "K03.03.03.D4.02"
+      ],
+      "fixture": "约束要求正数，值缺失",
+      "views": {
+        "forward": "UNKNOWN",
+        "reverse": "可能缺数据",
+        "intervention": "取得值并核范围",
+        "counterexample": "不判违反"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.03.04.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.03.04",
+      "claim_refs": [
+        "K03.03.04.D4.01",
+        "K03.03.04.D4.02"
+      ],
+      "fixture": "练习时长与成绩相关",
+      "views": {
+        "forward": "仅记录相关",
+        "reverse": "先备或选择偏差",
+        "intervention": "设计适当对照",
+        "counterexample": "不能晋升因果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.03.05.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.03.05",
+      "claim_refs": [
+        "K03.03.05.D4.01",
+        "K03.03.05.D4.02"
+      ],
+      "fixture": "电路与水流类比",
+      "views": {
+        "forward": "映射限定关系",
+        "reverse": "源域失配",
+        "intervention": "检查目标域预测",
+        "counterexample": "不把全部属性搬运"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.04.01.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.04.01",
+      "claim_refs": [
+        "K03.04.01.D4.01",
+        "K03.04.01.D4.02",
+        "K03.04.01.D4.03"
+      ],
+      "fixture": "概念图连线多但关系错误",
+      "views": {
+        "forward": "核查命题准确性",
+        "reverse": "可能机械连接",
+        "intervention": "解释新实例",
+        "counterexample": "数量不代表理解"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.04.02.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.04.02",
+      "claim_refs": [
+        "K03.04.02.D4.01",
+        "K03.04.02.D4.02",
+        "K03.04.02.D4.03"
+      ],
+      "fixture": "若A则B，观察B",
+      "views": {
+        "forward": "A仍未知",
+        "reverse": "其他原因可产生B",
+        "intervention": "寻找区分证据",
+        "counterexample": "拒绝肯定后件"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.04.03.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.04.03",
+      "claim_refs": [
+        "K03.04.03.D4.01",
+        "K03.04.03.D4.02"
+      ],
+      "fixture": "流畅解释但与证据不符",
+      "views": {
+        "forward": "标明冲突",
+        "reverse": "修辞非机制",
+        "intervention": "要求可核预测",
+        "counterexample": "不能因流畅通过"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.04.04.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.04.04",
+      "claim_refs": [
+        "K03.04.04.D4.01",
+        "K03.04.04.D4.02"
+      ],
+      "fixture": "新观察与旧模型冲突",
+      "views": {
+        "forward": "记录异常和版本",
+        "reverse": "测量或模型失配",
+        "intervention": "候选修订复测",
+        "counterexample": "不得自动覆盖"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.05.01.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.05.01",
+      "claim_refs": [
+        "K03.05.01.D4.01",
+        "K03.05.01.D4.02"
+      ],
+      "fixture": "一次分数运算错误",
+      "views": {
+        "forward": "原因未知",
+        "reverse": "误概念、抄写或规则误读",
+        "intervention": "多题解释",
+        "counterexample": "一次错不贴标签"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.05.02.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.05.02",
+      "claim_refs": [
+        "K03.05.02.D4.01",
+        "K03.05.02.D4.02"
+      ],
+      "fixture": "学习者旧预测与反例冲突",
+      "views": {
+        "forward": "记录旧解释与理解",
+        "reverse": "可能不理解反例",
+        "intervention": "提供替代解释",
+        "counterexample": "冲突不保证更新"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.05.03.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.05.03",
+      "claim_refs": [
+        "K03.05.03.D4.01",
+        "K03.05.03.D4.02",
+        "K03.05.03.D4.03"
+      ],
+      "fixture": "课后会背新答案，延迟仍用旧规则",
+      "views": {
+        "forward": "重构持久性未证",
+        "reverse": "记忆与解释可能分离",
+        "intervention": "陌生情境延迟预测",
+        "counterexample": "不能认定持久掌握"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.05.04.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.05.04",
+      "claim_refs": [
+        "K03.05.04.D4.01",
+        "K03.05.04.D4.02"
+      ],
+      "fixture": "短解释正确且有边界",
+      "views": {
+        "forward": "按内容量规评价",
+        "reverse": "长解释可能错误",
+        "intervention": "要求反例",
+        "counterexample": "不按字数评分"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.06.01.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.06.01",
+      "claim_refs": [
+        "K03.06.01.D4.01",
+        "K03.06.01.D4.02",
+        "K03.06.01.D4.03"
+      ],
+      "fixture": "两组件总是共同出现在题目",
+      "views": {
+        "forward": "观测签名相同",
+        "reverse": "组件不可区分",
+        "intervention": "加独立区分题",
+        "counterexample": "不能唯一归因"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.06.02.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.06.02",
+      "claim_refs": [
+        "K03.06.02.D4.01",
+        "K03.06.02.D4.02"
+      ],
+      "fixture": "专家分解购物对话为若干技能",
+      "views": {
+        "forward": "分析候选",
+        "reverse": "实际心理顺序未知",
+        "intervention": "观察实际独立任务",
+        "counterexample": "步骤非实际过程"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.06.03.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.06.03",
+      "claim_refs": [
+        "K03.06.03.D4.01",
+        "K03.06.03.D4.02",
+        "K03.06.03.D4.03"
+      ],
+      "fixture": "分别能买和卖但综合对话失败",
+      "views": {
+        "forward": "独立综合证据不足",
+        "reverse": "语用或整合困难",
+        "intervention": "匹配单步和组合任务",
+        "counterexample": "单项通过不推出综合"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K03.06.04.CASE.01",
+      "owner": "K03",
+      "d3_id": "K03.06.04",
+      "claim_refs": [
+        "K03.06.04.D4.01",
+        "K03.06.04.D4.02",
+        "K03.06.04.D4.03"
+      ],
+      "fixture": "初级词未掌握但可用另一表达达成目标",
+      "views": {
+        "forward": "必要性候选受挑战",
+        "reverse": "替代路径存在",
+        "intervention": "核目标与资源条件",
+        "counterexample": "等级不是先修"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ],
+  "logic_cases": [
+    {
+      "id": "K03.PATH01",
+      "mode": "path",
+      "input": [
+        [
+          "TRUE",
+          "FALSE"
+        ],
+        [
+          "TRUE"
+        ]
+      ],
+      "expected": "TRUE",
+      "claim_ref": "K03.03.02.D4.02"
+    },
+    {
+      "id": "K03.PATH02",
+      "mode": "path",
+      "input": [
+        [
+          "TRUE",
+          "UNKNOWN"
+        ],
+        [
+          "FALSE"
+        ]
+      ],
+      "expected": "UNKNOWN",
+      "claim_ref": "K03.03.02.D4.02"
+    },
+    {
+      "id": "K03.PATH03",
+      "mode": "path",
+      "input": [
+        [
+          "TRUE",
+          "FALSE"
+        ],
+        [
+          "FALSE"
+        ]
+      ],
+      "expected": "FALSE",
+      "claim_ref": "K03.03.02.D4.02"
+    },
+    {
+      "id": "K03.PATH04",
+      "mode": "path",
+      "input": [
+        [
+          "TRUE",
+          "UNKNOWN"
+        ],
+        [
+          "TRUE"
+        ]
+      ],
+      "expected": "TRUE",
+      "claim_ref": "K03.03.02.D4.02"
+    },
+    {
+      "id": "K03.PATH05",
+      "mode": "path",
+      "input": [],
+      "expected": "REJECT_EMPTY_PATH",
+      "claim_ref": "K03.03.02.D4.02"
+    },
+    {
+      "id": "K03.PATH06",
+      "mode": "path",
+      "input": [
+        []
+      ],
+      "expected": "REJECT_EMPTY_PATH",
+      "claim_ref": "K03.03.02.D4.02"
+    },
+    {
+      "id": "K03.COND01",
+      "mode": "condition",
+      "input": [
+        "TRUE",
+        "TRUE"
+      ],
+      "expected": "TRUE",
+      "claim_ref": "K03.01.05.D4.02"
+    },
+    {
+      "id": "K03.COND02",
+      "mode": "condition",
+      "input": [
+        "TRUE",
+        "UNKNOWN"
+      ],
+      "expected": "UNKNOWN",
+      "claim_ref": "K03.01.05.D4.02"
+    },
+    {
+      "id": "K03.COND03",
+      "mode": "condition",
+      "input": [
+        "FALSE",
+        "UNKNOWN"
+      ],
+      "expected": "FALSE",
+      "claim_ref": "K03.01.05.D4.02"
+    },
+    {
+      "id": "K03.COND04",
+      "mode": "condition",
+      "input": [],
+      "expected": "REJECT_EMPTY_CONDITION",
+      "claim_ref": "K03.01.05.D4.02"
+    },
+    {
+      "id": "K03.KC01",
+      "mode": "signature",
+      "input": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "expected": "INDISTINGUISHABLE",
+      "claim_ref": "K03.06.01.D4.03"
+    },
+    {
+      "id": "K03.KC02",
+      "mode": "signature",
+      "input": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "expected": "DISTINCT_SIGNATURES_ONLY",
+      "claim_ref": "K03.06.01.D4.03"
+    },
+    {
+      "id": "K03.KC03",
+      "mode": "signature",
+      "input": [
+        [
+          1,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "expected": "REJECT_SHAPE",
+      "claim_ref": "K03.06.01.D4.03"
+    },
+    {
+      "id": "K03.KC04",
+      "mode": "signature",
+      "input": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "expected": "UNOBSERVED_COMPONENT",
+      "claim_ref": "K03.06.01.D4.03"
+    },
+    {
+      "id": "K03.LOG01",
+      "mode": "implication",
+      "input": {
+        "premise": "TRUE",
+        "consequent": "UNKNOWN"
+      },
+      "expected": "CONSEQUENT_FOLLOWS_UNDER_RULE",
+      "claim_ref": "K03.04.02.D4.03"
+    },
+    {
+      "id": "K03.LOG02",
+      "mode": "implication",
+      "input": {
+        "premise": "UNKNOWN",
+        "consequent": "TRUE"
+      },
+      "expected": "PREMISE_UNKNOWN",
+      "claim_ref": "K03.04.02.D4.03"
+    },
+    {
+      "id": "K03.LOG03",
+      "mode": "implication",
+      "input": {
+        "premise": "TRUE",
+        "consequent": "FALSE"
+      },
+      "expected": "CONFLICT_WITH_RULE",
+      "claim_ref": "K03.04.02.D4.03"
+    }
+  ]
+}

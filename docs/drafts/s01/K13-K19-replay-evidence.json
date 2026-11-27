@@ -1,0 +1,24 @@
+{
+  "status": "BUILDER_REPLAY_PASS_SCOPED",
+  "owner": "K17",
+  "tested_head": "f93ac49e92a0e63fd577ce37220e4d3227ebd5d7",
+  "job_id": "job_01M8C9MEGN00F7505XM29PDDN9",
+  "server": "aliyun-sg",
+  "node": "v24.21.0",
+  "exit_code": 0,
+  "syntax_check": "PASS",
+  "blob_checks": [
+    {
+      "path": "K17/validate-synthetic.mjs",
+      "sha": "c791d1fbcd0354aaeea592ac60d7b81aab22f626"
+    },
+    {
+      "path": "K17/logic-evidence.json",
+      "sha": "69c601fa75201b7963b3152a8a4ddeba3a65187b"
+    }
+  ],
+  "passed": 13,
+  "total": 13,
+  "independent_oracle": false,
+  "limits": "同13项回放，非新增13项；标准化、逆方差和识别守卫，不证明实际因果或专业资格；其他六模块有限逻辑NOT_RUN。"
+}

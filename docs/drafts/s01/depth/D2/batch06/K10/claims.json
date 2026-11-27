@@ -1,0 +1,242 @@
+{
+  "owner": "K10",
+  "base": "1e2796240fae404cc614081c2e6e8d6a2e659932",
+  "prior_claim_blob": "e977598c4e8cd0019ce0113a186c56bf9e26132a",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K10.05.05.D4.03",
+      "owner": "K10",
+      "d3_id": "K10.05.05",
+      "requirement_id": "K10.05.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "能力推断需区分目标构念、任务要求和证据解释；非目标知识也可能影响表现。多状态耦合需明确联合分布与观测似然，ECD本身不提供该参数。",
+      "conditions": [
+        "部分支持；耦合模型另证"
+      ],
+      "negative_boundary": "不能从同题正确唯一反推多个能力已习得。",
+      "source_refs": [
+        "K10-B06-ECD"
+      ],
+      "source_locator": "l389–400",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.05.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两个目标组件同题作答",
+        "expected": "联合参数未知，保持待核",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.05.05.D4.04",
+      "owner": "K10",
+      "d3_id": "K10.05.05",
+      "requirement_id": "K10.05.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "对于任务所需但非测量焦点的能力，可将其列为控制条件或明确纳入构念；不能将未记录的支持等同独立表现。",
+      "conditions": [
+        "任务设计层，部分支持"
+      ],
+      "negative_boundary": "不得将帮助后的成功直接分摊给所有组件。",
+      "source_refs": [
+        "K10-B06-ECD"
+      ],
+      "source_locator": "l398–400",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.05.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "阅读说明时给词汇解释",
+        "expected": "独立词汇证据未知",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.06.02.D4.03",
+      "owner": "K10",
+      "d3_id": "K10.06.02",
+      "requirement_id": "K10.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "二分类无权重AUC可按正负样本对的胜数与一半平局数除以正负样本对总数计算；缺任一类别未定义。",
+      "conditions": [
+        "同目标标签、有限分数及固定平局约定"
+      ],
+      "negative_boundary": "不衡量概率可靠性或单一阈值收益。",
+      "source_refs": [
+        "K10-B06-ROC"
+      ],
+      "source_locator": "pp868–869",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "正分数.9,.5；负.5,.1",
+        "expected": "AUC=.875",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.06.02.D4.04",
+      "owner": "K10",
+      "d3_id": "K10.06.02",
+      "requirement_id": "K10.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "高总体AUC模型可能在特定误报率区域表现较差；严格单调分数变换不改变排序AUC。",
+      "conditions": [
+        "数学推论，单调变换保序"
+      ],
+      "negative_boundary": "不凭AUC确定学习调度阈值。",
+      "source_refs": [
+        "K10-B06-ROC"
+      ],
+      "source_locator": "p868 Fig8",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "同排序分数.9,.1改为.6,.4",
+        "expected": "AUC相同，概率含义不同",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.06.04.D4.03",
+      "owner": "K10",
+      "d3_id": "K10.06.04",
+      "requirement_id": "K10.06.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "区分输入边际分布变化与给定输入的标签条件分布变化；只有无标签输入日志不能直接识别后者。",
+      "conditions": [
+        "采用该综述术语，标签身份和采集条件固定"
+      ],
+      "negative_boundary": "报警不等于模型失效或学习者能力改变。",
+      "source_refs": [
+        "K10-B06-DRIFT"
+      ],
+      "source_locator": "l375–377",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.06.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "新题型占比升高但无后测",
+        "expected": "记录输入变化，不推断条件漂移",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.06.04.D4.04",
+      "owner": "K10",
+      "d3_id": "K10.06.04",
+      "requirement_id": "K10.06.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "当标签或评分规则改变时，应先核测量身份，再讨论分布变化；同一正确率变化可有不同来源。",
+      "conditions": [
+        "项目操作化；非检测器定理"
+      ],
+      "negative_boundary": "不能把评分版本变化直接当遗忘。",
+      "source_refs": [
+        "K10-B06-DRIFT"
+      ],
+      "source_locator": "l375–377",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.06.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "新评分量规导致通过率改变",
+        "expected": "隔离版本并复测",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.06.05.D4.03",
+      "owner": "K10",
+      "d3_id": "K10.06.05",
+      "requirement_id": "K10.06.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "多KC题目展开时若把同次作答的真值作为后一KC预测输入，会造成标签泄漏；同一题次应共享预测截止点。",
+      "conditions": [
+        "限定下一题作答预测；同题内逐步骤真实观察另设任务"
+      ],
+      "negative_boundary": "不能把多条KC映射当多个独立作答。",
+      "source_refs": [
+        "K10-B06-PYKT"
+      ],
+      "source_locator": "p8 Observation2",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.06.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "Q1同时绑定A/B；预测B时读取Q1结果",
+        "expected": "拒绝该预测输入",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.06.05.D4.04",
+      "owner": "K10",
+      "d3_id": "K10.06.05",
+      "requirement_id": "K10.06.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "一步预测与多步预测的可用历史不同；基准按学生划分并记录数据清理、时序、题目到KC展开。",
+      "conditions": [
+        "该论文基准；不同部署目标可需其他划分"
+      ],
+      "negative_boundary": "不能用随机响应划分声称新学习者泛化。",
+      "source_refs": [
+        "K10-B06-PYKT"
+      ],
+      "source_locator": "p6 Fig3 and §3.3.2",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.06.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "预测同学习者未来与新学习者初次",
+        "expected": "分别制定切分",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K10.06.01.D4.03",
+      "owner": "K10",
+      "d3_id": "K10.06.01",
+      "requirement_id": "K10.06.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "可靠性图按预测概率分组比较实际频率和预测均值；须报告每组样本量。Brier同时受校准、区分及结果不确定性影响。",
+      "conditions": [
+        "二分类概率、指定分箱、独立样本"
+      ],
+      "negative_boundary": "低Brier不单独证明校准更好。",
+      "source_refs": [
+        "K10-B06-CAL"
+      ],
+      "source_locator": "l74–86",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K10.06.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两个模型排序相同但概率更极端",
+        "expected": "分开比较Brier和AUC",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

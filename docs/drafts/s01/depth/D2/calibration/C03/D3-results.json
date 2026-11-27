@@ -1,0 +1,400 @@
+{
+  "execution": "DIRECT_JS_FUNCTION_IN_CODE_MODE",
+  "cases": [
+    {
+      "id": "P04-good",
+      "rule": "D3-P04",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "observed": true,
+        "interrupted": false,
+        "result": "CORRECT",
+        "assistance": "NONE",
+        "actor": "LEARNER"
+      },
+      "expected": "INDEPENDENT_OBSERVATION",
+      "actual": "INDEPENDENT_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "P04-error",
+      "rule": "D3-P04",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "observed": true,
+        "interrupted": false,
+        "result": "INCORRECT",
+        "assistance": "NONE",
+        "actor": "LEARNER"
+      },
+      "expected": "INDEPENDENT_OBSERVATION",
+      "actual": "INDEPENDENT_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "P04-hint",
+      "rule": "D3-P04",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "observed": true,
+        "interrupted": false,
+        "result": "CORRECT",
+        "assistance": "HINT",
+        "actor": "LEARNER"
+      },
+      "expected": "ASSISTED_OR_EXTERNAL_ONLY",
+      "actual": "ASSISTED_OR_EXTERNAL_ONLY",
+      "pass": true
+    },
+    {
+      "id": "P04-interrupt",
+      "rule": "D3-P04",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "observed": true,
+        "interrupted": true,
+        "result": "CORRECT",
+        "assistance": "NONE",
+        "actor": "LEARNER"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P04-external",
+      "rule": "D3-P04",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "observed": true,
+        "interrupted": false,
+        "result": "CORRECT",
+        "assistance": "NONE",
+        "actor": "EXTERNAL"
+      },
+      "expected": "ASSISTED_OR_EXTERNAL_ONLY",
+      "actual": "ASSISTED_OR_EXTERNAL_ONLY",
+      "pass": true
+    },
+    {
+      "id": "P04-unknown",
+      "rule": "D3-P04",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "observed": true,
+        "interrupted": false,
+        "result": "CORRECT",
+        "assistance": null,
+        "actor": "LEARNER"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P05-retention",
+      "rule": "D3-P05",
+      "input": {
+        "targetMatch": true,
+        "independent": true,
+        "versionMatch": true,
+        "feedbackDuring": false,
+        "rubricMatch": true,
+        "repeatedItem": false,
+        "elapsedVerified": true,
+        "newContext": false,
+        "delayCriterionMet": true
+      },
+      "expected": "RETENTION_CANDIDATE",
+      "actual": "RETENTION_CANDIDATE",
+      "pass": true
+    },
+    {
+      "id": "P05-transfer",
+      "rule": "D3-P05",
+      "input": {
+        "targetMatch": true,
+        "independent": true,
+        "versionMatch": true,
+        "feedbackDuring": false,
+        "rubricMatch": true,
+        "repeatedItem": false,
+        "elapsedVerified": true,
+        "newContext": true,
+        "delayCriterionMet": true,
+        "transferDesignVerified": true
+      },
+      "expected": "TRANSFER_CANDIDATE",
+      "actual": "TRANSFER_CANDIDATE",
+      "pass": true
+    },
+    {
+      "id": "P05-repeat",
+      "rule": "D3-P05",
+      "input": {
+        "targetMatch": true,
+        "independent": true,
+        "versionMatch": true,
+        "feedbackDuring": false,
+        "rubricMatch": true,
+        "repeatedItem": true,
+        "elapsedVerified": true,
+        "newContext": false,
+        "delayCriterionMet": true
+      },
+      "expected": "REPEAT_ONLY",
+      "actual": "REPEAT_ONLY",
+      "pass": true
+    },
+    {
+      "id": "P05-correction",
+      "rule": "D3-P05",
+      "input": {
+        "targetMatch": true,
+        "independent": true,
+        "versionMatch": true,
+        "feedbackDuring": true,
+        "rubricMatch": true,
+        "repeatedItem": false,
+        "elapsedVerified": true,
+        "newContext": false,
+        "delayCriterionMet": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P05-no-time",
+      "rule": "D3-P05",
+      "input": {
+        "targetMatch": true,
+        "independent": true,
+        "versionMatch": true,
+        "feedbackDuring": false,
+        "rubricMatch": true,
+        "repeatedItem": false,
+        "elapsedVerified": false,
+        "newContext": false,
+        "delayCriterionMet": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P05-target",
+      "rule": "D3-P05",
+      "input": {
+        "targetMatch": false,
+        "independent": true,
+        "versionMatch": true,
+        "feedbackDuring": false,
+        "rubricMatch": true,
+        "repeatedItem": false,
+        "elapsedVerified": true,
+        "newContext": false,
+        "delayCriterionMet": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P06-hint",
+      "rule": "D3-P06",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "choice": "ACCEPT",
+        "budgetAvailable": true,
+        "support": "HINT"
+      },
+      "expected": "OFFER_SELECTED_SUPPORT",
+      "actual": "OFFER_SELECTED_SUPPORT",
+      "pass": true
+    },
+    {
+      "id": "P06-encourage",
+      "rule": "D3-P06",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "choice": "ACCEPT",
+        "budgetAvailable": true,
+        "support": "ENCOURAGEMENT"
+      },
+      "expected": "OFFER_SELECTED_SUPPORT",
+      "actual": "OFFER_SELECTED_SUPPORT",
+      "pass": true
+    },
+    {
+      "id": "P06-exit",
+      "rule": "D3-P06",
+      "input": {
+        "exit": true,
+        "permission": true,
+        "choice": "ACCEPT",
+        "budgetAvailable": true,
+        "support": "HINT"
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "pass": true
+    },
+    {
+      "id": "P06-decline",
+      "rule": "D3-P06",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "choice": "DECLINE",
+        "budgetAvailable": true,
+        "support": "HINT"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P06-budget",
+      "rule": "D3-P06",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "choice": "ACCEPT",
+        "budgetAvailable": false,
+        "support": "HINT"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P06-unknown",
+      "rule": "D3-P06",
+      "input": {
+        "exit": false,
+        "permission": null,
+        "choice": "ACCEPT",
+        "budgetAvailable": true,
+        "support": "HINT"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P07-new",
+      "rule": "D3-P07",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "eventId": "e1",
+        "payloadDigest": "d1",
+        "priorDigest": null,
+        "evidenceRoute": "INDEPENDENT_OBSERVATION"
+      },
+      "expected": "UPDATE_CANDIDATE_ONLY",
+      "actual": "UPDATE_CANDIDATE_ONLY",
+      "pass": true
+    },
+    {
+      "id": "P07-dup",
+      "rule": "D3-P07",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "eventId": "e1",
+        "payloadDigest": "d1",
+        "priorDigest": "d1",
+        "evidenceRoute": "INDEPENDENT_OBSERVATION"
+      },
+      "expected": "DUPLICATE_NO_UPDATE",
+      "actual": "DUPLICATE_NO_UPDATE",
+      "pass": true
+    },
+    {
+      "id": "P07-conflict",
+      "rule": "D3-P07",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "eventId": "e1",
+        "payloadDigest": "d1",
+        "priorDigest": "d2",
+        "evidenceRoute": "INDEPENDENT_OBSERVATION"
+      },
+      "expected": "CONFLICT_HOLD",
+      "actual": "CONFLICT_HOLD",
+      "pass": true
+    },
+    {
+      "id": "P07-stale",
+      "rule": "D3-P07",
+      "input": {
+        "permission": true,
+        "versionMatch": false,
+        "targetMatch": true,
+        "eventId": "e1",
+        "payloadDigest": "d1",
+        "priorDigest": null,
+        "evidenceRoute": "INDEPENDENT_OBSERVATION"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P07-assist",
+      "rule": "D3-P07",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "eventId": "e1",
+        "payloadDigest": "d1",
+        "priorDigest": null,
+        "evidenceRoute": "ASSISTED_OR_EXTERNAL_ONLY"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "P07-missing",
+      "rule": "D3-P07",
+      "input": {
+        "permission": true,
+        "versionMatch": true,
+        "targetMatch": true,
+        "eventId": "",
+        "payloadDigest": "d1",
+        "priorDigest": null,
+        "evidenceRoute": "INDEPENDENT_OBSERVATION"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    }
+  ],
+  "passed": 24,
+  "failed": 0,
+  "additional_chain": {
+    "input": "assisted observation -> state candidate",
+    "actual": "HOLD",
+    "expected": "HOLD",
+    "pass": true
+  },
+  "runner_file_replay": "NOT_RUN",
+  "independent_oracle": false
+}

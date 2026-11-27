@@ -1,0 +1,254 @@
+{
+  "schema_version": "candidate-reference-mapping-1",
+  "status": "DB01_INVESTIGATION_NOT_FROZEN_SCHEMA",
+  "version": "6fcd93a6cd74c22e9b002613bfad3d0f2a4a1fae",
+  "source_tree": "10ee6e1ea608d9f2c67b8dbd631b63bd0777fb13",
+  "identity": {
+    "typed_ref_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "prefixItems": [
+        {
+          "type": "string",
+          "enum": [
+            "evidence",
+            "learning-core",
+            "chinese",
+            "learning-process",
+            "research-overlay"
+          ]
+        },
+        {
+          "type": "string",
+          "const": "6fcd93a6cd74c22e9b002613bfad3d0f2a4a1fae"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "CASE",
+            "SOURCE_RECORD",
+            "TOPIC",
+            "REQUIREMENT",
+            "CLAIM",
+            "LOCATOR",
+            "VALIDATION_DESIGN",
+            "VIEW",
+            "VIEW_REQUIREMENT",
+            "RELATION"
+          ]
+        },
+        {
+          "type": "string",
+          "minLength": 1
+        }
+      ],
+      "items": false
+    },
+    "columns": [
+      "package_id",
+      "exact_candidate_version",
+      "kind",
+      "stable_id"
+    ],
+    "note": "Current witness uses exact candidate snapshot. Future canonical package manifest binds per-package version and content/manifest digest; no transitive dependency fallback, no bare ID, no public release by this tuple alone. Version is not claim qualification."
+  },
+  "packages": [
+    {
+      "id": "evidence",
+      "direct_dependencies": [],
+      "kinds": [
+        "SOURCE_RECORD"
+      ],
+      "boundary": "source identity record, not verified independent paper or rights"
+    },
+    {
+      "id": "learning-core",
+      "direct_dependencies": [
+        "evidence"
+      ],
+      "kinds": [
+        "TOPIC",
+        "REQUIREMENT",
+        "CLAIM",
+        "LOCATOR",
+        "CASE",
+        "VALIDATION_DESIGN"
+      ]
+    },
+    {
+      "id": "chinese",
+      "direct_dependencies": [
+        "evidence"
+      ],
+      "kinds": [
+        "TOPIC",
+        "REQUIREMENT",
+        "CLAIM",
+        "LOCATOR",
+        "CASE",
+        "VALIDATION_DESIGN"
+      ]
+    },
+    {
+      "id": "learning-process",
+      "direct_dependencies": [
+        "learning-core",
+        "chinese"
+      ],
+      "kinds": [
+        "VIEW",
+        "VIEW_REQUIREMENT"
+      ],
+      "boundary": "current combined finite view; later split routes as needed, no implicit evidence loading"
+    },
+    {
+      "id": "research-overlay",
+      "direct_dependencies": [
+        "learning-core",
+        "chinese",
+        "learning-process"
+      ],
+      "kinds": [
+        "RELATION"
+      ],
+      "boundary": "research relationship only; no accepted knowledge or transitive closure"
+    }
+  ],
+  "excluded_packages": [
+    {
+      "id": "private-hsk-staging",
+      "rule": "private original fields and geometry; no public resolver entry until approved source and actual migration; never infer HSK member equals lexeme/sense"
+    },
+    {
+      "id": "learner",
+      "rule": "authorized xLearn operational store, not public knowledge package; no user observations in repository"
+    }
+  ],
+  "table_mapping": [
+    [
+      "SOURCE_RECORD",
+      "sources",
+      "source ID, title, URL, recorded access, source-level locator, rights and qualification",
+      "actual source record, no duplicate publication identity inference"
+    ],
+    [
+      "LOCATOR",
+      "claim_source_locator",
+      "claim ID/source ID, claim locator field or explicit missing, source locator, attribution state",
+      "candidate association only; source-level locator cannot substitute"
+    ],
+    [
+      "TOPIC",
+      "topics",
+      "stable topic ID, owner, original coverage and taxonomy provenance",
+      "scope relation, not prerequisites"
+    ],
+    [
+      "REQUIREMENT",
+      "requirements",
+      "ID, D3 owner, research requirement, negative boundary, source leads",
+      "no qualification by inventory"
+    ],
+    [
+      "CLAIM",
+      "claims",
+      "ID, owner, topic, requirement, kind, statement, conditions, negative boundary, status, evidence/source binding, optional refinement/example",
+      "original row is authoritative; superseded old records retain history; active view excludes three"
+    ],
+    [
+      "CASE",
+      "case_specs",
+      "ID, topic, original synthetic fixture, four views, explicit claim refs and status",
+      "not execution; no topic-level auto-assignment"
+    ],
+    [
+      "VALIDATION_DESIGN",
+      "validation_specs",
+      "case ID, expected, explicit claim ref, saved result pointer if present",
+      "33 explicit arithmetic cases; historical builder result not independent"
+    ],
+    [
+      "VIEW",
+      "composition_views",
+      "ID, contract, dependencies, inputs, outputs, selection, fail-closed, context",
+      "R3/R5 overlays are candidate only; runtime not included"
+    ],
+    [
+      "VIEW_REQUIREMENT",
+      "view_requirements",
+      "view ID/requirement ID, original scope, current map pointer and prior map, status",
+      "108 requirement slots not formal passes"
+    ],
+    [
+      "RELATION",
+      "relation_candidates",
+      "ID, type, typed endpoints, conditions, negative boundary, claim refs, status",
+      "D3G-R15 replacement via R1; no implicit inverse, transitivity or entailment"
+    ]
+  ],
+  "relationship_types": {
+    "HAS_REQUIREMENT": [
+      "TOPIC",
+      "REQUIREMENT"
+    ],
+    "HAS_CLAIM": [
+      "TOPIC",
+      "CLAIM"
+    ],
+    "RECORDED_REFINEMENT": [
+      "CLAIM",
+      "CLAIM"
+    ],
+    "CITES_RECORDED_SOURCE": [
+      "CLAIM",
+      "SOURCE_RECORD"
+    ],
+    "HAS_LOCATOR": [
+      "CLAIM",
+      "LOCATOR"
+    ],
+    "LOCATES_SOURCE": [
+      "LOCATOR",
+      "SOURCE_RECORD"
+    ],
+    "HAS_CASE_CANDIDATE": [
+      "CLAIM",
+      "CASE"
+    ],
+    "BINDS_CLAIM_CANDIDATE": [
+      "VIEW",
+      "CLAIM"
+    ],
+    "HAS_VIEW_REQUIREMENT": [
+      "VIEW",
+      "VIEW_REQUIREMENT"
+    ],
+    "SEMANTIC_FROM": [
+      "RELATION",
+      "TOPIC"
+    ],
+    "SEMANTIC_TO": [
+      "RELATION",
+      "TOPIC"
+    ],
+    "SEMANTIC_CLAIM_CANDIDATE": [
+      "RELATION",
+      "CLAIM"
+    ],
+    "HAS_VALIDATION_DESIGN": [
+      "CLAIM",
+      "VALIDATION_DESIGN"
+    ],
+    "SUPERSESSION_CANDIDATE": [
+      "CLAIM",
+      "CLAIM"
+    ]
+  },
+  "sql_design": "Each logical package can map to tables with registry key (package_id,version,kind,stable_id); local FK per connection, explicit external typed ref+manifest digest for cross-package; duplicate key and unknown kind reject. Store conditions/cases by typed structured fields, not unbounded script; keep raw data separated from normalized. Publication pointer immutable manifest and single writer per D014. This is mapping design only, no DDL/import/physical activation run.",
+  "unimplemented": [
+    "Full kind-specific canonical JSON/JSONL schemas including professional linguistic and mathematical objects, flow/activity/event guard definitions and scope authorization; actual canonical field adapters and manifest digest resolver, private HSK migration and release qualification; DB02/DB03/G04 not dispatched.",
+    "Static Python witness reads candidate input and derived coverage indices; not actual persisted graph or runtime/authentication. No inferred claim qualification."
+  ]
+}

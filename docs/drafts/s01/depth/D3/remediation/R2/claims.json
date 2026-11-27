@@ -1,0 +1,773 @@
+{
+  "status": "R2_SUPPLEMENT_OVERLAY_NOT_FORMAL_KNOWLEDGE",
+  "records": [
+    {
+      "stable_id": "K15.02.01.R2.01",
+      "owner": "K15",
+      "d3_id": "K15.02.01",
+      "requirement_id": "K15.02.01.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "ITS领域模型表示任务领域中所需知识、技能和策略，可包含错误规则或误概念候选；它不是特定学习者的当前状态。",
+      "conditions": [
+        "限定于该ITS架构概述；领域表示的粒度由目标任务决定。"
+      ],
+      "negative_boundary": "同一个分数比较规则属于领域模型；甲会不会比较是学习者模型估计。不能将某个学生的错误直接升为有效知识。",
+      "source_refs": [
+        "R2-S01"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "3/5与2/3的比较涉及分数大小关系和通分策略；错误规则“只比数字大小”可作为诊断候选，不是正确数学规则。",
+        "expected": "DOMAIN_MODEL_SEPARATE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "ITS domain model, lines8–9",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K15.02.02.R2.02",
+      "owner": "K15",
+      "d3_id": "K15.02.02",
+      "requirement_id": "K15.02.02.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "教学模型使用领域模型与学习者模型选择教学动作；交互可以由学习者主动发起，动作不只包括给题也包括等待、提示和反馈。",
+      "conditions": [
+        "ITS架构概述，不要求每种系统物理拆分成四组件。"
+      ],
+      "negative_boundary": "教学动作或策略不直接成为学习者的知识事实；一次选择不能证明教学最优。",
+      "source_refs": [
+        "R2-S01"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "同一比较规则，对初学者先示范，对已有独立正确证据者安排变式提取；允许两人拒绝提示。",
+        "expected": "TUTOR_MODEL_CONDITIONAL",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "ITS pedagogical model, lines12–13",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K15.02.03.R2.03",
+      "owner": "K15",
+      "d3_id": "K15.02.03",
+      "requirement_id": "K15.02.03.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "学习者模型根据观测推断与学习有关的状态；交互界面负责采集并呈现行为，模型估计、原始行为和教学动作应区分。",
+      "conditions": [
+        "架构层面的语义区分；不假设所有心理状态可可靠测量。"
+      ],
+      "negative_boundary": "输入错误可能源于界面或构念外负担，不能自动判为知识缺失。",
+      "source_refs": [
+        "R2-S01"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "一次未提交答案因网络中断，原观测缺失；不能产生未掌握估计，先恢复任务。",
+        "expected": "OBSERVATION_ESTIMATE_DISTINCT",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "ITS student/interface model, lines10–15",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K03.03.02.R2.04",
+      "owner": "K03",
+      "d3_id": "K03.03.02",
+      "requirement_id": "K03.03.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "前置必要性是相对于指定目标和允许路径的条件：若存在一条不使用A仍可达到目标B的可行路径，则A不是该范围内的必要前置。推荐顺序不要求这种排他性。",
+      "conditions": [
+        "逻辑定义及原创推导；不能从此证明任何具体学科必要先修。"
+      ],
+      "negative_boundary": "图中路径、教材先后或一次失败都不足以证明必要性。",
+      "source_refs": [],
+      "evidence_status": "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION",
+      "case": {
+        "input": "通分不是比较3/5和2/3的唯一方法：交叉乘积或同单位数轴均可比较；因此不能将通分算法列为唯一必要前置。",
+        "expected": "COUNTEREXAMPLE_REJECTS_NECESSITY",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K06.01.01.R2.05",
+      "owner": "K06",
+      "d3_id": "K06.01.01",
+      "requirement_id": "K06.01.01.RQ01",
+      "claim_type": "METHOD",
+      "statement": "需求分析须把目标能力、当前证据和可能的环境障碍分开；当构念外障碍阻止表现时，先改变障碍并重测，不能直接安排补教。",
+      "conditions": [
+        "从测量三角推导的教学设计应用；非独立干预效果。"
+      ],
+      "negative_boundary": "不能凭一次错误判定教学需求。",
+      "source_refs": [
+        "R2-S03"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "书面分数比较失败但屏幕无法读出分数，先提供等价可访问表示；若仍错误再探查等分或大小。",
+        "expected": "DISCRIMINATING_NEEDS_ANALYSIS",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "Assessment triangle, cognition/observation, pp45,48–49",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K07.01.02.R2.06",
+      "owner": "K07",
+      "d3_id": "K07.01.02",
+      "requirement_id": "K07.01.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "认知目标可操作化为任务所需的知识及处理方式；目标中多个成分需分别设计观察，不由最高层级标签替代。",
+      "conditions": [
+        "测量三角支持目标—观察协调；原Bloom分类来源另保留。"
+      ],
+      "negative_boundary": "能够背诵算法不证明能选择适用算法。",
+      "source_refs": [
+        "R2-S03"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "分别测说出分母含义、计算比较、解释为何改变分子分母不改变数值。三者可独立通过或失败。",
+        "expected": "SEPARATE_RUBRIC_DIMENSIONS",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "Assessment triangle, cognition, observation and interpretation, pp44–51",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K09.01.01.R2.07",
+      "owner": "K09",
+      "d3_id": "K09.01.01",
+      "requirement_id": "K09.01.01.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "测量三角的认知模型描述欲推断能力，观察模型规定引出证据的任务，解释模型规定如何从表现推断；三者需相互协调。",
+      "conditions": [
+        "NRC 2001 框架；本例量规未校准。"
+      ],
+      "negative_boundary": "分数相同不等于相同构念证据。",
+      "source_refs": [
+        "R2-S03"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "选择题答对可支持辨认；无提示生成交易句并正确解释角色才是不同的产出观察，不能直接把前者计作后者。",
+        "expected": "ASSESSMENT_TRIANGLE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "Assessment triangle, pp44–51",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K11.01.01.R2.08",
+      "owner": "K11",
+      "d3_id": "K11.01.01",
+      "requirement_id": "K11.01.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "有限POMDP用状态、行动、转移、观测与回报描述决策；信念分布依历史和模型更新，最优性只相对于所定义的模型目标。",
+      "conditions": [
+        "有限离散、给定模型；未估计真实学习转移。"
+      ],
+      "negative_boundary": "模型中的隐藏状态或奖励不是观测到的教育效果。",
+      "source_refs": [
+        "R2-S06"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "同一独立错题在有歧义任务和无歧义任务下具有不同观测似然；缺失似然不任意更新。",
+        "expected": "MODEL_CONDITIONAL_BELIEF",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "POMDP discrete model, belief state and update, lines17–24",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K11.01.03.R2.09",
+      "owner": "K11",
+      "d3_id": "K11.01.03",
+      "requirement_id": "K11.01.03.RQ01",
+      "claim_type": "MATHEMATICAL_DERIVATION",
+      "statement": "在有限动作集先过滤硬约束，再比较明确目标的可行项；若目标包括保持与时间，必须说明量纲、权重或Pareto比较。",
+      "conditions": [
+        "原创有限决策定义；权重仅演示，非学习效用估计。"
+      ],
+      "negative_boundary": "不存在独立于目标与约束的最优策略。",
+      "source_refs": [],
+      "evidence_status": "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION",
+      "case": {
+        "input": "A估计收益3成本2，B收益4成本5，预算4时仅A可行；预算5时若收益减0.5×成本，A=2、B=1.5，改权重可逆转。",
+        "expected": "FEASIBLE_THEN_OBJECTIVE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.01.R2.10",
+      "owner": "K11",
+      "d3_id": "K11.02.01",
+      "requirement_id": "K11.02.01.RQ01",
+      "claim_type": "METHOD",
+      "statement": "到期规则根据保持目标与估计到期时间排序只是一种启发式；学习效率还受提取失败造成的重学成本和实践机会影响。",
+      "conditions": [
+        "KLI §5.1.2，未估计个体收益或最优日程。"
+      ],
+      "negative_boundary": "最早到期不一定是全局最优，预测值不能代替实际保持。",
+      "source_refs": [
+        "R2-S02"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "相同到期时点，A需1分钟且目标必测，B需10分钟且低优先；3分钟预算仅A可行，B延期。",
+        "expected": "DUE_HEURISTIC_NOT_OPTIMUM",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "KLI §5.1.2 Optimized scheduling",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K11.03.02.R2.11",
+      "owner": "K11",
+      "d3_id": "K11.03.02",
+      "requirement_id": "K11.03.02.RQ01",
+      "claim_type": "MATHEMATICAL_DERIVATION",
+      "statement": "给定有限组件集合和任务覆盖集合，新增覆盖可计算为|C(a)\\\\U|，U为已覆盖集合；优化目标可为覆盖权重，但覆盖只说明被安排或采样。",
+      "conditions": [
+        "集合推导，假设任务—组件映射已确认。"
+      ],
+      "negative_boundary": "不从覆盖直接推断学习或掌握。",
+      "source_refs": [],
+      "evidence_status": "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION",
+      "case": {
+        "input": "U={词义}，A覆盖词义和句法，B仅词义，则A新增1、B新增0；若A超预算仍不得选择。",
+        "expected": "COVERAGE_NOT_MASTERY",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.04.R2.12",
+      "owner": "K11",
+      "d3_id": "K11.06.04",
+      "requirement_id": "K11.06.04.RQ01",
+      "claim_type": "METHOD",
+      "statement": "若两个可行方案在不同目标上各有优势且无授权权重，应呈现Pareto不可比较选项并询问价值排序。",
+      "conditions": [
+        "原创多目标决策定义；不代表效益已被校准。"
+      ],
+      "negative_boundary": "不能把无权重解释为所有指标等权。",
+      "source_refs": [],
+      "evidence_status": "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION",
+      "case": {
+        "input": "A支持词义保持估计高但耗时多，B保留数学复习时间；当用户未选优先目标，不自动覆盖选择。",
+        "expected": "PARETO_NO_IMPLICIT_WEIGHTS",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K12.01.01.R2.13",
+      "owner": "K12",
+      "d3_id": "K12.01.01",
+      "requirement_id": "K12.01.01.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "学习资源是呈现材料，任务是要求产生响应的活动规格，知识组件是目标能力模型内的内容单位；同一资源可支持多个任务，任务及量规需分别定义。",
+      "conditions": [
+        "根据认知与观察模型区分的原创应用；资源标准历史引用不扩张。"
+      ],
+      "negative_boundary": "阅读资源完成不等于任务得分或知识获得。",
+      "source_refs": [
+        "R2-S03"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "一张交易角色图可用于词义辨认或独立造句；给出图中答案的辨认不能替代独立生成。",
+        "expected": "RESOURCE_TASK_COMPONENT_DISTINCT",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "Assessment triangle, observations and cognition, pp45,48–49",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K12.03.05.R2.14",
+      "owner": "K12",
+      "d3_id": "K12.03.05",
+      "requirement_id": "K12.03.05.RQ01",
+      "claim_type": "METHOD",
+      "statement": "当题干允许多个符合目标及语境的解释时，评分规则必须明确可接受集合或限制语境；若无法区分则该观测不能用于唯一错误归因。",
+      "conditions": [
+        "测量三角方法应用；未试测量规。"
+      ],
+      "negative_boundary": "不能将歧义造成的低分解释为知识缺失。",
+      "source_refs": [
+        "R2-S03"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "“他___了一本书”在无买卖角色信息时买/卖均合理；加入付款并取得书的情境后才允许按目标义项评分。",
+        "expected": "AMBIGUITY_HOLD",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "Assessment triangle, observation/interpretation, pp48–51",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K12.04.02.R2.15",
+      "owner": "K12",
+      "d3_id": "K12.04.02",
+      "requirement_id": "K12.04.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "反例是满足命题前提却使结论不成立的实例；若前提不成立只能说明范围不适用，不能反驳原限定命题。",
+      "conditions": [
+        "逻辑定义；仅演绎全称命题的反证。"
+      ],
+      "negative_boundary": "单一反例不能否定限定于平均效应的统计命题。",
+      "source_refs": [],
+      "evidence_status": "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION",
+      "case": {
+        "input": "“分母越大分数越小”在同正分子时成立；2/3>1/2不满足同分子条件，因此不是该限定规则的反例，却反驳无条件版本。",
+        "expected": "COUNTEREXAMPLE_SCOPE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K14.03.01.R2.16",
+      "owner": "K14",
+      "d3_id": "K14.03.01",
+      "requirement_id": "K14.03.01.RQ01",
+      "claim_type": "METHOD",
+      "statement": "科学探究可通过操纵一个待检因素并保持其他相关条件可比，记录结果与竞争解释；指导方式须与目标知识的性质相匹配。",
+      "conditions": [
+        "KLI §5.2.1所述控制变量教学；原创例仅方法演示。"
+      ],
+      "negative_boundary": "自由改变多因素无法单独识别某一因素作用。",
+      "source_refs": [
+        "R2-S02"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "两个同材料小车斜面实验，坡度与载重同时改变无法区分；固定载重改变坡度，仍需重复与测量条件。",
+        "expected": "CONFOUNDED_CONTRAST",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "KLI §5.2.1 control of variables example",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K15.03.02.R2.17",
+      "owner": "K15",
+      "d3_id": "K15.03.02",
+      "requirement_id": "K15.03.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "指标的含义依所定义的观测、分母和解释目的；同一数值可以由不同缺失处理产生。",
+      "conditions": [
+        "原创测量应用，未估计测量信效度。"
+      ],
+      "negative_boundary": "正确率、参与率与掌握不能混用。",
+      "source_refs": [
+        "R2-S03"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "8正确、2错误、2缺失：已观察正确率8/10，全部任务完成率10/12；不能将8/12默认为同一正确率。",
+        "expected": "DENOMINATOR_SEPARATION",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "Assessment triangle, observations and interpretation, pp48–51",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K15.04.02.R2.18",
+      "owner": "K15",
+      "d3_id": "K15.04.02",
+      "requirement_id": "K15.04.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "知识检索命中只建立被检索记录与查询之间的匹配候选；支持结论还需验证记录中的命题、条件、来源和冲突。",
+      "conditions": [
+        "原创知识检索推理约束，不是检索模型效果实证。"
+      ],
+      "negative_boundary": "相似度不等同真值或权威资格。",
+      "source_refs": [],
+      "evidence_status": "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION",
+      "case": {
+        "input": "检索到分母越大越小的限定规则，但题目分子不同，应拒绝无条件推导。",
+        "expected": "RETRIEVAL_NOT_ENTAILMENT",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K15.05.05.R2.19",
+      "owner": "K15",
+      "d3_id": "K15.05.05",
+      "requirement_id": "K15.05.05.RQ01",
+      "claim_type": "MATHEMATICAL_DERIVATION",
+      "statement": "有限决策中资源成本应按约束单位分别记录，收益须定义比较指标；同单位且权重明确才可合并效用。",
+      "conditions": [
+        "原创有限比较，不是实际成本测量。"
+      ],
+      "negative_boundary": "廉价方案不一定满足构念或可及性。",
+      "source_refs": [],
+      "evidence_status": "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION",
+      "case": {
+        "input": "音频听辨资源不可用时，文字替代不测原听辨构念，即使成本较低也不可作为等值评价。",
+        "expected": "COST_CANNOT_OVERRIDE_CONSTRUCT",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K08.01.02.R2.20",
+      "owner": "K08",
+      "d3_id": "K08.01.02",
+      "requirement_id": "K08.01.02.RQ01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "statement": "自我决定理论区分自主、胜任与关系需要；外部目标也可能被学习者自愿认同，不能把所有外在动机都视为控制。",
+      "conditions": [
+        "理论综述；具体支持效果需以实际人群和任务评价。"
+      ],
+      "negative_boundary": "拒绝奖励不证明无动机，活动量也不能直接测心理需要。",
+      "source_refs": [
+        "R2-S09"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "学习者选择购物沟通目标而非连续打卡；提供可选同伴练习、适度挑战和具体反馈，不强制奖励。",
+        "expected": "AUTONOMY_NOT_REWARD",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "Integrative motivation framework, Self-determination theory lines181–192",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K10.01.01.R2.21",
+      "owner": "K10",
+      "d3_id": "K10.01.01",
+      "requirement_id": "K10.01.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "SAKT以按序的练习—响应交互及下一练习为输入，预测其响应正确性。",
+      "conditions": [
+        "特定二分响应模型，需按原数据定义与预测时点使用。"
+      ],
+      "negative_boundary": "预测正确性不是一般掌握、事件去重或教育因果效应。",
+      "source_refs": [
+        "R2-S04"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "历史e1正确、e2错误，输入历史及新题e3；不得输入e3的实际结果作为预测特征。",
+        "expected": "PREDICTION_CUTOFF",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "SAKT §2, Table1, lines51–74",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K10.01.01.R2.22",
+      "owner": "K10",
+      "d3_id": "K10.01.01",
+      "requirement_id": "K10.01.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "项目事件记录包含稳定事件ID、任务版本、时序及原始观测；重复事件按身份去重，冲突隔离。",
+      "conditions": [
+        "项目数据合同，非SAKT研究发现。"
+      ],
+      "negative_boundary": "不能由重复日志增加独立证据。",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "case": {
+        "input": "相同event ID及相同payload重放不增加观察；同ID不同payload保留冲突。",
+        "expected": "EVENT_IDENTITY",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K15.04.01.R2.23",
+      "owner": "K15",
+      "d3_id": "K15.04.01",
+      "requirement_id": "K15.04.01.RQ01",
+      "claim_type": "GUIDELINE",
+      "statement": "UNESCO生成式AI教育指南导读将工具验证置于伦理、人的主体性及适当教学设计框架内。",
+      "conditions": [
+        "仅官方导读部分支持，未读完整指南，不推出具体法律义务。"
+      ],
+      "negative_boundary": "不能从导读推断每份生成内容已获学科审查。",
+      "source_refs": [
+        "R2-S07"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "机构拟使用生成工具，先评估教育用途及伦理风险。",
+        "expected": "GUIDANCE_SCOPE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "UNESCO landing page human-centered approach, lines87–90",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K15.04.01.R2.24",
+      "owner": "K15",
+      "d3_id": "K15.04.01",
+      "requirement_id": "K15.04.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "生成内容进入本知识库候选时必须记录来源、审查证据、内容版本及未核条件。",
+      "conditions": [
+        "项目准入策略。"
+      ],
+      "negative_boundary": "来源记录本身不构成专业资格。",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "case": {
+        "input": "AI生成买卖词义，未核义项与范围时保持候选。",
+        "expected": "CONTENT_PROVENANCE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K19.04.03.R2.25",
+      "owner": "K19",
+      "d3_id": "K19.04.03",
+      "requirement_id": "K19.04.03.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "NIST AI RMF 1.0 Manage 4.1及4.3要求框架使用者考虑部署后的反馈、申诉、覆盖控制、事故响应、恢复及错误追踪。",
+      "conditions": [
+        "自愿风险框架，非教育评分具体义务或已实施证明。"
+      ],
+      "negative_boundary": "框架存在不证明风险已被处理。",
+      "source_refs": [
+        "R2-S08"
+      ],
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "收集评分错误申诉，明确风险处置及恢复责任。",
+        "expected": "RISK_MONITORING",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_locator": "NIST AI RMF1.0 Manage4.1,4.3 lines278–282",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K19.04.03.R2.26",
+      "owner": "K19",
+      "d3_id": "K19.04.03",
+      "requirement_id": "K19.04.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "评分规则修订时依据旧版本和实际消费引用追踪受影响观测，重新评价受影响范围；未判定影响不得静默晋升。",
+      "conditions": [
+        "项目版本与纠错政策。"
+      ],
+      "negative_boundary": "一次修订不能自动证明其他历史结果有效或无效。",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "case": {
+        "input": "v1漏判同义答案，只重评实际使用v1且受规则影响的观测；无法区分则HOLD。",
+        "expected": "AFFECTED_EVIDENCE_REVIEW",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K17.04.01.R2.27",
+      "owner": "K17",
+      "d3_id": "K17.04.01",
+      "requirement_id": "K17.04.01.RQ01",
+      "claim_type": "METHOD",
+      "statement": "观察研究可以采用参与或非参与观察，记录真实行为、现场环境及研究者角色；非参与也不保证不影响现场。",
+      "conditions": [
+        "按研究问题与方法论限定；原创合成学习场景，非真实研究结果。"
+      ],
+      "negative_boundary": "不能把未观察到的意图当作事实。",
+      "source_refs": [
+        "R2-S13"
+      ],
+      "source_locator": "Data collection/Observations, lines104–108",
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "记录学习者点击反馈后是否独立改答，而非推测他是否认真；观察者在场可能改变行为。",
+        "expected": "DISTINGUISH_METHOD_AND_INFERENCE_SCOPE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K17.04.02.R2.28",
+      "owner": "K17",
+      "d3_id": "K17.04.02",
+      "requirement_id": "K17.04.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "结构化、半结构化、开放访谈在预定问题与灵活追问程度上不同；半结构化访谈用开放问题和主题指南，可随研究进展调整。",
+      "conditions": [
+        "按研究问题与方法论限定；原创合成学习场景，非真实研究结果。"
+      ],
+      "negative_boundary": "受访者的解释不是观察到的独立任务行为。",
+      "source_refs": [
+        "R2-S13"
+      ],
+      "source_locator": "Semi-structured interviews, lines109–114; Piloting lines194–195",
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "问“你怎样确定谁付钱？”再追问具体步骤；先小范围试访，避免诱导“是不是因为分不清买卖”。",
+        "expected": "DISTINGUISH_METHOD_AND_INFERENCE_SCOPE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K17.04.03.R2.29",
+      "owner": "K17",
+      "d3_id": "K17.04.03",
+      "requirement_id": "K17.04.03.RQ01",
+      "claim_type": "METHOD",
+      "statement": "质性编码将材料中的分析单元关联到定义明确的代码；初期共同建立代码含义、独立编码样本并讨论分歧可以检查应用一致性。",
+      "conditions": [
+        "按研究问题与方法论限定；原创合成学习场景，非真实研究结果。"
+      ],
+      "negative_boundary": "一致率高不保证解释有效；特定方法不一定要求一致率。",
+      "source_refs": [
+        "R2-S13"
+      ],
+      "source_locator": "Coding lines143–148; co-coding lines197–198; limits lines218",
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "将“我看不清字”和“我不知道词义”分为可访问性、自述词义困难，保存原句；若编码者分歧，修订定义再核。",
+        "expected": "DISTINGUISH_METHOD_AND_INFERENCE_SCOPE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K17.04.04.R2.30",
+      "owner": "K17",
+      "d3_id": "K17.04.04",
+      "requirement_id": "K17.04.04.RQ01",
+      "claim_type": "METHOD",
+      "statement": "质性个案研究通过限定案例及其情境、选择适合研究问题的资料及分析方法获得深入理解；个案选择与推论范围应明确。",
+      "conditions": [
+        "按研究问题与方法论限定；原创合成学习场景，非真实研究结果。"
+      ],
+      "negative_boundary": "单个案例不能直接估计总体平均因果效应。",
+      "source_refs": [
+        "R2-S14"
+      ],
+      "source_locator": "Overview of approaches, Table 1, case study section",
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "研究一个学习会话的支架渐撤失败：限定对象、任务版本及会话时间，结合观测、访谈与产出；不得推断所有学习者效果。",
+        "expected": "DISTINGUISH_METHOD_AND_INFERENCE_SCOPE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    },
+    {
+      "stable_id": "K17.04.05.R2.31",
+      "owner": "K17",
+      "d3_id": "K17.04.05",
+      "requirement_id": "K17.04.05.RQ01",
+      "claim_type": "METHOD",
+      "statement": "多方法或多来源对照可以揭示自述、文档与实际行为之间的不同；应分别分析原资料，再解释一致、互补或冲突之处。",
+      "conditions": [
+        "按研究问题与方法论限定；原创合成学习场景，非真实研究结果。"
+      ],
+      "negative_boundary": "同一原日志的多个复制件不是相互独立的证据；不把互证当因果识别。",
+      "source_refs": [
+        "R2-S13"
+      ],
+      "source_locator": "Choosing the right method, lines120–142",
+      "evidence_status": "SOURCE_LOCATED_CANDIDATE",
+      "case": {
+        "input": "教学计划说提供提示，日志无提示记录，访谈报告曾收到提示：保留冲突并核实观测条件，不以三条来源票数表决。",
+        "expected": "DISTINGUISH_METHOD_AND_INFERENCE_SCOPE",
+        "oracle": "AUTHOR_EXPECTATION_NOT_INDEPENDENT"
+      },
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "source_binding_status": "RECORDED_CANDIDATE_NOT_REVERIFIED"
+    }
+  ],
+  "split": [
+    {
+      "previous_id": "K10.01.01.D4.01",
+      "previous_statement": "知识追踪输入是按时序的任务交互历史，输出通常预测未来表现；事件身份/版本/去重是项目数据合同",
+      "replacement_ids": [
+        "K10.01.01.R2.21",
+        "K10.01.01.R2.22"
+      ],
+      "status": "SUPERSESSION_CANDIDATE_PENDING_REVIEW",
+      "historical_record_retained": true
+    },
+    {
+      "previous_id": "K15.04.01.D4.03",
+      "previous_statement": "教育机构对生成式AI工具应承担验证职责；生成内容进入知识候选需保留来源与验证记录。",
+      "replacement_ids": [
+        "K15.04.01.R2.23",
+        "K15.04.01.R2.24"
+      ],
+      "status": "SUPERSESSION_CANDIDATE_PENDING_REVIEW",
+      "historical_record_retained": true
+    },
+    {
+      "previous_id": "K19.04.03.D4.03",
+      "previous_statement": "部署后的风险管理应纳入用户反馈、申诉、覆盖、事故响应与恢复；评分纠错需追踪受影响记录。",
+      "replacement_ids": [
+        "K19.04.03.R2.25",
+        "K19.04.03.R2.26"
+      ],
+      "status": "SUPERSESSION_CANDIDATE_PENDING_REVIEW",
+      "historical_record_retained": true
+    }
+  ],
+  "historical_claim_count_unchanged": 1712
+}

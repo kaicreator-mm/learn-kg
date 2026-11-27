@@ -1,0 +1,557 @@
+{
+  "owner": "K10",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K10.01.01.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.01.01",
+      "claim_refs": [
+        "K10.01.01.D4.01",
+        "K10.01.01.D4.02"
+      ],
+      "fixture": "同一事件重复上传",
+      "views": {
+        "forward": "原事件ID去重或冲突隔离",
+        "reverse": "检查模型条件：预测时点须固定",
+        "intervention": "事件ID、时序、任务版本、动作和观测原值",
+        "counterexample": "日志存在不等于知识状态改变"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.01.02.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.01.02",
+      "claim_refs": [
+        "K10.01.02.D4.01",
+        "K10.01.02.D4.02"
+      ],
+      "fixture": "显示答案后答对",
+      "views": {
+        "forward": "不当无提示正确更新",
+        "reverse": "检查模型条件：原程序导师背景",
+        "intervention": "提示类型、次数、时机、独立性及使用证据",
+        "counterexample": "不能将提示正确合并为无提示正确"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.01.03.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.01.03",
+      "claim_refs": [
+        "K10.01.03.D4.01",
+        "K10.01.03.D4.02"
+      ],
+      "fixture": "页面打开1小时含离线",
+      "views": {
+        "forward": "记录活跃/墙钟时间与未知",
+        "reverse": "检查模型条件：HLR间隔有单位；耗时解释直接来源待补",
+        "intervention": "开始结束、暂停、离线、超时及测量单位",
+        "counterexample": "耗时长不能唯一推断困难"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.01.04.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.01.04",
+      "claim_refs": [
+        "K10.01.04.D4.01",
+        "K10.01.04.D4.02"
+      ],
+      "fixture": "答对但可能未习得",
+      "views": {
+        "forward": "保留后验及观测来源",
+        "reverse": "检查模型条件：单组件二状态",
+        "intervention": "模型定义、观测映射及后验不确定性",
+        "counterexample": "估计值不等于直接观测"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.01.05.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.01.05",
+      "claim_refs": [
+        "K10.01.05.D4.01",
+        "K10.01.05.D4.02"
+      ],
+      "fixture": "网络断开",
+      "views": {
+        "forward": "标记缺失，拒绝自动更新",
+        "reverse": "检查模型条件：缺失机制专门研究待核",
+        "intervention": "缺失机制、未知、未作答、丢包及处理规则",
+        "counterexample": "缺失不默认错误或零能力"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.02.01.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.02.01",
+      "claim_refs": [
+        "K10.02.01.D4.01",
+        "K10.02.01.D4.02"
+      ],
+      "fixture": "p=.4 G=.2 S=.1 T=.1",
+      "views": {
+        "forward": "正确q=.75，next=.775；不当作掌握",
+        "reverse": "检查模型条件：原模型无遗忘；零似然拒绝；沿用既有试点",
+        "intervention": "初始掌握、观测更新、学习转移、独立计算例",
+        "counterexample": "后验概率不等于已验证掌握"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.02.02.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.02.02",
+      "claim_refs": [
+        "K10.02.02.D4.01",
+        "K10.02.02.D4.02"
+      ],
+      "fixture": "已习得仍答错",
+      "views": {
+        "forward": "不确定是滑移还是其他原因",
+        "reverse": "检查模型条件：参数在[0,1]，可识别性待核",
+        "intervention": "条件概率、可识别性、校准和反例",
+        "counterexample": "猜测参数不等于真实意图"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.02.03.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.02.03",
+      "claim_refs": [
+        "K10.02.03.D4.01",
+        "K10.02.03.D4.02"
+      ],
+      "fixture": "先更新后练习",
+      "views": {
+        "forward": "不将T解释为因果效果",
+        "reverse": "检查模型条件：转移时序明确",
+        "intervention": "观测与转移时序、学习与遗忘扩展",
+        "counterexample": "不能把模型转移率视为因果教学效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.02.04.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.02.04",
+      "claim_refs": [
+        "K10.02.04.D4.01",
+        "K10.02.04.D4.02"
+      ],
+      "fixture": "一道题绑定A和B",
+      "views": {
+        "forward": "不默认两者都掌握",
+        "reverse": "检查模型条件：Eq3、组件映射须独立证据",
+        "intervention": "题目、技能、组件及多组件更新条件",
+        "counterexample": "未证映射不强制更新所有组件"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.03.01.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.03.01",
+      "claim_refs": [
+        "K10.03.01.D4.01",
+        "K10.03.01.D4.02"
+      ],
+      "fixture": "h=4天、Δ=8天",
+      "views": {
+        "forward": "p=.25仅回忆预测",
+        "reverse": "检查模型条件：固定h、无中间练习，Δ≥0",
+        "intervention": "指定时距、任务及提示条件下预测",
+        "counterexample": "回忆概率不等于迁移能力"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.03.02.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.03.02",
+      "claim_refs": [
+        "K10.03.02.D4.01",
+        "K10.03.02.D4.02"
+      ],
+      "fixture": "Δ=4天、p=.5",
+      "views": {
+        "forward": "h=4天，不是推荐默认值",
+        "reverse": "检查模型条件：同单位、有限数值",
+        "intervention": "时间单位、衰减函数、参数及独立算例",
+        "counterexample": "同一半衰期不适用所有材料"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.03.03.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.03.03",
+      "claim_refs": [
+        "K10.03.03.D4.01",
+        "K10.03.03.D4.02"
+      ],
+      "fixture": "模型A稳定性10与模型B半衰期10",
+      "views": {
+        "forward": "保留版本及参数语义",
+        "reverse": "检查模型条件：其他复习模型专门源待核",
+        "intervention": "模型专属定义、状态更新、版本与参数",
+        "counterexample": "不同复习模型的稳定性不可直接互换"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.03.04.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.03.04",
+      "claim_refs": [
+        "K10.03.04.D4.01",
+        "K10.03.04.D4.02"
+      ],
+      "fixture": "两材料遗忘轨迹不同",
+      "views": {
+        "forward": "不强制共享h",
+        "reverse": "检查模型条件：非普适记忆定律",
+        "intervention": "指数等候选模型、拟合、预测与适用域",
+        "counterexample": "不假设所有遗忘呈单一曲线"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.03.05.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.03.05",
+      "claim_refs": [
+        "K10.03.05.D4.01",
+        "K10.03.05.D4.02"
+      ],
+      "fixture": "训练误差很低",
+      "views": {
+        "forward": "按未来及未见学习者任务验证",
+        "reverse": "检查模型条件：原Eq3；独立分割及置信区间另核",
+        "intervention": "目标函数、可识别性、分割、区间与冷启动",
+        "counterexample": "训练拟合不证明个体校准"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.04.01.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.04.01",
+      "claim_refs": [
+        "K10.04.01.D4.01",
+        "K10.04.01.D4.02"
+      ],
+      "fixture": "β=-1 γ=.5 s=2 ρ=-.3 f=0",
+      "views": {
+        "forward": "logit0，p=.5",
+        "reverse": "检查模型条件：KC级先前成功/失败，补偿性；原式无个人截距",
+        "intervention": "成功失败计数、组件参数、logit约定及算例",
+        "counterexample": "累计次数不直接证明因果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.04.02.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.04.02",
+      "claim_refs": [
+        "K10.04.02.D4.01",
+        "K10.04.02.D4.02"
+      ],
+      "fixture": "隐藏维度响应某技能",
+      "views": {
+        "forward": "不创建未经语义验证的知识点",
+        "reverse": "检查模型条件：原p3 Eq1–2；预测目标固定",
+        "intervention": "序列输入、预测目标、训练评估和可解释性",
+        "counterexample": "隐藏向量不能直接作为知识实体"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.04.03.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.04.03",
+      "claim_refs": [
+        "K10.04.03.D4.01",
+        "K10.04.03.D4.02"
+      ],
+      "fixture": "未来作答进入注意力键",
+      "views": {
+        "forward": "拒绝未来信息",
+        "reverse": "检查模型条件：只允许可用历史",
+        "intervention": "时序注意力架构、掩码、输入输出及评估",
+        "counterexample": "注意力权重不是因果解释"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.04.04.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.04.04",
+      "claim_refs": [
+        "K10.04.04.D4.01",
+        "K10.04.04.D4.02"
+      ],
+      "fixture": "用完成后耗时预测完成前正确",
+      "views": {
+        "forward": "泄漏拒绝",
+        "reverse": "检查模型条件：特征工程合同",
+        "intervention": "时距、提示、情境、可用时间点和泄漏边界",
+        "counterexample": "未来事件不得进入过去预测"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.05.01.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.05.01",
+      "claim_refs": [
+        "K10.05.01.D4.01",
+        "K10.05.01.D4.02"
+      ],
+      "fixture": "单次算术正确",
+      "views": {
+        "forward": "不推断通用技能",
+        "reverse": "检查模型条件：目标条件与量尺固定",
+        "intervention": "技能构念、观测、状态及组合",
+        "counterexample": "单任务成功不等于普遍技能"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.05.02.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.05.02",
+      "claim_refs": [
+        "K10.05.02.D4.01",
+        "K10.05.02.D4.02"
+      ],
+      "fixture": "猜对定义题",
+      "views": {
+        "forward": "另测独立解释",
+        "reverse": "检查模型条件：替代解释及组件定义",
+        "intervention": "知识组件证据、置信与状态变化",
+        "counterexample": "答对不直接等于理解"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.05.03.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.05.03",
+      "claim_refs": [
+        "K10.05.03.D4.01",
+        "K10.05.03.D4.02"
+      ],
+      "fixture": "系统预测数学更容易",
+      "views": {
+        "forward": "不擅改汉语学习目标",
+        "reverse": "检查模型条件：项目策略而非实证",
+        "intervention": "学习者目标、自主选择、变更和版本",
+        "counterexample": "目标不由模型估计擅自替代"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.05.04.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.05.04",
+      "claim_refs": [
+        "K10.05.04.D4.01",
+        "K10.05.04.D4.02"
+      ],
+      "fixture": "经常选图片",
+      "views": {
+        "forward": "不能永久归类视觉型",
+        "reverse": "检查模型条件：项目规则；K16主责",
+        "intervention": "显式选择、可撤回及情境性",
+        "counterexample": "偏好不等于固定学习风格"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.05.05.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.05.05",
+      "claim_refs": [
+        "K10.05.05.D4.01",
+        "K10.05.05.D4.02"
+      ],
+      "fixture": "低参与与低分共现",
+      "views": {
+        "forward": "保留竞争解释，不建因果边",
+        "reverse": "检查模型条件：缺乏直接来源，待研究",
+        "intervention": "多个状态间假设、观测条件和竞争解释",
+        "counterexample": "相关状态不自动建立因果边"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.06.01.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.06.01",
+      "claim_refs": [
+        "K10.06.01.D4.01",
+        "K10.06.01.D4.02"
+      ],
+      "fixture": "p=.9,.1且y=1,0",
+      "views": {
+        "forward": "Brier=.01，不声称完美校准",
+        "reverse": "检查模型条件：二元标签、明确样本及分箱",
+        "intervention": "预测概率与实际频率、可靠性图及Brier分数",
+        "counterexample": "准确率高不证明概率校准"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.06.02.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.06.02",
+      "claim_refs": [
+        "K10.06.02.D4.01",
+        "K10.06.02.D4.02"
+      ],
+      "fixture": "同排序概率整体过高",
+      "views": {
+        "forward": "AUC不变仍可能失校准",
+        "reverse": "检查模型条件：pyKT摘要讨论指标评价，AUC公式另核",
+        "intervention": "预测排序指标、样本和类别分布",
+        "counterexample": "AUC高不证明个体可靠性"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.06.03.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.06.03",
+      "claim_refs": [
+        "K10.06.03.D4.01",
+        "K10.06.03.D4.02"
+      ],
+      "fixture": "新用户没有历史",
+      "views": {
+        "forward": "保留先验/未知及不确定性",
+        "reverse": "检查模型条件：先验来源与适用范围另核",
+        "intervention": "先验、有限证据、缺失和保守策略",
+        "counterexample": "无历史不能默认为零掌握"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.06.04.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.06.04",
+      "claim_refs": [
+        "K10.06.04.D4.01",
+        "K10.06.04.D4.02"
+      ],
+      "fixture": "题库版本更新后准确率变化",
+      "views": {
+        "forward": "隔离版本并重新评估",
+        "reverse": "检查模型条件：专门漂移来源待补",
+        "intervention": "时间/任务变化、分布变化检测及再验证",
+        "counterexample": "分布漂移不自动更新正式知识"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.06.05.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.06.05",
+      "claim_refs": [
+        "K10.06.05.D4.01",
+        "K10.06.05.D4.02"
+      ],
+      "fixture": "同题族跨训练测试且预测目标是未见题族",
+      "views": {
+        "forward": "按题族或时间边界重新划分",
+        "reverse": "检查模型条件：摘要级证据；用户/时间/题族隔离候选策略",
+        "intervention": "用户、时间、题目族隔离及特征时间",
+        "counterexample": "随机拆分不一定避免泄漏"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K10.06.06.CASE.01",
+      "owner": "K10",
+      "d3_id": "K10.06.06",
+      "claim_refs": [
+        "K10.06.06.D4.01",
+        "K10.06.06.D4.02"
+      ],
+      "fixture": "两个模型概率相同但数据量差异",
+      "views": {
+        "forward": "保存样本范围和不确定性",
+        "reverse": "检查模型条件：置信区间方法另核",
+        "intervention": "参数、观测和模型误差、区间或未知",
+        "counterexample": "不以点估计掩盖证据不足"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}

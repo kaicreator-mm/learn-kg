@@ -1,0 +1,60 @@
+{
+  "owner": "H04",
+  "base": "7e4a62f2d083541f30fa6e7997d0290e9aba2c2f",
+  "prior_claim_blob": "ba0096e08aa382bd917837c112f145cbb450d647",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H04.02.04.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.02.04",
+      "requirement_id": "H04.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "电视剧请求研究摘要区分请求直接程度及称呼、理由等修饰资源；形式直接不必然等同无礼。",
+      "conditions": [
+        "摘要，剧本语料；主语省略机制及真实会话证据仍待核。"
+      ],
+      "negative_boundary": "不以祈使形式单独给礼貌评分。",
+      "source_refs": [
+        "H04-B12-REQ"
+      ],
+      "source_locator": "摘要 l62–67",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "H04.02.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "把门关一下/麻烦把门关一下",
+        "expected": "比较身份、情景、修饰和意图",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.06.06.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.06.06",
+      "requirement_id": "H04.06.06.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "汉语全称量词与否定的作用域研究需控制都的出现及句法结构；2024实验在所测汉语句型中未支持逆作用域读法。",
+      "conditions": [
+        "§1；特定量词否定句，不能外推所有情态与否定。"
+      ],
+      "negative_boundary": "不将英语量词歧义规则直接移植到汉语。",
+      "source_refs": [
+        "H04-B12-SCOPE"
+      ],
+      "source_locator": "§1 l170–174",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H04.06.06.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "每个人都没去/不是每个人都去了",
+        "expected": "分别记录全称否定和部分否定解释",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

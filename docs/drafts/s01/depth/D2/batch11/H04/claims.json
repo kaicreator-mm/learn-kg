@@ -1,0 +1,60 @@
+{
+  "owner": "H04",
+  "base": "295142346183c1387d3646b19d7d0aea8196a971",
+  "prior_claim_blob": "ba0096e08aa382bd917837c112f145cbb450d647",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H04.07.01.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.07.01",
+      "requirement_id": "H04.07.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "2025汉语可接受性研究从68篇论文抽取337组对比，采用评分及强制选择，报告整体92%趋同；句长及期刊语言与判断差异有关。",
+      "conditions": [
+        "仅摘要页图；具体方言效应和频率—可接受性关系未核。"
+      ],
+      "negative_boundary": "不因单人判断或某句低频宣称普遍不合法。",
+      "source_refs": [
+        "H04-B11-JUDGE"
+      ],
+      "source_locator": "PDF p1 abstract（index0截图），p2开头文本",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "H04.07.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "不同背景者判断同一构式",
+        "expected": "记录背景、任务及上下文，保留差异",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H04.07.04.D4.03",
+      "owner": "H04",
+      "d3_id": "H04.07.04",
+      "requirement_id": "H04.07.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "构式比较可设计最小差异刺激并分别收集判断；该研究采用评分后对未复现对比使用强制选择。",
+      "conditions": [
+        "摘要页图；事件及论元控制是项目设计要求，具体构式未核。"
+      ],
+      "negative_boundary": "表面同形或单一评分不足以确定语义等价。",
+      "source_refs": [
+        "H04-B11-JUDGE"
+      ],
+      "source_locator": "PDF p1 abstract（index0截图），p2开头文本",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "H04.07.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两句只改变一个构式标记",
+        "expected": "固定其余因素再收集判断",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

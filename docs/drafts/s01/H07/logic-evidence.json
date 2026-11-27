@@ -1,0 +1,368 @@
+{
+  "owner": "H07",
+  "base": "ba13e02695a137dad6971dc9b94bbb999205368c",
+  "status": "SYNTHETIC_BUILDER_ONLY",
+  "execution": "ACTUAL_JS_BUILDER_EXECUTION",
+  "independent_oracle": false,
+  "records": [
+    {
+      "id": "H07-LOGIC-1",
+      "input": {
+        "mode": "event",
+        "kind": "syllabus_label",
+        "date": "2026-07",
+        "asOf": "2026-11-27",
+        "observation": false
+      },
+      "expected": "LABEL_NOT_EXAM",
+      "actual": "LABEL_NOT_EXAM",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-2",
+      "input": {
+        "mode": "event",
+        "kind": "planned_exam",
+        "date": "2026-12-13",
+        "asOf": "2026-11-27",
+        "observation": false
+      },
+      "expected": "FUTURE_PLAN",
+      "actual": "FUTURE_PLAN",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-3",
+      "input": {
+        "mode": "event",
+        "kind": "planned_exam",
+        "date": "2026-12-13",
+        "asOf": "2026-12-14",
+        "observation": false
+      },
+      "expected": "PLAN_REQUIRES_OBSERVATION",
+      "actual": "PLAN_REQUIRES_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-4",
+      "input": {
+        "mode": "event",
+        "kind": "observed_exam",
+        "date": "2026-12-13",
+        "asOf": "2026-11-27",
+        "observation": true
+      },
+      "expected": "HOLD_OBSERVATION",
+      "actual": "HOLD_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-5",
+      "input": {
+        "mode": "event",
+        "kind": "observed_exam",
+        "date": "2026-12-13",
+        "asOf": "2026-12-14",
+        "observation": false
+      },
+      "expected": "HOLD_OBSERVATION",
+      "actual": "HOLD_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-6",
+      "input": {
+        "mode": "event",
+        "kind": "observed_exam",
+        "date": "2026-12-13",
+        "asOf": "2026-12-14",
+        "observation": true
+      },
+      "expected": "OBSERVATION_CANDIDATE_NOT_GLOBAL",
+      "actual": "OBSERVATION_CANDIDATE_NOT_GLOBAL",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-7",
+      "input": {
+        "mode": "membership",
+        "records": [
+          {
+            "version": "new",
+            "kind": "lexical",
+            "rawBand": "1（4）",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": "数、（副）"
+          }
+        ]
+      },
+      "expected": {
+        "members": 1,
+        "forms": 1,
+        "rawBands": [
+          "1（4）"
+        ],
+        "rawPos": [
+          "数、（副）"
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "actual": {
+        "members": 1,
+        "forms": 1,
+        "rawBands": [
+          "1（4）"
+        ],
+        "rawPos": [
+          "数、（副）"
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-8",
+      "input": {
+        "mode": "membership",
+        "records": [
+          {
+            "version": "new",
+            "kind": "recognition",
+            "rawBand": "1",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": ""
+          },
+          {
+            "version": "new",
+            "kind": "writing",
+            "rawBand": "1—2",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": ""
+          }
+        ]
+      },
+      "expected": {
+        "members": 2,
+        "forms": 1,
+        "rawBands": [
+          "1",
+          "1—2"
+        ],
+        "rawPos": [
+          ""
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "actual": {
+        "members": 2,
+        "forms": 1,
+        "rawBands": [
+          "1",
+          "1—2"
+        ],
+        "rawPos": [
+          ""
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-9",
+      "input": {
+        "mode": "membership",
+        "records": [
+          {
+            "version": "new",
+            "kind": "recognition",
+            "rawBand": "1",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": ""
+          },
+          {
+            "version": "old",
+            "kind": "recognition",
+            "rawBand": "1",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": ""
+          }
+        ]
+      },
+      "expected": {
+        "members": 2,
+        "forms": 1,
+        "rawBands": [
+          "1"
+        ],
+        "rawPos": [
+          ""
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "actual": {
+        "members": 2,
+        "forms": 1,
+        "rawBands": [
+          "1"
+        ],
+        "rawPos": [
+          ""
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-10",
+      "input": {
+        "mode": "membership",
+        "records": [
+          {
+            "version": "new",
+            "kind": "recognition",
+            "rawBand": "1",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": ""
+          },
+          {
+            "version": "new",
+            "kind": "recognition",
+            "rawBand": "1",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": ""
+          }
+        ]
+      },
+      "expected": {
+        "members": 1,
+        "forms": 1,
+        "rawBands": [
+          "1"
+        ],
+        "rawPos": [
+          ""
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "actual": {
+        "members": 1,
+        "forms": 1,
+        "rawBands": [
+          "1"
+        ],
+        "rawPos": [
+          ""
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-11",
+      "input": {
+        "mode": "membership",
+        "records": [
+          {
+            "version": "new",
+            "kind": "recognition",
+            "rawBand": "1",
+            "rawOrdinal": "S1",
+            "form": "甲",
+            "rawPos": ""
+          },
+          {
+            "version": "new",
+            "kind": "recognition",
+            "rawBand": "1",
+            "rawOrdinal": "S1",
+            "form": "乙",
+            "rawPos": ""
+          }
+        ]
+      },
+      "expected": "HOLD_CONFLICT",
+      "actual": "HOLD_CONFLICT",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-12",
+      "input": {
+        "mode": "membership",
+        "records": []
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-13",
+      "input": {
+        "mode": "mapping",
+        "evidence": "same_name",
+        "sameDimension": true,
+        "sourceBytesVerified": true
+      },
+      "expected": "HOLD_EQUIVALENCE",
+      "actual": "HOLD_EQUIVALENCE",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-14",
+      "input": {
+        "mode": "mapping",
+        "evidence": "membership_overlap",
+        "sameDimension": true,
+        "sourceBytesVerified": true
+      },
+      "expected": "HOLD_EQUIVALENCE",
+      "actual": "HOLD_EQUIVALENCE",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-15",
+      "input": {
+        "mode": "mapping",
+        "evidence": "qualified_equivalence",
+        "sameDimension": true,
+        "sourceBytesVerified": false
+      },
+      "expected": "HOLD_EQUIVALENCE",
+      "actual": "HOLD_EQUIVALENCE",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-16",
+      "input": {
+        "mode": "mapping",
+        "evidence": "qualified_equivalence",
+        "sameDimension": false,
+        "sourceBytesVerified": true
+      },
+      "expected": "HOLD_EQUIVALENCE",
+      "actual": "HOLD_EQUIVALENCE",
+      "pass": true
+    },
+    {
+      "id": "H07-LOGIC-17",
+      "input": {
+        "mode": "mapping",
+        "evidence": "qualified_equivalence",
+        "sameDimension": true,
+        "sourceBytesVerified": true
+      },
+      "expected": "EQUIVALENCE_CANDIDATE_NOT_ACCEPTED",
+      "actual": "EQUIVALENCE_CANDIDATE_NOT_ACCEPTED",
+      "pass": true
+    }
+  ],
+  "passed": 17,
+  "limitations": "固定两个日期的合成守卫，非通用日期/考试状态管理器；成员key使用合成版本/类型/原等级/原序号，未证明真实全量ID或真实源字节，合成甲乙不是大纲原始条目；资格状态由输入声明，不证明等值、权利、学习结果或实际迁移。"
+}

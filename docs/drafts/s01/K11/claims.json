@@ -1,0 +1,908 @@
+{
+  "owner": "K11",
+  "status": "S01_INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "K11.01.01.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.01.01",
+      "requirement_id": "K11.01.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "POMDP信念是给定历史及模型的状态分布；状态估计与原始观测不同",
+      "conditions": [
+        "指定模型与时点"
+      ],
+      "negative_boundary": "状态估计不直接等于事实",
+      "source_refs": [
+        "K11-S3"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.01.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.01.01",
+      "requirement_id": "K11.01.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保存估计版本、时间和证据；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "状态估计不直接等于事实",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.02.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.01.02",
+      "requirement_id": "K11.01.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "活动候选必须描述任务版本、前提、资源成本及授权；选择不等于实际执行",
+      "conditions": [
+        "项目合同"
+      ],
+      "negative_boundary": "候选动作不代表已执行",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.02.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.01.02",
+      "requirement_id": "K11.01.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "只记录候选，执行后另收事件；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "候选动作不代表已执行",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.03.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.01.03",
+      "requirement_id": "K11.01.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "目标包括用户认可目标和代理指标，后者不得替代真实保持及迁移目标",
+      "conditions": [
+        "用户自主目标"
+      ],
+      "negative_boundary": "最大化答题量不等于学习最优",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.03.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.01.03",
+      "requirement_id": "K11.01.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保留目标及多目标约束；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "最大化答题量不等于学习最优",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.04.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.01.04",
+      "requirement_id": "K11.01.04.RQ01",
+      "claim_type": "METHOD",
+      "statement": "约束优化先定义可行域，再在可行解中比较目标；UNKNOWN不同于已证不可行",
+      "conditions": [
+        "整数求解器条件；权限由外部核验"
+      ],
+      "negative_boundary": "不可行动作不得因高收益入选",
+      "source_refs": [
+        "K11-S5"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.04.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.01.04",
+      "requirement_id": "K11.01.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "先排除不可行或未知动作；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "不可行动作不得因高收益入选",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.05.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.01.05",
+      "requirement_id": "K11.01.05.RQ01",
+      "claim_type": "MODEL",
+      "statement": "回报是模型规定的奖励序列函数，不能直接作为教育效果",
+      "conditions": [
+        "奖励及延迟时间明确"
+      ],
+      "negative_boundary": "奖励值不自动代表教育效果",
+      "source_refs": [
+        "K11-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.05.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.01.05",
+      "requirement_id": "K11.01.05.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "另测目标保持；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "奖励值不自动代表教育效果",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.06.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.01.06",
+      "requirement_id": "K11.01.06.RQ01",
+      "claim_type": "MODEL",
+      "statement": "折扣回报G=Σγ^t r_(t+1)；有限时域与长期目标须明确，γ不是心理时间常数",
+      "conditions": [
+        "0≤γ≤1，有限时域"
+      ],
+      "negative_boundary": "即时奖励不能代替长期保持",
+      "source_refs": [
+        "K11-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.01.06.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.01.06",
+      "requirement_id": "K11.01.06.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "比较给定折扣下目标，不声称最优教育；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "即时奖励不能代替长期保持",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.01.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.02.01",
+      "requirement_id": "K11.02.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "到期优先是候选规则：按模型达到目标阈值的时间及预算排序，同优先级使用稳定ID",
+      "conditions": [
+        "复用历史试点，无实证最优声明"
+      ],
+      "negative_boundary": "到期不等于必然遗忘",
+      "source_refs": [
+        "K11-S9"
+      ],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.01.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.02.01",
+      "requirement_id": "K11.02.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "延期并记录原因；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "到期不等于必然遗忘",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.02.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.02.02",
+      "requirement_id": "K11.02.02.RQ01",
+      "claim_type": "MODEL",
+      "statement": "固定半衰期模型中达到目标p*的时距为-h log2(p*)，0<p*<1；目标概率与观察结果分离",
+      "conditions": [
+        "固定h，无中间练习，同单位；QD4-08"
+      ],
+      "negative_boundary": "目标保持率不是已观察保持",
+      "source_refs": [
+        "K11-S2"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.02.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.02.02",
+      "requirement_id": "K11.02.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "阈值时距4天；不自动证明遗忘；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "目标保持率不是已观察保持",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.03.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.02.03",
+      "requirement_id": "K11.02.03.RQ01",
+      "claim_type": "RESEARCH_HYPOTHESIS",
+      "statement": "风险排序可综合预测遗忘、估计不确定性及目标后果，权重需明确并验证",
+      "conditions": [
+        "缺乏直接教育效用来源"
+      ],
+      "negative_boundary": "风险排序不证明干预因果",
+      "source_refs": [],
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.03.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.02.03",
+      "requirement_id": "K11.02.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "用户或已批准策略裁定优先；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "风险排序不证明干预因果",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.04.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.02.04",
+      "requirement_id": "K11.02.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "预算是预计成本上限，候选不得超过剩余时间；暂停或退出优先于学习数量",
+      "conditions": [
+        "历史合成政策，不代表实际预算系统"
+      ],
+      "negative_boundary": "不得超预算强制学习",
+      "source_refs": [
+        "K11-S9"
+      ],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.02.04.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.02.04",
+      "requirement_id": "K11.02.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "延期而非强制执行；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "不得超预算强制学习",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.01.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.03.01",
+      "requirement_id": "K11.03.01.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "任务与目标能力模型须协调；难度匹配依估计、题目条件及目标，不设通用正确率",
+      "conditions": [
+        "测量三角；挑战最优直接证据待补"
+      ],
+      "negative_boundary": "固定难度比例不普适",
+      "source_refs": [
+        "K11-S8"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.01.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.03.01",
+      "requirement_id": "K11.03.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "匹配目标及证据条件；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "固定难度比例不普适",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.02.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.03.02",
+      "requirement_id": "K11.03.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "覆盖选择以任务绑定且未覆盖的目标组件为输入，重复覆盖不计新增，覆盖不是掌握",
+      "conditions": [
+        "项目候选集合规则"
+      ],
+      "negative_boundary": "覆盖次数不等于掌握",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.02.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.03.02",
+      "requirement_id": "K11.03.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "选可行B候选并保留证据；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "覆盖次数不等于掌握",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.03.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.03.03",
+      "requirement_id": "K11.03.03.RQ01",
+      "claim_type": "MODEL",
+      "statement": "期望信息增益I=H(b)-Σ_o P(o|b,a)H(b|o,a)，二元熵单位bit；静态状态探测假设下适用",
+      "conditions": [
+        "完整观测模型，状态不随探测改变；否则需重新定义比较"
+      ],
+      "negative_boundary": "高信息量不一定适合教学目标",
+      "source_refs": [
+        "K11-S4"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.03.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.03.03",
+      "requirement_id": "K11.03.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "IG=1 bit；不证明教学收益；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "高信息量不一定适合教学目标",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.04.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.03.04",
+      "requirement_id": "K11.03.04.RQ01",
+      "claim_type": "MODEL",
+      "statement": "探索与利用在未知奖励下权衡；探索须限制在已授权可行动作内",
+      "conditions": [
+        "bandit假设；非未经授权在线实验"
+      ],
+      "negative_boundary": "探索不能绕过权限和安全",
+      "source_refs": [
+        "K11-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.03.04.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.03.04",
+      "requirement_id": "K11.03.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不进入探索集合；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "探索不能绕过权限和安全",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.01.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.04.01",
+      "requirement_id": "K11.04.01.RQ01",
+      "claim_type": "METHOD",
+      "statement": "约束求解可表达整数变量、硬约束和目标；FEASIBLE不等于OPTIMAL，UNKNOWN不等于INFEASIBLE",
+      "conditions": [
+        "编码及整数化误差需验证"
+      ],
+      "negative_boundary": "求解器输出不证明目标教育有效",
+      "source_refs": [
+        "K11-S5"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.01.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.04.01",
+      "requirement_id": "K11.04.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保留未知、使用已批准回退；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "求解器输出不证明目标教育有效",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.02.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.04.02",
+      "requirement_id": "K11.04.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "序列规划要同时满足依赖、预算、动作可行性及终止条件；计划变化需重新验证",
+      "conditions": [
+        "一般约束模型；教育转移另核"
+      ],
+      "negative_boundary": "计划顺序不等于必需先修",
+      "source_refs": [
+        "K11-S5"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.02.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.04.02",
+      "requirement_id": "K11.04.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "重规划而非强制执行B；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "计划顺序不等于必需先修",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.03.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.04.03",
+      "requirement_id": "K11.04.03.RQ01",
+      "claim_type": "MODEL",
+      "statement": "MDP依状态、动作、转移与回报；POMDP另有观测模型和信念，更新b'(s')∝O(o|s')Σ_s T(s'|s,a)b(s)",
+      "conditions": [
+        "有限模型，观测后归一化、零似然拒绝"
+      ],
+      "negative_boundary": "马尔可夫假设需验证",
+      "source_refs": [
+        "K11-S3"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.03.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.04.03",
+      "requirement_id": "K11.04.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "条件化后验，不声明完全可观测；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "马尔可夫假设需验证",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.04.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.04.04",
+      "requirement_id": "K11.04.04.RQ01",
+      "claim_type": "MODEL",
+      "statement": "RL学习策略或价值函数以最大化指定回报；模拟环境和真实教育环境的差异需验证",
+      "conditions": [
+        "MDP及奖励假设"
+      ],
+      "negative_boundary": "模拟回报不证明真实学习增益",
+      "source_refs": [
+        "K11-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.04.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.04.04",
+      "requirement_id": "K11.04.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不推出学生真实进步；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "模拟回报不证明真实学习增益",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.05.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.04.05",
+      "requirement_id": "K11.04.05.RQ01",
+      "claim_type": "MODEL",
+      "statement": "bandit比较臂的回报，通常不显式建模动作改变未来状态；上下文bandit再以情境条件化选择",
+      "conditions": [
+        "延迟与非平稳回报另核"
+      ],
+      "negative_boundary": "点击率不等于能力提升",
+      "source_refs": [
+        "K11-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.04.05.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.04.05",
+      "requirement_id": "K11.04.05.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "按已定义目标评估而非点击替代；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "点击率不等于能力提升",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.01.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.05.01",
+      "requirement_id": "K11.05.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "信息不足时可请求最小必要澄清；记录成本、可拒绝及未知，不用猜测补齐状态",
+      "conditions": [
+        "项目交互守卫"
+      ],
+      "negative_boundary": "不得用猜测填充未知状态",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.01.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.05.01",
+      "requirement_id": "K11.05.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "可询问或保留HOLD；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "不得用猜测填充未知状态",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.02.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.05.02",
+      "requirement_id": "K11.05.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "补救应与观测所支持的能力差距匹配；竞争原因须通过区分证据处理",
+      "conditions": [
+        "测量三角；教学干预由K06主责"
+      ],
+      "negative_boundary": "单错误不确定唯一补救",
+      "source_refs": [
+        "K11-S8"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.02.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.05.02",
+      "requirement_id": "K11.05.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "先区分读题与规则理解；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "单错误不确定唯一补救",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.03.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.05.03",
+      "requirement_id": "K11.05.03.RQ01",
+      "claim_type": "METHOD",
+      "statement": "复测需固定目标并控制提示、时距、重复暴露，使用独立变式支持新证据",
+      "conditions": [
+        "复测效度另核"
+      ],
+      "negative_boundary": "同题提示后正确不等于恢复",
+      "source_refs": [
+        "K11-S8"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.03.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.05.03",
+      "requirement_id": "K11.05.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不作为独立恢复；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "同题提示后正确不等于恢复",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.04.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.05.04",
+      "requirement_id": "K11.05.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "终止条件包括用户退出、预算、未知风险和无进展；人工升级不自动执行外部动作",
+      "conditions": [
+        "项目安全合同"
+      ],
+      "negative_boundary": "不能无限循环或强制继续",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.05.04.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.05.04",
+      "requirement_id": "K11.05.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "停止或请求支持，不无限循环；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "不能无限循环或强制继续",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.01.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.06.01",
+      "requirement_id": "K11.06.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "IPS样本估计mean(π(a|x)/μ(a|x)·r)，要求目标支持包含于日志支持；序列轨迹比率另定义",
+      "conditions": [
+        "上下文bandit、已知行为倾向、可比环境、奖励；抽样波动"
+      ],
+      "negative_boundary": "缺乏支持的策略效果不可识别",
+      "source_refs": [
+        "K11-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.01.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.06.01",
+      "requirement_id": "K11.06.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "HOLD_SUPPORT，不用零填补；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "缺乏支持的策略效果不可识别",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.02.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.06.02",
+      "requirement_id": "K11.06.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "教育在线试验需要预先定义目标、分配、评价、干扰及终止；WWC方法详细条款待核",
+      "conditions": [
+        "授权、伦理与知情条件另审"
+      ],
+      "negative_boundary": "未经许可不对学习者做试验",
+      "source_refs": [
+        "K11-S7"
+      ],
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.02.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.06.02",
+      "requirement_id": "K11.06.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "拒绝试验执行；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "未经许可不对学习者做试验",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.03.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.06.03",
+      "requirement_id": "K11.06.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "回退只使用已批准且仍满足权限、版本、资源的动作；失败或未知不得被当成功",
+      "conditions": [
+        "项目恢复合同"
+      ],
+      "negative_boundary": "回退不得绕过权限",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.03.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.06.03",
+      "requirement_id": "K11.06.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "HOLD而非绕过；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "回退不得绕过权限",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.04.D4.01",
+      "owner": "K11",
+      "d3_id": "K11.06.04",
+      "requirement_id": "K11.06.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "多目标冲突须呈现可行选项、权重假设与不可行原因，由用户或授权主体决定价值排序",
+      "conditions": [
+        "不以系统默认权重替代人"
+      ],
+      "negative_boundary": "不替用户擅定价值权重",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K11.06.04.D4.02",
+      "owner": "K11",
+      "d3_id": "K11.06.04",
+      "requirement_id": "K11.06.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不自动牺牲任一目标；保留UNKNOWN和候选状态。",
+      "conditions": [
+        "项目规则；非实证"
+      ],
+      "negative_boundary": "不替用户擅定价值权重",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

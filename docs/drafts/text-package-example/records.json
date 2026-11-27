@@ -1,0 +1,103 @@
+{
+  "schema_version": "draft-0.1",
+  "package_id": "example.synthetic",
+  "version": "0.0.1",
+  "status": "SYNTHETIC_FORMAT_ONLY",
+  "records": [
+    {
+      "stable_id": "example:kind:symbol-meaning",
+      "kind": "KnowledgeType",
+      "owner": "K03",
+      "status": "DRAFT",
+      "label": "符号与意义映射",
+      "description": "原创格式示意，不是研究结论"
+    },
+    {
+      "stable_id": "example:object:token-a",
+      "kind": "LearningObject",
+      "owner": "H03",
+      "status": "DRAFT",
+      "label": "示例词A",
+      "knowledge_type": {
+        "package_id": "example.synthetic",
+        "stable_id": "example:kind:symbol-meaning",
+        "kind": "KnowledgeType",
+        "version": "0.0.1"
+      }
+    },
+    {
+      "stable_id": "example:flow:retrieve",
+      "kind": "ProcessTemplate",
+      "owner": "P06",
+      "status": "DRAFT",
+      "label": "回忆与反馈示例",
+      "applies_to": {
+        "package_id": "example.synthetic",
+        "stable_id": "example:kind:symbol-meaning",
+        "kind": "KnowledgeType",
+        "version": "0.0.1"
+      },
+      "entry": "retrieve",
+      "max_attempts": 2,
+      "steps": [
+        {
+          "id": "retrieve",
+          "activity": "请求独立回忆"
+        },
+        {
+          "id": "feedback",
+          "activity": "反馈并提供一次重试"
+        },
+        {
+          "id": "complete",
+          "terminal": true
+        },
+        {
+          "id": "stop",
+          "terminal": true
+        }
+      ],
+      "transitions": [
+        {
+          "from": "retrieve",
+          "event": "correct_independent",
+          "to": "complete"
+        },
+        {
+          "from": "retrieve",
+          "event": "incorrect",
+          "guard": {
+            "attempts_lt": 2
+          },
+          "to": "feedback"
+        },
+        {
+          "from": "retrieve",
+          "event": "incorrect",
+          "guard": {
+            "attempts_gte": 2
+          },
+          "to": "stop"
+        },
+        {
+          "from": "retrieve",
+          "event": "unknown",
+          "to": "stop"
+        },
+        {
+          "from": "feedback",
+          "event": "retry_requested",
+          "to": "retrieve",
+          "increment_attempts": 1
+        },
+        {
+          "from": "feedback",
+          "event": "exit_requested",
+          "to": "stop"
+        }
+      ],
+      "evidence_refs": [],
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

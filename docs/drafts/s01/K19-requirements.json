@@ -1,0 +1,415 @@
+{
+  "owner": "K19",
+  "base": "1f50da4b01a09b59e3af5fdfdf93b42278698be4",
+  "status": "SCOPE_DRAFT_NOT_CLAIMS",
+  "records": [
+    {
+      "d3_id": "K19.01.01",
+      "owner": "K19",
+      "label": "机会差异",
+      "requirement_id": "K19.01.01.RQ01",
+      "research_requirement": "参与机会、资源可达及比较条件",
+      "negative_boundary": "结果差异不等于机会差异唯一原因",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.01.02",
+      "owner": "K19",
+      "label": "资源分配",
+      "requirement_id": "K19.01.02.RQ01",
+      "research_requirement": "目标、需求、公平原则、约束和复核",
+      "negative_boundary": "效率最大化不自动公平",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.01.03",
+      "owner": "K19",
+      "label": "文化公平",
+      "requirement_id": "K19.01.03.RQ01",
+      "research_requirement": "语言文化条件、测量构念与用户反馈",
+      "negative_boundary": "文化类别不代表个体偏好",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.01.04",
+      "owner": "K19",
+      "label": "系统性排除",
+      "requirement_id": "K19.01.04.RQ01",
+      "research_requirement": "流程障碍、群体证据、个体影响及纠正",
+      "negative_boundary": "单一比例不能证明或排除歧视",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.02.01",
+      "owner": "K19",
+      "label": "最小化",
+      "requirement_id": "K19.02.01.RQ01",
+      "research_requirement": "目的、必需字段、保留周期与可删除范围",
+      "negative_boundary": "可采集不等于必须采集",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.02.02",
+      "owner": "K19",
+      "label": "同意",
+      "requirement_id": "K19.02.02.RQ01",
+      "research_requirement": "知情、具体用途、撤回及适用法律条件",
+      "negative_boundary": "一次同意不覆盖所有用途",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.02.03",
+      "owner": "K19",
+      "label": "授权",
+      "requirement_id": "K19.02.03.RQ01",
+      "research_requirement": "身份、角色、范围、期限及拒绝",
+      "negative_boundary": "能访问不代表能再分发",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "同一角色读取、改写、发布权限分别判断；缺授权默认拒绝。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.02.04",
+      "owner": "K19",
+      "label": "保留",
+      "requirement_id": "K19.02.04.RQ01",
+      "research_requirement": "用途、保留期限、删除、历史证据及法律义务",
+      "negative_boundary": "备份不意味着永久保留个人数据",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.02.05",
+      "owner": "K19",
+      "label": "数据用途限制",
+      "requirement_id": "K19.02.05.RQ01",
+      "research_requirement": "初始目的、用途变更、许可及审计",
+      "negative_boundary": "学习记录不得默认用于其他训练",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "原授权仅学习反馈，训练用途请求拒绝；新授权另记。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.03.01",
+      "owner": "K19",
+      "label": "知情",
+      "requirement_id": "K19.03.01.RQ01",
+      "research_requirement": "信息来源、数据用途、自动化与限制说明",
+      "negative_boundary": "展示条款不自动证明理解",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.03.02",
+      "owner": "K19",
+      "label": "退出",
+      "requirement_id": "K19.03.02.RQ01",
+      "research_requirement": "退出路径、状态恢复、数据及服务影响",
+      "negative_boundary": "不以惩罚阻止退出",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "用户请求暂停/退出，保持可恢复状态，不强制打卡或虚报完成。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.03.03",
+      "owner": "K19",
+      "label": "解释",
+      "requirement_id": "K19.03.03.RQ01",
+      "research_requirement": "依据、条件、不确定性、纠错途径",
+      "negative_boundary": "解释不得伪造内部因果过程",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.03.04",
+      "owner": "K19",
+      "label": "纠正",
+      "requirement_id": "K19.03.04.RQ01",
+      "research_requirement": "错误申报、证据核验、版本与更正传播",
+      "negative_boundary": "不得静默改写历史证据",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.03.05",
+      "owner": "K19",
+      "label": "人工监督",
+      "requirement_id": "K19.03.05.RQ01",
+      "research_requirement": "职责、权限、升级、复核及裁决记录",
+      "negative_boundary": "人工在场不证明有效监督",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.04.01",
+      "owner": "K19",
+      "label": "偏差",
+      "requirement_id": "K19.04.01.RQ01",
+      "research_requirement": "群体与个体误差、数据/模型/流程来源及测试",
+      "negative_boundary": "差异不自动等于偏差或公平",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.04.02",
+      "owner": "K19",
+      "label": "代理指标",
+      "requirement_id": "K19.04.02.RQ01",
+      "research_requirement": "目标构念、指标有效性、优化副作用及替代",
+      "negative_boundary": "高参与不等于真实学习",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.04.03",
+      "owner": "K19",
+      "label": "错误反馈",
+      "requirement_id": "K19.04.03.RQ01",
+      "research_requirement": "错误主张、伤害风险、发现、纠正及受影响引用",
+      "negative_boundary": "一次更正不证明旧证据全部无效",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.04.04",
+      "owner": "K19",
+      "label": "过度依赖",
+      "requirement_id": "K19.04.04.RQ01",
+      "research_requirement": "依赖风险、自主能力、验证与替代路径",
+      "negative_boundary": "便利性不替代学习者判断",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.04.05",
+      "owner": "K19",
+      "label": "自动决策限制",
+      "requirement_id": "K19.04.05.RQ01",
+      "research_requirement": "可行动作、权限、风险、人工复核与申诉",
+      "negative_boundary": "模型预测不能自行决定高风险事项",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "高风险决策只含模型预测、无人工授权，拒绝自动执行。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.05.01",
+      "owner": "K19",
+      "label": "研究伦理",
+      "requirement_id": "K19.05.01.RQ01",
+      "research_requirement": "同意、风险收益、伦理审查及参与者保护",
+      "negative_boundary": "系统试验不自动获得研究授权",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.05.02",
+      "owner": "K19",
+      "label": "教师责任",
+      "requirement_id": "K19.05.02.RQ01",
+      "research_requirement": "角色边界、专业判断、证据与责任分配",
+      "negative_boundary": "AI建议不转移教师责任",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.05.03",
+      "owner": "K19",
+      "label": "来源权利",
+      "requirement_id": "K19.05.03.RQ01",
+      "research_requirement": "许可、访问与再发布权、来源定位和例外",
+      "negative_boundary": "能读取文件不等于有权公开",
+      "source_leads": [
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "私有可读来源权利HOLD，公开manifest必须拒绝其原始内容。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.05.04",
+      "owner": "K19",
+      "label": "透明度",
+      "requirement_id": "K19.05.04.RQ01",
+      "research_requirement": "版本、证据、限制、变更及审查入口",
+      "negative_boundary": "公开说明不证明实际合规",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K19.05.05",
+      "owner": "K19",
+      "label": "责任与申诉",
+      "requirement_id": "K19.05.05.RQ01",
+      "research_requirement": "责任主体、纠错流程、复核证据及反馈",
+      "negative_boundary": "不允许系统以黑箱结果拒绝申诉",
+      "source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# K10 学习者状态与知识追踪
+29主题，58候选，10来源定位（含历史项目记录），29四视角，9研究锚点，19有限检查。{"HTML_LOCATED_CANDIDATE":8,"PROJECT_POLICY":31,"PDF_LOCATED_CANDIDATE":15,"HOLD_SOURCE_DETAIL":2,"ABSTRACT_LIMITED":2}。基线 422e96bcd39c562f23c9701dd112cfcc3a1ab315。重新核对BKT pp260–261、HLR pp1850–1851、PFA Eq2–3、DKT p3页图，旧试点保持原字节；BKT出版年份差异保留。SAKT正文、pyKT摘要、校准文档；ACM重开403保留索引。原试点BKT/HLR/统一格式的已执行证据不等同本模块正式资格；本轮有重叠算例，绝不声称全部新独立验证。目标与偏好属于项目守卫，耦合及漂移缺专门来源。注意力、模型后验与能力事实分开。四视角未执行，原始字节/权利、真实参数和独立oracle待核；无正式收据或数据库。

@@ -1,0 +1,519 @@
+{
+  "owner": "K11",
+  "status": "DESIGN_ONLY",
+  "records": [
+    {
+      "id": "K11.01.01.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.01.01",
+      "claim_refs": [
+        "K11.01.01.D4.01",
+        "K11.01.01.D4.02"
+      ],
+      "fixture": "概率相同但观测历史不同",
+      "views": {
+        "forward": "保存估计版本、时间和证据",
+        "reverse": "检查适用条件：指定模型与时点",
+        "intervention": "可观察事件与估计状态、时点和来源",
+        "counterexample": "状态估计不直接等于事实"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.01.02.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.01.02",
+      "claim_refs": [
+        "K11.01.02.D4.01",
+        "K11.01.02.D4.02"
+      ],
+      "fixture": "复习已推荐但未开始",
+      "views": {
+        "forward": "只记录候选，执行后另收事件",
+        "reverse": "检查适用条件：项目合同",
+        "intervention": "可执行学习活动、权限、成本及结果",
+        "counterexample": "候选动作不代表已执行"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.01.03.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.01.03",
+      "claim_refs": [
+        "K11.01.03.D4.01",
+        "K11.01.03.D4.02"
+      ],
+      "fixture": "刷题数最大但无法交互",
+      "views": {
+        "forward": "保留目标及多目标约束",
+        "reverse": "检查适用条件：用户自主目标",
+        "intervention": "用户目标、代理指标及多目标约束",
+        "counterexample": "最大化答题量不等于学习最优"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.01.04.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.01.04",
+      "claim_refs": [
+        "K11.01.04.D4.01",
+        "K11.01.04.D4.02"
+      ],
+      "fixture": "高收益任务超预算",
+      "views": {
+        "forward": "先排除不可行或未知动作",
+        "reverse": "检查适用条件：整数求解器条件；权限由外部核验",
+        "intervention": "时间、权限、可及性、前提与安全条件",
+        "counterexample": "不可行动作不得因高收益入选"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.01.05.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.01.05",
+      "claim_refs": [
+        "K11.01.05.D4.01",
+        "K11.01.05.D4.02"
+      ],
+      "fixture": "点击获得奖励",
+      "views": {
+        "forward": "另测目标保持",
+        "reverse": "检查适用条件：奖励及延迟时间明确",
+        "intervention": "效用、代理奖励、保持、迁移和成本",
+        "counterexample": "奖励值不自动代表教育效果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.01.06.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.01.06",
+      "claim_refs": [
+        "K11.01.06.D4.01",
+        "K11.01.06.D4.02"
+      ],
+      "fixture": "即时报酬1与延迟报酬2",
+      "views": {
+        "forward": "比较给定折扣下目标，不声称最优教育",
+        "reverse": "检查适用条件：0≤γ≤1，有限时域",
+        "intervention": "即时、延迟、跨会话规划及折扣假设",
+        "counterexample": "即时奖励不能代替长期保持"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.02.01.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.02.01",
+      "claim_refs": [
+        "K11.02.01.D4.01",
+        "K11.02.01.D4.02"
+      ],
+      "fixture": "已到期但无可用时间",
+      "views": {
+        "forward": "延期并记录原因",
+        "reverse": "检查适用条件：复用历史试点，无实证最优声明",
+        "intervention": "复习到期、可用时间、同优先级规则",
+        "counterexample": "到期不等于必然遗忘"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.02.02.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.02.02",
+      "claim_refs": [
+        "K11.02.02.D4.01",
+        "K11.02.02.D4.02"
+      ],
+      "fixture": "h=4天,p*=.5",
+      "views": {
+        "forward": "阈值时距4天；不自动证明遗忘",
+        "reverse": "检查适用条件：固定h，无中间练习，同单位；QD4-08",
+        "intervention": "目标概率、时距、证据及模型校准",
+        "counterexample": "目标保持率不是已观察保持"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.02.03.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.02.03",
+      "claim_refs": [
+        "K11.02.03.D4.01",
+        "K11.02.03.D4.02"
+      ],
+      "fixture": "低概率低后果与高概率高后果冲突",
+      "views": {
+        "forward": "用户或已批准策略裁定优先",
+        "reverse": "检查适用条件：缺乏直接教育效用来源",
+        "intervention": "遗忘、诊断不确定性、后果及优先级",
+        "counterexample": "风险排序不证明干预因果"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.02.04.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.02.04",
+      "claim_refs": [
+        "K11.02.04.D4.01",
+        "K11.02.04.D4.02"
+      ],
+      "fixture": "余3分钟而复习需5分钟",
+      "views": {
+        "forward": "延期而非强制执行",
+        "reverse": "检查适用条件：历史合成政策，不代表实际预算系统",
+        "intervention": "任务预计耗时、可用预算、停止和恢复",
+        "counterexample": "不得超预算强制学习"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.03.01.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.03.01",
+      "claim_refs": [
+        "K11.03.01.D4.01",
+        "K11.03.01.D4.02"
+      ],
+      "fixture": "目标口语却选易识别题",
+      "views": {
+        "forward": "匹配目标及证据条件",
+        "reverse": "检查适用条件：测量三角；挑战最优直接证据待补",
+        "intervention": "能力估计、任务要求、挑战及不确定性",
+        "counterexample": "固定难度比例不普适"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.03.02.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.03.02",
+      "claim_refs": [
+        "K11.03.02.D4.01",
+        "K11.03.02.D4.02"
+      ],
+      "fixture": "两题重复A而B未测",
+      "views": {
+        "forward": "选可行B候选并保留证据",
+        "reverse": "检查适用条件：项目候选集合规则",
+        "intervention": "目标组件、任务绑定和覆盖/重复成本",
+        "counterexample": "覆盖次数不等于掌握"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.03.03.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.03.03",
+      "claim_refs": [
+        "K11.03.03.D4.01",
+        "K11.03.03.D4.02"
+      ],
+      "fixture": "均匀先验、完美辨别",
+      "views": {
+        "forward": "IG=1 bit；不证明教学收益",
+        "reverse": "检查适用条件：完整观测模型，状态不随探测改变；否则需重新定义比较",
+        "intervention": "先验、观测模型、预期后验熵及成本",
+        "counterexample": "高信息量不一定适合教学目标"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.03.04.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.03.04",
+      "claim_refs": [
+        "K11.03.04.D4.01",
+        "K11.03.04.D4.02"
+      ],
+      "fixture": "新策略可能高收益但无许可",
+      "views": {
+        "forward": "不进入探索集合",
+        "reverse": "检查适用条件：bandit假设；非未经授权在线实验",
+        "intervention": "不确定性、候选收益、风险及探索预算",
+        "counterexample": "探索不能绕过权限和安全"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.04.01.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.04.01",
+      "claim_refs": [
+        "K11.04.01.D4.01",
+        "K11.04.01.D4.02"
+      ],
+      "fixture": "求解超时UNKNOWN",
+      "views": {
+        "forward": "保留未知、使用已批准回退",
+        "reverse": "检查适用条件：编码及整数化误差需验证",
+        "intervention": "变量、硬软约束、不可行及确定性回退",
+        "counterexample": "求解器输出不证明目标教育有效"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.04.02.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.04.02",
+      "claim_refs": [
+        "K11.04.02.D4.01",
+        "K11.04.02.D4.02"
+      ],
+      "fixture": "B必须在A后且A失败",
+      "views": {
+        "forward": "重规划而非强制执行B",
+        "reverse": "检查适用条件：一般约束模型；教育转移另核",
+        "intervention": "任务依赖、状态转移、预算、终止及重规划",
+        "counterexample": "计划顺序不等于必需先修"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.04.03.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.04.03",
+      "claim_refs": [
+        "K11.04.03.D4.01",
+        "K11.04.03.D4.02"
+      ],
+      "fixture": "观察为某能力阳性",
+      "views": {
+        "forward": "条件化后验，不声明完全可观测",
+        "reverse": "检查适用条件：有限模型，观测后归一化、零似然拒绝",
+        "intervention": "状态、动作、转移、观测、回报及信念",
+        "counterexample": "马尔可夫假设需验证"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.04.04.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.04.04",
+      "claim_refs": [
+        "K11.04.04.D4.01",
+        "K11.04.04.D4.02"
+      ],
+      "fixture": "模拟收益提高",
+      "views": {
+        "forward": "不推出学生真实进步",
+        "reverse": "检查适用条件：MDP及奖励假设",
+        "intervention": "环境、策略、奖励、离线支持及评估",
+        "counterexample": "模拟回报不证明真实学习增益"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.04.05.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.04.05",
+      "claim_refs": [
+        "K11.04.05.D4.01",
+        "K11.04.05.D4.02"
+      ],
+      "fixture": "A点击率高B保持率高",
+      "views": {
+        "forward": "按已定义目标评估而非点击替代",
+        "reverse": "检查适用条件：延迟与非平稳回报另核",
+        "intervention": "臂、上下文、回报、探索及延迟反馈",
+        "counterexample": "点击率不等于能力提升"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.05.01.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.05.01",
+      "claim_refs": [
+        "K11.05.01.D4.01",
+        "K11.05.01.D4.02"
+      ],
+      "fixture": "时间预算未知",
+      "views": {
+        "forward": "可询问或保留HOLD",
+        "reverse": "检查适用条件：项目交互守卫",
+        "intervention": "缺失条件、澄清成本及可拒绝问题",
+        "counterexample": "不得用猜测填充未知状态"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.05.02.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.05.02",
+      "claim_refs": [
+        "K11.05.02.D4.01",
+        "K11.05.02.D4.02"
+      ],
+      "fixture": "分数运算错误",
+      "views": {
+        "forward": "先区分读题与规则理解",
+        "reverse": "检查适用条件：测量三角；教学干预由K06主责",
+        "intervention": "诊断候选、干预、预算及独立复测",
+        "counterexample": "单错误不确定唯一补救"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.05.03.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.05.03",
+      "claim_refs": [
+        "K11.05.03.D4.01",
+        "K11.05.03.D4.02"
+      ],
+      "fixture": "同题看过答案后答对",
+      "views": {
+        "forward": "不作为独立恢复",
+        "reverse": "检查适用条件：复测效度另核",
+        "intervention": "复测目的、独立变式、间隔和重复影响",
+        "counterexample": "同题提示后正确不等于恢复"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.05.04.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.05.04",
+      "claim_refs": [
+        "K11.05.04.D4.01",
+        "K11.05.04.D4.02"
+      ],
+      "fixture": "连续多轮失败",
+      "views": {
+        "forward": "停止或请求支持，不无限循环",
+        "reverse": "检查适用条件：项目安全合同",
+        "intervention": "无进展、预算、风险、用户退出和人工支持",
+        "counterexample": "不能无限循环或强制继续"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.06.01.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.06.01",
+      "claim_refs": [
+        "K11.06.01.D4.01",
+        "K11.06.01.D4.02"
+      ],
+      "fixture": "目标选A但日志永不选A",
+      "views": {
+        "forward": "HOLD_SUPPORT，不用零填补",
+        "reverse": "检查适用条件：上下文bandit、已知行为倾向、可比环境、奖励；抽样波动",
+        "intervention": "日志策略、支持重叠、估计器及假设",
+        "counterexample": "缺乏支持的策略效果不可识别"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.06.02.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.06.02",
+      "claim_refs": [
+        "K11.06.02.D4.01",
+        "K11.06.02.D4.02"
+      ],
+      "fixture": "未获许可自动随机分组",
+      "views": {
+        "forward": "拒绝试验执行",
+        "reverse": "检查适用条件：授权、伦理与知情条件另审",
+        "intervention": "预先指标、分配、干扰、权益与终止条件",
+        "counterexample": "未经许可不对学习者做试验"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.06.03.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.06.03",
+      "claim_refs": [
+        "K11.06.03.D4.01",
+        "K11.06.03.D4.02"
+      ],
+      "fixture": "主要策略失败且回退无权限",
+      "views": {
+        "forward": "HOLD而非绕过",
+        "reverse": "检查适用条件：项目恢复合同",
+        "intervention": "已批准规则、未知拒绝、状态恢复与审计",
+        "counterexample": "回退不得绕过权限"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    },
+    {
+      "id": "K11.06.04.CASE.01",
+      "owner": "K11",
+      "d3_id": "K11.06.04",
+      "claim_refs": [
+        "K11.06.04.D4.01",
+        "K11.06.04.D4.02"
+      ],
+      "fixture": "家庭与学习时间冲突",
+      "views": {
+        "forward": "不自动牺牲任一目标",
+        "reverse": "检查适用条件：不以系统默认权重替代人",
+        "intervention": "目标权重、约束、自主选择与不可行解释",
+        "counterexample": "不替用户擅定价值权重"
+      },
+      "expected_status": "DESIGN_ONLY",
+      "validation": "NOT_RUN",
+      "synthetic": true
+    }
+  ]
+}

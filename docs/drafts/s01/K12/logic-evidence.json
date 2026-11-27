@@ -1,0 +1,312 @@
+{
+  "owner": "K12",
+  "base": "a02441feef40decf92a8d6db04b2abccd0acb07b",
+  "scope": "SYNTHETIC_BUILDER_ONLY",
+  "independent_oracle": false,
+  "limitations": "有限选择/数值、模板、发布门槛、版本候选；不是完整QTI实现、语义评分、专业事实验证、试测、实际权限、权利核验或真实学习效果。",
+  "records": [
+    {
+      "id": "K12-LOGIC-1",
+      "input": {
+        "mode": "choice",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "response": [
+          "A"
+        ],
+        "correct": [
+          "A"
+        ],
+        "max": 1
+      },
+      "expected": "CORRECT",
+      "actual": "CORRECT",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-2",
+      "input": {
+        "mode": "choice",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "response": [
+          "B"
+        ],
+        "correct": [
+          "A"
+        ],
+        "max": 1
+      },
+      "expected": "INCORRECT",
+      "actual": "INCORRECT",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-3",
+      "input": {
+        "mode": "choice",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "response": [],
+        "correct": [
+          "A"
+        ],
+        "max": 1
+      },
+      "expected": "MISSING",
+      "actual": "MISSING",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-4",
+      "input": {
+        "mode": "choice",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "response": [
+          "A",
+          "B"
+        ],
+        "correct": [
+          "A"
+        ],
+        "max": 1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-5",
+      "input": {
+        "mode": "choice",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "response": [
+          "B",
+          "A"
+        ],
+        "correct": [
+          "A",
+          "B"
+        ],
+        "max": 2
+      },
+      "expected": "CORRECT",
+      "actual": "CORRECT",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-6",
+      "input": {
+        "mode": "choice",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "response": [
+          "A",
+          "A"
+        ],
+        "correct": [
+          "A",
+          "B"
+        ],
+        "max": 2
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-7",
+      "input": {
+        "mode": "choice",
+        "options": [
+          "A",
+          "B",
+          "C"
+        ],
+        "response": [
+          "Z"
+        ],
+        "correct": [
+          "A"
+        ],
+        "max": 1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-8",
+      "input": {
+        "mode": "numeric",
+        "answer": 0.5,
+        "expected": 0.5,
+        "tol": 0,
+        "ambiguous": false
+      },
+      "expected": "CORRECT",
+      "actual": "CORRECT",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-9",
+      "input": {
+        "mode": "numeric",
+        "answer": null,
+        "expected": 0.5,
+        "tol": 0
+      },
+      "expected": "MISSING",
+      "actual": "MISSING",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-10",
+      "input": {
+        "mode": "numeric",
+        "answer": 1,
+        "expected": 2,
+        "tol": 0,
+        "ambiguous": true
+      },
+      "expected": "HOLD_AMBIGUOUS",
+      "actual": "HOLD_AMBIGUOUS",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-11",
+      "input": {
+        "mode": "numeric",
+        "answer": 2,
+        "expected": 2,
+        "tol": -1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-12",
+      "input": {
+        "mode": "template",
+        "num": 3,
+        "den": 6
+      },
+      "expected": 0.5,
+      "actual": 0.5,
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-13",
+      "input": {
+        "mode": "template",
+        "num": 1,
+        "den": 0
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-14",
+      "input": {
+        "mode": "release",
+        "content": "pass",
+        "scoring": "pass",
+        "access": "pass",
+        "rights": "pass",
+        "pilot": "unknown"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-15",
+      "input": {
+        "mode": "release",
+        "content": "pass",
+        "scoring": "pass",
+        "access": "fail",
+        "rights": "pass",
+        "pilot": "pass"
+      },
+      "expected": "REJECT",
+      "actual": "REJECT",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-16",
+      "input": {
+        "mode": "release",
+        "content": "pass",
+        "scoring": "pass",
+        "access": "pass",
+        "rights": "pass",
+        "pilot": "pass"
+      },
+      "expected": "CANDIDATE_NOT_ACCEPTED",
+      "actual": "CANDIDATE_NOT_ACCEPTED",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-17",
+      "input": {
+        "mode": "release",
+        "content": "pass",
+        "scoring": "pass",
+        "access": "pass",
+        "rights": "unknown",
+        "pilot": "pass"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-18",
+      "input": {
+        "mode": "version",
+        "old": "v1",
+        "next": "v1",
+        "changed": true
+      },
+      "expected": "REJECT_MUTATION",
+      "actual": "REJECT_MUTATION",
+      "pass": true
+    },
+    {
+      "id": "K12-LOGIC-19",
+      "input": {
+        "mode": "version",
+        "old": "v1",
+        "next": "v2",
+        "changed": true
+      },
+      "expected": "VERSION_CANDIDATE",
+      "actual": "VERSION_CANDIDATE",
+      "pass": true
+    }
+  ],
+  "passed": 19
+}

@@ -1,0 +1,357 @@
+{
+  "owner": "H02",
+  "base": "ef316aa6cab66911a28bcb99172d0a414a5dff11",
+  "status": "SCOPE_DRAFT_NOT_CLAIMS",
+  "records": [
+    {
+      "d3_id": "H02.01.01",
+      "owner": "H02",
+      "label": "字形",
+      "requirement_id": "H02.01.01.RQ01",
+      "research_requirement": "抽象字符、具体字形、字体和地域规范区别",
+      "negative_boundary": "字形视觉相似不证明同一字符",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.01.02",
+      "owner": "H02",
+      "label": "简繁",
+      "requirement_id": "H02.01.02.RQ01",
+      "research_requirement": "规范映射、语境及一对多关系",
+      "negative_boundary": "简繁转换不能假设双向无损",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "一对多简繁映射，未提供词义或语境不强行逆转换。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.01.03",
+      "owner": "H02",
+      "label": "异体",
+      "requirement_id": "H02.01.03.RQ01",
+      "research_requirement": "异体关系、来源、使用范围和标准版本",
+      "negative_boundary": "异体不必在任何场景可互换",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.01.04",
+      "owner": "H02",
+      "label": "编码与规范",
+      "requirement_id": "H02.01.04.RQ01",
+      "research_requirement": "Unicode标识、字形标准及规范用途",
+      "negative_boundary": "代码点不是规范字形证明",
+      "source_leads": [
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "同代码点不同字形、规范与非规范分别处理。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.02.01",
+      "owner": "H02",
+      "label": "笔画",
+      "requirement_id": "H02.02.01.RQ01",
+      "research_requirement": "笔画类型、计数规则与字形版本",
+      "negative_boundary": "不同字形的笔画数不默认一致",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.02.02",
+      "owner": "H02",
+      "label": "笔顺",
+      "requirement_id": "H02.02.02.RQ01",
+      "research_requirement": "规范顺序、来源、变体及书写证据",
+      "negative_boundary": "认读正确不证明笔顺掌握",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.02.03",
+      "owner": "H02",
+      "label": "部件",
+      "requirement_id": "H02.02.03.RQ01",
+      "research_requirement": "构形部件、部首、字源和位置关系",
+      "negative_boundary": "部首不等于全部构形部件",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.02.04",
+      "owner": "H02",
+      "label": "结构",
+      "requirement_id": "H02.02.04.RQ01",
+      "research_requirement": "左右上下包围等结构与层级分解",
+      "negative_boundary": "视觉分解不自动等于字源分析",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.02.05",
+      "owner": "H02",
+      "label": "形声线索",
+      "requirement_id": "H02.02.05.RQ01",
+      "research_requirement": "形旁声旁、语义/语音提示及例外",
+      "negative_boundary": "声旁不保证实际读音",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.03.01",
+      "owner": "H02",
+      "label": "多音",
+      "requirement_id": "H02.03.01.RQ01",
+      "research_requirement": "读音、词语、语境与标准读法",
+      "negative_boundary": "字表单个读音不覆盖全部词",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [
+        "QD4-11"
+      ],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.03.02",
+      "owner": "H02",
+      "label": "多义",
+      "requirement_id": "H02.03.02.RQ01",
+      "research_requirement": "字义、语素义、词义及用例",
+      "negative_boundary": "同字出现不代表同一义项",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.03.03",
+      "owner": "H02",
+      "label": "音义配对",
+      "requirement_id": "H02.03.03.RQ01",
+      "research_requirement": "字词读音、义项、语境及证据",
+      "negative_boundary": "读音相同不证明义相同",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.03.04",
+      "owner": "H02",
+      "label": "字词区别",
+      "requirement_id": "H02.03.04.RQ01",
+      "research_requirement": "字符、语素、词及组合身份",
+      "negative_boundary": "不能把每个字当独立词",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.04.01",
+      "owner": "H02",
+      "label": "形近",
+      "requirement_id": "H02.04.01.RQ01",
+      "research_requirement": "视觉结构差异及实测辨别任务",
+      "negative_boundary": "形似不等于已证学习混淆",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.04.02",
+      "owner": "H02",
+      "label": "部件共享",
+      "requirement_id": "H02.04.02.RQ01",
+      "research_requirement": "共用部件身份、位置及关系方向",
+      "negative_boundary": "共享部件不证明语义相关",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.04.03",
+      "owner": "H02",
+      "label": "构形约束",
+      "requirement_id": "H02.04.03.RQ01",
+      "research_requirement": "部件组合、位置、规范与历史来源",
+      "negative_boundary": "任意拼合不能生成规范字",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.04.04",
+      "owner": "H02",
+      "label": "易混淆",
+      "requirement_id": "H02.04.04.RQ01",
+      "research_requirement": "形音义混淆候选与独立诊断证据",
+      "negative_boundary": "一次写错不能认定稳定混淆",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.05.01",
+      "owner": "H02",
+      "label": "认读目标",
+      "requirement_id": "H02.05.01.RQ01",
+      "research_requirement": "识别、读音、词义及独立情境条件",
+      "negative_boundary": "认读字表成员不等于已掌握",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "认读正确但书写失败，不合并两个技能状态。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.05.02",
+      "owner": "H02",
+      "label": "书写目标",
+      "requirement_id": "H02.05.02.RQ01",
+      "research_requirement": "字形产出、笔顺、工具及评价条件",
+      "negative_boundary": "能认读不等于能书写",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.05.03",
+      "owner": "H02",
+      "label": "规范字形",
+      "requirement_id": "H02.05.03.RQ01",
+      "research_requirement": "标准字形、来源版本、适用地区用途",
+      "negative_boundary": "规范字形与Unicode编码不是同一规范",
+      "source_leads": [
+        "S046"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H02.05.04",
+      "owner": "H02",
+      "label": "书写变体",
+      "requirement_id": "H02.05.04.RQ01",
+      "research_requirement": "手写、印刷、字体与允许变异",
+      "negative_boundary": "不可将非目标字体直接判错",
+      "source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

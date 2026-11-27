@@ -1,0 +1,268 @@
+{
+  "owner": "H01",
+  "base": "f8b1c2f2736726e429678fc04430821bc18de470",
+  "prior_claim_blob": "b1a7dd399de4e5db17652111fe64f5e970589688",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H01.01.01.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.01.01",
+      "requirement_id": "H01.01.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "齿音/齿龈附近与龈后擦音、塞擦音后的舌尖音分析需结合构音位置；不同音系分析可能称其为舌尖元音或成音节辅音。",
+      "conditions": [
+        "限定该教学材料的IPA分析"
+      ],
+      "negative_boundary": "不能由拼音字母i推断每处音值相同。",
+      "source_refs": [
+        "H01-B03-LMU"
+      ],
+      "source_locator": "l275–281",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.01.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "zi、zhi、ji",
+        "expected": "分别标拼写及语音分析，未测音频",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.01.02.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.01.02",
+      "requirement_id": "H01.01.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "普通话词首塞音的送气对立与VOT分布相关，跨语言比较需区别音系标签和实际声带起振时间。",
+      "conditions": [
+        "词首塞音、指定说话人及语境"
+      ],
+      "negative_boundary": "不能用英语字母b/p或固定毫秒阈值直接判定普通话类别。",
+      "source_refs": [
+        "H01-B03-VOT"
+      ],
+      "source_locator": "l112–119",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.01.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "bā/pā",
+        "expected": "控制同声韵调与说话人，观察释放和起声",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.01.03.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.01.03",
+      "requirement_id": "H01.01.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "VOT可表示起声时间相对于释放时刻的差，若起声先于释放可为负；单位须与时间轴一致。",
+      "conditions": [
+        "已标可靠释放和起声点；一般数学定义"
+      ],
+      "negative_boundary": "VOT不是F0、响度或元音共振峰，未标边界保持未知。",
+      "source_refs": [
+        "H01-B03-VOT"
+      ],
+      "source_locator": "l118–121",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.01.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "释放100ms，起声145ms",
+        "expected": "VOT=45ms，不推断类别",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.03.02.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.03.02",
+      "requirement_id": "H01.03.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "孤立三声常见曲折轮廓，但语流中非末位置可能呈低降或在三声前变调；相对F0曲线还受邻调条件影响。",
+      "conditions": [
+        "标准普通话、明确韵律域；引言综述"
+      ],
+      "negative_boundary": "不得以是否完整回升作为三声唯一正确性判据。",
+      "source_refs": [
+        "H01-B03-TONE"
+      ],
+      "source_locator": "l295–301",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.03.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "三声在孤立与非末位置",
+        "expected": "保留词汇调与实际曲线",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.04.02.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.04.02",
+      "requirement_id": "H01.04.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "前音节末端F0可影响后音节起点，后续音调也可影响目标轮廓；这是连续协同构音而非所有情况下改变词汇调类别。",
+      "conditions": [
+        "指定相邻调及语速条件"
+      ],
+      "negative_boundary": "不能将任何轮廓变形都标为词汇调变化。",
+      "source_refs": [
+        "H01-B03-TONE"
+      ],
+      "source_locator": "l296–301",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.04.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "升调处于相邻音高冲突语境",
+        "expected": "保留相邻音节与语流F0",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.04.04.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.04.04",
+      "requirement_id": "H01.04.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "引言综述的既有实验指出，相同声调在不同语音上下文中可能难以仅凭孤立片段辨认；听辨任务应记录是否提供原语境。",
+      "conditions": [
+        "限定引用实验任务与样本，非普适学习效果"
+      ],
+      "negative_boundary": "不能把孤立片段错误直接定为真实交际失败。",
+      "source_refs": [
+        "H01-B03-TONE"
+      ],
+      "source_locator": "l298–303",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.04.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "同一音节分别孤立及带上下文呈现",
+        "expected": "分别记录两个条件的响应",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.04.03.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.04.03",
+      "requirement_id": "H01.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "儿化可改变韵母音质，不仅是末尾附加独立音节；部分带鼻韵尾的例子实现为鼻化卷舌元音。",
+      "conditions": [
+        "该材料例示，不概括所有韵母规则"
+      ],
+      "negative_boundary": "不能见儿字即生成儿化。",
+      "source_refs": [
+        "H01-B03-LMU"
+      ],
+      "source_locator": "l284–290",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "花儿/儿童",
+        "expected": "词项语境及实际音频分别核",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.05.01.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.05.01",
+      "requirement_id": "H01.05.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "GB/T16159-2012线索表明词级拼写建立在音节拼写之上；词界及专名格式需依指定规则，而非逐字拼音拼接。",
+      "conditions": [
+        "仅索引；标准具体条款待正文核验"
+      ],
+      "negative_boundary": "不能声称所有词界已解析。",
+      "source_refs": [
+        "H01-B03-PY"
+      ],
+      "source_locator": "§4.1–4.2 搜索摘要",
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "base_claim_ref": "H01.05.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "西安与单字拼音",
+        "expected": "词级拼写与字音分离",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.05.02.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.05.02",
+      "requirement_id": "H01.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "注音符号在Unicode中有独立编码区域，用于汉语语音注释及教学；编码字符集合并非拼音到注音完整转换规则。",
+      "conditions": [
+        "固定Unicode17，注音规范另核"
+      ],
+      "negative_boundary": "不能仅用码位顺序推导音节对照。",
+      "source_refs": [
+        "H01-B03-U17"
+      ],
+      "source_locator": "§18.3 l511–513",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "ㄅ与拼音b",
+        "expected": "分别绑定系统，转换表另证",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.05.04.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.05.04",
+      "requirement_id": "H01.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "Unihan词典来源读音字段允许同一字有多条来源定位及多读音顺序；记录来源项与读音，不折叠成单一全局读音。",
+      "conditions": [
+        "字段为provisional；词境读音须辞书另证"
+      ],
+      "negative_boundary": "不能以第一读音替代所有词境读音。",
+      "source_refs": [
+        "H01-B03-UH41"
+      ],
+      "source_locator": "kHanyuPinyin l556–565",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "行在银行与行走",
+        "expected": "分别建立词项读音候选",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

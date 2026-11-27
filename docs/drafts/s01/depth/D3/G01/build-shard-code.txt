@@ -1,0 +1,31 @@
+async function buildShard({tools,r,base,root,mods,parent,includeBuilder=false,builderText=""}){
+ const entries=[],stats=[]; const put=(p,o)=>entries.push({path:root+"/"+p,mode:"100644",type:"blob",content:typeof o==="string"?o:JSON.stringify(o,null,2)+"\n"});
+ for(const m of mods){
+ const names=["claims","coverage","sources",...(m==="K01"?[]:["cross-topic-links"])];
+ const fs=await Promise.all(names.map(async n=>{try{return await tools.mcp__GitHub__fetch_file({repository_full_name:r,ref:base,path:`docs/drafts/s01/${m}/${n}.json`})}catch(e){if(n==="cross-topic-links"&&String(e).includes("NOT_FOUND"))return null;throw e}}));
+ const [claims,coverage,sources,links]=fs.map(x=>x?JSON.parse(x.result.content):null);
+ const topics=coverage.records,cs=claims.records,ss=sources.sources,ls=links?.records??[];
+ const map=new Map(topics.map(x=>[x.d3_id,x])),claimMap=new Map(cs.map(x=>[x.stable_id,x])),sourceMap=new Map(ss.map(x=>[x.id,x]));
+ if(map.size!==topics.length||claimMap.size!==cs.length||sourceMap.size!==ss.length)throw Error("duplicate "+m);
+ const issues=[],edges=[],nodes=[{id:m,type:"MODULE",owner:m,status:"DRAFT"}];
+ function edge(type,from,to,ref,status="STRUCTURAL_ONLY"){edges.push({id:`${type}:${from}:${to}:${ref}`,type,from,to,origin:ref,status,qualification:"NOT_RUN"});}
+ for(const t of topics){
+ if(!t.d3_id.startsWith(m+"."))throw Error("topic owner");
+ nodes.push({id:t.d3_id,type:"TOPIC",owner:m,label:t.topic,requirement_id:t.requirement_id,status:"DRAFT"});edge("HAS_TOPIC",m,t.d3_id,t.requirement_id);
+ for(const id of t.claim_refs??[]){if(!claimMap.has(id))issues.push({type:"COVERAGE_CLAIM_MISSING",topic:t.d3_id,claim:id});}
+ }
+ for(const c of cs){if(!map.has(c.d3_id))throw Error("missing topic "+c.stable_id);
+ nodes.push({id:c.stable_id,type:"CLAIM",owner:m,topic:c.d3_id,claim_type:c.claim_type,evidence_status:c.evidence_status,status:c.status,qualification:c.qualification,statement:c.statement,conditions:c.conditions,negative_boundary:c.negative_boundary,source_refs:c.source_refs});
+ edge("HAS_CLAIM",c.d3_id,c.stable_id,c.stable_id);
+ if(!map.get(c.d3_id).claim_refs.includes(c.stable_id))issues.push({type:"CLAIM_NOT_IN_COVERAGE",claim:c.stable_id,topic:c.d3_id});
+ for(const sid of c.source_refs??[]){if(sourceMap.has(sid))edge("CITES_RECORDED_SOURCE",c.stable_id,sid,c.stable_id,"RECORDED_CITATION_NOT_SUPPORT");else issues.push({type:"SOURCE_NOT_IN_LOCAL_CATALOG",claim:c.stable_id,source:sid});}
+ }
+ for(const s of ss)nodes.push({id:s.id,type:"SOURCE_RECORD",owner:m,title:s.title,url:s.url,access_recorded:s.access,locator:s.locator,rights:s.rights,status:"RECORDED_NOT_REVERIFIED"});
+ for(const l of ls){if(!map.has(l.from)&&!claimMap.has(l.from))issues.push({type:"ANCHOR_FROM_UNRESOLVED",id:l.id,from:l.from});}
+ if(new Set(edges.map(x=>x.id)).size!==edges.length)throw Error("edge duplicate "+m);
+ const data={module:m,base,status:"DRAFT_GRAPH_INDEX_NOT_SEMANTIC_QUALIFICATION",inputs:names.map((n,i)=>({path:`docs/drafts/s01/${m}/${n}.json`,blob:fs[i]?.result.sha??null})),anchor_file_status:links?"PRESENT":"ABSENT",nodes,edges,anchors:ls.map(x=>({...x,semantic_status:"RESEARCH_ANCHOR_ONLY",target_resolution:"DEFER_GLOBAL"})),issues};
+ put(`modules/${m}.json`,data);stats.push({module:m,topics:topics.length,claims:cs.length,sources:ss.length,edges:edges.length,anchors:ls.length,issues:issues.length,issue_sample:issues.slice(0,4)});
+ }
+ if(includeBuilder)put("build-shard-code.txt",builderText);
+ const t=await tools.mcp__GitHub__create_tree({repository_full_name:r,base_tree_sha:parent,tree_elements:entries});const c=await tools.mcp__GitHub__create_commit({repository_full_name:r,parent_sha:parent,tree_sha:t.result.sha,message:`docs(s01): D3 G01 index ${mods.join(" ")} graph entities and provenance`});return {sha:c.result.sha,stats,files:entries.length};
+}

@@ -1,0 +1,86 @@
+{
+  "owner": "K16",
+  "base": "0d28ad2fa0febe195b442c40f2203e52b87a05fa",
+  "prior_claim_blob": "2a9b58066a56eb9909ced2ab4d7b14c3e2640eb9",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K16.02.03.D4.03",
+      "owner": "K16",
+      "d3_id": "K16.02.03",
+      "requirement_id": "K16.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "WCAG 2.2 SC2.1.1要求键盘可操作，依赖运动路径的功能有例外；辅助通道应按任务功能验证。",
+      "conditions": [
+        "Web内容标准；目标构念影响另证。"
+      ],
+      "negative_boundary": "键盘可用不证明学习测量等值。",
+      "source_refs": [
+        "K16-B07-WCAG"
+      ],
+      "source_locator": "SC 2.1.1, 2.1.2",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K16.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "用键盘选择答案而非拖动",
+        "expected": "核查任务是否测量拖动能力",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K16.03.03.D4.03",
+      "owner": "K16",
+      "d3_id": "K16.03.03",
+      "requirement_id": "K16.03.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "键盘可进入的组件应可通过键盘退出；存在非标准退出方式时应向用户说明。",
+      "conditions": [
+        "SC2.1.2；仅Web界面规范。"
+      ],
+      "negative_boundary": "不能从单个控件通过推断全站合规。",
+      "source_refs": [
+        "K16-B07-WCAG"
+      ],
+      "source_locator": "SC 2.1.1, 2.1.2",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K16.03.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "练习弹窗焦点被锁住",
+        "expected": "记录访问障碍而非知识失败",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K16.04.03.D4.03",
+      "owner": "K16",
+      "d3_id": "K16.04.03",
+      "requirement_id": "K16.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "访问调整的技术合规与构念等值是两个问题；当目标本身需要路径动作时不能仅由键盘替代宣布同一测量。",
+      "conditions": [
+        "项目测量推论，WCAG只支持技术边界。"
+      ],
+      "negative_boundary": "不假设所有辅助方式保持同一能力。",
+      "source_refs": [
+        "K16-B07-WCAG"
+      ],
+      "source_locator": "SC 2.1.1, 2.1.2",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K16.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "手写字形任务改为选择汉字",
+        "expected": "独立构念，不合并分数",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

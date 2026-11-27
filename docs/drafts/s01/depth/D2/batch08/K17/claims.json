@@ -1,0 +1,112 @@
+{
+  "owner": "K17",
+  "base": "325953f7c9d79a31417d94bba83244c5a9eccc45",
+  "prior_claim_blob": "498623e8d47e2740f442a3a575e5076159effeb6",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K17.05.04.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.05.04",
+      "requirement_id": "K17.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "漏斗图不对称检验一般需足够研究且研究标准误有差异；不对称还可能来自异质性。",
+      "conditions": [
+        "Cochrane方法；至少10项为经验规则而非绝对定理。"
+      ],
+      "negative_boundary": "不把显著不对称视作发表偏倚诊断。",
+      "source_refs": [
+        "K17-B08-FUN"
+      ],
+      "source_locator": "§13.3.4.5–6 l273–287,309–319",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "仅5项研究且规模接近",
+        "expected": "不自动运行不对称检验",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.05.05.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.05.05",
+      "requirement_id": "K17.05.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "GRADE针对特定结局的证据体判断确定性，需分别考虑偏倚、不一致、间接性、不精确和发表偏倚。",
+      "conditions": [
+        "临床综述框架；教育结局应用需校准。"
+      ],
+      "negative_boundary": "单项研究设计不能代替证据体评级。",
+      "source_refs": [
+        "K17-B08-GRADE"
+      ],
+      "source_locator": "l51–57,78–85",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.05.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "阅读速度和理解两个结局",
+        "expected": "分别评价确定性",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.06.01.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.06.01",
+      "requirement_id": "K17.06.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "计算复现使用原数据、代码与分析条件；复制研究另收集数据回答同一问题。",
+      "conditions": [
+        "NASEM术语约定。"
+      ],
+      "negative_boundary": "同一合成夹具重复执行不等于独立复制。",
+      "source_refs": [
+        "K17-B08-REP"
+      ],
+      "source_locator": "l95–102, Recommendation 4-1",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.06.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "重跑原脚本得到同值",
+        "expected": "仅记录计算复现",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K17.06.02.D4.03",
+      "owner": "K17",
+      "d3_id": "K17.06.02",
+      "requirement_id": "K17.06.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "复杂计算结果需保留数据、方法及计算环境；非确定步骤可能需要中间和输出资料，受限制数据另行治理。",
+      "conditions": [
+        "Recommendation 4-1。"
+      ],
+      "negative_boundary": "开放链接或文件名不证明可复现。",
+      "source_refs": [
+        "K17-B08-REP"
+      ],
+      "source_locator": "l95–102, Recommendation 4-1",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K17.06.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "训练随机过程缺环境记录",
+        "expected": "复现状态待核",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

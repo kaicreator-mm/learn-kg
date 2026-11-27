@@ -1,0 +1,607 @@
+{
+  "owner": "K09",
+  "base": "ebe7140c1ecf63ef078de4356d07c63384a6343c",
+  "prior_claim_blob": "0e737add866880e145abe4c58c3555873a7064aa",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K09.02.01.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.02.01",
+      "requirement_id": "K09.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "量尺类型决定不改变信息的重编码；顺序量尺允许严格单调重编码，因此等级1/2/3改为1/2/10仍保序，但数值距离改变。",
+      "conditions": [
+        "相同有序类别，未另证等距；数学反例"
+      ],
+      "negative_boundary": "不以HSK级别差值作为等距能力增量。",
+      "source_refs": [
+        "K09-D2-SCALE25"
+      ],
+      "source_locator": "p740, scaling perspectives; text l140–142",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.02.01.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "等级1到2与2到3重编码后差1和8",
+        "expected": "仅保序；等距解释需证据",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.02.02.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.02.02",
+      "requirement_id": "K09.02.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "经典测量模型X=T+E中，T为指定重复测量程序下的期望分数；当误差条件满足时，Var(X)=Var(T)+Var(E)，信度ρ=Var(T)/Var(X)。",
+      "conditions": [
+        "同总体、指定重复条件、Cov(T,E)=0、Var(X)>0"
+      ],
+      "negative_boundary": "高信度并不说明目标构念正确或可以外推。",
+      "source_refs": [
+        "K09-D2-CTT10"
+      ],
+      "source_locator": "§Classical test theory reliability, l90–101",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.02.02.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "Var(T)=64, Var(E)=36",
+        "expected": "ρ=.64",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.02.02.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.02.02",
+      "requirement_id": "K09.02.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "评价信度需与分数的重复条件和决策用途匹配；分类决策关注切点附近精度及重复分类的一致性，不宜只报告单一内部一致性系数。",
+      "conditions": [
+        "有明确评分用途和相关子群；标准建议"
+      ],
+      "negative_boundary": "总体信度不能自动证明每个群体或切点附近同样精确。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "pp45–46, 2.10–2.16",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.02.02.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "总体α=.9但切点附近条件SEM大",
+        "expected": "报告切点附近误差与分类一致性",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.02.03.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.02.03",
+      "requirement_id": "K09.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "CTT真分数是指定测量程序反复实施的期望，不等于独立定义的真实能力；若每次均引入固定的构念无关偏差，重复测量可能仍高度一致。",
+      "conditions": [
+        "模型内误差与系统性偏差区分；后半为推论"
+      ],
+      "negative_boundary": "不可用高重复信度消除系统偏差。",
+      "source_refs": [
+        "K09-D2-CTT10"
+      ],
+      "source_locator": "§A general framework, reliability, l90–99",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.02.03.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "每次听力测试都额外显示答案文本",
+        "expected": "评分可一致但不证明纯听力构念",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.02.04.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.02.04",
+      "requirement_id": "K09.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "效度论证的两个典型威胁是构念代表不足和构念无关变异：前者漏测目标组成，后者使无关过程影响分数。",
+      "conditions": [
+        "指定构念、使用目的及任务条件"
+      ],
+      "negative_boundary": "不把所有难度或语言要求都视为无关，需由目标界定。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "pp12,14 Ch1",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.02.04.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "汉语口语测试只考认字；纯听辨题附复杂阅读任务",
+        "expected": "分别识别构念不足/可能无关变异",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.02.04.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.02.04",
+      "requirement_id": "K09.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "同一测验对某用途的解释有证据，不代表另一个用途自动有效；不同使用主张须分别支持。",
+      "conditions": [
+        "用途和人群条件明确"
+      ],
+      "negative_boundary": "不能凭课程分数签发职业资格。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "p14, Ch1",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.02.04.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "阅读测验验证了分班用途，却用于口语招聘",
+        "expected": "新用途HOLD",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.02.05.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.02.05",
+      "requirement_id": "K09.02.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "解释/使用论证先声明从观察到分数、测试域及外部目标、决策的推断和假设；效度论证再逐项检验证据和竞争解释。",
+      "conditions": [
+        "二级专业章节；原Kane文献未核，四环节为可操作化框架"
+      ],
+      "negative_boundary": "不是固定四格表填写即有效。",
+      "source_refs": [
+        "K09-D2-VA25"
+      ],
+      "source_locator": "§Kane's Framework and extrapolation",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.02.05.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "朗读分数用于自发对话能力及岗位决策",
+        "expected": "评分、概化、外推、使用分别需证据",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.03.01.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.03.01",
+      "requirement_id": "K09.03.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "CTT二分题正确率是具体样本中正确响应比例；越大通常表示该样本答得越容易，不能跨样本直接当固定难度参数。",
+      "conditions": [
+        "二分计分，分母政策明确，样本适用"
+      ],
+      "negative_boundary": "无效/缺失与错题须按预定义政策处理；不与IRT b混用。",
+      "source_refs": [
+        "K09-D2-CTT10"
+      ],
+      "source_locator": "§Item-level statistics l115–117",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.03.01.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "8对2错2缺失",
+        "expected": "有效作答率.8；缺失2/12单列",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.03.02.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.03.02",
+      "requirement_id": "K09.03.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "题目区分度可用题目二分响应与测验标准分数的点二列相关来描述；若总分含本题，存在部分-整体重叠，应声明是否使用去本题总分。",
+      "conditions": [
+        "非恒定响应及标准分数；去本题为方法候选"
+      ],
+      "negative_boundary": "不是IRT a；高相关不自动证明有效或公平。",
+      "source_refs": [
+        "K09-D2-CTT10"
+      ],
+      "source_locator": "§Item-level statistics l118–119",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.03.02.D4.01",
+      "relationship": "PARTIAL_REFINEMENT",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "所有人答对，响应方差为0",
+        "expected": "相关未定义，不填0",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.03.03.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.03.03",
+      "requirement_id": "K09.03.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "二分题等权总分Σx_j是响应向量的压缩；不同响应模式可同分，但在某些模型如固定题集Rasch下总分可为估计θ的充分统计量。",
+      "conditions": [
+        "固定等权二分题集；Rasch充分性另见SCALE25 p746"
+      ],
+      "negative_boundary": "同分不能普遍认为技能组合相同，也不能反过来否定Rasch充分性。",
+      "source_refs": [
+        "K09-D2-CTT10",
+        "K09-D2-SCALE25"
+      ],
+      "source_locator": "§Applications l122–123; SCALE25 Ch11 text weighted scores",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.03.03.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "响应(1,0)与(0,1)",
+        "expected": "相同总分，不推断相同属性组合",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.03.04.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.03.04",
+      "requirement_id": "K09.03.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "测量标准误应与报告分数同单位；若误差随能力或分数变化，应在多个分数水平及切点附近报告条件标准误。",
+      "conditions": [
+        "条件模型及样本支持；非自动个体置信区间"
+      ],
+      "negative_boundary": "全局SEM不代表每人相同，也非分数均值标准误。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "pp45–46, 2.13–2.16",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.03.04.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "总SEM=4，切点附近SEM=7",
+        "expected": "报告各自单位与条件",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.04.01.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.04.01",
+      "requirement_id": "K09.04.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "固定题集、相同斜率与等权二分Rasch模型下，总分对θ估计具有充分性；全对或全错时无有限无约束极大似然估计。",
+      "conditions": [
+        "模型正确、固定题集、无缺失或按模型处理，1PL D=1/a=1；不同估计方法不同"
+      ],
+      "negative_boundary": "不要将极端分数映射为未经声明的有限MLE或满掌握。",
+      "source_refs": [
+        "K09-D2-SCALE25"
+      ],
+      "source_locator": "p746, Ability estimates from Rasch and other 1PL IRT models",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.04.01.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "5题全对",
+        "expected": "报告极端MLE边界，若EAP需声明先验",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.05.01.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.05.01",
+      "requirement_id": "K09.05.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "DINA的理想响应η=∏α_k^{q_jk}，全部必需属性均满足才取1；P=1-s当η=1，否则g。",
+      "conditions": [
+        "二元属性/题目，0<g<1-s<1为本论文条件"
+      ],
+      "negative_boundary": "答对只是条件概率事件，不能反推全部掌握。",
+      "source_refs": [
+        "K09-D2-QMAT26"
+      ],
+      "source_locator": "§2.1.1 lines528–531",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.05.01.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "q=(1,1)，α=(1,0)，g=.2,s=.1",
+        "expected": "η=0,P=.2",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.05.01.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.05.01",
+      "requirement_id": "K09.05.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "DINA将所有未满足全部属性的画像归为同一低概率水平；RRUM等其他非补偿模型可按缺失属性施加不同乘性惩罚。",
+      "conditions": [
+        "指定模型与参数；不得混用"
+      ],
+      "negative_boundary": "单题响应不足以区分DINA的多种非理想画像。",
+      "source_refs": [
+        "K09-D2-DINA21"
+      ],
+      "source_locator": "§1.1, l176–192",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.05.01.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "q=(1,1)，α=(1,0)或(0,1)",
+        "expected": "DINA均为g；其他模型可能不同",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.05.02.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.05.02",
+      "requirement_id": "K09.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "固定二元Q及单调DINA条件下，若Q包含每个属性的单位向量行，则不同二元属性画像有不同理想响应签名；对该模型的完全区分要求这些单位行。",
+      "conditions": [
+        "论文binary Q completeness条件；仅结构区分"
+      ],
+      "negative_boundary": "签名区分不证明有限样本可靠分类或未知参数联合可识别。",
+      "source_refs": [
+        "K09-D2-QMAT26"
+      ],
+      "source_locator": "§2.2 lines532–536",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.05.02.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "Q只有(1,1) vs 加(1,0),(0,1)",
+        "expected": "前者三画像混同；后者四画像可区分",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.05.02.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.05.02",
+      "requirement_id": "K09.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "Q矩阵的专家标注与模型估计结果可有差异；Q修订应同时考虑内容/认知依据和拟合证据。",
+      "conditions": [
+        "专家与估计方法范围；项目流程为候选"
+      ],
+      "negative_boundary": "模型拟合改善不自动证明属性语义正确或为必要先修。",
+      "source_refs": [
+        "K09-D2-DINA21"
+      ],
+      "source_locator": "§1.2 l193–194",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.05.02.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两种Q有相近拟合但语义不同",
+        "expected": "保留版本及竞争解释，待独立内容审查",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.06.01.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.06.01",
+      "requirement_id": "K09.06.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "复杂开放作答应有可审计的评分准则、可接受变体和评分示例，人工评分与机器评分均需质量控制。",
+      "conditions": [
+        "依目标、版本和评分程序制定"
+      ],
+      "negative_boundary": "一个参考字符串不是开放任务的唯一合法答案。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "p118, 6.8–6.9",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.06.01.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "用不同表达完成相同请求",
+        "expected": "按量规判断目标及语境，不按完全字符串",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.06.03.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.06.03",
+      "requirement_id": "K09.06.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "复杂响应的机器评分须记录算法与流程的准确性证据，并监测评分质量及系统性误差；可与人工评分基准对照。",
+      "conditions": [
+        "人工基准亦须审查；程序与版本固定"
+      ],
+      "negative_boundary": "高模型置信、人工一致都不自动证明效度或公平。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "p118, 6.8–6.9",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.06.03.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "新评分版本偏向某种表述",
+        "expected": "按版本监测误差、复核及更正",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.07.02.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.07.02",
+      "requirement_id": "K09.07.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "总结性分数报告必须把解释与具体使用目标及可比条件绑定；跨表单可互换需要独立证据。",
+      "conditions": [
+        "专业标准适用性另核；非专门总结性评价实证"
+      ],
+      "negative_boundary": "课程完成分数不代表保持、迁移或跨版等级。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "p14, Ch1; p105 5.12",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.07.02.D4.01",
+      "relationship": "PARTIAL_REFINEMENT",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两套课程均得80分",
+        "expected": "不声明等值，需共同构念及链接证据",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.07.04.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.07.04",
+      "requirement_id": "K09.07.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "线性尺度对齐l_Y(x)=μ_Y+(x−μ_X)σ_Y/σ_X，在同目标总体、σ_X,σ_Y>0下匹配均值与标准差；回归预测另外乘相关系数，方向不对称。",
+      "conditions": [
+        "共同目标总体、尺度矩；公式计算与真正等值资格分开"
+      ],
+      "negative_boundary": "对齐分布不保证构念相同、测量精度及个体分数可互换。",
+      "source_refs": [
+        "K09-D2-SCALE25"
+      ],
+      "source_locator": "pp762–763 Eq15–17",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.07.04.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "μ_X=60,σ_X=10, μ_Y=70,σ_Y=20,x=65,ρ=.5",
+        "expected": "对齐80，预测75",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.07.04.D4.04",
+      "owner": "K09",
+      "d3_id": "K09.07.04",
+      "requirement_id": "K09.07.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "等值要说明共同规格、数据采集设计、方法、误差及适用子群；考试规格发生实质变化时即使有统计链接，也未必可互换。",
+      "conditions": [
+        "不同表单/版本；符合适用标准"
+      ],
+      "negative_boundary": "不能把HSK2与HSK3同级或词表重叠当等值。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "p105 5.12–5.15; p107 5.19–5.20",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.07.04.D4.01",
+      "relationship": "EXTENDS",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两版本题型和技能构念变化",
+        "expected": "记录变化及证据缺口，保持HOLD",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.07.05.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.07.05",
+      "requirement_id": "K09.07.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "标准设定需说明切点依据、参与者资质和判断程序，并在可行时使用相关效标证据；配额选择和实质能力分类的切点意义不同。",
+      "conditions": [
+        "具体用途、量尺、切点附近精度；政策主体有权"
+      ],
+      "negative_boundary": "切点不是统计程序自动生成的唯一真值。",
+      "source_refs": [
+        "K09-D2-STD14"
+      ],
+      "source_locator": "pp107–108, 5.21–5.23",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.07.05.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "前20%录取 vs 达到口语能力标准",
+        "expected": "分别定义决策目标和误分类后果",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K09.07.06.D4.03",
+      "owner": "K09",
+      "d3_id": "K09.07.06",
+      "requirement_id": "K09.07.06.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "DIF是在相关能力匹配后比较群体题目表现；匹配指标不完美、多维度和样本差异均可能影响信号，须另做内容审查。",
+      "conditions": [
+        "相关能力、匹配质量、统计样本及比较组明确"
+      ],
+      "negative_boundary": "DIF非歧视自动裁决；无DIF也非公平证明。",
+      "source_refs": [
+        "K09-D2-DIF03"
+      ],
+      "source_locator": "pp1–3, matching; DIF vs bias",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K09.07.06.D4.01",
+      "relationship": "REFINES",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "总体差异大但各能力层内正确率相同",
+        "expected": "原始差不单独证明DIF",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

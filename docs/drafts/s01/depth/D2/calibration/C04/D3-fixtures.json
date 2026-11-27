@@ -1,0 +1,522 @@
+[
+  {
+    "id": "P08-retain",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": 5,
+      "accessible": true,
+      "prerequisitesMet": true,
+      "materialScopeMatch": true,
+      "target": "RETENTION",
+      "mode": "RETRIEVAL"
+    },
+    "expected": "MODE_CANDIDATE"
+  },
+  {
+    "id": "P08-interleave",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": 5,
+      "accessible": true,
+      "prerequisitesMet": true,
+      "materialScopeMatch": true,
+      "target": "STRATEGY_DISCRIMINATION",
+      "mode": "INTERLEAVED_PRACTICE"
+    },
+    "expected": "MODE_CANDIDATE"
+  },
+  {
+    "id": "P08-explain",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": 5,
+      "accessible": true,
+      "prerequisitesMet": true,
+      "materialScopeMatch": true,
+      "target": "CONCEPT_EXPLANATION",
+      "mode": "SELF_EXPLANATION"
+    },
+    "expected": "MODE_CANDIDATE"
+  },
+  {
+    "id": "P08-material",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": 5,
+      "accessible": true,
+      "prerequisitesMet": true,
+      "materialScopeMatch": false,
+      "target": "RETENTION",
+      "mode": "RETRIEVAL"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P08-budget",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": 21,
+      "accessible": true,
+      "prerequisitesMet": true,
+      "materialScopeMatch": true,
+      "target": "RETENTION",
+      "mode": "RETRIEVAL"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P08-access",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": 5,
+      "accessible": false,
+      "prerequisitesMet": true,
+      "materialScopeMatch": true,
+      "target": "RETENTION",
+      "mode": "RETRIEVAL"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P08-negative",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": -1,
+      "accessible": true,
+      "prerequisitesMet": true,
+      "materialScopeMatch": true,
+      "target": "RETENTION",
+      "mode": "RETRIEVAL"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P08-incompatible",
+    "rule": "D3-P08",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "budget": 20,
+      "cost": 5,
+      "accessible": true,
+      "prerequisitesMet": true,
+      "materialScopeMatch": true,
+      "target": "RETENTION",
+      "mode": "INTERLEAVED_PRACTICE"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P09-contrast",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": false,
+      "rubricVerified": true,
+      "actor": "LEARNER",
+      "assistance": "NONE",
+      "response": "INCORRECT",
+      "independentContrastVerified": true,
+      "patternRepeated": true
+    },
+    "expected": "TESTABLE_ERROR_HYPOTHESIS"
+  },
+  {
+    "id": "P09-single",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": false,
+      "rubricVerified": true,
+      "actor": "LEARNER",
+      "assistance": "NONE",
+      "response": "INCORRECT",
+      "independentContrastVerified": true,
+      "patternRepeated": false
+    },
+    "expected": "REQUEST_DISCRIMINATING_TASK"
+  },
+  {
+    "id": "P09-interrupted",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": true,
+      "rubricVerified": true,
+      "actor": "LEARNER",
+      "assistance": "NONE",
+      "response": "INCORRECT",
+      "independentContrastVerified": true,
+      "patternRepeated": true
+    },
+    "expected": "MISSING_OBSERVATION"
+  },
+  {
+    "id": "P09-missing",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": false,
+      "rubricVerified": true,
+      "actor": "LEARNER",
+      "assistance": "NONE",
+      "response": "MISSING",
+      "independentContrastVerified": true,
+      "patternRepeated": true
+    },
+    "expected": "MISSING_OBSERVATION"
+  },
+  {
+    "id": "P09-assist",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": false,
+      "rubricVerified": true,
+      "actor": "LEARNER",
+      "assistance": "HINT",
+      "response": "INCORRECT",
+      "independentContrastVerified": true,
+      "patternRepeated": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P09-right",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": false,
+      "rubricVerified": true,
+      "actor": "LEARNER",
+      "assistance": "NONE",
+      "response": "CORRECT",
+      "independentContrastVerified": true,
+      "patternRepeated": true
+    },
+    "expected": "NO_ERROR_OBSERVED"
+  },
+  {
+    "id": "P09-rubric",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": false,
+      "rubricVerified": false,
+      "actor": "LEARNER",
+      "assistance": "NONE",
+      "response": "INCORRECT",
+      "independentContrastVerified": true,
+      "patternRepeated": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P09-unknown",
+    "rule": "D3-P09",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "interrupted": false,
+      "rubricVerified": true,
+      "assistance": "NONE",
+      "response": "INCORRECT",
+      "independentContrastVerified": true,
+      "patternRepeated": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P10-process",
+    "rule": "D3-P10",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "targetMatch": true,
+      "rubricDisputed": false,
+      "observation": "TESTABLE_ERROR_HYPOTHESIS",
+      "support": "PROCESS_HINT"
+    },
+    "expected": "OFFER_PROCESS_HINT"
+  },
+  {
+    "id": "P10-clarify",
+    "rule": "D3-P10",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "targetMatch": true,
+      "rubricDisputed": false,
+      "observation": "REQUEST_DISCRIMINATING_TASK",
+      "support": "CLARIFY"
+    },
+    "expected": "OFFER_CLARIFYING_TASK"
+  },
+  {
+    "id": "P10-resume",
+    "rule": "D3-P10",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "targetMatch": true,
+      "rubricDisputed": false,
+      "observation": "MISSING_OBSERVATION",
+      "support": "PROCESS_HINT"
+    },
+    "expected": "OFFER_RESUME_OR_ALTERNATIVE"
+  },
+  {
+    "id": "P10-result",
+    "rule": "D3-P10",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "targetMatch": true,
+      "rubricDisputed": false,
+      "observation": "NO_ERROR_OBSERVED",
+      "support": "RESULT"
+    },
+    "expected": "OFFER_TASK_RESULT_FEEDBACK"
+  },
+  {
+    "id": "P10-disputed",
+    "rule": "D3-P10",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "targetMatch": true,
+      "rubricDisputed": true,
+      "observation": "TESTABLE_ERROR_HYPOTHESIS",
+      "support": "PROCESS_HINT"
+    },
+    "expected": "REVIEW_RUBRIC_BEFORE_FEEDBACK"
+  },
+  {
+    "id": "P10-decline",
+    "rule": "D3-P10",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "DECLINE",
+      "targetMatch": true,
+      "rubricDisputed": false,
+      "observation": "TESTABLE_ERROR_HYPOTHESIS",
+      "support": "PROCESS_HINT"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P10-exit",
+    "rule": "D3-P10",
+    "input": {
+      "exit": true,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "targetMatch": true,
+      "rubricDisputed": false,
+      "observation": "TESTABLE_ERROR_HYPOTHESIS",
+      "support": "PROCESS_HINT"
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "P10-unknown",
+    "rule": "D3-P10",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "targetMatch": true,
+      "rubricDisputed": false,
+      "observation": "HOLD",
+      "support": "PROCESS_HINT"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P11-progress",
+    "rule": "D3-P11",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "budgetAvailable": true,
+      "nonCoercive": true,
+      "goalOwnedByLearner": true,
+      "kind": "PROGRESS_REFLECTION",
+      "progressEvidenceVerified": true
+    },
+    "expected": "OFFER_PROGRESS_REFLECTION"
+  },
+  {
+    "id": "P11-encourage",
+    "rule": "D3-P11",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "budgetAvailable": true,
+      "nonCoercive": true,
+      "goalOwnedByLearner": true,
+      "kind": "ENCOURAGEMENT",
+      "progressEvidenceVerified": true
+    },
+    "expected": "OFFER_ENCOURAGEMENT"
+  },
+  {
+    "id": "P11-goal",
+    "rule": "D3-P11",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "budgetAvailable": true,
+      "nonCoercive": true,
+      "goalOwnedByLearner": true,
+      "kind": "SMALL_GOAL",
+      "progressEvidenceVerified": true,
+      "goalFeasible": true
+    },
+    "expected": "OFFER_SMALL_GOAL"
+  },
+  {
+    "id": "P11-fake-progress",
+    "rule": "D3-P11",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "budgetAvailable": true,
+      "nonCoercive": true,
+      "goalOwnedByLearner": true,
+      "kind": "PROGRESS_REFLECTION",
+      "progressEvidenceVerified": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P11-coercive",
+    "rule": "D3-P11",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "budgetAvailable": true,
+      "nonCoercive": false,
+      "goalOwnedByLearner": true,
+      "kind": "PROGRESS_REFLECTION",
+      "progressEvidenceVerified": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P11-no-choice",
+    "rule": "D3-P11",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "DECLINE",
+      "budgetAvailable": true,
+      "nonCoercive": true,
+      "goalOwnedByLearner": true,
+      "kind": "PROGRESS_REFLECTION",
+      "progressEvidenceVerified": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "P11-exit",
+    "rule": "D3-P11",
+    "input": {
+      "exit": true,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "budgetAvailable": true,
+      "nonCoercive": true,
+      "goalOwnedByLearner": true,
+      "kind": "PROGRESS_REFLECTION",
+      "progressEvidenceVerified": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "P11-external-goal",
+    "rule": "D3-P11",
+    "input": {
+      "exit": false,
+      "permission": true,
+      "versionMatch": true,
+      "choice": "ACCEPT",
+      "budgetAvailable": true,
+      "nonCoercive": true,
+      "goalOwnedByLearner": false,
+      "kind": "PROGRESS_REFLECTION",
+      "progressEvidenceVerified": true
+    },
+    "expected": "HOLD"
+  }
+]

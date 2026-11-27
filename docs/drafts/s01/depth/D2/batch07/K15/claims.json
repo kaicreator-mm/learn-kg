@@ -1,0 +1,86 @@
+{
+  "owner": "K15",
+  "base": "0d28ad2fa0febe195b442c40f2203e52b87a05fa",
+  "prior_claim_blob": "089e6b6b624fa4597bb4f133ca3876d684852b98",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K15.04.01.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.04.01",
+      "requirement_id": "K15.04.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "教育机构对生成式AI工具应承担验证职责；生成内容进入知识候选需保留来源与验证记录。",
+      "conditions": [
+        "网页导读为部分支持；后半是项目规则。"
+      ],
+      "negative_boundary": "不将生成内容直接发布为已核知识。",
+      "source_refs": [
+        "K15-B07-AI"
+      ],
+      "source_locator": "Towards a human-centered approach, lines 79–81",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.04.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "模型生成未经核实的词义",
+        "expected": "保留草案",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.05.03.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.05.03",
+      "requirement_id": "K15.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "AI部署后应具有用户反馈、异议、覆盖及退出机制，学习工具需能区分建议与已执行动作。",
+      "conditions": [
+        "Manage 4.1；后半是教育项目操作化。"
+      ],
+      "negative_boundary": "界面存在按钮不证明可控性已实际验证。",
+      "source_refs": [
+        "K15-B07-RMF"
+      ],
+      "source_locator": "Manage 4.1, line 278",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "系统给出学习路径但学习者拒绝",
+        "expected": "不执行建议",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K15.04.04.D4.03",
+      "owner": "K15",
+      "d3_id": "K15.04.04",
+      "requirement_id": "K15.04.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "AI系统的变更、事故和恢复需有管理计划；教育评分纠错时保留评分版本与受影响证据。",
+      "conditions": [
+        "Manage 4.1部分支持；评分构念与误差实证另证。"
+      ],
+      "negative_boundary": "不以通用风险框架宣称评分准确。",
+      "source_refs": [
+        "K15-B07-RMF"
+      ],
+      "source_locator": "Manage 4.1, line 278",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K15.04.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "评分模型升级后旧分数有争议",
+        "expected": "隔离旧新版本并复核",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

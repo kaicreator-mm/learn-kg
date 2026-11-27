@@ -1,0 +1,414 @@
+{
+  "owner": "H03",
+  "base": "ef316aa6cab66911a28bcb99172d0a414a5dff11",
+  "status": "SCOPE_DRAFT_NOT_CLAIMS",
+  "records": [
+    {
+      "d3_id": "H03.01.01",
+      "owner": "H03",
+      "label": "词",
+      "requirement_id": "H03.01.01.RQ01",
+      "research_requirement": "词边界、独立性、语法及语料证据",
+      "negative_boundary": "字数不能决定词身份",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.01.02",
+      "owner": "H03",
+      "label": "语素",
+      "requirement_id": "H03.01.02.RQ01",
+      "research_requirement": "最小有意义单位、自由/黏着及构词",
+      "negative_boundary": "语素不必独立成词",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.01.03",
+      "owner": "H03",
+      "label": "短语",
+      "requirement_id": "H03.01.03.RQ01",
+      "research_requirement": "组合性、句法功能与词边界争议",
+      "negative_boundary": "固定字符串不必为词",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.01.04",
+      "owner": "H03",
+      "label": "词条与义项",
+      "requirement_id": "H03.01.04.RQ01",
+      "research_requirement": "词条身份、同形词、多义、语境及来源",
+      "negative_boundary": "词表记录不等于唯一义项",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [
+        "QD4-12"
+      ],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "同形多义及词性原始串，来源记录不得自动合并义项。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.02.01",
+      "owner": "H03",
+      "label": "复合",
+      "requirement_id": "H03.02.01.RQ01",
+      "research_requirement": "构词结构、中心关系、意义组合及例外",
+      "negative_boundary": "成分义不能总是推出整体义",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.02.02",
+      "owner": "H03",
+      "label": "派生",
+      "requirement_id": "H03.02.02.RQ01",
+      "research_requirement": "派生机制、词缀、词类语义变化",
+      "negative_boundary": "字面相同不保证派生分析",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.02.03",
+      "owner": "H03",
+      "label": "重叠",
+      "requirement_id": "H03.02.03.RQ01",
+      "research_requirement": "词汇重叠形式、功能、句法条件",
+      "negative_boundary": "词汇重叠与构式重叠须区分",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.02.04",
+      "owner": "H03",
+      "label": "词缀",
+      "requirement_id": "H03.02.04.RQ01",
+      "research_requirement": "位置、生产性、黏着与功能证据",
+      "negative_boundary": "高频构词成分不必是词缀",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.02.05",
+      "owner": "H03",
+      "label": "离合",
+      "requirement_id": "H03.02.05.RQ01",
+      "research_requirement": "可分离形式、插入条件、搭配限制",
+      "negative_boundary": "不能按普通连续词一律处理",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.03.01",
+      "owner": "H03",
+      "label": "词类",
+      "requirement_id": "H03.03.01.RQ01",
+      "research_requirement": "分布、句法功能、词典标准及争议",
+      "negative_boundary": "语义标签不能唯一决定词类",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.03.02",
+      "owner": "H03",
+      "label": "兼类",
+      "requirement_id": "H03.03.02.RQ01",
+      "research_requirement": "不同用法、语境、词类证据与词条身份",
+      "negative_boundary": "多词性源串不能直接拆出多个词",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "兼类、不同义项及未解析词性分别保存。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.03.03",
+      "owner": "H03",
+      "label": "义项条件",
+      "requirement_id": "H03.03.03.RQ01",
+      "research_requirement": "义项区分、搭配、语境、正反例",
+      "negative_boundary": "孤立译词不能确定义项",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.03.04",
+      "owner": "H03",
+      "label": "词类转换",
+      "requirement_id": "H03.03.04.RQ01",
+      "research_requirement": "转换条件、零形式、派生与兼类区别",
+      "negative_boundary": "用法差异不必新建词条",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.04.01",
+      "owner": "H03",
+      "label": "同义",
+      "requirement_id": "H03.04.01.RQ01",
+      "research_requirement": "近义、语域、搭配与替换条件",
+      "negative_boundary": "近义词不保证所有语境互换",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.04.02",
+      "owner": "H03",
+      "label": "反义",
+      "requirement_id": "H03.04.02.RQ01",
+      "research_requirement": "对立维度、义项与语境",
+      "negative_boundary": "反义不等于逻辑否定",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.04.03",
+      "owner": "H03",
+      "label": "上下位",
+      "requirement_id": "H03.04.03.RQ01",
+      "research_requirement": "类属关系、义项与方向",
+      "negative_boundary": "不能由词形包含推出上下位",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.04.04",
+      "owner": "H03",
+      "label": "多义",
+      "requirement_id": "H03.04.04.RQ01",
+      "research_requirement": "义项关系、语境判别及词典证据",
+      "negative_boundary": "多义不等同同形异词",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.04.05",
+      "owner": "H03",
+      "label": "同音",
+      "requirement_id": "H03.04.05.RQ01",
+      "research_requirement": "读音、声调、词条及区别情境",
+      "negative_boundary": "同音不等于同义",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.05.01",
+      "owner": "H03",
+      "label": "固定搭配",
+      "requirement_id": "H03.05.01.RQ01",
+      "research_requirement": "共现、选择限制、频率与语域",
+      "negative_boundary": "共现频繁不自动证明固定性",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.05.02",
+      "owner": "H03",
+      "label": "惯用表达",
+      "requirement_id": "H03.05.02.RQ01",
+      "research_requirement": "惯用义、组合形式、使用情境及例外",
+      "negative_boundary": "字面逐译不一定成立",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.05.03",
+      "owner": "H03",
+      "label": "成语",
+      "requirement_id": "H03.05.03.RQ01",
+      "research_requirement": "形式、来源、义项、语法位置及语体",
+      "negative_boundary": "四字词不一定是成语",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.05.04",
+      "owner": "H03",
+      "label": "语域",
+      "requirement_id": "H03.05.04.RQ01",
+      "research_requirement": "词汇语体、场合、群体和证据",
+      "negative_boundary": "语域标签不是绝对禁用规则",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.06.01",
+      "owner": "H03",
+      "label": "频率",
+      "requirement_id": "H03.06.01.RQ01",
+      "research_requirement": "语料来源、统计单位、分母和时间范围",
+      "negative_boundary": "HSK等级不等于语料频率",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "BOUNDARY_OR_COUNTEREXAMPLE",
+        "description": "固定语料分母和计数单位，手算频率；不使用HSK等级替代。",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.06.02",
+      "owner": "H03",
+      "label": "语料",
+      "requirement_id": "H03.06.02.RQ01",
+      "research_requirement": "语料版本、体裁、抽样、标注与许可证",
+      "negative_boundary": "语料未出现不证明不可接受",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.06.03",
+      "owner": "H03",
+      "label": "语境",
+      "requirement_id": "H03.06.03.RQ01",
+      "research_requirement": "上下文、情境、义项与搭配判别",
+      "negative_boundary": "脱离语境不强制唯一义项",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "H03.06.04",
+      "owner": "H03",
+      "label": "语义限制",
+      "requirement_id": "H03.06.04.RQ01",
+      "research_requirement": "论元、选择限制、搭配与可接受性",
+      "negative_boundary": "低频不必语义错误",
+      "source_leads": [
+        "S018",
+        "S050"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

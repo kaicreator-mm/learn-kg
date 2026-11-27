@@ -1,0 +1,2105 @@
+{
+  "status": "SYNTHETIC_FIXED",
+  "registry": {
+    "tasks": {
+      "T1": {
+        "learner": "L1",
+        "subject": "zh",
+        "version": "v1",
+        "construct": "meaning",
+        "component": "c1",
+        "rubric": "r1",
+        "item": "i1",
+        "family": "f1",
+        "eligible": true,
+        "cost": 6,
+        "construct_preserved": true
+      },
+      "T2": {
+        "learner": "L1",
+        "subject": "zh",
+        "version": "v1",
+        "construct": "meaning",
+        "component": "c1",
+        "rubric": "r1",
+        "item": "i2",
+        "family": "f2",
+        "eligible": true,
+        "cost": 5,
+        "construct_preserved": true
+      },
+      "M": {
+        "learner": "L1",
+        "subject": "math",
+        "version": "v1",
+        "construct": "fraction",
+        "component": "m1",
+        "rubric": "rm",
+        "item": "m1",
+        "family": "mf",
+        "eligible": true,
+        "cost": 5,
+        "construct_preserved": true
+      },
+      "C": {
+        "learner": "L1",
+        "subject": "zh",
+        "version": "v1",
+        "construct": "meaning",
+        "component": "c2",
+        "rubric": "r1",
+        "item": "c2",
+        "family": "c2",
+        "eligible": true,
+        "cost": 5,
+        "construct_preserved": true
+      }
+    },
+    "grants": {
+      "g": {
+        "learner": "L1",
+        "actor": "L1",
+        "subjects": [
+          "zh",
+          "math"
+        ],
+        "actions": [
+          "PLAN",
+          "OBSERVE",
+          "ASSESS"
+        ],
+        "from": 0,
+        "until": 200,
+        "processing": true,
+        "control": true
+      },
+      "stop": {
+        "learner": "L1",
+        "actor": "L1",
+        "subjects": [
+          "zh",
+          "math"
+        ],
+        "actions": [],
+        "from": 0,
+        "until": 10,
+        "processing": false,
+        "control": true
+      },
+      "other": {
+        "learner": "L1",
+        "actor": "teacher",
+        "subjects": [
+          "zh"
+        ],
+        "actions": [
+          "OBSERVE"
+        ],
+        "from": 0,
+        "until": 200,
+        "processing": true,
+        "control": false
+      }
+    },
+    "budgets": {
+      "B": {
+        "learner": "L1",
+        "session": "s1",
+        "limit": 10
+      }
+    },
+    "retention": {
+      "R": {
+        "scope": [
+          "L1",
+          "zh",
+          "v1",
+          "meaning",
+          "c1",
+          "r1"
+        ],
+        "min_delay": 30
+      }
+    }
+  },
+  "scope": [
+    {
+      "id": "cross_component_budget",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T1",
+          "budget": "B"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c2",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "PLAN",
+          "receipt_tick": 2,
+          "task": "C",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "PLAN_CANDIDATE",
+          "HOLD_BUDGET"
+        ],
+        "remaining": {
+          "B": 4
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "cross_subject_budget",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T1",
+          "budget": "B"
+        },
+        {
+          "learner": "L1",
+          "subject": "math",
+          "version": "v1",
+          "construct": "fraction",
+          "component": "m1",
+          "rubric": "rm",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "PLAN",
+          "receipt_tick": 2,
+          "task": "M",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "PLAN_CANDIDATE",
+          "HOLD_BUDGET"
+        ],
+        "remaining": {
+          "B": 4
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "budget_scope_wrong_session",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s2",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T1",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_SCOPE"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "exit_old_timestamp_and_expired_processing",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 20,
+          "task": "T1",
+          "budget": "B"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "stop",
+          "session": "s1",
+          "id": "x",
+          "type": "EXIT",
+          "receipt_tick": 1,
+          "level": "GLOBAL"
+        },
+        {
+          "learner": "L1",
+          "subject": "math",
+          "version": "v1",
+          "construct": "fraction",
+          "component": "m1",
+          "rubric": "rm",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "PLAN",
+          "receipt_tick": 21,
+          "task": "M",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "PLAN_CANDIDATE",
+          "EXITED",
+          "HOLD_EXITED"
+        ],
+        "remaining": {
+          "B": 4
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "subject_exit_scope",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "x",
+          "type": "EXIT",
+          "receipt_tick": 1,
+          "level": "SUBJECT"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 2,
+          "task": "T1",
+          "budget": "B"
+        },
+        {
+          "learner": "L1",
+          "subject": "math",
+          "version": "v1",
+          "construct": "fraction",
+          "component": "m1",
+          "rubric": "rm",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "PLAN",
+          "receipt_tick": 3,
+          "task": "M",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "EXITED",
+          "HOLD_EXITED",
+          "PLAN_CANDIDATE"
+        ],
+        "remaining": {
+          "B": 5
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "session_exit_scope",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "x",
+          "type": "EXIT",
+          "receipt_tick": 1,
+          "level": "SESSION"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 2,
+          "task": "T1",
+          "budget": "B"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s2",
+          "id": "b",
+          "type": "OBSERVE",
+          "receipt_tick": 3,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 3,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "EXITED",
+          "HOLD_EXITED",
+          "INDEPENDENT"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "forged_exit",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "teacher",
+          "grant": "other",
+          "session": "s1",
+          "id": "x",
+          "type": "EXIT",
+          "receipt_tick": 1,
+          "level": "GLOBAL"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 2,
+          "task": "T1",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_EXIT_AUTH",
+          "PLAN_CANDIDATE"
+        ],
+        "remaining": {
+          "B": 4
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "unknown_grant",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "unknown",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T1",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_ACTOR"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "processing_expired",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 201,
+          "task": "T1",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_AUTH_TIME"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "teacher_plan_denied",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "teacher",
+          "grant": "other",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T1",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_AUTH"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "task_family_forgery",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f2",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 2,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 2,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_TASK_IDENTITY",
+          "INDEPENDENT"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "task_rubric_forgery",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "fake",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_TASK"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "task_subject_forgery",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "math",
+          "version": "v1",
+          "construct": "fraction",
+          "component": "m1",
+          "rubric": "rm",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_TASK"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "untrusted_observation_time",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 100,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "HOLD_OBSERVATION_TIME"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "same_id_different_actor",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "teacher",
+          "grant": "other",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 2,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 2,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "INDEPENDENT",
+          "INDEPENDENT"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "replay_scope_and_conflict",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T1",
+          "budget": "B"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T1",
+          "budget": "B"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "PLAN",
+          "receipt_tick": 1,
+          "task": "T2",
+          "budget": "B"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "PLAN_CANDIDATE",
+          "DUPLICATE",
+          "HOLD_CONFLICT"
+        ],
+        "remaining": {
+          "B": 4
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "time_reorder",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 2,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 2,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "INDEPENDENT",
+          "HOLD_TIME_ORDER"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "retention_registered_policy",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s2",
+          "id": "b",
+          "type": "OBSERVE",
+          "receipt_tick": 40,
+          "task": "T2",
+          "item": "i2",
+          "family": "f2",
+          "observed_tick": 40,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s2",
+          "id": "c",
+          "type": "ASSESS",
+          "receipt_tick": 41,
+          "observation": [
+            "L1",
+            "L1",
+            "b"
+          ],
+          "phase": "RETENTION",
+          "prior": [
+            "L1",
+            "L1",
+            "a"
+          ],
+          "policy": "R",
+          "min_delay": 1000
+        }
+      ],
+      "expected": {
+        "steps": [
+          "INDEPENDENT",
+          "INDEPENDENT",
+          "RETENTION_CANDIDATE"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 1,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "retention_forged_policy",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "OBSERVE",
+          "receipt_tick": 40,
+          "task": "T2",
+          "item": "i2",
+          "family": "f2",
+          "observed_tick": 40,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "c",
+          "type": "ASSESS",
+          "receipt_tick": 41,
+          "observation": [
+            "L1",
+            "L1",
+            "b"
+          ],
+          "phase": "RETENTION",
+          "prior": [
+            "L1",
+            "L1",
+            "a"
+          ],
+          "policy": "FAKE",
+          "min_delay": 1
+        }
+      ],
+      "expected": {
+        "steps": [
+          "INDEPENDENT",
+          "INDEPENDENT",
+          "HOLD_POLICY"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "retention_threshold_cannot_be_overridden",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "OBSERVE",
+          "receipt_tick": 5,
+          "task": "T2",
+          "item": "i2",
+          "family": "f2",
+          "observed_tick": 5,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "c",
+          "type": "ASSESS",
+          "receipt_tick": 6,
+          "observation": [
+            "L1",
+            "L1",
+            "b"
+          ],
+          "phase": "RETENTION",
+          "prior": [
+            "L1",
+            "L1",
+            "a"
+          ],
+          "policy": "R",
+          "min_delay": 1
+        }
+      ],
+      "expected": {
+        "steps": [
+          "INDEPENDENT",
+          "INDEPENDENT",
+          "UNKNOWN_DELAY"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "duplicate_assessment",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "ASSESS",
+          "receipt_tick": 2,
+          "observation": [
+            "L1",
+            "L1",
+            "a"
+          ],
+          "phase": "IMMEDIATE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "c",
+          "type": "ASSESS",
+          "receipt_tick": 3,
+          "observation": [
+            "L1",
+            "L1",
+            "a"
+          ],
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "INDEPENDENT",
+          "IMMEDIATE_CANDIDATE",
+          "DUPLICATE_CANDIDATE"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 1,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "cross_subject_observation_rejected",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "math",
+          "version": "v1",
+          "construct": "fraction",
+          "component": "m1",
+          "rubric": "rm",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "ASSESS",
+          "receipt_tick": 2,
+          "observation": [
+            "L1",
+            "L1",
+            "a"
+          ],
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "INDEPENDENT",
+          "HOLD_EVIDENCE"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "assisted_baseline",
+      "input": [
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "a",
+          "type": "OBSERVE",
+          "receipt_tick": 1,
+          "task": "T1",
+          "item": "i1",
+          "family": "f1",
+          "observed_tick": 1,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "HINT"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "b",
+          "type": "OBSERVE",
+          "receipt_tick": 40,
+          "task": "T2",
+          "item": "i2",
+          "family": "f2",
+          "observed_tick": 40,
+          "available": true,
+          "ambiguous": false,
+          "result": "CORRECT",
+          "assistance": "NONE"
+        },
+        {
+          "learner": "L1",
+          "subject": "zh",
+          "version": "v1",
+          "construct": "meaning",
+          "component": "c1",
+          "rubric": "r1",
+          "actor": "L1",
+          "grant": "g",
+          "session": "s1",
+          "id": "c",
+          "type": "ASSESS",
+          "receipt_tick": 41,
+          "observation": [
+            "L1",
+            "L1",
+            "b"
+          ],
+          "phase": "RETENTION",
+          "prior": [
+            "L1",
+            "L1",
+            "a"
+          ],
+          "policy": "R"
+        }
+      ],
+      "expected": {
+        "steps": [
+          "ASSISTED",
+          "INDEPENDENT",
+          "HOLD_BASELINE"
+        ],
+        "remaining": {
+          "B": 10
+        },
+        "candidates": 0,
+        "production_writes": 0
+      }
+    }
+  ],
+  "content": [
+    {
+      "id": "all_receipts",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": true,
+        "receipts": {
+          "fact": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rights": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "ELIGIBLE_FOR_SEPARATE_DELIVERY_REVIEW"
+    },
+    {
+      "id": "missing_rights",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": true,
+        "receipts": {
+          "fact": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "HOLD_INCOMPLETE"
+    },
+    {
+      "id": "wrong_digest",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": true,
+        "receipts": {
+          "fact": {
+            "digest": "D2",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rights": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "HOLD_RECEIPT_SCOPE"
+    },
+    {
+      "id": "stale_version",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": true,
+        "receipts": {
+          "fact": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "old",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rights": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "HOLD_RECEIPT_SCOPE"
+    },
+    {
+      "id": "generator_self_review",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": true,
+        "receipts": {
+          "fact": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "GENERATOR",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rights": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "HOLD_RECEIPT_SCOPE"
+    },
+    {
+      "id": "domain_language_fail",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": true,
+        "receipts": {
+          "fact": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "FAIL"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rights": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "REJECT_CANDIDATE"
+    },
+    {
+      "id": "unknown_source",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": true,
+        "receipts": {
+          "fact": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "UNKNOWN"
+          },
+          "rights": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "HOLD_UNKNOWN"
+    },
+    {
+      "id": "unknown_auth",
+      "input": {
+        "content_digest": "D1",
+        "version": "v1",
+        "authorized": null,
+        "receipts": {
+          "fact": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "domain_language": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rubric": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "source": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "rights": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          },
+          "accessibility": {
+            "digest": "D1",
+            "version": "v1",
+            "review_role": "QUALIFIED_REVIEWER",
+            "decision": "PASS"
+          }
+        }
+      },
+      "expected": "HOLD_AUTH"
+    }
+  ],
+  "improvement": [
+    {
+      "id": "finite_eligible",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "ELIGIBLE_FOR_SEPARATE_RELEASE_DECISION"
+    },
+    {
+      "id": "ethics_unknown",
+      "input": {
+        "authorized": true,
+        "ethics": "UNKNOWN",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "HOLD_ETHICS_AUTH"
+    },
+    {
+      "id": "withdrawal",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": true,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "STOP_AND_REVIEW"
+    },
+    {
+      "id": "stale_protocol",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p0",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "HOLD_VERSION"
+    },
+    {
+      "id": "wrong_version",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v1",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "HOLD_VERSION"
+    },
+    {
+      "id": "post_hoc_metric",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": false,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "EXPLORATORY_ONLY"
+    },
+    {
+      "id": "no_comparison",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": false,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "EXPLORATORY_ONLY"
+    },
+    {
+      "id": "attrition_unknown",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": null,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "EXPLORATORY_ONLY"
+    },
+    {
+      "id": "construct_shift",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": false,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "EXPLORATORY_ONLY"
+    },
+    {
+      "id": "negative_safety",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "UNKNOWN",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "HOLD_OR_ROLLBACK"
+    },
+    {
+      "id": "negative_result",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "NEGATIVE",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "KEEP_BASELINE"
+    },
+    {
+      "id": "inconclusive",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "UNKNOWN",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": true
+      },
+      "expected": "HOLD_INCONCLUSIVE"
+    },
+    {
+      "id": "no_review",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "PENDING",
+        "human_approval": true
+      },
+      "expected": "HOLD_REVIEW"
+    },
+    {
+      "id": "no_approval",
+      "input": {
+        "authorized": true,
+        "ethics": "CLEARED",
+        "withdrawn": false,
+        "protocol_version": "p1",
+        "evaluated_protocol": "p1",
+        "candidate_version": "v2",
+        "tested_version": "v2",
+        "outcomes_prespecified": true,
+        "comparison_appropriate": true,
+        "attrition_assessed": true,
+        "construct_comparable": true,
+        "safety_outcome": "ACCEPTABLE",
+        "outcome": "SUPPORTED",
+        "independent_review": "ACCEPT_SCOPED",
+        "human_approval": false
+      },
+      "expected": "HOLD_APPROVAL"
+    }
+  ],
+  "limitations": "Registry and receipt ticks are synthetic trusted inputs, not authentication. Thresholds/costs not educational policy. No production effect."
+}

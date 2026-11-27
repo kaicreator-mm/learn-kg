@@ -1,0 +1,24 @@
+{
+  "status": "BUILDER_REPLAY_PASS_SCOPED",
+  "owner": "H07",
+  "tested_head": "37ad233fe0c5a75548b85895874aabc6f2803b4d",
+  "job_id": "job_01M8CA5BHX00K4RQPT6T9FM765",
+  "server": "aliyun-sg",
+  "node": "v24.21.0",
+  "exit_code": 0,
+  "syntax_check": "PASS",
+  "blob_checks": [
+    {
+      "path": "H07/validate-synthetic.mjs",
+      "sha": "61ec0f49a1f1a9be00a609a9dd6861d975d828d4"
+    },
+    {
+      "path": "H07/logic-evidence.json",
+      "sha": "0b49de00f16e8162d46c918ea88265c8ae0fc19c"
+    }
+  ],
+  "passed": 17,
+  "total": 17,
+  "independent_oracle": false,
+  "limits": "同17个合成夹具回放不重复计；非真实源数据导入、正式等值、实际开考或个体能力证据。其余6模块有限逻辑NOT_RUN。"
+}

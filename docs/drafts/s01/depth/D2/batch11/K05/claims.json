@@ -1,0 +1,86 @@
+{
+  "owner": "K05",
+  "base": "295142346183c1387d3646b19d7d0aea8196a971",
+  "prior_claim_blob": "8bc43a1130b3920beddbfdc441af487303845b2f",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K05.05.01.D4.03",
+      "owner": "K05",
+      "d3_id": "K05.05.01",
+      "requirement_id": "K05.05.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "概念图以带有关系说明的概念连接构成可判断的命题，并围绕焦点问题选择组织层级与跨域连接。",
+      "conditions": [
+        "原作者报告定义；学习效果元分析未核，部分补充。"
+      ],
+      "negative_boundary": "不能凭节点或边数量证明学习增益。",
+      "source_refs": [
+        "K05-B11-MAP"
+      ],
+      "source_locator": "HTML introduction l8–18, l166",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K05.05.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "概念图有两概念但边无关系说明",
+        "expected": "要求明确关系及命题真假",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K05.05.02.D4.03",
+      "owner": "K05",
+      "d3_id": "K05.05.02",
+      "requirement_id": "K05.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "笔记形成与后续复习可组成联合学习操作；2006综述索引摘要记载考察33项研究。",
+      "conditions": [
+        "仅搜索摘要，全文及摘要页打开失败；不报告效应大小。"
+      ],
+      "negative_boundary": "不由笔记字数推断理解或保持。",
+      "source_refs": [
+        "K05-B11-NOTE"
+      ],
+      "source_locator": "搜索索引摘要片段（33项研究）；直接打开403，ERIC超时",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "K05.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "抄写笔记后未复习",
+        "expected": "只记录笔记形成",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K05.05.04.D4.03",
+      "owner": "K05",
+      "d3_id": "K05.05.04",
+      "requirement_id": "K05.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "双编码理论区分语言与非语言表征，二者均可涉及不同感知通道；文字的视觉输入仍可形成语言表征。",
+      "conditions": [
+        "pp149,151理论描述；不将理论等同学习风格分型。"
+      ],
+      "negative_boundary": "不把视觉输入都归入非语言系统。",
+      "source_refs": [
+        "K05-B11-DUAL"
+      ],
+      "source_locator": "印刷pp149,151（页图indices0,2）",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K05.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "读汉字与观察对象图像",
+        "expected": "分别标记语言与非语言表示",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}
