@@ -1,0 +1,163 @@
+{
+  "task_id": "K04",
+  "attempt_id": "K04-FORMAL-01",
+  "receipt_id": "TASK:K04:K04-FORMAL-01",
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-foundation-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "722fa6af13fcb7f1d27e15cf7f4ecce35d2c4227",
+  "exact_head": "80a48e7ae1f63c7049d324c5b257a3f4150addef",
+  "version": "80a48e7ae1f63c7049d324c5b257a3f4150addef",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/foundation/K04/coverage.json",
+      "sha256": "51788248c88e951beab566e080003e95972298de74b820396adcd1ecb38eaf04",
+      "type": "MODULE_COVERAGE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/K04/records-00.jsonl",
+      "sha256": "c576a60bd6a158e2d57d43924bbeb543c9754f9151c2cb907daa68a295b0f34b",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/K04/records-01.jsonl",
+      "sha256": "06a756ff0ecc055672f99661ded170dea7d8a17d1100f1598ae7e438d82de799",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/K04/records-02.jsonl",
+      "sha256": "8c36a828866a323042d556c1e1c3b899809f4cf67dd12e0a3ea147f676f56a55",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/K04/records-03.jsonl",
+      "sha256": "0f15772225649aaf05af368ce3d1bc4ecaffc0eaa7f97c91883936df297bcab2",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/K04/records-04.jsonl",
+      "sha256": "c3e2c2d590acee4ce0c09def34bb004a0077da3ffad7a7748999415510467f70",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/README.md",
+      "sha256": "27acbaf907546c11ca320b35ab796afc8a841f448fdd320e504bff37480e0020",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/build_modules.py",
+      "sha256": "d1ff622a03fbbc9dde09b47b95ca28dbdc96b0758b39fa68d22de7a015ab46fc",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/run_oracles.py",
+      "sha256": "9fd3af083eda60952c962a014b2224cb71af29cecc6117f0596e7a37f8278949",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/source-research.json",
+      "sha256": "771124c6598446efc481a268d9d0d7425182e397891b4c369bcfca4015da4b43",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/discrimination-cases.json",
+      "sha256": "4d6320d81fa9c63d969c093101fa9cc3171918f29091e07c92148841a818454e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/finite-oracles.json",
+      "sha256": "5bdb366e85106f0e203492a77b50f315ae91e17d89b42c8bfcd5691388146968",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/oracle-results.json",
+      "sha256": "56a7d056f88c0227ff01081814911295a08344f8d7bbbd1887d130d9769642ae",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/validation-receipt.json",
+      "sha256": "f291cfdff9564776df99668e7b95897702ac9204ffb88d3bc520229e037f42b3",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/learning-core.manifest.json",
+      "sha256": "9029b400490eab530aa930e3d963f04ed5f4029b305fba09547122bfe660f997",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/evidence.manifest.json",
+      "sha256": "d955fc1cf4168236f9d2c5ec940479b2f09f3c2cc88adbb1ad8b1087e2152673",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation/evidence/records-00.jsonl",
+      "sha256": "7307368f4a014c38fca2065ebc38b996cf00e996fee0e58c89465f9bdc242da0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "content_digest": "4edd399fc90b38d47c2cc211bf45bbf1efa739e4285cbcf8758f081bd43ce6a9",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "time": "2026-11-27",
+  "validation": {
+    "candidate_tree": "941c5d07315b0440a7f2cc5b31abff9bbdb00939",
+    "actual_build_job": "job_01M8E06GBM00409HQ5P6VYH1AS",
+    "exact_checkout_replay_job": "job_01M8E0MDWR009VY6BCKJBKQY35",
+    "byte_replay": "MATCH",
+    "module_counts": {
+      "active_claims": 57,
+      "claims": 57,
+      "coverage_sha256": "51788248c88e951beab566e080003e95972298de74b820396adcd1ecb38eaf04",
+      "files": 5,
+      "owner": "K04",
+      "records": 312,
+      "topics": 24,
+      "typed_refs": 719
+    },
+    "source_locator_states": {
+      "MISSING": 28,
+      "RECORDED_NOT_REVERIFIED": 4,
+      "VERIFIED": 2
+    },
+    "new_discrimination_cases": 24,
+    "new_source_claims": 1,
+    "source_checks": "See shared source-research.json, builder only",
+    "actual_finite_oracle_count": 5,
+    "independent_qualification": "NOT_RUN"
+  },
+  "issues": [
+    "Coverage and bounded canonical module candidate only, not professional adequacy or individual claim qualification. All missing, unverified, multi-source attribution, source rights and scientific qualification HOLD/NOT_RUN.",
+    "Non-numerical case expectations authored, independent assessment required; current finite numeric/logic tests are Builder-only; historical semantic relations unresolved unless explicitly typed candidate.",
+    "No actual learner, formal CQ/LC or persistent SQLite. Shared foundation candidate package manifests/records are explicitly bound; further modules use versioned dependencies, not silent replacement."
+  ],
+  "next": "KR01 per-module independent professional qualification; dependent candidate tasks may use current exact tuples only"
+}
