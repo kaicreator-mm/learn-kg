@@ -1,0 +1,907 @@
+[
+  {
+    "id": "K02.R2.TEST01",
+    "claim": "K02.01.02.D4.02",
+    "mode": "sdt",
+    "input": {
+      "hit": -8,
+      "signal": -10,
+      "fa": -2,
+      "noise": -10
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R2.TEST02",
+    "claim": "K02.01.02.D4.02",
+    "mode": "sdt",
+    "input": {
+      "hit": true,
+      "signal": 10,
+      "fa": 2,
+      "noise": 10
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R2.TEST03",
+    "claim": "K02.01.02.D4.02",
+    "mode": "sdt",
+    "input": {
+      "hit": 8,
+      "signal": 0,
+      "fa": 2,
+      "noise": 10
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R2.TEST04",
+    "claim": "K02.01.02.D4.02",
+    "mode": "sdt",
+    "input": {
+      "hit": 2,
+      "signal": 10,
+      "fa": 8,
+      "noise": 10
+    },
+    "expected": [
+      -1.683242467,
+      0
+    ]
+  },
+  {
+    "id": "K02.R2.TEST05",
+    "claim": "K02.02.03.D4.05",
+    "mode": "switch",
+    "input": {
+      "single": -500,
+      "mixed_repeat": 620,
+      "mixed_switch": 770
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K04.R2.TEST06",
+    "claim": "K04.03.01.D4.02",
+    "mode": "motor",
+    "input": {
+      "x": "1/2",
+      "r": 2,
+      "k": "1/5",
+      "e": "-1/2",
+      "sign_defined": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K04.R2.TEST07",
+    "claim": "K04.03.01.D4.02",
+    "mode": "motor",
+    "input": {
+      "x": "1/2",
+      "r": "4/5",
+      "k": -1,
+      "e": "-1/2",
+      "sign_defined": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K04.R2.TEST08",
+    "claim": "K04.02.03.D4.01",
+    "mode": "fitts_id",
+    "input": {
+      "A": true,
+      "W": 2,
+      "unit_match": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R2.TEST09",
+    "claim": "K02.06.05.D4.02",
+    "mode": "savings",
+    "input": {
+      "initial": 5,
+      "relearn": 7,
+      "same_standard": true
+    },
+    "expected": "-2/5"
+  },
+  {
+    "id": "K01.R2.TEST10",
+    "claim": "K01.03.01.R2.01",
+    "mode": "representation",
+    "input": [
+      0,
+      0
+    ],
+    "expected": [
+      false,
+      false
+    ]
+  },
+  {
+    "id": "K01.R2.TEST11",
+    "claim": "K01.03.01.R2.01",
+    "mode": "representation",
+    "input": [
+      1,
+      1
+    ],
+    "expected": [
+      true,
+      true
+    ]
+  },
+  {
+    "id": "K01.R2.TEST12",
+    "claim": "K01.03.01.R2.01",
+    "mode": "representation",
+    "input": [
+      1,
+      0
+    ],
+    "expected": [
+      false,
+      true
+    ]
+  },
+  {
+    "id": "K02.R2.TEST13",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": [
+      true,
+      false
+    ]
+  },
+  {
+    "id": "K02.R2.TEST14",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": [
+      true,
+      true
+    ]
+  },
+  {
+    "id": "K02.R2.TEST15",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": [
+      false,
+      false
+    ]
+  },
+  {
+    "id": "K02.R2.TEST16",
+    "claim": "K02.03.04.R2.01",
+    "mode": "wm",
+    "input": {
+      "k": 3,
+      "n": 2
+    },
+    "expected": [
+      "1",
+      "1",
+      "3/2"
+    ]
+  },
+  {
+    "id": "K02.R2.TEST17",
+    "claim": "K02.03.04.R2.01",
+    "mode": "wm",
+    "input": {
+      "k": 3,
+      "n": 4
+    },
+    "expected": [
+      "3/4",
+      "1",
+      "3/4"
+    ]
+  },
+  {
+    "id": "K02.R2.TEST18",
+    "claim": "K02.03.04.R2.01",
+    "mode": "wm",
+    "input": {
+      "k": 3,
+      "n": 6
+    },
+    "expected": [
+      "1/2",
+      "1",
+      "1/2"
+    ]
+  },
+  {
+    "id": "K02.R2.TEST19",
+    "claim": "K02.03.03.R2.01",
+    "mode": "dual",
+    "input": {
+      "matched": true,
+      "vv": ".60",
+      "vs": ".85",
+      "sv": ".85",
+      "ss": ".60"
+    },
+    "expected": [
+      "1/4",
+      "1/4"
+    ]
+  },
+  {
+    "id": "K02.R2.TEST20",
+    "claim": "K02.03.03.R2.01",
+    "mode": "dual",
+    "input": {
+      "matched": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K03.R2.TEST21",
+    "claim": "K03.02.03.R2.01",
+    "mode": "category",
+    "input": {
+      "a": [
+        0,
+        0,
+        8
+      ],
+      "b": [
+        5,
+        5,
+        5
+      ],
+      "x": 8
+    },
+    "expected": [
+      "B",
+      "A",
+      "A"
+    ]
+  },
+  {
+    "id": "K03.R2.TEST22",
+    "claim": "K03.02.03.R2.01",
+    "mode": "category",
+    "input": {
+      "a": [
+        0,
+        0,
+        8
+      ],
+      "b": [
+        5,
+        5,
+        5
+      ],
+      "x": 5
+    },
+    "expected": [
+      "B",
+      "B",
+      "B"
+    ]
+  },
+  {
+    "id": "K03.R2.TEST23",
+    "claim": "K03.01.03.R2.01",
+    "mode": "skos",
+    "input": {
+      "broader": [
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ]
+      ],
+      "related": [
+        [
+          "A",
+          "C"
+        ]
+      ],
+      "query": [
+        "A",
+        "C"
+      ]
+    },
+    "expected": [
+      false,
+      true,
+      false,
+      true,
+      true
+    ]
+  },
+  {
+    "id": "K03.R2.TEST24",
+    "claim": "K03.01.03.R2.01",
+    "mode": "skos",
+    "input": {
+      "broader": [
+        [
+          "A",
+          "B"
+        ]
+      ],
+      "related": [],
+      "query": [
+        "B",
+        "A"
+      ]
+    },
+    "expected": [
+      false,
+      false,
+      true,
+      false,
+      false
+    ]
+  },
+  {
+    "id": "K03.R2.TEST25",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "score": 0.8,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "SATISFIED"
+  },
+  {
+    "id": "K03.R2.TEST26",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "score": 0.8,
+      "independent": true,
+      "hinted": true
+    },
+    "expected": "VIOLATED"
+  },
+  {
+    "id": "K03.R2.TEST27",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K03.R2.TEST28",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "applicable": false
+    },
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "K03.R2.TEST29",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "score": 1.5
+    },
+    "expected": "VIOLATED"
+  },
+  {
+    "id": "K03.R2.TEST30",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "score": true
+    },
+    "expected": "VIOLATED"
+  },
+  {
+    "id": "K03.R2.TEST31",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "score": 0.8
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K04.R2.TEST32",
+    "claim": "K04.01.03.R2.01",
+    "mode": "metrics",
+    "input": {
+      "errors": [
+        -2,
+        0,
+        2
+      ]
+    },
+    "expected": [
+      "0",
+      "4/3",
+      "4"
+    ]
+  },
+  {
+    "id": "K04.R2.TEST33",
+    "claim": "K04.01.03.R2.01",
+    "mode": "metrics",
+    "input": {
+      "errors": [
+        0,
+        0,
+        0
+      ]
+    },
+    "expected": [
+      "0",
+      "0",
+      "0"
+    ]
+  },
+  {
+    "id": "K03.R3.TEST01",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Other",
+      "applicable": true,
+      "score": 0.8,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "K03.R3.TEST02",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "applicable": true,
+      "score": 1.5,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K03.R3.TEST03",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "applicable": true,
+      "score": 0.8,
+      "independent": true,
+      "hinted": true
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K03.R3.TEST04",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "score": 1.5
+    },
+    "expected": "VIOLATED"
+  },
+  {
+    "id": "K03.R3.TEST05",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "independent": true,
+      "hinted": true
+    },
+    "expected": "VIOLATED"
+  },
+  {
+    "id": "K03.R3.TEST06",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": true,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K03.R3.TEST07",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": false,
+      "score": 1.5,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "K03.R3.TEST08",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Assessment",
+      "applicable": "UNKNOWN",
+      "score": 1.5,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K03.R3.TEST09",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": "Other",
+      "score": 1.5
+    },
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "K03.R3.TEST10",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": null,
+      "applicable": true,
+      "score": 0.8,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K03.R3.TEST11",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "applicable": false,
+      "score": 1.5
+    },
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "K03.R3.TEST12",
+    "claim": "K03.03.03.R2.01",
+    "mode": "constraint",
+    "input": {
+      "type": false,
+      "applicable": true,
+      "score": 0.8,
+      "independent": true,
+      "hinted": false
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "K02.R3.TEST13",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "aligned_rule_declared": "UNKNOWN"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R3.TEST14",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          false,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R3.TEST15",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R3.TEST16",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R3.TEST17",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          -2,
+          -3
+        ],
+        [
+          -1,
+          -3
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          -1,
+          -2
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": [
+      true,
+      false
+    ]
+  },
+  {
+    "id": "K02.R3.TEST18",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          0.0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "aligned_rule_declared": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "K02.R3.TEST19",
+    "claim": "K02.01.03.R2.01",
+    "mode": "feature",
+    "input": {
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "aligned_rule_declared": 1
+    },
+    "expected": "HOLD"
+  }
+]

@@ -1,0 +1,4663 @@
+[
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.01.CASE.01:counterexample",
+    "expected": "删除延迟结果后长期结论UNKNOWN。",
+    "new_input": {
+      "delayed": null,
+      "mode": "EXPLICIT_TRANSFORMED_FIXTURE",
+      "practice_end": [
+        90,
+        75
+      ],
+      "synthetic": true,
+      "transform": "delete both delayed scores",
+      "unit": "percent"
+    },
+    "old_input": "两组练习结束时分别90%与75%，一周独立测验分别60%与78%（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.01.CASE.01:forward",
+    "expected": "按时点分列；不能以训练末正确率排名长期学习。",
+    "new_input": {
+      "base_fixture": "两组练习结束时分别90%与75%，一周独立测验分别60%与78%（合成）。",
+      "instruction_and_expected": "按时点分列；不能以训练末正确率排名长期学习。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "两组练习结束时分别90%与75%，一周独立测验分别60%与78%（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.01.CASE.01:intervention",
+    "expected": "若目标一周保持，设计等材料/等帮助的延迟评价。",
+    "new_input": {
+      "base_fixture": "两组练习结束时分别90%与75%，一周独立测验分别60%与78%（合成）。",
+      "instruction_and_expected": "若目标一周保持，设计等材料/等帮助的延迟评价。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "两组练习结束时分别90%与75%，一周独立测验分别60%与78%（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.01.CASE.01:reverse",
+    "expected": "仅末次90%：提示、熟悉性和学习均是候选，需延迟测试。",
+    "new_input": {
+      "base_fixture": "两组练习结束时分别90%与75%，一周独立测验分别60%与78%（合成）。",
+      "instruction_and_expected": "仅末次90%：提示、熟悉性和学习均是候选，需延迟测试。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "两组练习结束时分别90%与75%，一周独立测验分别60%与78%（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.02.CASE.01:counterexample",
+    "expected": "口述正确不能自动授予操作胜任。",
+    "new_input": {
+      "base_fixture": "学习者能口述排序算法但不能独立写出排序程序。",
+      "instruction_and_expected": "口述正确不能自动授予操作胜任。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习者能口述排序算法但不能独立写出排序程序。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.02.CASE.01:forward",
+    "expected": "陈述证据与操作证据分别记录。",
+    "new_input": {
+      "base_fixture": "学习者能口述排序算法但不能独立写出排序程序。",
+      "instruction_and_expected": "陈述证据与操作证据分别记录。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习者能口述排序算法但不能独立写出排序程序。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.02.CASE.01:intervention",
+    "expected": "安排独立编码和原理解释。",
+    "new_input": {
+      "base_fixture": "学习者能口述排序算法但不能独立写出排序程序。",
+      "instruction_and_expected": "安排独立编码和原理解释。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习者能口述排序算法但不能独立写出排序程序。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.02.CASE.01:reverse",
+    "expected": "操作失败可能是概念、语法或工具困难；补分项任务。",
+    "new_input": {
+      "base_fixture": "学习者能口述排序算法但不能独立写出排序程序。",
+      "instruction_and_expected": "操作失败可能是概念、语法或工具困难；补分项任务。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习者能口述排序算法但不能独立写出排序程序。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.03.CASE.01:counterexample",
+    "expected": "单一口述失败不能认定无意识习得。",
+    "new_input": {
+      "base_fixture": "人工语法分类高于机会水平但规则口述失败。",
+      "instruction_and_expected": "单一口述失败不能认定无意识习得。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "人工语法分类高于机会水平但规则口述失败。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.03.CASE.01:forward",
+    "expected": "两种测量结果分别保存。",
+    "new_input": {
+      "base_fixture": "人工语法分类高于机会水平但规则口述失败。",
+      "instruction_and_expected": "两种测量结果分别保存。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "人工语法分类高于机会水平但规则口述失败。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.03.CASE.01:intervention",
+    "expected": "比较信息匹配的直接与间接测验。",
+    "new_input": {
+      "base_fixture": "人工语法分类高于机会水平但规则口述失败。",
+      "instruction_and_expected": "比较信息匹配的直接与间接测验。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "人工语法分类高于机会水平但规则口述失败。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.03.CASE.01:reverse",
+    "expected": "报告测量可能不灵敏、任务可能用片段记忆。",
+    "new_input": {
+      "base_fixture": "人工语法分类高于机会水平但规则口述失败。",
+      "instruction_and_expected": "报告测量可能不灵敏、任务可能用片段记忆。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "人工语法分类高于机会水平但规则口述失败。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.04.CASE.01:counterexample",
+    "expected": "所有刺激反应均下降时不能排除疲劳。",
+    "new_input": {
+      "base_fixture": "重复无害声音后反应下降，新声音仍能引发反应。",
+      "instruction_and_expected": "所有刺激反应均下降时不能排除疲劳。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "重复无害声音后反应下降，新声音仍能引发反应。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.04.CASE.01:forward",
+    "expected": "可提出习惯化候选，尚需其他控制。",
+    "new_input": {
+      "base_fixture": "重复无害声音后反应下降，新声音仍能引发反应。",
+      "instruction_and_expected": "可提出习惯化候选，尚需其他控制。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "重复无害声音后反应下降，新声音仍能引发反应。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.04.CASE.01:intervention",
+    "expected": "控制基线及刺激特异性，不在真实用户上诱发不适。",
+    "new_input": {
+      "base_fixture": "重复无害声音后反应下降，新声音仍能引发反应。",
+      "instruction_and_expected": "控制基线及刺激特异性，不在真实用户上诱发不适。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "重复无害声音后反应下降，新声音仍能引发反应。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.01.04.CASE.01:reverse",
+    "expected": "感官适应、疲劳及情境学习是竞争解释。",
+    "new_input": {
+      "base_fixture": "重复无害声音后反应下降，新声音仍能引发反应。",
+      "instruction_and_expected": "感官适应、疲劳及情境学习是竞争解释。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "重复无害声音后反应下降，新声音仍能引发反应。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.01.CASE.01:counterexample",
+    "expected": "相同概率组的配对次数不能直接证成条件学习。",
+    "new_input": {
+      "base_fixture": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。",
+      "instruction_and_expected": "相同概率组的配对次数不能直接证成条件学习。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.01.CASE.01:forward",
+    "expected": "条件概率差分别0.6与0；不是条件反应实测。",
+    "new_input": {
+      "base_fixture": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。",
+      "instruction_and_expected": "条件概率差分别0.6与0；不是条件反应实测。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.01.CASE.01:intervention",
+    "expected": "安排同等基线及独立反应测验。",
+    "new_input": {
+      "base_fixture": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。",
+      "instruction_and_expected": "安排同等基线及独立反应测验。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.01.CASE.01:reverse",
+    "expected": "给同现次数而无缺席对照不能判定预测信息。",
+    "new_input": {
+      "base_fixture": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。",
+      "instruction_and_expected": "给同现次数而无缺席对照不能判定预测信息。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "合成线索在场8/10有结果、缺席2/10有结果；另一组均5/10。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.02.CASE.01:counterexample",
+    "expected": "奖励发出后频率未升，不能按意图标为强化。",
+    "new_input": {
+      "base_fixture": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。",
+      "instruction_and_expected": "奖励发出后频率未升，不能按意图标为强化。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.02.CASE.01:forward",
+    "expected": "只记录行为差，不认定因果强化。",
+    "new_input": {
+      "base_fixture": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。",
+      "instruction_and_expected": "只记录行为差，不认定因果强化。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.02.CASE.01:intervention",
+    "expected": "采用有同意的反馈对照、测量学习而非只测频率。",
+    "new_input": {
+      "base_fixture": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。",
+      "instruction_and_expected": "采用有同意的反馈对照、测量学习而非只测频率。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.02.CASE.01:reverse",
+    "expected": "奖励、可用时间、目标变化均可解释。",
+    "new_input": {
+      "base_fixture": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。",
+      "instruction_and_expected": "奖励、可用时间、目标变化均可解释。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "合成软件自愿反馈前独立复习4次、后6次；同时学习时间增加。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.03.CASE.01:counterexample",
+    "expected": "只观测B反应为零不证明旧学习消失。",
+    "new_input": {
+      "base_fixture": "训练环境A习得，环境B反应消退，回A反应重现（合成）。",
+      "instruction_and_expected": "只观测B反应为零不证明旧学习消失。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "训练环境A习得，环境B反应消退，回A反应重现（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.03.CASE.01:forward",
+    "expected": "与ABA更新模式一致，不断言唯一机制。",
+    "new_input": {
+      "base_fixture": "训练环境A习得，环境B反应消退，回A反应重现（合成）。",
+      "instruction_and_expected": "与ABA更新模式一致，不断言唯一机制。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "训练环境A习得，环境B反应消退，回A反应重现（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.03.CASE.01:intervention",
+    "expected": "设计合法的无害情境变式及复测。",
+    "new_input": {
+      "base_fixture": "训练环境A习得，环境B反应消退，回A反应重现（合成）。",
+      "instruction_and_expected": "设计合法的无害情境变式及复测。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "训练环境A习得，环境B反应消退，回A反应重现（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.03.CASE.01:reverse",
+    "expected": "旧关联保留、情境提示等须比较。",
+    "new_input": {
+      "base_fixture": "训练环境A习得，环境B反应消退，回A反应重现（合成）。",
+      "instruction_and_expected": "旧关联保留、情境提示等须比较。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "训练环境A习得，环境B反应消退，回A反应重现（合成）。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.04.CASE.01:counterexample",
+    "expected": "预测和结果相等时ΔV=0，不外推所有模型。",
+    "new_input": {
+      "base_fixture": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。",
+      "instruction_and_expected": "预测和结果相等时ΔV=0，不外推所有模型。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.04.CASE.01:forward",
+    "expected": "ΔV=1/8，指定线索新值3/8。",
+    "new_input": {
+      "base_fixture": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。",
+      "instruction_and_expected": "ΔV=1/8，指定线索新值3/8。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.04.CASE.01:intervention",
+    "expected": "仅在已选模型内调整参数并比较独立预测。",
+    "new_input": {
+      "base_fixture": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。",
+      "instruction_and_expected": "仅在已选模型内调整参数并比较独立预测。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.02.04.CASE.01:reverse",
+    "expected": "同一输出可能来自多组参数，不能反推唯一学习率。",
+    "new_input": {
+      "base_fixture": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。",
+      "instruction_and_expected": "同一输出可能来自多组参数，不能反推唯一学习率。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "α=1/2,β=1/2,λ=1,在场V=[1/4,1/4]。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.01.CASE.01:counterexample",
+    "expected": "软件数据结构不能当作真实神经结构。",
+    "new_input": {
+      "base_fixture": "两个程序用图和规则表示同一题，输出一致。",
+      "instruction_and_expected": "软件数据结构不能当作真实神经结构。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "两个程序用图和规则表示同一题，输出一致。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.01.CASE.01:forward",
+    "expected": "两种表征方案可产生相同观察。",
+    "new_input": {
+      "base_fixture": "两个程序用图和规则表示同一题，输出一致。",
+      "instruction_and_expected": "两种表征方案可产生相同观察。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "两个程序用图和规则表示同一题，输出一致。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.01.CASE.01:intervention",
+    "expected": "设计可区分的错误/速度/泛化预测。",
+    "new_input": {
+      "base_fixture": "两个程序用图和规则表示同一题，输出一致。",
+      "instruction_and_expected": "设计可区分的错误/速度/泛化预测。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "两个程序用图和规则表示同一题，输出一致。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.01.CASE.01:reverse",
+    "expected": "输出一致不识别心理格式。",
+    "new_input": {
+      "base_fixture": "两个程序用图和规则表示同一题，输出一致。",
+      "instruction_and_expected": "输出一致不识别心理格式。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "两个程序用图和规则表示同一题，输出一致。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.02.CASE.01:counterexample",
+    "expected": "一次自由回忆失败不能断言永久遗忘。",
+    "new_input": {
+      "base_fixture": "某词在自由回忆失败，但有线索时答对。",
+      "instruction_and_expected": "一次自由回忆失败不能断言永久遗忘。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "某词在自由回忆失败，但有线索时答对。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.02.CASE.01:forward",
+    "expected": "两个任务证据分别记录。",
+    "new_input": {
+      "base_fixture": "某词在自由回忆失败，但有线索时答对。",
+      "instruction_and_expected": "两个任务证据分别记录。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "某词在自由回忆失败，但有线索时答对。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.02.CASE.01:intervention",
+    "expected": "改变线索并安排独立延迟复测。",
+    "new_input": {
+      "base_fixture": "某词在自由回忆失败，但有线索时答对。",
+      "instruction_and_expected": "改变线索并安排独立延迟复测。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "某词在自由回忆失败，但有线索时答对。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.02.CASE.01:reverse",
+    "expected": "可为检索线索、编码差异等，不确定原因。",
+    "new_input": {
+      "base_fixture": "某词在自由回忆失败，但有线索时答对。",
+      "instruction_and_expected": "可为检索线索、编码差异等，不确定原因。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "某词在自由回忆失败，但有线索时答对。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.03.CASE.01:counterexample",
+    "expected": "一个模拟命中不证明脑模块位置。",
+    "new_input": {
+      "base_fixture": "合成产生式匹配到目标与信息块。",
+      "instruction_and_expected": "一个模拟命中不证明脑模块位置。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "合成产生式匹配到目标与信息块。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.03.CASE.01:forward",
+    "expected": "只在给定ACT-R式演示中产生规则选择候选。",
+    "new_input": {
+      "base_fixture": "合成产生式匹配到目标与信息块。",
+      "instruction_and_expected": "只在给定ACT-R式演示中产生规则选择候选。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "合成产生式匹配到目标与信息块。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.03.CASE.01:intervention",
+    "expected": "比较同一任务的时序/错误模式预测。",
+    "new_input": {
+      "base_fixture": "合成产生式匹配到目标与信息块。",
+      "instruction_and_expected": "比较同一任务的时序/错误模式预测。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "合成产生式匹配到目标与信息块。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.03.03.CASE.01:reverse",
+    "expected": "观察行为可能由多个架构解释。",
+    "new_input": {
+      "base_fixture": "合成产生式匹配到目标与信息块。",
+      "instruction_and_expected": "观察行为可能由多个架构解释。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "合成产生式匹配到目标与信息块。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.01.CASE.01:counterexample",
+    "expected": "缺先备证据不得断言无指导探究最优。",
+    "new_input": {
+      "base_fixture": "学习者用旧规则误解释反例，新证据与旧解释冲突。",
+      "instruction_and_expected": "缺先备证据不得断言无指导探究最优。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习者用旧规则误解释反例，新证据与旧解释冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.01.CASE.01:forward",
+    "expected": "记录先备解释及反例。",
+    "new_input": {
+      "base_fixture": "学习者用旧规则误解释反例，新证据与旧解释冲突。",
+      "instruction_and_expected": "记录先备解释及反例。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习者用旧规则误解释反例，新证据与旧解释冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.01.CASE.01:intervention",
+    "expected": "提供有指导的对照解释与独立变式。",
+    "new_input": {
+      "base_fixture": "学习者用旧规则误解释反例，新证据与旧解释冲突。",
+      "instruction_and_expected": "提供有指导的对照解释与独立变式。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习者用旧规则误解释反例，新证据与旧解释冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.01.CASE.01:reverse",
+    "expected": "可由误概念、阅读误解或提示影响产生。",
+    "new_input": {
+      "base_fixture": "学习者用旧规则误解释反例，新证据与旧解释冲突。",
+      "instruction_and_expected": "可由误概念、阅读误解或提示影响产生。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习者用旧规则误解释反例，新证据与旧解释冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.02.CASE.01:counterexample",
+    "expected": "不能由陌生情境一次失败证明知识永不可迁移。",
+    "new_input": {
+      "base_fixture": "会背词典义但在陌生购物任务不能正确用词。",
+      "instruction_and_expected": "不能由陌生情境一次失败证明知识永不可迁移。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "会背词典义但在陌生购物任务不能正确用词。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.02.CASE.01:forward",
+    "expected": "定义记忆与情境使用分开。",
+    "new_input": {
+      "base_fixture": "会背词典义但在陌生购物任务不能正确用词。",
+      "instruction_and_expected": "定义记忆与情境使用分开。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "会背词典义但在陌生购物任务不能正确用词。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.02.CASE.01:intervention",
+    "expected": "选择真实相关的变式任务，保留独立评分。",
+    "new_input": {
+      "base_fixture": "会背词典义但在陌生购物任务不能正确用词。",
+      "instruction_and_expected": "选择真实相关的变式任务，保留独立评分。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "会背词典义但在陌生购物任务不能正确用词。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.02.CASE.01:reverse",
+    "expected": "可能有词义、语用或任务理解障碍。",
+    "new_input": {
+      "base_fixture": "会背词典义但在陌生购物任务不能正确用词。",
+      "instruction_and_expected": "可能有词义、语用或任务理解障碍。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "会背词典义但在陌生购物任务不能正确用词。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.03.CASE.01:counterexample",
+    "expected": "流程图通过不能证明组织发生扩展学习。",
+    "new_input": {
+      "base_fixture": "团队交接任务中工具、规则和分工冲突。",
+      "instruction_and_expected": "流程图通过不能证明组织发生扩展学习。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "团队交接任务中工具、规则和分工冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.03.CASE.01:forward",
+    "expected": "用活动系统框架记录主体、对象和中介。",
+    "new_input": {
+      "base_fixture": "团队交接任务中工具、规则和分工冲突。",
+      "instruction_and_expected": "用活动系统框架记录主体、对象和中介。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "团队交接任务中工具、规则和分工冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.03.CASE.01:intervention",
+    "expected": "收集参与者与历史证据再提出候选改进。",
+    "new_input": {
+      "base_fixture": "团队交接任务中工具、规则和分工冲突。",
+      "instruction_and_expected": "收集参与者与历史证据再提出候选改进。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "团队交接任务中工具、规则和分工冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.03.CASE.01:reverse",
+    "expected": "冲突还可能来自资源短缺或需求变化。",
+    "new_input": {
+      "base_fixture": "团队交接任务中工具、规则和分工冲突。",
+      "instruction_and_expected": "冲突还可能来自资源短缺或需求变化。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "团队交接任务中工具、规则和分工冲突。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.04.CASE.01:counterexample",
+    "expected": "不得把小组成功计为个人独立掌握。",
+    "new_input": {
+      "base_fixture": "同伴完成对话，学习者仅观察。",
+      "instruction_and_expected": "不得把小组成功计为个人独立掌握。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "同伴完成对话，学习者仅观察。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.04.CASE.01:forward",
+    "expected": "共同产物与个人行为分离。",
+    "new_input": {
+      "base_fixture": "同伴完成对话，学习者仅观察。",
+      "instruction_and_expected": "共同产物与个人行为分离。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "同伴完成对话，学习者仅观察。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.04.CASE.01:intervention",
+    "expected": "安排自愿独立对话并记录帮助条件。",
+    "new_input": {
+      "base_fixture": "同伴完成对话，学习者仅观察。",
+      "instruction_and_expected": "安排自愿独立对话并记录帮助条件。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "同伴完成对话，学习者仅观察。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.04.04.CASE.01:reverse",
+    "expected": "可能有观察学习，亦可能没有独立能力。",
+    "new_input": {
+      "base_fixture": "同伴完成对话，学习者仅观察。",
+      "instruction_and_expected": "可能有观察学习，亦可能没有独立能力。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "同伴完成对话，学习者仅观察。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.01.CASE.01:counterexample",
+    "expected": "相关脑活动不能直接证明教学因果。",
+    "new_input": {
+      "base_fixture": "记忆任务准确率上升，同时脑区活动发生变化。",
+      "instruction_and_expected": "相关脑活动不能直接证明教学因果。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "记忆任务准确率上升，同时脑区活动发生变化。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.01.CASE.01:forward",
+    "expected": "行为证据与神经关联分别记录。",
+    "new_input": {
+      "base_fixture": "记忆任务准确率上升，同时脑区活动发生变化。",
+      "instruction_and_expected": "行为证据与神经关联分别记录。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "记忆任务准确率上升，同时脑区活动发生变化。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.01.CASE.01:intervention",
+    "expected": "需要额外桥接设计与可检验预测。",
+    "new_input": {
+      "base_fixture": "记忆任务准确率上升，同时脑区活动发生变化。",
+      "instruction_and_expected": "需要额外桥接设计与可检验预测。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "记忆任务准确率上升，同时脑区活动发生变化。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.01.CASE.01:reverse",
+    "expected": "多种机制与实现均可能解释。",
+    "new_input": {
+      "base_fixture": "记忆任务准确率上升，同时脑区活动发生变化。",
+      "instruction_and_expected": "多种机制与实现均可能解释。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "记忆任务准确率上升，同时脑区活动发生变化。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.02.CASE.01:counterexample",
+    "expected": "观察后重写预测不得标成预先验证。",
+    "new_input": {
+      "base_fixture": "模型A与B对熟悉题同预测，对新题预测不同。",
+      "instruction_and_expected": "观察后重写预测不得标成预先验证。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "模型A与B对熟悉题同预测，对新题预测不同。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.02.CASE.01:forward",
+    "expected": "固定新题、指标及预期。",
+    "new_input": {
+      "base_fixture": "模型A与B对熟悉题同预测，对新题预测不同。",
+      "instruction_and_expected": "固定新题、指标及预期。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "模型A与B对熟悉题同预测，对新题预测不同。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.02.CASE.01:intervention",
+    "expected": "执行事前规定的区分测试并记录失败。",
+    "new_input": {
+      "base_fixture": "模型A与B对熟悉题同预测，对新题预测不同。",
+      "instruction_and_expected": "执行事前规定的区分测试并记录失败。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "模型A与B对熟悉题同预测，对新题预测不同。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.02.CASE.01:reverse",
+    "expected": "熟悉题结果不能区分两模型。",
+    "new_input": {
+      "base_fixture": "模型A与B对熟悉题同预测，对新题预测不同。",
+      "instruction_and_expected": "熟悉题结果不能区分两模型。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "模型A与B对熟悉题同预测，对新题预测不同。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.03.CASE.01:counterexample",
+    "expected": "不能删除失败或无条件宣称全理论被证伪。",
+    "new_input": {
+      "base_fixture": "预注册预测方向与结果相反，但发现测量设备故障。",
+      "instruction_and_expected": "不能删除失败或无条件宣称全理论被证伪。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "预注册预测方向与结果相反，但发现测量设备故障。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.03.CASE.01:forward",
+    "expected": "保留失败和故障记录。",
+    "new_input": {
+      "base_fixture": "预注册预测方向与结果相反，但发现测量设备故障。",
+      "instruction_and_expected": "保留失败和故障记录。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "预注册预测方向与结果相反，但发现测量设备故障。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.03.CASE.01:intervention",
+    "expected": "另定修订协议并独立重复。",
+    "new_input": {
+      "base_fixture": "预注册预测方向与结果相反，但发现测量设备故障。",
+      "instruction_and_expected": "另定修订协议并独立重复。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "预注册预测方向与结果相反，但发现测量设备故障。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.03.CASE.01:reverse",
+    "expected": "需核查设备、实施和辅助假设。",
+    "new_input": {
+      "base_fixture": "预注册预测方向与结果相反，但发现测量设备故障。",
+      "instruction_and_expected": "需核查设备、实施和辅助假设。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "预注册预测方向与结果相反，但发现测量设备故障。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.04.CASE.01:counterexample",
+    "expected": "不能将即时平均效应视为个体长期收益。",
+    "new_input": {
+      "base_fixture": "大学生短时记忆实验有效，目标为儿童长期口语迁移。",
+      "instruction_and_expected": "不能将即时平均效应视为个体长期收益。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "大学生短时记忆实验有效，目标为儿童长期口语迁移。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.04.CASE.01:forward",
+    "expected": "目标人群、时距、构念不一致。",
+    "new_input": {
+      "base_fixture": "大学生短时记忆实验有效，目标为儿童长期口语迁移。",
+      "instruction_and_expected": "目标人群、时距、构念不一致。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "大学生短时记忆实验有效，目标为儿童长期口语迁移。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.04.CASE.01:intervention",
+    "expected": "查目标范围直接证据并另设合法评价。",
+    "new_input": {
+      "base_fixture": "大学生短时记忆实验有效，目标为儿童长期口语迁移。",
+      "instruction_and_expected": "查目标范围直接证据并另设合法评价。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "大学生短时记忆实验有效，目标为儿童长期口语迁移。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K01.05.04.CASE.01:reverse",
+    "expected": "无法由原实验推目标效果。",
+    "new_input": {
+      "base_fixture": "大学生短时记忆实验有效，目标为儿童长期口语迁移。",
+      "instruction_and_expected": "无法由原实验推目标效果。",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "大学生短时记忆实验有效，目标为儿童长期口语迁移。"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.01.CASE.01:counterexample",
+    "expected": "未报告不等于零加工",
+    "new_input": {
+      "base_fixture": "两路语音中报告一路内容，另一路只能报告音高",
+      "instruction_and_expected": "未报告不等于零加工",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "两路语音中报告一路内容，另一路只能报告音高"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.01.CASE.01:forward",
+    "expected": "区分语义和物理报告",
+    "new_input": {
+      "base_fixture": "两路语音中报告一路内容，另一路只能报告音高",
+      "instruction_and_expected": "区分语义和物理报告",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "两路语音中报告一路内容，另一路只能报告音高"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.01.CASE.01:intervention",
+    "expected": "改变目标语义及报告方式",
+    "new_input": {
+      "base_fixture": "两路语音中报告一路内容，另一路只能报告音高",
+      "instruction_and_expected": "改变目标语义及报告方式",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "两路语音中报告一路内容，另一路只能报告音高"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.01.CASE.01:reverse",
+    "expected": "早期过滤、衰减或测量不灵敏",
+    "new_input": {
+      "base_fixture": "两路语音中报告一路内容，另一路只能报告音高",
+      "instruction_and_expected": "早期过滤、衰减或测量不灵敏",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "两路语音中报告一路内容，另一路只能报告音高"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.02.CASE.01:counterexample",
+    "expected": "全部回答有信号不能认定高敏感度",
+    "new_input": {
+      "base_fixture": "信号在场100次命中80，缺席100次误报20",
+      "instruction_and_expected": "全部回答有信号不能认定高敏感度",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "信号在场100次命中80，缺席100次误报20"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.02.CASE.01:forward",
+    "expected": "计算H/F与d′、c，分开敏感度和判准",
+    "new_input": {
+      "base_fixture": "信号在场100次命中80，缺席100次误报20",
+      "instruction_and_expected": "计算H/F与d′、c，分开敏感度和判准",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "信号在场100次命中80，缺席100次误报20"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.02.CASE.01:intervention",
+    "expected": "固定刺激并平衡在场/缺席试次",
+    "new_input": {
+      "base_fixture": "信号在场100次命中80，缺席100次误报20",
+      "instruction_and_expected": "固定刺激并平衡在场/缺席试次",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "信号在场100次命中80，缺席100次误报20"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.02.CASE.01:reverse",
+    "expected": "高命中也可能是宽松判准",
+    "new_input": {
+      "base_fixture": "信号在场100次命中80，缺席100次误报20",
+      "instruction_and_expected": "高命中也可能是宽松判准",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "信号在场100次命中80，缺席100次误报20"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.03.CASE.01:counterexample",
+    "expected": "同一字的训练原样正确不证明泛化",
+    "new_input": {
+      "base_fixture": "熟悉字体能认字，陌生字体错误",
+      "instruction_and_expected": "同一字的训练原样正确不证明泛化",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "熟悉字体能认字，陌生字体错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.03.CASE.01:forward",
+    "expected": "分别记录熟悉与新变式",
+    "new_input": {
+      "base_fixture": "熟悉字体能认字，陌生字体错误",
+      "instruction_and_expected": "分别记录熟悉与新变式",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "熟悉字体能认字，陌生字体错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.03.CASE.01:intervention",
+    "expected": "控制清晰度并设计变体",
+    "new_input": {
+      "base_fixture": "熟悉字体能认字，陌生字体错误",
+      "instruction_and_expected": "控制清晰度并设计变体",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "熟悉字体能认字，陌生字体错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.01.03.CASE.01:reverse",
+    "expected": "可能依赖模板、局部特征或视觉条件",
+    "new_input": {
+      "base_fixture": "熟悉字体能认字，陌生字体错误",
+      "instruction_and_expected": "可能依赖模板、局部特征或视觉条件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "熟悉字体能认字，陌生字体错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.01.CASE.01:counterexample",
+    "expected": "不同难度词表不能归因注意",
+    "new_input": {
+      "base_fixture": "安静与干扰条件下辨别同一词",
+      "instruction_and_expected": "不同难度词表不能归因注意",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "安静与干扰条件下辨别同一词"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.01.CASE.01:forward",
+    "expected": "对比正确率和时长",
+    "new_input": {
+      "base_fixture": "安静与干扰条件下辨别同一词",
+      "instruction_and_expected": "对比正确率和时长",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "安静与干扰条件下辨别同一词"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.01.CASE.01:intervention",
+    "expected": "匹配音量和词项并复测",
+    "new_input": {
+      "base_fixture": "安静与干扰条件下辨别同一词",
+      "instruction_and_expected": "匹配音量和词项并复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "安静与干扰条件下辨别同一词"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.01.CASE.01:reverse",
+    "expected": "干扰、语言熟练或设备都可能解释",
+    "new_input": {
+      "base_fixture": "安静与干扰条件下辨别同一词",
+      "instruction_and_expected": "干扰、语言熟练或设备都可能解释",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "安静与干扰条件下辨别同一词"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.02.CASE.01:counterexample",
+    "expected": "漏报上升不能直接诊断注意缺陷",
+    "new_input": {
+      "base_fixture": "前后两个相等时段命中下降且误报也下降",
+      "instruction_and_expected": "漏报上升不能直接诊断注意缺陷",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "前后两个相等时段命中下降且误报也下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.02.CASE.01:forward",
+    "expected": "分开记录两率和时点",
+    "new_input": {
+      "base_fixture": "前后两个相等时段命中下降且误报也下降",
+      "instruction_and_expected": "分开记录两率和时点",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "前后两个相等时段命中下降且误报也下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.02.CASE.01:intervention",
+    "expected": "固定事件比例并允许休息",
+    "new_input": {
+      "base_fixture": "前后两个相等时段命中下降且误报也下降",
+      "instruction_and_expected": "固定事件比例并允许休息",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "前后两个相等时段命中下降且误报也下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.02.CASE.01:reverse",
+    "expected": "判准变严或敏感度变化皆可能",
+    "new_input": {
+      "base_fixture": "前后两个相等时段命中下降且误报也下降",
+      "instruction_and_expected": "判准变严或敏感度变化皆可能",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "前后两个相等时段命中下降且误报也下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.03.CASE.01:counterexample",
+    "expected": "不同独立任务时差不是切换成本",
+    "new_input": {
+      "base_fixture": "混合任务切换正确试次均值620ms，重复500ms",
+      "instruction_and_expected": "不同独立任务时差不是切换成本",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "混合任务切换正确试次均值620ms，重复500ms"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.03.CASE.01:forward",
+    "expected": "差120ms且另记错误率",
+    "new_input": {
+      "base_fixture": "混合任务切换正确试次均值620ms，重复500ms",
+      "instruction_and_expected": "差120ms且另记错误率",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "混合任务切换正确试次均值620ms，重复500ms"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.03.CASE.01:intervention",
+    "expected": "匹配刺激与准备条件",
+    "new_input": {
+      "base_fixture": "混合任务切换正确试次均值620ms，重复500ms",
+      "instruction_and_expected": "匹配刺激与准备条件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "混合任务切换正确试次均值620ms，重复500ms"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.03.CASE.01:reverse",
+    "expected": "准备时距或任务难度可能解释",
+    "new_input": {
+      "base_fixture": "混合任务切换正确试次均值620ms，重复500ms",
+      "instruction_and_expected": "准备时距或任务难度可能解释",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "混合任务切换正确试次均值620ms，重复500ms"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.04.CASE.01:counterexample",
+    "expected": "单任务不概括全部执行功能",
+    "new_input": {
+      "base_fixture": "不一致刺激比一致刺激慢",
+      "instruction_and_expected": "单任务不概括全部执行功能",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "不一致刺激比一致刺激慢"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.04.CASE.01:forward",
+    "expected": "记录冲突差和正确率",
+    "new_input": {
+      "base_fixture": "不一致刺激比一致刺激慢",
+      "instruction_and_expected": "记录冲突差和正确率",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "不一致刺激比一致刺激慢"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.04.CASE.01:intervention",
+    "expected": "匹配颜色识别及阅读基线",
+    "new_input": {
+      "base_fixture": "不一致刺激比一致刺激慢",
+      "instruction_and_expected": "匹配颜色识别及阅读基线",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "不一致刺激比一致刺激慢"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.02.04.CASE.01:reverse",
+    "expected": "阅读速度、冲突控制及规则理解均可能",
+    "new_input": {
+      "base_fixture": "不一致刺激比一致刺激慢",
+      "instruction_and_expected": "阅读速度、冲突控制及规则理解均可能",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "不一致刺激比一致刺激慢"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.01.CASE.01:counterexample",
+    "expected": "不能按四个项目设硬限制",
+    "new_input": {
+      "base_fixture": "熟悉数字按日期组块后可复现更多数字",
+      "instruction_and_expected": "不能按四个项目设硬限制",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "熟悉数字按日期组块后可复现更多数字"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.01.CASE.01:forward",
+    "expected": "记录组块规则与计数单位",
+    "new_input": {
+      "base_fixture": "熟悉数字按日期组块后可复现更多数字",
+      "instruction_and_expected": "记录组块规则与计数单位",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "熟悉数字按日期组块后可复现更多数字"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.01.CASE.01:intervention",
+    "expected": "比较陌生材料及精度",
+    "new_input": {
+      "base_fixture": "熟悉数字按日期组块后可复现更多数字",
+      "instruction_and_expected": "比较陌生材料及精度",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "熟悉数字按日期组块后可复现更多数字"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.01.CASE.01:reverse",
+    "expected": "熟悉知识或策略变化并非容量扩大",
+    "new_input": {
+      "base_fixture": "熟悉数字按日期组块后可复现更多数字",
+      "instruction_and_expected": "熟悉知识或策略变化并非容量扩大",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "熟悉数字按日期组块后可复现更多数字"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.02.CASE.01:counterexample",
+    "expected": "一次结果不确证神经模块",
+    "new_input": {
+      "base_fixture": "保持词序时并行复述无关词导致表现下降",
+      "instruction_and_expected": "一次结果不确证神经模块",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "保持词序时并行复述无关词导致表现下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.02.CASE.01:forward",
+    "expected": "记录言语保持与并行干扰",
+    "new_input": {
+      "base_fixture": "保持词序时并行复述无关词导致表现下降",
+      "instruction_and_expected": "记录言语保持与并行干扰",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "保持词序时并行复述无关词导致表现下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.02.CASE.01:intervention",
+    "expected": "对比非言语等难度干扰",
+    "new_input": {
+      "base_fixture": "保持词序时并行复述无关词导致表现下降",
+      "instruction_and_expected": "对比非言语等难度干扰",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "保持词序时并行复述无关词导致表现下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.02.CASE.01:reverse",
+    "expected": "复述受限或一般双任务成本",
+    "new_input": {
+      "base_fixture": "保持词序时并行复述无关词导致表现下降",
+      "instruction_and_expected": "复述受限或一般双任务成本",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "保持词序时并行复述无关词导致表现下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.03.CASE.01:counterexample",
+    "expected": "偏好图形不证明固定学习风格",
+    "new_input": {
+      "base_fixture": "位置复现与颜色记忆在干扰条件下变化不同",
+      "instruction_and_expected": "偏好图形不证明固定学习风格",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "位置复现与颜色记忆在干扰条件下变化不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.03.CASE.01:forward",
+    "expected": "分离视觉与空间观察",
+    "new_input": {
+      "base_fixture": "位置复现与颜色记忆在干扰条件下变化不同",
+      "instruction_and_expected": "分离视觉与空间观察",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "位置复现与颜色记忆在干扰条件下变化不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.03.CASE.01:intervention",
+    "expected": "匹配颜色/位置负荷",
+    "new_input": {
+      "base_fixture": "位置复现与颜色记忆在干扰条件下变化不同",
+      "instruction_and_expected": "匹配颜色/位置负荷",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "位置复现与颜色记忆在干扰条件下变化不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.03.CASE.01:reverse",
+    "expected": "编码策略和共享资源均可能",
+    "new_input": {
+      "base_fixture": "位置复现与颜色记忆在干扰条件下变化不同",
+      "instruction_and_expected": "编码策略和共享资源均可能",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "位置复现与颜色记忆在干扰条件下变化不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.04.CASE.01:counterexample",
+    "expected": "相同准确率不证唯一模型",
+    "new_input": {
+      "base_fixture": "负荷增加时回忆精度变差",
+      "instruction_and_expected": "相同准确率不证唯一模型",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "负荷增加时回忆精度变差"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.04.CASE.01:forward",
+    "expected": "在指定模型下比较预测",
+    "new_input": {
+      "base_fixture": "负荷增加时回忆精度变差",
+      "instruction_and_expected": "在指定模型下比较预测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "负荷增加时回忆精度变差"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.04.CASE.01:intervention",
+    "expected": "设计不同负荷下误差分布",
+    "new_input": {
+      "base_fixture": "负荷增加时回忆精度变差",
+      "instruction_and_expected": "设计不同负荷下误差分布",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "负荷增加时回忆精度变差"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.03.04.CASE.01:reverse",
+    "expected": "槽位、资源或混合模型均可解释部分结果",
+    "new_input": {
+      "base_fixture": "负荷增加时回忆精度变差",
+      "instruction_and_expected": "槽位、资源或混合模型均可解释部分结果",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "负荷增加时回忆精度变差"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.01.CASE.01:counterexample",
+    "expected": "信心高不证明来源正确",
+    "new_input": {
+      "base_fixture": "学习者记得事件但日期与日志不一致",
+      "instruction_and_expected": "信心高不证明来源正确",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习者记得事件但日期与日志不一致"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.01.CASE.01:forward",
+    "expected": "事件内容与来源准确度分开",
+    "new_input": {
+      "base_fixture": "学习者记得事件但日期与日志不一致",
+      "instruction_and_expected": "事件内容与来源准确度分开",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习者记得事件但日期与日志不一致"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.01.CASE.01:intervention",
+    "expected": "核对日志并允许未知",
+    "new_input": {
+      "base_fixture": "学习者记得事件但日期与日志不一致",
+      "instruction_and_expected": "核对日志并允许未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习者记得事件但日期与日志不一致"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.01.CASE.01:reverse",
+    "expected": "时间混淆或后续信息影响",
+    "new_input": {
+      "base_fixture": "学习者记得事件但日期与日志不一致",
+      "instruction_and_expected": "时间混淆或后续信息影响",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习者记得事件但日期与日志不一致"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.02.CASE.01:counterexample",
+    "expected": "词形正确不是概念理解",
+    "new_input": {
+      "base_fixture": "识别词形却不能解释词义",
+      "instruction_and_expected": "词形正确不是概念理解",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "识别词形却不能解释词义"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.02.CASE.01:forward",
+    "expected": "再认与语义理解分开",
+    "new_input": {
+      "base_fixture": "识别词形却不能解释词义",
+      "instruction_and_expected": "再认与语义理解分开",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "识别词形却不能解释词义"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.02.CASE.01:intervention",
+    "expected": "要求释义和新语境选择",
+    "new_input": {
+      "base_fixture": "识别词形却不能解释词义",
+      "instruction_and_expected": "要求释义和新语境选择",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "识别词形却不能解释词义"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.02.CASE.01:reverse",
+    "expected": "熟悉性或词义缺口",
+    "new_input": {
+      "base_fixture": "识别词形却不能解释词义",
+      "instruction_and_expected": "熟悉性或词义缺口",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "识别词形却不能解释词义"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.03.CASE.01:counterexample",
+    "expected": "快速演示不证明长期保持",
+    "new_input": {
+      "base_fixture": "学习者能口述操作但延迟后不能独立完成",
+      "instruction_and_expected": "快速演示不证明长期保持",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习者能口述操作但延迟后不能独立完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.03.CASE.01:forward",
+    "expected": "保持表现与语言报告分开",
+    "new_input": {
+      "base_fixture": "学习者能口述操作但延迟后不能独立完成",
+      "instruction_and_expected": "保持表现与语言报告分开",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习者能口述操作但延迟后不能独立完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.03.CASE.01:intervention",
+    "expected": "复测同条件独立执行",
+    "new_input": {
+      "base_fixture": "学习者能口述操作但延迟后不能独立完成",
+      "instruction_and_expected": "复测同条件独立执行",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习者能口述操作但延迟后不能独立完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.03.CASE.01:reverse",
+    "expected": "工具、程序或任务理解问题",
+    "new_input": {
+      "base_fixture": "学习者能口述操作但延迟后不能独立完成",
+      "instruction_and_expected": "工具、程序或任务理解问题",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习者能口述操作但延迟后不能独立完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.04.CASE.01:counterexample",
+    "expected": "口述失败不证明无意识机制",
+    "new_input": {
+      "base_fixture": "间接启动任务有效但直接报告失败",
+      "instruction_and_expected": "口述失败不证明无意识机制",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "间接启动任务有效但直接报告失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.04.CASE.01:forward",
+    "expected": "分别保存两种测验",
+    "new_input": {
+      "base_fixture": "间接启动任务有效但直接报告失败",
+      "instruction_and_expected": "分别保存两种测验",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "间接启动任务有效但直接报告失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.04.CASE.01:intervention",
+    "expected": "信息匹配并核意识报告",
+    "new_input": {
+      "base_fixture": "间接启动任务有效但直接报告失败",
+      "instruction_and_expected": "信息匹配并核意识报告",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "间接启动任务有效但直接报告失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.04.04.CASE.01:reverse",
+    "expected": "直接测量灵敏度不足或显性策略",
+    "new_input": {
+      "base_fixture": "间接启动任务有效但直接报告失败",
+      "instruction_and_expected": "直接测量灵敏度不足或显性策略",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "间接启动任务有效但直接报告失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.01.CASE.01:counterexample",
+    "expected": "冗长错误解释不是有效精加工",
+    "new_input": {
+      "base_fixture": "同时间学习词义，建立准确联系或重复字形",
+      "instruction_and_expected": "冗长错误解释不是有效精加工",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "同时间学习词义，建立准确联系或重复字形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.01.CASE.01:forward",
+    "expected": "分开记录编码方式与测试",
+    "new_input": {
+      "base_fixture": "同时间学习词义，建立准确联系或重复字形",
+      "instruction_and_expected": "分开记录编码方式与测试",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "同时间学习词义，建立准确联系或重复字形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.01.CASE.01:intervention",
+    "expected": "控制材料与时间再延迟测试",
+    "new_input": {
+      "base_fixture": "同时间学习词义，建立准确联系或重复字形",
+      "instruction_and_expected": "控制材料与时间再延迟测试",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "同时间学习词义，建立准确联系或重复字形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.01.CASE.01:reverse",
+    "expected": "既有知识、联系质量可能影响",
+    "new_input": {
+      "base_fixture": "同时间学习词义，建立准确联系或重复字形",
+      "instruction_and_expected": "既有知识、联系质量可能影响",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "同时间学习词义，建立准确联系或重复字形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.02.CASE.01:counterexample",
+    "expected": "图表漂亮不证明记忆改善",
+    "new_input": {
+      "base_fixture": "将词汇按情境分类后独立重建",
+      "instruction_and_expected": "图表漂亮不证明记忆改善",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "将词汇按情境分类后独立重建"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.02.CASE.01:forward",
+    "expected": "区别提供结构与自主组织",
+    "new_input": {
+      "base_fixture": "将词汇按情境分类后独立重建",
+      "instruction_and_expected": "区别提供结构与自主组织",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "将词汇按情境分类后独立重建"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.02.CASE.01:intervention",
+    "expected": "改变组织顺序做检索",
+    "new_input": {
+      "base_fixture": "将词汇按情境分类后独立重建",
+      "instruction_and_expected": "改变组织顺序做检索",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "将词汇按情境分类后独立重建"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.02.CASE.01:reverse",
+    "expected": "熟悉类别或提示帮助",
+    "new_input": {
+      "base_fixture": "将词汇按情境分类后独立重建",
+      "instruction_and_expected": "熟悉类别或提示帮助",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "将词汇按情境分类后独立重建"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.03.CASE.01:counterexample",
+    "expected": "图片提示成功不能替代独立回忆",
+    "new_input": {
+      "base_fixture": "学习词时同时提供图片线索",
+      "instruction_and_expected": "图片提示成功不能替代独立回忆",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习词时同时提供图片线索"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.03.CASE.01:forward",
+    "expected": "绑定图片及目标编码条件",
+    "new_input": {
+      "base_fixture": "学习词时同时提供图片线索",
+      "instruction_and_expected": "绑定图片及目标编码条件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习词时同时提供图片线索"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.03.CASE.01:intervention",
+    "expected": "去图片再测独立产出",
+    "new_input": {
+      "base_fixture": "学习词时同时提供图片线索",
+      "instruction_and_expected": "去图片再测独立产出",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习词时同时提供图片线索"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.03.CASE.01:reverse",
+    "expected": "图片可能与多个词重叠",
+    "new_input": {
+      "base_fixture": "学习词时同时提供图片线索",
+      "instruction_and_expected": "图片可能与多个词重叠",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习词时同时提供图片线索"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.04.CASE.01:counterexample",
+    "expected": "同年级不能推相同先备",
+    "new_input": {
+      "base_fixture": "学习者把既有语法规则用于不适用构式",
+      "instruction_and_expected": "同年级不能推相同先备",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习者把既有语法规则用于不适用构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.04.CASE.01:forward",
+    "expected": "记录旧解释和反例",
+    "new_input": {
+      "base_fixture": "学习者把既有语法规则用于不适用构式",
+      "instruction_and_expected": "记录旧解释和反例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习者把既有语法规则用于不适用构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.04.CASE.01:intervention",
+    "expected": "补相关先备测试",
+    "new_input": {
+      "base_fixture": "学习者把既有语法规则用于不适用构式",
+      "instruction_and_expected": "补相关先备测试",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习者把既有语法规则用于不适用构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.05.04.CASE.01:reverse",
+    "expected": "规则过度泛化或题意误解",
+    "new_input": {
+      "base_fixture": "学习者把既有语法规则用于不适用构式",
+      "instruction_and_expected": "规则过度泛化或题意误解",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习者把既有语法规则用于不适用构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.01.CASE.01:counterexample",
+    "expected": "提示答对不证明无提示保持",
+    "new_input": {
+      "base_fixture": "同一个模糊提示对应多个词，唯一线索更有效",
+      "instruction_and_expected": "提示答对不证明无提示保持",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "同一个模糊提示对应多个词，唯一线索更有效"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.01.CASE.01:forward",
+    "expected": "比较线索匹配和区分性",
+    "new_input": {
+      "base_fixture": "同一个模糊提示对应多个词，唯一线索更有效",
+      "instruction_and_expected": "比较线索匹配和区分性",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "同一个模糊提示对应多个词，唯一线索更有效"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.01.CASE.01:intervention",
+    "expected": "改用明确线索再无提示复测",
+    "new_input": {
+      "base_fixture": "同一个模糊提示对应多个词，唯一线索更有效",
+      "instruction_and_expected": "改用明确线索再无提示复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "同一个模糊提示对应多个词，唯一线索更有效"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.01.CASE.01:reverse",
+    "expected": "竞争目标或编码差异",
+    "new_input": {
+      "base_fixture": "同一个模糊提示对应多个词，唯一线索更有效",
+      "instruction_and_expected": "竞争目标或编码差异",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "同一个模糊提示对应多个词，唯一线索更有效"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.02.CASE.01:counterexample",
+    "expected": "时间经过不能唯一解释遗忘",
+    "new_input": {
+      "base_fixture": "学习A后学相似B，A回忆下降",
+      "instruction_and_expected": "时间经过不能唯一解释遗忘",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习A后学相似B，A回忆下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.02.CASE.01:forward",
+    "expected": "记录A/B顺序与目标",
+    "new_input": {
+      "base_fixture": "学习A后学相似B，A回忆下降",
+      "instruction_and_expected": "记录A/B顺序与目标",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习A后学相似B，A回忆下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.02.CASE.01:intervention",
+    "expected": "等时距无B对照",
+    "new_input": {
+      "base_fixture": "学习A后学相似B，A回忆下降",
+      "instruction_and_expected": "等时距无B对照",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习A后学相似B，A回忆下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.02.CASE.01:reverse",
+    "expected": "倒摄干扰或时间和疲劳",
+    "new_input": {
+      "base_fixture": "学习A后学相似B，A回忆下降",
+      "instruction_and_expected": "倒摄干扰或时间和疲劳",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习A后学相似B，A回忆下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.03.CASE.01:counterexample",
+    "expected": "不得使用历史节省曲线作为个体概率",
+    "new_input": {
+      "base_fixture": "同一学习内容1日及7日不同回忆率",
+      "instruction_and_expected": "不得使用历史节省曲线作为个体概率",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "同一学习内容1日及7日不同回忆率"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.03.CASE.01:forward",
+    "expected": "分别存任务/间隔/指标",
+    "new_input": {
+      "base_fixture": "同一学习内容1日及7日不同回忆率",
+      "instruction_and_expected": "分别存任务/间隔/指标",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "同一学习内容1日及7日不同回忆率"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.03.CASE.01:intervention",
+    "expected": "比较同条件多个延迟",
+    "new_input": {
+      "base_fixture": "同一学习内容1日及7日不同回忆率",
+      "instruction_and_expected": "比较同条件多个延迟",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "同一学习内容1日及7日不同回忆率"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.03.CASE.01:reverse",
+    "expected": "衰减、干扰或线索变化",
+    "new_input": {
+      "base_fixture": "同一学习内容1日及7日不同回忆率",
+      "instruction_and_expected": "衰减、干扰或线索变化",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "同一学习内容1日及7日不同回忆率"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.04.CASE.01:counterexample",
+    "expected": "多选分不能替代自由回忆",
+    "new_input": {
+      "base_fixture": "多选正确，线索回忆正确，自由回忆失败",
+      "instruction_and_expected": "多选分不能替代自由回忆",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "多选正确，线索回忆正确，自由回忆失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.04.CASE.01:forward",
+    "expected": "三类观测分开",
+    "new_input": {
+      "base_fixture": "多选正确，线索回忆正确，自由回忆失败",
+      "instruction_and_expected": "三类观测分开",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "多选正确，线索回忆正确，自由回忆失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.04.CASE.01:intervention",
+    "expected": "设置新项目无提示测验",
+    "new_input": {
+      "base_fixture": "多选正确，线索回忆正确，自由回忆失败",
+      "instruction_and_expected": "设置新项目无提示测验",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "多选正确，线索回忆正确，自由回忆失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.04.CASE.01:reverse",
+    "expected": "提示有效或独立检索不足",
+    "new_input": {
+      "base_fixture": "多选正确，线索回忆正确，自由回忆失败",
+      "instruction_and_expected": "提示有效或独立检索不足",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "多选正确，线索回忆正确，自由回忆失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.05.CASE.01:counterexample",
+    "expected": "首学成本为零拒绝；负节省保留",
+    "new_input": {
+      "base_fixture": "首学25次再学20次达到同一标准",
+      "instruction_and_expected": "首学成本为零拒绝；负节省保留",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "首学25次再学20次达到同一标准"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.05.CASE.01:forward",
+    "expected": "节省量20%",
+    "new_input": {
+      "base_fixture": "首学25次再学20次达到同一标准",
+      "instruction_and_expected": "节省量20%",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "首学25次再学20次达到同一标准"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.05.CASE.01:intervention",
+    "expected": "固定准则及单位复测",
+    "new_input": {
+      "base_fixture": "首学25次再学20次达到同一标准",
+      "instruction_and_expected": "固定准则及单位复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "首学25次再学20次达到同一标准"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.06.05.CASE.01:reverse",
+    "expected": "不同学习史或标准会影响成本",
+    "new_input": {
+      "base_fixture": "首学25次再学20次达到同一标准",
+      "instruction_and_expected": "不同学习史或标准会影响成本",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "首学25次再学20次达到同一标准"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.01.CASE.01:counterexample",
+    "expected": "字数不是内在负荷",
+    "new_input": {
+      "base_fixture": "同一长句对新手需处理多关系，对熟练者可整合",
+      "instruction_and_expected": "字数不是内在负荷",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "同一长句对新手需处理多关系，对熟练者可整合"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.01.CASE.01:forward",
+    "expected": "按任务和先备知识分析",
+    "new_input": {
+      "base_fixture": "同一长句对新手需处理多关系，对熟练者可整合",
+      "instruction_and_expected": "按任务和先备知识分析",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "同一长句对新手需处理多关系，对熟练者可整合"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.01.CASE.01:intervention",
+    "expected": "先测必要知识再给候选分段",
+    "new_input": {
+      "base_fixture": "同一长句对新手需处理多关系，对熟练者可整合",
+      "instruction_and_expected": "先测必要知识再给候选分段",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "同一长句对新手需处理多关系，对熟练者可整合"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.01.CASE.01:reverse",
+    "expected": "复杂关系或规则不熟",
+    "new_input": {
+      "base_fixture": "同一长句对新手需处理多关系，对熟练者可整合",
+      "instruction_and_expected": "复杂关系或规则不熟",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "同一长句对新手需处理多关系，对熟练者可整合"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.02.CASE.01:counterexample",
+    "expected": "删掉必要解释不算改善",
+    "new_input": {
+      "base_fixture": "跨屏查找说明与同屏说明比较",
+      "instruction_and_expected": "删掉必要解释不算改善",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "跨屏查找说明与同屏说明比较"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.02.CASE.01:forward",
+    "expected": "记录目标无关导航加工",
+    "new_input": {
+      "base_fixture": "跨屏查找说明与同屏说明比较",
+      "instruction_and_expected": "记录目标无关导航加工",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "跨屏查找说明与同屏说明比较"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.02.CASE.01:intervention",
+    "expected": "等内容同目标比较",
+    "new_input": {
+      "base_fixture": "跨屏查找说明与同屏说明比较",
+      "instruction_and_expected": "等内容同目标比较",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "跨屏查找说明与同屏说明比较"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.02.CASE.01:reverse",
+    "expected": "设备、可及性或理解差异",
+    "new_input": {
+      "base_fixture": "跨屏查找说明与同屏说明比较",
+      "instruction_and_expected": "设备、可及性或理解差异",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "跨屏查找说明与同屏说明比较"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.03.CASE.01:counterexample",
+    "expected": "高学历不自动撤支架",
+    "new_input": {
+      "base_fixture": "新手例题帮助明显，熟练者例题占时且成绩下降",
+      "instruction_and_expected": "高学历不自动撤支架",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "新手例题帮助明显，熟练者例题占时且成绩下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.03.CASE.01:forward",
+    "expected": "检验方法×已有知识交互",
+    "new_input": {
+      "base_fixture": "新手例题帮助明显，熟练者例题占时且成绩下降",
+      "instruction_and_expected": "检验方法×已有知识交互",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "新手例题帮助明显，熟练者例题占时且成绩下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.03.CASE.01:intervention",
+    "expected": "分层随机或匹配比较并允许支架回退",
+    "new_input": {
+      "base_fixture": "新手例题帮助明显，熟练者例题占时且成绩下降",
+      "instruction_and_expected": "分层随机或匹配比较并允许支架回退",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "新手例题帮助明显，熟练者例题占时且成绩下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.03.CASE.01:reverse",
+    "expected": "任务难度或先备分组误差",
+    "new_input": {
+      "base_fixture": "新手例题帮助明显，熟练者例题占时且成绩下降",
+      "instruction_and_expected": "任务难度或先备分组误差",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "新手例题帮助明显，熟练者例题占时且成绩下降"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.04.CASE.01:counterexample",
+    "expected": "单个瞳孔值不能决定负荷类别",
+    "new_input": {
+      "base_fixture": "主观负荷较高但任务正确率相同",
+      "instruction_and_expected": "单个瞳孔值不能决定负荷类别",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "主观负荷较高但任务正确率相同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.04.CASE.01:forward",
+    "expected": "自评与行为指标分离",
+    "new_input": {
+      "base_fixture": "主观负荷较高但任务正确率相同",
+      "instruction_and_expected": "自评与行为指标分离",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "主观负荷较高但任务正确率相同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.04.CASE.01:intervention",
+    "expected": "使用适用量表及匹配对照",
+    "new_input": {
+      "base_fixture": "主观负荷较高但任务正确率相同",
+      "instruction_and_expected": "使用适用量表及匹配对照",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "主观负荷较高但任务正确率相同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K02.07.04.CASE.01:reverse",
+    "expected": "动机、难度、努力或量表误差",
+    "new_input": {
+      "base_fixture": "主观负荷较高但任务正确率相同",
+      "instruction_and_expected": "动机、难度、努力或量表误差",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "主观负荷较高但任务正确率相同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.01.CASE.01:counterexample",
+    "expected": "记载不等于真",
+    "new_input": {
+      "base_fixture": "同一产品规格在两个版本中不同",
+      "instruction_and_expected": "记载不等于真",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "同一产品规格在两个版本中不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.01.CASE.01:forward",
+    "expected": "按版本核对事实",
+    "new_input": {
+      "base_fixture": "同一产品规格在两个版本中不同",
+      "instruction_and_expected": "按版本核对事实",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "同一产品规格在两个版本中不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.01.CASE.01:intervention",
+    "expected": "找版本原件",
+    "new_input": {
+      "base_fixture": "同一产品规格在两个版本中不同",
+      "instruction_and_expected": "找版本原件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "同一产品规格在两个版本中不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.01.CASE.01:reverse",
+    "expected": "来源可能陈旧",
+    "new_input": {
+      "base_fixture": "同一产品规格在两个版本中不同",
+      "instruction_and_expected": "来源可能陈旧",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "同一产品规格在两个版本中不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.02.CASE.01:counterexample",
+    "expected": "非正方形仍可为长方形",
+    "new_input": {
+      "base_fixture": "正方形与长方形",
+      "instruction_and_expected": "非正方形仍可为长方形",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "正方形与长方形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.02.CASE.01:forward",
+    "expected": "正方形是长方形",
+    "new_input": {
+      "base_fixture": "正方形与长方形",
+      "instruction_and_expected": "正方形是长方形",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "正方形与长方形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.02.CASE.01:intervention",
+    "expected": "用反例辨别充分/必要",
+    "new_input": {
+      "base_fixture": "正方形与长方形",
+      "instruction_and_expected": "用反例辨别充分/必要",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "正方形与长方形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.02.CASE.01:reverse",
+    "expected": "长方形未必正方形",
+    "new_input": {
+      "base_fixture": "正方形与长方形",
+      "instruction_and_expected": "长方形未必正方形",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "正方形与长方形"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.03.CASE.01:counterexample",
+    "expected": "有羽毛不推出先修",
+    "new_input": {
+      "base_fixture": "鸟→动物，鸟→羽毛",
+      "instruction_and_expected": "有羽毛不推出先修",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "鸟→动物，鸟→羽毛"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.03.CASE.01:forward",
+    "expected": "上下位与属性分开",
+    "new_input": {
+      "base_fixture": "鸟→动物，鸟→羽毛",
+      "instruction_and_expected": "上下位与属性分开",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "鸟→动物，鸟→羽毛"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.03.CASE.01:intervention",
+    "expected": "指定关系推理",
+    "new_input": {
+      "base_fixture": "鸟→动物，鸟→羽毛",
+      "instruction_and_expected": "指定关系推理",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "鸟→动物，鸟→羽毛"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.03.CASE.01:reverse",
+    "expected": "边语义须先查",
+    "new_input": {
+      "base_fixture": "鸟→动物，鸟→羽毛",
+      "instruction_and_expected": "边语义须先查",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "鸟→动物，鸟→羽毛"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.04.CASE.01:counterexample",
+    "expected": "不得标完成",
+    "new_input": {
+      "base_fixture": "设计两道题但无作答记录",
+      "instruction_and_expected": "不得标完成",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "设计两道题但无作答记录"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.04.CASE.01:forward",
+    "expected": "仅存在模板",
+    "new_input": {
+      "base_fixture": "设计两道题但无作答记录",
+      "instruction_and_expected": "仅存在模板",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "设计两道题但无作答记录"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.04.CASE.01:intervention",
+    "expected": "请求实际事件",
+    "new_input": {
+      "base_fixture": "设计两道题但无作答记录",
+      "instruction_and_expected": "请求实际事件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "设计两道题但无作答记录"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.04.CASE.01:reverse",
+    "expected": "执行状态未知",
+    "new_input": {
+      "base_fixture": "设计两道题但无作答记录",
+      "instruction_and_expected": "执行状态未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "设计两道题但无作答记录"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.05.CASE.01:counterexample",
+    "expected": "不强行成立",
+    "new_input": {
+      "base_fixture": "交易关系缺少完成状态",
+      "instruction_and_expected": "不强行成立",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "交易关系缺少完成状态"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.05.CASE.01:forward",
+    "expected": "UNKNOWN",
+    "new_input": {
+      "base_fixture": "交易关系缺少完成状态",
+      "instruction_and_expected": "UNKNOWN",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "交易关系缺少完成状态"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.05.CASE.01:intervention",
+    "expected": "核对条件",
+    "new_input": {
+      "base_fixture": "交易关系缺少完成状态",
+      "instruction_and_expected": "核对条件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "交易关系缺少完成状态"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.01.05.CASE.01:reverse",
+    "expected": "缺失不等于否定",
+    "new_input": {
+      "base_fixture": "交易关系缺少完成状态",
+      "instruction_and_expected": "缺失不等于否定",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "交易关系缺少完成状态"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.01.CASE.01:counterexample",
+    "expected": "同类不证明先修",
+    "new_input": {
+      "base_fixture": "某词按词性和话题分类",
+      "instruction_and_expected": "同类不证明先修",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "某词按词性和话题分类"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.01.CASE.01:forward",
+    "expected": "两个维度可共存",
+    "new_input": {
+      "base_fixture": "某词按词性和话题分类",
+      "instruction_and_expected": "两个维度可共存",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "某词按词性和话题分类"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.01.CASE.01:intervention",
+    "expected": "记录分类版本",
+    "new_input": {
+      "base_fixture": "某词按词性和话题分类",
+      "instruction_and_expected": "记录分类版本",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "某词按词性和话题分类"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.01.CASE.01:reverse",
+    "expected": "类别方案不同",
+    "new_input": {
+      "base_fixture": "某词按词性和话题分类",
+      "instruction_and_expected": "类别方案不同",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "某词按词性和话题分类"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.02.CASE.01:counterexample",
+    "expected": "不会飞不推出非鸟",
+    "new_input": {
+      "base_fixture": "企鹅不能飞仍是鸟",
+      "instruction_and_expected": "不会飞不推出非鸟",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "企鹅不能飞仍是鸟"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.02.CASE.01:forward",
+    "expected": "非典型成员仍可成立",
+    "new_input": {
+      "base_fixture": "企鹅不能飞仍是鸟",
+      "instruction_and_expected": "非典型成员仍可成立",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "企鹅不能飞仍是鸟"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.02.CASE.01:intervention",
+    "expected": "补非典型正例",
+    "new_input": {
+      "base_fixture": "企鹅不能飞仍是鸟",
+      "instruction_and_expected": "补非典型正例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "企鹅不能飞仍是鸟"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.02.CASE.01:reverse",
+    "expected": "原型特征非必要",
+    "new_input": {
+      "base_fixture": "企鹅不能飞仍是鸟",
+      "instruction_and_expected": "原型特征非必要",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "企鹅不能飞仍是鸟"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.03.CASE.01:counterexample",
+    "expected": "样本覆盖非完整外延",
+    "new_input": {
+      "base_fixture": "两个模型都认出训练样本",
+      "instruction_and_expected": "样本覆盖非完整外延",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "两个模型都认出训练样本"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.03.CASE.01:forward",
+    "expected": "不能区分模型",
+    "new_input": {
+      "base_fixture": "两个模型都认出训练样本",
+      "instruction_and_expected": "不能区分模型",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "两个模型都认出训练样本"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.03.CASE.01:intervention",
+    "expected": "比较新变体",
+    "new_input": {
+      "base_fixture": "两个模型都认出训练样本",
+      "instruction_and_expected": "比较新变体",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "两个模型都认出训练样本"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.03.CASE.01:reverse",
+    "expected": "可能依据原型或实例",
+    "new_input": {
+      "base_fixture": "两个模型都认出训练样本",
+      "instruction_and_expected": "可能依据原型或实例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "两个模型都认出训练样本"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.04.CASE.01:counterexample",
+    "expected": "未知不是反例",
+    "new_input": {
+      "base_fixture": "近邻样例信息不足",
+      "instruction_and_expected": "未知不是反例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "近邻样例信息不足"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.04.CASE.01:forward",
+    "expected": "保留未知",
+    "new_input": {
+      "base_fixture": "近邻样例信息不足",
+      "instruction_and_expected": "保留未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "近邻样例信息不足"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.04.CASE.01:intervention",
+    "expected": "补关键属性",
+    "new_input": {
+      "base_fixture": "近邻样例信息不足",
+      "instruction_and_expected": "补关键属性",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "近邻样例信息不足"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.02.04.CASE.01:reverse",
+    "expected": "边界或证据缺失",
+    "new_input": {
+      "base_fixture": "近邻样例信息不足",
+      "instruction_and_expected": "边界或证据缺失",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "近邻样例信息不足"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.01.CASE.01:counterexample",
+    "expected": "不从组成推顺序",
+    "new_input": {
+      "base_fixture": "买卖辨别单元含两个词条",
+      "instruction_and_expected": "不从组成推顺序",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "买卖辨别单元含两个词条"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.01.CASE.01:forward",
+    "expected": "组件保留身份",
+    "new_input": {
+      "base_fixture": "买卖辨别单元含两个词条",
+      "instruction_and_expected": "组件保留身份",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "买卖辨别单元含两个词条"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.01.CASE.01:intervention",
+    "expected": "独立测试组合",
+    "new_input": {
+      "base_fixture": "买卖辨别单元含两个词条",
+      "instruction_and_expected": "独立测试组合",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "买卖辨别单元含两个词条"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.01.CASE.01:reverse",
+    "expected": "课程组织非依赖",
+    "new_input": {
+      "base_fixture": "买卖辨别单元含两个词条",
+      "instruction_and_expected": "课程组织非依赖",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "买卖辨别单元含两个词条"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.02.CASE.01:counterexample",
+    "expected": "推荐不作必要",
+    "new_input": {
+      "base_fixture": "目标可用A+B或C",
+      "instruction_and_expected": "推荐不作必要",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "目标可用A+B或C"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.02.CASE.01:forward",
+    "expected": "任一路径满足即可候选可行",
+    "new_input": {
+      "base_fixture": "目标可用A+B或C",
+      "instruction_and_expected": "任一路径满足即可候选可行",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "目标可用A+B或C"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.02.CASE.01:intervention",
+    "expected": "核查独立路径",
+    "new_input": {
+      "base_fixture": "目标可用A+B或C",
+      "instruction_and_expected": "核查独立路径",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "目标可用A+B或C"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.02.CASE.01:reverse",
+    "expected": "缺B不排除C",
+    "new_input": {
+      "base_fixture": "目标可用A+B或C",
+      "instruction_and_expected": "缺B不排除C",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "目标可用A+B或C"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.03.CASE.01:counterexample",
+    "expected": "不判违反",
+    "new_input": {
+      "base_fixture": "约束要求正数，值缺失",
+      "instruction_and_expected": "不判违反",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "约束要求正数，值缺失"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.03.CASE.01:forward",
+    "expected": "UNKNOWN",
+    "new_input": {
+      "base_fixture": "约束要求正数，值缺失",
+      "instruction_and_expected": "UNKNOWN",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "约束要求正数，值缺失"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.03.CASE.01:intervention",
+    "expected": "取得值并核范围",
+    "new_input": {
+      "base_fixture": "约束要求正数，值缺失",
+      "instruction_and_expected": "取得值并核范围",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "约束要求正数，值缺失"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.03.CASE.01:reverse",
+    "expected": "可能缺数据",
+    "new_input": {
+      "base_fixture": "约束要求正数，值缺失",
+      "instruction_and_expected": "可能缺数据",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "约束要求正数，值缺失"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.04.CASE.01:counterexample",
+    "expected": "不能晋升因果",
+    "new_input": {
+      "base_fixture": "练习时长与成绩相关",
+      "instruction_and_expected": "不能晋升因果",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "练习时长与成绩相关"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.04.CASE.01:forward",
+    "expected": "仅记录相关",
+    "new_input": {
+      "base_fixture": "练习时长与成绩相关",
+      "instruction_and_expected": "仅记录相关",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "练习时长与成绩相关"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.04.CASE.01:intervention",
+    "expected": "设计适当对照",
+    "new_input": {
+      "base_fixture": "练习时长与成绩相关",
+      "instruction_and_expected": "设计适当对照",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "练习时长与成绩相关"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.04.CASE.01:reverse",
+    "expected": "先备或选择偏差",
+    "new_input": {
+      "base_fixture": "练习时长与成绩相关",
+      "instruction_and_expected": "先备或选择偏差",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "练习时长与成绩相关"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.05.CASE.01:counterexample",
+    "expected": "不把全部属性搬运",
+    "new_input": {
+      "base_fixture": "电路与水流类比",
+      "instruction_and_expected": "不把全部属性搬运",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "电路与水流类比"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.05.CASE.01:forward",
+    "expected": "映射限定关系",
+    "new_input": {
+      "base_fixture": "电路与水流类比",
+      "instruction_and_expected": "映射限定关系",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "电路与水流类比"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.05.CASE.01:intervention",
+    "expected": "检查目标域预测",
+    "new_input": {
+      "base_fixture": "电路与水流类比",
+      "instruction_and_expected": "检查目标域预测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "电路与水流类比"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.03.05.CASE.01:reverse",
+    "expected": "源域失配",
+    "new_input": {
+      "base_fixture": "电路与水流类比",
+      "instruction_and_expected": "源域失配",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "电路与水流类比"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.01.CASE.01:counterexample",
+    "expected": "数量不代表理解",
+    "new_input": {
+      "base_fixture": "概念图连线多但关系错误",
+      "instruction_and_expected": "数量不代表理解",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "概念图连线多但关系错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.01.CASE.01:forward",
+    "expected": "核查命题准确性",
+    "new_input": {
+      "base_fixture": "概念图连线多但关系错误",
+      "instruction_and_expected": "核查命题准确性",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "概念图连线多但关系错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.01.CASE.01:intervention",
+    "expected": "解释新实例",
+    "new_input": {
+      "base_fixture": "概念图连线多但关系错误",
+      "instruction_and_expected": "解释新实例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "概念图连线多但关系错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.01.CASE.01:reverse",
+    "expected": "可能机械连接",
+    "new_input": {
+      "base_fixture": "概念图连线多但关系错误",
+      "instruction_and_expected": "可能机械连接",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "概念图连线多但关系错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.02.CASE.01:counterexample",
+    "expected": "拒绝肯定后件",
+    "new_input": {
+      "base_fixture": "若A则B，观察B",
+      "instruction_and_expected": "拒绝肯定后件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "若A则B，观察B"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.02.CASE.01:forward",
+    "expected": "A仍未知",
+    "new_input": {
+      "base_fixture": "若A则B，观察B",
+      "instruction_and_expected": "A仍未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "若A则B，观察B"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.02.CASE.01:intervention",
+    "expected": "寻找区分证据",
+    "new_input": {
+      "base_fixture": "若A则B，观察B",
+      "instruction_and_expected": "寻找区分证据",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "若A则B，观察B"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.02.CASE.01:reverse",
+    "expected": "其他原因可产生B",
+    "new_input": {
+      "base_fixture": "若A则B，观察B",
+      "instruction_and_expected": "其他原因可产生B",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "若A则B，观察B"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.03.CASE.01:counterexample",
+    "expected": "不能因流畅通过",
+    "new_input": {
+      "base_fixture": "流畅解释但与证据不符",
+      "instruction_and_expected": "不能因流畅通过",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "流畅解释但与证据不符"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.03.CASE.01:forward",
+    "expected": "标明冲突",
+    "new_input": {
+      "base_fixture": "流畅解释但与证据不符",
+      "instruction_and_expected": "标明冲突",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "流畅解释但与证据不符"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.03.CASE.01:intervention",
+    "expected": "要求可核预测",
+    "new_input": {
+      "base_fixture": "流畅解释但与证据不符",
+      "instruction_and_expected": "要求可核预测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "流畅解释但与证据不符"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.03.CASE.01:reverse",
+    "expected": "修辞非机制",
+    "new_input": {
+      "base_fixture": "流畅解释但与证据不符",
+      "instruction_and_expected": "修辞非机制",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "流畅解释但与证据不符"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.04.CASE.01:counterexample",
+    "expected": "不得自动覆盖",
+    "new_input": {
+      "base_fixture": "新观察与旧模型冲突",
+      "instruction_and_expected": "不得自动覆盖",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "新观察与旧模型冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.04.CASE.01:forward",
+    "expected": "记录异常和版本",
+    "new_input": {
+      "base_fixture": "新观察与旧模型冲突",
+      "instruction_and_expected": "记录异常和版本",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "新观察与旧模型冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.04.CASE.01:intervention",
+    "expected": "候选修订复测",
+    "new_input": {
+      "base_fixture": "新观察与旧模型冲突",
+      "instruction_and_expected": "候选修订复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "新观察与旧模型冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.04.04.CASE.01:reverse",
+    "expected": "测量或模型失配",
+    "new_input": {
+      "base_fixture": "新观察与旧模型冲突",
+      "instruction_and_expected": "测量或模型失配",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "新观察与旧模型冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.01.CASE.01:counterexample",
+    "expected": "一次错不贴标签",
+    "new_input": {
+      "base_fixture": "一次分数运算错误",
+      "instruction_and_expected": "一次错不贴标签",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "一次分数运算错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.01.CASE.01:forward",
+    "expected": "原因未知",
+    "new_input": {
+      "base_fixture": "一次分数运算错误",
+      "instruction_and_expected": "原因未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "一次分数运算错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.01.CASE.01:intervention",
+    "expected": "多题解释",
+    "new_input": {
+      "base_fixture": "一次分数运算错误",
+      "instruction_and_expected": "多题解释",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "一次分数运算错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.01.CASE.01:reverse",
+    "expected": "误概念、抄写或规则误读",
+    "new_input": {
+      "base_fixture": "一次分数运算错误",
+      "instruction_and_expected": "误概念、抄写或规则误读",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "一次分数运算错误"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.02.CASE.01:counterexample",
+    "expected": "冲突不保证更新",
+    "new_input": {
+      "base_fixture": "学习者旧预测与反例冲突",
+      "instruction_and_expected": "冲突不保证更新",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习者旧预测与反例冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.02.CASE.01:forward",
+    "expected": "记录旧解释与理解",
+    "new_input": {
+      "base_fixture": "学习者旧预测与反例冲突",
+      "instruction_and_expected": "记录旧解释与理解",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习者旧预测与反例冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.02.CASE.01:intervention",
+    "expected": "提供替代解释",
+    "new_input": {
+      "base_fixture": "学习者旧预测与反例冲突",
+      "instruction_and_expected": "提供替代解释",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习者旧预测与反例冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.02.CASE.01:reverse",
+    "expected": "可能不理解反例",
+    "new_input": {
+      "base_fixture": "学习者旧预测与反例冲突",
+      "instruction_and_expected": "可能不理解反例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习者旧预测与反例冲突"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.03.CASE.01:counterexample",
+    "expected": "不能认定持久掌握",
+    "new_input": {
+      "base_fixture": "课后会背新答案，延迟仍用旧规则",
+      "instruction_and_expected": "不能认定持久掌握",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "课后会背新答案，延迟仍用旧规则"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.03.CASE.01:forward",
+    "expected": "重构持久性未证",
+    "new_input": {
+      "base_fixture": "课后会背新答案，延迟仍用旧规则",
+      "instruction_and_expected": "重构持久性未证",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "课后会背新答案，延迟仍用旧规则"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.03.CASE.01:intervention",
+    "expected": "陌生情境延迟预测",
+    "new_input": {
+      "base_fixture": "课后会背新答案，延迟仍用旧规则",
+      "instruction_and_expected": "陌生情境延迟预测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "课后会背新答案，延迟仍用旧规则"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.03.CASE.01:reverse",
+    "expected": "记忆与解释可能分离",
+    "new_input": {
+      "base_fixture": "课后会背新答案，延迟仍用旧规则",
+      "instruction_and_expected": "记忆与解释可能分离",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "课后会背新答案，延迟仍用旧规则"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.04.CASE.01:counterexample",
+    "expected": "不按字数评分",
+    "new_input": {
+      "base_fixture": "短解释正确且有边界",
+      "instruction_and_expected": "不按字数评分",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "短解释正确且有边界"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.04.CASE.01:forward",
+    "expected": "按内容量规评价",
+    "new_input": {
+      "base_fixture": "短解释正确且有边界",
+      "instruction_and_expected": "按内容量规评价",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "短解释正确且有边界"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.04.CASE.01:intervention",
+    "expected": "要求反例",
+    "new_input": {
+      "base_fixture": "短解释正确且有边界",
+      "instruction_and_expected": "要求反例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "短解释正确且有边界"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.05.04.CASE.01:reverse",
+    "expected": "长解释可能错误",
+    "new_input": {
+      "base_fixture": "短解释正确且有边界",
+      "instruction_and_expected": "长解释可能错误",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "短解释正确且有边界"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.01.CASE.01:counterexample",
+    "expected": "不能唯一归因",
+    "new_input": {
+      "base_fixture": "两组件总是共同出现在题目",
+      "instruction_and_expected": "不能唯一归因",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "两组件总是共同出现在题目"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.01.CASE.01:forward",
+    "expected": "观测签名相同",
+    "new_input": {
+      "base_fixture": "两组件总是共同出现在题目",
+      "instruction_and_expected": "观测签名相同",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "两组件总是共同出现在题目"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.01.CASE.01:intervention",
+    "expected": "加独立区分题",
+    "new_input": {
+      "base_fixture": "两组件总是共同出现在题目",
+      "instruction_and_expected": "加独立区分题",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "两组件总是共同出现在题目"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.01.CASE.01:reverse",
+    "expected": "组件不可区分",
+    "new_input": {
+      "base_fixture": "两组件总是共同出现在题目",
+      "instruction_and_expected": "组件不可区分",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "两组件总是共同出现在题目"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.02.CASE.01:counterexample",
+    "expected": "步骤非实际过程",
+    "new_input": {
+      "base_fixture": "专家分解购物对话为若干技能",
+      "instruction_and_expected": "步骤非实际过程",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "专家分解购物对话为若干技能"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.02.CASE.01:forward",
+    "expected": "分析候选",
+    "new_input": {
+      "base_fixture": "专家分解购物对话为若干技能",
+      "instruction_and_expected": "分析候选",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "专家分解购物对话为若干技能"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.02.CASE.01:intervention",
+    "expected": "观察实际独立任务",
+    "new_input": {
+      "base_fixture": "专家分解购物对话为若干技能",
+      "instruction_and_expected": "观察实际独立任务",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "专家分解购物对话为若干技能"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.02.CASE.01:reverse",
+    "expected": "实际心理顺序未知",
+    "new_input": {
+      "base_fixture": "专家分解购物对话为若干技能",
+      "instruction_and_expected": "实际心理顺序未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "专家分解购物对话为若干技能"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.03.CASE.01:counterexample",
+    "expected": "单项通过不推出综合",
+    "new_input": {
+      "base_fixture": "分别能买和卖但综合对话失败",
+      "instruction_and_expected": "单项通过不推出综合",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "分别能买和卖但综合对话失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.03.CASE.01:forward",
+    "expected": "独立综合证据不足",
+    "new_input": {
+      "base_fixture": "分别能买和卖但综合对话失败",
+      "instruction_and_expected": "独立综合证据不足",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "分别能买和卖但综合对话失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.03.CASE.01:intervention",
+    "expected": "匹配单步和组合任务",
+    "new_input": {
+      "base_fixture": "分别能买和卖但综合对话失败",
+      "instruction_and_expected": "匹配单步和组合任务",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "分别能买和卖但综合对话失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.03.CASE.01:reverse",
+    "expected": "语用或整合困难",
+    "new_input": {
+      "base_fixture": "分别能买和卖但综合对话失败",
+      "instruction_and_expected": "语用或整合困难",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "分别能买和卖但综合对话失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.04.CASE.01:counterexample",
+    "expected": "等级不是先修",
+    "new_input": {
+      "base_fixture": "初级词未掌握但可用另一表达达成目标",
+      "instruction_and_expected": "等级不是先修",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "初级词未掌握但可用另一表达达成目标"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.04.CASE.01:forward",
+    "expected": "必要性候选受挑战",
+    "new_input": {
+      "base_fixture": "初级词未掌握但可用另一表达达成目标",
+      "instruction_and_expected": "必要性候选受挑战",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "初级词未掌握但可用另一表达达成目标"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.04.CASE.01:intervention",
+    "expected": "核目标与资源条件",
+    "new_input": {
+      "base_fixture": "初级词未掌握但可用另一表达达成目标",
+      "instruction_and_expected": "核目标与资源条件",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "初级词未掌握但可用另一表达达成目标"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K03.06.04.CASE.01:reverse",
+    "expected": "替代路径存在",
+    "new_input": {
+      "base_fixture": "初级词未掌握但可用另一表达达成目标",
+      "instruction_and_expected": "替代路径存在",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "初级词未掌握但可用另一表达达成目标"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.01.CASE.01:counterexample",
+    "expected": "背公式不算技能",
+    "new_input": {
+      "base_fixture": "会背算法规则但不能完成新输入",
+      "instruction_and_expected": "背公式不算技能",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "会背算法规则但不能完成新输入"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.01.CASE.01:forward",
+    "expected": "规则陈述与独立执行分开",
+    "new_input": {
+      "base_fixture": "会背算法规则但不能完成新输入",
+      "instruction_and_expected": "规则陈述与独立执行分开",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "会背算法规则但不能完成新输入"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.01.CASE.01:intervention",
+    "expected": "新输入独立解题",
+    "new_input": {
+      "base_fixture": "会背算法规则但不能完成新输入",
+      "instruction_and_expected": "新输入独立解题",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "会背算法规则但不能完成新输入"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.01.CASE.01:reverse",
+    "expected": "可能是规则选择或工具问题",
+    "new_input": {
+      "base_fixture": "会背算法规则但不能完成新输入",
+      "instruction_and_expected": "可能是规则选择或工具问题",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "会背算法规则但不能完成新输入"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.02.CASE.01:counterexample",
+    "expected": "书面词形不替代听辨",
+    "new_input": {
+      "base_fixture": "熟悉发音正确辨别，陌生说话者失败",
+      "instruction_and_expected": "书面词形不替代听辨",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "熟悉发音正确辨别，陌生说话者失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.02.CASE.01:forward",
+    "expected": "分别记录样本",
+    "new_input": {
+      "base_fixture": "熟悉发音正确辨别，陌生说话者失败",
+      "instruction_and_expected": "分别记录样本",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "熟悉发音正确辨别，陌生说话者失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.02.CASE.01:intervention",
+    "expected": "匹配设备使用新说话者",
+    "new_input": {
+      "base_fixture": "熟悉发音正确辨别，陌生说话者失败",
+      "instruction_and_expected": "匹配设备使用新说话者",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "熟悉发音正确辨别，陌生说话者失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.02.CASE.01:reverse",
+    "expected": "可能有说话者依赖或设备差",
+    "new_input": {
+      "base_fixture": "熟悉发音正确辨别，陌生说话者失败",
+      "instruction_and_expected": "可能有说话者依赖或设备差",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "熟悉发音正确辨别，陌生说话者失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.03.CASE.01:counterexample",
+    "expected": "模拟不证明资格",
+    "new_input": {
+      "base_fixture": "模拟操作即时准确，次日无测验",
+      "instruction_and_expected": "模拟不证明资格",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "模拟操作即时准确，次日无测验"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.03.CASE.01:forward",
+    "expected": "仅即时表现",
+    "new_input": {
+      "base_fixture": "模拟操作即时准确，次日无测验",
+      "instruction_and_expected": "仅即时表现",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "模拟操作即时准确，次日无测验"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.03.CASE.01:intervention",
+    "expected": "安全独立延迟测验",
+    "new_input": {
+      "base_fixture": "模拟操作即时准确，次日无测验",
+      "instruction_and_expected": "安全独立延迟测验",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "模拟操作即时准确，次日无测验"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.03.CASE.01:reverse",
+    "expected": "保持未知",
+    "new_input": {
+      "base_fixture": "模拟操作即时准确，次日无测验",
+      "instruction_and_expected": "保持未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "模拟操作即时准确，次日无测验"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.04.CASE.01:counterexample",
+    "expected": "相加不保证综合",
+    "new_input": {
+      "base_fixture": "分别完成两个步骤，合并任务失败",
+      "instruction_and_expected": "相加不保证综合",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "分别完成两个步骤，合并任务失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.04.CASE.01:forward",
+    "expected": "综合证据不足",
+    "new_input": {
+      "base_fixture": "分别完成两个步骤，合并任务失败",
+      "instruction_and_expected": "综合证据不足",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "分别完成两个步骤，合并任务失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.04.CASE.01:intervention",
+    "expected": "完整任务及分项观测",
+    "new_input": {
+      "base_fixture": "分别完成两个步骤，合并任务失败",
+      "instruction_and_expected": "完整任务及分项观测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "分别完成两个步骤，合并任务失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.01.04.CASE.01:reverse",
+    "expected": "协调或条件选择困难",
+    "new_input": {
+      "base_fixture": "分别完成两个步骤，合并任务失败",
+      "instruction_and_expected": "协调或条件选择困难",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "分别完成两个步骤，合并任务失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.01.CASE.01:counterexample",
+    "expected": "速度不等于程序化",
+    "new_input": {
+      "base_fixture": "看说明能做，撤去说明失败",
+      "instruction_and_expected": "速度不等于程序化",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "看说明能做，撤去说明失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.01.CASE.01:forward",
+    "expected": "独立证据缺失",
+    "new_input": {
+      "base_fixture": "看说明能做，撤去说明失败",
+      "instruction_and_expected": "独立证据缺失",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "看说明能做，撤去说明失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.01.CASE.01:intervention",
+    "expected": "逐步撤提示并复测",
+    "new_input": {
+      "base_fixture": "看说明能做，撤去说明失败",
+      "instruction_and_expected": "逐步撤提示并复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "看说明能做，撤去说明失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.01.CASE.01:reverse",
+    "expected": "可能需声明指导",
+    "new_input": {
+      "base_fixture": "看说明能做，撤去说明失败",
+      "instruction_and_expected": "可能需声明指导",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "看说明能做，撤去说明失败"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.02.CASE.01:counterexample",
+    "expected": "不认定完全自动化",
+    "new_input": {
+      "base_fixture": "主任务更快，副任务错误增加",
+      "instruction_and_expected": "不认定完全自动化",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "主任务更快，副任务错误增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.02.CASE.01:forward",
+    "expected": "双任务权衡",
+    "new_input": {
+      "base_fixture": "主任务更快，副任务错误增加",
+      "instruction_and_expected": "双任务权衡",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "主任务更快，副任务错误增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.02.CASE.01:intervention",
+    "expected": "同时比较两任务",
+    "new_input": {
+      "base_fixture": "主任务更快，副任务错误增加",
+      "instruction_and_expected": "同时比较两任务",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "主任务更快，副任务错误增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.02.CASE.01:reverse",
+    "expected": "可能改变优先级",
+    "new_input": {
+      "base_fixture": "主任务更快，副任务错误增加",
+      "instruction_and_expected": "可能改变优先级",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "主任务更快，副任务错误增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.03.CASE.01:counterexample",
+    "expected": "不只按速度排序",
+    "new_input": {
+      "base_fixture": "同任务500ms准确95%变400ms准确80%",
+      "instruction_and_expected": "不只按速度排序",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "同任务500ms准确95%变400ms准确80%"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.03.CASE.01:forward",
+    "expected": "权衡而非全面改进",
+    "new_input": {
+      "base_fixture": "同任务500ms准确95%变400ms准确80%",
+      "instruction_and_expected": "权衡而非全面改进",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "同任务500ms准确95%变400ms准确80%"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.03.CASE.01:intervention",
+    "expected": "固定准确门槛复测",
+    "new_input": {
+      "base_fixture": "同任务500ms准确95%变400ms准确80%",
+      "instruction_and_expected": "固定准确门槛复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "同任务500ms准确95%变400ms准确80%"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.03.CASE.01:reverse",
+    "expected": "判准或速度选择变化",
+    "new_input": {
+      "base_fixture": "同任务500ms准确95%变400ms准确80%",
+      "instruction_and_expected": "判准或速度选择变化",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "同任务500ms准确95%变400ms准确80%"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.04.CASE.01:counterexample",
+    "expected": "不强制阶段",
+    "new_input": {
+      "base_fixture": "练习曲线有平台及反弹",
+      "instruction_and_expected": "不强制阶段",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "练习曲线有平台及反弹"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.04.CASE.01:forward",
+    "expected": "保留每次观测",
+    "new_input": {
+      "base_fixture": "练习曲线有平台及反弹",
+      "instruction_and_expected": "保留每次观测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "练习曲线有平台及反弹"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.04.CASE.01:intervention",
+    "expected": "匹配条件复测",
+    "new_input": {
+      "base_fixture": "练习曲线有平台及反弹",
+      "instruction_and_expected": "匹配条件复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "练习曲线有平台及反弹"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.02.04.CASE.01:reverse",
+    "expected": "疲劳、换策略或任务差异",
+    "new_input": {
+      "base_fixture": "练习曲线有平台及反弹",
+      "instruction_and_expected": "疲劳、换策略或任务差异",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "练习曲线有平台及反弹"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.01.CASE.01:counterexample",
+    "expected": "错误不一定改善",
+    "new_input": {
+      "base_fixture": "合成x=2,r=.8,k=.2,e=1",
+      "instruction_and_expected": "错误不一定改善",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "合成x=2,r=.8,k=.2,e=1"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.01.CASE.01:forward",
+    "expected": "下一状态1.8",
+    "new_input": {
+      "base_fixture": "合成x=2,r=.8,k=.2,e=1",
+      "instruction_and_expected": "下一状态1.8",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "合成x=2,r=.8,k=.2,e=1"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.01.CASE.01:intervention",
+    "expected": "比较候选更新",
+    "new_input": {
+      "base_fixture": "合成x=2,r=.8,k=.2,e=1",
+      "instruction_and_expected": "比较候选更新",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "合成x=2,r=.8,k=.2,e=1"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.01.CASE.01:reverse",
+    "expected": "参数和误差意义未实测",
+    "new_input": {
+      "base_fixture": "合成x=2,r=.8,k=.2,e=1",
+      "instruction_and_expected": "参数和误差意义未实测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "合成x=2,r=.8,k=.2,e=1"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.02.CASE.01:counterexample",
+    "expected": "展示非使用",
+    "new_input": {
+      "base_fixture": "展示反馈后下一题仍错",
+      "instruction_and_expected": "展示非使用",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "展示反馈后下一题仍错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.02.CASE.01:forward",
+    "expected": "展示与实际使用分开",
+    "new_input": {
+      "base_fixture": "展示反馈后下一题仍错",
+      "instruction_and_expected": "展示与实际使用分开",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "展示反馈后下一题仍错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.02.CASE.01:intervention",
+    "expected": "要求解释并独立复测",
+    "new_input": {
+      "base_fixture": "展示反馈后下一题仍错",
+      "instruction_and_expected": "要求解释并独立复测",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "展示反馈后下一题仍错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.02.CASE.01:reverse",
+    "expected": "理解或应用困难",
+    "new_input": {
+      "base_fixture": "展示反馈后下一题仍错",
+      "instruction_and_expected": "理解或应用困难",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "展示反馈后下一题仍错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.03.CASE.01:counterexample",
+    "expected": "不默认随机最佳",
+    "new_input": {
+      "base_fixture": "随机排列与成组排列练习",
+      "instruction_and_expected": "不默认随机最佳",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "随机排列与成组排列练习"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.03.CASE.01:forward",
+    "expected": "记录排列及剂量",
+    "new_input": {
+      "base_fixture": "随机排列与成组排列练习",
+      "instruction_and_expected": "记录排列及剂量",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "随机排列与成组排列练习"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.03.CASE.01:intervention",
+    "expected": "延迟和新任务比较",
+    "new_input": {
+      "base_fixture": "随机排列与成组排列练习",
+      "instruction_and_expected": "延迟和新任务比较",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "随机排列与成组排列练习"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.03.CASE.01:reverse",
+    "expected": "差异可能受任务条件影响",
+    "new_input": {
+      "base_fixture": "随机排列与成组排列练习",
+      "instruction_and_expected": "差异可能受任务条件影响",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "随机排列与成组排列练习"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.04.CASE.01:counterexample",
+    "expected": "不由时间确定原因",
+    "new_input": {
+      "base_fixture": "综合任务时间增加",
+      "instruction_and_expected": "不由时间确定原因",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "综合任务时间增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.04.CASE.01:forward",
+    "expected": "瓶颈未知",
+    "new_input": {
+      "base_fixture": "综合任务时间增加",
+      "instruction_and_expected": "瓶颈未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "综合任务时间增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.04.CASE.01:intervention",
+    "expected": "分项与综合对照",
+    "new_input": {
+      "base_fixture": "综合任务时间增加",
+      "instruction_and_expected": "分项与综合对照",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "综合任务时间增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.03.04.CASE.01:reverse",
+    "expected": "子技能、资源、协调等",
+    "new_input": {
+      "base_fixture": "综合任务时间增加",
+      "instruction_and_expected": "子技能、资源、协调等",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "综合任务时间增加"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.01.CASE.01:counterexample",
+    "expected": "重复原题非迁移",
+    "new_input": {
+      "base_fixture": "新数字同规则的独立任务",
+      "instruction_and_expected": "重复原题非迁移",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "新数字同规则的独立任务"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.01.CASE.01:forward",
+    "expected": "近迁移候选",
+    "new_input": {
+      "base_fixture": "新数字同规则的独立任务",
+      "instruction_and_expected": "近迁移候选",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "新数字同规则的独立任务"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.01.CASE.01:intervention",
+    "expected": "匹配新例及基线",
+    "new_input": {
+      "base_fixture": "新数字同规则的独立任务",
+      "instruction_and_expected": "匹配新例及基线",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "新数字同规则的独立任务"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.01.CASE.01:reverse",
+    "expected": "可能利用表面模板",
+    "new_input": {
+      "base_fixture": "新数字同规则的独立任务",
+      "instruction_and_expected": "可能利用表面模板",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "新数字同规则的独立任务"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.02.CASE.01:counterexample",
+    "expected": "近迁移不能外推",
+    "new_input": {
+      "base_fixture": "课堂原则用于工作问题",
+      "instruction_and_expected": "近迁移不能外推",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "课堂原则用于工作问题"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.02.CASE.01:forward",
+    "expected": "记录六类情境维度及内容",
+    "new_input": {
+      "base_fixture": "课堂原则用于工作问题",
+      "instruction_and_expected": "记录六类情境维度及内容",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "课堂原则用于工作问题"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.02.CASE.01:intervention",
+    "expected": "独立目标与比较",
+    "new_input": {
+      "base_fixture": "课堂原则用于工作问题",
+      "instruction_and_expected": "独立目标与比较",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "课堂原则用于工作问题"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.02.CASE.01:reverse",
+    "expected": "可能是先备知识或资源",
+    "new_input": {
+      "base_fixture": "课堂原则用于工作问题",
+      "instruction_and_expected": "可能是先备知识或资源",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "课堂原则用于工作问题"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.03.CASE.01:counterexample",
+    "expected": "单一错误不证因果",
+    "new_input": {
+      "base_fixture": "旧语法规则误用于新构式",
+      "instruction_and_expected": "单一错误不证因果",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "旧语法规则误用于新构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.03.CASE.01:forward",
+    "expected": "可能负迁移",
+    "new_input": {
+      "base_fixture": "旧语法规则误用于新构式",
+      "instruction_and_expected": "可能负迁移",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "旧语法规则误用于新构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.03.CASE.01:intervention",
+    "expected": "匹配先备条件测试",
+    "new_input": {
+      "base_fixture": "旧语法规则误用于新构式",
+      "instruction_and_expected": "匹配先备条件测试",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "旧语法规则误用于新构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.03.CASE.01:reverse",
+    "expected": "需对照排除其他困难",
+    "new_input": {
+      "base_fixture": "旧语法规则误用于新构式",
+      "instruction_and_expected": "需对照排除其他困难",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "旧语法规则误用于新构式"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.04.CASE.01:counterexample",
+    "expected": "材料相同非加工相同",
+    "new_input": {
+      "base_fixture": "学习时读字，测验要求独立听辨",
+      "instruction_and_expected": "材料相同非加工相同",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "学习时读字，测验要求独立听辨"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.04.CASE.01:forward",
+    "expected": "加工要求变化",
+    "new_input": {
+      "base_fixture": "学习时读字，测验要求独立听辨",
+      "instruction_and_expected": "加工要求变化",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "学习时读字，测验要求独立听辨"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.04.CASE.01:intervention",
+    "expected": "分别训练及评价听辨",
+    "new_input": {
+      "base_fixture": "学习时读字，测验要求独立听辨",
+      "instruction_and_expected": "分别训练及评价听辨",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "学习时读字，测验要求独立听辨"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.04.04.CASE.01:reverse",
+    "expected": "失败可能是声音识别",
+    "new_input": {
+      "base_fixture": "学习时读字，测验要求独立听辨",
+      "instruction_and_expected": "失败可能是声音识别",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "学习时读字，测验要求独立听辨"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.01.CASE.01:counterexample",
+    "expected": "不推一般容量",
+    "new_input": {
+      "base_fixture": "棋局与随机棋子回忆",
+      "instruction_and_expected": "不推一般容量",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "棋局与随机棋子回忆"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.01.CASE.01:forward",
+    "expected": "分别记录有意义与随机布局",
+    "new_input": {
+      "base_fixture": "棋局与随机棋子回忆",
+      "instruction_and_expected": "分别记录有意义与随机布局",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "棋局与随机棋子回忆"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.01.CASE.01:intervention",
+    "expected": "控制呈现时间数量",
+    "new_input": {
+      "base_fixture": "棋局与随机棋子回忆",
+      "instruction_and_expected": "控制呈现时间数量",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "棋局与随机棋子回忆"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.01.CASE.01:reverse",
+    "expected": "组块解释候选",
+    "new_input": {
+      "base_fixture": "棋局与随机棋子回忆",
+      "instruction_and_expected": "组块解释候选",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "棋局与随机棋子回忆"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.02.CASE.01:counterexample",
+    "expected": "身份不保证正确",
+    "new_input": {
+      "base_fixture": "专家遇表面相似但机制不同故障",
+      "instruction_and_expected": "身份不保证正确",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "专家遇表面相似但机制不同故障"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.02.CASE.01:forward",
+    "expected": "检查线索与推断",
+    "new_input": {
+      "base_fixture": "专家遇表面相似但机制不同故障",
+      "instruction_and_expected": "检查线索与推断",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "专家遇表面相似但机制不同故障"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.02.CASE.01:intervention",
+    "expected": "近邻反例",
+    "new_input": {
+      "base_fixture": "专家遇表面相似但机制不同故障",
+      "instruction_and_expected": "近邻反例",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "专家遇表面相似但机制不同故障"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.02.CASE.01:reverse",
+    "expected": "模板误用",
+    "new_input": {
+      "base_fixture": "专家遇表面相似但机制不同故障",
+      "instruction_and_expected": "模板误用",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "专家遇表面相似但机制不同故障"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.03.CASE.01:counterexample",
+    "expected": "不默认最快",
+    "new_input": {
+      "base_fixture": "两种策略均可行但成本不同",
+      "instruction_and_expected": "不默认最快",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "两种策略均可行但成本不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.03.CASE.01:forward",
+    "expected": "按条件比较",
+    "new_input": {
+      "base_fixture": "两种策略均可行但成本不同",
+      "instruction_and_expected": "按条件比较",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "两种策略均可行但成本不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.03.CASE.01:intervention",
+    "expected": "核预算和目标",
+    "new_input": {
+      "base_fixture": "两种策略均可行但成本不同",
+      "instruction_and_expected": "核预算和目标",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "两种策略均可行但成本不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.03.CASE.01:reverse",
+    "expected": "缺真实资源信息",
+    "new_input": {
+      "base_fixture": "两种策略均可行但成本不同",
+      "instruction_and_expected": "缺真实资源信息",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "两种策略均可行但成本不同"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.04.CASE.01:counterexample",
+    "expected": "重复熟练非适应",
+    "new_input": {
+      "base_fixture": "熟练流程遇到新限制",
+      "instruction_and_expected": "重复熟练非适应",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "熟练流程遇到新限制"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.04.CASE.01:forward",
+    "expected": "分别测常规与适应表现",
+    "new_input": {
+      "base_fixture": "熟练流程遇到新限制",
+      "instruction_and_expected": "分别测常规与适应表现",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "熟练流程遇到新限制"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.04.CASE.01:intervention",
+    "expected": "提供新约束独立任务",
+    "new_input": {
+      "base_fixture": "熟练流程遇到新限制",
+      "instruction_and_expected": "提供新约束独立任务",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "熟练流程遇到新限制"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.05.04.CASE.01:reverse",
+    "expected": "可能依赖原模板",
+    "new_input": {
+      "base_fixture": "熟练流程遇到新限制",
+      "instruction_and_expected": "可能依赖原模板",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "熟练流程遇到新限制"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.01.CASE.01:counterexample",
+    "expected": "分解非必要顺序",
+    "new_input": {
+      "base_fixture": "将对话分为词义选择与产出",
+      "instruction_and_expected": "分解非必要顺序",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "将对话分为词义选择与产出"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.01.CASE.01:forward",
+    "expected": "组件接口明确",
+    "new_input": {
+      "base_fixture": "将对话分为词义选择与产出",
+      "instruction_and_expected": "组件接口明确",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "将对话分为词义选择与产出"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.01.CASE.01:intervention",
+    "expected": "分项和整体任务",
+    "new_input": {
+      "base_fixture": "将对话分为词义选择与产出",
+      "instruction_and_expected": "分项和整体任务",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "将对话分为词义选择与产出"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.01.CASE.01:reverse",
+    "expected": "粒度仍待证",
+    "new_input": {
+      "base_fixture": "将对话分为词义选择与产出",
+      "instruction_and_expected": "粒度仍待证",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "将对话分为词义选择与产出"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.02.CASE.01:counterexample",
+    "expected": "单项不代表协调",
+    "new_input": {
+      "base_fixture": "两项独立任务正确，同时做出错",
+      "instruction_and_expected": "单项不代表协调",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "两项独立任务正确，同时做出错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.02.CASE.01:forward",
+    "expected": "协调证据不足",
+    "new_input": {
+      "base_fixture": "两项独立任务正确，同时做出错",
+      "instruction_and_expected": "协调证据不足",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "两项独立任务正确，同时做出错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.02.CASE.01:intervention",
+    "expected": "匹配双任务",
+    "new_input": {
+      "base_fixture": "两项独立任务正确，同时做出错",
+      "instruction_and_expected": "匹配双任务",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "两项独立任务正确，同时做出错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.02.CASE.01:reverse",
+    "expected": "共享资源或时序冲突",
+    "new_input": {
+      "base_fixture": "两项独立任务正确，同时做出错",
+      "instruction_and_expected": "共享资源或时序冲突",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "两项独立任务正确，同时做出错"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.03.CASE.01:counterexample",
+    "expected": "不作无提示成功",
+    "new_input": {
+      "base_fixture": "陌生购物任务经提示后完成",
+      "instruction_and_expected": "不作无提示成功",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "陌生购物任务经提示后完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.03.CASE.01:forward",
+    "expected": "提示后迁移候选",
+    "new_input": {
+      "base_fixture": "陌生购物任务经提示后完成",
+      "instruction_and_expected": "提示后迁移候选",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "陌生购物任务经提示后完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.03.CASE.01:intervention",
+    "expected": "先独立后提示",
+    "new_input": {
+      "base_fixture": "陌生购物任务经提示后完成",
+      "instruction_and_expected": "先独立后提示",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "陌生购物任务经提示后完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.03.CASE.01:reverse",
+    "expected": "自发选择未证",
+    "new_input": {
+      "base_fixture": "陌生购物任务经提示后完成",
+      "instruction_and_expected": "自发选择未证",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "陌生购物任务经提示后完成"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.04.CASE.01:counterexample",
+    "expected": "不授予职业资格",
+    "new_input": {
+      "base_fixture": "训练模拟通过，未到真实现场",
+      "instruction_and_expected": "不授予职业资格",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "COUNTEREXAMPLE"
+    },
+    "old_input": "训练模拟通过，未到真实现场"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.04.CASE.01:forward",
+    "expected": "仅模拟证据",
+    "new_input": {
+      "base_fixture": "训练模拟通过，未到真实现场",
+      "instruction_and_expected": "仅模拟证据",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "FORWARD"
+    },
+    "old_input": "训练模拟通过，未到真实现场"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.04.CASE.01:intervention",
+    "expected": "有权人员合法安全评估",
+    "new_input": {
+      "base_fixture": "训练模拟通过，未到真实现场",
+      "instruction_and_expected": "有权人员合法安全评估",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "INTERVENTION"
+    },
+    "old_input": "训练模拟通过，未到真实现场"
+  },
+  {
+    "actual_status": "NOT_RUN",
+    "case_id": "K04.06.04.CASE.01:reverse",
+    "expected": "实际条件未知",
+    "new_input": {
+      "base_fixture": "训练模拟通过，未到真实现场",
+      "instruction_and_expected": "实际条件未知",
+      "mode": "NARRATIVE_TRANSFORMATION_DESIGN_NOT_LITERAL_EXECUTION",
+      "view": "REVERSE"
+    },
+    "old_input": "训练模拟通过，未到真实现场"
+  }
+]
