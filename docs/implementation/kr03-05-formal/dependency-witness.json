@@ -1,0 +1,1187 @@
+{
+  "status": "BOUNDED_BUILDER_DEPENDENCY_USE_NOT_SEMANTIC_CLOSURE",
+  "pairs": 14,
+  "bindings": {
+    "K02.05.04.D4.02": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K02",
+        "stable_id": "K02.05.04.D4.02",
+        "package_id": "learning-core",
+        "version": "0.1.0-foundation-candidate-3"
+      },
+      "record_sha256": "1478ae96316d8b142710416abc82ab0ef3fac443bdfa6c19bcde045497f6a53b",
+      "file": "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+      "file_sha256": "f176b0dac49cbedbce135da7ed3bc8dab4a8f0c72aae143cf4690a916675a6c9",
+      "manifest_sha256": "17f3bf2e25f6d70f53d90beed651d752843541e350824bd3c53f360dc67740d5",
+      "statement": "采用相关先备知识的独立小任务和反例核查，不从年龄、年级或身份代填先验。",
+      "conditions": [
+        "目标领域明确且允许未知"
+      ],
+      "negative_boundary": "错误先备解释可能需要纠正而非简单激活"
+    },
+    "K02.06.01.D4.02": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K02",
+        "stable_id": "K02.06.01.D4.02",
+        "package_id": "learning-core",
+        "version": "0.1.0-foundation-candidate-3"
+      },
+      "record_sha256": "f084eb78b44f59588563263d29100f194f9ac79e06486945cf934d6ea04327b8",
+      "file": "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+      "file_sha256": "f176b0dac49cbedbce135da7ed3bc8dab4a8f0c72aae143cf4690a916675a6c9",
+      "manifest_sha256": "17f3bf2e25f6d70f53d90beed651d752843541e350824bd3c53f360dc67740d5",
+      "statement": "保存有线索回忆和无外部提示回忆的独立观察，逐步减少辅助后复测。",
+      "conditions": [
+        "构念和任务条件不改变"
+      ],
+      "negative_boundary": "不把有提示成功自动升级为独立证据"
+    },
+    "K03.06.02.D4.02": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K03",
+        "stable_id": "K03.06.02.D4.02",
+        "package_id": "learning-core",
+        "version": "0.1.0-foundation-candidate-3"
+      },
+      "record_sha256": "efb31cc2048a4a065333f9e21b25b8b45eb75bedbc151d1afaba015f57294cde",
+      "file": "knowledge/v0.1.0/foundation-r3/K03/records-04.jsonl",
+      "file_sha256": "07e86ad0eeb6ea2c608661d43f50d3f2e21b9d84433e2d08f7a365433b8d46ca",
+      "manifest_sha256": "17f3bf2e25f6d70f53d90beed651d752843541e350824bd3c53f360dc67740d5",
+      "statement": "任务规格保存目标、材料、约束、候选组件、步骤、观察与独立性。",
+      "conditions": [
+        "H06/P03具体任务主责"
+      ],
+      "negative_boundary": "分析步骤不等于强制运行顺序"
+    },
+    "K09.01.04.ME.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K09",
+        "stable_id": "K09.01.04.ME.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-measurement-candidate-4"
+      },
+      "record_sha256": "32760ba48419325c82c58b7372368a4103ad56ecc880a86d6fa64e56cf0843ab",
+      "file": "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+      "file_sha256": "c9010b42d6d8cc77c697e22fce48a4c0c40356287b218ba099cd4e033cb9ed90",
+      "manifest_sha256": "6cd783b13b28b1eb10cfe4aa8a1e587154808e92cb9283ca8cb5e744c127f40f",
+      "statement": "评分由响应及事前版本化规则决定；缺答、无效、未施测及错误分别编码；规定分母及部分分。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "没有作答不能无条件记为不会"
+    },
+    "K05.02.04.PT.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K05",
+        "stable_id": "K05.02.04.PT.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-practice-teaching-candidate-10"
+      },
+      "record_sha256": "7bf809b784a02690fe479d3d9a4a09f69e2307a2ea5bb453fa0d2cdea6cc15be",
+      "file": "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+      "file_sha256": "764783df00425e4ed054f3c4b336c5afc6245f90368ebcb4f9807c7b756078fd",
+      "manifest_sha256": "ff49288d22822ab53c79b2827a03e8435c5e9a50f39200eccd878a761f1e41e0",
+      "statement": "目标期限是调度输入，不是个人遗忘模型；必须满足日期、机会、成本与测量合同。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "截止日期不是遗忘概率"
+    },
+    "K06.03.01.PT.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K06",
+        "stable_id": "K06.03.01.PT.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-practice-teaching-candidate-10"
+      },
+      "record_sha256": "c85f34e28ad146951e6a895926acf61ee8d1415c17364e746252c7807b45896b",
+      "file": "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+      "file_sha256": "1f7b2e82923ef1cf15c0bd9aeb5bd9747086e2360db45c7b4de0e5279a6b3e60",
+      "manifest_sha256": "ff49288d22822ab53c79b2827a03e8435c5e9a50f39200eccd878a761f1e41e0",
+      "statement": "提示可按信息揭示程度区分，提示本身影响观测；应先明确学习者选择与最小帮助。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "提示后正确不算独立正确"
+    },
+    "K08.04.02.PT.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K08",
+        "stable_id": "K08.04.02.PT.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-practice-teaching-candidate-10"
+      },
+      "record_sha256": "4295611151049943b42f3fcb54b007db7526e7821f32fc949b5faf3adbec18ef",
+      "file": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+      "file_sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+      "manifest_sha256": "ff49288d22822ab53c79b2827a03e8435c5e9a50f39200eccd878a761f1e41e0",
+      "statement": "计划是带预算、资源、时间窗的候选安排；实际行为需单独事件，计划可修订。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "计划声明不证明实施"
+    },
+    "K13.02.03.SR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K13",
+        "stable_id": "K13.02.03.SR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-social-research-candidate-2"
+      },
+      "record_sha256": "e84ee6a9866a1a8cf4fa0769d3e0428e1aa606437b8a68a8afcea988daa31679",
+      "file": "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+      "file_sha256": "ca8ad4d87b5baa86caa7d88d53364b1a401968110fecffbf5056e1b3c48ee579",
+      "manifest_sha256": "9a572b5108fdbb1b1117486ea9cc6f9d302e700d5c51b501353c952666ad9fb7",
+      "statement": "分离学科内容推理与任务语言要求，保持目标构念。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "语言不流利不等于学科能力不足"
+    },
+    "K13.04.02.SR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K13",
+        "stable_id": "K13.04.02.SR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-social-research-candidate-2"
+      },
+      "record_sha256": "c2a998b98805da9c77984ee5eb3060b92b84aff55207d3390b85224f17d2fbec",
+      "file": "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+      "file_sha256": "ca8ad4d87b5baa86caa7d88d53364b1a401968110fecffbf5056e1b3c48ee579",
+      "manifest_sha256": "9a572b5108fdbb1b1117486ea9cc6f9d302e700d5c51b501353c952666ad9fb7",
+      "statement": "技术可及性先于知识缺口推断。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "设备缺失不等于能力不足"
+    },
+    "K17.02.02.SR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K17",
+        "stable_id": "K17.02.02.SR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-social-research-candidate-2"
+      },
+      "record_sha256": "7d9a2b9f7012e37dbb0b42681946640d3c6bc955363466493954890274aa7331",
+      "file": "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+      "file_sha256": "ea0f7bac8c2165f40b7378d3707e0f4b01462c812aa1b060f1a4f12d5bd2e291",
+      "manifest_sha256": "9a572b5108fdbb1b1117486ea9cc6f9d302e700d5c51b501353c952666ad9fb7",
+      "statement": "随机分配与实际接受分开；以分配效应为预设目标时保留原组。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "随机标签不保证执行无偏"
+    },
+    "K15.02.04.TG.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K15",
+        "stable_id": "K15.02.04.TG.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1"
+      },
+      "record_sha256": "8bb828017c7990ac28a2695049acaf5f0a955b97e6c3b40c4422423d8415e608",
+      "file": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-02.jsonl",
+      "file_sha256": "ed0772633eb315c4b564804a2ffb153096328a72e123ec7a76e9b2c814eeae66",
+      "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "statement": "辅导记录提示、示范、用户自答和独立新任务的时序。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "对话流畅不等于教学有效"
+    },
+    "K15.03.02.TG.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K15",
+        "stable_id": "K15.03.02.TG.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1"
+      },
+      "record_sha256": "ff7a3c10c1c499060883e1b354cb863363d1e48d0124a3094a594c8aa9f587bd",
+      "file": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-02.jsonl",
+      "file_sha256": "ed0772633eb315c4b564804a2ffb153096328a72e123ec7a76e9b2c814eeae66",
+      "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "statement": "指标固定分母、目标、时间窗和缺失政策。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "点击率不等于学习效果"
+    },
+    "K16.01.01.TG.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K16",
+        "stable_id": "K16.01.01.TG.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1"
+      },
+      "record_sha256": "9490a34904360267a60aabd05dee5581cfccd99c1bcf4ea1753f7b4bfcd9c619",
+      "file": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+      "file_sha256": "14104bc985f64edd03af68579c271601663fdf5f75c40376dedde51d020a4498",
+      "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "statement": "先备证据须匹配目标和任务，不以学段、年龄或语言身份替代。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "不能以年龄年级替代先备证据"
+    },
+    "K16.03.04.TG.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K16",
+        "stable_id": "K16.03.04.TG.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1"
+      },
+      "record_sha256": "c8f002dcebb4cd6a99a1d0fce5c493b401c7fd2e34d715be6f70ee479d2bf992",
+      "file": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+      "file_sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+      "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "statement": "测量适配区分构念相关和无关障碍；条件变化写入评分解释。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "改变测试构念不能仍称等价"
+    },
+    "K19.01.01.TG.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K19",
+        "stable_id": "K19.01.01.TG.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1"
+      },
+      "record_sha256": "2d08f4e5a2f1b05f9bd518ad562c1113f9a05370025882f2a3cd611cd84dbb7c",
+      "file": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+      "file_sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+      "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "statement": "机会以可达资源、可用时间、实际参与及任务条件区分。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "结果差异不等于机会差异唯一原因"
+    },
+    "K19.04.05.TG.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K19",
+        "stable_id": "K19.04.05.TG.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-technology-inclusion-governance-candidate-1"
+      },
+      "record_sha256": "9817b27a82b807808bc9b31a8dc6d03206782b442d234c2fe525e5b9358be758",
+      "file": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+      "file_sha256": "4393fbe808eec1d435494c91d1f047ca1c168e81761f7073e480a5acfa83bd85",
+      "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "statement": "自动建议与高风险裁决分离，需明确权限、风险和人工复核。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "模型预测不能自行决定高风险事项"
+    },
+    "K10.01.02.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K10",
+        "stable_id": "K10.01.02.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "c68038d61e8fad247a5e0cfc65385c80e103645121236af313b875e2a67a3de9",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+      "file_sha256": "d7ea8a8d5c695edee3b655f815ea6bda9b77607a5daeb0105155ab65ef0c8fe2",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "提示前预测、提示后表现和无提示复测分别存储。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "不能将提示正确合并为无提示正确"
+    },
+    "K10.01.05.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K10",
+        "stable_id": "K10.01.05.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "3f2405f6247e2938f1fda67d56dd31fd71cd3217efde16c86c582f888d7fffc1",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+      "file_sha256": "d7ea8a8d5c695edee3b655f815ea6bda9b77607a5daeb0105155ab65ef0c8fe2",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "对缺答、无效、未施测、错误采用互斥事件编码；无经核证的缺失观测模型时不更新。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "缺失不默认错误或零能力"
+    },
+    "K10.03.01.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K10",
+        "stable_id": "K10.03.01.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "066320677ee2fefcb75e35b8a9d22eb28a48c2c45ed50a228866f3204465a35f",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+      "file_sha256": "d7ea8a8d5c695edee3b655f815ea6bda9b77607a5daeb0105155ab65ef0c8fe2",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "在固定h、同单位且Δ≥0的指数候选模型中计算项目回忆概率。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "回忆概率不等于迁移能力"
+    },
+    "K11.01.03.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K11",
+        "stable_id": "K11.01.03.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "5769a5a907ba2956fc287b0be63d20b83cd633764bf1de2571ec67aa4c01b2b1",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+      "file_sha256": "90141981b482f24549dff8b77f3bac0fd09bea023625dcb828cd2294843addd7",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "明确目标与可观测代理、决策者、衡量时点，代理不改写目标。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "最大化答题量不等于学习最优"
+    },
+    "K11.02.02.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K11",
+        "stable_id": "K11.02.02.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "1edd8e66e6a46eb44702ab17a82ca297408daa70c48add70151c062c4668ff1c",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+      "file_sha256": "90141981b482f24549dff8b77f3bac0fd09bea023625dcb828cd2294843addd7",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "固定半衰期阈值时距是模型方程逆解，不是最优学习间隔。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "目标保持率不是已观察保持"
+    },
+    "K11.02.04.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K11",
+        "stable_id": "K11.02.04.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "77c9c225c1aff4e1edd7c752b1ee93d0059a4dadb7f378e26d9dfd5c1bee51c4",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+      "file_sha256": "90141981b482f24549dff8b77f3bac0fd09bea023625dcb828cd2294843addd7",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "预算检查包括预估全部动作成本、剩余时间及退出。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "不得超预算强制学习"
+    },
+    "K12.01.02.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K12",
+        "stable_id": "K12.01.02.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "3bf9499ddfcdfe650fd5ff05699d90aa757d17ef3f83206e2751a5d8b9ad76cb",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+      "file_sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "任务绑定目标能力、可观察响应、条件和解释，跨组件归因须可辨别。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "标签共现不证明技能依赖"
+    },
+    "K12.03.03.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K12",
+        "stable_id": "K12.03.03.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "44ce23660be3e6867d70a08ac8977e7c44765daca8774e0cf445a2025f6abcbf",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+      "file_sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "提示、再次提交、初次响应和最终响应分别记录。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "提示不能隐含完整答案"
+    },
+    "K12.06.01.TR.01": {
+      "ref": {
+        "kind": "Claim",
+        "owner": "K12",
+        "stable_id": "K12.06.01.TR.01",
+        "package_id": "learning-core",
+        "version": "0.1.0-trace-adaptation-resources-candidate-1"
+      },
+      "record_sha256": "c98b19e20b28784cc1f0b2d6bf6d3089dbf00d9557adce18e1b50cfa2f639363",
+      "file": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+      "file_sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "statement": "历史响应引用不可变题目及评分规则版本。",
+      "conditions": [
+        "按原D3范围与合成案例明确条件执行；适用性、因果及外推待独立专业审查。"
+      ],
+      "negative_boundary": "不得覆盖历史任务版本"
+    }
+  },
+  "results": [
+    {
+      "id": "D01-positive",
+      "owner": "K10",
+      "upstream": "K02.06.01.D4.02",
+      "local": "K10.01.02.TR.01",
+      "intent": "辅助与独立复测隔离",
+      "input": {
+        "hint_absent": true
+      },
+      "expected": "INDEPENDENT_RECORD",
+      "actual": "INDEPENDENT_RECORD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D01-negative",
+      "owner": "K10",
+      "upstream": "K02.06.01.D4.02",
+      "local": "K10.01.02.TR.01",
+      "intent": "辅助与独立复测隔离",
+      "input": {
+        "hint_absent": false
+      },
+      "expected": "ASSISTED_ONLY",
+      "actual": "ASSISTED_ONLY",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D01-unknown",
+      "owner": "K10",
+      "upstream": "K02.06.01.D4.02",
+      "local": "K10.01.02.TR.01",
+      "intent": "辅助与独立复测隔离",
+      "input": {
+        "hint_absent": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D01-malformed",
+      "owner": "K10",
+      "upstream": "K02.06.01.D4.02",
+      "local": "K10.01.02.TR.01",
+      "intent": "辅助与独立复测隔离",
+      "input": {
+        "hint_absent": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D02-positive",
+      "owner": "K10",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K10.01.05.TR.01",
+      "intent": "缺答不是错误",
+      "input": {
+        "valid_response": true
+      },
+      "expected": "OBSERVE_RESPONSE",
+      "actual": "OBSERVE_RESPONSE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D02-negative",
+      "owner": "K10",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K10.01.05.TR.01",
+      "intent": "缺答不是错误",
+      "input": {
+        "valid_response": false
+      },
+      "expected": "NO_UPDATE",
+      "actual": "NO_UPDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D02-unknown",
+      "owner": "K10",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K10.01.05.TR.01",
+      "intent": "缺答不是错误",
+      "input": {
+        "valid_response": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D02-malformed",
+      "owner": "K10",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K10.01.05.TR.01",
+      "intent": "缺答不是错误",
+      "input": {
+        "valid_response": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D03-positive",
+      "owner": "K11",
+      "upstream": "K05.02.04.PT.01",
+      "local": "K11.02.04.TR.01",
+      "intent": "日程建议先查目标期限及预算",
+      "input": {
+        "within_budget": true
+      },
+      "expected": "ADVICE_CANDIDATE",
+      "actual": "ADVICE_CANDIDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D03-negative",
+      "owner": "K11",
+      "upstream": "K05.02.04.PT.01",
+      "local": "K11.02.04.TR.01",
+      "intent": "日程建议先查目标期限及预算",
+      "input": {
+        "within_budget": false
+      },
+      "expected": "DEFER",
+      "actual": "DEFER",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D03-unknown",
+      "owner": "K11",
+      "upstream": "K05.02.04.PT.01",
+      "local": "K11.02.04.TR.01",
+      "intent": "日程建议先查目标期限及预算",
+      "input": {
+        "within_budget": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D03-malformed",
+      "owner": "K11",
+      "upstream": "K05.02.04.PT.01",
+      "local": "K11.02.04.TR.01",
+      "intent": "日程建议先查目标期限及预算",
+      "input": {
+        "within_budget": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D04-positive",
+      "owner": "K11",
+      "upstream": "K08.04.02.PT.01",
+      "local": "K11.01.03.TR.01",
+      "intent": "计划不能改写本人目标",
+      "input": {
+        "goal_confirmed": true
+      },
+      "expected": "ADVICE_CANDIDATE",
+      "actual": "ADVICE_CANDIDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D04-negative",
+      "owner": "K11",
+      "upstream": "K08.04.02.PT.01",
+      "local": "K11.01.03.TR.01",
+      "intent": "计划不能改写本人目标",
+      "input": {
+        "goal_confirmed": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D04-unknown",
+      "owner": "K11",
+      "upstream": "K08.04.02.PT.01",
+      "local": "K11.01.03.TR.01",
+      "intent": "计划不能改写本人目标",
+      "input": {
+        "goal_confirmed": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D04-malformed",
+      "owner": "K11",
+      "upstream": "K08.04.02.PT.01",
+      "local": "K11.01.03.TR.01",
+      "intent": "计划不能改写本人目标",
+      "input": {
+        "goal_confirmed": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D05-positive",
+      "owner": "K11",
+      "upstream": "K10.03.01.TR.01",
+      "local": "K11.02.02.TR.01",
+      "intent": "模型概率不等于最优复习间隔",
+      "input": {
+        "same_model_unit": true
+      },
+      "expected": "MODEL_THRESHOLD_ONLY",
+      "actual": "MODEL_THRESHOLD_ONLY",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D05-negative",
+      "owner": "K11",
+      "upstream": "K10.03.01.TR.01",
+      "local": "K11.02.02.TR.01",
+      "intent": "模型概率不等于最优复习间隔",
+      "input": {
+        "same_model_unit": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D05-unknown",
+      "owner": "K11",
+      "upstream": "K10.03.01.TR.01",
+      "local": "K11.02.02.TR.01",
+      "intent": "模型概率不等于最优复习间隔",
+      "input": {
+        "same_model_unit": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D05-malformed",
+      "owner": "K11",
+      "upstream": "K10.03.01.TR.01",
+      "local": "K11.02.02.TR.01",
+      "intent": "模型概率不等于最优复习间隔",
+      "input": {
+        "same_model_unit": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D06-positive",
+      "owner": "K12",
+      "upstream": "K03.06.02.D4.02",
+      "local": "K12.01.02.TR.01",
+      "intent": "任务规格匹配构念与响应",
+      "input": {
+        "same_construct": true
+      },
+      "expected": "TASK_CANDIDATE",
+      "actual": "TASK_CANDIDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D06-negative",
+      "owner": "K12",
+      "upstream": "K03.06.02.D4.02",
+      "local": "K12.01.02.TR.01",
+      "intent": "任务规格匹配构念与响应",
+      "input": {
+        "same_construct": false
+      },
+      "expected": "SEPARATE_CONSTRUCT",
+      "actual": "SEPARATE_CONSTRUCT",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D06-unknown",
+      "owner": "K12",
+      "upstream": "K03.06.02.D4.02",
+      "local": "K12.01.02.TR.01",
+      "intent": "任务规格匹配构念与响应",
+      "input": {
+        "same_construct": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D06-malformed",
+      "owner": "K12",
+      "upstream": "K03.06.02.D4.02",
+      "local": "K12.01.02.TR.01",
+      "intent": "任务规格匹配构念与响应",
+      "input": {
+        "same_construct": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D07-positive",
+      "owner": "K12",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K12.03.03.TR.01",
+      "intent": "提示前后分别保存",
+      "input": {
+        "hint_absent": true
+      },
+      "expected": "INDEPENDENT_RECORD",
+      "actual": "INDEPENDENT_RECORD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D07-negative",
+      "owner": "K12",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K12.03.03.TR.01",
+      "intent": "提示前后分别保存",
+      "input": {
+        "hint_absent": false
+      },
+      "expected": "ASSISTED_ONLY",
+      "actual": "ASSISTED_ONLY",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D07-unknown",
+      "owner": "K12",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K12.03.03.TR.01",
+      "intent": "提示前后分别保存",
+      "input": {
+        "hint_absent": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D07-malformed",
+      "owner": "K12",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K12.03.03.TR.01",
+      "intent": "提示前后分别保存",
+      "input": {
+        "hint_absent": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D08-positive",
+      "owner": "K12",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K12.06.01.TR.01",
+      "intent": "评分合同版本精确匹配",
+      "input": {
+        "same_scoring_version": true
+      },
+      "expected": "SCORING_CANDIDATE",
+      "actual": "SCORING_CANDIDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D08-negative",
+      "owner": "K12",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K12.06.01.TR.01",
+      "intent": "评分合同版本精确匹配",
+      "input": {
+        "same_scoring_version": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D08-unknown",
+      "owner": "K12",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K12.06.01.TR.01",
+      "intent": "评分合同版本精确匹配",
+      "input": {
+        "same_scoring_version": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D08-malformed",
+      "owner": "K12",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K12.06.01.TR.01",
+      "intent": "评分合同版本精确匹配",
+      "input": {
+        "same_scoring_version": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D09-positive",
+      "owner": "K15",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K15.02.04.TG.01",
+      "intent": "辅导提示不等于独立表现",
+      "input": {
+        "hint_absent": true
+      },
+      "expected": "INDEPENDENT_RECORD",
+      "actual": "INDEPENDENT_RECORD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D09-negative",
+      "owner": "K15",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K15.02.04.TG.01",
+      "intent": "辅导提示不等于独立表现",
+      "input": {
+        "hint_absent": false
+      },
+      "expected": "ASSISTED_ONLY",
+      "actual": "ASSISTED_ONLY",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D09-unknown",
+      "owner": "K15",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K15.02.04.TG.01",
+      "intent": "辅导提示不等于独立表现",
+      "input": {
+        "hint_absent": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D09-malformed",
+      "owner": "K15",
+      "upstream": "K06.03.01.PT.01",
+      "local": "K15.02.04.TG.01",
+      "intent": "辅导提示不等于独立表现",
+      "input": {
+        "hint_absent": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D10-positive",
+      "owner": "K15",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K15.03.02.TG.01",
+      "intent": "指标分母与缺失规则明确",
+      "input": {
+        "denominator_defined": true
+      },
+      "expected": "INDICATOR_CANDIDATE",
+      "actual": "INDICATOR_CANDIDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D10-negative",
+      "owner": "K15",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K15.03.02.TG.01",
+      "intent": "指标分母与缺失规则明确",
+      "input": {
+        "denominator_defined": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D10-unknown",
+      "owner": "K15",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K15.03.02.TG.01",
+      "intent": "指标分母与缺失规则明确",
+      "input": {
+        "denominator_defined": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D10-malformed",
+      "owner": "K15",
+      "upstream": "K09.01.04.ME.01",
+      "local": "K15.03.02.TG.01",
+      "intent": "指标分母与缺失规则明确",
+      "input": {
+        "denominator_defined": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D11-positive",
+      "owner": "K16",
+      "upstream": "K02.05.04.D4.02",
+      "local": "K16.01.01.TG.01",
+      "intent": "先备证据不得以身份补值",
+      "input": {
+        "individual_evidence": true
+      },
+      "expected": "SUPPORT_CANDIDATE",
+      "actual": "SUPPORT_CANDIDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D11-negative",
+      "owner": "K16",
+      "upstream": "K02.05.04.D4.02",
+      "local": "K16.01.01.TG.01",
+      "intent": "先备证据不得以身份补值",
+      "input": {
+        "individual_evidence": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D11-unknown",
+      "owner": "K16",
+      "upstream": "K02.05.04.D4.02",
+      "local": "K16.01.01.TG.01",
+      "intent": "先备证据不得以身份补值",
+      "input": {
+        "individual_evidence": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D11-malformed",
+      "owner": "K16",
+      "upstream": "K02.05.04.D4.02",
+      "local": "K16.01.01.TG.01",
+      "intent": "先备证据不得以身份补值",
+      "input": {
+        "individual_evidence": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D12-positive",
+      "owner": "K16",
+      "upstream": "K13.02.03.SR.01",
+      "local": "K16.03.04.TG.01",
+      "intent": "语言适配不得改变构念",
+      "input": {
+        "same_construct": true
+      },
+      "expected": "SUPPORT_CANDIDATE",
+      "actual": "SUPPORT_CANDIDATE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D12-negative",
+      "owner": "K16",
+      "upstream": "K13.02.03.SR.01",
+      "local": "K16.03.04.TG.01",
+      "intent": "语言适配不得改变构念",
+      "input": {
+        "same_construct": false
+      },
+      "expected": "SEPARATE_CONSTRUCT",
+      "actual": "SEPARATE_CONSTRUCT",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D12-unknown",
+      "owner": "K16",
+      "upstream": "K13.02.03.SR.01",
+      "local": "K16.03.04.TG.01",
+      "intent": "语言适配不得改变构念",
+      "input": {
+        "same_construct": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D12-malformed",
+      "owner": "K16",
+      "upstream": "K13.02.03.SR.01",
+      "local": "K16.03.04.TG.01",
+      "intent": "语言适配不得改变构念",
+      "input": {
+        "same_construct": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D13-positive",
+      "owner": "K19",
+      "upstream": "K13.04.02.SR.01",
+      "local": "K19.01.01.TG.01",
+      "intent": "机会障碍与能力分开",
+      "input": {
+        "access_observed": true
+      },
+      "expected": "OPPORTUNITY_OBSERVATION",
+      "actual": "OPPORTUNITY_OBSERVATION",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D13-negative",
+      "owner": "K19",
+      "upstream": "K13.04.02.SR.01",
+      "local": "K19.01.01.TG.01",
+      "intent": "机会障碍与能力分开",
+      "input": {
+        "access_observed": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D13-unknown",
+      "owner": "K19",
+      "upstream": "K13.04.02.SR.01",
+      "local": "K19.01.01.TG.01",
+      "intent": "机会障碍与能力分开",
+      "input": {
+        "access_observed": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D13-malformed",
+      "owner": "K19",
+      "upstream": "K13.04.02.SR.01",
+      "local": "K19.01.01.TG.01",
+      "intent": "机会障碍与能力分开",
+      "input": {
+        "access_observed": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D14-positive",
+      "owner": "K19",
+      "upstream": "K17.02.02.SR.01",
+      "local": "K19.04.05.TG.01",
+      "intent": "分配记录不替代权限与审查",
+      "input": {
+        "human_authorized": true
+      },
+      "expected": "DESIGN_REVIEW_ONLY",
+      "actual": "DESIGN_REVIEW_ONLY",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D14-negative",
+      "owner": "K19",
+      "upstream": "K17.02.02.SR.01",
+      "local": "K19.04.05.TG.01",
+      "intent": "分配记录不替代权限与审查",
+      "input": {
+        "human_authorized": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D14-unknown",
+      "owner": "K19",
+      "upstream": "K17.02.02.SR.01",
+      "local": "K19.04.05.TG.01",
+      "intent": "分配记录不替代权限与审查",
+      "input": {
+        "human_authorized": null
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "id": "D14-malformed",
+      "owner": "K19",
+      "upstream": "K17.02.02.SR.01",
+      "local": "K19.04.05.TG.01",
+      "intent": "分配记录不替代权限与审查",
+      "input": {
+        "human_authorized": 1
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    }
+  ],
+  "limits": "Explicit boolean synthetic guards, independently reviewed professional applicability still pending. No empirical inference, source qualification, canonical relation, or CQ/LC."
+}
