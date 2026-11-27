@@ -1,0 +1,75 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-g01-db01-20261127",
+  "branch": "version/v0.1.0",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "planning_authority": {
+    "exact_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+    "review_comment": 7211695681
+  },
+  "task_id": "DB01",
+  "attempt_id": "DB01-FORMAL-01",
+  "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+  "role": "BUILDER_NON_REVIEWER",
+  "base": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+  "exact_head": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+  "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+  "input": [],
+  "output": [
+    {
+      "path": "docs/implementation/db01/README.md",
+      "sha256": "da0fb6454957c60dd1c4f599dd60bab9ccb2a7e5cfdbd721b4a4c0b5ba58786f",
+      "type": "MARKDOWN"
+    },
+    {
+      "path": "docs/implementation/db01/build_contract.py",
+      "sha256": "8f90eb8438c491c15d7b2d3bf4990b063e2031d0a8189cdebc0c5d1370235c2d",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "docs/implementation/db01/verify_contract.py",
+      "sha256": "57f3f3865c4787511ef61e0f9d0785081e66f22cb6c24939ecbd0a0f3e13f2c5",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "docs/implementation/db01/canonical.schema.json",
+      "sha256": "909a5c5e2bac142eddd9375d584b7ad07c716dc03b475a5f2942ce77354cc4cd",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/db01/mapping-contract.json",
+      "sha256": "f249a50282ae762c43b41fbceb057ece7f3c528a597e2f46a9e7d206769ae62a",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/db01/validation-receipt.json",
+      "sha256": "7744cdaedd4f49a23f79eaba947f8a1cd853c7a03be6204a9123852815024c7e",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    }
+  ],
+  "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "validation": {
+    "initial_timeout_job": "job_01M8DYZJ1F00XJSPGE6A709PJH",
+    "actual_success_job": "job_01M8DZ0RGN00TZWAZ5GH4XXRX2",
+    "exact_checkout_replay_job": "job_01M8DZ5P3700V5HEQZSMRFSEYA",
+    "tree": "921bc62d54266b4119d5d63aec9e4263803b72c4",
+    "replay_byte_identity": "MATCH",
+    "schema_kinds": 39,
+    "mapping_tables": 39,
+    "relation_types": 12,
+    "adapted_records": 5851,
+    "typed_refs": 13276,
+    "negative_rejected": 12,
+    "independent_qualification": "NOT_RUN"
+  },
+  "issues": [
+    "Candidate format and finite adapter witness, not G04 freeze or DB02 importer.",
+    "Full semantic endpoint constraints/manifest resolver and per-module field extensions remain downstream; source rights, all claim qualification and formal CQ/LC NOT_RUN.",
+    "No persistent SQLite or private data generated."
+  ],
+  "next": "DB02 and IF01 eligible"
+}

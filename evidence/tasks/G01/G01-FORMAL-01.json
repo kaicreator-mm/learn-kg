@@ -1,0 +1,75 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-g01-db01-20261127",
+  "branch": "version/v0.1.0",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "planning_authority": {
+    "exact_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+    "review_comment": 7211695681
+  },
+  "task_id": "G01",
+  "attempt_id": "G01-FORMAL-01",
+  "receipt_id": "TASK:G01:G01-FORMAL-01",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "reviewer": "chatgpt-web:learn-kg-g01-independent-scope-reviewer",
+  "review_session": "learn-kg-g01-independent-scope-20261127",
+  "base": "be5c9c4b032d04070c0ad4643222df4a0c828f06",
+  "exact_head": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+  "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+  "input": [
+    {
+      "task_id": "S01",
+      "receipt_id": "TASK:S01:S01-FORMAL-01",
+      "content_digest": "82aa24a189e3d4ad12a2d7d6e8a128f946a899c10a48d1aac45ddb7b7747ddc7",
+      "version": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/S01/S01-FORMAL-01.json",
+          "sha256": "29833f32e3e073bb6a3d7b24bfd3eb08816c3b94944c47a7850ccbdb53bf0ff0"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/s01/scope-candidate.json",
+      "sha256": "d58db38891f78a9d94cdfdcc18d84caafe77f7c50e35df7f9cbe61baaa000501",
+      "type": "ACCEPTED_SCOPE_MANIFEST"
+    }
+  ],
+  "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+  "reviewed_content_digest": "82aa24a189e3d4ad12a2d7d6e8a128f946a899c10a48d1aac45ddb7b7747ddc7",
+  "consumed_tuple": [
+    {
+      "task_id": "S01",
+      "receipt_id": "TASK:S01:S01-FORMAL-01",
+      "content_digest": "82aa24a189e3d4ad12a2d7d6e8a128f946a899c10a48d1aac45ddb7b7747ddc7",
+      "version": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/S01/S01-FORMAL-01.json",
+          "sha256": "29833f32e3e073bb6a3d7b24bfd3eb08816c3b94944c47a7850ccbdb53bf0ff0"
+        }
+      ]
+    }
+  ],
+  "state": "GATE_ACCEPTED",
+  "receipt_type": "GATE_ACCEPTED",
+  "validation": {
+    "review_task_comment": 7212220801,
+    "review_result_comment": 7212529396,
+    "orchestration_review_comment": 7212530386,
+    "tree": "bf2fbe15ad8d13a19be88bf5a690a3cc72b94aab",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 0
+  },
+  "issues": [
+    "Scope only; all professional claims, CQ/LC and source qualification remain NOT_RUN."
+  ],
+  "next": "IF01 after DB01 current receipt"
+}

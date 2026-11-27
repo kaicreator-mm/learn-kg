@@ -39,14 +39,15 @@
       "deliverable": "范围及CQ/D4需求账本独立裁决",
       "acceptance": "独立exact SHA；逐域、CQ、遗漏/不适用理由、来源发现状态完整；P0/P1关闭，P2明确处置；非专业命题资格",
       "kind": "review",
-      "status": "READY",
+      "status": "GATE_ACCEPTED",
       "requirements": [
         {
           "task_id": "S01",
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "GATE_ACCEPTED"
+      "output_receipt": "GATE_ACCEPTED",
+      "current_receipt": "evidence/tasks/G01/G01-FORMAL-01.json"
     },
     {
       "id": "DB01",
@@ -57,9 +58,10 @@
       "deliverable": "分域文本包、JSON/JSONL schema、Markdown专业说明、稳定ID及类型端点、版本依赖、SQLite表映射和文本包发布设计",
       "acceptance": "文本是唯一事实源；字段和关系可直接解析，无手工二次编写；跨库类型/版本/权限resolver，候选/正式/个人隔离；无SQLite文件生成；G04冻结",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/DB01/DB01-FORMAL-01.json"
     },
     {
       "id": "DB02",
@@ -72,7 +74,7 @@
       "deliverable": "规范解析、语义校验、导入API/CLI、SQLite DDL与映射、拒绝原因、可复现测试",
       "acceptance": "文本先校验；内存SQLite实际FK、类型/孤儿/版本/缺包拒绝、重复导入、路由/EXPLAIN；默认不写数据库文件。持久输出仅下游显式选择，当前不执行；物理跨库崩溃测试未授权则HOLD，不伪报；文本manifest激活/恢复测试",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "DB01",
@@ -3264,7 +3266,7 @@
         }
       ],
       "output_receipt": "CANDIDATE_READY",
-      "status": "PLANNED"
+      "status": "READY"
     },
     {
       "id": "HS00",
@@ -3467,7 +3469,7 @@
       "status": "BUILDER_CORRECTED_STRUCTURAL_CHECKS_PASS",
       "disposition": "G03 requires V01 and DB03 CANDIDATE_READY receipts; G04 independently freezes actual evidence."
     },
-    "current_task_state_note": "S01 current CANDIDATE_READY, G01 READY for independent review, DB01 READY, SRC01 BLOCKED (partial nonqualifying evidence). All other dependencies remain PLANNED."
+    "current_task_state_note": "S01/DB01 CANDIDATE_READY, G01 GATE_ACCEPTED, DB02/IF01 READY, SRC01 BLOCKED; remaining PLANNED."
   },
   "qualification_by_module": {
     "K01": "KR01",
