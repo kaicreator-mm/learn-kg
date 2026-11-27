@@ -1,0 +1,2658 @@
+[
+  {
+    "owner": "P02",
+    "case_id": "P02.F01",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "COMPLETE"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F02",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": false,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F03",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": null
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F04",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": null,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F05",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": -1
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F06",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 2
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F07",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": false,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F08",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": false,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F09",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": true,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F10",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "REQUEST_OBSERVATION",
+        "baseline_observed": false
+      }
+    ],
+    "expected": "PAUSE"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F11",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BUDGET_CONFLICT",
+        "cost": 3,
+        "budget": 2
+      }
+    ],
+    "expected": "PAUSE"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F12",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "STOP"
+      }
+    ],
+    "expected": "STOP"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F13",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F14",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "within_budget": true
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F15",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 4,
+        "budget": 5
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F16",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "RESOURCES_CONFIRMED",
+        "resource_ready": true,
+        "authorized": true,
+        "cost": 3,
+        "budget": 5
+      },
+      {
+        "event": "PLAN_SELECTED",
+        "plan_selected": true,
+        "goal_version_match": true,
+        "cost": 3,
+        "budget": 6
+      }
+    ],
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P02",
+    "case_id": "P02.F17",
+    "target": {
+      "owner": "P02",
+      "kind": "FlowSpec",
+      "stable_id": "P02.PREPARATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": [
+      {
+        "event": "GOAL_CONFIRMED",
+        "goal_confirmed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "BASELINE_RECORDED",
+        "baseline_observed": true,
+        "goal_version_match": true
+      },
+      {
+        "event": "STOP",
+        "cost": true
+      }
+    ],
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "IMPLEMENTATION_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPOSITION.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPOSITION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "EXPOSITION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "IMPLEMENTATION_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DEMONSTRATION.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DEMONSTRATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "DEMONSTRATION_DELIVERED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "TASK_OBSERVATION_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.DISCRIMINATION.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.DISCRIMINATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CLASSIFICATION_RESPONSE",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "TASK_OBSERVATION_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.RECALL.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.RECALL",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "GENERATED_RECALL",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "ASSISTED_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.IMITATION.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.IMITATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "ASSISTED_OPERATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "TASK_OBSERVATION_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.EXPLANATION.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.EXPLANATION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "REASONED_EXPLANATION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "TASK_OBSERVATION_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PRODUCTION.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PRODUCTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "CONSTRUCTED_PRODUCT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "TASK_OBSERVATION_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.PROBLEM_SOLVING.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.PROBLEM_SOLVING",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "STRATEGY_AND_EXECUTION",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F01",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "SELF_REPORT_ONLY"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F02",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": false,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F03",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "FACILITATOR",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F04",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "UNRELATED",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F05",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": null,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F06",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": false,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F07",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": false,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F08",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 0,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F09",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": true,
+      "exit": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "owner": "P03",
+    "case_id": "P03.REFLECTION.F10",
+    "target": {
+      "owner": "P03",
+      "kind": "Activity",
+      "stable_id": "P03.REFLECTION",
+      "package_id": "learning-process",
+      "version": "0.1.0-p02-p03-candidate-1"
+    },
+    "input": {
+      "authorized": true,
+      "target_match": true,
+      "resource_ready": true,
+      "actor": "LEARNER",
+      "observation_kind": "SELF_REPORT",
+      "scoring_version_match": true,
+      "support_recorded": true,
+      "budget": 1,
+      "exit": true
+    },
+    "expected": "STOP"
+  }
+]
