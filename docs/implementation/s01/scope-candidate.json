@@ -1,0 +1,1600 @@
+{
+  "candidate_overlay_review_comments": [
+    7203292140,
+    7203533827
+  ],
+  "counts": {
+    "active_claim_candidates": 1740,
+    "case_binding_counts": {
+      "EXPLICIT_ORIGINAL_CASE": 1348,
+      "INLINE_EXAMPLE_OR_CASE": 395,
+      "NO_ORIGINAL_CLAIM_CASE": 395
+    },
+    "citation_locator_states": {
+      "HOLD_CLAIM_LOCATOR_MISSING": 576,
+      "HOLD_MULTI_SOURCE_ATTRIBUTION": 10,
+      "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 409
+    },
+    "claim_evidence_states_active": {
+      "ABSTRACT_LIMITED": 68,
+      "HOLD_SOURCE_DETAIL": 260,
+      "HTML_LOCATED_CANDIDATE": 509,
+      "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION": 7,
+      "PDF_LOCATED_CANDIDATE": 157,
+      "PDF_TEXT_LIMITED": 28,
+      "PROJECT_POLICY": 690,
+      "SOURCE_LOCATED_CANDIDATE": 21
+    },
+    "claim_evidence_states_all": {
+      "ABSTRACT_LIMITED": 68,
+      "HOLD_SOURCE_DETAIL": 260,
+      "HTML_LOCATED_CANDIDATE": 512,
+      "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION": 7,
+      "PDF_LOCATED_CANDIDATE": 157,
+      "PDF_TEXT_LIMITED": 28,
+      "PROJECT_POLICY": 690,
+      "SOURCE_LOCATED_CANDIDATE": 21
+    },
+    "claim_records": 1743,
+    "cq": 26,
+    "d1": 26,
+    "d2": 149,
+    "exact_numeric_case_ref_count": 33,
+    "exact_numeric_saved_result_count": 33,
+    "formal_qualified": 0,
+    "g03_combination_owners": 17,
+    "historical_superseded": 3,
+    "lc": 12,
+    "local_qualification_modules": 36,
+    "modules": 26,
+    "no_source": {
+      "ACTIVE": 760
+    },
+    "original_cases": 648,
+    "semantic_relation_candidates": 20,
+    "source_leads": 45,
+    "sources": 455,
+    "taxonomy_nodes": 823,
+    "topics": 648,
+    "view_binding_counts": {
+      "EXPLICIT": 81,
+      "UNBOUND": 1662
+    },
+    "view_owners": 27,
+    "view_requirements": {
+      "CANDIDATE_EXEMPLIFIED": 61,
+      "CANDIDATE_HOLD": 10,
+      "CANDIDATE_PARTIAL": 37
+    },
+    "views": 27
+  },
+  "cq_lc": {
+    "fixture_plan": {
+      "git_blob": "18df5faf4b32d24a60944640d11d7bf959479ddf",
+      "path": "docs/drafts/s01/cq-lifecycle-fixture-requirements.json",
+      "sha256": "0abd13aa2d8866785659ceb2d8c82ee77577c145b8bc1109c4bbf7c10f9fdc1f"
+    },
+    "lc_count": 12,
+    "ledger": {
+      "git_blob": "7a723ec4052768a1b5a95c915d4abad945612f55",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/views-cq-relations.json",
+      "sha256": "3dcf7087e286e01418d72297e951b2deb884ea06bdf086d8ea77833fab9203d9"
+    },
+    "rule": "fixture/oracle and actual result must be populated by downstream V01/G03/G04/V02; no textual match as PASS.",
+    "status": "26_NOT_RUN"
+  },
+  "decision_alignment": {
+    "D001_D006": "Independent repo/consumer boundary and Git identity",
+    "D002_D007_D009": "K19/H7 primary owners, Chinese pilot not universal scope; 823 hierarchy nodes",
+    "D003_D005_D013": "Finite module evidence and independent gates; no qualification by quotas",
+    "D004_D008": "Private original source/rights isolated, no raw release",
+    "D010_D014": "Historical RDF retained; human-readable authoritative inputs; optional derived SQLite only, no persistent database",
+    "D011_D012": "27 composition views, 108 requirements, 26 CQ/12 LC dual loops and role/evidence boundaries",
+    "D015": "Documented historical and adopted candidate evidence, no lost history"
+  },
+  "formal_cq": "NOT_RUN",
+  "formal_qualification_receipts": 0,
+  "inputs": [
+    {
+      "git_blob": "992482287a319224c7ed34ee78f7921dfc771207",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/ledger-manifest.json",
+      "sha256": "55cdfa0feb54a0ba3d04a89981d829a80f31937b0e6268b40c70e74b3908b52b"
+    },
+    {
+      "git_blob": "7a723ec4052768a1b5a95c915d4abad945612f55",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/views-cq-relations.json",
+      "sha256": "3dcf7087e286e01418d72297e951b2deb884ea06bdf086d8ea77833fab9203d9"
+    },
+    {
+      "git_blob": "74b807af0b1b8cc568f9d0baea4c466e3bcc8c27",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/build_ledger.py",
+      "sha256": "aae90accba2a13abb0d8d8482efb6ffa8fb437889caac60a0686bec38d52ee79"
+    },
+    {
+      "git_blob": "fbd56192fd9a0a909839ec089fc0a7dd29bd261c",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/mapping_probe.py",
+      "sha256": "c0d013f0c93c8aa05a533c744f55938951595422f097129ca1702542a28f4edb"
+    },
+    {
+      "git_blob": "c2fefd9ffd8cc2a16839fe5a8a8cbc9831d16a6e",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/mapping-receipt.json",
+      "sha256": "a8a9eb46a8f710880ba8be5b832dd77011eca5e8bae1148abd5a8ac400f3cc12"
+    },
+    {
+      "git_blob": "e748b42c8fd5a2743e6fc3a096797f88f9298855",
+      "path": "docs/drafts/s01-scope-inventory.json",
+      "sha256": "e52bcb3912de4e2fa78ac74e05c60fd7b2b8aca50f4e8a2751ea7a0ba3cbc867"
+    },
+    {
+      "git_blob": "6a64e35532ac56f405013f7f40a553894bcb7134",
+      "path": "docs/drafts/s01/source-leads.json",
+      "sha256": "d65eedbfdbb1c6f1a2546549441700935c815001833b3a843c6a97fabb013764"
+    },
+    {
+      "git_blob": "015b0ef9a6ef852e15d3198601e12c70a1e8132e",
+      "path": "docs/drafts/s01/process-view-requirements.json",
+      "sha256": "0705604c4a1a0cd234a522d78ca17c130fa899450745d6c96540d42168a279b6"
+    },
+    {
+      "git_blob": "18df5faf4b32d24a60944640d11d7bf959479ddf",
+      "path": "docs/drafts/s01/cq-lifecycle-fixture-requirements.json",
+      "sha256": "0abd13aa2d8866785659ceb2d8c82ee77577c145b8bc1109c4bbf7c10f9fdc1f"
+    },
+    {
+      "git_blob": "c21d88a08b31e1fe11ee544a3864de32a9d10bc0",
+      "path": "docs/drafts/s01/hsk-source-domain-mapping.json",
+      "sha256": "879c3e01784604a6cdcb85e1d0d2c4d179e6785a130086d65f3a10017f80107b"
+    },
+    {
+      "git_blob": "b7c068329dd9c403dd631f065b7c5eafdccdc6e9",
+      "path": "docs/implementation/coverage-ledger.json",
+      "sha256": "7efc70dd82e5e8680b41915d525e84ec21ac8f7cbf18e4d45b6fc26c32485937"
+    },
+    {
+      "git_blob": "1578fa6f93f2865f3d9ab34a44d94cb1410b3e6b",
+      "path": "docs/product/decision-index.md",
+      "sha256": "affb96bf863a39898482392ea24e0ee6d58cc15c588ad1a055b2e3c3e3926828"
+    },
+    {
+      "git_blob": "05fd2a88ed8916f609bb9be3baf0675b805047ba",
+      "path": "docs/implementation/task-execution-contract.md",
+      "sha256": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d"
+    },
+    {
+      "git_blob": "0f7b4f65b242152ef311f01b306f3fb9caff60d6",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/src01-original-pdf-backup-evidence.json",
+      "sha256": "7e6e020a24b78e949927ccb72a67d3600dd544849067dda1b671d2942c1b3344"
+    },
+    {
+      "git_blob": "dbdfcfa64e8515c358249f3dc86e7c4257304826",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-H01-H02.jsonl",
+      "sha256": "6090edfb15094bee1c3f1df1d13dd3dbc026122ab17fafcdee09d40c4e64dfea"
+    },
+    {
+      "git_blob": "b73307bba6e6beedbb2d8378ac1c4a8ee202cbd5",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-H03-H04.jsonl",
+      "sha256": "1688d7d3ec1bfc4548e70f80415e5278260acca2bbd6b4bc13085fe9027a313b"
+    },
+    {
+      "git_blob": "bcdf481da99553fdb8763b3262c7fc30a9c9caa0",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-H05-H06.jsonl",
+      "sha256": "ecc0907de91369a537127c12ad181d0c483dca489ef64fa85c4c0863f20151a9"
+    },
+    {
+      "git_blob": "9a96b2edbea0f5f0b35dd95b6b8da2ea369f7f3d",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-H07-K01.jsonl",
+      "sha256": "72bf22224cea010d9d42f13146f5715aeb2157770fb8753190a7dc4f65937268"
+    },
+    {
+      "git_blob": "f5dc7bf22c2d4b41df876677d28cc2f47dbc5937",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K02-K03.jsonl",
+      "sha256": "ecb64a65d9f310e2e035a4d3deb2500f0fddb7d03bd2cb99d34afa4d4c17a5a5"
+    },
+    {
+      "git_blob": "121171372583c26d1415c701e5f9b46e2ba62ba2",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K04-K05.jsonl",
+      "sha256": "b15ba403638949680b3f1a0f5763988de662965a39cc56d8f77c975c2a476661"
+    },
+    {
+      "git_blob": "296df92b53f797b03fcf63913bdfe16cf872a84f",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K06-K07.jsonl",
+      "sha256": "80ac03951729f900ab86d50b87440ef84dbf74bc08dc4c0219f2f89266509bbf"
+    },
+    {
+      "git_blob": "b41b1b8b092eb9933354b058d65c1d6273f7e486",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K08-K09.jsonl",
+      "sha256": "f22cdb00b3c943bb1151687f76f790d04c7dd53a7a022a5a4e9d5c4a78bf0d6c"
+    },
+    {
+      "git_blob": "1caaea722b47d5a20a12ab7752b71bfce3bb2996",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K10-K11.jsonl",
+      "sha256": "685e38e81bbcdfc9d62e836a7a31980e1e0daeaf2609b9e21ce8f8a3cca8c939"
+    },
+    {
+      "git_blob": "5c7317b9f97f6b0d1e63ae1ff3a242d417e2087b",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K12-K13.jsonl",
+      "sha256": "4d917c7fdfc3823c05400dc53facafab4b196c629f2f114f0fb6b36a5cf1d707"
+    },
+    {
+      "git_blob": "b5e819518d24193fe487666969b26e135a800145",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K14-K15.jsonl",
+      "sha256": "3437d7d7427c470ca27f242f026d9e78aab312d6189cbec0cd7b3c4dbe8222ee"
+    },
+    {
+      "git_blob": "6dec5e09a9660a369c2b3c8fd7a8a404e1490d7f",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K16-K17.jsonl",
+      "sha256": "b3c3722b09d8022c0fb85df1f1d29e85143534881f152bb32e90141132a96f3a"
+    },
+    {
+      "git_blob": "d265658ce7b3a6771bd8ed7f217b5bc70547976a",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/coverage-K18-K19.jsonl",
+      "sha256": "ca1dc9a999de89dd994d22910b83c81cbd7762fda2c7c37cd1213ce262507128"
+    }
+  ],
+  "limits": [
+    "All candidate scope records and pointers checked, not professional adequacy or source verification; no claims qualified. G01 independent scope gate is still required.",
+    "Formal module field mapping resolves exact original JSON; no new duplicate authoritative knowledge records. 180 explicitly unassessed topics and other HOLDs carried forward.",
+    "No persistent SQLite, private content, runtime execution or learning-effect evidence."
+  ],
+  "module_field_mapping": {
+    "applicable_views": "explicit_view_bindings; topic scope/anchors separate; absent explicit binding unresolved, never NA",
+    "case_refs": "claim.case_refs plus explicit inline_case_fields; no inferred validation",
+    "claim_id": "claim.id",
+    "claim_type": "claim.claim_type",
+    "conditions": "resolve(claim.record)[claim.conditions_field]",
+    "consumed_tuple": "claim.consumed_tuple null (not issued)",
+    "counterexample": "resolve(claim.record)[claim.counterexample_field] and explicit case counterexample if present",
+    "d3_id": "topic.d3_id",
+    "d4_id_or_coverage_reason": "claim.id and topic.d4_coverage_reason (historical split excluded only in consumption)",
+    "element_relation_refs": "claim.element_relation_refs (candidate only; empty means no explicit binding)",
+    "owner": "topic.owner",
+    "qualification_receipt": "claim.qualification_receipt null (not issued)",
+    "source_locator": "claim.source_refs[3] status and [2] original locator field; source pointer [1], not evidence support",
+    "source_status": "claim.source_status + individual citation state",
+    "status": "claim.status + topic.adequacy_disposition; qualification NOT_RUN",
+    "validation_refs": "claim.validation_refs; saved historical builder arithmetic result only; empty not validated"
+  },
+  "module_scope": [
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 4,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 16
+      },
+      "candidate_claim_count": 58,
+      "d1_id": "H01",
+      "d2_count": 5,
+      "d3_count": 20,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "H01",
+      "qualification": "NOT_RUN",
+      "qualification_task": "HR01",
+      "scope_source_leads": [
+        "S018",
+        "S045",
+        "S052"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 11,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 18
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 2,
+        "HOLD_SOURCE_DETAIL": 17,
+        "HTML_LOCATED_CANDIDATE": 17,
+        "PDF_LOCATED_CANDIDATE": 2,
+        "PROJECT_POLICY": 20
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 5,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 16
+      },
+      "candidate_claim_count": 59,
+      "d1_id": "H02",
+      "d2_count": 5,
+      "d3_count": 21,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "H02",
+      "qualification": "NOT_RUN",
+      "qualification_task": "HR01",
+      "scope_source_leads": [
+        "S018",
+        "S046",
+        "S047"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 14,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 17
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 17,
+        "HTML_LOCATED_CANDIDATE": 14,
+        "PDF_LOCATED_CANDIDATE": 3,
+        "PDF_TEXT_LIMITED": 4,
+        "PROJECT_POLICY": 21
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 4,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 22
+      },
+      "candidate_claim_count": 78,
+      "d1_id": "H03",
+      "d2_count": 6,
+      "d3_count": 26,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "H03",
+      "qualification": "NOT_RUN",
+      "qualification_task": "HR01",
+      "scope_source_leads": [
+        "S018",
+        "S050"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 6,
+        "HOLD_MULTI_SOURCE_ATTRIBUTION": 2,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 25
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 9,
+        "HOLD_SOURCE_DETAIL": 22,
+        "HTML_LOCATED_CANDIDATE": 18,
+        "PDF_LOCATED_CANDIDATE": 1,
+        "PDF_TEXT_LIMITED": 2,
+        "PROJECT_POLICY": 26
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 7,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 28
+      },
+      "candidate_claim_count": 99,
+      "d1_id": "H04",
+      "d2_count": 7,
+      "d3_count": 35,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "H04",
+      "qualification": "NOT_RUN",
+      "qualification_task": "HR01",
+      "scope_source_leads": [
+        "S018",
+        "S050"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 25,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 29
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 4,
+        "HOLD_SOURCE_DETAIL": 28,
+        "HTML_LOCATED_CANDIDATE": 26,
+        "PDF_LOCATED_CANDIDATE": 3,
+        "PDF_TEXT_LIMITED": 3,
+        "PROJECT_POLICY": 35
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 25
+      },
+      "candidate_claim_count": 79,
+      "d1_id": "H05",
+      "d2_count": 5,
+      "d3_count": 25,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "H05",
+      "qualification": "NOT_RUN",
+      "qualification_task": "HR02",
+      "scope_source_leads": [
+        "S018",
+        "S019",
+        "S051"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 15,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 29
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 8,
+        "HOLD_SOURCE_DETAIL": 25,
+        "HTML_LOCATED_CANDIDATE": 10,
+        "PDF_LOCATED_CANDIDATE": 6,
+        "PDF_TEXT_LIMITED": 5,
+        "PROJECT_POLICY": 25
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 3,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 23
+      },
+      "candidate_claim_count": 75,
+      "d1_id": "H06",
+      "d2_count": 6,
+      "d3_count": 26,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "H06",
+      "qualification": "NOT_RUN",
+      "qualification_task": "HR02",
+      "scope_source_leads": [
+        "S003",
+        "S019",
+        "S050",
+        "S051"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 23,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 23
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 1,
+        "HOLD_SOURCE_DETAIL": 23,
+        "HTML_LOCATED_CANDIDATE": 10,
+        "PDF_LOCATED_CANDIDATE": 15,
+        "PROJECT_POLICY": 26
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 11,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 9
+      },
+      "candidate_claim_count": 50,
+      "d1_id": "H07",
+      "d2_count": 5,
+      "d3_count": 20,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "H07",
+      "qualification": "NOT_RUN",
+      "qualification_task": "HR02",
+      "scope_source_leads": [
+        "S048",
+        "S049",
+        "S050"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 17,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 10
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 9,
+        "HTML_LOCATED_CANDIDATE": 14,
+        "PDF_LOCATED_CANDIDATE": 6,
+        "PDF_TEXT_LIMITED": 1,
+        "PROJECT_POLICY": 20
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 5,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 14
+      },
+      "candidate_claim_count": 66,
+      "d1_id": "K01",
+      "d2_count": 5,
+      "d3_count": 19,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K01",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR01",
+      "scope_source_leads": [
+        "S001",
+        "S011",
+        "S025"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 19,
+        "HOLD_MULTI_SOURCE_ATTRIBUTION": 6,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 32
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 4,
+        "HOLD_SOURCE_DETAIL": 1,
+        "HTML_LOCATED_CANDIDATE": 30,
+        "PDF_LOCATED_CANDIDATE": 16,
+        "PDF_TEXT_LIMITED": 1,
+        "PROJECT_POLICY": 14
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 3,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 25
+      },
+      "candidate_claim_count": 79,
+      "d1_id": "K02",
+      "d2_count": 7,
+      "d3_count": 28,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K02",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR01",
+      "scope_source_leads": [
+        "S001",
+        "S026"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 49,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 6
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 4,
+        "HTML_LOCATED_CANDIDATE": 38,
+        "PDF_LOCATED_CANDIDATE": 7,
+        "PDF_TEXT_LIMITED": 2,
+        "PROJECT_POLICY": 28
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 6,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 19,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 1
+      },
+      "candidate_claim_count": 70,
+      "d1_id": "K03",
+      "d2_count": 6,
+      "d3_count": 26,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K03",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR01",
+      "scope_source_leads": [
+        "S001",
+        "S011"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 31,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 8
+      },
+      "source_status_counts": {
+        "HTML_LOCATED_CANDIDATE": 20,
+        "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION": 1,
+        "PDF_LOCATED_CANDIDATE": 12,
+        "PDF_TEXT_LIMITED": 7,
+        "PROJECT_POLICY": 30
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 3,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 21
+      },
+      "candidate_claim_count": 56,
+      "d1_id": "K04",
+      "d2_count": 6,
+      "d3_count": 24,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K04",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR01",
+      "scope_source_leads": [
+        "S001",
+        "S025",
+        "S027"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 29,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 4
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 4,
+        "HTML_LOCATED_CANDIDATE": 20,
+        "PDF_LOCATED_CANDIDATE": 6,
+        "PDF_TEXT_LIMITED": 2,
+        "PROJECT_POLICY": 24
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 3,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 15,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 7
+      },
+      "candidate_claim_count": 65,
+      "d1_id": "K05",
+      "d2_count": 6,
+      "d3_count": 25,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K05",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR02",
+      "scope_source_leads": [
+        "S002",
+        "S030"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 25,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 15
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 16,
+        "HOLD_SOURCE_DETAIL": 1,
+        "HTML_LOCATED_CANDIDATE": 10,
+        "PDF_LOCATED_CANDIDATE": 12,
+        "PDF_TEXT_LIMITED": 1,
+        "PROJECT_POLICY": 25
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 4,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 3,
+        "R5_FACET_EXAMPLES_PARTIAL_OR_HOLD": 4,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 16,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 1
+      },
+      "candidate_claim_count": 62,
+      "d1_id": "K06",
+      "d2_count": 7,
+      "d3_count": 28,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K06",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR02",
+      "scope_source_leads": [
+        "S011",
+        "S021",
+        "S028"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 28,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 6
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 4,
+        "HTML_LOCATED_CANDIDATE": 21,
+        "PDF_LOCATED_CANDIDATE": 8,
+        "PROJECT_POLICY": 28,
+        "SOURCE_LOCATED_CANDIDATE": 1
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 2,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 6,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 12,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 1
+      },
+      "candidate_claim_count": 49,
+      "d1_id": "K07",
+      "d2_count": 5,
+      "d3_count": 21,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K07",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR02",
+      "scope_source_leads": [
+        "S001",
+        "S021",
+        "S029"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 21,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 7
+      },
+      "source_status_counts": {
+        "HTML_LOCATED_CANDIDATE": 20,
+        "PDF_LOCATED_CANDIDATE": 7,
+        "PROJECT_POLICY": 21,
+        "SOURCE_LOCATED_CANDIDATE": 1
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 10,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 15,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 1
+      },
+      "candidate_claim_count": 66,
+      "d1_id": "K08",
+      "d2_count": 6,
+      "d3_count": 26,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K08",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR02",
+      "scope_source_leads": [
+        "S017",
+        "S020"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 26,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 14
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 7,
+        "HTML_LOCATED_CANDIDATE": 21,
+        "PDF_LOCATED_CANDIDATE": 11,
+        "PROJECT_POLICY": 26,
+        "SOURCE_LOCATED_CANDIDATE": 1
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 22,
+        "R5_FACET_EXAMPLES_PARTIAL_OR_HOLD": 4,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 5
+      },
+      "candidate_claim_count": 94,
+      "d1_id": "K09",
+      "d2_count": 7,
+      "d3_count": 31,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K09",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR03",
+      "scope_source_leads": [
+        "S003",
+        "S012",
+        "S031",
+        "S032",
+        "S037"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 31,
+        "HOLD_MULTI_SOURCE_ATTRIBUTION": 2,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 31
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 1,
+        "HOLD_SOURCE_DETAIL": 19,
+        "HTML_LOCATED_CANDIDATE": 29,
+        "PDF_LOCATED_CANDIDATE": 13,
+        "PROJECT_POLICY": 31,
+        "SOURCE_LOCATED_CANDIDATE": 1
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 5,
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 2,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 21,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 1
+      },
+      "candidate_claim_count": 68,
+      "d1_id": "K10",
+      "d2_count": 6,
+      "d3_count": 29,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 1,
+      "no_scope_omission_proposed": true,
+      "owner": "K10",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR03",
+      "scope_source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 25,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 10
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 2,
+        "HOLD_SOURCE_DETAIL": 2,
+        "HTML_LOCATED_CANDIDATE": 13,
+        "PDF_LOCATED_CANDIDATE": 19,
+        "PROJECT_POLICY": 32,
+        "SOURCE_LOCATED_CANDIDATE": 1
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 4,
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 5,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 13,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 5
+      },
+      "candidate_claim_count": 65,
+      "d1_id": "K11",
+      "d2_count": 6,
+      "d3_count": 27,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K11",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR03",
+      "scope_source_leads": [
+        "S004",
+        "S033",
+        "S036",
+        "S037"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 19,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 8
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 2,
+        "HTML_LOCATED_CANDIDATE": 13,
+        "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION": 3,
+        "PDF_LOCATED_CANDIDATE": 9,
+        "PROJECT_POLICY": 36,
+        "SOURCE_LOCATED_CANDIDATE": 2
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 1,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 6,
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 3,
+        "R5_FACET_EXAMPLES_PARTIAL_OR_HOLD": 4,
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED": 12,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 3
+      },
+      "candidate_claim_count": 67,
+      "d1_id": "K12",
+      "d2_count": 6,
+      "d3_count": 29,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K12",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR03",
+      "scope_source_leads": [
+        "S003",
+        "S011",
+        "S012",
+        "S015",
+        "S022",
+        "S031"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 23,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 8
+      },
+      "source_status_counts": {
+        "HTML_LOCATED_CANDIDATE": 28,
+        "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION": 1,
+        "PDF_LOCATED_CANDIDATE": 1,
+        "PROJECT_POLICY": 35,
+        "SOURCE_LOCATED_CANDIDATE": 2
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 7,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 14
+      },
+      "candidate_claim_count": 56,
+      "d1_id": "K13",
+      "d2_count": 5,
+      "d3_count": 21,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K13",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR04",
+      "scope_source_leads": [
+        "S001",
+        "S038"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 21,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 14
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 14,
+        "HTML_LOCATED_CANDIDATE": 21,
+        "PROJECT_POLICY": 21
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 3,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 17,
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 1,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 1
+      },
+      "candidate_claim_count": 63,
+      "d1_id": "K14",
+      "d2_count": 5,
+      "d3_count": 22,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K14",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR04",
+      "scope_source_leads": [
+        "S001",
+        "S003",
+        "S011",
+        "S018",
+        "S019",
+        "S038"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 21,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 19
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 17,
+        "HTML_LOCATED_CANDIDATE": 22,
+        "PROJECT_POLICY": 23,
+        "SOURCE_LOCATED_CANDIDATE": 1
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 4,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 16,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 6
+      },
+      "candidate_claim_count": 75,
+      "d1_id": "K15",
+      "d2_count": 6,
+      "d3_count": 26,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 1,
+      "no_scope_omission_proposed": true,
+      "owner": "K15",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR04",
+      "scope_source_leads": [
+        "S001",
+        "S011",
+        "S013",
+        "S039",
+        "S041"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 20,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 21
+      },
+      "source_status_counts": {
+        "ABSTRACT_LIMITED": 2,
+        "HOLD_SOURCE_DETAIL": 16,
+        "HTML_LOCATED_CANDIDATE": 18,
+        "ORIGINAL_LOGICAL_OR_METHOD_DERIVATION": 2,
+        "PROJECT_POLICY": 33,
+        "SOURCE_LOCATED_CANDIDATE": 5
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 5,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 11,
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 4
+      },
+      "candidate_claim_count": 52,
+      "d1_id": "K16",
+      "d2_count": 5,
+      "d3_count": 20,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K16",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR04",
+      "scope_source_leads": [
+        "S003",
+        "S015",
+        "S040",
+        "S041"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 16,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 12
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 11,
+        "HTML_LOCATED_CANDIDATE": 17,
+        "PROJECT_POLICY": 24
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 12,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 13,
+        "TARGETED_SUPPLEMENT_PENDING_REVIEW": 5
+      },
+      "candidate_claim_count": 79,
+      "d1_id": "K17",
+      "d2_count": 6,
+      "d3_count": 30,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K17",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR05",
+      "scope_source_leads": [
+        "S014",
+        "S042",
+        "S043"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 25,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 19
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 13,
+        "HTML_LOCATED_CANDIDATE": 26,
+        "PROJECT_POLICY": 35,
+        "SOURCE_LOCATED_CANDIDATE": 5
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 9,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 8,
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 2
+      },
+      "candidate_claim_count": 46,
+      "d1_id": "K18",
+      "d2_count": 5,
+      "d3_count": 19,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 0,
+      "no_scope_omission_proposed": true,
+      "owner": "K18",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR05",
+      "scope_source_leads": [
+        "S001"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 17,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 8
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 8,
+        "HTML_LOCATED_CANDIDATE": 17,
+        "PROJECT_POLICY": 21
+      }
+    },
+    {
+      "adequacy_disposition_counts": {
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD": 4,
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS": 15,
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD": 5
+      },
+      "candidate_claim_count": 64,
+      "d1_id": "K19",
+      "d2_count": 5,
+      "d3_count": 24,
+      "formal_claim_receipts": 0,
+      "historical_claim_count": 1,
+      "no_scope_omission_proposed": true,
+      "owner": "K19",
+      "qualification": "NOT_RUN",
+      "qualification_task": "KR05",
+      "scope_source_leads": [
+        "S003",
+        "S039",
+        "S044"
+      ],
+      "source_locator_state_counts": {
+        "HOLD_CLAIM_LOCATOR_MISSING": 19,
+        "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 16
+      },
+      "source_status_counts": {
+        "HOLD_SOURCE_DETAIL": 15,
+        "HTML_LOCATED_CANDIDATE": 19,
+        "PROJECT_POLICY": 30,
+        "SOURCE_LOCATED_CANDIDATE": 1
+      }
+    }
+  ],
+  "original_ledger_input_count": 299,
+  "planning_head": "be5c9c4b032d04070c0ad4643222df4a0c828f06",
+  "planning_review_comment": 7211695681,
+  "scope_policy": "All planned K/H D1-D3 and P/F/A/E views remain in scope; no proposed omissions or NA. Unassessed adequacy, gaps, rights and actual validation are HOLD/NOT_RUN, not exclusions. Historical inventory status superseded for scope inventory only, never professional qualification. G01 may reject scope or identify omissions.",
+  "source_qualification_plan": {
+    "455_source_records": "Candidate only; per-claim source identity and locator, applicability, access/rights and validation qualified by owner tasks/local batches then G03/G05. Project rules do not require fabricated empirical source; no direct source means explicit state, not automatic error or support.",
+    "45_scope_leads": {
+      "DISCOVERED_INDEX_ONLY": 2,
+      "LOCATED_SCOPE_ONLY": 43
+    },
+    "995_citation_states": {
+      "HOLD_CLAIM_LOCATOR_MISSING": 576,
+      "HOLD_MULTI_SOURCE_ATTRIBUTION": 10,
+      "RECORDED_CLAIM_LOCATOR_NOT_REVERIFIED": 409
+    },
+    "HSK": "9 source mapping kinds; RHSK01–03 current originals fingerprinted and restored, historical PDF identity/14 blocks/rights unresolved; SRC01 no preservation receipt, HS00/HSK01 not dispatched. HSK3.0 version records separate from other standards and levels are not skill equivalence."
+  },
+  "status": "SCOPE_CANDIDATE_READY_FOR_G01_NOT_QUALIFIED",
+  "task_id": "S01",
+  "view_scope": [
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 4
+      },
+      "id": "P01",
+      "owner": "P01",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR01",
+      "requirement_ids": [
+        "P01.RQ01",
+        "P01.RQ02",
+        "P01.RQ03",
+        "P01.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "P02",
+      "owner": "P02",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR01",
+      "requirement_ids": [
+        "P02.RQ01",
+        "P02.RQ02",
+        "P02.RQ03",
+        "P02.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "P03",
+      "owner": "P03",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR01",
+      "requirement_ids": [
+        "P03.RQ01",
+        "P03.RQ02",
+        "P03.RQ03",
+        "P03.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "P04",
+      "owner": "P04",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR01",
+      "requirement_ids": [
+        "P04.RQ01",
+        "P04.RQ02",
+        "P04.RQ03",
+        "P04.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 1,
+        "CANDIDATE_PARTIAL": 3
+      },
+      "id": "P05",
+      "owner": "P05",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR01",
+      "requirement_ids": [
+        "P05.RQ01",
+        "P05.RQ02",
+        "P05.RQ03",
+        "P05.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "P06",
+      "owner": "P06",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR01",
+      "requirement_ids": [
+        "P06.RQ01",
+        "P06.RQ02",
+        "P06.RQ03",
+        "P06.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "P07",
+      "owner": "P07",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR02",
+      "requirement_ids": [
+        "P07.RQ01",
+        "P07.RQ02",
+        "P07.RQ03",
+        "P07.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "P08",
+      "owner": "P08",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR02",
+      "requirement_ids": [
+        "P08.RQ01",
+        "P08.RQ02",
+        "P08.RQ03",
+        "P08.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 1,
+        "CANDIDATE_PARTIAL": 3
+      },
+      "id": "P09",
+      "owner": "P09",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR02",
+      "requirement_ids": [
+        "P09.RQ01",
+        "P09.RQ02",
+        "P09.RQ03",
+        "P09.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 2,
+        "CANDIDATE_PARTIAL": 2
+      },
+      "id": "P10",
+      "owner": "P10",
+      "qualification": "NOT_RUN",
+      "qualification_task": "PR02",
+      "requirement_ids": [
+        "P10.RQ01",
+        "P10.RQ02",
+        "P10.RQ03",
+        "P10.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_HOLD": 1
+      },
+      "id": "F01",
+      "owner": "F01",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F01.RQ01",
+        "F01.RQ02",
+        "F01.RQ03",
+        "F01.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "F02",
+      "owner": "F02",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F02.RQ01",
+        "F02.RQ02",
+        "F02.RQ03",
+        "F02.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 2,
+        "CANDIDATE_HOLD": 1,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "F03",
+      "owner": "F03",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F03.RQ01",
+        "F03.RQ02",
+        "F03.RQ03",
+        "F03.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 4
+      },
+      "id": "F04",
+      "owner": "F04",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F04.RQ01",
+        "F04.RQ02",
+        "F04.RQ03",
+        "F04.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 2,
+        "CANDIDATE_PARTIAL": 2
+      },
+      "id": "F05",
+      "owner": "F05",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F05.RQ01",
+        "F05.RQ02",
+        "F05.RQ03",
+        "F05.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 4
+      },
+      "id": "F06",
+      "owner": "F06",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F06.RQ01",
+        "F06.RQ02",
+        "F06.RQ03",
+        "F06.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 1,
+        "CANDIDATE_HOLD": 2,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "F07",
+      "owner": "F07",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F07.RQ01",
+        "F07.RQ02",
+        "F07.RQ03",
+        "F07.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 2,
+        "CANDIDATE_PARTIAL": 2
+      },
+      "id": "F08",
+      "owner": "F08",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "F08.RQ01",
+        "F08.RQ02",
+        "F08.RQ03",
+        "F08.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 1,
+        "CANDIDATE_HOLD": 3
+      },
+      "id": "E01",
+      "owner": "E01",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "E01.RQ01",
+        "E01.RQ02",
+        "E01.RQ03",
+        "E01.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "A01",
+      "owner": "A01",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A01.RQ01",
+        "A01.RQ02",
+        "A01.RQ03",
+        "A01.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 2,
+        "CANDIDATE_PARTIAL": 2
+      },
+      "id": "A02",
+      "owner": "A02",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A02.RQ01",
+        "A02.RQ02",
+        "A02.RQ03",
+        "A02.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_PARTIAL": 4
+      },
+      "id": "A03",
+      "owner": "A03",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A03.RQ01",
+        "A03.RQ02",
+        "A03.RQ03",
+        "A03.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 3,
+        "CANDIDATE_PARTIAL": 1
+      },
+      "id": "A04",
+      "owner": "A04",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A04.RQ01",
+        "A04.RQ02",
+        "A04.RQ03",
+        "A04.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_PARTIAL": 4
+      },
+      "id": "A05",
+      "owner": "A05",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A05.RQ01",
+        "A05.RQ02",
+        "A05.RQ03",
+        "A05.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 2,
+        "CANDIDATE_HOLD": 2
+      },
+      "id": "A06",
+      "owner": "A06",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A06.RQ01",
+        "A06.RQ02",
+        "A06.RQ03",
+        "A06.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 2,
+        "CANDIDATE_PARTIAL": 2
+      },
+      "id": "A07",
+      "owner": "A07",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A07.RQ01",
+        "A07.RQ02",
+        "A07.RQ03",
+        "A07.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    },
+    {
+      "candidate_status_counts": {
+        "CANDIDATE_EXEMPLIFIED": 1,
+        "CANDIDATE_HOLD": 1,
+        "CANDIDATE_PARTIAL": 2
+      },
+      "id": "A08",
+      "owner": "A08",
+      "qualification": "NOT_RUN",
+      "qualification_task": "G03",
+      "requirement_ids": [
+        "A08.RQ01",
+        "A08.RQ02",
+        "A08.RQ03",
+        "A08.RQ04"
+      ],
+      "scope_omission": "NONE_PROPOSED"
+    }
+  ]
+}
