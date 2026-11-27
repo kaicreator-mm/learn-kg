@@ -1,0 +1,1032 @@
+[
+  {
+    "topic": "K09.02.02",
+    "id": "K09.02.02.MODEL.01",
+    "label": "经典测量信度",
+    "definition": "指定重复测量程序的方差比例",
+    "parameters": [
+      {
+        "name": "true_var",
+        "unit": "score squared",
+        "meaning": "真分数方差",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "error_var",
+        "unit": "score squared",
+        "meaning": "误差方差",
+        "lower": 0,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "reliability",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "variable": "true_var"
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "variable": "true_var"
+                },
+                {
+                  "variable": "error_var"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "同一总体和重复测量程序",
+      "误差均值0且与真分数不相关；总方差>0"
+    ],
+    "boundary": "信度非效度；不得把不同重复条件的信度互换。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K09.03.01",
+    "id": "K09.03.01.MODEL.01",
+    "label": "有效作答正确率",
+    "definition": "样本内正确率及缺答率",
+    "parameters": [
+      {
+        "name": "correct",
+        "unit": "count",
+        "meaning": "正确",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "incorrect",
+        "unit": "count",
+        "meaning": "错误",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "missing",
+        "unit": "count",
+        "meaning": "缺答",
+        "lower": 0,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "p",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "variable": "correct"
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "variable": "correct"
+                },
+                {
+                  "variable": "incorrect"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "missing_rate",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "variable": "missing"
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "variable": "correct"
+                },
+                {
+                  "variable": "incorrect"
+                },
+                {
+                  "variable": "missing"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "各计数非负整数",
+      "有效作答及总数均>0；缺答单列"
+    ],
+    "boundary": "不将样本正确率当IRT位置参数。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K09.03.02",
+    "id": "K09.03.02.MODEL.01",
+    "label": "高低组正确率差",
+    "definition": "同题两个定义明确组的正确率差",
+    "parameters": [
+      {
+        "name": "hi_correct",
+        "unit": "count",
+        "meaning": "高组正确",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "hi_total",
+        "unit": "count",
+        "meaning": "高组有效总数",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "lo_correct",
+        "unit": "count",
+        "meaning": "低组正确",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "lo_total",
+        "unit": "count",
+        "meaning": "低组有效总数",
+        "lower": 0,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "difference",
+        "expr": {
+          "op": "sub",
+          "args": [
+            {
+              "op": "div",
+              "args": [
+                {
+                  "variable": "hi_correct"
+                },
+                {
+                  "variable": "hi_total"
+                }
+              ]
+            },
+            {
+              "op": "div",
+              "args": [
+                {
+                  "variable": "lo_correct"
+                },
+                {
+                  "variable": "lo_total"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "两组分母>0且正确数不超过总数",
+      "组定义及抽样条件明确"
+    ],
+    "boundary": "不是点二列相关或IRT斜率。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K09.03.04",
+    "id": "K09.03.04.MODEL.01",
+    "label": "经典测量标准误",
+    "definition": "同一量尺和总体的平均SEM",
+    "parameters": [
+      {
+        "name": "sd",
+        "unit": "score",
+        "meaning": "观测分标准差",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "r",
+        "unit": "probability",
+        "meaning": "对应信度",
+        "lower": 0,
+        "upper": 1
+      }
+    ],
+    "formulas": [
+      {
+        "name": "sem",
+        "expr": {
+          "op": "mul",
+          "args": [
+            {
+              "variable": "sd"
+            },
+            {
+              "op": "pow",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "variable": "r"
+                    }
+                  ]
+                },
+                {
+                  "constant": 0.5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "SD与r同一总体和量尺；误差模型适用"
+    ],
+    "boundary": "不是个体置信区间；条件SEM另估。",
+    "numeric_domain": "BINARY64"
+  },
+  {
+    "topic": "K09.04.01",
+    "id": "K09.04.01.MODEL.01",
+    "label": "二分Rasch概率",
+    "definition": "D=1且固定斜率1的条件响应概率",
+    "parameters": [
+      {
+        "name": "theta",
+        "unit": "declared scale",
+        "meaning": "潜在位置",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "b",
+        "unit": "declared scale",
+        "meaning": "题目位置",
+        "lower": null,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "p",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "constant": 1
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "constant": 1
+                },
+                {
+                  "op": "exp",
+                  "args": [
+                    {
+                      "op": "neg",
+                      "args": [
+                        {
+                          "op": "sub",
+                          "args": [
+                            {
+                              "variable": "theta"
+                            },
+                            {
+                              "variable": "b"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "同尺度且参数有限，固定斜率1",
+      "二分响应；模型拟合与识别另证"
+    ],
+    "boundary": "全对全错不填有限无约束MLE；非实际能力诊断。",
+    "numeric_domain": "BINARY64"
+  },
+  {
+    "topic": "K09.04.02",
+    "id": "K09.04.02.MODEL.01",
+    "label": "二分3PL概率",
+    "definition": "D=1的下渐近参数与logistic响应概率",
+    "parameters": [
+      {
+        "name": "theta",
+        "unit": "declared scale",
+        "meaning": "潜在位置",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "b",
+        "unit": "declared scale",
+        "meaning": "题目位置",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "a",
+        "unit": "inverse latent scale",
+        "meaning": "正斜率",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "c",
+        "unit": "probability",
+        "meaning": "下渐近参数",
+        "lower": 0,
+        "upper": 1
+      }
+    ],
+    "formulas": [
+      {
+        "name": "p",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "variable": "c"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "variable": "c"
+                    }
+                  ]
+                },
+                {
+                  "op": "div",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "op": "add",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "op": "exp",
+                          "args": [
+                            {
+                              "op": "neg",
+                              "args": [
+                                {
+                                  "op": "mul",
+                                  "args": [
+                                    {
+                                      "variable": "a"
+                                    },
+                                    {
+                                      "op": "sub",
+                                      "args": [
+                                        {
+                                          "variable": "theta"
+                                        },
+                                        {
+                                          "variable": "b"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "a>0、0<=c<1；同一识别尺度",
+      "有限参数、二分模型；c=0退化2PL"
+    ],
+    "boundary": "c不是某次实际猜测事件；概率正确不证实模型拟合。",
+    "numeric_domain": "BINARY64"
+  },
+  {
+    "topic": "K09.04.03",
+    "id": "K09.04.03.MODEL.01",
+    "label": "二维补偿性logit",
+    "definition": "两维度固定参数的补偿性概率",
+    "parameters": [
+      {
+        "name": "a1",
+        "unit": "declared scale",
+        "meaning": "维1负荷",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "a2",
+        "unit": "declared scale",
+        "meaning": "维2负荷",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "theta1",
+        "unit": "declared scale",
+        "meaning": "维1位置",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "theta2",
+        "unit": "declared scale",
+        "meaning": "维2位置",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "d",
+        "unit": "declared scale",
+        "meaning": "截距",
+        "lower": null,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "p",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "constant": 1
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "constant": 1
+                },
+                {
+                  "op": "exp",
+                  "args": [
+                    {
+                      "op": "neg",
+                      "args": [
+                        {
+                          "op": "add",
+                          "args": [
+                            {
+                              "op": "mul",
+                              "args": [
+                                {
+                                  "variable": "a1"
+                                },
+                                {
+                                  "variable": "theta1"
+                                }
+                              ]
+                            },
+                            {
+                              "op": "mul",
+                              "args": [
+                                {
+                                  "variable": "a2"
+                                },
+                                {
+                                  "variable": "theta2"
+                                }
+                              ]
+                            },
+                            {
+                              "variable": "d"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "仅此二维补偿模型；同尺度；有限参数"
+    ],
+    "boundary": "相同logit不证明画像相同；非补偿模型另定义。",
+    "numeric_domain": "BINARY64"
+  },
+  {
+    "topic": "K09.04.04",
+    "id": "K09.04.04.MODEL.01",
+    "label": "2PL单题信息",
+    "definition": "D=1的2PL条件信息",
+    "parameters": [
+      {
+        "name": "a_squared",
+        "unit": "inverse latent scale squared",
+        "meaning": "斜率平方",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "p",
+        "unit": "probability",
+        "meaning": "条件正确概率",
+        "lower": 0,
+        "upper": 1
+      }
+    ],
+    "formulas": [
+      {
+        "name": "information",
+        "expr": {
+          "op": "mul",
+          "args": [
+            {
+              "variable": "a_squared"
+            },
+            {
+              "variable": "p"
+            },
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "constant": 1
+                },
+                {
+                  "variable": "p"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "a_squared>0；0<p<1",
+      "局部独立才可相加；总信息>0才可求条件SE"
+    ],
+    "boundary": "无局部独立不能直接相加；模型条件精度非真实学习效果。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K09.05.01",
+    "id": "K09.05.01.MODEL.01",
+    "label": "二属性DINA有限形式",
+    "definition": "两个二元属性与非空Q行的合取理想响应",
+    "parameters": [
+      {
+        "name": "q1",
+        "unit": "probability",
+        "meaning": "是否需属性1",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "q2",
+        "unit": "probability",
+        "meaning": "是否需属性2",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "alpha1",
+        "unit": "probability",
+        "meaning": "属性1画像",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "alpha2",
+        "unit": "probability",
+        "meaning": "属性2画像",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "s",
+        "unit": "probability",
+        "meaning": "滑失",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "g",
+        "unit": "probability",
+        "meaning": "猜测",
+        "lower": 0,
+        "upper": 1
+      }
+    ],
+    "formulas": [
+      {
+        "name": "eta",
+        "expr": {
+          "op": "mul",
+          "args": [
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "constant": 1
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "variable": "q1"
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "alpha1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "constant": 1
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "variable": "q2"
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "alpha2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "p",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "variable": "g"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "s"
+                        }
+                      ]
+                    },
+                    {
+                      "variable": "g"
+                    }
+                  ]
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "variable": "q1"
+                            },
+                            {
+                              "op": "sub",
+                              "args": [
+                                {
+                                  "constant": 1
+                                },
+                                {
+                                  "variable": "alpha1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "variable": "q2"
+                            },
+                            {
+                              "op": "sub",
+                              "args": [
+                                {
+                                  "constant": 1
+                                },
+                                {
+                                  "variable": "alpha2"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "q及alpha仅0/1；至少一项q=1",
+      "1-s>g，参数在[0,1]；固定Q行"
+    ],
+    "boundary": "不是后验掌握概率；更高维须显式扩展。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K09.07.03",
+    "id": "K09.07.03.MODEL.01",
+    "label": "筛查混淆矩阵指标",
+    "definition": "适用参考标准下的二分类比例",
+    "parameters": [
+      {
+        "name": "tp",
+        "unit": "count",
+        "meaning": "真阳性",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "fn",
+        "unit": "count",
+        "meaning": "假阴性",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "tn",
+        "unit": "count",
+        "meaning": "真阴性",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "fp",
+        "unit": "count",
+        "meaning": "假阳性",
+        "lower": 0,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "se",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "variable": "tp"
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "variable": "tp"
+                },
+                {
+                  "variable": "fn"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "sp",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "variable": "tn"
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "variable": "tn"
+                },
+                {
+                  "variable": "fp"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "ppv",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "variable": "tp"
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "variable": "tp"
+                },
+                {
+                  "variable": "fp"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "参考标准适用；四计数非负整数；各分母>0"
+    ],
+    "boundary": "预测值依目标总体基率；筛查阳性非确诊或自动能力分类。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K09.07.04",
+    "id": "K09.07.04.MODEL.01",
+    "label": "线性尺度链接",
+    "definition": "匹配均值标准差的线性映射",
+    "parameters": [
+      {
+        "name": "mux",
+        "unit": "declared scale",
+        "meaning": "X均值",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "sx",
+        "unit": "X score",
+        "meaning": "X标准差",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "muy",
+        "unit": "declared scale",
+        "meaning": "Y均值",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "sy",
+        "unit": "Y score",
+        "meaning": "Y标准差",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "x",
+        "unit": "declared scale",
+        "meaning": "X分数",
+        "lower": null,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "linked",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "variable": "muy"
+            },
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "variable": "x"
+                        },
+                        {
+                          "variable": "mux"
+                        }
+                      ]
+                    },
+                    {
+                      "variable": "sy"
+                    }
+                  ]
+                },
+                {
+                  "variable": "sx"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "同目标总体及可比设计；sx,sy>0"
+    ],
+    "boundary": "线性链接不等于等值或个体回归预测。",
+    "numeric_domain": "RATIONAL"
+  }
+]
