@@ -1,0 +1,1234 @@
+{
+  "fixture_sha256": "7868d6ba2c6a735dc1af59bad258a6d671e88bf002ca2c44f2bbf1d496e2e3e2",
+  "results": [
+    {
+      "id": "K05.PT.COMP.01.RAW.0",
+      "name": "matched",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": 7,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "SUGGEST",
+        "reason": "MATCHED_DESCRIPTIVE_COMPARISON",
+        "preferred": "retrieval"
+      },
+      "actual": {
+        "action": "SUGGEST",
+        "reason": "MATCHED_DESCRIPTIVE_COMPARISON",
+        "preferred": "retrieval"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.1",
+      "name": "tie",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": 4,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "NO_OBSERVED_ADVANTAGE"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "NO_OBSERVED_ADVANTAGE"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.2",
+      "name": "immediate_vs_delay",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 0,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": 7,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.3",
+      "name": "assisted",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": false,
+          "strategy": "retrieval",
+          "correct": 7,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.4",
+      "name": "missing_score",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": null,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.5",
+      "name": "wrong_count_type",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": true,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.6",
+      "name": "different_denominator",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": 7,
+          "total": 20
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.7",
+      "name": "same_strategy",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 7,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "UNMATCHED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.8",
+      "name": "zero_opportunities",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 0,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 4,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 0,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": 7,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K05.PT.COMP.01.RAW.9",
+      "name": "reverse",
+      "input": {
+        "a": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "restudy",
+          "correct": 9,
+          "total": 10
+        },
+        "b": {
+          "target": "recall",
+          "material": "set1",
+          "opportunities": 4,
+          "delay_days": 7,
+          "format": "free_recall",
+          "independent": true,
+          "strategy": "retrieval",
+          "correct": 7,
+          "total": 10
+        }
+      },
+      "expected": {
+        "action": "SUGGEST",
+        "reason": "MATCHED_DESCRIPTIVE_COMPARISON",
+        "preferred": "restudy"
+      },
+      "actual": {
+        "action": "SUGGEST",
+        "reason": "MATCHED_DESCRIPTIVE_COMPARISON",
+        "preferred": "restudy"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.0",
+      "name": "gap",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "SUGGEST",
+        "reason": "BOUNDED_REMEDIATION"
+      },
+      "actual": {
+        "action": "SUGGEST",
+        "reason": "BOUNDED_REMEDIATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.1",
+      "name": "met",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "NO_CONFIRMED_GAP"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "NO_CONFIRMED_GAP"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.2",
+      "name": "assist",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": false,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.3",
+      "name": "mismatch",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "copied_example",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.4",
+      "name": "low_sample",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 6,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.5",
+      "name": "refused",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": false,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "STOP",
+        "reason": "NO_PERMISSION"
+      },
+      "actual": {
+        "action": "STOP",
+        "reason": "NO_PERMISSION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.6",
+      "name": "budget",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 14,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INSUFFICIENT_BUDGET"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INSUFFICIENT_BUDGET"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.7",
+      "name": "unknown_permission",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": null,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "NO_PERMISSION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "NO_PERMISSION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.8",
+      "name": "unknown_tools",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": null,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 5
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K06.PT.COMP.01.RAW.9",
+      "name": "zero_retest",
+      "input": {
+        "target": "new_problem",
+        "observed_target": "new_problem",
+        "independent": true,
+        "tools_allowed": true,
+        "correct": 4,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "consent": true,
+        "budget_min": 20,
+        "support_min": 10,
+        "retest_min": 0
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_PLAN"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_PLAN"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.0",
+      "name": "met",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": true
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "SUGGEST",
+        "reason": "DECLARED_RULE_MET"
+      },
+      "actual": {
+        "action": "SUGGEST",
+        "reason": "DECLARED_RULE_MET"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.1",
+      "name": "below",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 7,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": true
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "BELOW_RULE"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "BELOW_RULE"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.2",
+      "name": "missing_necessary",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {},
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.3",
+      "name": "false_necessary",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": false
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.4",
+      "name": "wrong_type",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": 1
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.5",
+      "name": "unknown_scope",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": null,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": true
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.6",
+      "name": "small_sample",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 7,
+        "total": 7,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": true
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.7",
+      "name": "declared_no_necessary",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [],
+        "evidence": {},
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "SUGGEST",
+        "reason": "DECLARED_RULE_MET"
+      },
+      "actual": {
+        "action": "SUGGEST",
+        "reason": "DECLARED_RULE_MET"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.8",
+      "name": "duplicate_necessary",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": 8,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A",
+          "A"
+        ],
+        "evidence": {
+          "A": true
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "PREREQUISITE_UNCONFIRMED"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K07.PT.COMP.01.RAW.9",
+      "name": "wrong_count",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "independent": true,
+        "correct": true,
+        "total": 10,
+        "criterion": "4/5",
+        "min_samples": 8,
+        "prerequisite_scope_confirmed": true,
+        "necessary": [
+          "A"
+        ],
+        "evidence": {
+          "A": true
+        },
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_OBSERVATION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.0",
+      "name": "confirmed",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": true,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "SUGGEST",
+        "reason": "CONFIRMED_FEASIBLE_PLAN"
+      },
+      "actual": {
+        "action": "SUGGEST",
+        "reason": "CONFIRMED_FEASIBLE_PLAN"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.1",
+      "name": "refused",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": false,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "actual": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.2",
+      "name": "unknown",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": null,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "actual": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.3",
+      "name": "stale_confirmation",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 1,
+        "consent": true,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "actual": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.4",
+      "name": "other_plan",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P2",
+        "confirmed_revision": 2,
+        "consent": true,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "actual": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.5",
+      "name": "over_budget",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": true,
+        "budget_min": 24,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INSUFFICIENT_BUDGET"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INSUFFICIENT_BUDGET"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.6",
+      "name": "bad_cost",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": true,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          -1
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_PLAN"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_PLAN"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.7",
+      "name": "missing_observation",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": true,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": null,
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "CLARIFY",
+        "reason": "INVALID_PLAN"
+      },
+      "actual": {
+        "action": "CLARIFY",
+        "reason": "INVALID_PLAN"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.8",
+      "name": "boolean_revision",
+      "input": {
+        "plan_id": "P1",
+        "revision": true,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": true,
+        "consent": true,
+        "budget_min": 30,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "actual": {
+        "action": "STOP",
+        "reason": "NO_EXACT_PERMISSION"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "K08.PT.COMP.01.RAW.9",
+      "name": "exact_budget",
+      "input": {
+        "plan_id": "P1",
+        "revision": 2,
+        "confirmed_plan_id": "P1",
+        "confirmed_revision": 2,
+        "consent": true,
+        "budget_min": 25,
+        "costs_min": [
+          10,
+          15
+        ],
+        "observation_id": "OBS1",
+        "attribution_id": "ATTR1"
+      },
+      "expected": {
+        "action": "SUGGEST",
+        "reason": "CONFIRMED_FEASIBLE_PLAN"
+      },
+      "actual": {
+        "action": "SUGGEST",
+        "reason": "CONFIRMED_FEASIBLE_PLAN"
+      },
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    }
+  ]
+}
