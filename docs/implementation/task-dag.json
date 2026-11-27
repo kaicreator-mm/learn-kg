@@ -3381,7 +3381,7 @@
         }
       ],
       "output_receipt": "CANDIDATE_READY",
-      "status": "PLANNED"
+      "status": "READY"
     },
     {
       "id": "V00",
@@ -3626,5 +3626,6 @@
     "sqlite": "optional downstream derived import target; no persistent SQLite deliverable or default build output",
     "validation": "static schema and semantic validation first; later importer tests use in-memory SQLite by default; physical SQLite tests only in separately authorized scope, report untested obligations explicitly",
     "release": "approved readable source package + schemas + importer + validation reports and manifest; no .sqlite/.db binary files"
-  }
+  },
+  "current_task_state_note": "SRC01 ACCEPT_SCOPED / PRESERVATION_VERIFIED for restricted private preservation only; historical PDF byte identity, rights/publication and visual layout remain HOLD. HS00 is READY; HSK01 remains PLANNED pending HS00 candidate acceptance. P01-P10 cumulative process remains REWORK_REQUIRED due P09 identity/time remediation; F/E/A07 candidate delta reviews pending."
 }
