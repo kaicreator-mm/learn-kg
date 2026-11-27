@@ -1,0 +1,356 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-candidate-registration-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "reviewer": "chatgpt-web:learn-kg-kr03-05-independent-batch-reviewer",
+  "review_session": "learn-kg-kr03-05-independent-batch-review-20261127",
+  "branch": "version/v0.1.0",
+  "base": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "exact_head": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K18",
+  "attempt_id": "K18-FORMAL-01",
+  "receipt_id": "TASK:K18:K18-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "K02",
+      "receipt_id": "TASK:K02:K02-FORMAL-03",
+      "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K02/K02-FORMAL-03.json",
+          "sha256": "5c6f1a7b0c5b271495370ce6cdc63ec595dcad6137f6b3a16ac90e3eece92713"
+        },
+        {
+          "path": "evidence/tasks/K02/K02-QUALIFICATION-01.json",
+          "sha256": "90b250a76d43dd836682428e682b69673cf4f63f54f27fc019f77ba549793da8"
+        }
+      ],
+      "qualification_receipt_id": "TASK:K02:K02-QUALIFICATION-01",
+      "qualification_scope": "LOCAL"
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/k14-k18-preparation/K14-depth.md",
+      "sha256": "998e1b6ecd860c900f5ba32ee171339f9ca0162da017e406b9d0b5b42359c34a",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k14-k18-preparation/K18-depth.md",
+      "sha256": "9619a5ea8549d1d7c0a92c6cbf633a748af6a0a4a1540f4816242d085e5dac7e",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/k14-k18-preparation/actual-source-observations.json",
+      "sha256": "942b11fcaac2d51db16c5ed4f3d817fbc66ca3f23a1263f36f8108b095ef8c67",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k14-k18-preparation/depth.json",
+      "sha256": "be742d66c149b2a85a7966102c962ea0e0d9d700a27f543252cc6da9a4330a66",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k14-k18-preparation/scope-witness.json",
+      "sha256": "61d56c3513595873c88efc32ad776322c90999e8d195eb81c7c72a916224cc16",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-batch/scope-ledger.json",
+      "sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/task-execution-contract.md",
+      "sha256": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K14/coverage.json",
+      "sha256": "4197c2dba8f5f00aab694e1b7ad907836f2949fa8d22bc882d2f9a0fd1d68d6d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K14/records-00.jsonl",
+      "sha256": "02bf08f2a772e64e264bc9b50ce1983947e100f1fed93c74b75fe0e1688583f9",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K14/records-01.jsonl",
+      "sha256": "6d48993ee02f6ed9b4b39611dec78af11a3684a245c94a297c4ca00643e2818f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K14/records-02.jsonl",
+      "sha256": "1d0775f0d608894579977c5296b7fb6cf6fc19e021d1914f8a6455c2c7b3ef59",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K14/records-03.jsonl",
+      "sha256": "12351782416c6278ce9c2b37d5d656a11067eb7ef7066aa2a0a365714f18dc16",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K14/records-04.jsonl",
+      "sha256": "387861fdfa40cf73e65c9a04bb66e2839f5886af5959626b2e84baf8fe663fb0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K14/records-05.jsonl",
+      "sha256": "ebfc1a15ff6c2ce85b741cbd7eedd24e268109ff4fa55d37423fa8361c45dffa",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K18/coverage.json",
+      "sha256": "41c34cdc8b6fa4713723b948e725e57a7e4273bf67374443316dbd57bd10a14d",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K18/records-00.jsonl",
+      "sha256": "af9a780b7f5e55cae07bb04884e6b158d524a5a86449e5644d2b11dd01bc82da",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K18/records-01.jsonl",
+      "sha256": "156345e93bdc958639d6f9b281b38b0fd64a1cabbe21b2b21398d0f19bd5bd3c",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K18/records-02.jsonl",
+      "sha256": "c4668e9809e84c648e58c6a32675b37a4b38f068dd547e2aa026959c0696b694",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/K18/records-03.jsonl",
+      "sha256": "f44d00ef96b78c61b975133bd17e823016ff7f7bd559ca59e55151622bb794d9",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/current-source-observations.json",
+      "sha256": "9a0f3966607f51d2979ef7d31835a501f8964298f080ae7611fd723b6d2175db",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/evidence.manifest.json",
+      "sha256": "277d5c897103f5bde84ef3831b774d2bbd345d1c781c126b3cc612822bfcee9c",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/evidence/records-00.jsonl",
+      "sha256": "a98ad3612e4e1e6f709f58123d3b16fbd0e3d8a354ee4c945fb265801c44c2cf",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/finite-fixtures.json",
+      "sha256": "0d3f26d43ee78b0d1ae0425c16fef11454b76417ee67ae2632689613cc01ba4e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/finite-results.json",
+      "sha256": "b555f8536aff157ba45ad50fa9b45ec22a3861f26e3b044cc2345ca602cfc323",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/import-receipt.json",
+      "sha256": "d76806a229465c0bb442b7655d61823eecfc7c9b5282b0610e4bd5954fb0f20a",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/learning-core.manifest.json",
+      "sha256": "6f9b35f0bd6fc971186105c7378750e55d249682d8685a355602fca073a23402",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/domain-development-r2/validation-receipt.json",
+      "sha256": "660de563822e4e2ee6410f6ae1454d2c48cebcbeb8013e9d696a1c91a1adcaf4",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Two cited sleep/environment propositions and voluntary reversible support rules only. No diagnosis, clinical prediction, or inference about an individual from learning data.",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "package_version": "0.1.0-domain-development-candidate-2",
+    "learning_core_manifest_sha256": "6f9b35f0bd6fc971186105c7378750e55d249682d8685a355602fca073a23402",
+    "evidence_manifest_sha256": "277d5c897103f5bde84ef3831b774d2bbd345d1c781c126b3cc612822bfcee9c",
+    "coverage_sha256": "41c34cdc8b6fa4713723b948e725e57a7e4273bf67374443316dbd57bd10a14d",
+    "candidate_claim_ids": [
+      "K18.01.01.D4.02",
+      "K18.01.01.DD.01",
+      "K18.01.02.D4.02",
+      "K18.01.02.DD.01",
+      "K18.01.03.D4.02",
+      "K18.01.03.DD.01",
+      "K18.01.04.D4.02",
+      "K18.01.04.DD.01",
+      "K18.01.05.D4.02",
+      "K18.01.05.DD.01",
+      "K18.02.01.D4.02",
+      "K18.02.01.DD.01",
+      "K18.02.02.D4.02",
+      "K18.02.02.DD.01",
+      "K18.02.03.D4.02",
+      "K18.02.03.DD.01",
+      "K18.02.04.D4.02",
+      "K18.02.04.DD.01",
+      "K18.03.01.D4.02",
+      "K18.03.01.DD.01",
+      "K18.03.01.DD.S01",
+      "K18.03.02.D4.02",
+      "K18.03.02.DD.01",
+      "K18.03.03.D4.02",
+      "K18.03.03.DD.01",
+      "K18.03.04.D4.01",
+      "K18.03.04.D4.02",
+      "K18.03.04.DD.01",
+      "K18.04.01.D4.02",
+      "K18.04.01.DD.01",
+      "K18.04.02.D4.02",
+      "K18.04.02.DD.01",
+      "K18.04.03.D4.02",
+      "K18.04.03.DD.01",
+      "K18.04.03.DD.S01",
+      "K18.05.01.D4.02",
+      "K18.05.01.DD.01",
+      "K18.05.02.D4.02",
+      "K18.05.02.DD.01",
+      "K18.05.03.D4.01",
+      "K18.05.03.D4.02",
+      "K18.05.03.DD.01"
+    ],
+    "excluded_hold_claim_ids": [
+      "K18.01.01.D4.01",
+      "K18.01.02.D4.01",
+      "K18.01.03.D4.01",
+      "K18.01.04.D4.01",
+      "K18.01.04.D4.03",
+      "K18.01.05.D4.01",
+      "K18.01.05.D4.03",
+      "K18.02.01.D4.01",
+      "K18.02.02.D4.01",
+      "K18.02.03.D4.01",
+      "K18.02.03.D4.03",
+      "K18.02.04.D4.01",
+      "K18.03.01.D4.01",
+      "K18.03.02.D4.01",
+      "K18.03.02.D4.03",
+      "K18.03.03.D4.01",
+      "K18.03.03.D4.03",
+      "K18.04.01.D4.01",
+      "K18.04.01.D4.03",
+      "K18.04.02.D4.01",
+      "K18.04.02.D4.03",
+      "K18.04.03.D4.01",
+      "K18.05.01.D4.01",
+      "K18.05.02.D4.01",
+      "K18.05.02.D4.03"
+    ],
+    "candidate_claim_count": 42,
+    "excluded_hold_claim_count": 25,
+    "source_limited_candidate_claim_ids": [
+      "K18.03.01.DD.S01",
+      "K18.04.03.DD.S01"
+    ],
+    "model_claim_ids": [],
+    "source_checked_topic_count": 2,
+    "topics_with_case_but_no_validation": 16,
+    "view_binding_policy": "RESEARCH_INPUT_NOT_ENTAILMENT_OR_QUALIFICATION",
+    "active_view_bindings": [
+      {
+        "topic": "K18.05.03",
+        "claim_id": "K18.05.03.D4.01",
+        "claim_status": "CANDIDATE",
+        "view": [
+          "F05",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/14/bindings/3"
+        ],
+        "disposition": "ACTIVE_BINDING_APPLICABILITY_REVIEW_PENDING"
+      },
+      {
+        "topic": "K18.05.03",
+        "claim_id": "K18.05.03.D4.01",
+        "claim_status": "CANDIDATE",
+        "view": [
+          "A07",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/24/bindings/2"
+        ],
+        "disposition": "ACTIVE_BINDING_APPLICABILITY_REVIEW_PENDING"
+      }
+    ],
+    "held_view_bindings": [],
+    "scope_ledger": "/tmp/learn-kg-kr01-r3.oKU3JS/docs/implementation/kr03-05-batch/scope-ledger.json",
+    "scope_ledger_sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "permitted_use": "Two cited sleep/environment propositions and voluntary reversible support rules only. No diagnosis, clinical prediction, or inference about an individual from learning data.",
+    "limitations": [
+      "Candidate readiness is not independent qualification or unrestricted professional adequacy.",
+      "All HOLD claims and held view bindings are excluded from this candidate scope.",
+      "No source-rights clearance, publication, empirical learner-effect, or release claim.",
+      "CQ/LC remain NOT_RUN; historical semantic anchors and cross-version relation closure remain pending.",
+      "The 27 active cross-view bindings are research inputs only, not entailment or qualification."
+    ],
+    "upstream_restriction": "K02 is QUALIFIED_LOCAL; do not infer qualification of any other module."
+  },
+  "validation": {
+    "review_task_comment": 7220402787,
+    "review_result_comment": 7221120084,
+    "previous_review_comment": 7220019599,
+    "reviewed_exact_head": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+    "reviewed_tree": "0a2970ec606210ff98eb475906c7ffea168ab22e",
+    "independent_result": "ACCEPT_SCOPED_WITH_TWO_P2_REMEDIATION_ITEMS",
+    "candidate_readiness": "CANDIDATE_READY_RECOMMENDED_RESTRICTED",
+    "new_finite_oracle": "ACCEPT_115_OF_115",
+    "cross_composition": "ACCEPT_SCOPED_27_OF_28_INPUT_DETERMINED",
+    "exact_bindings": "36_OF_36",
+    "p0": 0,
+    "p1": 0,
+    "p2": 2,
+    "p3": 1,
+    "qualification": "NOT_ISSUED",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "notes": "This registration records a restricted candidate only. The independent review issued no qualification receipts and did not promote any held claim."
+  },
+  "issues": [
+    "P2-01 ModelSpec applicability domains in K10/K12 require explicit structural encoding before generic ModelSpec use.",
+    "P2-02 cross adapter X01 input and invalid numeric-domain guards require remediation before generic composition/runtime use.",
+    "P3 source-version/authority pinning remains required before broader qualification; unresolved BKT/Pashler and source limitations remain HOLD."
+  ],
+  "next": "Independent exact-tuple qualification under the owning KR batch; preserve this restricted allowlist and all upstream consumption limits.",
+  "content_digest": "dfacac2cb72e97684993d4d9636f756a1446e0cfaabedd9accac083e3a93e2c6"
+}

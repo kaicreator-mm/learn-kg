@@ -1,0 +1,435 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-candidate-registration-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "reviewer": "chatgpt-web:learn-kg-kr03-05-independent-batch-reviewer",
+  "review_session": "learn-kg-kr03-05-independent-batch-review-20261127",
+  "branch": "version/v0.1.0",
+  "base": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "exact_head": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K17",
+  "attempt_id": "K17-FORMAL-01",
+  "receipt_id": "TASK:K17:K17-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/k13-k17-preparation/K13-depth.md",
+      "sha256": "12dc7a48daac292e51e48d902ec5342212c67003adca7ca9de6e8e6e14e9df61",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k13-k17-preparation/K17-depth.md",
+      "sha256": "e5651b57354cd10692a4ef7a2075554427047ab99ccdab6750fc30af2464a673",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/k13-k17-preparation/actual-source-observations.json",
+      "sha256": "eca6fb1300ee95b902d9ed9b194e32a539d1d302f46b7e41c324aa3c66a9a571",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k13-k17-preparation/depth.json",
+      "sha256": "1ea48783d13081d1f8ad9b86fdab4ed2afdccbceef705ae00cca0a828a55349e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k13-k17-preparation/scope-witness.json",
+      "sha256": "e5ba8987d1e9f1ed47e28972953792e9be3b0224291f17cb7eacd88608318f92",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-batch/scope-ledger.json",
+      "sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/task-execution-contract.md",
+      "sha256": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K13/coverage.json",
+      "sha256": "7b7767401111b815af245fabbeb130c96753c0ad28093c63aa5c2e73dd223d6e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K13/records-00.jsonl",
+      "sha256": "866a14694f3157b36fc7cb205c82e8322c7b10668e2d50de482d2e5470c05229",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K13/records-01.jsonl",
+      "sha256": "ee9e0d1f93df3fdad00f08c3ea53701e20a6db411fc52b1519689958427c916f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+      "sha256": "ca8ad4d87b5baa86caa7d88d53364b1a401968110fecffbf5056e1b3c48ee579",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K13/records-03.jsonl",
+      "sha256": "45fc6c11d0590d7df3a6e0b65695c2806db230730611a8bebd8b45b68f27e1c6",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K13/records-04.jsonl",
+      "sha256": "c1008bea5e46a7f873d23a63eceb25e26f136bf6606684517cb89189d39e8f9f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/coverage.json",
+      "sha256": "f511c6aab19bd0b7a4f7fb7d46d2be7fcb9c40d5fe6e9b141c8ceee0fe4b344f",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/records-00.jsonl",
+      "sha256": "a65859c32afc6bf5265ea0772d390a76a4196ea0b72789338fe5fbced8bfbe10",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/records-01.jsonl",
+      "sha256": "81a3f366cfe06deac8d8413518fc3b1f6f7ba27122837c9ac757a5765071c40b",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+      "sha256": "ea0f7bac8c2165f40b7378d3707e0f4b01462c812aa1b060f1a4f12d5bd2e291",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/records-03.jsonl",
+      "sha256": "f0aef2b8280c62a8886d8877eec94e726e77e3d573f4734f6e5160f509081ad9",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/records-04.jsonl",
+      "sha256": "b5831e705d8041edab30f8e676846a6e975183a0d1b7aefc9f82292ee5bed73f",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/records-05.jsonl",
+      "sha256": "689d54d2317163a26e32c9d750d258a1a69c7c644dcbfd40dd3c4d1ea2cf8d32",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/K17/records-06.jsonl",
+      "sha256": "0c26e9a08615c25ad557ef65a11cd2cf173c6215734327c239872945c8832dfa",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/current-source-observations.json",
+      "sha256": "90f67868e2f0cd79ef30ddf45eba129f1ea6ed37fe1831181da1ef5293b5c658",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/evidence.manifest.json",
+      "sha256": "89ffe46c7a22a2dd598afc02f7272d405c24710003d070fc72fe3af152c25cb6",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/evidence/records-00.jsonl",
+      "sha256": "7f5161ec9d6e6ee51c3c1a01027dfd45a6458306a7b3eb573d016af142cab97a",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/finite-fixtures.json",
+      "sha256": "646c1a642a3ad8b07b0fecd698c92b7c58f342671e13079beb17a655699aab7c",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/finite-results.json",
+      "sha256": "4cbf3dd34d330369cb69e4cdc9c82548b7cb6eb50a7c323e72f9ccc75d7b8cc3",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/import-receipt.json",
+      "sha256": "d0298b55c36efee9c9767df354b507fb4bcf69dfb8b413e80559369cdaf642bc",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/learning-core.manifest.json",
+      "sha256": "9a572b5108fdbb1b1117486ea9cc6f9d302e700d5c51b501353c952666ad9fb7",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/social-research-r2/validation-receipt.json",
+      "sha256": "62202c08810e72a407ca87b927a37d5864016d058f0d098531da5882c3d1d6f9",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Two cited meta-analysis/statistical propositions and synthetic calculations only. No empirical treatment-effect or causal conclusion without design-specific identification and source qualification.",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "package_version": "0.1.0-social-research-candidate-2",
+    "learning_core_manifest_sha256": "9a572b5108fdbb1b1117486ea9cc6f9d302e700d5c51b501353c952666ad9fb7",
+    "evidence_manifest_sha256": "89ffe46c7a22a2dd598afc02f7272d405c24710003d070fc72fe3af152c25cb6",
+    "coverage_sha256": "f511c6aab19bd0b7a4f7fb7d46d2be7fcb9c40d5fe6e9b141c8ceee0fe4b344f",
+    "candidate_claim_ids": [
+      "K17.01.01.D4.02",
+      "K17.01.01.SR.01",
+      "K17.01.02.D4.02",
+      "K17.01.02.SR.01",
+      "K17.01.03.D4.02",
+      "K17.01.03.SR.01",
+      "K17.01.04.D4.02",
+      "K17.01.04.SR.01",
+      "K17.02.01.D4.02",
+      "K17.02.01.SR.01",
+      "K17.02.02.D4.02",
+      "K17.02.02.SR.01",
+      "K17.02.03.D4.02",
+      "K17.02.03.SR.01",
+      "K17.02.04.D4.02",
+      "K17.02.04.SR.01",
+      "K17.02.05.D4.02",
+      "K17.02.05.SR.01",
+      "K17.02.06.D4.02",
+      "K17.02.06.SR.01",
+      "K17.03.01.D4.02",
+      "K17.03.01.SR.01",
+      "K17.03.02.D4.02",
+      "K17.03.02.SR.01",
+      "K17.03.03.D4.02",
+      "K17.03.03.SR.01",
+      "K17.03.04.D4.02",
+      "K17.03.04.SR.01",
+      "K17.03.05.D4.02",
+      "K17.03.05.SR.01",
+      "K17.04.01.D4.01",
+      "K17.04.01.D4.02",
+      "K17.04.01.SR.01",
+      "K17.04.02.D4.01",
+      "K17.04.02.D4.02",
+      "K17.04.02.SR.01",
+      "K17.04.03.D4.01",
+      "K17.04.03.D4.02",
+      "K17.04.03.SR.01",
+      "K17.04.04.D4.01",
+      "K17.04.04.D4.02",
+      "K17.04.04.SR.01",
+      "K17.04.05.D4.01",
+      "K17.04.05.D4.02",
+      "K17.04.05.SR.01",
+      "K17.05.01.D4.02",
+      "K17.05.01.SR.01",
+      "K17.05.02.D4.02",
+      "K17.05.02.SR.01",
+      "K17.05.02.SR.S01",
+      "K17.05.03.D4.02",
+      "K17.05.03.SR.01",
+      "K17.05.03.SR.S01",
+      "K17.05.04.D4.02",
+      "K17.05.04.SR.01",
+      "K17.05.05.D4.02",
+      "K17.05.05.SR.01",
+      "K17.06.01.D4.02",
+      "K17.06.01.SR.01",
+      "K17.06.02.D4.02",
+      "K17.06.02.SR.01",
+      "K17.06.03.D4.02",
+      "K17.06.03.SR.01",
+      "K17.06.04.D4.02",
+      "K17.06.04.SR.01",
+      "K17.06.05.D4.02",
+      "K17.06.05.SR.01"
+    ],
+    "excluded_hold_claim_ids": [
+      "K17.01.01.D4.01",
+      "K17.01.01.D4.03",
+      "K17.01.02.D4.01",
+      "K17.01.03.D4.01",
+      "K17.01.04.D4.01",
+      "K17.01.04.D4.03",
+      "K17.01.04.D4.04",
+      "K17.02.01.D4.01",
+      "K17.02.01.D4.03",
+      "K17.02.02.D4.01",
+      "K17.02.03.D4.01",
+      "K17.02.04.D4.01",
+      "K17.02.04.D4.03",
+      "K17.02.05.D4.01",
+      "K17.02.06.D4.01",
+      "K17.02.06.D4.03",
+      "K17.03.01.D4.01",
+      "K17.03.01.D4.03",
+      "K17.03.02.D4.01",
+      "K17.03.03.D4.01",
+      "K17.03.04.D4.01",
+      "K17.03.04.D4.03",
+      "K17.03.05.D4.01",
+      "K17.04.01.R2.27",
+      "K17.04.02.R2.28",
+      "K17.04.03.R2.29",
+      "K17.04.04.R2.30",
+      "K17.04.05.R2.31",
+      "K17.05.01.D4.01",
+      "K17.05.02.D4.01",
+      "K17.05.03.D4.01",
+      "K17.05.04.D4.01",
+      "K17.05.04.D4.03",
+      "K17.05.05.D4.01",
+      "K17.05.05.D4.03",
+      "K17.06.01.D4.01",
+      "K17.06.01.D4.03",
+      "K17.06.02.D4.01",
+      "K17.06.02.D4.03",
+      "K17.06.03.D4.01",
+      "K17.06.03.D4.03",
+      "K17.06.04.D4.01",
+      "K17.06.04.D4.03",
+      "K17.06.05.D4.01"
+    ],
+    "candidate_claim_count": 67,
+    "excluded_hold_claim_count": 44,
+    "source_limited_candidate_claim_ids": [
+      "K17.05.02.SR.S01",
+      "K17.05.03.SR.S01"
+    ],
+    "model_claim_ids": [],
+    "source_checked_topic_count": 2,
+    "topics_with_case_but_no_validation": 23,
+    "view_binding_policy": "RESEARCH_INPUT_NOT_ENTAILMENT_OR_QUALIFICATION",
+    "active_view_bindings": [],
+    "held_view_bindings": [
+      {
+        "topic": "K17.02.02",
+        "claim_id": "K17.02.02.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "A08",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/25/bindings/0"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K17.03.02",
+        "claim_id": "K17.03.02.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "A08",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/25/bindings/1"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K17.06.01",
+        "claim_id": "K17.06.01.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "E01",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/26/bindings/2"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K17.06.03",
+        "claim_id": "K17.06.03.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "P09",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/8/bindings/3"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K17.06.03",
+        "claim_id": "K17.06.03.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "F08",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/17/bindings/3"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K17.06.03",
+        "claim_id": "K17.06.03.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "A08",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/25/bindings/2"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      }
+    ],
+    "scope_ledger": "/tmp/learn-kg-kr01-r3.oKU3JS/docs/implementation/kr03-05-batch/scope-ledger.json",
+    "scope_ledger_sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "permitted_use": "Two cited meta-analysis/statistical propositions and synthetic calculations only. No empirical treatment-effect or causal conclusion without design-specific identification and source qualification.",
+    "limitations": [
+      "Candidate readiness is not independent qualification or unrestricted professional adequacy.",
+      "All HOLD claims and held view bindings are excluded from this candidate scope.",
+      "No source-rights clearance, publication, empirical learner-effect, or release claim.",
+      "CQ/LC remain NOT_RUN; historical semantic anchors and cross-version relation closure remain pending.",
+      "The 27 active cross-view bindings are research inputs only, not entailment or qualification."
+    ]
+  },
+  "validation": {
+    "review_task_comment": 7220402787,
+    "review_result_comment": 7221120084,
+    "previous_review_comment": 7220019599,
+    "reviewed_exact_head": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+    "reviewed_tree": "0a2970ec606210ff98eb475906c7ffea168ab22e",
+    "independent_result": "ACCEPT_SCOPED_WITH_TWO_P2_REMEDIATION_ITEMS",
+    "candidate_readiness": "CANDIDATE_READY_RECOMMENDED_RESTRICTED",
+    "new_finite_oracle": "ACCEPT_115_OF_115",
+    "cross_composition": "ACCEPT_SCOPED_27_OF_28_INPUT_DETERMINED",
+    "exact_bindings": "36_OF_36",
+    "p0": 0,
+    "p1": 0,
+    "p2": 2,
+    "p3": 1,
+    "qualification": "NOT_ISSUED",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "notes": "This registration records a restricted candidate only. The independent review issued no qualification receipts and did not promote any held claim."
+  },
+  "issues": [
+    "P2-01 ModelSpec applicability domains in K10/K12 require explicit structural encoding before generic ModelSpec use.",
+    "P2-02 cross adapter X01 input and invalid numeric-domain guards require remediation before generic composition/runtime use.",
+    "P3 source-version/authority pinning remains required before broader qualification; unresolved BKT/Pashler and source limitations remain HOLD."
+  ],
+  "next": "Independent exact-tuple qualification under the owning KR batch; preserve this restricted allowlist and all upstream consumption limits.",
+  "content_digest": "28a750df57293d2ef2576b571118bb2dedcfeaf7f1005942b02eb4ba6b991d8f"
+}

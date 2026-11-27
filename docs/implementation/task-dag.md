@@ -137,3 +137,16 @@ DB02 CANDIDATE_READY (FORMAL-01; 33/33 builder tests, 38 record kinds, exact rep
 ### V00 finite prototype
 
 V00 CANDIDATE_READY (FORMAL-01; 12/12 synthetic flow cases, byte-identical exact replay, DB02 33/33). No CQ/LC, learner or final qualification. V01 waits for remaining receipts.
+
+## 2026-11-27 — KR03/KR04/KR05 restricted candidate registration
+
+Independent batch review #6 comment 7221120084 accepted the exact 62760bfd4690279cf2a703be8cc908a92ef1d755 / tree 0a2970ec606210ff98eb475906c7ffea168ab22e scope: 115/115 new finite oracles, 36/36 exact bindings, 27/28 input-determined cross-compositions, and restricted candidate readiness recommended for K09/K13/K14/K17/K18. No qualification was issued by that review.
+
+After exact branch/head/tree/CAS and prerequisite-receipt checks, registered:
+- K09 evidence/tasks/K09/K09-FORMAL-01.json — CANDIDATE_READY, restricted; 75 candidate claims / 60 HOLD.
+- K13 evidence/tasks/K13/K13-FORMAL-01.json — CANDIDATE_READY, restricted; 45 candidate claims / 35 HOLD.
+- K14 evidence/tasks/K14/K14-FORMAL-01.json — CANDIDATE_READY, restricted; 48 candidate claims / 40 HOLD; K06 consumption remains restricted.
+- K17 evidence/tasks/K17/K17-FORMAL-01.json — CANDIDATE_READY, restricted; 67 candidate claims / 44 HOLD.
+- K18 evidence/tasks/K18/K18-FORMAL-01.json — CANDIDATE_READY, restricted; 42 candidate claims / 25 HOLD.
+
+The five receipts pin exact current direct-dependency receipts and qualifications, module/package manifests, JSONL shards, coverage, bounded source/depth material and the review's scope ledger. Their content digests cover canonical input/output tuples. This is candidate registration only: no QUALIFIED_LOCAL receipt, no source-rights clearance, no CQ/LC, no held-claim promotion, no G03 or release. K10/K11/K12/K15/K16/K19 remain preparation-only pending their exact formal prerequisites. The two P2 findings and one P3 source-pinning limitation remain open.

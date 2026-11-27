@@ -1,0 +1,513 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-candidate-registration-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "reviewer": "chatgpt-web:learn-kg-kr03-05-independent-batch-reviewer",
+  "review_session": "learn-kg-kr03-05-independent-batch-review-20261127",
+  "branch": "version/v0.1.0",
+  "base": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "exact_head": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K09",
+  "attempt_id": "K09-FORMAL-01",
+  "receipt_id": "TASK:K09:K09-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/k09-preparation/K09-depth.md",
+      "sha256": "e2843ffb0a4a8554a1558abf906faace479caee233dc451995a2b1c199e14eed",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/depth.json",
+      "sha256": "abde92c9617971f0dc4942f9558c918f1209104b96e3af493df410a029c60772",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/depth.tsv",
+      "sha256": "de81e7c4adec1e9c559ac79398c4f0ab7b44b9028cc2e7dac55ccba638124e0b",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/finite-fixtures.json",
+      "sha256": "e555d817d54e2dc1d561a94647221cd6620c67ade74182b3a25fe41c5b63769f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/finite-results.json",
+      "sha256": "35355ca0cb5763f3ab1a322b22117fdf7546f5c06d14721003c5749706ddab2c",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/run_finite.py",
+      "sha256": "7b11c8df01d6b1b4f23afd3478bdf5a6c81f4e177a24b112a88976f12ec511d5",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/scope-witness.json",
+      "sha256": "c3ee8c62b58f710f7da756ed77084430eaf605780387f09f328862357be4519e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-batch/scope-ledger.json",
+      "sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/task-execution-contract.md",
+      "sha256": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/coverage.json",
+      "sha256": "dcc5d25a7d3d860d791a477524b8b07cb7229a1b245026b5b53c556c69f5703f",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-00.jsonl",
+      "sha256": "37746f80e9aea908917e53a76050e5358c6ede89a36e7fe90d4773feb59a0a97",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-01.jsonl",
+      "sha256": "02ca203448f432ca708b08dcb456777c068fb3281cc04d16b8a6416c82e5957d",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+      "sha256": "ef62d586dbffa43013775ba4951213971037871508be266605cc52f049c4de23",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+      "sha256": "c9010b42d6d8cc77c697e22fce48a4c0c40356287b218ba099cd4e033cb9ed90",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-04.jsonl",
+      "sha256": "888c659859c042e4772d049f1b28f5885f15cc130f1508c03610d614db1222ea",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-05.jsonl",
+      "sha256": "30564032e418093e201c788d897ef782b445d5901c2de5faccbf226d4138b837",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-06.jsonl",
+      "sha256": "96da40f0f09439ac79262fc8840a45d39ef1771d7faa360bc6fccf1ed091d827",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-07.jsonl",
+      "sha256": "b91f966b68dbcb9caa7bcfa4d688c400d1a18bf4bcc1b5c9dc3f4690767dbd38",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/K09/records-08.jsonl",
+      "sha256": "c518c053b0722ccf9fb7298490a2ef14840d7508a1d01695d6eb1c451527f896",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/evidence.manifest.json",
+      "sha256": "a0f42b6feed737b89ab5c8ab853513ca6a4c8c28274e3e61525ddab95f09fa07",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/evidence/records-00.jsonl",
+      "sha256": "4f3d62527493bce88cb56e545004c0eac2bb876f07f382cbb7dfcccf72f5f547",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/import-receipt.json",
+      "sha256": "6931f6e886c39685e45ed713f9b4b38f8ba715384526d3fbfe9eb7cdd6bfc6a3",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/learning-core.manifest.json",
+      "sha256": "6cd783b13b28b1eb10cfe4aa8a1e587154808e92cb9283ca8cb5e744c127f40f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/measurement-r4/validation-receipt.json",
+      "sha256": "9fd4ee629ec6f5527d26af2c755a455b6442f8e79f86ead132e12a4c06f84621",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Bounded measurement concepts and the ten exact source-limited propositions; three exact model statements only as bounded models; project rules/original derivations only as synthetic or project-defined methods. No individual ability estimate, universal validity claim, fitted model, or full measurement-science coverage.",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "package_version": "0.1.0-measurement-candidate-4",
+    "learning_core_manifest_sha256": "6cd783b13b28b1eb10cfe4aa8a1e587154808e92cb9283ca8cb5e744c127f40f",
+    "evidence_manifest_sha256": "a0f42b6feed737b89ab5c8ab853513ca6a4c8c28274e3e61525ddab95f09fa07",
+    "coverage_sha256": "dcc5d25a7d3d860d791a477524b8b07cb7229a1b245026b5b53c556c69f5703f",
+    "candidate_claim_ids": [
+      "K09.01.01.D4.02",
+      "K09.01.01.ME.01",
+      "K09.01.01.R4.S01",
+      "K09.01.02.D4.02",
+      "K09.01.02.ME.01",
+      "K09.01.02.R4.S01",
+      "K09.01.03.D4.02",
+      "K09.01.03.ME.01",
+      "K09.01.04.D4.02",
+      "K09.01.04.ME.01",
+      "K09.02.01.D4.02",
+      "K09.02.01.ME.01",
+      "K09.02.01.R4.S01",
+      "K09.02.02.D4.02",
+      "K09.02.02.ME.01",
+      "K09.02.02.R4.S01",
+      "K09.02.03.D4.02",
+      "K09.02.03.ME.01",
+      "K09.02.03.R4.S01",
+      "K09.02.04.D4.02",
+      "K09.02.04.ME.01",
+      "K09.02.04.R4.S01",
+      "K09.02.05.D4.02",
+      "K09.02.05.ME.01",
+      "K09.02.05.R4.S01",
+      "K09.03.01.D4.02",
+      "K09.03.01.ME.01",
+      "K09.03.02.D4.02",
+      "K09.03.02.ME.01",
+      "K09.03.03.D4.02",
+      "K09.03.03.ME.01",
+      "K09.03.04.D4.01",
+      "K09.03.04.D4.02",
+      "K09.03.04.ME.01",
+      "K09.04.01.D4.01",
+      "K09.04.01.D4.02",
+      "K09.04.01.ME.01",
+      "K09.04.02.D4.01",
+      "K09.04.02.D4.02",
+      "K09.04.02.ME.01",
+      "K09.04.03.D4.02",
+      "K09.04.03.ME.01",
+      "K09.04.04.D4.02",
+      "K09.04.04.ME.01",
+      "K09.05.01.D4.02",
+      "K09.05.01.ME.01",
+      "K09.05.01.R4.S01",
+      "K09.05.02.D4.02",
+      "K09.05.02.ME.01",
+      "K09.05.02.R4.S01",
+      "K09.05.03.D4.02",
+      "K09.05.03.ME.01",
+      "K09.05.03.R4.S01",
+      "K09.05.04.D4.02",
+      "K09.05.04.ME.01",
+      "K09.06.01.D4.02",
+      "K09.06.01.ME.01",
+      "K09.06.02.D4.02",
+      "K09.06.02.ME.01",
+      "K09.06.03.D4.02",
+      "K09.06.03.ME.01",
+      "K09.06.04.D4.02",
+      "K09.06.04.ME.01",
+      "K09.07.01.D4.02",
+      "K09.07.01.ME.01",
+      "K09.07.02.D4.02",
+      "K09.07.02.ME.01",
+      "K09.07.03.D4.02",
+      "K09.07.03.ME.01",
+      "K09.07.04.D4.02",
+      "K09.07.04.ME.01",
+      "K09.07.05.D4.02",
+      "K09.07.05.ME.01",
+      "K09.07.06.D4.02",
+      "K09.07.06.ME.01"
+    ],
+    "excluded_hold_claim_ids": [
+      "K09.01.01.D4.01",
+      "K09.01.01.R2.07",
+      "K09.01.02.D4.01",
+      "K09.01.03.D4.01",
+      "K09.01.04.D4.01",
+      "K09.02.01.D4.01",
+      "K09.02.01.D4.03",
+      "K09.02.02.D4.01",
+      "K09.02.02.D4.03",
+      "K09.02.02.D4.04",
+      "K09.02.03.D4.01",
+      "K09.02.03.D4.03",
+      "K09.02.04.D4.01",
+      "K09.02.04.D4.03",
+      "K09.02.04.D4.04",
+      "K09.02.05.D4.01",
+      "K09.02.05.D4.03",
+      "K09.03.01.D4.01",
+      "K09.03.01.D4.03",
+      "K09.03.02.D4.01",
+      "K09.03.02.D4.03",
+      "K09.03.03.D4.01",
+      "K09.03.03.D4.03",
+      "K09.03.04.D4.03",
+      "K09.04.01.D4.03",
+      "K09.04.03.D4.01",
+      "K09.04.04.D4.01",
+      "K09.05.01.D4.01",
+      "K09.05.01.D4.03",
+      "K09.05.01.D4.04",
+      "K09.05.02.D4.01",
+      "K09.05.02.D4.03",
+      "K09.05.02.D4.04",
+      "K09.05.03.D4.01",
+      "K09.05.03.D4.03",
+      "K09.05.03.D4.04",
+      "K09.05.04.D4.01",
+      "K09.05.04.D4.03",
+      "K09.05.04.D4.04",
+      "K09.06.01.D4.01",
+      "K09.06.01.D4.03",
+      "K09.06.02.D4.01",
+      "K09.06.02.D4.03",
+      "K09.06.02.D4.04",
+      "K09.06.03.D4.01",
+      "K09.06.03.D4.03",
+      "K09.06.04.D4.01",
+      "K09.07.01.D4.01",
+      "K09.07.02.D4.01",
+      "K09.07.02.D4.03",
+      "K09.07.03.D4.01",
+      "K09.07.03.D4.03",
+      "K09.07.03.D4.04",
+      "K09.07.04.D4.01",
+      "K09.07.04.D4.03",
+      "K09.07.04.D4.04",
+      "K09.07.05.D4.01",
+      "K09.07.05.D4.03",
+      "K09.07.06.D4.01",
+      "K09.07.06.D4.03"
+    ],
+    "candidate_claim_count": 75,
+    "excluded_hold_claim_count": 60,
+    "source_limited_candidate_claim_ids": [
+      "K09.01.01.R4.S01",
+      "K09.01.02.R4.S01",
+      "K09.02.01.R4.S01",
+      "K09.02.02.R4.S01",
+      "K09.02.03.R4.S01",
+      "K09.02.04.R4.S01",
+      "K09.02.05.R4.S01",
+      "K09.05.01.R4.S01",
+      "K09.05.02.R4.S01",
+      "K09.05.03.R4.S01"
+    ],
+    "model_claim_ids": [
+      "K09.03.04.D4.01",
+      "K09.04.01.D4.01",
+      "K09.04.02.D4.01"
+    ],
+    "source_checked_topic_count": 14,
+    "topics_with_case_but_no_validation": 13,
+    "view_binding_policy": "RESEARCH_INPUT_NOT_ENTAILMENT_OR_QUALIFICATION",
+    "active_view_bindings": [
+      {
+        "topic": "K09.02.03",
+        "claim_id": "K09.02.03.D4.02",
+        "claim_status": "CANDIDATE",
+        "view": [
+          "F05",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/14/bindings/1"
+        ],
+        "disposition": "ACTIVE_BINDING_APPLICABILITY_REVIEW_PENDING"
+      },
+      {
+        "topic": "K09.02.04",
+        "claim_id": "K09.02.04.D4.02",
+        "claim_status": "CANDIDATE",
+        "view": [
+          "A05",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/22/bindings/2"
+        ],
+        "disposition": "ACTIVE_BINDING_APPLICABILITY_REVIEW_PENDING"
+      },
+      {
+        "topic": "K09.05.01",
+        "claim_id": "K09.05.01.D4.02",
+        "claim_status": "CANDIDATE",
+        "view": [
+          "A03",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/20/bindings/1"
+        ],
+        "disposition": "ACTIVE_BINDING_APPLICABILITY_REVIEW_PENDING"
+      }
+    ],
+    "held_view_bindings": [
+      {
+        "topic": "K09.01.01",
+        "claim_id": "K09.01.01.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "P02",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/1/bindings/1"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.01.01",
+        "claim_id": "K09.01.01.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "F01",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/10/bindings/3"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.01.01",
+        "claim_id": "K09.01.01.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "A01",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/18/bindings/2"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.01.03",
+        "claim_id": "K09.01.03.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "A02",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/19/bindings/0"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.01.04",
+        "claim_id": "K09.01.04.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "P06",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/5/bindings/1"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.02.04",
+        "claim_id": "K09.02.04.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "P09",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/8/bindings/2"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.02.04",
+        "claim_id": "K09.02.04.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "F08",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/17/bindings/1"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.02.05",
+        "claim_id": "K09.02.05.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "E01",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/26/bindings/0"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      },
+      {
+        "topic": "K09.05.04",
+        "claim_id": "K09.05.04.D4.01",
+        "claim_status": "HOLD",
+        "view": [
+          "P08",
+          "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+          "/contracts/7/bindings/0"
+        ],
+        "disposition": "HOLD_ORIGINAL_CLAIM_NOT_ACTIVE"
+      }
+    ],
+    "scope_ledger": "/tmp/learn-kg-kr01-r3.oKU3JS/docs/implementation/kr03-05-batch/scope-ledger.json",
+    "scope_ledger_sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "permitted_use": "Bounded measurement concepts and the ten exact source-limited propositions; three exact model statements only as bounded models; project rules/original derivations only as synthetic or project-defined methods. No individual ability estimate, universal validity claim, fitted model, or full measurement-science coverage.",
+    "limitations": [
+      "Candidate readiness is not independent qualification or unrestricted professional adequacy.",
+      "All HOLD claims and held view bindings are excluded from this candidate scope.",
+      "No source-rights clearance, publication, empirical learner-effect, or release claim.",
+      "CQ/LC remain NOT_RUN; historical semantic anchors and cross-version relation closure remain pending.",
+      "The 27 active cross-view bindings are research inputs only, not entailment or qualification."
+    ]
+  },
+  "validation": {
+    "review_task_comment": 7220402787,
+    "review_result_comment": 7221120084,
+    "previous_review_comment": 7220019599,
+    "reviewed_exact_head": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+    "reviewed_tree": "0a2970ec606210ff98eb475906c7ffea168ab22e",
+    "independent_result": "ACCEPT_SCOPED_WITH_TWO_P2_REMEDIATION_ITEMS",
+    "candidate_readiness": "CANDIDATE_READY_RECOMMENDED_RESTRICTED",
+    "new_finite_oracle": "ACCEPT_115_OF_115",
+    "cross_composition": "ACCEPT_SCOPED_27_OF_28_INPUT_DETERMINED",
+    "exact_bindings": "36_OF_36",
+    "p0": 0,
+    "p1": 0,
+    "p2": 2,
+    "p3": 1,
+    "qualification": "NOT_ISSUED",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "notes": "This registration records a restricted candidate only. The independent review issued no qualification receipts and did not promote any held claim."
+  },
+  "issues": [
+    "P2-01 ModelSpec applicability domains in K10/K12 require explicit structural encoding before generic ModelSpec use.",
+    "P2-02 cross adapter X01 input and invalid numeric-domain guards require remediation before generic composition/runtime use.",
+    "P3 source-version/authority pinning remains required before broader qualification; unresolved BKT/Pashler and source limitations remain HOLD."
+  ],
+  "next": "Independent exact-tuple qualification under the owning KR batch; preserve this restricted allowlist and all upstream consumption limits.",
+  "content_digest": "bccf41be1b552c203974a374997d8aff4814b9a1ded7bab9d9adc9399ea25862"
+}
