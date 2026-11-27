@@ -46,3 +46,7 @@ G01：对照F01–F08/E01检查K/H/P/A专业覆盖、遗漏及唯一主责；新
 ### Foundation KR01 bounded remediation
 
 The R2 candidate lives in [foundation-r2](../../knowledge/v0.1.0/foundation-r2/README.md). Prior foundation is preserved. See current task receipts and the original independent review comment 7213482417; no independent qualification or publication inferred.
+
+### KR01 R3 residual candidate
+
+R2 independent comment 7214381381: K01/K02/K04 ACCEPT_SCOPED; K03 residual P1 R2-RV04-01, K02 nonblocking P2 R2-RV07-01. R3 artifact 4b35b500aaccac4787c6fb68fa950199ac34a760 preserves prior 53 checks, adds 19; exact GitHub replay clean. All four FORMAL-03 candidate receipts bind new shared version; normalized K01/K04 unchanged. Independent residual review and current tuple rebind still required, no full repeated review. Other READY tasks remain eligible under contract; no downstream issued receipt, SRC01 still BLOCKED.

@@ -1,0 +1,242 @@
+{
+  "task_id": "K02",
+  "attempt_id": "K02-FORMAL-03",
+  "receipt_id": "TASK:K02:K02-FORMAL-03",
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr01-r3-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "ddc9b81a199d82efc18da020439d0d6129dacfd0",
+  "exact_head": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+  "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/coverage.json",
+      "sha256": "2011c4e6a3383f969a72268b59e88e586383060fb5372a8437bece120247f9c9",
+      "type": "MODULE_COVERAGE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-00.jsonl",
+      "sha256": "73b4c20888b0dc17a9146d2289c28364eaf729477b244248013fb37d50ba8d48",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-01.jsonl",
+      "sha256": "5069429c79f3224dc6c10604334e9a1c829a8b4c3ee506ab7f063851c1b99673",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-02.jsonl",
+      "sha256": "8e89be7608fbae4a5c62b29f317898d6bc69e559413a046cc649f403a43e2341",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-03.jsonl",
+      "sha256": "d12b99ca3ec5a03f22f58b8e92719dec37289f663b039b83753b9678ec0c5657",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+      "sha256": "f176b0dac49cbedbce135da7ed3bc8dab4a8f0c72aae143cf4690a916675a6c9",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-05.jsonl",
+      "sha256": "8dd5685cd0900c45a685e49c586032c7a9ab66513fdb40b7fb059c1b9ef11e7d",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-06.jsonl",
+      "sha256": "4f5c8349c333e971f7dfa8597fa399eea10103175eb1aee207210b3af4b7bb23",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/K02/records-07.jsonl",
+      "sha256": "33fc0db3e05ae2b4b618f8819d7428e1cd12ae79fa1fece79c6570dc9c589277",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/README.md",
+      "sha256": "e7d12f44647eb2aebf5c1be226d501e3a017b428f33cf5ca956f5837a394699f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/anchor-dispositions.json",
+      "sha256": "909a2cc75f978a7f0bf62f61dce6a3f10897788b8cdc650a37c51c8e9ca4d916",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/anchor-holds.json",
+      "sha256": "c29ae44dc8dd7fb6133b6ceabf00517f63b5029cf2eb560dc5d0ddb82dccf4b6",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/aux-source-support.json",
+      "sha256": "210ad6b9cb1f7404525ab62dac2f24e650a720720ca6e5ac7dc136e725025b47",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/build_r2.py",
+      "sha256": "1588c751b15a72fc5882147c12df4c15ca711287ba00c03261603ea448128642",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/check_delta.py",
+      "sha256": "469af6b0fe9cb7aa82a0910f60cafe48d86991baa80c4de3859b755114d85ac4",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/claim-support-ledger.json",
+      "sha256": "4f46ecf8fb86f2cab7ccd462c1e1f04448e0c3cc08124a7b24a42612b819d1af",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/delta-impact.json",
+      "sha256": "1bd1d0eccd5e2b7a9d8de03d9d8a6b3936ea00dc69d9e90a74037fb87e524f6f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/depth-additions.json",
+      "sha256": "721f29cb6e6ba296be0e3f6f038d690297afa3905a137723d758a8713f99435c",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/depth.tsv",
+      "sha256": "1bf62ef902bd9ddb84ab60364471b6fdafec536417d308e4c170adf066006296",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/duplicate-dispositions.json",
+      "sha256": "9ee5038663f2fb65302cd881187c47b71bc246965dfd5eeafdf477381e0095a2",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/evidence.manifest.json",
+      "sha256": "2e35f5431088b47cbd02f43c30e7f3519e777f22b78e33d1e5d27672f3319355",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/learning-core.manifest.json",
+      "sha256": "17f3bf2e25f6d70f53d90beed651d752843541e350824bd3c53f360dc67740d5",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/new-oracles.json",
+      "sha256": "7c5694c9f20f731bff32cef0249af6a1d61d60f67f9b7d428e644c075f50d533",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/new-sources.json",
+      "sha256": "ceb86f00023bd2e777564d56ddb3a31206b07b814735d5ba5bb25e7a841b0730",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/oracle-results.json",
+      "sha256": "2796b4c25b42e44c60c7b29ae3c7f7f12a766355453be1c215123da7bc4657d3",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/relation-design.json",
+      "sha256": "88811a0894d00a580ff1eed7f063666f91c02da21202ea6e822cde47e279bdcb",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/relation-types.json",
+      "sha256": "967a0154abf902678dd789f12fd03a40daf0fbe3fe3deb9b444459b8730b8029",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/relations.tsv",
+      "sha256": "78af1f7a6dfdbbe1fcc56e0c3cacb6ed8464b4247cf4892efa18fec31ab77413",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/run_oracles.py",
+      "sha256": "7eeb1d605b46352a393578fd36dcfa00a8fda6dcfead77323b55eb2d9bb591bc",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/source-bindings.tsv",
+      "sha256": "c138d6aff7bff77adc7580fbff98b4170b8814966b6dba4c987d3bc90ecccce0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/source-support.json",
+      "sha256": "02ecc2c6c9e7562f38d4badc47dcdb0075ed9cf09b801d28d6f35f19bf494f96",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/validation-receipt.json",
+      "sha256": "d4fb0d4aa7b8597fbbca6a94292e708a92587b91a3fbac7767f63c028cb78717",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/view-transformations.json",
+      "sha256": "ef5147ade1e3895e72dcb11e2c908ad9f61f811d44a83f067643d3e0be386d36",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r3/evidence/records-00.jsonl",
+      "sha256": "3511c20b3c8aabf0c4972f7cc28455ea7479e521614053727e64374cd155f311",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "time": "2026-11-27",
+  "validation": {
+    "candidate_tree": "8f7b4e0bd02739a339c2eeef6d1c3d15d443a11d",
+    "actual_build_job": "job_01M8E52HJ200EH015JG8GXE0KX",
+    "delta_check_job": "job_01M8E53NQD00P0WPBM62KESPNC",
+    "exact_checkout_replay_job": "job_01M8E54GKR0089F9JG12A4J4YJ",
+    "byte_replay": "MATCH",
+    "module_counts": {
+      "claims": 83,
+      "records": 464,
+      "topics": 28
+    },
+    "shared_report_sha256": "d4fb0d4aa7b8597fbbca6a94292e708a92587b91a3fbac7767f63c028cb78717",
+    "prior_review_comment_id": 7214381381,
+    "prior_receipt_id": "TASK:K02:K02-FORMAL-02",
+    "prior_content_digest": "4f513880b9b7b3447bc1f6e2fe22021027140f08968b40e33ad65dda971f165b",
+    "local_relation_extension_sha256": "967a0154abf902678dd789f12fd03a40daf0fbe3fe3deb9b444459b8730b8029",
+    "delta_impact_sha256": "1bd1d0eccd5e2b7a9d8de03d9d8a6b3936ea00dc69d9e90a74037fb87e524f6f",
+    "prior_local_verdict": "ACCEPT_SCOPED",
+    "independent_qualification": "NOT_RUN_CURRENT_TUPLE"
+  },
+  "issues": [
+    "R3 addresses only R2-RV04-01 and R2-RV07-01; 53 preserved and 19 added finite checks, all72 actual builder only; no independent qualification.",
+    "Current full candidate version and shared manifest change, prior positive verdicts retained as historical decisions, require bounded independent rebind. K01/K04 normalized semantic content unchanged; K02/K03 targeted changes.",
+    "Optional K01.01.04.D4.04 HOLD; historical/abstract source evidence and publication rights limits retained; narratives NOT_RUN; no actual learner, CQ/LC, persistent SQLite."
+  ],
+  "next": "KR01 bounded residual independent delta/rebind review only; no new exhaustive review."
+}

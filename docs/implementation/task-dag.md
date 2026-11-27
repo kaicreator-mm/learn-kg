@@ -121,3 +121,7 @@ K01–K04 CANDIDATE_READY，KR01 READY（逐模块资格裁定）；新增可执
 ### KR01 R2 candidate update
 
 KR01 original independent result REWORK_REQUIRED (comment 7213482417; 6 P1, 2 P2). K01–K04 FORMAL-02 receipts are current, with artifact 322e487f37b1de33042a3f3f2bc7b72f4b5503c6. FORMAL-01 remains historical, not a current consumption tuple. No existing dependent consumption receipt found; future tasks bind the new tuples. KR01 remains READY for a scoped RV01–RV08 independent delta review; qualifications NOT_RUN.
+
+### KR01 R3 residual candidate
+
+R2 independent comment 7214381381: K01/K02/K04 ACCEPT_SCOPED; K03 residual P1 R2-RV04-01, K02 nonblocking P2 R2-RV07-01. R3 artifact 4b35b500aaccac4787c6fb68fa950199ac34a760 preserves prior 53 checks, adds 19; exact GitHub replay clean. All four FORMAL-03 candidate receipts bind new shared version; normalized K01/K04 unchanged. Independent residual review and current tuple rebind still required, no full repeated review. Other READY tasks remain eligible under contract; no downstream issued receipt, SRC01 still BLOCKED.
