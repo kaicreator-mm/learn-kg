@@ -1,0 +1,29 @@
+{
+  "status": "BUILDER_RECONCILIATION_EVIDENCE_ONLY",
+  "task_id": "SRC01",
+  "date": "2026-11-28",
+  "outputs": [
+    {
+      "path": "docs/drafts/stage-handoff/src01-reconciliation-delta-20261128.json",
+      "sha256": "4d2fcbb1d69e2daa339a933d9965bb2888a5c68ae99ccdfb63dee3a796e4a459"
+    },
+    {
+      "path": "docs/drafts/stage-handoff/src01-cross-fault-backup-evidence-20261128.json",
+      "sha256": "edac3d16b401d9d9e31c3190582562bb79d2ad381aad824b99f47c631ddf050a"
+    }
+  ],
+  "verified": {
+    "current_connector_text_exact_match": "3/3",
+    "sourceblock_replay": "94/94",
+    "cross_fault_pdf_hashes": "3/3",
+    "isolated_v100_pdf_restore": "3/3",
+    "isolated_v100_rdf_export_restore": "17/17",
+    "restore_byte_mismatches": 0
+  },
+  "remaining_holds": [
+    "historical raw PDF byte identity",
+    "publication/redistribution rights",
+    "visual page-layout qualification"
+  ],
+  "qualification": "NOT_RUN"
+}

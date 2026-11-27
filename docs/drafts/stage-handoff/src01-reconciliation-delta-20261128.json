@@ -1,0 +1,85 @@
+{
+  "schema_version": "src01-reconciliation-delta-1",
+  "task_id": "SRC01",
+  "date": "2026-11-28",
+  "status": "RESTRICTED_PRESERVATION_CANDIDATE",
+  "canonical_extraction": {
+    "method": "Google Drive connector text extraction",
+    "historical_source_text_json_sha256": "34ca9f2d34a31809f86311d33e85f09350cb452d2c66a91f24f7548284dfba7f",
+    "current_text_exact_match": true,
+    "sources": [
+      {
+        "source_id": "RHSK01",
+        "current_text_chars": 332341,
+        "historical_text_sha256": "aa37a4ade1783a8a7f5cd6fb6a5590e8b8602400a76e2f67834dfff60cacb892",
+        "current_connector_text_equals_historical": true
+      },
+      {
+        "source_id": "RHSK02",
+        "current_text_chars": 282125,
+        "historical_text_sha256": "4d8e200d475ac4dae6de3399e0da75f1cbbbebfd499744ca9a8d74a79765e261",
+        "current_connector_text_equals_historical": true
+      },
+      {
+        "source_id": "RHSK03",
+        "current_text_chars": 409,
+        "historical_text_sha256": "05a91aef2a9aa2bd8548973276508d2b67964753d19881b6952ab1cf65d0d45d",
+        "current_connector_text_equals_historical": true
+      }
+    ],
+    "sourceblock_replay": {
+      "historical_sourceblock_jsonl_sha256": "d082666135f73b0a23555d495603758fde68fdfead1835c06b808a8435086108",
+      "historical_block_count": 94,
+      "replayed_block_count": 94,
+      "exact_metadata_and_raw_text_matches": 94,
+      "mismatches": 0
+    },
+    "prior_direct_pdf_parser_differences": {
+      "count": 14,
+      "topic_pages": [61, 64, 67, 68, 69, 71, 73, 75],
+      "grammar_pages": [386, 388, 394, 395, 397, 399],
+      "disposition": "PARSER_METHOD_DIFFERENCE_REPRODUCED_AT_CANONICAL_TEXT_LAYER",
+      "basis": "Current connector-extracted text is byte-for-byte equal to the historical source-text.json for all three source aliases, and the original 94 SourceBlock records replay exactly from that text.",
+      "visual_layout_qualification": "HOLD_NOT_REPEATED"
+    }
+  },
+  "raw_pdf_identity": {
+    "current_original_bytes_verified": true,
+    "files": [
+      {
+        "source_id": "RHSK01",
+        "bytes": 4636209,
+        "pages": 406,
+        "sha256": "ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941",
+        "current_drive_revision_count": 1,
+        "previous_drive_revision_available": false
+      },
+      {
+        "source_id": "RHSK02",
+        "bytes": 3696686,
+        "pages": 330,
+        "sha256": "a4544ceb385349a0ea078cccecb9319c7338a0cbd8308fa08d47d6d4d3bba023",
+        "current_drive_revision_count": 1,
+        "previous_drive_revision_available": false
+      },
+      {
+        "source_id": "RHSK03",
+        "bytes": 73684,
+        "pages": 1,
+        "sha256": "8cb62d88440287d0a94f05d7f011e0af89af907455ab3fb2f4a1d25f2085fa16",
+        "current_drive_revision_count": 1,
+        "previous_drive_revision_available": false
+      }
+    ],
+    "historical_raw_pdf_byte_identity": "HOLD_NO_HISTORICAL_DIGEST_OR_PRIOR_DRIVE_REVISION"
+  },
+  "scope": {
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION_AUTHORITY",
+    "source_visibility": "NOT_SHARED",
+    "private_preservation_only": true,
+    "public_release": false,
+    "layout_visual_review": "HOLD",
+    "historical_pdf_byte_identity": "HOLD",
+    "canonical_text_reconciliation": "VERIFIED"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "src01-cross-fault-backup-evidence-1",
+  "task_id": "SRC01",
+  "date": "2026-11-28",
+  "status": "CROSS_FAULT_PRIVATE_BACKUP_AND_RESTORE_VERIFIED",
+  "private_backup_manifest_sha256": "8bf073aebb6475aab65ed580af58ef5a7db07b43dc51788393c7099c69375837",
+  "raw_pdf_copies": {
+    "source_copies": ["Google Drive original", "Aliyun-SG private preservation copy", "V100 local server private copy"],
+    "all_three_sha256_match": true,
+    "directory_mode": "0700",
+    "file_mode": "0600",
+    "files": [
+      {"source_id":"RHSK01","sha256":"ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941"},
+      {"source_id":"RHSK02","sha256":"a4544ceb385349a0ea078cccecb9319c7338a0cbd8308fa08d47d6d4d3bba023"},
+      {"source_id":"RHSK03","sha256":"8cb62d88440287d0a94f05d7f011e0af89af907455ab3fb2f4a1d25f2085fa16"}
+    ]
+  },
+  "rdf_and_readable_export": {
+    "tarball_sha256": "52e74ce5e6523f2523653344c40e3ed0e4482952f2e1992ccd10b61dde745992",
+    "tarball_bytes": 2053616,
+    "archive_manifest_sha256": "b66b959454d774db6be25fa1b26e7233c411f3792bf3f3acbe18537d9aced230",
+    "file_count": 17,
+    "uncompressed_bytes": 45610208,
+    "contents": ["graph-r2.nq", "source-text.json", "historical importer and report", "complete 9-file JSONL readable archive"],
+    "restored_on_v100": true,
+    "restored_files_exact": 17,
+    "restored_bytes_exact": 45610208,
+    "mismatches": 0,
+    "binary_restored_db": "RETAINED_UNTOUCHED_ON_ALIYUN; excluded from portable export because the N-Quads and JSONL are the authoritative reproducible export"
+  },
+  "restore_tests": {
+    "raw_pdf_backup_to_isolated_v100_restore": {"files":3,"exact":3,"mismatches":0},
+    "rdf_readable_export_to_isolated_v100_restore": {"files":17,"exact":17,"mismatches":0}
+  },
+  "gateway_evidence_jobs": [
+    "job_01M8EZBY8Z007Q2N1GGRNZ2XAT",
+    "job_01M8EZWH8400B1K2100A1X0A5P",
+    "job_01M8EZYNG800AF07YBZMQ33X1C"
+  ],
+  "limits": {
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION",
+    "historical_pdf_byte_identity": "HOLD_NO_PRIOR_REVISION",
+    "layout_visual_qualification": "HOLD",
+    "private_paths_and_original_file_ids": "NOT_STORED_IN_PUBLIC_REPOSITORY"
+  }
+}
