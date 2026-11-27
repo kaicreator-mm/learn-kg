@@ -1,0 +1,431 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-formal-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "bd7ffbd9240a63af23cd3b91595c3e5b7a04603b",
+  "exact_head": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+  "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K16",
+  "attempt_id": "K16-FORMAL-01",
+  "receipt_id": "TASK:K16:K16-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "K02",
+      "receipt_id": "TASK:K02:K02-FORMAL-03",
+      "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K02/K02-FORMAL-03.json",
+          "sha256": "5c6f1a7b0c5b271495370ce6cdc63ec595dcad6137f6b3a16ac90e3eece92713"
+        },
+        {
+          "path": "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+          "sha256": "f176b0dac49cbedbce135da7ed3bc8dab4a8f0c72aae143cf4690a916675a6c9",
+          "stable_id": "K02.05.04.D4.02",
+          "record_sha256": "1478ae96316d8b142710416abc82ab0ef3fac443bdfa6c19bcde045497f6a53b"
+        },
+        {
+          "path": "evidence/tasks/K02/K02-QUALIFICATION-01.json",
+          "sha256": "90b250a76d43dd836682428e682b69673cf4f63f54f27fc019f77ba549793da8"
+        }
+      ]
+    },
+    {
+      "task_id": "K13",
+      "receipt_id": "TASK:K13:K13-FORMAL-01",
+      "content_digest": "ad575d23624642747536f31d08b0be614ebe60cc613b9334eb90f52a924545f1",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K13/K13-FORMAL-01.json",
+          "sha256": "a3a7d30d7652a4d9a911557015f9d53bbb6642705feff70e60580937d37a988f"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+          "sha256": "ca8ad4d87b5baa86caa7d88d53364b1a401968110fecffbf5056e1b3c48ee579",
+          "stable_id": "K13.02.03.SR.01",
+          "record_sha256": "e84ee6a9866a1a8cf4fa0769d3e0428e1aa606437b8a68a8afcea988daa31679"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/k15-k16-k19-preparation/K16-depth.md",
+      "sha256": "ce3452f67f58427c986ab62acdf932a4a1568565f44bd5d0daa78acb6e1533c2",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k15-k16-k19-preparation/current-source-observations.json",
+      "sha256": "c35f6d28eeab20eb280ec6f4c5bbeba99b8ae54c632a4c01d6f35a1877730439",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k15-k16-k19-preparation/depth.json",
+      "sha256": "3f813e00e433400f1398a9ef58f433225db953882bb5c18899a1ff401da9d949",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/k15-k16-k19-preparation/scope-witness.json",
+      "sha256": "792e17a2aef549f28e02805832689dc6be042bb854cf71e6020f5dad3aa9a9fe",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-batch/p2-remediation.md",
+      "sha256": "35efac2784aab716a25a5aac8140e327d9094cb17ebfb1ab79e89c9f47ec40d8",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-batch/scope-ledger.json",
+      "sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-formal/bind_dependencies.py",
+      "sha256": "0742de1b30380873d84228026c15229510070fedc69c650013a04765b6180d98",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-formal/dependency-witness.json",
+      "sha256": "c108c625e0cf5c82cd60e2baeb2fcc0487d32ba4b030fe5c818a16afff421868",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-00.jsonl",
+      "sha256": "bb9f84c05e86ee9b97f89eee2fe55c9e62f8c75ace4c15e154f7e05bb6e34277",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-01.jsonl",
+      "sha256": "5e8da8a318cead5bdb68782073fe36b3ad0e3e75ccd05caff52ba582fe5483da",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-02.jsonl",
+      "sha256": "ed0772633eb315c4b564804a2ffb153096328a72e123ec7a76e9b2c814eeae66",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+      "sha256": "88fc8b1dac66cb5d9f2ed48265396cc4f16b89f3c0d98f507549dd4154d39c7c",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-04.jsonl",
+      "sha256": "397af3716c9795d4cf00d5df92fe395a71d0770859e6416fda6b8804c5297259",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-05.jsonl",
+      "sha256": "4f074cb55928729bcb63eb1cea15a93e5ab1e92f193acf941d6a00b3e077d6e7",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/coverage.json",
+      "sha256": "87541d0c25cdae984da633a8b7e751ec59a2750ec635e0dfb417668e32ff3c7e",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-00.jsonl",
+      "sha256": "2b73486434f17bad8aad968cdc5e117f06f0c5da90c0554e23356ba4f179cddc",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+      "sha256": "14104bc985f64edd03af68579c271601663fdf5f75c40376dedde51d020a4498",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+      "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-03.jsonl",
+      "sha256": "9676231931e0005e54739fb2bead5d27d6edcfe4c1f2e29790ee7969f9397965",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-04.jsonl",
+      "sha256": "b8d640c765230c4c6a168324dcb2a0557377508c008aec1d075ac8be72afcd73",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-00.jsonl",
+      "sha256": "cc807643c737af127291fcd785f2077f541d7e76f47bc59641d918577c72514b",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-01.jsonl",
+      "sha256": "e29b7db933f7f1aff9a2244a93ae2e03433c1a6c28d1762e6803fcd53233c928",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+      "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+      "sha256": "4393fbe808eec1d435494c91d1f047ca1c168e81761f7073e480a5acfa83bd85",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-04.jsonl",
+      "sha256": "f2f527593fa0f0a463e1fe23d368076a7950c18df56f8869ef4bfa5db1a2aa32",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-05.jsonl",
+      "sha256": "62d06a49bf9005ba88350df76bb948f893893cc32b1dbb0abe9fc30ec701bb7a",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/README.md",
+      "sha256": "a4f4ae1398ffd0c7be0af9bc863185cc36aae8ea6989116086157f29463bc79b",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/anchor-dispositions.json",
+      "sha256": "1c8be9a318ff4a44465cb796eba0cea9c824a92f4cbbf9a248c28da4f13a057f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/check_consumption.py",
+      "sha256": "21533dc8ab983b6c081f8bb5dc0351d79061a5a00bb52740dee4695ecc9c6bf9",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/consumption-results.json",
+      "sha256": "18323ce1dbe7d441bbf5640b2d180be043513b2d1d8bed1b4d5838bd591ca295",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/decision-design.json",
+      "sha256": "725a7474e2328b34e208eb1afc3ef77daccc83fe67023049622c12e0dc6fa2bd",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence.manifest.json",
+      "sha256": "0285a7a420013ff4e18ce2afdc675d5f38c631c13dc35d5154fc8f0090feac6a",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence/records-00.jsonl",
+      "sha256": "744c36c024af85248344562964b866d0f6508a867e88af66414170f6992bdc30",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/finite-fixtures.json",
+      "sha256": "f246dbd4674af2f55ea64f8e6d5b7a91ab30cc88f14730090bdf213cc69e4df9",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/finite-results.json",
+      "sha256": "dac6f39b347ec3f969fca6ee069ad1709ed273efec502ea8b03000a4084121c6",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/import-receipt.json",
+      "sha256": "620626873e8b0e208d549d0470a5851a026c7492482a63acc6bfaf970a13d229",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/learning-core.manifest.json",
+      "sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/model-design.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/run_finite.py",
+      "sha256": "bcfd03117933dddde3cf332b98cf1c0e4c62f12ba4703d67b4c88a00a436055d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/validation-receipt.json",
+      "sha256": "dd3e2dbedbe85a1c441b5138c1ad7a276e5aadf167a7529109347b19df95ccb8",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "tools/knowledge_import/model_spec.py",
+      "sha256": "1f90328f6e9654d8caf6711189aad997d57766c0ae9949efe8f8be217749ae44",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Restricted nonempirical candidate after formal prerequisite binding; not independent readiness verdict or qualification.",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "candidate_claim_ids": [
+      "K16.01.01.D4.02",
+      "K16.01.01.TG.01",
+      "K16.01.02.D4.02",
+      "K16.01.02.TG.01",
+      "K16.01.03.D4.02",
+      "K16.01.03.TG.01",
+      "K16.01.04.D4.02",
+      "K16.01.04.TG.01",
+      "K16.02.01.D4.01",
+      "K16.02.01.D4.02",
+      "K16.02.01.TG.01",
+      "K16.02.02.D4.01",
+      "K16.02.02.D4.02",
+      "K16.02.02.TG.01",
+      "K16.02.03.D4.02",
+      "K16.02.03.TG.01",
+      "K16.02.04.D4.01",
+      "K16.02.04.D4.02",
+      "K16.02.04.TG.01",
+      "K16.03.01.D4.02",
+      "K16.03.01.TG.01",
+      "K16.03.02.D4.02",
+      "K16.03.02.TG.01",
+      "K16.03.03.D4.02",
+      "K16.03.03.TG.01",
+      "K16.03.04.D4.02",
+      "K16.03.04.TG.01",
+      "K16.04.01.D4.02",
+      "K16.04.01.TG.01",
+      "K16.04.02.D4.02",
+      "K16.04.02.TG.01",
+      "K16.04.03.D4.02",
+      "K16.04.03.TG.01",
+      "K16.04.04.D4.02",
+      "K16.04.04.TG.01",
+      "K16.05.01.D4.02",
+      "K16.05.01.TG.01",
+      "K16.05.02.D4.02",
+      "K16.05.02.TG.01",
+      "K16.05.03.D4.01",
+      "K16.05.03.D4.02",
+      "K16.05.03.TG.01",
+      "K16.05.04.D4.02",
+      "K16.05.04.TG.01"
+    ],
+    "excluded_claim_ids": [
+      "K16.01.01.D4.01",
+      "K16.01.02.D4.01",
+      "K16.01.02.D4.03",
+      "K16.01.03.D4.01",
+      "K16.01.04.D4.01",
+      "K16.01.04.D4.03",
+      "K16.02.03.D4.01",
+      "K16.02.03.D4.03",
+      "K16.03.01.D4.01",
+      "K16.03.01.D4.03",
+      "K16.03.02.D4.01",
+      "K16.03.02.TG.S01",
+      "K16.03.03.D4.01",
+      "K16.03.03.D4.03",
+      "K16.03.04.D4.01",
+      "K16.03.04.D4.03",
+      "K16.04.01.D4.01",
+      "K16.04.01.TG.S01",
+      "K16.04.02.D4.01",
+      "K16.04.02.TG.S01",
+      "K16.04.03.D4.01",
+      "K16.04.03.D4.03",
+      "K16.04.04.D4.01",
+      "K16.04.04.D4.03",
+      "K16.05.01.D4.01",
+      "K16.05.01.D4.03",
+      "K16.05.02.D4.01",
+      "K16.05.02.D4.03",
+      "K16.05.04.D4.01",
+      "K16.05.04.D4.03",
+      "K16.05.04.D4.04"
+    ],
+    "canonical_candidate_count": 47,
+    "candidate_claim_count": 44,
+    "canonical_hold_count": 28,
+    "additional_excluded_count": 3,
+    "source_limited_candidate_claim_ids": [],
+    "source_claim_policy": "Source-limited and unverified hypotheses excluded from consumption; canonical snapshot unchanged. P3 source pinning remains HOLD.",
+    "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+    "coverage_sha256": "87541d0c25cdae984da633a8b7e751ec59a2750ec635e0dfb417668e32ff3c7e",
+    "dependency_uses": [
+      {
+        "task_id": "G01",
+        "claims": [],
+        "scope": "LOCAL_OR_CANDIDATE",
+        "qualification": "NOT_ISSUED"
+      },
+      {
+        "task_id": "K02",
+        "claims": [
+          "K02.05.04.D4.02"
+        ],
+        "scope": "LOCAL_OR_CANDIDATE",
+        "qualification": "evidence/tasks/K02/K02-QUALIFICATION-01.json"
+      },
+      {
+        "task_id": "K13",
+        "claims": [
+          "K13.02.03.SR.01"
+        ],
+        "scope": "RESTRICTED",
+        "qualification": "NOT_ISSUED"
+      },
+      {
+        "task_id": "IF01",
+        "claims": [],
+        "scope": "LOCAL_OR_CANDIDATE",
+        "qualification": "NOT_ISSUED"
+      }
+    ],
+    "witness_sha256": "c108c625e0cf5c82cd60e2baeb2fcc0487d32ba4b030fe5c818a16afff421868",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "limits": "Project rules, bounded synthetic methods and mathematical derivations only; no generic execution, empirical/source qualification or full D3 adequacy. Exact dependency witnesses are restricted authored guard checks, not canonical semantic edges."
+  },
+  "validation": {
+    "previous_preparation_review_comment": 7221120084,
+    "previous_independent_finite_cases": 47,
+    "previous_finite_count_is_shared_package_not_per_module": true,
+    "current_builder_dependency_cases": 8,
+    "current_independent_review": "NOT_RUN",
+    "qualification": "NOT_ISSUED"
+  },
+  "issues": [
+    "P2 repairs pending independent delta adjudication.",
+    "P3 source pinning HOLD; all source-limited claims excluded.",
+    "Broader professional depth and canonical semantic closure remain unresolved."
+  ],
+  "next": "KR03–KR05 cumulative independent exact-tuple qualification review.",
+  "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90"
+}

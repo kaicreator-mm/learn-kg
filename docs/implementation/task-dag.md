@@ -158,3 +158,7 @@ The two P2 findings from independent review #6 comment 7221120084 now have bound
 ## P01 bounded learning-mode candidate
 
 P01 six learner-selected templates, 182 process records, 24 activities, six flows, 36 builder guard cases (six common patterns across six mode identities). 121 upstream applicability rows: 29 direct / 92 indirect, not professional adequacy. Exact scope and typed references, in-memory import passed. Current P01 restricted candidate receipt binds the artifact at 479853eb58c769551131a6ac6266b3083adf9cad. No independent qualification; actual mode-specific flow execution and broader composition remain pending.
+
+## KR03–KR05 restricted candidate binding
+
+Six previously preparation-only modules now have exact current candidate receipts: K10, K11, K12, K15, K16, K19. Their formal prerequisite use is bounded to 14 concept pairs, 25 exact SQL-read records and 56 synthetic boolean guards. These guards do not establish general reasoning or canonical relationship closure. 349 restricted nonempirical claims allowed across the six; source-limited claims and unsupported hypotheses excluded from consumption (canonical statuses and history preserved). KR03/KR04/KR05, P02/P03 are structurally READY. No qualification is issued. P2 delta still requires independent review; source pinning, professional coverage, CQ/LC and rights are unresolved.

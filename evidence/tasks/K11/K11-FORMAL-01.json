@@ -1,0 +1,507 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr03-05-formal-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "bd7ffbd9240a63af23cd3b91595c3e5b7a04603b",
+  "exact_head": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+  "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K11",
+  "attempt_id": "K11-FORMAL-01",
+  "receipt_id": "TASK:K11:K11-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "K05",
+      "receipt_id": "TASK:K05:K05-FORMAL-02",
+      "content_digest": "44d561458359a165d29d31603b35fa60f1b8e1311191e2faa49eaba49c78afeb",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K05/K05-FORMAL-02.json",
+          "sha256": "9191b45e42af9a1b0d37687a3579755ee72ed9ae1675652e38a3a809b657250e"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+          "sha256": "764783df00425e4ed054f3c4b336c5afc6245f90368ebcb4f9807c7b756078fd",
+          "stable_id": "K05.02.04.PT.01",
+          "record_sha256": "7bf809b784a02690fe479d3d9a4a09f69e2307a2ea5bb453fa0d2cdea6cc15be"
+        },
+        {
+          "path": "evidence/tasks/K05/K05-QUALIFICATION-02.json",
+          "sha256": "f56ab541e0094d772d105fe6597cf468f8744a6f3482d7e721fe6cd6962f933c"
+        }
+      ]
+    },
+    {
+      "task_id": "K08",
+      "receipt_id": "TASK:K08:K08-FORMAL-02",
+      "content_digest": "232d438b24281923530b351968bdfb24517c09ef8f39fc152dedce98f20a5faa",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K08/K08-FORMAL-02.json",
+          "sha256": "789f7d9c18d9e200d8d6512e67ce132bd9c4191fc01f18d2197685902d7e3b69"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.04.02.PT.01",
+          "record_sha256": "4295611151049943b42f3fcb54b007db7526e7821f32fc949b5faf3adbec18ef"
+        },
+        {
+          "path": "evidence/tasks/K08/K08-QUALIFICATION-02.json",
+          "sha256": "1f716e34738d2aa32dfe09add8d4dc10beaba8715c1df233627633914f038cd0"
+        }
+      ]
+    },
+    {
+      "task_id": "K10",
+      "receipt_id": "TASK:K10:K10-FORMAL-01",
+      "content_digest": "36ac3110d5a361eedcd47a31f513726e16938f4d7b625ca42b18cfb7574f71f2",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K10/K10-FORMAL-01.json",
+          "sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+          "sha256": "d7ea8a8d5c695edee3b655f815ea6bda9b77607a5daeb0105155ab65ef0c8fe2",
+          "stable_id": "K10.03.01.TR.01",
+          "record_sha256": "066320677ee2fefcb75e35b8a9d22eb28a48c2c45ed50a228866f3204465a35f"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/kr03-05-batch/p2-remediation.md",
+      "sha256": "35efac2784aab716a25a5aac8140e327d9094cb17ebfb1ab79e89c9f47ec40d8",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-batch/scope-ledger.json",
+      "sha256": "7eb3f16d903980036bc42dbf1930e3bac653a4f9a2eb870e0cc627b00ad4d73f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-formal/bind_dependencies.py",
+      "sha256": "0742de1b30380873d84228026c15229510070fedc69c650013a04765b6180d98",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-05-formal/dependency-witness.json",
+      "sha256": "c108c625e0cf5c82cd60e2baeb2fcc0487d32ba4b030fe5c818a16afff421868",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-kt-policy-resource-preparation/K11-depth.md",
+      "sha256": "7a0492f05b61085d3f0eb99a67b30cfd6cd4ff6d30fa57a0f5df1cf5bf23b031",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-kt-policy-resource-preparation/current-source-observations.json",
+      "sha256": "b38870201fa947e7f40a1145b4879c1a29c9d4291f784d3bd7495f9ca8f46f5a",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-kt-policy-resource-preparation/depth.json",
+      "sha256": "943d5197358e97c3b74ab33bf3f719494f37d951d4af7fde7fb9f978b35aa8ee",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/kr03-kt-policy-resource-preparation/scope-witness.json",
+      "sha256": "6bf1106e08f7649b3f69c64337a3e500102b146e95a1929be29a537d237da538",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-00.jsonl",
+      "sha256": "a874e7712f19f63c754b834d724c59ee2535af93b1b6bf3bf61d6caca9c72485",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-01.jsonl",
+      "sha256": "464b9bb7d5e2847219ae2239d754af7ce0cf332296c15954292209fb05804997",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+      "sha256": "d7ea8a8d5c695edee3b655f815ea6bda9b77607a5daeb0105155ab65ef0c8fe2",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-03.jsonl",
+      "sha256": "4a01f86757df4fddeef766ca0c4d4dc46650ebd724c295421e2850a87eb9b9e3",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-04.jsonl",
+      "sha256": "280e8d8eb88a9dfc1c1d5a509f9d29545834b734ba09f065bf3e5e93a281d6db",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-05.jsonl",
+      "sha256": "fd23efe858ca54e29009230ad345ed817b8aee93bd8a2e99fda3b77f9c80ff11",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/coverage.json",
+      "sha256": "5cbe712eff1d04f26bce98ee1322c0e3a8007efe32a22ea18ddd8f042d8f2163",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-00.jsonl",
+      "sha256": "7b85a61c4ea4aee084b88678ce85c901d1a4faba0abc487b3df7ecb523a58422",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-01.jsonl",
+      "sha256": "16475576217af3f03b63b4a45c1399d62009233dab91a014cfeb01f9a0f0ffd9",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+      "sha256": "90141981b482f24549dff8b77f3bac0fd09bea023625dcb828cd2294843addd7",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+      "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-04.jsonl",
+      "sha256": "86301418e7b69d87b4482bd56e76d07128269e1c75f5d32bf95a79ac36316035",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-05.jsonl",
+      "sha256": "0ac1038d70387a2f7cf23a238c728033f1c14c0e9d3feb3c86e88d3f050b6964",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-00.jsonl",
+      "sha256": "3cb9e87423f06d8f7b3b37bc49fddcf804fd377a51fcba43fedc02077a26ed96",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-01.jsonl",
+      "sha256": "33570a264bf964d9d065d51ea019a6671441d6fd4e79337cb16dde406b0a8ee3",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+      "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+      "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-04.jsonl",
+      "sha256": "3dabf1d769981e661ba87bba7036c3b42b01a9704ca3dccd042efc156f608074",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-05.jsonl",
+      "sha256": "f5d624a9d0a1bb77fa2d69a3b56856b6524edf21fa476d99229a0793ccec14e9",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-06.jsonl",
+      "sha256": "fadc41a1520d82c7b7ce09944d438dde5642f1e4c09cfd139c7e9e7080639b9d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/README.md",
+      "sha256": "06e8840c35c1d58ce80ee375f82772e6146c840f9ec2eb6fd6db87c25e0eb8dd",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/anchor-dispositions.json",
+      "sha256": "1169fe66015d60fe73905b7084fe53380a01c0f7de053c98238c06434219c94c",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/check_consumption.py",
+      "sha256": "cd144d513321afa567ca850d6cd26fecadaaaa4a59122cc2bbd4e5003c8ea2b2",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/consumption-results.json",
+      "sha256": "ae37bb4d88953b5b86fc61adef1960d616a92d26ca0e3d91c6522128244aa182",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/decision-design.json",
+      "sha256": "e1f96bf42a78ec9daae8de259c2ed9fc4e6cd4e85b56ec4c4afe12556c7312c5",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence.manifest.json",
+      "sha256": "ca13a399dba0a759bd520d4b58b7df675cfd02e32984db24962064d86a4c3626",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence/records-00.jsonl",
+      "sha256": "25de5d12c6e2771bb6743351e2c266717abb7b4f8db5f5f34c663e31cf70eb60",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/finite-fixtures.json",
+      "sha256": "35ac1ef4d9567c70c74bb332807cc4e6a6841741830e67d9dbf195f03841e768",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/finite-results.json",
+      "sha256": "225a4873c80977625eddfd2a5e5cdda25bb845ff6a668b297ddd97bc54354012",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/import-receipt.json",
+      "sha256": "85462311adaac88dec2cfa62b45133518a87ffa9bda583b4a1f151394f6b95ed",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/learning-core.manifest.json",
+      "sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-design.json",
+      "sha256": "41b57589b2911e4340c8998c96a64ecbab2127044c9e3e4d5af3933884bfdc65",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-domain-constraints.json",
+      "sha256": "a15505baa6252af5ba0b11bf87fccaba18dd8ebfcea4fd6832c90a655cdf614c",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-spec-guard-fixtures.json",
+      "sha256": "505d6d5b0d118b8a4558b968d83472b495f9aa7f3bcb0a62cbe7050f16b65b8d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/model-spec-guard-results.json",
+      "sha256": "50d2a4753c3c9433b231456fbdf8452977aea1b4884b126c1a6aeaba742a3a1e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/run_finite.py",
+      "sha256": "ef2bd7554515945228ebb0cf3940f540884e23bc90f3f0a8ca8f5bf2ad5971bb",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/validation-receipt.json",
+      "sha256": "b8a07ff053e60eb98ab1ab6166dd5b9dbb8aad7cb4abe4da63bfbd1e3dc98189",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "tools/knowledge_import/model_spec.py",
+      "sha256": "1f90328f6e9654d8caf6711189aad997d57766c0ae9949efe8f8be217749ae44",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Restricted nonempirical candidate after formal prerequisite binding; not independent readiness verdict or qualification.",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "candidate_claim_ids": [
+      "K11.01.01.D4.02",
+      "K11.01.01.TR.01",
+      "K11.01.02.D4.01",
+      "K11.01.02.D4.02",
+      "K11.01.02.TR.01",
+      "K11.01.03.D4.01",
+      "K11.01.03.D4.02",
+      "K11.01.03.R2.09",
+      "K11.01.03.TR.01",
+      "K11.01.04.D4.02",
+      "K11.01.04.TR.01",
+      "K11.01.05.D4.02",
+      "K11.01.05.TR.01",
+      "K11.01.06.D4.02",
+      "K11.01.06.TR.01",
+      "K11.02.01.D4.02",
+      "K11.02.01.TR.01",
+      "K11.02.02.D4.02",
+      "K11.02.02.TR.01",
+      "K11.02.03.D4.02",
+      "K11.02.03.TR.01",
+      "K11.02.04.D4.02",
+      "K11.02.04.TR.01",
+      "K11.03.01.D4.02",
+      "K11.03.01.TR.01",
+      "K11.03.02.D4.01",
+      "K11.03.02.D4.02",
+      "K11.03.02.R2.11",
+      "K11.03.02.TR.01",
+      "K11.03.03.D4.02",
+      "K11.03.03.TR.01",
+      "K11.03.04.D4.02",
+      "K11.03.04.TR.01",
+      "K11.04.01.D4.02",
+      "K11.04.01.TR.01",
+      "K11.04.02.D4.02",
+      "K11.04.02.TR.01",
+      "K11.04.03.D4.02",
+      "K11.04.03.TR.01",
+      "K11.04.04.D4.02",
+      "K11.04.04.TR.01",
+      "K11.04.05.D4.02",
+      "K11.04.05.TR.01",
+      "K11.05.01.D4.01",
+      "K11.05.01.D4.02",
+      "K11.05.01.TR.01",
+      "K11.05.02.D4.02",
+      "K11.05.02.TR.01",
+      "K11.05.03.D4.02",
+      "K11.05.03.TR.01",
+      "K11.05.04.D4.01",
+      "K11.05.04.D4.02",
+      "K11.05.04.TR.01",
+      "K11.06.01.D4.02",
+      "K11.06.01.TR.01",
+      "K11.06.02.D4.02",
+      "K11.06.02.TR.01",
+      "K11.06.03.D4.01",
+      "K11.06.03.D4.02",
+      "K11.06.03.TR.01",
+      "K11.06.04.D4.01",
+      "K11.06.04.D4.02",
+      "K11.06.04.R2.12",
+      "K11.06.04.TR.01"
+    ],
+    "excluded_claim_ids": [
+      "K11.01.01.D4.01",
+      "K11.01.01.R2.08",
+      "K11.01.01.TR.S01",
+      "K11.01.04.D4.01",
+      "K11.01.05.D4.01",
+      "K11.01.06.D4.01",
+      "K11.02.01.D4.01",
+      "K11.02.01.R2.10",
+      "K11.02.02.D4.01",
+      "K11.02.02.TR.S01",
+      "K11.02.03.D4.01",
+      "K11.02.03.D4.03",
+      "K11.02.03.D4.04",
+      "K11.02.04.D4.01",
+      "K11.03.01.D4.01",
+      "K11.03.03.D4.01",
+      "K11.03.04.D4.01",
+      "K11.04.01.D4.01",
+      "K11.04.01.TR.S01",
+      "K11.04.02.D4.01",
+      "K11.04.03.D4.01",
+      "K11.04.03.TR.S01",
+      "K11.04.04.D4.01",
+      "K11.04.05.D4.01",
+      "K11.05.02.D4.01",
+      "K11.05.02.D4.03",
+      "K11.05.03.D4.01",
+      "K11.05.03.D4.03",
+      "K11.06.01.D4.01",
+      "K11.06.02.D4.01",
+      "K11.06.02.D4.03",
+      "K11.06.02.D4.04"
+    ],
+    "canonical_candidate_count": 69,
+    "candidate_claim_count": 64,
+    "canonical_hold_count": 27,
+    "additional_excluded_count": 5,
+    "source_limited_candidate_claim_ids": [],
+    "source_claim_policy": "Source-limited and unverified hypotheses excluded from consumption; canonical snapshot unchanged. P3 source pinning remains HOLD.",
+    "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+    "coverage_sha256": "5cbe712eff1d04f26bce98ee1322c0e3a8007efe32a22ea18ddd8f042d8f2163",
+    "dependency_uses": [
+      {
+        "task_id": "G01",
+        "claims": [],
+        "scope": "LOCAL_OR_CANDIDATE",
+        "qualification": "NOT_ISSUED"
+      },
+      {
+        "task_id": "K05",
+        "claims": [
+          "K05.02.04.PT.01"
+        ],
+        "scope": "RESTRICTED",
+        "qualification": "evidence/tasks/K05/K05-QUALIFICATION-02.json"
+      },
+      {
+        "task_id": "K08",
+        "claims": [
+          "K08.04.02.PT.01"
+        ],
+        "scope": "RESTRICTED",
+        "qualification": "evidence/tasks/K08/K08-QUALIFICATION-02.json"
+      },
+      {
+        "task_id": "K10",
+        "claims": [
+          "K10.03.01.TR.01"
+        ],
+        "scope": "RESTRICTED",
+        "qualification": "NOT_ISSUED"
+      },
+      {
+        "task_id": "IF01",
+        "claims": [],
+        "scope": "LOCAL_OR_CANDIDATE",
+        "qualification": "NOT_ISSUED"
+      }
+    ],
+    "witness_sha256": "c108c625e0cf5c82cd60e2baeb2fcc0487d32ba4b030fe5c818a16afff421868",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "limits": "Project rules, bounded synthetic methods and mathematical derivations only; no generic execution, empirical/source qualification or full D3 adequacy. Exact dependency witnesses are restricted authored guard checks, not canonical semantic edges."
+  },
+  "validation": {
+    "previous_preparation_review_comment": 7221120084,
+    "previous_independent_finite_cases": 68,
+    "previous_finite_count_is_shared_package_not_per_module": true,
+    "current_builder_dependency_cases": 12,
+    "current_independent_review": "NOT_RUN",
+    "qualification": "NOT_ISSUED"
+  },
+  "issues": [
+    "P2 repairs pending independent delta adjudication.",
+    "P3 source pinning HOLD; all source-limited claims excluded.",
+    "Broader professional depth and canonical semantic closure remain unresolved."
+  ],
+  "next": "KR03–KR05 cumulative independent exact-tuple qualification review.",
+  "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e"
+}
