@@ -82,3 +82,5 @@
 - [S01正式范围候选](implementation/s01/README.md)；等待G01独立范围裁定。
 
 - [DB01 正式候选文本合同](implementation/db01/README.md)；G01独立范围已通过，IF01/DB02可执行。
+
+- [IF01共享语义接口](implementation/if01/README.md)；首批8个通用专业模块可正式建设。

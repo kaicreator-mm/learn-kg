@@ -1,0 +1,103 @@
+{
+  "task_id": "IF01",
+  "attempt_id": "IF01-FORMAL-01",
+  "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-if01-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "f316d6f9a5eac16b271fe047c29509ead92ef8aa",
+  "exact_head": "04263009493a994501520be08364b32329c93179",
+  "version": "04263009493a994501520be08364b32329c93179",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "input": [
+    {
+      "task_id": "S01",
+      "receipt_id": "TASK:S01:S01-FORMAL-01",
+      "content_digest": "82aa24a189e3d4ad12a2d7d6e8a128f946a899c10a48d1aac45ddb7b7747ddc7",
+      "version": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/S01/S01-FORMAL-01.json",
+          "sha256": "29833f32e3e073bb6a3d7b24bfd3eb08816c3b94944c47a7850ccbdb53bf0ff0"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/if01/README.md",
+      "sha256": "938a23c02a9beb2b07fc263b9338910071a2451e3472f23289cebc519b8ad769",
+      "type": "MARKDOWN"
+    },
+    {
+      "path": "docs/implementation/if01/verify_interface.py",
+      "sha256": "dfb1097023a38420974f37edf1eb31b86803bb7446b97353a0a8de01c71f2f7a",
+      "type": "PYTHON_TOOL"
+    },
+    {
+      "path": "docs/implementation/if01/interface-contract.json",
+      "sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/if01/interface-fixtures.json",
+      "sha256": "26985636445b22837342a690d8c26fc63385c883fa5f310cb751472668285c9c",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/if01/validation-receipt.json",
+      "sha256": "0dfa65ae5b7f098d6c7ccf08bbfdb9f9b3573ab3db26e3993a10c4ceca31ce21",
+      "type": "JSON_CONTRACT_OR_EVIDENCE"
+    }
+  ],
+  "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "time": "2026-11-27",
+  "validation": {
+    "job": "job_01M8DZDV02003KYNH1JF0V1FCY",
+    "exact_checkout_replay_job": "job_01M8DZJ95600EATBV6B82Q6XF2",
+    "tree": "9be83bb5f243d145d8b930c058066c5208dfcfe4",
+    "replay_byte_identity": "MATCH",
+    "shared_objects": 20,
+    "typed_reference_fields": 90,
+    "views": 27,
+    "view_requirements": 108,
+    "synthetic_records": 40,
+    "synthetic_typed_refs": 107,
+    "synthetic_contexts": 2,
+    "negative_rejected": 17
+  },
+  "issues": [
+    "Candidate shared interface, not G04 freeze, actual authorization/flow runtime/parallel execution, DB02 or scientific qualification.",
+    "Full domain-specific schema/semantic extensions and independently expected results remain module tasks; two synthetic contexts not CQ25 or actual second-subject evidence.",
+    "No real learner data or persistent SQLite."
+  ],
+  "next": "Dispatch eligible K foundation tasks and DB02; HSK tasks remain blocked by SRC01."
+}
