@@ -1,0 +1,219 @@
+{
+  "task_id": "K04",
+  "attempt_id": "K04-FORMAL-02",
+  "receipt_id": "TASK:K04:K04-FORMAL-02",
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-foundation-kr01-r2-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "b781a137bb5350448143cc3ecb7d164ef6f13034",
+  "exact_head": "322e487f37b1de33042a3f3f2bc7b72f4b5503c6",
+  "version": "322e487f37b1de33042a3f3f2bc7b72f4b5503c6",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/K04/coverage.json",
+      "sha256": "c6f379d1543d27db874b36e62a9ab914c7b02e8d81afaeac3084e2c99ac594fb",
+      "type": "MODULE_COVERAGE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/K04/records-00.jsonl",
+      "sha256": "157546981630a718799ffca8d6f652031e41e5a8bba08e5c212fed1220300904",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/K04/records-01.jsonl",
+      "sha256": "7270fc2ee66cbfbf8d03f735af6a216ba181592b12dd6291de5902036a493e18",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/K04/records-02.jsonl",
+      "sha256": "dbfee0fed979a061415cefbe9033dde307897777517f688562157b7e3ac88f26",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/K04/records-03.jsonl",
+      "sha256": "669a5aa4532ed8978b6610493ea9d1d29b6b495d78406dca8839d55936c78c90",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/K04/records-04.jsonl",
+      "sha256": "0a8ddcea5a4cc1f37b55a10062ae5d0cc673d1cfbd0dc9a55baf8062b071f060",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/K04/records-05.jsonl",
+      "sha256": "6da68b5a4dd664acfb00e78a331440fcb3a803877c82f0d63b1eb3d3d8a2144b",
+      "type": "CANONICAL_JSONL_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/README.md",
+      "sha256": "3b270925161a960aefd8c96bdeb6adba5c3dc1449b1a6620a6bcf83f65d9a536",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/anchor-dispositions.json",
+      "sha256": "909a2cc75f978a7f0bf62f61dce6a3f10897788b8cdc650a37c51c8e9ca4d916",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/anchor-holds.json",
+      "sha256": "c29ae44dc8dd7fb6133b6ceabf00517f63b5029cf2eb560dc5d0ddb82dccf4b6",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/aux-source-support.json",
+      "sha256": "a6f05e5af291226210b5c6f7fd5664d2cccc68947d24420b92cf3e4d0e1c323d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/build_r2.py",
+      "sha256": "86a65e9a280b21950b070af4cfeb68f501ef690f05f35ba531831d254a302d1e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/claim-support-ledger.json",
+      "sha256": "33dde946b7c4cd46d479be8509d1106b8150797f9ad0ff473a74bbdd0fba5a64",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/depth-additions.json",
+      "sha256": "42048cfdbb68c1b33f25b31323bd113d0b17b92f49fa7bf2cd1be244da986bef",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/depth.tsv",
+      "sha256": "2aa83b5a19b50da809f37b5d11f4750f8fb1274a7d094ce9ec46218fc7198544",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/duplicate-dispositions.json",
+      "sha256": "9ee5038663f2fb65302cd881187c47b71bc246965dfd5eeafdf477381e0095a2",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/evidence/records-00.jsonl",
+      "sha256": "25885b4cd1994e3bdb7e28e65bf3a49c64bd4aa797280fefd2c25b53aab4b8da",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/evidence.manifest.json",
+      "sha256": "b6bc626ba26049e8350379b7b500fbb274b121c84a5dc3385fc63e96d431d2c7",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/learning-core.manifest.json",
+      "sha256": "7355ef75be88d3c89ccd9737a5efd44297f12cd6ed721e3446d9966868abc456",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/new-oracles.json",
+      "sha256": "5fe6281243fb578b74883334735736cd6766e1f513b3d7e85f670d8f178a806f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/new-sources.json",
+      "sha256": "b6b8d6a856143cc8a9b739868a3ab753c9028cb3c31076c56914e4bb96dbc075",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/oracle-results.json",
+      "sha256": "7a069fb79f71fa38307fb555681c013bc6b5377dfd3b0f54fec36f24e124d22b",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/relation-design.json",
+      "sha256": "88811a0894d00a580ff1eed7f063666f91c02da21202ea6e822cde47e279bdcb",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/relation-types.json",
+      "sha256": "967a0154abf902678dd789f12fd03a40daf0fbe3fe3deb9b444459b8730b8029",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/relations.tsv",
+      "sha256": "78af1f7a6dfdbbe1fcc56e0c3cacb6ed8464b4247cf4892efa18fec31ab77413",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/run_oracles.py",
+      "sha256": "12772dce48a89564281c3a28726c4115016d3c96df57616b3b4fa696fe5fe822",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/source-bindings.tsv",
+      "sha256": "c138d6aff7bff77adc7580fbff98b4170b8814966b6dba4c987d3bc90ecccce0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/source-support.json",
+      "sha256": "02ecc2c6c9e7562f38d4badc47dcdb0075ed9cf09b801d28d6f35f19bf494f96",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/validation-receipt.json",
+      "sha256": "d94c90218d98b20a27d771a82e1e2a24c174f26099b8320ec366c1aff401839e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/foundation-r2/view-transformations.json",
+      "sha256": "ef5147ade1e3895e72dcb11e2c908ad9f61f811d44a83f067643d3e0be386d36",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    }
+  ],
+  "content_digest": "3c3c27ec4046c639a1ab546a77d7df5b76c49a694ef41f357e9a969b6bf86086",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "time": "2026-11-27",
+  "validation": {
+    "candidate_tree": "ef170c40f295ed2aa1143e78cf91ba5370c92d6e",
+    "actual_build_job": "job_01M8E3MVTP00NZ6G5EXJZRJ9XZ",
+    "exact_checkout_replay_job": "job_01M8E3PJXE00837Q11G6ASG5DR",
+    "byte_replay": "MATCH",
+    "module_counts": {
+      "claims": 61,
+      "records": 355,
+      "topics": 24
+    },
+    "shared_report_sha256": "d94c90218d98b20a27d771a82e1e2a24c174f26099b8320ec366c1aff401839e",
+    "prior_review_comment_id": 7213482417,
+    "prior_receipt_id": "TASK:K04:K04-FORMAL-01",
+    "prior_content_digest": "4edd399fc90b38d47c2cc211bf45bbf1efa739e4285cbcf8758f081bd43ce6a9",
+    "local_relation_extension_sha256": "967a0154abf902678dd789f12fd03a40daf0fbe3fe3deb9b444459b8730b8029",
+    "independent_qualification": "NOT_RUN"
+  },
+  "issues": [
+    "KR01 RV01–RV08 remediation candidate, not independent closure. Historical/abstract source evidence retains limitations; optional K01.01.04.D4.04 HOLD and source rights HOLD.",
+    "23 conditional typed relations and author composition cases, 388 historical narrative transformations, 53 finite actual checks; narrative cases NOT_RUN; no actual learner or formal CQ/LC.",
+    "Same revised package manifest pins peer module content; only local conditional relation extension, no global registry qualification; previous candidate remains immutable."
+  ],
+  "next": "KR01 scoped independent delta review; all professional qualifications NOT_RUN; any later consumers bind exact revised receipts."
+}

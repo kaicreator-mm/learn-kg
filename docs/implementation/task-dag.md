@@ -117,3 +117,7 @@ IF01 CANDIDATE_READY，首批K01/K02/K03/K04/K08/K09/K13/K17与DB02可执行；S
 
 ## K01–K04 首批正式专业候选
 K01–K04 CANDIDATE_READY，KR01 READY（逐模块资格裁定）；新增可执行任务：K05, K06, K07, K18, KR01。原源定位与专业充分性缺口保留，不提前晋升。
+
+### KR01 R2 candidate update
+
+KR01 original independent result REWORK_REQUIRED (comment 7213482417; 6 P1, 2 P2). K01–K04 FORMAL-02 receipts are current, with artifact 322e487f37b1de33042a3f3f2bc7b72f4b5503c6. FORMAL-01 remains historical, not a current consumption tuple. No existing dependent consumption receipt found; future tasks bind the new tuples. KR01 remains READY for a scoped RV01–RV08 independent delta review; qualifications NOT_RUN.

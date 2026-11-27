@@ -42,3 +42,7 @@ G01：对照F01–F08/E01检查K/H/P/A专业覆盖、遗漏及唯一主责；新
 
 ## D015 已有成果文档化优先
 先固化历史决策、已有专业结构、实际导入/保全证据、未完成事项与导航；[事实与缺口账本](documentation-baseline.md)。已执行SRC01私有可读JSONL归档与全量回读，无SQLite文件；仅保全，未完成HSK01或SRC01门禁。G01/DB01/IF01及正式后续依赖不变，R3-R已裁决；以当前DAG为准。
+
+### Foundation KR01 bounded remediation
+
+The R2 candidate lives in [foundation-r2](../../knowledge/v0.1.0/foundation-r2/README.md). Prior foundation is preserved. See current task receipts and the original independent review comment 7213482417; no independent qualification or publication inferred.
