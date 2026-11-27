@@ -1,0 +1,4418 @@
+{
+  "$defs": {
+    "Activity": {
+      "additionalProperties": false,
+      "properties": {
+        "budget": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "goal_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Activity"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "object_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "observation_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "resource_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "role_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "stop_condition": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "goal_refs",
+        "object_refs",
+        "resource_refs",
+        "role_refs",
+        "observation_refs",
+        "budget",
+        "stop_condition"
+      ],
+      "type": "object"
+    },
+    "Case": {
+      "additionalProperties": false,
+      "properties": {
+        "actual_status": {
+          "enum": [
+            "NOT_RUN",
+            "RECORDED_BUILDER_ONLY",
+            "HOLD",
+            "INDEPENDENTLY_CHECKED"
+          ]
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "expected_spec": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "input_spec": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "Case"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "oracle_ref": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "target_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "view": {
+          "enum": [
+            "FORWARD",
+            "REVERSE",
+            "INTERVENTION",
+            "COUNTEREXAMPLE",
+            "COMPOSITION"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "target_refs",
+        "view",
+        "input_spec",
+        "expected_spec",
+        "oracle_ref",
+        "actual_status"
+      ],
+      "type": "object"
+    },
+    "Claim": {
+      "additionalProperties": false,
+      "properties": {
+        "case_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_type": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Claim"
+        },
+        "locator_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "refinement_of": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "requirement_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "source_status": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "statement": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "supersedes_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "topic_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "validation_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "topic_id",
+        "requirement_id",
+        "claim_type",
+        "statement",
+        "source_status",
+        "locator_refs",
+        "case_refs",
+        "validation_refs",
+        "supersedes_refs",
+        "refinement_of"
+      ],
+      "type": "object"
+    },
+    "Competency": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "dimensions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "evidence_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Competency"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "dimensions",
+        "evidence_refs"
+      ],
+      "type": "object"
+    },
+    "CompositionSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "alternative_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "condition_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "effect": {
+          "const": "CANDIDATE_DECISION_ONLY"
+        },
+        "evidence_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "failure_policy": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "input_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "CompositionSpec"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "output_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "view_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "view_id",
+        "input_refs",
+        "output_refs",
+        "condition_refs",
+        "alternative_refs",
+        "failure_policy",
+        "evidence_refs",
+        "effect"
+      ],
+      "type": "object"
+    },
+    "ConditionSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "clauses": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "field": {
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+                "type": "string"
+              },
+              "op": {
+                "enum": [
+                  "EQ",
+                  "NE",
+                  "LT",
+                  "LE",
+                  "GT",
+                  "GE"
+                ]
+              },
+              "value": {
+                "$ref": "#/$defs/scalar"
+              }
+            },
+            "required": [
+              "field",
+              "op",
+              "value"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "combination": {
+          "enum": [
+            "ALL",
+            "ANY"
+          ]
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "ConditionSpec"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "unknown": {
+          "const": "HOLD"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "clauses",
+        "combination",
+        "unknown"
+      ],
+      "type": "object"
+    },
+    "Construction": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "condition_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Construction"
+        },
+        "meaning": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "pattern": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "slot_constraints": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "pattern",
+        "slot_constraints",
+        "meaning",
+        "claim_refs",
+        "condition_refs"
+      ],
+      "type": "object"
+    },
+    "Element": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "definition": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "element_type": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "Element"
+        },
+        "label": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "topic_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "topic_id",
+        "element_type",
+        "label",
+        "definition",
+        "claim_refs"
+      ],
+      "type": "object"
+    },
+    "Environment": {
+      "additionalProperties": false,
+      "properties": {
+        "capabilities": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "constraints": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Environment"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "constraints",
+        "capabilities"
+      ],
+      "type": "object"
+    },
+    "EvaluationProtocol": {
+      "additionalProperties": false,
+      "properties": {
+        "approval_required": {
+          "const": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "comparator_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "effect": {
+          "const": "NO_DIRECT_KNOWLEDGE_WRITE"
+        },
+        "estimand": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "followup": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "goal_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "intervention_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "kind": {
+          "const": "EvaluationProtocol"
+        },
+        "measurement_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "population_scope": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "uncertainty": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "goal_ref",
+        "intervention_ref",
+        "comparator_ref",
+        "measurement_refs",
+        "estimand",
+        "population_scope",
+        "followup",
+        "uncertainty",
+        "approval_required",
+        "effect"
+      ],
+      "type": "object"
+    },
+    "FlowSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "effect": {
+          "const": "TEMPLATE_ONLY"
+        },
+        "entry": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "kind": {
+          "const": "FlowSpec"
+        },
+        "max_events": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "parallel_joins": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+                "type": "string"
+              },
+              "members": {
+                "items": {
+                  "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+                  "type": "string"
+                },
+                "minItems": 2,
+                "type": "array",
+                "uniqueItems": true
+              },
+              "mode": {
+                "enum": [
+                  "ALL",
+                  "ANY"
+                ]
+              },
+              "resume_policy": {
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "members",
+              "mode",
+              "resume_policy"
+            ],
+            "type": "object"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "steps": {
+          "items": {
+            "$ref": "#/$defs/step"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stop_terminal": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "terminals": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+                "type": "string"
+              },
+              "outcome": {
+                "enum": [
+                  "COMPLETE",
+                  "STOP",
+                  "PAUSE",
+                  "HOLD",
+                  "FAILED"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "outcome"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "transitions": {
+          "items": {
+            "$ref": "#/$defs/transition"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "unknown_terminal": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "entry",
+        "steps",
+        "transitions",
+        "terminals",
+        "max_events",
+        "unknown_terminal",
+        "stop_terminal",
+        "parallel_joins",
+        "effect"
+      ],
+      "type": "object"
+    },
+    "Goal": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "construct_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "kind": {
+          "const": "Goal"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scope": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "success_evidence_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "construct_ref",
+        "success_evidence_refs",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "HanCharacter": {
+      "additionalProperties": false,
+      "properties": {
+        "character": {
+          "maxLength": 1,
+          "minLength": 1,
+          "type": "string"
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "codepoint": {
+          "pattern": "^U\\+[0-9A-F]{4,6}$",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "HanCharacter"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "script": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "character",
+        "codepoint",
+        "script",
+        "claim_refs"
+      ],
+      "type": "object"
+    },
+    "Interaction": {
+      "additionalProperties": false,
+      "properties": {
+        "activity_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "assistance_policy": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "input_contract": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "Interaction"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "observation_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "output_contract": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "role_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "activity_ref",
+        "role_refs",
+        "input_contract",
+        "output_contract",
+        "observation_refs",
+        "assistance_policy"
+      ],
+      "type": "object"
+    },
+    "KnowledgeType": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "definition": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "KnowledgeType"
+        },
+        "label": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "label",
+        "definition"
+      ],
+      "type": "object"
+    },
+    "LearningObject": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "component_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "granularity": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "LearningObject"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "target_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "target_refs",
+        "component_refs",
+        "granularity"
+      ],
+      "type": "object"
+    },
+    "Lexeme": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "form_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Lexeme"
+        },
+        "lemma": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "reading_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "lemma",
+        "form_refs",
+        "reading_refs",
+        "claim_refs"
+      ],
+      "type": "object"
+    },
+    "Locator": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution": {
+          "enum": [
+            "RECORDED_NOT_REVERIFIED",
+            "MISSING",
+            "MULTI_SOURCE_HOLD",
+            "VERIFIED"
+          ]
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Locator"
+        },
+        "location": {
+          "oneOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "source_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "verification": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "source_ref",
+        "location",
+        "attribution",
+        "verification"
+      ],
+      "type": "object"
+    },
+    "Modality": {
+      "additionalProperties": false,
+      "properties": {
+        "capability_requirements": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Modality"
+        },
+        "label": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "not_equivalent_to": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "label",
+        "capability_requirements",
+        "not_equivalent_to"
+      ],
+      "type": "object"
+    },
+    "Mode": {
+      "additionalProperties": false,
+      "properties": {
+        "activity_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "goal_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Mode"
+        },
+        "learner_choice": {
+          "const": true
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "role_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "selection_condition_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "switch_condition": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "goal_refs",
+        "activity_refs",
+        "role_refs",
+        "selection_condition_refs",
+        "learner_choice",
+        "switch_condition"
+      ],
+      "type": "object"
+    },
+    "ModelSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "applicability": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "formulas": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "expr": {
+                "$ref": "#/$defs/expr"
+              },
+              "name": {
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "expr"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "ModelSpec"
+        },
+        "missing_policy": {
+          "const": "HOLD"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "numeric_domain": {
+          "enum": [
+            "RATIONAL",
+            "BINARY64"
+          ]
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "parameters": {
+          "items": {
+            "$ref": "#/$defs/param"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "parameters",
+        "formulas",
+        "numeric_domain",
+        "missing_policy",
+        "applicability"
+      ],
+      "type": "object"
+    },
+    "ObservationSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "construct_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "independence_requirement": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "ObservationSpec"
+        },
+        "method": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "missing": {
+          "const": "UNKNOWN_NOT_ZERO"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "unit": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "construct_ref",
+        "method",
+        "unit",
+        "independence_requirement",
+        "missing"
+      ],
+      "type": "object"
+    },
+    "PolicySpec": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "effect": {
+          "const": "ADVICE_ONLY"
+        },
+        "kind": {
+          "const": "PolicySpec"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "policy_type": {
+          "enum": [
+            "PRACTICE",
+            "FEEDBACK",
+            "MOTIVATION",
+            "ASSESSMENT",
+            "ADAPTATION",
+            "REMEDIATION",
+            "GOVERNANCE"
+          ]
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "rules": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "action": {
+                "enum": [
+                  "SUGGEST",
+                  "DEFER",
+                  "CLARIFY",
+                  "PAUSE",
+                  "STOP",
+                  "REFUSE",
+                  "REQUEST_OBSERVATION"
+                ]
+              },
+              "condition_ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "priority": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "reason": {
+                "minLength": 1,
+                "pattern": "\\S",
+                "type": "string"
+              }
+            },
+            "required": [
+              "condition_ref",
+              "action",
+              "reason",
+              "priority"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "unknown_action": {
+          "enum": [
+            "CLARIFY",
+            "STOP",
+            "REFUSE"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "policy_type",
+        "rules",
+        "unknown_action",
+        "effect"
+      ],
+      "type": "object"
+    },
+    "Reading": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Reading"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "notation": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "reading_scope": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "system": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "tone": {
+          "oneOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "notation",
+        "system",
+        "tone",
+        "reading_scope",
+        "claim_refs"
+      ],
+      "type": "object"
+    },
+    "Relation": {
+      "additionalProperties": false,
+      "properties": {
+        "automatic_inverse": {
+          "const": false
+        },
+        "automatic_transitive": {
+          "const": false
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "condition_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "direction": {
+          "const": "DIRECTED"
+        },
+        "from_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "kind": {
+          "const": "Relation"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "relation_type": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "to_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "relation_type",
+        "from_ref",
+        "to_ref",
+        "claim_refs",
+        "condition_refs",
+        "direction",
+        "automatic_transitive",
+        "automatic_inverse"
+      ],
+      "type": "object"
+    },
+    "Requirement": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "coverage_status": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "Requirement"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scope": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "source_leads": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "topic_ref": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "topic_ref",
+        "scope",
+        "source_leads",
+        "coverage_status"
+      ],
+      "type": "object"
+    },
+    "Resource": {
+      "additionalProperties": false,
+      "properties": {
+        "accessibility": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Resource"
+        },
+        "modality_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "resource_identity": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "rights": {
+          "enum": [
+            "HOLD",
+            "PRIVATE_ONLY",
+            "PUBLIC_AUTHORIZED"
+          ]
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "modality_refs",
+        "rights",
+        "accessibility",
+        "resource_identity"
+      ],
+      "type": "object"
+    },
+    "Role": {
+      "additionalProperties": false,
+      "properties": {
+        "capability_requirements": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "Role"
+        },
+        "label": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "permission_requirements": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "label",
+        "capability_requirements",
+        "permission_requirements"
+      ],
+      "type": "object"
+    },
+    "Sense": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "domain": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "gloss": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "Sense"
+        },
+        "lexeme_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "part_of_speech": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "lexeme_ref",
+        "gloss",
+        "part_of_speech",
+        "domain",
+        "claim_refs"
+      ],
+      "type": "object"
+    },
+    "SkillType": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "SkillType"
+        },
+        "label": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "performance_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "label",
+        "performance_boundary"
+      ],
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "bibliography": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "identifier": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "Source"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "qualification": {
+          "enum": [
+            "NOT_RUN",
+            "QUALIFIED",
+            "HOLD"
+          ]
+        },
+        "recorded_locator": {
+          "oneOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "recorded_rights": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "rights": {
+          "enum": [
+            "HOLD",
+            "PRIVATE_ONLY",
+            "PUBLIC_AUTHORIZED"
+          ]
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "title": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "title",
+        "identifier",
+        "access",
+        "rights",
+        "qualification",
+        "bibliography",
+        "recorded_locator",
+        "recorded_rights"
+      ],
+      "type": "object"
+    },
+    "SourceMembership": {
+      "additionalProperties": false,
+      "properties": {
+        "band_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "SourceMembership"
+        },
+        "mapping_status": {
+          "enum": [
+            "UNMAPPED",
+            "HOLD",
+            "CANDIDATE_MAPPED"
+          ]
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "ordinal": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "printed_page": {
+          "oneOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "raw_fields": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+                "type": "string"
+              },
+              "value": {
+                "oneOf": [
+                  {
+                    "minLength": 1,
+                    "pattern": "\\S",
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "value"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "section": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "semantic_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "source_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "standard_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "standard_ref",
+        "band_ref",
+        "source_ref",
+        "section",
+        "ordinal",
+        "printed_page",
+        "raw_fields",
+        "mapping_status",
+        "semantic_refs"
+      ],
+      "type": "object"
+    },
+    "Standard": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "edition": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "effective_date": {
+          "oneOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "const": "Standard"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "source_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "standard_name": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "edition",
+        "standard_name",
+        "source_refs",
+        "effective_date"
+      ],
+      "type": "object"
+    },
+    "StandardBand": {
+      "additionalProperties": false,
+      "properties": {
+        "band_scope": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "kind": {
+          "const": "StandardBand"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "raw_band": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "standard_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "standard_ref",
+        "raw_band",
+        "band_scope"
+      ],
+      "type": "object"
+    },
+    "StateDimension": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "construct_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "effect": {
+          "const": "DEFINITION_ONLY"
+        },
+        "estimator_ref": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "const": "StateDimension"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "observation_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "uncertainty": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "construct_ref",
+        "observation_refs",
+        "estimator_ref",
+        "uncertainty",
+        "effect"
+      ],
+      "type": "object"
+    },
+    "TaskSpec": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "construct_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "independence_requirement": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "kind": {
+          "const": "TaskSpec"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "object_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "observation_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "prompt": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scoring_spec": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "claim_refs",
+        "construct_ref",
+        "object_refs",
+        "prompt",
+        "scoring_spec",
+        "observation_refs",
+        "independence_requirement"
+      ],
+      "type": "object"
+    },
+    "Topic": {
+      "additionalProperties": false,
+      "properties": {
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "depth": {
+          "maximum": 3,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "kind": {
+          "const": "Topic"
+        },
+        "label": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "parent_ref": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "label",
+        "depth",
+        "parent_ref"
+      ],
+      "type": "object"
+    },
+    "Validation": {
+      "additionalProperties": false,
+      "properties": {
+        "case_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "conditions": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "input_digest": {
+          "oneOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "kind": {
+          "const": "Validation"
+        },
+        "method": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "negative_boundary": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "oracle_identity": {
+          "oneOf": [
+            {
+              "minLength": 1,
+              "pattern": "\\S",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "provenance": {
+          "items": {
+            "$ref": "#/$defs/provenance"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "result_digest": {
+          "oneOf": [
+            {
+              "pattern": "^[a-f0-9]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "run_status": {
+          "enum": [
+            "NOT_RUN",
+            "HOLD",
+            "BUILDER_RUN",
+            "INDEPENDENT_RUN"
+          ]
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "HISTORICAL",
+            "QUALIFIED"
+          ]
+        },
+        "target_refs": {
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "stable_id",
+        "owner",
+        "status",
+        "conditions",
+        "negative_boundary",
+        "provenance",
+        "target_refs",
+        "case_refs",
+        "method",
+        "oracle_identity",
+        "input_digest",
+        "result_digest",
+        "run_status"
+      ],
+      "type": "object"
+    },
+    "dependency": {
+      "additionalProperties": false,
+      "properties": {
+        "manifest_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "package_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "package_id",
+        "version",
+        "manifest_sha256"
+      ],
+      "type": "object"
+    },
+    "expr": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "constant": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "constant"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "variable": {
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "variable"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "args": {
+              "items": {
+                "$ref": "#/$defs/expr"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "op": {
+              "enum": [
+                "add",
+                "sub",
+                "mul",
+                "div",
+                "min",
+                "max",
+                "pow",
+                "exp",
+                "log",
+                "neg"
+              ]
+            }
+          },
+          "required": [
+            "op",
+            "args"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "file": {
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "enum": [
+            "JSON_RECORDS",
+            "JSONL_RECORDS",
+            "MARKDOWN"
+          ]
+        },
+        "path": {
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\\\]+\\.(json|jsonl|md)$",
+          "type": "string"
+        },
+        "record_count": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "format",
+        "record_count"
+      ],
+      "type": "object"
+    },
+    "manifest": {
+      "additionalProperties": false,
+      "properties": {
+        "dependencies": {
+          "items": {
+            "$ref": "#/$defs/dependency"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "files": {
+          "items": {
+            "$ref": "#/$defs/file"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "owners": {
+          "items": {
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "package_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "qualification_receipt_refs": {
+          "items": {
+            "minLength": 1,
+            "pattern": "\\S",
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "rights": {
+          "enum": [
+            "HOLD",
+            "PRIVATE_ONLY",
+            "PUBLIC_AUTHORIZED"
+          ]
+        },
+        "schema_version": {
+          "const": "learn-kg-canonical-candidate-1"
+        },
+        "status": {
+          "enum": [
+            "CANDIDATE",
+            "HOLD",
+            "APPROVED"
+          ]
+        },
+        "version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schema_version",
+        "package_id",
+        "version",
+        "status",
+        "rights",
+        "owners",
+        "dependencies",
+        "files",
+        "qualification_receipt_refs"
+      ],
+      "type": "object"
+    },
+    "param": {
+      "additionalProperties": false,
+      "properties": {
+        "lower": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "meaning": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "name": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "unit": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "upper": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "unit",
+        "meaning",
+        "lower",
+        "upper"
+      ],
+      "type": "object"
+    },
+    "provenance": {
+      "additionalProperties": false,
+      "properties": {
+        "json_pointer": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "source_path": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "source_status": {
+          "minLength": 1,
+          "pattern": "\\S",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_path",
+        "source_sha256",
+        "json_pointer",
+        "source_status"
+      ],
+      "type": "object"
+    },
+    "record": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/ref"
+        },
+        {
+          "$ref": "#/$defs/Source"
+        },
+        {
+          "$ref": "#/$defs/Locator"
+        },
+        {
+          "$ref": "#/$defs/Claim"
+        },
+        {
+          "$ref": "#/$defs/Element"
+        },
+        {
+          "$ref": "#/$defs/Relation"
+        },
+        {
+          "$ref": "#/$defs/Case"
+        },
+        {
+          "$ref": "#/$defs/Validation"
+        },
+        {
+          "$ref": "#/$defs/Topic"
+        },
+        {
+          "$ref": "#/$defs/Requirement"
+        },
+        {
+          "$ref": "#/$defs/ModelSpec"
+        },
+        {
+          "$ref": "#/$defs/ConditionSpec"
+        },
+        {
+          "$ref": "#/$defs/PolicySpec"
+        },
+        {
+          "$ref": "#/$defs/HanCharacter"
+        },
+        {
+          "$ref": "#/$defs/Reading"
+        },
+        {
+          "$ref": "#/$defs/Lexeme"
+        },
+        {
+          "$ref": "#/$defs/Sense"
+        },
+        {
+          "$ref": "#/$defs/Construction"
+        },
+        {
+          "$ref": "#/$defs/Standard"
+        },
+        {
+          "$ref": "#/$defs/StandardBand"
+        },
+        {
+          "$ref": "#/$defs/SourceMembership"
+        },
+        {
+          "$ref": "#/$defs/Goal"
+        },
+        {
+          "$ref": "#/$defs/Competency"
+        },
+        {
+          "$ref": "#/$defs/KnowledgeType"
+        },
+        {
+          "$ref": "#/$defs/SkillType"
+        },
+        {
+          "$ref": "#/$defs/LearningObject"
+        },
+        {
+          "$ref": "#/$defs/Resource"
+        },
+        {
+          "$ref": "#/$defs/Modality"
+        },
+        {
+          "$ref": "#/$defs/Role"
+        },
+        {
+          "$ref": "#/$defs/Environment"
+        },
+        {
+          "$ref": "#/$defs/ObservationSpec"
+        },
+        {
+          "$ref": "#/$defs/StateDimension"
+        },
+        {
+          "$ref": "#/$defs/Activity"
+        },
+        {
+          "$ref": "#/$defs/Interaction"
+        },
+        {
+          "$ref": "#/$defs/TaskSpec"
+        },
+        {
+          "$ref": "#/$defs/Mode"
+        },
+        {
+          "$ref": "#/$defs/FlowSpec"
+        },
+        {
+          "$ref": "#/$defs/CompositionSpec"
+        },
+        {
+          "$ref": "#/$defs/EvaluationProtocol"
+        }
+      ]
+    },
+    "ref": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "owner": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "package_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "stable_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "package_id",
+        "version",
+        "kind",
+        "stable_id",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "scalar": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "step": {
+      "additionalProperties": false,
+      "properties": {
+        "activity_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "checkpoint": {
+          "type": "boolean"
+        },
+        "id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "max_attempts": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "id",
+        "activity_ref",
+        "max_attempts",
+        "checkpoint"
+      ],
+      "type": "object"
+    },
+    "transition": {
+      "additionalProperties": false,
+      "properties": {
+        "condition_ref": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "consumes_budget": {
+          "type": "boolean"
+        },
+        "event": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "from_step": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        },
+        "priority": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "to_step": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "from_step",
+        "to_step",
+        "event",
+        "condition_ref",
+        "priority",
+        "consumes_budget"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "urn:learn-kg:canonical-candidate:1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/record"
+    },
+    {
+      "$ref": "#/$defs/manifest"
+    }
+  ],
+  "title": "DB01 canonical candidate record schema"
+}

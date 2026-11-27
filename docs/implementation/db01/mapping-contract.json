@@ -1,0 +1,2281 @@
+{
+  "common_tables": {
+    "dependency_manifest": [
+      "target_package",
+      "target_version",
+      "manifest_sha256"
+    ],
+    "local_registry": [
+      "package_id",
+      "version",
+      "stable_id",
+      "kind",
+      "owner",
+      "status"
+    ],
+    "package_meta": [
+      "package_id",
+      "version",
+      "manifest_sha256",
+      "status",
+      "rights"
+    ],
+    "typed_refs": [
+      "origin_package",
+      "origin_version",
+      "origin_id",
+      "field_pointer",
+      "target_package",
+      "target_version",
+      "target_id",
+      "expected_kind",
+      "expected_owner"
+    ]
+  },
+  "dependency_identity": [
+    "package_id",
+    "version",
+    "manifest_sha256"
+  ],
+  "identity": [
+    "package_id",
+    "version",
+    "kind",
+    "stable_id",
+    "owner"
+  ],
+  "import": "DB02 validates schema, rejects duplicate keys/IDs, path escape, digest mismatch; map every declared field, use UTF-8 canonical sorted-key JSON for nested structures, preserve null vs missing; typed refs extracted by schema path into explicit index; exact roundtrip and counts; FK per connection, cross-package resolver not native FK. No runtime evaluation from arbitrary scripts.",
+  "indices": [
+    "local_registry(kind,owner,stable_id)",
+    "typed_refs(origin_package,origin_version,origin_id,field_pointer)",
+    "typed_refs(target_package,target_version,target_id)",
+    "record_claim(topic_id,requirement_id)",
+    "record_hancharacter(character)",
+    "record_lexeme(lemma)",
+    "record_sourcemembership(section,ordinal)"
+  ],
+  "limits": [
+    "This is versioned authoring baseline, not all professional field adapters or DB02 implementation. IF01 further defines semantic endpoint constraints, owners and finite cases. New kinds/fields require explicit schema revision and affected receipt invalidation.",
+    "Six logical role classes including future other-subject; no mandatory physical DB count or unrelated load. No inferred equivalence from standards or scope.",
+    "Actual knowledge sources remain in original candidate files until module-specific deterministic adapters and qualification; do not promote by schema validation."
+  ],
+  "package_roles": {
+    "chinese": {
+      "depends_on": [
+        "evidence",
+        "learning-core"
+      ],
+      "kinds": "common + Chinese professional/source membership",
+      "owners": "H01–H07"
+    },
+    "evidence": {
+      "depends_on": [],
+      "kinds": [
+        "Source"
+      ],
+      "owners": "explicit claim owner"
+    },
+    "learning-core": {
+      "depends_on": [
+        "evidence"
+      ],
+      "kinds": "common + theory/model/assessment/shared types",
+      "owners": "K01–K19"
+    },
+    "learning-process": {
+      "depends_on": [
+        "evidence",
+        "learning-core",
+        "chinese",
+        "other-subject"
+      ],
+      "kinds": "common + shared lifecycle/mode/flow/policy/composition/protocol; actual manifest declares only needed direct packages",
+      "owners": "P01–P10/F01–F08/A01–A08/E01"
+    },
+    "other-subject": {
+      "depends_on": [
+        "evidence",
+        "learning-core"
+      ],
+      "kinds": "common + explicitly versioned subject extension",
+      "owners": "future explicit subject owner"
+    },
+    "research-overlay": {
+      "depends_on": [
+        "evidence",
+        "learning-core",
+        "chinese",
+        "other-subject",
+        "learning-process"
+      ],
+      "kinds": "research candidate relations, not release by default",
+      "owners": "explicit owner"
+    }
+  },
+  "publication": "Immutable UTF-8 text manifests, one writer, verify bytes/rights/current qualification/dependencies, same-filesystem atomic text pointer, retain old versions; DB02 tests actual interruptions and recovery. Persistent SQLite not generated, physical multi-file database guarantees HOLD.",
+  "record_tables": {
+    "Activity": {
+      "fields": {
+        "budget": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "INTEGER"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "goal_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "object_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "observation_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "resource_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "role_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "stop_condition": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_activity"
+    },
+    "Case": {
+      "fields": {
+        "actual_status": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "expected_spec": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "input_spec": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "oracle_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "target_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "view": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_case"
+    },
+    "Claim": {
+      "fields": {
+        "case_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_type": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "locator_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "refinement_of": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "requirement_id": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "source_status": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "statement": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "supersedes_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "topic_id": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "validation_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_claim"
+    },
+    "Competency": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "dimensions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "evidence_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_competency"
+    },
+    "CompositionSpec": {
+      "fields": {
+        "alternative_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "condition_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "effect": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "evidence_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "failure_policy": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "input_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "output_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "view_id": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_compositionspec"
+    },
+    "ConditionSpec": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "clauses": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "combination": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "unknown": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_conditionspec"
+    },
+    "Construction": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "condition_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "meaning": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "pattern": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "slot_constraints": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_construction"
+    },
+    "Element": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "definition": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "element_type": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "label": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "topic_id": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_element"
+    },
+    "Environment": {
+      "fields": {
+        "capabilities": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "constraints": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_environment"
+    },
+    "EvaluationProtocol": {
+      "fields": {
+        "approval_required": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "comparator_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "effect": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "estimand": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "followup": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "goal_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "intervention_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "measurement_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "population_scope": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "uncertainty": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_evaluationprotocol"
+    },
+    "FlowSpec": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "effect": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "entry": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "max_events": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "INTEGER"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "parallel_joins": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "steps": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "stop_terminal": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "terminals": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "transitions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "unknown_terminal": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_flowspec"
+    },
+    "Goal": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "construct_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "scope": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "success_evidence_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_goal"
+    },
+    "HanCharacter": {
+      "fields": {
+        "character": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "codepoint": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "script": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_hancharacter"
+    },
+    "Interaction": {
+      "fields": {
+        "activity_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "assistance_policy": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "input_contract": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "observation_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "output_contract": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "role_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_interaction"
+    },
+    "KnowledgeType": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "definition": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "label": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_knowledgetype"
+    },
+    "LearningObject": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "component_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "granularity": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "target_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_learningobject"
+    },
+    "Lexeme": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "form_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "lemma": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "reading_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_lexeme"
+    },
+    "Locator": {
+      "fields": {
+        "attribution": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "location": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "source_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "verification": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_locator"
+    },
+    "Modality": {
+      "fields": {
+        "capability_requirements": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "label": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "not_equivalent_to": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_modality"
+    },
+    "Mode": {
+      "fields": {
+        "activity_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "goal_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "learner_choice": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "role_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "selection_condition_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "switch_condition": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_mode"
+    },
+    "ModelSpec": {
+      "fields": {
+        "applicability": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "formulas": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "missing_policy": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "numeric_domain": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "parameters": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_modelspec"
+    },
+    "ObservationSpec": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "construct_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "independence_requirement": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "method": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "missing": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "unit": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_observationspec"
+    },
+    "PolicySpec": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "effect": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "policy_type": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "rules": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "unknown_action": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_policyspec"
+    },
+    "Reading": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "notation": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "reading_scope": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "system": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "tone": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_reading"
+    },
+    "Relation": {
+      "fields": {
+        "automatic_inverse": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "automatic_transitive": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "condition_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "direction": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "from_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "relation_type": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "to_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_relation"
+    },
+    "Requirement": {
+      "fields": {
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "coverage_status": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "scope": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "source_leads": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "topic_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_requirement"
+    },
+    "Resource": {
+      "fields": {
+        "accessibility": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "modality_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "resource_identity": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "rights": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_resource"
+    },
+    "Role": {
+      "fields": {
+        "capability_requirements": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "label": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "permission_requirements": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_role"
+    },
+    "Sense": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "domain": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "gloss": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "lexeme_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "part_of_speech": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_sense"
+    },
+    "SkillType": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "label": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "performance_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_skilltype"
+    },
+    "Source": {
+      "fields": {
+        "access": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "bibliography": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "identifier": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "qualification": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "recorded_locator": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "recorded_rights": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "rights": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "title": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_source"
+    },
+    "SourceMembership": {
+      "fields": {
+        "band_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "mapping_status": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "ordinal": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "INTEGER"
+        },
+        "printed_page": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "raw_fields": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "section": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "semantic_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "source_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "standard_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_sourcemembership"
+    },
+    "Standard": {
+      "fields": {
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "edition": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "effective_date": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "source_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "standard_name": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_standard"
+    },
+    "StandardBand": {
+      "fields": {
+        "band_scope": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "raw_band": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "standard_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_standardband"
+    },
+    "StateDimension": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "construct_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "effect": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "estimator_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "observation_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "uncertainty": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_statedimension"
+    },
+    "TaskSpec": {
+      "fields": {
+        "claim_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "construct_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "independence_requirement": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "object_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "observation_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "prompt": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "scoring_spec": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_taskspec"
+    },
+    "Topic": {
+      "fields": {
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "depth": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "INTEGER"
+        },
+        "label": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "parent_ref": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_topic"
+    },
+    "Validation": {
+      "fields": {
+        "case_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "conditions": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "input_digest": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "method": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "negative_boundary": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "oracle_identity": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "provenance": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "result_digest": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "run_status": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "target_refs": {
+          "encoding": "CANONICAL_JSON",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_validation"
+    },
+    "ref": {
+      "fields": {
+        "package_id": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        },
+        "version": {
+          "encoding": "SCALAR",
+          "required": true,
+          "sqlite_type": "TEXT"
+        }
+      },
+      "foreign_key": "local_registry(package_id,version,stable_id,kind,owner)",
+      "primary_key": [
+        "package_id",
+        "version",
+        "stable_id"
+      ],
+      "table": "record_ref"
+    }
+  },
+  "reference_resolution": "Exact package version and manifest hash, declared direct dependency only; same-package local lookup; kind and owner match; no bare ID or transitive fallback. Research read separate from approved consumption; unknown rights or qualification HOLD. Private staging/learner never in public manifest.",
+  "relations": {
+    "component_of": [
+      [
+        "LearningObject",
+        "LearningObject"
+      ]
+    ],
+    "converse_in_context": [
+      [
+        "Sense",
+        "Sense"
+      ]
+    ],
+    "defined_by_model": [
+      [
+        "Element",
+        "ModelSpec"
+      ]
+    ],
+    "evidence_for": [
+      [
+        "Locator",
+        "Claim"
+      ]
+    ],
+    "example_of": [
+      [
+        "Case",
+        "Claim"
+      ]
+    ],
+    "informs_decision": [
+      [
+        "ModelSpec",
+        "PolicySpec"
+      ],
+      [
+        "Claim",
+        "PolicySpec"
+      ]
+    ],
+    "necessary_prerequisite": [
+      [
+        "Element",
+        "Element"
+      ],
+      [
+        "SkillType",
+        "SkillType"
+      ]
+    ],
+    "recommended_sequence": [
+      [
+        "Element",
+        "Element"
+      ],
+      [
+        "SkillType",
+        "SkillType"
+      ]
+    ],
+    "scope_topic": [
+      [
+        "SourceMembership",
+        "Topic"
+      ]
+    ],
+    "script_variant": [
+      [
+        "HanCharacter",
+        "HanCharacter"
+      ]
+    ],
+    "standard_member": [
+      [
+        "SourceMembership",
+        "StandardBand"
+      ]
+    ],
+    "taxonomy_parent": [
+      [
+        "Topic",
+        "Topic"
+      ]
+    ]
+  },
+  "schema_version": "learn-kg-canonical-candidate-1",
+  "status": "DB01_CANDIDATE_SCHEMA_NOT_G04_FREEZE"
+}
