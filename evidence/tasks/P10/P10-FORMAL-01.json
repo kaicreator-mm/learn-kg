@@ -1,0 +1,394 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-cumulative-20261128",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "f94465fba51957637f47c1b906dcdf99a21f6ba3",
+  "exact_head": "533be37aafb175a674e17817c7504ab308402c6c",
+  "version": "533be37aafb175a674e17817c7504ab308402c6c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P10",
+  "attempt_id": "P10-FORMAL-01",
+  "receipt_id": "TASK:P10:P10-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K08",
+      "receipt_id": "TASK:K08:K08-FORMAL-02",
+      "content_digest": "232d438b24281923530b351968bdfb24517c09ef8f39fc152dedce98f20a5faa",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K08/K08-FORMAL-02.json",
+          "sha256": "789f7d9c18d9e200d8d6512e67ce132bd9c4191fc01f18d2197685902d7e3b69"
+        },
+        {
+          "path": "evidence/tasks/K08/K08-QUALIFICATION-02.json",
+          "sha256": "1f716e34738d2aa32dfe09add8d4dc10beaba8715c1df233627633914f038cd0"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.05.04.PT.01",
+          "record_sha256": "2e8964f92f9f31ccbe585b225d0b20f65499cb295fedd31bdcf9e5f48936a7c3"
+        }
+      ]
+    },
+    {
+      "task_id": "K11",
+      "receipt_id": "TASK:K11:K11-FORMAL-01",
+      "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K11/K11-FORMAL-01.json",
+          "sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123"
+        },
+        {
+          "path": "evidence/tasks/K11/K11-QUALIFICATION-01.json",
+          "sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+          "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+          "stable_id": "K11.05.04.TR.01",
+          "record_sha256": "28eda3ff418d82cfcca511019eea56cb298d50b1ab5101912421d8f1825be7d0"
+        }
+      ]
+    },
+    {
+      "task_id": "K15",
+      "receipt_id": "TASK:K15:K15-FORMAL-01",
+      "content_digest": "62f3ba123ff2b8b29b3bdd59736b36408aabbbf75bd732a78ab1ce7b0a25fed6",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K15/K15-FORMAL-01.json",
+          "sha256": "d2498fa5b6e509805ba1d4a3d9a56b2077bcc39c78d0f1810b63ef108599cc45"
+        },
+        {
+          "path": "evidence/tasks/K15/K15-QUALIFICATION-01.json",
+          "sha256": "1d61eb0cb86363760a4d151ba80731706b5fab4cf353961d93e5cb21cb49291e"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+          "sha256": "88fc8b1dac66cb5d9f2ed48265396cc4f16b89f3c0d98f507549dd4154d39c7c",
+          "stable_id": "K15.06.04.TG.01",
+          "record_sha256": "6f731f1ed2b8e1573de84329e15ddb5bf91679a835be0a6c972094eaa549fcc4"
+        }
+      ]
+    },
+    {
+      "task_id": "K16",
+      "receipt_id": "TASK:K16:K16-FORMAL-01",
+      "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+          "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+        },
+        {
+          "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+          "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.03.04.TG.01",
+          "record_sha256": "c8f002dcebb4cd6a99a1d0fce5c493b401c7fd2e34d715be6f70ee479d2bf992"
+        }
+      ]
+    },
+    {
+      "task_id": "K17",
+      "receipt_id": "TASK:K17:K17-FORMAL-01",
+      "content_digest": "28a750df57293d2ef2576b571118bb2dedcfeaf7f1005942b02eb4ba6b991d8f",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K17/K17-FORMAL-01.json",
+          "sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0"
+        },
+        {
+          "path": "evidence/tasks/K17/K17-QUALIFICATION-01.json",
+          "sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K17/records-04.jsonl",
+          "sha256": "b5831e705d8041edab30f8e676846a6e975183a0d1b7aefc9f82292ee5bed73f",
+          "stable_id": "K17.06.04.SR.01",
+          "record_sha256": "c4a5ca56fa5a26ac9652be806c3f7babc6cf70dbb6988e9794224ed3724371f3"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        },
+        {
+          "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+          "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.03.02.TG.01",
+          "record_sha256": "454be5f099da8aacec9ff0e38c3619bfcc077a499a0e7ca3c2334119082829c5"
+        }
+      ]
+    },
+    {
+      "task_id": "P08",
+      "receipt_id": "TASK:P08:P08-FORMAL-01",
+      "content_digest": "6c343b0cc07e0f4321e1cfbdf4dd4cc91f6794a88b4c2f24de9e834cdab8c0e9",
+      "version": "533be37aafb175a674e17817c7504ab308402c6c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P08/P08-FORMAL-01.json",
+          "sha256": "4c8a99113058ba3bfecf29015b9a8d8dc1fda10ed62d247aca24b4feeb37c311"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P08.jsonl",
+          "sha256": "bd967f3af8d9b7558ea4ec5ab032b01ccd7513785209a8ea6a00e43f612c9205",
+          "stable_id": "P08.FLOW",
+          "record_sha256": "e0fa12a6f5b649d882eb8eb3fdb806a616cfe33c9c7069e1e0dde589c52af204"
+        }
+      ]
+    },
+    {
+      "task_id": "P09",
+      "receipt_id": "TASK:P09:P09-FORMAL-01",
+      "content_digest": "e26062db008a63c2bcbd80af7299c52813314d67dcb4cbed14dd50820123e28c",
+      "version": "533be37aafb175a674e17817c7504ab308402c6c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P09/P09-FORMAL-01.json",
+          "sha256": "ab906afbaf03ef8836ba09f9dbc2455c1c984a94b0c4d2d32f4f21a1617b2030"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P09.jsonl",
+          "sha256": "21f5d6737b414a1d1e3e1e8dc3deebaf66f6bfee8151d0c933bf6f19f8cf91ae",
+          "stable_id": "P09.FLOW",
+          "record_sha256": "b90d99d9e256ce4b607d9e79328a1ade463be5cd9659df64fde71b94732437a6"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/process-cumulative/README.md",
+      "sha256": "2768d76c7732c9ad3f77523fc4c8a73ecb5ac2ec1822bbc02f60642d1397b2d0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/activity-bindings-current.json",
+      "sha256": "cfe4ff21a64448feec00cf095672b45625ebc88275d69258056fb41209b8e417",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/bindings.json",
+      "sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/build.py",
+      "sha256": "f8127bc29ce11a374810769841eda22968a086148a6c132a029a99f7393cd868",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/coverage.json",
+      "sha256": "d6f1ee3ed27cd364ee48de50e3027326233ee9f030b6ca10123605f759bfe357",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/design.json",
+      "sha256": "6b0f4cac4baf90f10bad5cdf969b4de9c3b611333a97b4b633e6149ae6c50a93",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/fixtures.json",
+      "sha256": "1389c982f4ee680abe4fb11c2dc41e222dfe4f0368abe8cdcd29bce365cb8d52",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/import-receipt.json",
+      "sha256": "62892322de078d97998536de9ae49e1ee1c8ea707091c87d111d466b774cba05",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/inherited-results.json",
+      "sha256": "dd3dd408fb84af75e2d183596dfa09a3717a949bb6f92d8d09d1af17a69cb42e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/inherited.py",
+      "sha256": "880fbf7defe8336c969fd9cf05bd5b664e4b1832075be5be6e6c303b11f21326",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/migration.json",
+      "sha256": "5d2b3286d45d5cf89c04b35cec4c157b723915bc34bf4880c3c36e30c58946e7",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/mode-flow-bindings-current.json",
+      "sha256": "c2692f5920183e039888e0dd62c6c675eae414399ac6732b002b5e9f0f0abd50",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/results.json",
+      "sha256": "5be8dd699dae8699744055cc92a60f33b0a4b260dc60c41059d93e630cca4b5d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/semantic_checks.py",
+      "sha256": "3834d44440d3c1dd11f7c89b7fa03b23881ef8e6e22ccc09d257e79de92089cc",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P08.jsonl",
+      "sha256": "bd967f3af8d9b7558ea4ec5ab032b01ccd7513785209a8ea6a00e43f612c9205",
+      "type": "SHARED_CURRENT_UPSTREAM_PROCESS_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P09.jsonl",
+      "sha256": "21f5d6737b414a1d1e3e1e8dc3deebaf66f6bfee8151d0c933bf6f19f8cf91ae",
+      "type": "SHARED_CURRENT_UPSTREAM_PROCESS_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P10.jsonl",
+      "sha256": "fb92c8e8b9d5318fb36957e8917e66479a74bfa454e4d48c3e36ded4a90e2626",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/learning-process.manifest.json",
+      "sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Restricted cumulative process candidate",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-2",
+    "manifest_sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
+    "module_records": 130,
+    "case_count": 50,
+    "used_claim_ids": [
+      "K08.05.04.PT.01",
+      "K11.05.04.TR.01",
+      "K15.06.04.TG.01",
+      "K16.03.04.TG.01",
+      "K17.06.04.SR.01",
+      "K19.03.02.TG.01"
+    ],
+    "process_dependency_ids": {
+      "P08": [
+        "P08.FLOW"
+      ],
+      "P09": [
+        "P09.FLOW"
+      ]
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "coverage": [
+      {
+        "id": "P10.RQ01",
+        "scope": "跨日会话衔接由本人选择",
+        "target": "P10.FLOW",
+        "composition": "P10.COMPOSITION",
+        "candidate_case_group": "P10",
+        "remaining": "真实长期计划与跨日调度",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P10.RQ02",
+        "scope": "检查点、版本、事件ID去重；冲突拒绝",
+        "target": "P10.FLOW",
+        "composition": "P10.COMPOSITION",
+        "candidate_case_group": "P10",
+        "remaining": "实际持久化、崩溃/事务和身份认证",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P10.RQ03",
+        "scope": "可及性、授权、退出优先，无后台自动继续",
+        "target": "P10.FLOW",
+        "composition": "P10.COMPOSITION",
+        "candidate_case_group": "P10",
+        "remaining": "真实权限管理及可及性合规",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P10.RQ04",
+        "scope": "执行与证据分别追溯，修订不覆盖历史",
+        "target": "P10.FLOW",
+        "composition": "P10.COMPOSITION",
+        "candidate_case_group": "P10",
+        "remaining": "真实版本修订/传播和实际实施评估",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      }
+    ],
+    "concrete_cases": 10
+  },
+  "validation": {
+    "builder_only": true,
+    "case_count": 50,
+    "inherited_regression_not_new": false,
+    "independent_review": "NOT_RUN",
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY"
+  },
+  "issues": [
+    "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved."
+  ],
+  "next": "PR01/PR02 combined independent per-module review",
+  "content_digest": "76be34b8b9ccbf7f74760b960b595a844c49dab14e858909c8d646c3562b0acc"
+}

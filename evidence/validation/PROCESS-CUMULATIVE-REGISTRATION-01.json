@@ -1,0 +1,183 @@
+{
+  "status": "BUILDER_CANDIDATE_REGISTRATION_ONLY",
+  "artifact_head": "533be37aafb175a674e17817c7504ab308402c6c",
+  "artifact_tree": "9ca0da9ec412227b8794309aa39a1bc928e86f90",
+  "manifest": "knowledge/v0.1.0/learning-process-cumulative-r2/learning-process.manifest.json",
+  "manifest_sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
+  "registration": [
+    {
+      "task": "P01",
+      "receipt": "evidence/tasks/P01/P01-FORMAL-02.json",
+      "receipt_sha256": "f170f6b65d34ab52073b7fff8fff11fc690d867e845b0de71eaed4cdd4b9bc61",
+      "content_digest": "8aad69be2b696610e5b5d62a6287c9c00e7e7035f141731d9a3f248f0dba1fb0",
+      "records": 182,
+      "cases": 36,
+      "process_dependencies": {}
+    },
+    {
+      "task": "P02",
+      "receipt": "evidence/tasks/P02/P02-FORMAL-02.json",
+      "receipt_sha256": "40e681abdc2e916ed8470aad2a0a610474c05d571e68d82bdf8acc3623f36907",
+      "content_digest": "42cea9b06856067062a3c00737fab8456979323be36dafda9bbfdc1b4dc8aa64",
+      "records": 65,
+      "cases": 17,
+      "process_dependencies": {}
+    },
+    {
+      "task": "P03",
+      "receipt": "evidence/tasks/P03/P03-FORMAL-02.json",
+      "receipt_sha256": "5af3920d2969625d637a1c074551df4465a078e130b6534c7a638b99d4c77b02",
+      "content_digest": "b42c14e24850249c743789ab1120217219c7b591165a77f21c844177bc6804e2",
+      "records": 243,
+      "cases": 90,
+      "process_dependencies": {}
+    },
+    {
+      "task": "P04",
+      "receipt": "evidence/tasks/P04/P04-FORMAL-01.json",
+      "receipt_sha256": "3718a48838e27ad6b9ddac56bab53ad7c9d4bdca4548c141df35920ce605cc8a",
+      "content_digest": "af42efd0d0a4158540c2fb06e62abb873a4edb242fc08470a92a50f7a78413b4",
+      "records": 67,
+      "cases": 27,
+      "process_dependencies": {
+        "P03": [
+          "P03.EXPLANATION",
+          "P03.PROBLEM_SOLVING",
+          "P03.PRODUCTION",
+          "P03.REFLECTION"
+        ],
+        "P01": [
+          "FLOW_GUIDED_CONCEPT_PRACTICE"
+        ],
+        "P02": [
+          "P02.PREPARATION"
+        ]
+      }
+    },
+    {
+      "task": "P07",
+      "receipt": "evidence/tasks/P07/P07-FORMAL-01.json",
+      "receipt_sha256": "345b5b86c80fe2ff8f77eb0b0a5392673804076acb5d820a3df2ef7cc839d5a1",
+      "content_digest": "b986a8e32276821687a013d0952c3c5378d12d48ff7c43e3ebcc13b7341cbc8f",
+      "records": 51,
+      "cases": 21,
+      "process_dependencies": {
+        "P02": [
+          "P02.GOAL",
+          "P02.PLAN"
+        ],
+        "P03": [
+          "P03.REFLECTION"
+        ]
+      }
+    },
+    {
+      "task": "P05",
+      "receipt": "evidence/tasks/P05/P05-FORMAL-01.json",
+      "receipt_sha256": "bfe9d3ff7a057e3c83cdb2ed1ffb8b339d0a5eda99ea2658c90afa46c5c17621",
+      "content_digest": "08cfc7c4d1e1f34db50ec56cbc88d5ef5360d867dab944631905f70f903c0a78",
+      "records": 157,
+      "cases": 60,
+      "process_dependencies": {
+        "P04": [
+          "P04.FLOW"
+        ],
+        "P03": [
+          "P03.DISCRIMINATION",
+          "P03.RECALL"
+        ]
+      }
+    },
+    {
+      "task": "P06",
+      "receipt": "evidence/tasks/P06/P06-FORMAL-01.json",
+      "receipt_sha256": "3144a8e1206be80cdb90d32a915a711313446ad886ddcbe2a326ab5cf7585282",
+      "content_digest": "8559d777eef2faac4110bc6963d1e0d2ab0aee78f2bf19c0ee7eef77d092ebd5",
+      "records": 153,
+      "cases": 58,
+      "process_dependencies": {
+        "P04": [
+          "P04.FLOW"
+        ],
+        "P03": [
+          "P03.EXPLANATION"
+        ]
+      }
+    },
+    {
+      "task": "P08",
+      "receipt": "evidence/tasks/P08/P08-FORMAL-01.json",
+      "receipt_sha256": "4c8a99113058ba3bfecf29015b9a8d8dc1fda10ed62d247aca24b4feeb37c311",
+      "content_digest": "6c343b0cc07e0f4321e1cfbdf4dd4cc91f6794a88b4c2f24de9e834cdab8c0e9",
+      "records": 132,
+      "cases": 51,
+      "process_dependencies": {
+        "P04": [
+          "P04.FLOW"
+        ],
+        "P05": [
+          "P05.FLOW"
+        ],
+        "P06": [
+          "P06.FLOW"
+        ],
+        "P07": [
+          "P07.POLICY"
+        ]
+      }
+    },
+    {
+      "task": "P09",
+      "receipt": "evidence/tasks/P09/P09-FORMAL-01.json",
+      "receipt_sha256": "ab906afbaf03ef8836ba09f9dbc2455c1c984a94b0c4d2d32f4f21a1617b2030",
+      "content_digest": "e26062db008a63c2bcbd80af7299c52813314d67dcb4cbed14dd50820123e28c",
+      "records": 132,
+      "cases": 51,
+      "process_dependencies": {
+        "P04": [
+          "P04.FLOW"
+        ],
+        "P06": [
+          "P06.FLOW"
+        ]
+      }
+    },
+    {
+      "task": "P10",
+      "receipt": "evidence/tasks/P10/P10-FORMAL-01.json",
+      "receipt_sha256": "cd5bacfe72f0c0522d2e688415e20a2143712387bcb2c1e95242a7c0e66b029a",
+      "content_digest": "76be34b8b9ccbf7f74760b960b595a844c49dab14e858909c8d646c3562b0acc",
+      "records": 130,
+      "cases": 50,
+      "process_dependencies": {
+        "P08": [
+          "P08.FLOW"
+        ],
+        "P09": [
+          "P09.FLOW"
+        ]
+      }
+    }
+  ],
+  "superseded": {
+    "P01": {
+      "path": "evidence/tasks/P01/P01-FORMAL-01.json",
+      "sha256": "30a6eb2d98cf9f4544eceae3d40728504d639fff1fda95f04b4d35752059d308",
+      "content_digest": "a4637acc4d5ce35074ce90dd530d13a14887eaa0e81cf1017e69e7fe8cc876a6",
+      "disposition": "SUPERSEDED_HISTORICAL_NOT_CURRENT"
+    },
+    "P02": {
+      "path": "evidence/tasks/P02/P02-FORMAL-01.json",
+      "sha256": "dc3e04949fee1cf05d1adacfb19bda46afe2c7f0f61949eb8c47d189b04689d5",
+      "content_digest": "04767a6eefb0780d18dd7b4abe83d8f42342fe7ed8e69af2fc018abe076de044",
+      "disposition": "SUPERSEDED_HISTORICAL_NOT_CURRENT"
+    },
+    "P03": {
+      "path": "evidence/tasks/P03/P03-FORMAL-01.json",
+      "sha256": "a29a0201e5f9d1f278e803a3e96e819ee86757aea2588ddfa4138e38831622e7",
+      "content_digest": "478b27d5933ec8242ba8554d175335580ffca43b8db11432893d1e5ada27aabe",
+      "disposition": "SUPERSEDED_HISTORICAL_NOT_CURRENT"
+    }
+  },
+  "limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved."
+}

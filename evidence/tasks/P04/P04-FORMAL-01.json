@@ -1,0 +1,409 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-cumulative-20261128",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "f94465fba51957637f47c1b906dcdf99a21f6ba3",
+  "exact_head": "533be37aafb175a674e17817c7504ab308402c6c",
+  "version": "533be37aafb175a674e17817c7504ab308402c6c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P04",
+  "attempt_id": "P04-FORMAL-01",
+  "receipt_id": "TASK:P04:P04-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.03.03.PT.01",
+          "record_sha256": "015b4eff6aa1d5403c53d2adec03954b30779b1fc08a93cb9e4083bdcd31f60c"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.03.02.PT.01",
+          "record_sha256": "7d2fea8c0c92dcfe92faaa4ddde72eb4a696909462d5c0d124d5f2885a85ddc2"
+        }
+      ]
+    },
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-02",
+      "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+          "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+        },
+        {
+          "path": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+          "sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+          "sha256": "e531381a3fdbd3f0059dba1cfec2a0c1fff689862acee024d5bef4d0b67885c9",
+          "stable_id": "K07.03.03.PT.01",
+          "record_sha256": "d1b101e5873324ca0ee139c639c8d056ab717415817a6b51b4c822d187c4ae32"
+        }
+      ]
+    },
+    {
+      "task_id": "K11",
+      "receipt_id": "TASK:K11:K11-FORMAL-01",
+      "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K11/K11-FORMAL-01.json",
+          "sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123"
+        },
+        {
+          "path": "evidence/tasks/K11/K11-QUALIFICATION-01.json",
+          "sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+          "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+          "stable_id": "K11.04.02.TR.01",
+          "record_sha256": "5dbcce9aff50887c345f137679205c26989e37ea57400a2a4fd9db4590409909"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+          "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+          "stable_id": "K11.05.04.TR.01",
+          "record_sha256": "28eda3ff418d82cfcca511019eea56cb298d50b1ab5101912421d8f1825be7d0"
+        }
+      ]
+    },
+    {
+      "task_id": "K12",
+      "receipt_id": "TASK:K12:K12-FORMAL-01",
+      "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K12/K12-FORMAL-01.json",
+          "sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2"
+        },
+        {
+          "path": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+          "sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+          "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+          "stable_id": "K12.05.02.TR.01",
+          "record_sha256": "f8afef79d20ab1773a25c6321e37d3c45167c2f92e49d701b853ef8dac1fd868"
+        }
+      ]
+    },
+    {
+      "task_id": "P01",
+      "receipt_id": "TASK:P01:P01-FORMAL-02",
+      "content_digest": "8aad69be2b696610e5b5d62a6287c9c00e7e7035f141731d9a3f248f0dba1fb0",
+      "version": "533be37aafb175a674e17817c7504ab308402c6c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P01/P01-FORMAL-02.json",
+          "sha256": "f170f6b65d34ab52073b7fff8fff11fc690d867e845b0de71eaed4cdd4b9bc61"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P01.jsonl",
+          "sha256": "8c4744f7ec1e9ee52936978aebb5bc80cdb8c0c77f42e99f80ebef09d7c844b9",
+          "stable_id": "FLOW_GUIDED_CONCEPT_PRACTICE",
+          "record_sha256": "37f9da5f7d7972d2d1a14796ae6efd36b0376231bdf3c9ef321d2e8b21557508"
+        }
+      ]
+    },
+    {
+      "task_id": "P02",
+      "receipt_id": "TASK:P02:P02-FORMAL-02",
+      "content_digest": "42cea9b06856067062a3c00737fab8456979323be36dafda9bbfdc1b4dc8aa64",
+      "version": "533be37aafb175a674e17817c7504ab308402c6c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P02/P02-FORMAL-02.json",
+          "sha256": "40e681abdc2e916ed8470aad2a0a610474c05d571e68d82bdf8acc3623f36907"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P02.jsonl",
+          "sha256": "f807cce6746b62c4b8a36de7cfcb09afcfbd5d536e09588fc12d0b6b878e5e40",
+          "stable_id": "P02.PREPARATION",
+          "record_sha256": "576d3ff198da119b1263369aa56bca14e258a8405969697aec8d543c33d075eb"
+        }
+      ]
+    },
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-02",
+      "content_digest": "b42c14e24850249c743789ab1120217219c7b591165a77f21c844177bc6804e2",
+      "version": "533be37aafb175a674e17817c7504ab308402c6c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-02.json",
+          "sha256": "5af3920d2969625d637a1c074551df4465a078e130b6534c7a638b99d4c77b02"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P03.jsonl",
+          "sha256": "7e42e6795f27c9e5c734bd4b899571e824085284ee364abd49a78c36bb445020",
+          "stable_id": "P03.EXPLANATION",
+          "record_sha256": "8fa56c98e3ae4b7ca07788eceba5ab6bc9e8d5ecf8f0df9d74d538feccba5d3e"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P03.jsonl",
+          "sha256": "7e42e6795f27c9e5c734bd4b899571e824085284ee364abd49a78c36bb445020",
+          "stable_id": "P03.PROBLEM_SOLVING",
+          "record_sha256": "c17d2107f682bcb43eb4f2f5aa75d8d024cc51bfee6d0db6c9721818f4dc7663"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P03.jsonl",
+          "sha256": "7e42e6795f27c9e5c734bd4b899571e824085284ee364abd49a78c36bb445020",
+          "stable_id": "P03.PRODUCTION",
+          "record_sha256": "5fb8afb4c48434456402f6528c954c19f9cd3d8bd9f025bc3b35aad434d20ac1"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P03.jsonl",
+          "sha256": "7e42e6795f27c9e5c734bd4b899571e824085284ee364abd49a78c36bb445020",
+          "stable_id": "P03.REFLECTION",
+          "record_sha256": "b432b41bbce95d5d0c261a6e82665048543a8c21d9d0d41ab1757064c5da9bed"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/process-cumulative/README.md",
+      "sha256": "2768d76c7732c9ad3f77523fc4c8a73ecb5ac2ec1822bbc02f60642d1397b2d0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/activity-bindings-current.json",
+      "sha256": "cfe4ff21a64448feec00cf095672b45625ebc88275d69258056fb41209b8e417",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/bindings.json",
+      "sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/build.py",
+      "sha256": "f8127bc29ce11a374810769841eda22968a086148a6c132a029a99f7393cd868",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/coverage.json",
+      "sha256": "d6f1ee3ed27cd364ee48de50e3027326233ee9f030b6ca10123605f759bfe357",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/design.json",
+      "sha256": "6b0f4cac4baf90f10bad5cdf969b4de9c3b611333a97b4b633e6149ae6c50a93",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/fixtures.json",
+      "sha256": "1389c982f4ee680abe4fb11c2dc41e222dfe4f0368abe8cdcd29bce365cb8d52",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/import-receipt.json",
+      "sha256": "62892322de078d97998536de9ae49e1ee1c8ea707091c87d111d466b774cba05",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/inherited-results.json",
+      "sha256": "dd3dd408fb84af75e2d183596dfa09a3717a949bb6f92d8d09d1af17a69cb42e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/inherited.py",
+      "sha256": "880fbf7defe8336c969fd9cf05bd5b664e4b1832075be5be6e6c303b11f21326",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/migration.json",
+      "sha256": "5d2b3286d45d5cf89c04b35cec4c157b723915bc34bf4880c3c36e30c58946e7",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/mode-flow-bindings-current.json",
+      "sha256": "c2692f5920183e039888e0dd62c6c675eae414399ac6732b002b5e9f0f0abd50",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/results.json",
+      "sha256": "5be8dd699dae8699744055cc92a60f33b0a4b260dc60c41059d93e630cca4b5d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/semantic_checks.py",
+      "sha256": "3834d44440d3c1dd11f7c89b7fa03b23881ef8e6e22ccc09d257e79de92089cc",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P01.jsonl",
+      "sha256": "8c4744f7ec1e9ee52936978aebb5bc80cdb8c0c77f42e99f80ebef09d7c844b9",
+      "type": "SHARED_CURRENT_UPSTREAM_PROCESS_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P02.jsonl",
+      "sha256": "f807cce6746b62c4b8a36de7cfcb09afcfbd5d536e09588fc12d0b6b878e5e40",
+      "type": "SHARED_CURRENT_UPSTREAM_PROCESS_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P03.jsonl",
+      "sha256": "7e42e6795f27c9e5c734bd4b899571e824085284ee364abd49a78c36bb445020",
+      "type": "SHARED_CURRENT_UPSTREAM_PROCESS_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P04.jsonl",
+      "sha256": "dd79de3c449587391a94effa7a41d9eafd2460693aa188c9da103b4e10208d6d",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/learning-process.manifest.json",
+      "sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Restricted cumulative process candidate",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-2",
+    "manifest_sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
+    "module_records": 67,
+    "case_count": 27,
+    "used_claim_ids": [
+      "K06.03.02.PT.01",
+      "K06.03.03.PT.01",
+      "K07.03.03.PT.01",
+      "K11.04.02.TR.01",
+      "K11.05.04.TR.01",
+      "K12.05.02.TR.01"
+    ],
+    "process_dependency_ids": {
+      "P03": [
+        "P03.EXPLANATION",
+        "P03.PROBLEM_SOLVING",
+        "P03.PRODUCTION",
+        "P03.REFLECTION"
+      ],
+      "P01": [
+        "FLOW_GUIDED_CONCEPT_PRACTICE"
+      ],
+      "P02": [
+        "P02.PREPARATION"
+      ]
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "coverage": [
+      {
+        "id": "P04.RQ01",
+        "scope": "受限顺序与有条件替代，组合表现另测",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "通用流程结构静态正确性与任意分支/插入",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P04.RQ02",
+        "scope": "逻辑 ALL 汇合与子流程返回；无并发执行承诺",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "真实并行及子流程输入输出/错误传播",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P04.RQ03",
+        "scope": "一次补救重试、独立复测及条件化渐撤",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "实际教学效果与跨次支架观测",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P04.RQ04",
+        "scope": "冻结同单位预算、检查点、去重、退出、未知拒绝",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "跨调用持久检查点和真实事务",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      }
+    ],
+    "concrete_cases": 0
+  },
+  "validation": {
+    "builder_only": true,
+    "case_count": 27,
+    "inherited_regression_not_new": false,
+    "independent_review": "NOT_RUN",
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY"
+  },
+  "issues": [
+    "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved."
+  ],
+  "next": "PR01/PR02 combined independent per-module review",
+  "content_digest": "af42efd0d0a4158540c2fb06e62abb873a4edb242fc08470a92a50f7a78413b4"
+}

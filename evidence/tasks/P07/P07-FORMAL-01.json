@@ -1,0 +1,390 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-cumulative-20261128",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "version/v0.1.0",
+  "base": "f94465fba51957637f47c1b906dcdf99a21f6ba3",
+  "exact_head": "533be37aafb175a674e17817c7504ab308402c6c",
+  "version": "533be37aafb175a674e17817c7504ab308402c6c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P07",
+  "attempt_id": "P07-FORMAL-01",
+  "receipt_id": "TASK:P07:P07-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K08",
+      "receipt_id": "TASK:K08:K08-FORMAL-02",
+      "content_digest": "232d438b24281923530b351968bdfb24517c09ef8f39fc152dedce98f20a5faa",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K08/K08-FORMAL-02.json",
+          "sha256": "789f7d9c18d9e200d8d6512e67ce132bd9c4191fc01f18d2197685902d7e3b69"
+        },
+        {
+          "path": "evidence/tasks/K08/K08-QUALIFICATION-02.json",
+          "sha256": "1f716e34738d2aa32dfe09add8d4dc10beaba8715c1df233627633914f038cd0"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+          "sha256": "ff0a31aa5faa8a2afbac3c4252f45e4cf40e76514b8ba933286cfba4b50ed744",
+          "stable_id": "K08.02.03.D4.02",
+          "record_sha256": "ae6e2fb53ca3326bc6b17bc8f99894602c5ac9402ff40f2ebc3cc282f7838d26"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+          "sha256": "ff0a31aa5faa8a2afbac3c4252f45e4cf40e76514b8ba933286cfba4b50ed744",
+          "stable_id": "K08.02.05.D4.02",
+          "record_sha256": "7f6d05db47bd3ff9133f5ea466c977884077314c34a2d6aa9201878e2e3bc1e6"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.04.04.D4.02",
+          "record_sha256": "7d55e453c4e238d411aa62edc3e7a1ce0cd4da31f18711b39d7f7f6030eab0dd"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.05.04.PT.01",
+          "record_sha256": "2e8964f92f9f31ccbe585b225d0b20f65499cb295fedd31bdcf9e5f48936a7c3"
+        }
+      ]
+    },
+    {
+      "task_id": "K13",
+      "receipt_id": "TASK:K13:K13-FORMAL-01",
+      "content_digest": "ad575d23624642747536f31d08b0be614ebe60cc613b9334eb90f52a924545f1",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K13/K13-FORMAL-01.json",
+          "sha256": "a3a7d30d7652a4d9a911557015f9d53bbb6642705feff70e60580937d37a988f"
+        },
+        {
+          "path": "evidence/tasks/K13/K13-QUALIFICATION-01.json",
+          "sha256": "12b8e2628f4ff6232d5147c3dd77828e2f34b7323a9a734c44644a70f04171cf"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+          "sha256": "ca8ad4d87b5baa86caa7d88d53364b1a401968110fecffbf5056e1b3c48ee579",
+          "stable_id": "K13.04.04.SR.01",
+          "record_sha256": "d3ccbf7e8a526bace2f4839b2322811cf3d5a8dc7c3d986522f79b02ce8478a7"
+        }
+      ]
+    },
+    {
+      "task_id": "K16",
+      "receipt_id": "TASK:K16:K16-FORMAL-01",
+      "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+          "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+        },
+        {
+          "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+          "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.03.02.TG.01",
+          "record_sha256": "20193894f3d23a02138cd577d5cd2b5324825ec85e0da232314c5fa329932c6a"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.05.03.TG.01",
+          "record_sha256": "863f67b11de8c924eef90ff2ba996a4e6c36fff35d78e56ac51506faa0e7121d"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        },
+        {
+          "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+          "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.03.02.TG.01",
+          "record_sha256": "454be5f099da8aacec9ff0e38c3619bfcc077a499a0e7ca3c2334119082829c5"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.02.01.TG.01",
+          "record_sha256": "ab0fcac89136c5978b6d830dcce26b0e3bf2f2f972a9d1355b9eacf4b6f75cd3"
+        }
+      ]
+    },
+    {
+      "task_id": "P02",
+      "receipt_id": "TASK:P02:P02-FORMAL-02",
+      "content_digest": "42cea9b06856067062a3c00737fab8456979323be36dafda9bbfdc1b4dc8aa64",
+      "version": "533be37aafb175a674e17817c7504ab308402c6c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P02/P02-FORMAL-02.json",
+          "sha256": "40e681abdc2e916ed8470aad2a0a610474c05d571e68d82bdf8acc3623f36907"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P02.jsonl",
+          "sha256": "f807cce6746b62c4b8a36de7cfcb09afcfbd5d536e09588fc12d0b6b878e5e40",
+          "stable_id": "P02.GOAL",
+          "record_sha256": "0bdff60edc1be8506f5c82d64b38aa7546b16baba56f799c8237b88f273205b2"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P02.jsonl",
+          "sha256": "f807cce6746b62c4b8a36de7cfcb09afcfbd5d536e09588fc12d0b6b878e5e40",
+          "stable_id": "P02.PLAN",
+          "record_sha256": "6436919785ca388a6754c6386241a57cf602253be1295446271bdf32ed4616d0"
+        }
+      ]
+    },
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-02",
+      "content_digest": "b42c14e24850249c743789ab1120217219c7b591165a77f21c844177bc6804e2",
+      "version": "533be37aafb175a674e17817c7504ab308402c6c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-02.json",
+          "sha256": "5af3920d2969625d637a1c074551df4465a078e130b6534c7a638b99d4c77b02"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P03.jsonl",
+          "sha256": "7e42e6795f27c9e5c734bd4b899571e824085284ee364abd49a78c36bb445020",
+          "stable_id": "P03.REFLECTION",
+          "record_sha256": "b432b41bbce95d5d0c261a6e82665048543a8c21d9d0d41ab1757064c5da9bed"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/process-cumulative/README.md",
+      "sha256": "2768d76c7732c9ad3f77523fc4c8a73ecb5ac2ec1822bbc02f60642d1397b2d0",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/activity-bindings-current.json",
+      "sha256": "cfe4ff21a64448feec00cf095672b45625ebc88275d69258056fb41209b8e417",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/bindings.json",
+      "sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/build.py",
+      "sha256": "f8127bc29ce11a374810769841eda22968a086148a6c132a029a99f7393cd868",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/coverage.json",
+      "sha256": "d6f1ee3ed27cd364ee48de50e3027326233ee9f030b6ca10123605f759bfe357",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/design.json",
+      "sha256": "6b0f4cac4baf90f10bad5cdf969b4de9c3b611333a97b4b633e6149ae6c50a93",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/fixtures.json",
+      "sha256": "1389c982f4ee680abe4fb11c2dc41e222dfe4f0368abe8cdcd29bce365cb8d52",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/import-receipt.json",
+      "sha256": "62892322de078d97998536de9ae49e1ee1c8ea707091c87d111d466b774cba05",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/inherited-results.json",
+      "sha256": "dd3dd408fb84af75e2d183596dfa09a3717a949bb6f92d8d09d1af17a69cb42e",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/inherited.py",
+      "sha256": "880fbf7defe8336c969fd9cf05bd5b664e4b1832075be5be6e6c303b11f21326",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/migration.json",
+      "sha256": "5d2b3286d45d5cf89c04b35cec4c157b723915bc34bf4880c3c36e30c58946e7",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/mode-flow-bindings-current.json",
+      "sha256": "c2692f5920183e039888e0dd62c6c675eae414399ac6732b002b5e9f0f0abd50",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/results.json",
+      "sha256": "5be8dd699dae8699744055cc92a60f33b0a4b260dc60c41059d93e630cca4b5d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/semantic_checks.py",
+      "sha256": "3834d44440d3c1dd11f7c89b7fa03b23881ef8e6e22ccc09d257e79de92089cc",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P02.jsonl",
+      "sha256": "f807cce6746b62c4b8a36de7cfcb09afcfbd5d536e09588fc12d0b6b878e5e40",
+      "type": "SHARED_CURRENT_UPSTREAM_PROCESS_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P03.jsonl",
+      "sha256": "7e42e6795f27c9e5c734bd4b899571e824085284ee364abd49a78c36bb445020",
+      "type": "SHARED_CURRENT_UPSTREAM_PROCESS_RECORDS"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/P07.jsonl",
+      "sha256": "f9078531d2491607f6214eac78b0af86b669fbf89ccce8b3f4ca9d23cb43028f",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r2/learning-process.manifest.json",
+      "sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Restricted cumulative process candidate",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-2",
+    "manifest_sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
+    "module_records": 51,
+    "case_count": 21,
+    "used_claim_ids": [
+      "K08.02.03.D4.02",
+      "K08.02.05.D4.02",
+      "K08.04.04.D4.02",
+      "K08.05.04.PT.01",
+      "K13.04.04.SR.01",
+      "K16.03.02.TG.01",
+      "K16.05.03.TG.01",
+      "K19.02.01.TG.01",
+      "K19.03.02.TG.01"
+    ],
+    "process_dependency_ids": {
+      "P02": [
+        "P02.GOAL",
+        "P02.PLAN"
+      ],
+      "P03": [
+        "P03.REFLECTION"
+      ]
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "coverage": [
+      {
+        "id": "P07.RQ01",
+        "scope": "本人认可目标、可拒绝的挑战调整",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "真实个体动机测量与挑战校准",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P07.RQ02",
+        "scope": "同目标、评分版本、支持及单位的任务观察变化",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "一般量尺和真实进步推断",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P07.RQ03",
+        "scope": "支持和自述分离，不代答、不贴标签",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "真实关系支持有效性及自述解释",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P07.RQ04",
+        "scope": "退出、拒绝、暂停及显式恢复优先",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "真实跨调用恢复及数据治理",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      }
+    ],
+    "concrete_cases": 0
+  },
+  "validation": {
+    "builder_only": true,
+    "case_count": 21,
+    "inherited_regression_not_new": false,
+    "independent_review": "NOT_RUN",
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY"
+  },
+  "issues": [
+    "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved."
+  ],
+  "next": "PR01/PR02 combined independent per-module review",
+  "content_digest": "b986a8e32276821687a013d0952c3c5378d12d48ff7c43e3ebcc13b7341cbc8f"
+}
