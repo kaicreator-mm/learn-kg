@@ -1,0 +1,574 @@
+{
+  "fixture_sha256": "c36da59b9dd59d880c820a41f703fff0aafa3e1088b13e1676784bc72ef43cba",
+  "depth_sha256": "a4ab28bf76e8b906f144235254677c8a0497659001df46c432148e6ddaa59a64",
+  "upstream_manifest_sha256": "17f3bf2e25f6d70f53d90beed651d752843541e350824bd3c53f360dc67740d5",
+  "results": [
+    {
+      "id": "X01.matching_recall",
+      "local_claim": "K05.01.02.PT.01",
+      "local_method_digest": "21c93b09d520615692083070659fb45e50f74f02835a343aae9e488c53bab597",
+      "upstream_claim": "K02.06.04.D4.01",
+      "upstream_record_sha256": "39657b103612e868cfcb50b40201bd097f3bde09d0fbb41b34cbbfd2a846ff41",
+      "upstream_receipt_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "input": {
+        "goal": "recall",
+        "test": "recall",
+        "independent": true,
+        "options": false,
+        "scoring_contract_equal": true
+      },
+      "expected": "RECALL_EVIDENCE_CANDIDATE",
+      "actual": "RECALL_EVIDENCE_CANDIDATE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X01.recognition_is_not_recall",
+      "local_claim": "K05.01.02.PT.01",
+      "local_method_digest": "21c93b09d520615692083070659fb45e50f74f02835a343aae9e488c53bab597",
+      "upstream_claim": "K02.06.04.D4.01",
+      "upstream_record_sha256": "39657b103612e868cfcb50b40201bd097f3bde09d0fbb41b34cbbfd2a846ff41",
+      "upstream_receipt_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "input": {
+        "goal": "recall",
+        "test": "recognition",
+        "independent": true,
+        "options": true,
+        "scoring_contract_equal": true
+      },
+      "expected": "RECALL_NOT_ESTABLISHED",
+      "actual": "RECALL_NOT_ESTABLISHED",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X01.cue_contamination",
+      "local_claim": "K05.01.02.PT.01",
+      "local_method_digest": "21c93b09d520615692083070659fb45e50f74f02835a343aae9e488c53bab597",
+      "upstream_claim": "K02.06.04.D4.01",
+      "upstream_record_sha256": "39657b103612e868cfcb50b40201bd097f3bde09d0fbb41b34cbbfd2a846ff41",
+      "upstream_receipt_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "input": {
+        "goal": "recall",
+        "test": "recall",
+        "independent": true,
+        "options": true,
+        "scoring_contract_equal": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X01.unknown_contract",
+      "local_claim": "K05.01.02.PT.01",
+      "local_method_digest": "21c93b09d520615692083070659fb45e50f74f02835a343aae9e488c53bab597",
+      "upstream_claim": "K02.06.04.D4.01",
+      "upstream_record_sha256": "39657b103612e868cfcb50b40201bd097f3bde09d0fbb41b34cbbfd2a846ff41",
+      "upstream_receipt_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "input": {
+        "goal": "recall",
+        "test": "recall",
+        "independent": true,
+        "options": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X02.components_only",
+      "local_claim": "K05.03.04.PT.01",
+      "local_method_digest": "7b6d34120ea6d1c6bfab527e4ba5a18fd778e9f55745fb0aa24dcf3ba6bda984",
+      "upstream_claim": "K04.06.01.D4.01",
+      "upstream_record_sha256": "17140446fdec4eec854f202cbcf7f538245b7b48464f553824760a422733f078",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_pass": [
+          true,
+          true
+        ],
+        "whole_result": null,
+        "whole_independent": null,
+        "whole_target_matches": true
+      },
+      "expected": "REQUEST_WHOLE_TASK",
+      "actual": "REQUEST_WHOLE_TASK",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X02.whole_failure",
+      "local_claim": "K05.03.04.PT.01",
+      "local_method_digest": "7b6d34120ea6d1c6bfab527e4ba5a18fd778e9f55745fb0aa24dcf3ba6bda984",
+      "upstream_claim": "K04.06.01.D4.01",
+      "upstream_record_sha256": "17140446fdec4eec854f202cbcf7f538245b7b48464f553824760a422733f078",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_pass": [
+          true,
+          true
+        ],
+        "whole_result": false,
+        "whole_independent": true,
+        "whole_target_matches": true
+      },
+      "expected": "COMPONENT_SUCCESS_WHOLE_NOT_MET",
+      "actual": "COMPONENT_SUCCESS_WHOLE_NOT_MET",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X02.whole_success",
+      "local_claim": "K05.03.04.PT.01",
+      "local_method_digest": "7b6d34120ea6d1c6bfab527e4ba5a18fd778e9f55745fb0aa24dcf3ba6bda984",
+      "upstream_claim": "K04.06.01.D4.01",
+      "upstream_record_sha256": "17140446fdec4eec854f202cbcf7f538245b7b48464f553824760a422733f078",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_pass": [
+          true,
+          true
+        ],
+        "whole_result": true,
+        "whole_independent": true,
+        "whole_target_matches": true
+      },
+      "expected": "WHOLE_EVIDENCE_CANDIDATE",
+      "actual": "WHOLE_EVIDENCE_CANDIDATE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X02.assisted_whole",
+      "local_claim": "K05.03.04.PT.01",
+      "local_method_digest": "7b6d34120ea6d1c6bfab527e4ba5a18fd778e9f55745fb0aa24dcf3ba6bda984",
+      "upstream_claim": "K04.06.01.D4.01",
+      "upstream_record_sha256": "17140446fdec4eec854f202cbcf7f538245b7b48464f553824760a422733f078",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_pass": [
+          true,
+          true
+        ],
+        "whole_result": true,
+        "whole_independent": false,
+        "whole_target_matches": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X03.delayed_same_task",
+      "local_claim": "K05.06.04.PT.01",
+      "local_method_digest": "4327342fdef3b9d0ea6fa2c6e90738840de072050b3615ee2946d983d07f1f86",
+      "upstream_claim": "K04.06.04.D4.01",
+      "upstream_record_sha256": "1cee1c0673feed569cd41327cba8a8d55880f6599a9d72d77d15e030ff51b73e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "last_exposure_day": 3,
+        "test_day": 10,
+        "target_delay_days": 7,
+        "context_same": true,
+        "independent": true
+      },
+      "expected": "RETENTION_EVIDENCE_CANDIDATE",
+      "actual": "RETENTION_EVIDENCE_CANDIDATE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X03.acquisition",
+      "local_claim": "K05.06.04.PT.01",
+      "local_method_digest": "4327342fdef3b9d0ea6fa2c6e90738840de072050b3615ee2946d983d07f1f86",
+      "upstream_claim": "K04.06.04.D4.01",
+      "upstream_record_sha256": "1cee1c0673feed569cd41327cba8a8d55880f6599a9d72d77d15e030ff51b73e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "last_exposure_day": 3,
+        "test_day": 3,
+        "target_delay_days": 7,
+        "context_same": true,
+        "independent": true
+      },
+      "expected": "DELAY_NOT_MET",
+      "actual": "DELAY_NOT_MET",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X03.changed_context",
+      "local_claim": "K05.06.04.PT.01",
+      "local_method_digest": "4327342fdef3b9d0ea6fa2c6e90738840de072050b3615ee2946d983d07f1f86",
+      "upstream_claim": "K04.06.04.D4.01",
+      "upstream_record_sha256": "1cee1c0673feed569cd41327cba8a8d55880f6599a9d72d77d15e030ff51b73e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "last_exposure_day": 3,
+        "test_day": 10,
+        "target_delay_days": 7,
+        "context_same": false,
+        "independent": true
+      },
+      "expected": "TRANSFER_OBSERVATION_SEPARATE",
+      "actual": "TRANSFER_OBSERVATION_SEPARATE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X03.negative_delay",
+      "local_claim": "K05.06.04.PT.01",
+      "local_method_digest": "4327342fdef3b9d0ea6fa2c6e90738840de072050b3615ee2946d983d07f1f86",
+      "upstream_claim": "K04.06.04.D4.01",
+      "upstream_record_sha256": "1cee1c0673feed569cd41327cba8a8d55880f6599a9d72d77d15e030ff51b73e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "last_exposure_day": 3,
+        "test_day": 2,
+        "target_delay_days": 7,
+        "context_same": true,
+        "independent": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X04.observed_step_map",
+      "local_claim": "K06.01.03.PT.01",
+      "local_method_digest": "21a8d71129f3efb003deae47c68e9a0ef6d16e13133471e2c0766b64cd734015",
+      "upstream_claim": "K03.06.02.D4.01",
+      "upstream_record_sha256": "527142040a190356c8583e1fdea4aaed148a8e6291ef8fcd048d35c6b4fb93fa",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "T",
+        "observation_target": "T",
+        "steps": [
+          "s1",
+          "s2"
+        ],
+        "observed_steps": [
+          "s1",
+          "s2"
+        ],
+        "whole_observed": true
+      },
+      "expected": "TASK_ANALYSIS_WITNESS_CANDIDATE",
+      "actual": "TASK_ANALYSIS_WITNESS_CANDIDATE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X04.missing_whole",
+      "local_claim": "K06.01.03.PT.01",
+      "local_method_digest": "21a8d71129f3efb003deae47c68e9a0ef6d16e13133471e2c0766b64cd734015",
+      "upstream_claim": "K03.06.02.D4.01",
+      "upstream_record_sha256": "527142040a190356c8583e1fdea4aaed148a8e6291ef8fcd048d35c6b4fb93fa",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "T",
+        "observation_target": "T",
+        "steps": [
+          "s1",
+          "s2"
+        ],
+        "observed_steps": [
+          "s1",
+          "s2"
+        ],
+        "whole_observed": false
+      },
+      "expected": "REQUEST_WHOLE_OBSERVATION",
+      "actual": "REQUEST_WHOLE_OBSERVATION",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X04.missing_step",
+      "local_claim": "K06.01.03.PT.01",
+      "local_method_digest": "21a8d71129f3efb003deae47c68e9a0ef6d16e13133471e2c0766b64cd734015",
+      "upstream_claim": "K03.06.02.D4.01",
+      "upstream_record_sha256": "527142040a190356c8583e1fdea4aaed148a8e6291ef8fcd048d35c6b4fb93fa",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "T",
+        "observation_target": "T",
+        "steps": [
+          "s1",
+          "s2"
+        ],
+        "observed_steps": [
+          "s1"
+        ],
+        "whole_observed": true
+      },
+      "expected": "REQUEST_STEP_OBSERVATION",
+      "actual": "REQUEST_STEP_OBSERVATION",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X04.wrong_target",
+      "local_claim": "K06.01.03.PT.01",
+      "local_method_digest": "21a8d71129f3efb003deae47c68e9a0ef6d16e13133471e2c0766b64cd734015",
+      "upstream_claim": "K03.06.02.D4.01",
+      "upstream_record_sha256": "527142040a190356c8583e1fdea4aaed148a8e6291ef8fcd048d35c6b4fb93fa",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "T",
+        "observation_target": "U",
+        "steps": [
+          "s1",
+          "s2"
+        ],
+        "observed_steps": [
+          "s1",
+          "s2"
+        ],
+        "whole_observed": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X05.joint_gap",
+      "local_claim": "K06.03.02.PT.01",
+      "local_method_digest": "9271b3f2e87ad2ba3a4460cf2124bf56456bc29a4080bcffac47dd07bad427dd",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "solo": [
+          9,
+          9
+        ],
+        "joint": 4,
+        "total": 10,
+        "criterion": 8,
+        "matched": true,
+        "independent": true
+      },
+      "expected": "JOINT_DIFFICULTY_HYPOTHESIS_ONLY",
+      "actual": "JOINT_DIFFICULTY_HYPOTHESIS_ONLY",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X05.component_gap",
+      "local_claim": "K06.03.02.PT.01",
+      "local_method_digest": "9271b3f2e87ad2ba3a4460cf2124bf56456bc29a4080bcffac47dd07bad427dd",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "solo": [
+          4,
+          9
+        ],
+        "joint": 4,
+        "total": 10,
+        "criterion": 8,
+        "matched": true,
+        "independent": true
+      },
+      "expected": "COMPONENT_GAP_POSSIBLE",
+      "actual": "COMPONENT_GAP_POSSIBLE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X05.joint_met",
+      "local_claim": "K06.03.02.PT.01",
+      "local_method_digest": "9271b3f2e87ad2ba3a4460cf2124bf56456bc29a4080bcffac47dd07bad427dd",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "solo": [
+          9,
+          9
+        ],
+        "joint": 9,
+        "total": 10,
+        "criterion": 8,
+        "matched": true,
+        "independent": true
+      },
+      "expected": "JOINT_RULE_MET",
+      "actual": "JOINT_RULE_MET",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X05.not_matched",
+      "local_claim": "K06.03.02.PT.01",
+      "local_method_digest": "9271b3f2e87ad2ba3a4460cf2124bf56456bc29a4080bcffac47dd07bad427dd",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "solo": [
+          9,
+          9
+        ],
+        "joint": 4,
+        "total": 10,
+        "criterion": 8,
+        "matched": false,
+        "independent": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X06.counterexample",
+      "local_claim": "K07.03.01.PT.01",
+      "local_method_digest": "fcb159f320d5e54c52e2ab6005d32062b885aa8968dd258ac14767579ff1d863",
+      "upstream_claim": "K03.03.02.R2.04",
+      "upstream_record_sha256": "813605437ada7e7537a653c0ff76242d4717505babf602bde70afa16ebc65b71",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "allowed_route": true,
+        "same_conditions": true,
+        "prerequisite_ability": "ABSENT",
+        "target_result": "MET",
+        "independent": true
+      },
+      "expected": "REFUTES_NECESSITY_IN_SCOPE",
+      "actual": "REFUTES_NECESSITY_IN_SCOPE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X06.no_attendance_only",
+      "local_claim": "K07.03.01.PT.01",
+      "local_method_digest": "fcb159f320d5e54c52e2ab6005d32062b885aa8968dd258ac14767579ff1d863",
+      "upstream_claim": "K03.03.02.R2.04",
+      "upstream_record_sha256": "813605437ada7e7537a653c0ff76242d4717505babf602bde70afa16ebc65b71",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "allowed_route": true,
+        "same_conditions": true,
+        "prerequisite_ability": "UNKNOWN",
+        "target_result": "MET",
+        "independent": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X06.prerequisite_present",
+      "local_claim": "K07.03.01.PT.01",
+      "local_method_digest": "fcb159f320d5e54c52e2ab6005d32062b885aa8968dd258ac14767579ff1d863",
+      "upstream_claim": "K03.03.02.R2.04",
+      "upstream_record_sha256": "813605437ada7e7537a653c0ff76242d4717505babf602bde70afa16ebc65b71",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "allowed_route": true,
+        "same_conditions": true,
+        "prerequisite_ability": "PRESENT",
+        "target_result": "MET",
+        "independent": true
+      },
+      "expected": "NO_COUNTEREXAMPLE",
+      "actual": "NO_COUNTEREXAMPLE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X06.different_scope",
+      "local_claim": "K07.03.01.PT.01",
+      "local_method_digest": "fcb159f320d5e54c52e2ab6005d32062b885aa8968dd258ac14767579ff1d863",
+      "upstream_claim": "K03.03.02.R2.04",
+      "upstream_record_sha256": "813605437ada7e7537a653c0ff76242d4717505babf602bde70afa16ebc65b71",
+      "upstream_receipt_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "input": {
+        "target": "B",
+        "observed_target": "B",
+        "allowed_route": true,
+        "same_conditions": false,
+        "prerequisite_ability": "ABSENT",
+        "target_result": "MET",
+        "independent": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X07.integrated_met",
+      "local_claim": "K07.05.01.PT.01",
+      "local_method_digest": "360c45b49d97e8bda4c3689e1fce5b5816aa74db631ff5594ad819420dae08ac",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_results": [
+          true,
+          true
+        ],
+        "integration_result": true,
+        "independent": true,
+        "same_rubric": true
+      },
+      "expected": "INTEGRATED_EVIDENCE_CANDIDATE",
+      "actual": "INTEGRATED_EVIDENCE_CANDIDATE",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X07.components_without_integrated",
+      "local_claim": "K07.05.01.PT.01",
+      "local_method_digest": "360c45b49d97e8bda4c3689e1fce5b5816aa74db631ff5594ad819420dae08ac",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_results": [
+          true,
+          true
+        ],
+        "integration_result": null,
+        "independent": true,
+        "same_rubric": true
+      },
+      "expected": "REQUEST_INTEGRATED_TASK",
+      "actual": "REQUEST_INTEGRATED_TASK",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X07.integration_below",
+      "local_claim": "K07.05.01.PT.01",
+      "local_method_digest": "360c45b49d97e8bda4c3689e1fce5b5816aa74db631ff5594ad819420dae08ac",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_results": [
+          true,
+          true
+        ],
+        "integration_result": false,
+        "independent": true,
+        "same_rubric": true
+      },
+      "expected": "INTEGRATED_RULE_NOT_MET",
+      "actual": "INTEGRATED_RULE_NOT_MET",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    },
+    {
+      "id": "X07.assisted_integration",
+      "local_claim": "K07.05.01.PT.01",
+      "local_method_digest": "360c45b49d97e8bda4c3689e1fce5b5816aa74db631ff5594ad819420dae08ac",
+      "upstream_claim": "K04.03.04.R2.01",
+      "upstream_record_sha256": "c9620cb5c9e77b6569cefa5799a7ca80a85c42fa39d60dffc513e197dd1f045e",
+      "upstream_receipt_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "input": {
+        "component_results": [
+          true,
+          true
+        ],
+        "integration_result": true,
+        "independent": false,
+        "same_rubric": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "PASS_BUILDER_FINITE_ONLY"
+    }
+  ],
+  "limit": "Author-defined case discrimination; not qualified graph edge or general inference engine."
+}

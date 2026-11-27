@@ -1,0 +1,417 @@
+[
+  {
+    "id": "RV01-01",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": "perimeter",
+      "answer": 14,
+      "trace": {
+        "formula": "2*(L+W)",
+        "substitution": [
+          3,
+          4
+        ],
+        "computed": 14
+      }
+    },
+    "expected": "WRONG_SELECTION_CORRECT_SELECTED_EXECUTION"
+  },
+  {
+    "id": "RV01-02",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": "area",
+      "answer": 11,
+      "trace": {
+        "formula": "L*W",
+        "substitution": [
+          3,
+          4
+        ],
+        "computed": 11
+      }
+    },
+    "expected": "CORRECT_SELECTION_WRONG_EXECUTION"
+  },
+  {
+    "id": "RV01-03",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": null,
+      "answer": 11,
+      "trace": null
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "RV01-04",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": "perimeter",
+      "answer": 13,
+      "trace": {
+        "formula": "2*(L+W)",
+        "substitution": [
+          3,
+          4
+        ],
+        "computed": 13
+      }
+    },
+    "expected": "BOTH_WRONG"
+  },
+  {
+    "id": "RV01-05",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": "area",
+      "answer": 12,
+      "trace": {
+        "formula": "L*W",
+        "substitution": [
+          3,
+          4
+        ],
+        "computed": 12
+      }
+    },
+    "expected": "BOTH_CORRECT_IN_FIXTURE"
+  },
+  {
+    "id": "RV01-06",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": "area",
+      "answer": null,
+      "trace": null
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "RV01-07",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": "area",
+      "answer": 12,
+      "trace": null
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "RV01-08",
+    "claim": "K05.03.02.PT.01",
+    "mode": "strategy",
+    "input": {
+      "shape": "rectangle",
+      "length": 3,
+      "width": 4,
+      "target": "area",
+      "selected": "area",
+      "answer": 12,
+      "trace": {
+        "formula": "2*(L+W)",
+        "substitution": [
+          3,
+          4
+        ],
+        "computed": 12
+      }
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "RV02-01",
+    "claim": "K05.02.04.PT.01",
+    "mode": "schedule",
+    "input": {
+      "last": 10,
+      "target": 30,
+      "budget": 20,
+      "windows": {
+        "12": 10,
+        "20": 15,
+        "26": 10
+      },
+      "model": null,
+      "candidates": {
+        "A": [
+          [
+            12,
+            10
+          ],
+          [
+            26,
+            10
+          ]
+        ],
+        "B": [
+          [
+            12,
+            10
+          ],
+          [
+            20,
+            15
+          ]
+        ],
+        "C": [
+          [
+            26,
+            10
+          ]
+        ]
+      }
+    },
+    "expected": {
+      "A": {
+        "feasible": true,
+        "cost": 20,
+        "retention": 4,
+        "prediction": "UNKNOWN"
+      },
+      "B": {
+        "feasible": false,
+        "reason": "BUDGET_EXCEEDED"
+      },
+      "C": {
+        "feasible": true,
+        "cost": 10,
+        "retention": 4,
+        "prediction": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "id": "RV02-02",
+    "claim": "K05.02.04.PT.01",
+    "mode": "schedule",
+    "input": {
+      "last": 10,
+      "target": 30,
+      "budget": 20,
+      "windows": {
+        "12": 10,
+        "20": 15,
+        "26": 10
+      },
+      "model": null,
+      "candidates": {
+        "A": [
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            10
+          ]
+        ],
+        "B": [
+          [
+            26,
+            11
+          ]
+        ],
+        "C": [
+          [
+            31,
+            5
+          ]
+        ]
+      }
+    },
+    "expected": {
+      "A": {
+        "feasible": false,
+        "reason": "INVALID_WINDOW"
+      },
+      "B": {
+        "feasible": false,
+        "reason": "INVALID_WINDOW"
+      },
+      "C": {
+        "feasible": false,
+        "reason": "INVALID_WINDOW"
+      }
+    }
+  },
+  {
+    "id": "RV02-03",
+    "claim": "K05.02.04.PT.01",
+    "mode": "schedule",
+    "input": {
+      "last": 10,
+      "target": 30,
+      "budget": null,
+      "windows": {
+        "12": 10,
+        "20": 15,
+        "26": 10
+      },
+      "model": null,
+      "candidates": {
+        "C": [
+          [
+            26,
+            10
+          ]
+        ]
+      }
+    },
+    "expected": "UNKNOWN"
+  },
+  {
+    "id": "RV02-04",
+    "claim": "K05.02.04.PT.01",
+    "mode": "schedule",
+    "input": {
+      "last": 10,
+      "target": 30,
+      "budget": 20,
+      "windows": {
+        "12": 10,
+        "20": 15,
+        "26": 10
+      },
+      "model": {
+        "id": "unverified",
+        "version": "candidate"
+      },
+      "candidates": {
+        "C": [
+          [
+            26,
+            10
+          ]
+        ]
+      }
+    },
+    "expected": {
+      "C": {
+        "feasible": true,
+        "cost": 10,
+        "retention": 4,
+        "prediction": "UNKNOWN"
+      }
+    }
+  },
+  {
+    "id": "RV03-01",
+    "claim": "K07.02.02.PT.01",
+    "mode": "necessity",
+    "input": {
+      "course_attended": false,
+      "allowed_route": true,
+      "same_conditions": true,
+      "independent": true,
+      "target_met": true,
+      "capability": "UNKNOWN"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "RV03-02",
+    "claim": "K07.02.02.PT.01",
+    "mode": "necessity",
+    "input": {
+      "course_attended": false,
+      "allowed_route": true,
+      "same_conditions": true,
+      "independent": true,
+      "target_met": true,
+      "capability": "PRESENT"
+    },
+    "expected": "NO_COUNTEREXAMPLE"
+  },
+  {
+    "id": "RV03-03",
+    "claim": "K07.02.02.PT.01",
+    "mode": "necessity",
+    "input": {
+      "course_attended": false,
+      "allowed_route": true,
+      "same_conditions": true,
+      "independent": true,
+      "target_met": true,
+      "capability": "ABSENT"
+    },
+    "expected": "REFUTES_NECESSITY_IN_SCOPE"
+  },
+  {
+    "id": "RV03-04",
+    "claim": "K07.02.02.PT.01",
+    "mode": "necessity",
+    "input": {
+      "course_attended": false,
+      "allowed_route": true,
+      "same_conditions": true,
+      "independent": false,
+      "target_met": true,
+      "capability": "ABSENT"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "RV03-05",
+    "claim": "K07.02.02.PT.01",
+    "mode": "necessity",
+    "input": {
+      "course_attended": false,
+      "allowed_route": true,
+      "same_conditions": false,
+      "independent": true,
+      "target_met": true,
+      "capability": "ABSENT"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "RV03-06",
+    "claim": "K07.02.02.PT.01",
+    "mode": "necessity",
+    "input": {
+      "course_attended": false,
+      "allowed_route": true,
+      "same_conditions": true,
+      "independent": true,
+      "target_met": false,
+      "capability": "ABSENT"
+    },
+    "expected": "NO_COUNTEREXAMPLE"
+  }
+]
