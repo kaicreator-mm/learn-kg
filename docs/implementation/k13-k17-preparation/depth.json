@@ -1,0 +1,461 @@
+[
+  {
+    "topic": "K17.01.01",
+    "method": "区分构念、操作化、指标与竞争解释。",
+    "fixture": "拟测独立阅读理解；A读新通知后回答地点和时间，B只测阅读停留时长，C允许答案提示。",
+    "expected_and_boundary": "A为匹配构念的观测候选；B是参与代理，C是辅助表现，不能以时长增长证明理解增长。",
+    "requirement_id": "K17.01.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.01.02",
+    "method": "预先登记主要结果、时间点、对照与检验；探索性分析另立身份。",
+    "fixture": "登记第7日独立回忆；数据后发现第1日显著而第7日不显著。",
+    "expected_and_boundary": "第7日为主要结果，第1日若未预设只能探索；不得替换主要终点。",
+    "requirement_id": "K17.01.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.01.03",
+    "method": "目标效应应先定义人群、处理版本、比较、结果及时间。",
+    "fixture": "两个班比较间隔与组块，结果为7日独立回忆；一班另得辅导。",
+    "expected_and_boundary": "欲估计纯间隔效应必须控制辅导或定义联合处理；仅处理标签不足识别。",
+    "requirement_id": "K17.01.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.01.04",
+    "method": "同时记录效应量、区间、单位、分母、重要阈值及分析地位。",
+    "fixture": "两方法平均相差0.2分，95%区间0.1–0.3，预定教育重要差1分。",
+    "expected_and_boundary": "与零差可区分不等于达到重要差；不得只报告显著。",
+    "requirement_id": "K17.01.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.02.01",
+    "method": "设计权重是纳入概率倒数；非响应、覆盖和测量仍需证据。",
+    "fixture": "A层总体100抽10，B层900抽90，各层纳入概率0.1；另B仅10人应答。",
+    "expected_and_boundary": "设计权重均10；B的严重非响应不能靠原设计权重自动消除。",
+    "requirement_id": "K17.02.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.02.02",
+    "method": "随机分配与实际接受分开；以分配效应为预设目标时保留原组。",
+    "fixture": "A分配50人实际40人参与，B分配50人其中10人跨组；所有人均有结果。",
+    "expected_and_boundary": "按原分配分析对应分配效应；按实际接受重新分组不继承随机可交换性。",
+    "requirement_id": "K17.02.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.02.03",
+    "method": "准实验比较须绑定识别假设；平行趋势是反事实假设而非前测相同。",
+    "fixture": "处理组前60后75，对照前65后70；只一个前测，分组非随机。",
+    "expected_and_boundary": "差中差=10分；平行趋势未证，因果解释HOLD。",
+    "requirement_id": "K17.02.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.02.04",
+    "method": "纵向测量记录同人身份、时间、缺失和依赖结构。",
+    "fixture": "100人初测、仅60人复测，完成者初测比退出者高10分。",
+    "expected_and_boundary": "完整案例变化不代表原100人；保留脱落与敏感性分析，不能用两次组均值替代配对变化。",
+    "requirement_id": "K17.02.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.02.05",
+    "method": "用同一目标人群的潜在结果差定义效应；观测组间差可能由共同原因产生。",
+    "fixture": "高先备者自选练习，平均80；低先备者未选，平均60。",
+    "expected_and_boundary": "20分是观测差；无可交换性证据不声称干预效果20。",
+    "requirement_id": "K17.02.05.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.02.06",
+    "method": "p值针对零假设下预定统计量及模型；不解释为假设真概率。",
+    "fixture": "双侧检验p=.03，效果0.1分，区间很窄，结果经20个探索性比较选出。",
+    "expected_and_boundary": "未校正选择及多重性不支持预注册检验；p=.03并非零假设概率3%。",
+    "requirement_id": "K17.02.06.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.03.01",
+    "method": "抽样单位和分配单位各自明确，聚类设计不能把全部学生当独立随机分配。",
+    "fixture": "10所学校各100人，随机分5校对5校；无随机抽取学校。",
+    "expected_and_boundary": "分配单位学校；分析需考虑校内依赖；不能直接推断全国学生。",
+    "requirement_id": "K17.03.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.03.02",
+    "method": "按事前因果图检查共同原因、碰撞变量及中介；目标为总效应时不自动控制中介。",
+    "fixture": "图C→T,C→Y,T→M→Y,T→S←Y。",
+    "expected_and_boundary": "调整C为该图候选；调整S可能打开碰撞路径，控制M改变估计目标。仍需测量和图假设。",
+    "requirement_id": "K17.03.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.03.03",
+    "method": "结果缺失和选择机制显式建模；共同结果的条件化可能引入关联。",
+    "fixture": "随机分配后仅分析自愿完成者；完成概率依处理与潜在表现。",
+    "expected_and_boundary": "完成者对比不自动保持随机性；原分配组及缺失机制保留。",
+    "requirement_id": "K17.03.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.03.04",
+    "method": "效应修饰比较条件效应；中介关注经路径传递的效应，不能互换。",
+    "fixture": "低先备组处理差2，高先备组差8；处理后学习时长改变。",
+    "expected_and_boundary": "加法尺度效应差6；时长是可能中介而非已识别机制；分组差也需置信区间及设计。",
+    "requirement_id": "K17.03.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.03.05",
+    "method": "定义ATE、处理版本、一致性、可交换性和正值性。",
+    "fixture": "两个等权层潜在均值差2与6；其中一层无对照实际观测。",
+    "expected_and_boundary": "若潜在均值已知合成ATE=4；真实观察缺对照时识别条件不成立，不填4。",
+    "requirement_id": "K17.03.05.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.04.01",
+    "method": "结构化观察以行为事件和时点为单位，记录观察者和许可。",
+    "fixture": "记录5分钟未发言，但书面解释正确；观察表仅记录举手。",
+    "expected_and_boundary": "可记录未发言，不推断未参与或无理解；需其他独立证据。",
+    "requirement_id": "K17.04.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.04.02",
+    "method": "访谈区分受访者自述、研究者编码与事实核查；拒绝或无答不补值。",
+    "fixture": "受访者说喜欢背词，但日志无练习；另一人拒答。",
+    "expected_and_boundary": "第一条为自述与日志不一致的待查现象；第二条UNKNOWN，不能填低动机。",
+    "requirement_id": "K17.04.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.04.03",
+    "method": "编码本含单位、正例反例、双人独立编码及分歧裁决。",
+    "fixture": "20段访谈18段双人一致，另2段分类冲突。",
+    "expected_and_boundary": "一致率18/20=.9，不能证明类别含义有效；保留分歧及原编码版本。",
+    "requirement_id": "K17.04.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.04.04",
+    "method": "案例研究锁定案例边界、时间线、替代解释和证据来源。",
+    "fixture": "单一班采用新教法后成绩上升，同时换教师及题库。",
+    "expected_and_boundary": "可描述过程，无法隔离教法因果；不可推广为所有班的平均效应。",
+    "requirement_id": "K17.04.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.04.05",
+    "method": "互证以数据来源与误差机制独立性区分，不按报告数量累计。",
+    "fixture": "三报告引用同一班日志，另有独立盲评新题。",
+    "expected_and_boundary": "前三个同源一组；新题盲评不同观测机制，仍须匹配构念；不自动得因果。",
+    "requirement_id": "K17.04.05.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.05.01",
+    "method": "综述登记问题、检索时间/范围、纳入条件、去重、偏倚和综合规则。",
+    "fixture": "同一研究有预印本及期刊版；缺少未公开结果。",
+    "expected_and_boundary": "同一研究合并身份不重复计样本；检索不完整须保留限制，不宣称无发表偏倚。",
+    "requirement_id": "K17.05.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.05.02",
+    "method": "同效应量尺度与独立估计下的逆方差权重；共同效应解释需条件。",
+    "fixture": "独立研究效应2、6，SE分别1、2。",
+    "expected_and_boundary": "权重1、1/4；合成14/5=2.8；不得混合不同单位或重叠样本直接加权。",
+    "requirement_id": "K17.05.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.05.03",
+    "method": "随机效应权重包含给定研究间方差；均值不确定性与研究间分布宽度不同。",
+    "fixture": "效应2、6，SE1、2，给定tau²=3。",
+    "expected_and_boundary": "权重1/4、1/7；均值38/11；tau²是给定非估计，不能据两个点可靠拟合或外推预测区间。",
+    "requirement_id": "K17.05.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.05.04",
+    "method": "漏斗不对称需考虑选择报告、规模效应、异质性及分析误差。",
+    "fixture": "较小研究普遍效果更大，但小研究都用更强辅导。",
+    "expected_and_boundary": "存在设计差异竞争解释；不能只据漏斗图证明发表偏倚。",
+    "requirement_id": "K17.05.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.05.05",
+    "method": "证据体按具体结果、人群和问题分项审查偏倚、直接性、一致性、精度及缺失证据。",
+    "fixture": "随机试验均报告短期词识别，目标是半年独立写作。",
+    "expected_and_boundary": "短期词识别证据直接性不足；随机设计不能补偿构念和时间差。GRADE正式等级待框架源及判断。",
+    "requirement_id": "K17.05.05.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.06.01",
+    "method": "计算复现与独立新样本复制分开；本项目以精确输入、算法和环境记录计算复现。",
+    "fixture": "A原数据原代码重新输出同统计；B独立招募并执行同问题；C仅重新运行他人结果文件。",
+    "expected_and_boundary": "A计算复现；B复制研究候选；C不构成独立数据或重新计算。",
+    "requirement_id": "K17.06.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.06.02",
+    "method": "开放材料的版本、许可、依赖、随机种子与原始输入分别登记。",
+    "fixture": "代码公开但数据限访问；仅有截图结果，无版本和输入。",
+    "expected_and_boundary": "可记录代码可访问，不宣称可复现或允许再分发数据。",
+    "requirement_id": "K17.06.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.06.03",
+    "method": "目标总体及效应修饰变量匹配后再评估外推。",
+    "fixture": "成年自愿者试验有效，目标为儿童必修课且资源不同。",
+    "expected_and_boundary": "直接性未知；成人平均结果不自动用于儿童，需新适用证据。",
+    "requirement_id": "K17.06.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.06.04",
+    "method": "分配效应与实际处理效应分离；实际剂量和实施版本需观测。",
+    "fixture": "A分配10次活动实际6次，B分配无活动但校外2次。",
+    "expected_and_boundary": "ITT按分配对比，剂量分析另设识别；不能把60%剂量当60%因果收益。",
+    "requirement_id": "K17.06.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K17.06.05",
+    "method": "报告限制必须指出影响的推断和方向是否可确定。",
+    "fixture": "一组脱落20%，另一组5%，缺失与结果关系未知。",
+    "expected_and_boundary": "选择偏倚风险，方向UNKNOWN；不凭样本量或统计显著性消除，报告敏感性。",
+    "requirement_id": "K17.06.05.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.01.01",
+    "method": "观察榜样的机会、注意与后续独立表现分开记录。",
+    "fixture": "教师演示三步，学生观看完整但新任务第二步错；另学生未观看却完成。",
+    "expected_and_boundary": "观看不等于习得，未观看不等于缺能力；保留不同来源经验及独立表现。",
+    "requirement_id": "K13.01.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.01.02",
+    "method": "模仿精度与规则理解、迁移分别设计任务。",
+    "fixture": "学生逐步复现同样操作；变化材料后不知选哪个步骤。",
+    "expected_and_boundary": "同样任务模仿成功，迁移未建立；不是所有理解不足的诊断。",
+    "requirement_id": "K13.01.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.01.03",
+    "method": "同伴支持记录参与、解释和无帮助新任务表现。",
+    "fixture": "同伴提供正确答案后小组满分，独立题一人错。",
+    "expected_and_boundary": "小组结果与个人结果分别报告；不能从满分推断个人习得。",
+    "requirement_id": "K13.01.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.01.04",
+    "method": "共同建构记录协商内容、修订、来源和个人可追溯贡献。",
+    "fixture": "甲提出解释、乙给反例、丙汇总并修订；另组一人代写全部。",
+    "expected_and_boundary": "前者有共同修订证据，后者仅共同提交；个人能力需独立观测。",
+    "requirement_id": "K13.01.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.02.01",
+    "method": "任务表现绑定所用符号、工具、互动和实践环境。",
+    "fixture": "同一人使用算盘可正确计算，移除算盘后口算未知；评价目标允许工具。",
+    "expected_and_boundary": "工具条件下表现有效；不得替换为无工具能力。工具是否构念无关按目标决定。",
+    "requirement_id": "K13.02.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.02.02",
+    "method": "规范作为参与条件，不当作认知能力。",
+    "fixture": "课堂要求主动举手，学习者不举手但独立答题准确。",
+    "expected_and_boundary": "记录未举手及任务结果；不由规范遵从推断理解或动机。",
+    "requirement_id": "K13.02.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.02.03",
+    "method": "分离学科内容推理与任务语言要求，保持目标构念。",
+    "fixture": "数学目标为比例推理；原题文字难，等价图示题独立正确。",
+    "expected_and_boundary": "可提出语言负荷竞争解释；需控制等价与提示；不直接断言原题仅语言问题。",
+    "requirement_id": "K13.02.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.02.04",
+    "method": "依据个人实际经验与偏好调整，禁止从群体身份填充个体属性。",
+    "fixture": "两人来自同一社区，一人熟悉交易场景另一人不熟；另有陌生社区但熟悉者。",
+    "expected_and_boundary": "按实际背景/选择设计例子；不使用文化身份作为规则或推断。",
+    "requirement_id": "K13.02.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.03.01",
+    "method": "家庭资源和可利用时间与实际互动分开。",
+    "fixture": "家中有10本书但无阅读记录；另一家无纸书却有共同读电子书记录。",
+    "expected_and_boundary": "资源和活动分别计；不能从书本量或家庭类型推断能力。",
+    "requirement_id": "K13.03.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.03.02",
+    "method": "学校机会以实际课程、可及性、资源与支持为证据。",
+    "fixture": "同班一人因网络问题缺两次课，另一人完成全部。",
+    "expected_and_boundary": "课程名相同不代表同机会；缺席原因非能力，需独立表现。",
+    "requirement_id": "K13.03.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.03.03",
+    "method": "工作经验用实际任务和版本验证而非工龄代替。",
+    "fixture": "工龄5年仅做例行检查，新故障由同事完成。",
+    "expected_and_boundary": "确认例行操作经验，故障处理未建立；不推断职业资格。",
+    "requirement_id": "K13.03.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.03.04",
+    "method": "社区资源登记可访问条件、许可、实际使用及目标适配。",
+    "fixture": "图书馆开放但通勤单程1小时，学习者仅30分钟。",
+    "expected_and_boundary": "物理资源存在，计划不可行；可建议经确认的远程替代。",
+    "requirement_id": "K13.03.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.03.05",
+    "method": "日常学习的证据允许无课程记录，仍核对实际能力。",
+    "fixture": "自学修理后独立完成安全模拟任务，无结业证书。",
+    "expected_and_boundary": "记录该任务独立表现，不能由无证书否定学习；真实资格另审。",
+    "requirement_id": "K13.03.05.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.04.01",
+    "method": "可用时间、实际参与、有效操作及结果分离。",
+    "fixture": "预算30分钟；计划20+20分钟；实际10分钟专注且新题正确。",
+    "expected_and_boundary": "计划超预算10分钟；实际时间不等于一般效果；仅本次新题表现。",
+    "requirement_id": "K13.04.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.04.02",
+    "method": "技术可及性先于知识缺口推断。",
+    "fixture": "在线任务提交失败因断网，离线同构念独立完成。",
+    "expected_and_boundary": "线上无效/未观测，离线为证据候选；不把提交失败计为知识错误。",
+    "requirement_id": "K13.04.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.04.03",
+    "method": "中断和任务条件明确记录，匹配环境才比较表现。",
+    "fixture": "两次测验同题型，第二次中断15分钟导致未完成。",
+    "expected_and_boundary": "第二次测验条件不同，保留中断，不作同条件下降解释。",
+    "requirement_id": "K13.04.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.04.04",
+    "method": "机会、兴趣、自述目标及实际参与分别记录。",
+    "fixture": "本人有兴趣但资源不可访问，另一人可访问但拒绝。",
+    "expected_and_boundary": "分别记录约束和选择；不自动发起活动或诊断动机。",
+    "requirement_id": "K13.04.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.05.01",
+    "method": "在线共同体成员、阅读、贡献及独立表现分层。",
+    "fixture": "注册100人，10人提问、5人提交作品；其他活动未知。",
+    "expected_and_boundary": "仅可描述观察到的事件，不能将未发言等同未学习。",
+    "requirement_id": "K13.05.01.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.05.02",
+    "method": "共同任务记录角色、协作机制、个人贡献与独立证据。",
+    "fixture": "甲分析、乙计算、丙报告；组正确，但甲独立计算未知。",
+    "expected_and_boundary": "组正确不代表甲计算达标；另行观测所需能力。",
+    "requirement_id": "K13.05.02.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.05.03",
+    "method": "组织产出与个体变化是不同分析单位。",
+    "fixture": "团队共享检查表后产量增20%，人员替换且设备更新。",
+    "expected_and_boundary": "组织产出增加，个人学习和因果机制均未知；控制共同变化。",
+    "requirement_id": "K13.05.03.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  },
+  {
+    "topic": "K13.05.04",
+    "method": "教师支持要绑定具体障碍、适用目标和可撤条件。",
+    "fixture": "同一学生一周3次提示仍未独立完成；另一次设备帮助后独立正确。",
+    "expected_and_boundary": "提示频次非效果；区分构念相关支架和可及性帮助，后续新任务验证。",
+    "requirement_id": "K13.05.04.RQ01",
+    "origin": "ORIGINAL_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN"
+  }
+]
