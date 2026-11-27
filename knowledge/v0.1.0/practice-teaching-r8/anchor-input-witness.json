@@ -1,0 +1,173 @@
+{
+  "d4_samples": [
+    {
+      "id": "QD4-02",
+      "local": "K05.02.01.PT.01",
+      "local_file": "knowledge/v0.1.0/practice-teaching-r8/K05/records-02.jsonl",
+      "local_file_sha256": "f673422fb374aefe99fa0524375fa2c6789bb536fedfb29e602fcaf54e80839d",
+      "pointer": "/existing_d4_samples/1",
+      "record_sha256": "62717a22739a5e68b7a396d96a08ff8d7697db763e33ece7123cde841c07a1e9",
+      "sample": {
+        "boundary": "总时长、延迟、材料、对照固定；不预设所有间隔更好",
+        "d3_id": "K05.02.01",
+        "id": "QD4-02",
+        "requirement": "间隔效应定义与时间分配对照",
+        "status": "EXISTING_CANDIDATE"
+      },
+      "source_path": "docs/drafts/s01-scope-inventory.json",
+      "source_sha256": "e52bcb3912de4e2fa78ac74e05c60fd7b2b8aca50f4e8a2751ea7a0ba3cbc867",
+      "status": "PRESERVED_REQUIREMENT_RECONCILED_NOT_EMPIRICAL_QUALIFICATION"
+    },
+    {
+      "id": "QD4-03",
+      "local": "K05.02.03.PT.01",
+      "local_file": "knowledge/v0.1.0/practice-teaching-r8/K05/records-02.jsonl",
+      "local_file_sha256": "f673422fb374aefe99fa0524375fa2c6789bb536fedfb29e602fcaf54e80839d",
+      "pointer": "/existing_d4_samples/2",
+      "record_sha256": "97e22274a23426f505eaef2f8e163e15eff3a66565eedd3e93c0d35708e01bfb",
+      "sample": {
+        "boundary": "区分比较组及保持延迟；无证据不设最优",
+        "d3_id": "K05.02.03",
+        "id": "QD4-03",
+        "requirement": "扩展间隔方案是否优于固定间隔的条件",
+        "status": "EXISTING_CANDIDATE"
+      },
+      "source_path": "docs/drafts/s01-scope-inventory.json",
+      "source_sha256": "e52bcb3912de4e2fa78ac74e05c60fd7b2b8aca50f4e8a2751ea7a0ba3cbc867",
+      "status": "PRESERVED_REQUIREMENT_RECONCILED_NOT_EMPIRICAL_QUALIFICATION"
+    }
+  ],
+  "limits": "No new task dependency or graph qualification. Forty-seven later integration obligations remain.",
+  "pairs": [
+    {
+      "boundary": "策略差异不能证明线索机制唯一成立。",
+      "id": "XA01",
+      "local": {
+        "file_sha256": "f673422fb374aefe99fa0524375fa2c6789bb536fedfb29e602fcaf54e80839d",
+        "kind": "Claim",
+        "owner": "K05",
+        "package_id": "learning-core",
+        "path": "knowledge/v0.1.0/practice-teaching-r8/K05/records-02.jsonl",
+        "record_sha256": "ff9eda61443ac37eea92ef9735b20efdaffba2460ea93b2256fcb8e1d8a5e2d6",
+        "stable_id": "K05.01.01.PT.01",
+        "version": "0.1.0-practice-teaching-candidate-8"
+      },
+      "owner": "K05",
+      "status": "IDENTITY_AND_DECLARED_INPUT_VERIFIED_SEMANTIC_USE_PROPOSED",
+      "upstream": {
+        "file_sha256": "f176b0dac49cbedbce135da7ed3bc8dab4a8f0c72aae143cf4690a916675a6c9",
+        "kind": "Claim",
+        "owner": "K02",
+        "package_id": "learning-core",
+        "path": "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+        "receipt": {
+          "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+          "local_qualification_evidence": {
+            "path": "evidence/tasks/K02/K02-QUALIFICATION-01.json",
+            "sha256": "90b250a76d43dd836682428e682b69673cf4f63f54f27fc019f77ba549793da8"
+          },
+          "receipt_id": "TASK:K02:K02-FORMAL-03",
+          "specific_refs": [
+            {
+              "path": "evidence/tasks/K02/K02-FORMAL-03.json",
+              "sha256": "5c6f1a7b0c5b271495370ce6cdc63ec595dcad6137f6b3a16ac90e3eece92713"
+            }
+          ],
+          "task_id": "K02",
+          "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+        },
+        "record_sha256": "a70f722a75ff679aebc73e8a422289368d12b944ab5ff6c1114d2ccc1cd67a32",
+        "stable_id": "K02.06.01.D4.01",
+        "version": "0.1.0-foundation-candidate-3"
+      },
+      "use": "设计提取练习时记录提示与竞争线索；比较时控制提示条件。"
+    },
+    {
+      "boundary": "多维项目规则不构成Bloom分类的外部实证。",
+      "id": "XA02",
+      "local": {
+        "file_sha256": "2aa54255b61768faa02ad7a29588ccc46c70636137b92a4a03195eb40d92babd",
+        "kind": "Claim",
+        "owner": "K07",
+        "package_id": "learning-core",
+        "path": "knowledge/v0.1.0/practice-teaching-r8/K07/records-01.jsonl",
+        "record_sha256": "75c6cde5d85887434f2a1024cdc57327900b6bbfcb0001ef5df3040ef567a909",
+        "stable_id": "K07.01.02.PT.01",
+        "version": "0.1.0-practice-teaching-candidate-8"
+      },
+      "owner": "K07",
+      "status": "IDENTITY_AND_DECLARED_INPUT_VERIFIED_SEMANTIC_USE_PROPOSED",
+      "upstream": {
+        "file_sha256": "39d8a418762ffd614188b877ed5b470355dbe698fd3ac80e1fd7c59e04c7b8f2",
+        "kind": "Claim",
+        "owner": "K03",
+        "package_id": "learning-core",
+        "path": "knowledge/v0.1.0/foundation-r3/K03/records-03.jsonl",
+        "receipt": {
+          "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+          "local_qualification_evidence": {
+            "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+            "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+          },
+          "receipt_id": "TASK:K03:K03-FORMAL-03",
+          "specific_refs": [
+            {
+              "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+              "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+            }
+          ],
+          "task_id": "K03",
+          "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+        },
+        "record_sha256": "076367d4044cbccc3d2c5bf72315a2cfbc19858a1fdaf2335fc7c8e2499a9fe7",
+        "stable_id": "K03.02.01.D4.03",
+        "version": "0.1.0-foundation-candidate-3"
+      },
+      "use": "知识维度与过程维度独立记录，同一任务可有多标签。"
+    },
+    {
+      "boundary": "多情境学习不保证任意迁移或路径等效。",
+      "id": "XA03",
+      "local": {
+        "file_sha256": "37658b5e992c7154ea6262b13164739f11ca8fb268945260af178c2d61ab280d",
+        "kind": "Claim",
+        "owner": "K07",
+        "package_id": "learning-core",
+        "path": "knowledge/v0.1.0/practice-teaching-r8/K07/records-02.jsonl",
+        "record_sha256": "c50be2a00e7ee9f9a7db6b8e6b46307cd974896b34f9a8d4e9ae22d3fbcdf3ab",
+        "stable_id": "K07.03.03.PT.01",
+        "version": "0.1.0-practice-teaching-candidate-8"
+      },
+      "owner": "K07",
+      "status": "IDENTITY_AND_DECLARED_INPUT_VERIFIED_SEMANTIC_USE_PROPOSED",
+      "upstream": {
+        "file_sha256": "6dfcf2be7be4f0316a8eeb191971b471e870c1942011f3961348f870fc8d8c31",
+        "kind": "Claim",
+        "owner": "K04",
+        "package_id": "learning-core",
+        "path": "knowledge/v0.1.0/foundation-r3/K04/records-03.jsonl",
+        "receipt": {
+          "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+          "local_qualification_evidence": {
+            "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+            "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+          },
+          "receipt_id": "TASK:K04:K04-FORMAL-03",
+          "specific_refs": [
+            {
+              "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+              "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+            }
+          ],
+          "task_id": "K04",
+          "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+        },
+        "record_sha256": "459b474e2fb5c6944f32e4915d62b5d946981593316b3a69ae62a1c6d71596ad",
+        "stable_id": "K04.06.03.D4.01",
+        "version": "0.1.0-foundation-candidate-3"
+      },
+      "use": "路径比较要求匹配目标并增加独立陌生情境观察。"
+    }
+  ],
+  "status": "BOUNDED_IDENTITY_ONLY"
+}
