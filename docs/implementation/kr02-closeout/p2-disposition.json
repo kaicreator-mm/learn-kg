@@ -1,0 +1,46 @@
+{
+  "finding": "KR02-R9-RV01-01",
+  "status": "NONBLOCKING_REVIEWED_SCOPE_RESTRICTED_BEFORE_REUSE",
+  "review_comment": 7218405055,
+  "reviewed_claim": "K05.03.02.PT.01",
+  "reviewed_snapshot": "5c958e7944a2484b13d69cdcf5d4d1c687310845",
+  "scope": "仅适用于已声明的有类别提示组块与无类别提示、要求自主选择的混合新题对照。组块是类别顺序安排，不必提供类别提示；混合安排不必要求自主选择。",
+  "consumer_guard": "独立记录类别排列、提示及目标是否要求选择；通用表述修订并核证前，不得在下游泛化该原句。未知提示/选择条件不推断自主策略选择。",
+  "examples": [
+    {
+      "arrangement": "blocked",
+      "cue": "none",
+      "selection_required": "unknown",
+      "result": "cannot infer choice requirement from order"
+    },
+    {
+      "arrangement": "mixed",
+      "cue": "label present",
+      "selection_required": false,
+      "result": "not evidence of unaided choice"
+    },
+    {
+      "arrangement": "mixed",
+      "cue": "none",
+      "selection_required": true,
+      "result": "observe selected rule and actual trace separately"
+    }
+  ],
+  "alternate_locator": {
+    "source_id": "K05-S08",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31556629/",
+    "section": "abstract, reviewer observed lines 244–247",
+    "scope": "same-work abstract supports material differences and similarity moderators; author PDF timed out for reviewer",
+    "review_comment": 7218405055
+  },
+  "panadero_locator": {
+    "source_id": "K08-S08",
+    "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.00422/full",
+    "sections": [
+      "effort regulation: reviewer lines 783–790",
+      "SRL/CoRL/SSRL: reviewer lines 625–631, 640–641"
+    ],
+    "review_comment": 7218405055
+  },
+  "limits": "Controller scope restriction and reviewer-located metadata; no canonical record changed, no new independent source read by controller. Formal gate must assess exact receipt and disposition; permanent general wording correction at next normal revision before dependent generic reuse."
+}
