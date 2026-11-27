@@ -1,0 +1,118 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr02-formal-closeout-20261127",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "reviewer": "chatgpt-web:learn-kg-kr02-r9-formal-qualification-reviewer",
+  "review_session": "learn-kg-kr02-r9-formal-exact-20261127",
+  "branch": "version/v0.1.0",
+  "base": "5c958e7944a2484b13d69cdcf5d4d1c687310845",
+  "exact_head": "9762b818b804826b7a4d661bbd3efdddb1670c5f",
+  "version": "9762b818b804826b7a4d661bbd3efdddb1670c5f",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K07",
+  "attempt_id": "K07-QUALIFICATION-01",
+  "receipt_id": "TASK:K07:K07-QUALIFICATION-01",
+  "input": [
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-01",
+      "content_digest": "48c075e94564e77448103a6e918bad2336b53b3f049a891d6e016630d7bb95fd",
+      "version": "5c958e7944a2484b13d69cdcf5d4d1c687310845",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-01.json",
+          "sha256": "6fe98963ba241569e9fc1d197d0e7ce360ade9fb6b422b5208b189cd8026438a"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/K07/K07-FORMAL-01.json",
+      "sha256": "6fe98963ba241569e9fc1d197d0e7ce360ade9fb6b422b5208b189cd8026438a",
+      "type": "REVIEWED_CANDIDATE_RECEIPT"
+    }
+  ],
+  "reviewed_content_digest": "48c075e94564e77448103a6e918bad2336b53b3f049a891d6e016630d7bb95fd",
+  "consumed_tuple": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "K03",
+      "receipt_id": "TASK:K03:K03-FORMAL-03",
+      "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+          "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+        },
+        {
+          "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+          "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+        }
+      ]
+    },
+    {
+      "task_id": "K04",
+      "receipt_id": "TASK:K04:K04-FORMAL-03",
+      "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+          "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+        },
+        {
+          "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+          "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "state": "QUALIFIED_LOCAL",
+  "receipt_type": "QUALIFIED_LOCAL",
+  "scope": "Conditional goals and routes, necessary-condition counterexamples and synthetic typed identities; no external equivalence or graph closure.",
+  "validation": {
+    "review_task_comment": 7218707611,
+    "review_result_comment": 7218812300,
+    "review_body_sha256": "da8394a07cc1b0ac69f035eb9825bf55b4cffad09fac6507be83a954d121a943",
+    "tree": "5685a413fa9b7720b2da90e1e38040429beb7ee9",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p3": 0,
+    "new_findings": 0,
+    "p2": 0
+  },
+  "issues": [
+    "74 historical HOLD claims excluded across shared package; source rights HOLD; 400 historical and 36 new sequence narratives NOT_RUN; four view and 47 integration obligations retained. No CQ/LC, actual learning effectiveness, release, whole graph or G03 acceptance.",
+    "Source evidence reused only within the independently adjudicated scope; registration is not a new source read."
+  ],
+  "next": "G03 exact dependency closure required",
+  "content_digest": "cf86e3a7191bdb118936c04f6e5e74f50c6d1243386aa07bbfb8c5bbb48d059c"
+}
