@@ -1,0 +1,187 @@
+{
+  "output_label": "LEARN_KG_V010_HS00_HSK_STANDARD_AND_SOURCE_RECORD_INTERFACE_IMPLEMENTATION",
+  "task_issue": 22,
+  "status": "CANDIDATE_PREPARATION_ONLY",
+  "base_head": "4a8cd2b6aef68d5a574842325ef9fddaa0559c16",
+  "branch": "version/v0.1.0",
+  "validation": {
+    "hs00_json_schema": "PASS",
+    "finite_tests": {
+      "passed": 22,
+      "total": 22,
+      "status": "PASS"
+    },
+    "deterministic_replay": {
+      "artifacts": 5,
+      "identical_sha256": 5,
+      "status": "PASS"
+    },
+    "git_diff_check": "PASS",
+    "db01_projection_schema": {
+      "actual_records": 109,
+      "synthetic_records": 1,
+      "valid": 110,
+      "status": "PASS"
+    },
+    "if01_typed_refs": {
+      "valid": 5,
+      "total": 5,
+      "status": "PASS"
+    },
+    "src01_preservation": {
+      "current_pdf_cross_fault_sha256_match": "3/3",
+      "current_pdf_v100_isolated_restore": "3/3",
+      "rdf_archive_cross_fault_files": "17/17",
+      "rdf_archive_v100_isolated_restore": "17/17",
+      "sourceblock_exact_replay": "94/94",
+      "canonical_connector_text_exact_match": "3/3"
+    }
+  },
+  "inventory": {
+    "source_records": 3,
+    "source_block_records": 94,
+    "level_bands": 11,
+    "unique_raw_level_labels": 28,
+    "parenthetical_level_label_records": 102,
+    "lexical_records_observed_for_label_summary": 11000,
+    "source_block_kind_counts": {
+      "Grammar": 21,
+      "Task": 53,
+      "Topic": 20
+    },
+    "source_block_scope_topic_counts": {
+      "urn:learn-kg:taxonomy:H07.03.01": 53,
+      "urn:learn-kg:taxonomy:H07.03.02": 20,
+      "urn:learn-kg:taxonomy:H07.03.05": 21
+    },
+    "recorded_printed_page_ranges": [
+      [
+        2,
+        54
+      ],
+      [
+        56,
+        75
+      ],
+      [
+        383,
+        403
+      ]
+    ],
+    "positive_fixtures": 11,
+    "negative_fixtures": 13
+  },
+  "compatibility": {
+    "db01_schema_sha256": "909a5c5e2bac142eddd9375d584b7ad07c716dc03b475a5f2942ce77354cc4cd",
+    "if01_interface_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+    "db01_schema_modified": false,
+    "if01_contract_modified": false,
+    "task_dag_modified": false,
+    "candidate_package_manifest_created": false
+  },
+  "preservation_scope": {
+    "historical_pdf_byte_identity": "HOLD_NO_HISTORICAL_RAW_DIGEST",
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION",
+    "visual_layout": "HOLD_LAYOUT_REVIEW_PENDING",
+    "publication": "NOT_AUTHORIZED",
+    "visibility": "PRIVATE_ONLY"
+  },
+  "provider_identity": {
+    "provider": "GOOGLE_DRIVE",
+    "original_filenames": [
+      "RHSK01.pdf",
+      "RHSK02.pdf",
+      "RHSK03.pdf"
+    ],
+    "provider_file_ids": "NOT_STORED_IN_PUBLIC_REPOSITORY",
+    "original_paths": "NOT_STORED_IN_PUBLIC_REPOSITORY",
+    "current_revision_ids": "NOT_CAPTURED_IN_SAFE_EVIDENCE",
+    "current_revision_count_per_source": 1,
+    "previous_revision_available": false
+  },
+  "current_pdf_sha256": {
+    "RHSK01": "ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941",
+    "RHSK02": "a4544ceb385349a0ea078cccecb9319c7338a0cbd8308fa08d47d6d4d3bba023",
+    "RHSK03": "8cb62d88440287d0a94f05d7f011e0af89af907455ab3fb2f4a1d25f2085fa16"
+  },
+  "canonical_connector_text_sha256": {
+    "RHSK01": "aa37a4ade1783a8a7f5cd6fb6a5590e8b8602400a76e2f67834dfff60cacb892",
+    "RHSK02": "4d8e200d475ac4dae6de3399e0da75f1cbbbebfd499744ca9a8d74a79765e261",
+    "RHSK03": "05a91aef2a9aa2bd8548973276508d2b67964753d19881b6952ab1cf65d0d45d"
+  },
+  "historical_pdf_sha256": {
+    "RHSK01": null,
+    "RHSK02": null,
+    "RHSK03": null
+  },
+  "sourceblock_jsonl_sha256": "d082666135f73b0a23555d495603758fde68fdfead1835c06b808a8435086108",
+  "artifacts": {
+    "schema.json": {
+      "path": "docs/implementation/hs00/schema.json",
+      "sha256": "3811bd00a06303fc77b97d3f5970fc8de612f42255483542b79afd5afcf2c6d8"
+    },
+    "interface-contract.json": {
+      "path": "docs/implementation/hs00/interface-contract.json",
+      "sha256": "4c0811ceb9f8e7a9b3f6334c88f25443731543facaf698e77086c4a8084e2509"
+    },
+    "source-mapping.json": {
+      "path": "docs/implementation/hs00/source-mapping.json",
+      "sha256": "4db352324511060714fae5f1a3db6017573d0d522a9e67df7c6456477730d547"
+    },
+    "db01-projections.json": {
+      "path": "docs/implementation/hs00/db01-projections.json",
+      "sha256": "2e24f2e67ce3ed58b803affb57aae8b19bac61b91bef2b2a366d899af9693aca"
+    },
+    "fixtures.json": {
+      "path": "docs/implementation/hs00/fixtures.json",
+      "sha256": "b02d23519a602453691006674b6308ad19c83842f32ab1a4c191f7dd2ac30921"
+    },
+    "README.md": {
+      "path": "docs/implementation/hs00/README.md",
+      "sha256": "40cfdfa5521301218de014bfd086b7e411f6320831e2254f510c7b1b3f6430f1"
+    },
+    "build_hs00.py": {
+      "path": "docs/implementation/hs00/build_hs00.py",
+      "sha256": "7db5d89bbc7fd4c803a42dbf039b31bab1c3842ff8df52c0617752dbfb0cf761"
+    },
+    "build_hs00_contract.py": {
+      "path": "docs/implementation/hs00/build_hs00_contract.py",
+      "sha256": "af82e6cea215a0456ede84c165eac96eee8605587b56575ae3cc44dfef7901d2"
+    },
+    "test_hs00.py": {
+      "path": "docs/implementation/hs00/test_hs00.py",
+      "sha256": "83f1605e5ab76c52c9215d830e49c5a8beeb392acfb34fd1c9934384469de733"
+    },
+    "verify_hs00.py": {
+      "path": "docs/implementation/hs00/verify_hs00.py",
+      "sha256": "6ba851a904715cf9d25cfc1f082fd579666d0c25640faca869bc4628ce0bd0ec"
+    }
+  },
+  "safety_boundaries": {
+    "raw_pdf_copied_to_repository": false,
+    "full_connector_text_copied_to_repository": false,
+    "sourceblock_raw_text_copied_to_repository": false,
+    "private_drive_file_ids_copied": false,
+    "private_original_paths_copied": false,
+    "sqlite_file_generated": false,
+    "hsk01_bulk_conversion_started": false,
+    "public_release_authorized": false,
+    "rights_promoted": false,
+    "qualification_receipt_created": false,
+    "task_dag_completion_registered": false,
+    "pr_created": false,
+    "merged": false
+  },
+  "unresolved_boundaries": [
+    "Historical raw-PDF byte SHA256 is unavailable and remains HOLD.",
+    "Drive file IDs and original paths remain private-only and are not embedded in the repository.",
+    "Exact Drive revision IDs were not captured in safe evidence; one current revision exists per source and no previous revision is available.",
+    "Authoritative HSK standard identity and H07 final mapping remain UNKNOWN/HOLD.",
+    "Parsed level member sets are syntactic candidates only; official semantics and membership are unverified.",
+    "SourceBlock printed page values are recorded RDF integer literals; PDF page index and one-based page number remain unknown per block.",
+    "Visual layout remains HOLD; no rights/publication authorization or professional qualification is asserted.",
+    "HSK01 full corpus conversion, source-level reconciliation, CQ/LC and semantic qualification are not performed."
+  ],
+  "qualification": "NOT_GRANTED",
+  "independent_delta_review": "PENDING"
+}

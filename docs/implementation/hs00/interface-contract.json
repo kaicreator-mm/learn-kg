@@ -1,0 +1,125 @@
+{
+  "schema_version": "learn-kg-hs00-interface-1",
+  "task_issue": 22,
+  "status": "CANDIDATE_PREPARATION_ONLY",
+  "owner": "HS00",
+  "schema": {
+    "path": "docs/implementation/hs00/schema.json",
+    "sha256": "3811bd00a06303fc77b97d3f5970fc8de612f42255483542b79afd5afcf2c6d8"
+  },
+  "source_mapping": {
+    "path": "docs/implementation/hs00/source-mapping.json",
+    "sha256": "4db352324511060714fae5f1a3db6017573d0d522a9e67df7c6456477730d547"
+  },
+  "fixtures": {
+    "path": "docs/implementation/hs00/fixtures.json",
+    "sha256": "b02d23519a602453691006674b6308ad19c83842f32ab1a4c191f7dd2ac30921",
+    "positive_cases": 11,
+    "negative_cases": 13
+  },
+  "db01_projection": {
+    "path": "docs/implementation/hs00/db01-projections.json",
+    "sha256": "2e24f2e67ce3ed58b803affb57aae8b19bac61b91bef2b2a366d899af9693aca",
+    "actual_records": 109,
+    "synthetic_records": 1
+  },
+  "inputs": {
+    "DB01_schema_sha256": "909a5c5e2bac142eddd9375d584b7ad07c716dc03b475a5f2942ce77354cc4cd",
+    "IF01_interface_contract_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+    "SRC01_receipt_sha256": "06022ab7502cb4e78249a5b8cc181e024b64106b518ea79a46b9ab41a8e3e188",
+    "SRC01_scope": "PRESERVATION_VERIFIED_RESTRICTED_ONLY"
+  },
+  "standard_identity": {
+    "source_standard_id": "urn:learn-kg:standard:hsk:2025-11",
+    "source_declared_version_label_raw": "2025-11",
+    "normalized_internal_version_candidate": "hsk-2025-11",
+    "identity_status": "UNKNOWN_HOLD",
+    "authority_verification": "NOT_RUN",
+    "H07_final_standard_mapping": "NOT_RUN"
+  },
+  "source_identity": {
+    "stable_source_record_ids": [
+      "urn:learn-kg:source:RHSK01",
+      "urn:learn-kg:source:RHSK02",
+      "urn:learn-kg:source:RHSK03"
+    ],
+    "source_provider": "GOOGLE_DRIVE",
+    "original_filename": "preserved from private backup manifest",
+    "provider_file_id": "NOT_STORED_IN_PUBLIC_REPOSITORY",
+    "original_path": "NOT_STORED_IN_PUBLIC_REPOSITORY",
+    "current_revision_id": "NOT_CAPTURED_IN_SAFE_EVIDENCE",
+    "current_revision_count": 1,
+    "previous_revision_available": false
+  },
+  "digest_separation": {
+    "current_raw_pdf_sha256": "per-source; current bytes verified across Google Drive/Aliyun/V100",
+    "historical_raw_pdf_sha256": "null/HOLD; no prior Drive revision or historical raw digest",
+    "canonical_connector_text_sha256": "per-source; exact historical text match",
+    "source_block_jsonl_sha256": "overall file digest plus per-source subset digest",
+    "source_block_raw_text_sha256": "per SourceBlock rawText value; raw text remains in private archive"
+  },
+  "level_label_contract": {
+    "raw_value_is_immutable": true,
+    "parser_name": "hs00-level-label-parser",
+    "parser_version": "0.1.0",
+    "supported_observed_grammar": "single digit or ascending digit range; optional repeated fullwidth-parenthesis groups; exact punctuation required",
+    "normalized_member_levels": "candidate syntax only",
+    "merged_level_identity": "hash over exact source standard ID and raw label; punctuation-sensitive",
+    "unknown_or_ambiguous": "raw preserved; parse_status HOLD_UNPARSED; no normalization"
+  },
+  "page_locator_contract": {
+    "pdf_page_index_zero_based": "independent nullable integer",
+    "pdf_page_number_one_based": "independent nullable integer; when both PDF values exist, page number must equal index + 1",
+    "printed_page_label_recorded_raw": "separate exact recorded value",
+    "no_inference": "printed page label never populates PDF page index or one-based page number",
+    "current_source_blocks": "all 94 have recorded RDF integer printedPage values; block-specific PDF page index/number are UNKNOWN/HOLD"
+  },
+  "record_kind_contract": {
+    "enum": [
+      "VOCABULARY_ITEM",
+      "CHARACTER_ITEM",
+      "SOURCE_BLOCK",
+      "CAPABILITY",
+      "CATEGORY",
+      "CHARACTER_MEMBERSHIP"
+    ],
+    "source_of_truth": "explicit typed record field or source RDF kind mapping",
+    "forbidden_heuristic": "never infer vocabulary versus character from string length, Unicode shape or glyph count",
+    "source_record_id_is_not_normalized_knowledge_id": true
+  },
+  "parsing_contract": {
+    "raw_and_normalized_fields_separate": true,
+    "parser_name_and_version_required": true,
+    "parse_status_required": true,
+    "source_locator_required_or_explicit_null": true,
+    "raw_field_sha256_required": true,
+    "unknown_unparsed_fields": "raw value retained and queryable; normalized value null; parse_status NOT_ATTEMPTED/UNPARSED/AMBIGUOUS/HOLD"
+  },
+  "hsk01_consumption_contract": [
+    "Consume source_record_id, provider identity status, raw PDF/text/block digests and preservation_scope as immutable source provenance.",
+    "Do not infer official standard identity from source alias, filename, graph namespace or release label; UNKNOWN/HOLD must propagate.",
+    "Preserve every raw level label and punctuation before producing any normalized member-level candidate.",
+    "Use source_record_id for source provenance and separate normalized_knowledge_id for Lexeme/HanCharacter/Topic/Competency objects.",
+    "Use explicit record_kind; never infer character versus vocabulary from surface length or glyph shape.",
+    "Use source_block_id, scope_topic_ref, printed page label and raw text digest; keep PDF page index and one-based PDF page number separate and unknown unless directly mapped.",
+    "Unknown fields and parser failures remain preserved/queryable; no silent correction, deduplication or overwrite.",
+    "Rights HOLD, publication NOT_AUTHORIZED, historical PDF identity HOLD and visual layout HOLD propagate to all downstream records and outputs."
+  ],
+  "non_goals": [
+    "No HSK01 bulk conversion of 11,000 lexical records, 4,288 character memberships, 3,088 characters, 94 SourceBlocks, 9 capabilities or 823 taxonomy categories.",
+    "No source-level professional content correction, H07 final standard mapping, CQ/LC, semantic qualification or learning-effect claim.",
+    "No SQLite file, public release, rights promotion, SRC01 scope expansion, Task DAG update, qualification receipt, PR or merge."
+  ],
+  "preservation_scope": {
+    "historical_pdf_byte_identity": "HOLD_NO_HISTORICAL_RAW_DIGEST",
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION",
+    "visual_layout": "HOLD_LAYOUT_REVIEW_PENDING",
+    "publication": "NOT_AUTHORIZED",
+    "visibility": "PRIVATE_ONLY"
+  },
+  "candidate_package_binding": {
+    "package_id": "hsk-source-interface",
+    "version": "0.1.0-hs00-candidate-1",
+    "status": "SYNTACTIC_REF_EXAMPLE_ONLY_NO_PACKAGE_MANIFEST"
+  }
+}

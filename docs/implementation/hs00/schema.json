@@ -1,0 +1,1201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:learn-kg:hs00:source-mapping-schema:1",
+  "title": "HS00 HSK Source and Standard Mapping Candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "status",
+    "standard_identity",
+    "source_records",
+    "level_bands",
+    "level_label_observations",
+    "source_blocks",
+    "record_kind_examples",
+    "archive_evidence",
+    "preservation_scope",
+    "limits"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "learn-kg-hs00-source-mapping-1"
+    },
+    "kind": {
+      "const": "HSKSourceMapping"
+    },
+    "status": {
+      "const": "CANDIDATE_PREPARATION_ONLY"
+    },
+    "standard_identity": {
+      "$ref": "#/$defs/HSKStandardIdentity"
+    },
+    "source_records": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "$ref": "#/$defs/HSKSourceRecord"
+      }
+    },
+    "level_bands": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/HSKLevelBand"
+      }
+    },
+    "level_label_observations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/HSKLevelLabelObservation"
+      }
+    },
+    "source_blocks": {
+      "type": "array",
+      "minItems": 94,
+      "items": {
+        "$ref": "#/$defs/HSKSourceBlockMapping"
+      }
+    },
+    "source_block_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "count",
+        "source_record_counts",
+        "block_kind_counts",
+        "scope_topic_counts",
+        "level_band_counts",
+        "recorded_printed_page_values"
+      ],
+      "properties": {
+        "count": {
+          "const": 94
+        },
+        "source_record_counts": {
+          "type": "object"
+        },
+        "block_kind_counts": {
+          "type": "object"
+        },
+        "scope_topic_counts": {
+          "type": "object"
+        },
+        "level_band_counts": {
+          "type": "object"
+        },
+        "recorded_printed_page_values": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "count",
+            "unique_count",
+            "minimum",
+            "maximum",
+            "contiguous_ranges",
+            "visual_verification",
+            "pdf_page_index_and_number_bound"
+          ],
+          "properties": {
+            "count": {
+              "const": 94
+            },
+            "unique_count": {
+              "const": 94
+            },
+            "minimum": {
+              "const": 2
+            },
+            "maximum": {
+              "const": 403
+            },
+            "contiguous_ranges": {
+              "const": [
+                [
+                  2,
+                  54
+                ],
+                [
+                  56,
+                  75
+                ],
+                [
+                  383,
+                  403
+                ]
+              ]
+            },
+            "visual_verification": {
+              "const": "HOLD_LAYOUT_REVIEW_PENDING"
+            },
+            "pdf_page_index_and_number_bound": {
+              "const": false
+            }
+          }
+        }
+      }
+    },
+    "level_label_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lexical_record_count",
+        "unique_raw_label_count",
+        "parenthetical_raw_label_record_count",
+        "range_raw_label_record_count",
+        "parser_name",
+        "parser_version",
+        "semantics_status"
+      ],
+      "properties": {
+        "lexical_record_count": {
+          "const": 11000
+        },
+        "unique_raw_label_count": {
+          "const": 28
+        },
+        "parenthetical_raw_label_record_count": {
+          "const": 102
+        },
+        "range_raw_label_record_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "parser_name": {
+          "const": "hs00-level-label-parser"
+        },
+        "parser_version": {
+          "const": "0.1.0"
+        },
+        "semantics_status": {
+          "const": "UNKNOWN_HOLD"
+        }
+      }
+    },
+    "record_kind_examples": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "record_kind",
+          "source_rdf_kind",
+          "source_record_id",
+          "normalized_knowledge_id"
+        ],
+        "properties": {
+          "record_kind": {
+            "enum": [
+              "VOCABULARY_ITEM",
+              "CHARACTER_ITEM",
+              "SOURCE_BLOCK",
+              "CAPABILITY",
+              "CATEGORY",
+              "CHARACTER_MEMBERSHIP"
+            ]
+          },
+          "source_rdf_kind": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "source_record_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "normalized_knowledge_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "membership_record_id": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "archive_evidence": {
+      "type": "object"
+    },
+    "preservation_scope": {
+      "$ref": "#/$defs/rightsScope"
+    },
+    "limits": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "rightsScope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "historical_pdf_byte_identity",
+        "rights",
+        "visual_layout",
+        "publication",
+        "visibility"
+      ],
+      "properties": {
+        "historical_pdf_byte_identity": {
+          "const": "HOLD_NO_HISTORICAL_RAW_DIGEST"
+        },
+        "rights": {
+          "const": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION"
+        },
+        "visual_layout": {
+          "const": "HOLD_LAYOUT_REVIEW_PENDING"
+        },
+        "publication": {
+          "const": "NOT_AUTHORIZED"
+        },
+        "visibility": {
+          "const": "PRIVATE_ONLY"
+        }
+      }
+    },
+    "parser": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "providerIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "provider_file_id",
+        "provider_file_id_status",
+        "original_name",
+        "original_name_status",
+        "original_path",
+        "original_path_status",
+        "current_revision_id",
+        "current_revision_id_status",
+        "current_revision_count",
+        "previous_revision_available",
+        "revision_identity_status"
+      ],
+      "properties": {
+        "provider": {
+          "const": "GOOGLE_DRIVE"
+        },
+        "provider_file_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provider_file_id_status": {
+          "enum": [
+            "NOT_STORED_IN_PUBLIC_REPOSITORY",
+            "AVAILABLE_PRIVATE_ONLY",
+            "UNKNOWN_HOLD"
+          ]
+        },
+        "original_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "original_name_status": {
+          "const": "VERIFIED_IN_PRIVATE_BACKUP_MANIFEST"
+        },
+        "original_path": {
+          "type": "null"
+        },
+        "original_path_status": {
+          "const": "NOT_STORED_IN_PUBLIC_REPOSITORY"
+        },
+        "current_revision_id": {
+          "type": "null"
+        },
+        "current_revision_id_status": {
+          "const": "NOT_CAPTURED_IN_SAFE_EVIDENCE"
+        },
+        "current_revision_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "previous_revision_available": {
+          "const": false
+        },
+        "revision_identity_status": {
+          "const": "ONE_CURRENT_REVISION_ONLY_ID_NOT_CAPTURED"
+        }
+      }
+    },
+    "HSKStandardIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "stable_id",
+        "source_standard_id",
+        "source_family_hint",
+        "source_declared_version_label_raw",
+        "normalized_internal_version_candidate",
+        "normalization_status",
+        "identity_status",
+        "source_record_status",
+        "source_version_record_sha256",
+        "raw_field_sha256",
+        "authority_verification",
+        "negative_boundary",
+        "rights_scope"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKStandardIdentity"
+        },
+        "stable_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_standard_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_family_hint": {
+          "const": "HSK"
+        },
+        "source_declared_version_label_raw": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "normalized_internal_version_candidate": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "normalization_status": {
+          "const": "CANDIDATE_UNVERIFIED"
+        },
+        "identity_status": {
+          "const": "UNKNOWN_HOLD"
+        },
+        "source_record_status": {
+          "const": "STAGING"
+        },
+        "source_version_record_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "raw_field_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "authority_verification": {
+          "const": "NOT_RUN"
+        },
+        "negative_boundary": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "rights_scope": {
+          "$ref": "#/$defs/rightsScope"
+        }
+      }
+    },
+    "HSKSourceRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "stable_id",
+        "source_record_id",
+        "source_id",
+        "source_status",
+        "provider_identity",
+        "current_raw_pdf",
+        "historical_raw_pdf_sha256",
+        "historical_raw_pdf_status",
+        "canonical_connector_text_sha256",
+        "source_block_count",
+        "source_block_jsonl_subset_sha256",
+        "source_record_jsonl_line_sha256",
+        "raw_field_digests",
+        "rights_scope"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKSourceRecord"
+        },
+        "stable_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_record_id": {
+          "type": "string",
+          "pattern": "^urn:learn-kg:source:[A-Za-z0-9._:-]+$"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^RHSK[0-9]{2}$"
+        },
+        "source_status": {
+          "const": "EXTRACTED_TEXT_ONLY"
+        },
+        "provider_identity": {
+          "$ref": "#/$defs/providerIdentity"
+        },
+        "current_raw_pdf": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sha256",
+            "bytes",
+            "pdf_pages",
+            "verification"
+          ],
+          "properties": {
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "pdf_pages": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "verification": {
+              "const": "CURRENT_DRIVE_TO_ALIYUN_TO_V100_SHA256_MATCH"
+            }
+          }
+        },
+        "historical_raw_pdf_sha256": {
+          "type": "null"
+        },
+        "historical_raw_pdf_status": {
+          "const": "HOLD_NO_HISTORICAL_DIGEST_OR_PRIOR_REVISION"
+        },
+        "canonical_connector_text_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_block_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_block_jsonl_subset_sha256": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_record_jsonl_line_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "raw_field_digests": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "textSha256"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "textSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        },
+        "rights_scope": {
+          "$ref": "#/$defs/rightsScope"
+        }
+      }
+    },
+    "HSKLevelBand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "stable_id",
+        "source_band_id",
+        "source_standard_id",
+        "raw_level_label",
+        "raw_field_sha256",
+        "normalized_member_levels",
+        "merged_level_identity",
+        "parser_name",
+        "parser_version",
+        "parse_status",
+        "semantics_status",
+        "source_record_line_sha256",
+        "rights_scope"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKLevelBand"
+        },
+        "stable_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_band_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_standard_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "raw_level_label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "raw_field_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "normalized_member_levels": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+          }
+        },
+        "merged_level_identity": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "parser_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "parser_version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "parse_status": {
+          "const": "PARSED_CANDIDATE"
+        },
+        "semantics_status": {
+          "const": "UNKNOWN_HOLD"
+        },
+        "source_record_line_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "rights_scope": {
+          "$ref": "#/$defs/rightsScope"
+        }
+      }
+    },
+    "HSKLevelLabelObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "raw_level_label",
+        "occurrence_count",
+        "source_record_refs",
+        "raw_field_sha256",
+        "parser_name",
+        "parser_version",
+        "parse_status",
+        "normalized_member_levels",
+        "merged_level_identity",
+        "semantics_status",
+        "rights_scope"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKLevelLabelObservation"
+        },
+        "raw_level_label": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "occurrence_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "source_record_refs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "raw_field_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "parser_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "parser_version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "parse_status": {
+          "enum": [
+            "PARSED_CANDIDATE",
+            "HOLD_UNPARSED"
+          ]
+        },
+        "normalized_member_levels": {
+          "oneOf": [
+            {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 9
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "merged_level_identity": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "semantics_status": {
+          "const": "UNKNOWN_HOLD"
+        },
+        "rights_scope": {
+          "$ref": "#/$defs/rightsScope"
+        }
+      }
+    },
+    "HSKSourceBlockMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "source_record_id",
+        "source_block_id",
+        "block_kind_raw",
+        "level_band_ref",
+        "printed_page_label_recorded_raw",
+        "printed_page_source_datatype",
+        "printed_page_original_visual_verification",
+        "pdf_page_index_zero_based",
+        "pdf_page_number_one_based",
+        "pdf_page_locator_status",
+        "section_locator_raw",
+        "scope_topic_ref",
+        "source_block_status",
+        "raw_text_sha256",
+        "raw_text_utf8_bytes",
+        "source_block_jsonl_line_sha256",
+        "raw_field_digests",
+        "raw_text_storage",
+        "rights_scope"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKSourceBlockMapping"
+        },
+        "source_record_id": {
+          "type": "string",
+          "pattern": "^urn:learn-kg:source:[A-Za-z0-9._:-]+$"
+        },
+        "source_block_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "block_kind_raw": {
+          "enum": [
+            "Task",
+            "Topic",
+            "Grammar"
+          ]
+        },
+        "level_band_ref": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "printed_page_label_recorded_raw": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "printed_page_source_datatype": {
+          "const": "http://www.w3.org/2001/XMLSchema#integer"
+        },
+        "printed_page_original_visual_verification": {
+          "const": "HOLD_LAYOUT_REVIEW_PENDING"
+        },
+        "pdf_page_index_zero_based": {
+          "type": "null"
+        },
+        "pdf_page_number_one_based": {
+          "type": "null"
+        },
+        "pdf_page_locator_status": {
+          "const": "UNKNOWN_NOT_DERIVED_FROM_PRINTED_LABEL"
+        },
+        "section_locator_raw": {
+          "type": "null"
+        },
+        "scope_topic_ref": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_block_status": {
+          "const": "LAYOUT_REVIEW_PENDING"
+        },
+        "raw_text_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "raw_text_utf8_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "source_block_jsonl_line_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "raw_field_digests": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source",
+            "blockKind",
+            "levelBand",
+            "printedPage",
+            "scopeTopic",
+            "status",
+            "rawText"
+          ],
+          "properties": {
+            "source": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "blockKind": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "levelBand": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "printedPage": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "scopeTopic": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "status": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "rawText": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        },
+        "raw_text_storage": {
+          "const": "PRIVATE_ARCHIVE_ONLY_NOT_COPIED"
+        },
+        "rights_scope": {
+          "$ref": "#/$defs/rightsScope"
+        }
+      }
+    },
+    "HSKRawFieldCapture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "field_name",
+        "raw_value",
+        "raw_value_status",
+        "normalized_value",
+        "parser_name",
+        "parser_version",
+        "parse_status",
+        "raw_field_sha256",
+        "source_locator_ref"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKRawFieldCapture"
+        },
+        "field_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "raw_value": {},
+        "raw_value_status": {
+          "enum": [
+            "PRESERVED",
+            "PRIVATE_ARCHIVE_ONLY",
+            "UNKNOWN_PRESERVED",
+            "MISSING",
+            "SYNTHETIC_ONLY"
+          ]
+        },
+        "normalized_value": {},
+        "parser_name": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "parser_version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "parse_status": {
+          "enum": [
+            "PARSED_CANDIDATE",
+            "NOT_ATTEMPTED",
+            "UNPARSED",
+            "AMBIGUOUS",
+            "ERROR",
+            "HOLD"
+          ]
+        },
+        "raw_field_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_locator_ref": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "HSKTypedRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "record_kind",
+        "record_kind_source",
+        "source_record_id",
+        "normalized_knowledge_id",
+        "raw_surface",
+        "raw_fields",
+        "source_locator_ref",
+        "rights_scope"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKTypedRecord"
+        },
+        "record_kind": {
+          "enum": [
+            "VOCABULARY_ITEM",
+            "CHARACTER_ITEM",
+            "SOURCE_BLOCK",
+            "CAPABILITY",
+            "CATEGORY",
+            "CHARACTER_MEMBERSHIP"
+          ]
+        },
+        "record_kind_source": {
+          "const": "EXPLICIT_TYPED_FIELD_NOT_STRING_HEURISTIC"
+        },
+        "source_record_id": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "normalized_knowledge_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "raw_surface": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "raw_fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/HSKRawFieldCapture"
+          }
+        },
+        "source_locator_ref": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "rights_scope": {
+          "$ref": "#/$defs/rightsScope"
+        }
+      }
+    },
+    "HSKSourceLocator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "source_record_id",
+        "source_block_id",
+        "source_text_sha256",
+        "source_block_jsonl_sha256",
+        "pdf_page_index_zero_based",
+        "pdf_page_number_one_based",
+        "printed_page_label_recorded_raw",
+        "printed_page_source_datatype",
+        "printed_page_numeric_value",
+        "printed_page_status",
+        "scope_topic_ref",
+        "section_locator_raw",
+        "raw_text_sha256",
+        "locator_origin",
+        "rights_scope"
+      ],
+      "properties": {
+        "kind": {
+          "const": "HSKSourceLocator"
+        },
+        "source_record_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_block_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "source_text_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_block_jsonl_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pdf_page_index_zero_based": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pdf_page_number_one_based": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "printed_page_label_recorded_raw": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "printed_page_source_datatype": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "printed_page_numeric_value": {
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "printed_page_status": {
+          "enum": [
+            "RECORDED_NOT_VISUALLY_VERIFIED",
+            "MISSING_HOLD",
+            "SYNTHETIC_ONLY"
+          ]
+        },
+        "scope_topic_ref": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "section_locator_raw": {
+          "oneOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "raw_text_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "locator_origin": {
+          "enum": [
+            "SOURCE_BLOCK_RDF",
+            "SYNTHETIC_ONLY"
+          ]
+        },
+        "rights_scope": {
+          "$ref": "#/$defs/rightsScope"
+        }
+      }
+    }
+  }
+}
