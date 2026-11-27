@@ -1,0 +1,301 @@
+[
+  {
+    "anchor_id": "K01.CMP.01",
+    "conditions": [
+      "重复刺激下反应下降与CS-US预测关系要分别操纵。"
+    ],
+    "expected": "习惯化候选；联结解释UNKNOWN。",
+    "from_claim": "K01.01.04.D4.01",
+    "input": "刺激重复、无US，反应减弱；未操纵CS-US关系。",
+    "negative_boundary": "不能仅凭下降认定联结学习。",
+    "qualification": "NOT_RUN",
+    "relation_type": "contrasted_with",
+    "to_claim": "K01.02.01.D4.01"
+  },
+  {
+    "anchor_id": "K01.CMP.02",
+    "conditions": [
+      "区分刺激-结果与行为-结果条件。"
+    ],
+    "expected": "分别检验两种条件；不能凭铃声反应推断行为后果关系。",
+    "from_claim": "K01.02.01.D4.01",
+    "input": "铃声预告食物，同时按杆决定食物出现。",
+    "negative_boundary": "二者可共存，非排他或等价。",
+    "qualification": "NOT_RUN",
+    "relation_type": "contrasted_with",
+    "to_claim": "K01.02.02.D4.01"
+  },
+  {
+    "anchor_id": "K01.CMP.03",
+    "conditions": [
+      "安排定义和有限共同误差模型的对象不同。"
+    ],
+    "expected": "安排仍不同，最优安排UNKNOWN。",
+    "from_claim": "K01.02.03.D4.01",
+    "input": "FR3与FI30s，预测误差相同。",
+    "negative_boundary": "不得由模型数值决定最优安排。",
+    "qualification": "NOT_RUN",
+    "relation_type": "limits_inference_to",
+    "to_claim": "K01.02.04.D4.01"
+  },
+  {
+    "anchor_id": "K01.CMP.05",
+    "conditions": [
+      "记忆过程和学习测量需独立延迟证据。"
+    ],
+    "expected": "即时表现已知；保持UNKNOWN。",
+    "from_claim": "K01.03.02.D4.01",
+    "input": "即时90%，延迟无数据。",
+    "negative_boundary": "一次提取失败不能判存储消失。",
+    "qualification": "NOT_RUN",
+    "relation_type": "limits_inference_to",
+    "to_claim": "K01.01.01.D4.01"
+  },
+  {
+    "anchor_id": "K01.CMP.07",
+    "conditions": [
+      "活动系统中工具、角色及个人独立表现分开。"
+    ],
+    "expected": "个人掌握UNKNOWN。",
+    "from_claim": "K01.04.03.D4.01",
+    "input": "共同完成9/10，无独立测量。",
+    "negative_boundary": "群体成果不等于个人能力。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K01.04.04.R2.01"
+  },
+  {
+    "anchor_id": "K01.CMP.08",
+    "conditions": [
+      "认知架构预测与实现证据分别判断。"
+    ],
+    "expected": "神经实现UNKNOWN。",
+    "from_claim": "K01.05.01.R2.01",
+    "input": "两模型训练拟合相同，无神经测量。",
+    "negative_boundary": "行为拟合非神经定位。",
+    "qualification": "NOT_RUN",
+    "relation_type": "limits_inference_to",
+    "to_claim": "K01.03.03.D4.01"
+  },
+  {
+    "anchor_id": "K01.CMP.09",
+    "conditions": [
+      "竞争预测须先声明，反例与辅助假设并列。"
+    ],
+    "expected": "优先检验B解释及A辅助条件；非最终证伪。",
+    "from_claim": "K01.05.02.D4.01",
+    "input": "A预测80%，B60%，观测60%，任务条件已匹配。",
+    "negative_boundary": "不因一次失败直接判全部理论虚假。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K01.05.03.D4.01"
+  },
+  {
+    "anchor_id": "K02.LINK.01",
+    "conditions": [
+      "命中与误报共同决定敏感度、判准解释。"
+    ],
+    "expected": "敏感度变化UNKNOWN。",
+    "from_claim": "K02.01.02.D4.02",
+    "input": "仅命中率从.9降至.8，误报缺失。",
+    "negative_boundary": "不得用命中下降单独认定警觉敏感度下降。",
+    "qualification": "NOT_RUN",
+    "relation_type": "limits_inference_to",
+    "to_claim": "K02.02.02.D4.03"
+  },
+  {
+    "anchor_id": "K02.LINK.02",
+    "conditions": [
+      "再认任务有信号及噪声分母。"
+    ],
+    "expected": "等方差约定d′约1.6832；不推出自由回忆能力。",
+    "from_claim": "K02.01.02.D4.02",
+    "input": "hit=8/10，fa=2/10。",
+    "negative_boundary": "命中率非d′，非回忆率。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K02.06.04.D4.03"
+  },
+  {
+    "anchor_id": "K02.LINK.04",
+    "conditions": [
+      "组件架构与容量精度模型回答不同问题。"
+    ],
+    "expected": "与固定K=3槽位预测一致；架构及混合模型仍UNKNOWN。",
+    "from_claim": "K02.03.04.D4.01",
+    "input": "N=6，覆盖.5，条件精度1。",
+    "negative_boundary": "不能凭槽位拟合判语音环路存在。",
+    "qualification": "NOT_RUN",
+    "relation_type": "contrasted_with",
+    "to_claim": "K02.03.04.R2.01"
+  },
+  {
+    "anchor_id": "K02.LINK.05",
+    "conditions": [
+      "编码匹配与线索区分性须同时满足。"
+    ],
+    "expected": "匹配存在但区分不足，独立再测。",
+    "from_claim": "K02.05.03.D4.01",
+    "input": "两个目标共享同一编码线索。",
+    "negative_boundary": "匹配线索不必唯一有效。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K02.06.01.D4.01"
+  },
+  {
+    "anchor_id": "K02.LINK.06",
+    "conditions": [
+      "历史节省曲线与明确成本约定。"
+    ],
+    "expected": "成本节省0；回忆率UNKNOWN。",
+    "from_claim": "K02.06.03.D4.01",
+    "input": "首次与再学均10次，直接回忆缺失。",
+    "negative_boundary": "不把节省当直接保持概率。",
+    "qualification": "NOT_RUN",
+    "relation_type": "limits_inference_to",
+    "to_claim": "K02.06.05.D4.02"
+  },
+  {
+    "anchor_id": "K03.R2.REL01",
+    "conditions": [
+      "区分SKOS直接层级、传递属性及closeMatch。"
+    ],
+    "expected": "A closeMatch C UNKNOWN，不自动生成。",
+    "from_claim": "K03.01.03.R2.01",
+    "input": "A closeMatch B，B closeMatch C。",
+    "negative_boundary": "不将closeMatch闭包。",
+    "qualification": "NOT_RUN",
+    "relation_type": "contrasted_with",
+    "to_claim": "K03.01.03.F01.01"
+  },
+  {
+    "anchor_id": "K03.R2.REL02",
+    "conditions": [
+      "整合KC与候选先修关系需不同证据。"
+    ],
+    "expected": "整合瓶颈候选，必要前置UNKNOWN。",
+    "from_claim": "K03.06.03.D4.01",
+    "input": "组合任务失败、支持任务成功；替代路径未测。",
+    "negative_boundary": "整合不等于必要性。",
+    "qualification": "NOT_RUN",
+    "relation_type": "limits_inference_to",
+    "to_claim": "K03.03.02.D4.02"
+  },
+  {
+    "anchor_id": "K03.LINK.01",
+    "conditions": [
+      "类别概括与视觉特征匹配区分任务。"
+    ],
+    "expected": "仅可检验三种类别预测，视觉机制UNKNOWN。",
+    "from_claim": "K03.02.03.R2.01",
+    "input": "范例、规则输出A而原型B；特征识别未测。",
+    "negative_boundary": "一个正确分类不识别认知模型。",
+    "qualification": "NOT_RUN",
+    "relation_type": "contrasted_with",
+    "to_claim": "K02.01.03.R2.01"
+  },
+  {
+    "anchor_id": "K03.LINK.03",
+    "conditions": [
+      "先备解释和认知冲突应配合独立测量。"
+    ],
+    "expected": "长期误概念未排除，需延迟变式。",
+    "from_claim": "K03.05.01.D4.01",
+    "input": "讲解后答对、延迟错回旧解释。",
+    "negative_boundary": "即时纠正不证明旧概念消失。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K01.04.01.D4.01"
+  },
+  {
+    "anchor_id": "K03.LINK.10",
+    "conditions": [
+      "组件掌握及组合执行分别测量。"
+    ],
+    "expected": "联合瓶颈候选，原因UNKNOWN。",
+    "from_claim": "K03.06.03.D4.01",
+    "input": "两个组件各95%，联合60%。",
+    "negative_boundary": "单项成绩不能自动合成整体资格。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K04.06.01.D4.01"
+  },
+  {
+    "anchor_id": "K04.LINK.01",
+    "conditions": [
+      "声明知识与实际程序执行需分别评估。"
+    ],
+    "expected": "声明表现较好，技能资格未建立。",
+    "from_claim": "K04.01.01.D4.01",
+    "input": "解释9/10，独立操作4/10。",
+    "negative_boundary": "能描述步骤不等于能独立完成。",
+    "qualification": "NOT_RUN",
+    "relation_type": "contrasted_with",
+    "to_claim": "K01.01.02.D4.01"
+  },
+  {
+    "anchor_id": "K04.LINK.02",
+    "conditions": [
+      "知觉技能评估需匹配辨别任务并记录误报。"
+    ],
+    "expected": "d′可计算，泛化UNKNOWN。",
+    "from_claim": "K04.01.02.D4.02",
+    "input": "熟悉刺激hit=.8,fa=.2，无陌生任务。",
+    "negative_boundary": "敏感度不能替代陌生样本泛化。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K02.01.02.D4.02"
+  },
+  {
+    "anchor_id": "K04.LINK.05",
+    "conditions": [
+      "动作适应与联结学习模型状态、误差定义不同。"
+    ],
+    "expected": "分别使用各自模型，不直接交换参数。",
+    "from_claim": "K04.03.01.D4.01",
+    "input": "motor有符号误差-.5；RW刺激强度及结果不同。",
+    "negative_boundary": "同名预测误差不是同一变量。",
+    "qualification": "NOT_RUN",
+    "relation_type": "contrasted_with",
+    "to_claim": "K01.02.04.D4.01"
+  },
+  {
+    "anchor_id": "K04.LINK.08",
+    "conditions": [
+      "任务分解须结合独立子技能证据及目标。"
+    ],
+    "expected": "可设计子任务，不授予能力资格。",
+    "from_claim": "K04.06.01.D4.02",
+    "input": "步骤A/B定义齐全，实际观察缺失。",
+    "negative_boundary": "分解图不是学习者掌握证据。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K03.06.02.D4.02"
+  },
+  {
+    "anchor_id": "K04.LINK.09",
+    "conditions": [
+      "协调任务须同时记录单手与联合角色约束。"
+    ],
+    "expected": "协调候选，练习史等解释保留。",
+    "from_claim": "K04.06.02.R2.01",
+    "input": "正常联合90%，对换60%，外部参照85%。",
+    "negative_boundary": "不能以单手均95%推断双手95%。",
+    "qualification": "NOT_RUN",
+    "relation_type": "joint_evidence_with",
+    "to_claim": "K03.06.03.D4.01"
+  },
+  {
+    "anchor_id": "K04.LINK.10",
+    "conditions": [
+      "迁移比较须明确内容和情境维度。"
+    ],
+    "expected": "迁移原因UNKNOWN。",
+    "from_claim": "K04.04.02.D4.02",
+    "input": "训练任务与测试模态不同，其他条件缺失。",
+    "negative_boundary": "单情境即时结果不外推。",
+    "qualification": "NOT_RUN",
+    "relation_type": "limits_inference_to",
+    "to_claim": "K01.05.04.D4.01"
+  }
+]

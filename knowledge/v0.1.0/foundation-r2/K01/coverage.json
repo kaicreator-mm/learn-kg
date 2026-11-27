@@ -1,0 +1,905 @@
+{
+  "cq_routes": [],
+  "cross_topic_candidate_source": {
+    "json_pointer": "/records",
+    "source_path": "docs/drafts/s01/K01/theory-comparison.json",
+    "source_sha256": "7da4955e0c5b5149f12a6751c199447682889c156ab7042f9ba2a689bf17209c",
+    "source_status": "HISTORICAL_CANDIDATE_ONLY"
+  },
+  "independent_receipt": null,
+  "limits": [
+    "R2 covers eight KR01 finding families for delta review; all professional qualification NOT_RUN.",
+    "Historical location and abstract limitations retained; no new source byte verification claimed.",
+    "Composition narratives not executed; finite synthetic oracle tests only. Local relation extension not IF01 global qualification."
+  ],
+  "module_package": "learning-core",
+  "owner": "K01",
+  "record_counts": {
+    "Case": 123,
+    "Claim": 70,
+    "Element": 17,
+    "Locator": 63,
+    "ModelSpec": 1,
+    "Relation": 8,
+    "Requirement": 19,
+    "Topic": 25,
+    "Validation": 11
+  },
+  "record_files": [
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K01/records-00.jsonl",
+      "record_count": 53,
+      "sha256": "69d26d1d92034a20e83a45c8273995c8530283d88e04dc06185e1583e1baa28e"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K01/records-01.jsonl",
+      "record_count": 60,
+      "sha256": "679f7ed4a34b415bd46826af9a2fa7b673c68ab0f42e625007991bb239dfa962"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K01/records-02.jsonl",
+      "record_count": 51,
+      "sha256": "9f7176ac52398e442b2d2fef1457d644afb7b3cae2a754c6aabb26a61ac3104e"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K01/records-03.jsonl",
+      "record_count": 57,
+      "sha256": "8c006f4d69eb21d939a7bfd242293c9dcb9c480f546e9d0e14e7143c0285fcea"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K01/records-04.jsonl",
+      "record_count": 56,
+      "sha256": "35455799b7a8efe106760fe126bc0f2eec415ca22de8bf5fa09a0abcb6881165"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K01/records-05.jsonl",
+      "record_count": 60,
+      "sha256": "e4da44d830d50c66b51be9c224e1fe758143b43c9bb13eb90b302da8559adb27"
+    }
+  ],
+  "status": "CANDIDATE_READY_FOR_INDEPENDENT_MODULE_REVIEW_NOT_QUALIFIED",
+  "topics": [
+    {
+      "active_claim_ids": [
+        "K01.01.01.D4.01",
+        "K01.01.01.D4.02",
+        "K01.01.01.D4.03",
+        "K01.01.01.D4.04"
+      ],
+      "case_ids": [
+        "K01.01.01.CASE.01:counterexample",
+        "K01.01.01.CASE.01:forward",
+        "K01.01.01.CASE.01:intervention",
+        "K01.01.01.CASE.01:reverse",
+        "K01.01.01.D4.04:inline:example",
+        "K01.01.01.F01.CASE",
+        "K01.CMP.05:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.01.01.D4.01",
+        "K01.01.01.D4.02",
+        "K01.01.01.D4.03",
+        "K01.01.01.D4.04"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.01.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.01.01.D4.03"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.01.01.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 3
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.01.02.D4.01",
+        "K01.01.02.D4.02",
+        "K01.01.02.D4.03"
+      ],
+      "case_ids": [
+        "K01.01.02.CASE.01:counterexample",
+        "K01.01.02.CASE.01:forward",
+        "K01.01.02.CASE.01:intervention",
+        "K01.01.02.CASE.01:reverse",
+        "K01.01.02.D4.03:inline:example",
+        "K01.01.02.F01.CASE",
+        "K04.LINK.01:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.01.02.D4.01",
+        "K01.01.02.D4.02",
+        "K01.01.02.D4.03"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.01.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.01.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.01.02.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.01.03.D4.01",
+        "K01.01.03.D4.02",
+        "K01.01.03.D4.03"
+      ],
+      "case_ids": [
+        "K01.01.03.CASE.01:counterexample",
+        "K01.01.03.CASE.01:forward",
+        "K01.01.03.CASE.01:intervention",
+        "K01.01.03.CASE.01:reverse",
+        "K01.01.03.D4.03:inline:example",
+        "K01.01.03.F01.CASE"
+      ],
+      "claim_ids": [
+        "K01.01.03.D4.01",
+        "K01.01.03.D4.02",
+        "K01.01.03.D4.03"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.01.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.01.03.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.01.03.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.01.04.D4.01",
+        "K01.01.04.D4.02",
+        "K01.01.04.D4.03",
+        "K01.01.04.D4.05",
+        "K01.01.04.D4.06"
+      ],
+      "case_ids": [
+        "K01.01.04.CASE.01:counterexample",
+        "K01.01.04.CASE.01:forward",
+        "K01.01.04.CASE.01:intervention",
+        "K01.01.04.CASE.01:reverse",
+        "K01.01.04.D4.06:inline:example",
+        "K01.01.04.F01.CASE",
+        "K01.CMP.01:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.01.04.D4.01",
+        "K01.01.04.D4.02",
+        "K01.01.04.D4.03",
+        "K01.01.04.D4.04",
+        "K01.01.04.D4.05",
+        "K01.01.04.D4.06"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.01.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.01.04.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 5,
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.02.01.D4.01",
+        "K01.02.01.D4.02",
+        "K01.02.01.D4.03",
+        "K01.02.01.D4.04"
+      ],
+      "case_ids": [
+        "K01.02.01.CASE.01:counterexample",
+        "K01.02.01.CASE.01:forward",
+        "K01.02.01.CASE.01:intervention",
+        "K01.02.01.CASE.01:reverse",
+        "K01.02.01.F01.CASE",
+        "K01.CMP.01:R2:relation:case",
+        "K01.CMP.02:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.02.01.D4.01",
+        "K01.02.01.D4.02",
+        "K01.02.01.D4.03",
+        "K01.02.01.D4.04"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.02.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.02.01.D4.03"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/0"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.02.01.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 3,
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.02.02.D4.01",
+        "K01.02.02.D4.02",
+        "K01.02.02.D4.03",
+        "K01.02.02.D4.04",
+        "K01.02.02.D4.05",
+        "K01.02.02.F01.01"
+      ],
+      "case_ids": [
+        "K01.02.02.CASE.01:counterexample",
+        "K01.02.02.CASE.01:forward",
+        "K01.02.02.CASE.01:intervention",
+        "K01.02.02.CASE.01:reverse",
+        "K01.02.02.F01.01:case",
+        "K01.02.02.F01.CASE",
+        "K01.CMP.02:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.02.02.D4.01",
+        "K01.02.02.D4.02",
+        "K01.02.02.D4.03",
+        "K01.02.02.D4.04",
+        "K01.02.02.D4.05",
+        "K01.02.02.F01.01"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.02.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.02.02.D4.04"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/1"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.02.02.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 4,
+        "VERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.02.03.D4.01",
+        "K01.02.03.D4.02",
+        "K01.02.03.D4.03",
+        "K01.02.03.D4.04",
+        "K01.02.03.D4.05",
+        "K01.02.03.D4.06"
+      ],
+      "case_ids": [
+        "K01.02.03.CASE.01:counterexample",
+        "K01.02.03.CASE.01:forward",
+        "K01.02.03.CASE.01:intervention",
+        "K01.02.03.CASE.01:reverse",
+        "K01.02.03.F01.CASE",
+        "K01.CMP.03:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.02.03.D4.01",
+        "K01.02.03.D4.02",
+        "K01.02.03.D4.03",
+        "K01.02.03.D4.04",
+        "K01.02.03.D4.05",
+        "K01.02.03.D4.06"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.02.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/2"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.02.03.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 4,
+        "VERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.02.04.D4.01",
+        "K01.02.04.D4.02",
+        "K01.02.04.D4.03",
+        "K01.02.04.D4.04",
+        "K01.02.04.D4.05",
+        "K01.02.04.D4.06"
+      ],
+      "case_ids": [
+        "K01.02.04.CASE.01:counterexample",
+        "K01.02.04.CASE.01:forward",
+        "K01.02.04.CASE.01:intervention",
+        "K01.02.04.CASE.01:reverse",
+        "K01.02.04.F01.CASE",
+        "K01.CMP.03:R2:relation:case",
+        "K01.F01.RW01",
+        "K01.F01.RW02",
+        "K01.F01.RW03",
+        "K01.RW.01",
+        "K01.RW.02",
+        "K01.RW.03",
+        "K01.RW.04",
+        "K01.RW.05",
+        "K04.LINK.05:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.02.04.D4.01",
+        "K01.02.04.D4.02",
+        "K01.02.04.D4.03",
+        "K01.02.04.D4.04",
+        "K01.02.04.D4.05",
+        "K01.02.04.D4.06"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.02.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.02.04.D4.04"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/3"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.02.04.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "VERIFIED": 5
+      },
+      "validation_ids": [
+        "K01.F01.RW01:validation",
+        "K01.F01.RW02:validation",
+        "K01.F01.RW03:validation",
+        "K01.RW.01:validation",
+        "K01.RW.02:validation",
+        "K01.RW.03:validation",
+        "K01.RW.04:validation",
+        "K01.RW.05:validation"
+      ],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.03.01.D4.01",
+        "K01.03.01.D4.02",
+        "K01.03.01.R2.01"
+      ],
+      "case_ids": [
+        "K01.03.01.CASE.01:counterexample",
+        "K01.03.01.CASE.01:forward",
+        "K01.03.01.CASE.01:intervention",
+        "K01.03.01.CASE.01:reverse",
+        "K01.03.01.F01.CASE",
+        "K01.03.01.R2.01:case",
+        "K01.R2.TEST10",
+        "K01.R2.TEST11",
+        "K01.R2.TEST12"
+      ],
+      "claim_ids": [
+        "K01.03.01.D4.01",
+        "K01.03.01.D4.02",
+        "K01.03.01.R2.01"
+      ],
+      "current_depth_disposition": "R2_TARGETED_DEPTH_ADDED",
+      "d3_id": "K01.03.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/4"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.03.01.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "VERIFIED": 3
+      },
+      "validation_ids": [
+        "K01.R2.TEST10:validation",
+        "K01.R2.TEST11:validation",
+        "K01.R2.TEST12:validation"
+      ],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.03.02.D4.01",
+        "K01.03.02.D4.02",
+        "K01.03.02.D4.03"
+      ],
+      "case_ids": [
+        "K01.03.02.CASE.01:counterexample",
+        "K01.03.02.CASE.01:forward",
+        "K01.03.02.CASE.01:intervention",
+        "K01.03.02.CASE.01:reverse",
+        "K01.03.02.F01.CASE",
+        "K01.CMP.05:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.03.02.D4.01",
+        "K01.03.02.D4.02",
+        "K01.03.02.D4.03"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.03.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.03.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/5"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.03.02.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.03.03.D4.01",
+        "K01.03.03.D4.02",
+        "K01.03.03.D4.03",
+        "K01.03.03.D4.04"
+      ],
+      "case_ids": [
+        "K01.03.03.CASE.01:counterexample",
+        "K01.03.03.CASE.01:forward",
+        "K01.03.03.CASE.01:intervention",
+        "K01.03.03.CASE.01:reverse",
+        "K01.03.03.F01.CASE",
+        "K01.CMP.08:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.03.03.D4.01",
+        "K01.03.03.D4.02",
+        "K01.03.03.D4.03",
+        "K01.03.03.D4.04"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.03.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.03.03.D4.03"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/6"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.03.03.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 3
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.04.01.D4.01",
+        "K01.04.01.D4.02",
+        "K01.04.01.D4.03",
+        "K01.04.01.D4.04",
+        "K01.04.01.D4.05"
+      ],
+      "case_ids": [
+        "K01.04.01.CASE.01:counterexample",
+        "K01.04.01.CASE.01:forward",
+        "K01.04.01.CASE.01:intervention",
+        "K01.04.01.CASE.01:reverse",
+        "K01.04.01.D4.04:inline:example",
+        "K01.04.01.D4.05:inline:example",
+        "K01.04.01.F01.CASE",
+        "K03.LINK.03:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.04.01.D4.01",
+        "K01.04.01.D4.02",
+        "K01.04.01.D4.03",
+        "K01.04.01.D4.04",
+        "K01.04.01.D4.05"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.04.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.04.01.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 4,
+        "VERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.04.02.D4.01",
+        "K01.04.02.D4.02"
+      ],
+      "case_ids": [
+        "K01.04.02.CASE.01:counterexample",
+        "K01.04.02.CASE.01:forward",
+        "K01.04.02.CASE.01:intervention",
+        "K01.04.02.CASE.01:reverse",
+        "K01.04.02.F01.CASE"
+      ],
+      "claim_ids": [
+        "K01.04.02.D4.01",
+        "K01.04.02.D4.02"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.04.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.04.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/7"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.04.02.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.04.03.D4.01",
+        "K01.04.03.D4.02"
+      ],
+      "case_ids": [
+        "K01.04.03.CASE.01:counterexample",
+        "K01.04.03.CASE.01:forward",
+        "K01.04.03.CASE.01:intervention",
+        "K01.04.03.CASE.01:reverse",
+        "K01.04.03.F01.CASE",
+        "K01.CMP.07:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.04.03.D4.01",
+        "K01.04.03.D4.02"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.04.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/8"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.04.03.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "VERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.04.04.D4.01",
+        "K01.04.04.D4.02",
+        "K01.04.04.R2.01"
+      ],
+      "case_ids": [
+        "K01.04.04.CASE.01:counterexample",
+        "K01.04.04.CASE.01:forward",
+        "K01.04.04.CASE.01:intervention",
+        "K01.04.04.CASE.01:reverse",
+        "K01.04.04.F01.CASE",
+        "K01.04.04.R2.01:case",
+        "K01.CMP.07:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.04.04.D4.01",
+        "K01.04.04.D4.02",
+        "K01.04.04.R2.01"
+      ],
+      "current_depth_disposition": "R2_TARGETED_DEPTH_ADDED",
+      "d3_id": "K01.04.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.04.04.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/9"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.04.04.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "VERIFIED": 3
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.05.01.D4.01",
+        "K01.05.01.D4.02",
+        "K01.05.01.D4.03",
+        "K01.05.01.R2.01"
+      ],
+      "case_ids": [
+        "K01.05.01.CASE.01:counterexample",
+        "K01.05.01.CASE.01:forward",
+        "K01.05.01.CASE.01:intervention",
+        "K01.05.01.CASE.01:reverse",
+        "K01.05.01.F01.CASE",
+        "K01.05.01.R2.01:case",
+        "K01.CMP.08:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.05.01.D4.01",
+        "K01.05.01.D4.02",
+        "K01.05.01.D4.03",
+        "K01.05.01.R2.01"
+      ],
+      "current_depth_disposition": "R2_TARGETED_DEPTH_ADDED",
+      "d3_id": "K01.05.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.05.01.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/10"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.05.01.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 3,
+        "VERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.05.02.D4.01",
+        "K01.05.02.D4.02"
+      ],
+      "case_ids": [
+        "K01.05.02.CASE.01:counterexample",
+        "K01.05.02.CASE.01:forward",
+        "K01.05.02.CASE.01:intervention",
+        "K01.05.02.CASE.01:reverse",
+        "K01.05.02.F01.CASE",
+        "K01.CMP.09:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.05.02.D4.01",
+        "K01.05.02.D4.02"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.05.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.05.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/11"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.05.02.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.05.03.D4.01",
+        "K01.05.03.D4.02"
+      ],
+      "case_ids": [
+        "K01.05.03.CASE.01:counterexample",
+        "K01.05.03.CASE.01:forward",
+        "K01.05.03.CASE.01:intervention",
+        "K01.05.03.CASE.01:reverse",
+        "K01.05.03.F01.CASE",
+        "K01.CMP.09:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.05.03.D4.01",
+        "K01.05.03.D4.02"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.05.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.05.03.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/12"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.05.03.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K01.05.04.D4.01",
+        "K01.05.04.D4.02"
+      ],
+      "case_ids": [
+        "K01.05.04.CASE.01:counterexample",
+        "K01.05.04.CASE.01:forward",
+        "K01.05.04.CASE.01:intervention",
+        "K01.05.04.CASE.01:reverse",
+        "K01.05.04.F01.CASE",
+        "K04.LINK.10:R2:relation:case"
+      ],
+      "claim_ids": [
+        "K01.05.04.D4.01",
+        "K01.05.04.D4.02"
+      ],
+      "current_depth_disposition": "PRESERVED_LOCATED_CANDIDATE_NOT_NEW_ADEQUACY_VERDICT",
+      "d3_id": "K01.05.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K01.05.04.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "RETAIN_PENDING_PROFESSIONAL_ADEQUACY_NOT_ASSESSED",
+        "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+        "/retention_pending_adequacy/13"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "R2 conditional typed relations where selected; see anchor-dispositions.json; no implicit closure.",
+      "requirement_id": "K01.05.04.RQ01",
+      "source_gap_policy": "See claim-support-ledger and source-support; historical/abstract limited, optional unavailable claim HOLD, no professional qualification.",
+      "source_locator_states": {
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    }
+  ],
+  "typed_refs": 750,
+  "version": "0.1.0-foundation-candidate-1"
+}
