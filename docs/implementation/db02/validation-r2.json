@@ -1,0 +1,31 @@
+{
+  "status": "IMPLEMENTATION_CANDIDATE_PARTIAL",
+  "date": "2026-11-27",
+  "environment": {
+    "python": "3.12.3",
+    "sqlite": "3.45.1"
+  },
+  "test_methods": 32,
+  "synthetic_positive_nonempty_record_kinds": 38,
+  "negative_missing_field_probes": 38,
+  "additional_cross_domain_negative_probes": 3,
+  "test_code_sha256": "f4b951064e8ed82f984adba156f74760d85760b2a6deb954baeb4b2c9bb657e9",
+  "actual_package_checks": [
+    {
+      "path": "knowledge/v0.1.0/foundation-r3",
+      "records": 1663,
+      "typed_refs": 3899
+    },
+    {
+      "path": "knowledge/v0.1.0/practice-teaching-r6",
+      "records": 1832,
+      "typed_refs": 3801
+    }
+  ],
+  "actual_snapshot_isolation": "Separate explicit imports from combined catalog; no cross-version dependency allowed, unselected snapshot not opened",
+  "limits": [
+    "All 38 structural kinds materialized; synthetic domain values not HSK or learner data and not semantic model validation.",
+    "No approved/public authority, mutable-root security guarantee, other-subject package or general flow evaluator.",
+    "No persistent SQLite. DB02 formal candidate receipt not issued."
+  ]
+}
