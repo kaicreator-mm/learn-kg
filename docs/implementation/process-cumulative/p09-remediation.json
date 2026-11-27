@@ -1,0 +1,69 @@
+{
+  "protocol_id": "P09.IDENTITY_TIME.CANDIDATE.V1",
+  "protocol_status": "PROJECT_AUTHORED_RESTRICTED_CANDIDATE",
+  "identity": {
+    "kind": "LEARNER_SUBJECT",
+    "identity_version": "V1",
+    "subject_id": "Opaque stable subject identifier; non-empty, trimmed and consistent across all three observations"
+  },
+  "time": {
+    "time_basis": "UTC_EPOCH_SECONDS",
+    "time_unit": "SECOND",
+    "recording_time_basis": "UTC_EPOCH_SECONDS",
+    "recording_time_unit": "SECOND",
+    "recording_clock_rule": "observed_at and recorded_at are separate timestamps; compare observed_at only with observed_at and recorded_at only with recorded_at; never compare the two clock streams to each other",
+    "maximum_timestamp": 253402300799
+  },
+  "minimum_delay": {
+    "seconds": 86400,
+    "meaning": "Finite protocol boundary for this candidate only; not a universal or optimal spacing recommendation",
+    "derivation": "delayed.observed_at - immediate.observed_at"
+  },
+  "stages": [
+    [
+      "IMMEDIATE",
+      "P09.ACT.IMMEDIATE",
+      "IMMEDIATE_RECORDED",
+      {
+        "independent": true,
+        "construct_match": true,
+        "scoring_version_match": true
+      }
+    ],
+    [
+      "DELAYED",
+      "P09.ACT.DELAYED",
+      "DELAYED_RECORDED",
+      {
+        "independent": true,
+        "construct_match": true,
+        "scoring_version_match": true
+      }
+    ],
+    [
+      "NOVEL",
+      "P09.ACT.NOVEL",
+      "TRANSFER_RECORDED",
+      {
+        "independent": true,
+        "new_task_family": true,
+        "transfer_dimension_declared": true
+      }
+    ],
+    [
+      "SUMMARY",
+      "P09.ACT.SUMMARY",
+      "SUMMARY_RECORDED",
+      {
+        "evidence_separated": true,
+        "goal_reviewed": true
+      }
+    ]
+  ],
+  "requirements": {
+    "P09.RQ01": "即时、延迟与陌生任务迁移观察必须携带同一typed learner/subject identity对象；对象包含稳定subject_id与identity_version，三者精确相等；身份相等仅是协议绑定，不是现实身份认证。",
+    "P09.RQ02": "三个观察的event time采用UTC epoch seconds与SECOND单位；recorded_at独立记录，保持自身时基/单位与追加顺序；不得将event time与recorded_at跨时钟比较。",
+    "P09.RQ03": "延迟间隔由delayed.observed_at减immediate.observed_at计算，至少86400秒；novel transfer observed_at严格晚于delayed；caller delay_positive和caller minimum_delay_seconds均不构成证据。",
+    "P09.RQ04": "保留即时、延迟、迁移各自结果及失败/未知状态；迁移必须是不同任务族且目标维度明确；本候选阈值不是普遍或最优间隔建议。"
+  }
+}

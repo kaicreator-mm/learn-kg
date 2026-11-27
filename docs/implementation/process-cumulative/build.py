@@ -4,7 +4,7 @@ from pathlib import Path
 P=Path(__file__).resolve().parent;ROOT=P.parents[2];sys.path.insert(0,str(ROOT))
 from tools.knowledge_import.importer import Importer,ManifestPin
 from tools.knowledge_import.v00_prototype import load_record
-from semantic_checks import fixture_rows,evaluate
+from semantic_checks import fixture_rows,evaluate,p09
 from inherited import replay as replay_inherited
 B=ROOT/'knowledge/v0.1.0';PKG=B/'learning-process-cumulative-r2'
 def load(p):return json.loads(p.read_text())
@@ -21,7 +21,8 @@ def remap(x,v):
   return y
  return x
 def main():
- d=load(P/'design.json');v=d['version'];dag=load(ROOT/'docs/implementation/task-dag.json');ts={t['id']:t for t in dag['tasks']}
+ d=load(P/'design.json');p09_contract=load(P/'p09-remediation.json');d['P09']['stages']=p09_contract['stages'];d['P09']['requirements'].update(p09_contract['requirements']);v=d['version'];dag=load(ROOT/'docs/implementation/task-dag.json');ts={t['id']:t for t in dag['tasks']}
+ preserved_shards={o:(PKG/(o+'.jsonl')).read_bytes() for o in [f'P{i:02}' for i in range(1,11) if i!=9] if (PKG/(o+'.jsonl')).is_file()}
  catalog={};manifest_for={};records={};deps={};binding={};fixtures=[];migration=[];old={}
  for m in sorted(B.glob('*/*manifest.json')):
   z=load(m)
@@ -67,7 +68,9 @@ def main():
    binding[o][id]=dict(ref=z,path=p.relative_to(ROOT).as_posix(),sha256=sha(p),record_sha256=dig(r),receipt=rp,receipt_sha256=sha(ROOT/rp),qualification=q,qualification_sha256=sha(ROOT/q))
   return result
  def base(o,k,id,cr=None):
-  z=dict(owner=o,kind=k,stable_id=id,status='CANDIDATE',conditions=['当前版本、本人认可目标、明确条件与预算；未知保持HOLD。'],negative_boundary='受限项目模板；不证明真实学习效果、能力、因果或执行授权。',provenance=[dict(source_path=(P/'design.json').relative_to(ROOT).as_posix(),source_sha256=sha(P/'design.json'),json_pointer='/'+o,source_status='PROJECT_AUTHORED_TEMPLATE')])
+  source=P/'p09-remediation.json' if o=='P09' else P/'design.json'
+  pointer='/protocol_id' if o=='P09' else '/'+o
+  z=dict(owner=o,kind=k,stable_id=id,status='CANDIDATE',conditions=['当前版本、本人认可目标、明确条件与预算；未知保持HOLD。'],negative_boundary='受限项目模板；不证明真实学习效果、能力、因果或执行授权。',provenance=[dict(source_path=source.relative_to(ROOT).as_posix(),source_sha256=sha(source),json_pointer=pointer,source_status='PROJECT_AUTHORED_TEMPLATE')])
   if cr is not None:z['claim_refs']=cr
   return z
  def add(o,k,id,cr=None,**kw):
@@ -76,7 +79,18 @@ def main():
   return add(o,'ConditionSpec',id,cr,clauses=[dict(field=f,op='EQ',value=y) for f,y in flags.items()],combination='ALL',unknown='HOLD')
  def activity(o,id,cr,label):
   sk=add(o,'SkillType',id+'.SKILL',cr,label=label,performance_boundary='模板步骤记录，不是独立能力结论。')
-  ob=add(o,'ObservationSpec',id+'.OBS',cr,construct_ref=sk,method=label,unit='STEP_RECORD',independence_requirement='本人操作、帮助和实际证据分离。',missing='UNKNOWN_NOT_ZERO')
+  unit='STEP_RECORD';method=label;independence='本人操作、帮助和实际证据分离。';conditions=['本人操作、帮助和实际证据分离。']
+  if o=='P09':
+   is_summary=id.endswith('.SUMMARY')
+   unit='SUMMARY_RECORD' if is_summary else 'UTC_EPOCH_SECONDS'
+   method=label+'；'+('保存阶段摘要且不覆盖原始观测。' if is_summary else '每条观测携带typed LEARNER_SUBJECT identity/version、UTC epoch-second observed_at及独立recorded_at。')
+   independence='身份对象精确绑定；event time仅与event time比较，recorded_at仅与recorded_at比较；不跨时钟比较。'
+   conditions=(['summary保留即时/延迟/迁移结果分离','goal_reviewed必须明确'] if is_summary else
+    ['learner_identity.kind=LEARNER_SUBJECT','learner_identity.subject_id非空且identity_version=V1',
+     'time_basis=UTC_EPOCH_SECONDS','time_unit=SECOND',
+     'recording_time_basis=UTC_EPOCH_SECONDS','recording_time_unit=SECOND',
+     'observed_at与recorded_at分别记录且不跨时钟比较'])
+  ob=add(o,'ObservationSpec',id+'.OBS',cr,construct_ref=sk,method=method,unit=unit,independence_requirement=independence,missing='UNKNOWN_NOT_ZERO',conditions=conditions)
   g=add(o,'Goal',id+'.GOAL',cr,construct_ref=sk,success_evidence_refs=[ob],scope=label)
   obj=add(o,'LearningObject',id+'.OBJECT',cr,target_refs=[sk],component_refs=[],granularity='当前任务类型，须实例化具体对象')
   role=add(o,'Role',id+'.ROLE',cr,label='LEARNER',capability_requirements=['明确目标、角色及资源'],permission_requirements=['本人选择及明确授权；可退出'])
@@ -141,8 +155,106 @@ def main():
    c=cond(o,o+'.GUARD.'+id,cr,flags);guards.append(c)
    nxt=d[o]['stages'][i+1][0] if i+1<len(d[o]['stages']) else 'COMPLETE'
    trans.append(tr(id,nxt,event,c));events.append(dict(id='E'+str(i+1),type=event,version='V1',cost=1)|flags)
+  if o=='P09':
+   common=[
+    dict(field='learner_identity.kind',op='EQ',value='LEARNER_SUBJECT'),
+    dict(field='learner_identity.identity_version',op='EQ',value='V1'),
+    dict(field='learner_identity.subject_id',op='NE',value=''),
+    dict(field='time_basis',op='EQ',value='UTC_EPOCH_SECONDS'),
+    dict(field='time_unit',op='EQ',value='SECOND'),
+    dict(field='recording_time_basis',op='EQ',value='UTC_EPOCH_SECONDS'),
+    dict(field='recording_time_unit',op='EQ',value='SECOND'),
+    dict(field='observed_at',op='GT',value=0),
+    dict(field='recorded_at',op='GT',value=0),
+    dict(field='clock_source_id',op='NE',value=''),
+    dict(field='recording_clock_source_id',op='NE',value='')
+   ]
+   for guard_ref in guards[:3]:
+    guard_record=records[guard_ref['stable_id']]
+    guard_record['clauses'].extend(copy.deepcopy(common))
+    guard_record['conditions'].extend(['每条观测均须绑定非空subject_id、固定identity_version和显式UTC秒时基/单位。'])
+    guard_record['negative_boundary']='缺失/错配身份、时基、单位、时钟来源或非正时间戳均HOLD。'
+   same=add(o,'ConditionSpec','P09.GUARD.SAME_LEARNER',cr,
+    conditions=['即时、延迟和陌生任务迁移观察的subject_id与identity_version必须由语义校验器逐对象比较后得到相同身份结论。'],
+    negative_boundary='此守卫只消费语义校验器派生结果；caller boolean或caller复制的subject字段不构成证据。',
+    clauses=[dict(field='computed_same_learner_identity',op='EQ',value=True),
+             dict(field='immediate_subject_id',op='NE',value=''),
+             dict(field='delayed_subject_id',op='NE',value=''),
+             dict(field='transfer_subject_id',op='NE',value='')],
+    combination='ALL',unknown='HOLD')
+   time=add(o,'ConditionSpec','P09.GUARD.TIME_BASIS',cr,
+    conditions=['三个event time统一为UTC epoch seconds/SECOND；recorded_at单独记录并只在recording clock stream内验证顺序。'],
+    negative_boundary='缺失/混用时基或单位、无有效时钟来源、event chronology或recording chronology错误均HOLD；不跨时钟比较。',
+    clauses=[dict(field='time_basis',op='EQ',value='UTC_EPOCH_SECONDS'),
+             dict(field='time_unit',op='EQ',value='SECOND'),
+             dict(field='recording_time_basis',op='EQ',value='UTC_EPOCH_SECONDS'),
+             dict(field='recording_time_unit',op='EQ',value='SECOND'),
+             dict(field='clock_source_id',op='NE',value=''),
+             dict(field='recording_clock_source_id',op='NE',value=''),
+             dict(field='computed_timestamp_order_valid',op='EQ',value=True),
+             dict(field='computed_recording_order_valid',op='EQ',value=True)],
+    combination='ALL',unknown='HOLD')
+   delay=add(o,'ConditionSpec','P09.GUARD.MIN_DELAY',cr,
+    conditions=['延迟间隔由delayed.observed_at减immediate.observed_at计算，至少86400秒；novel transfer event time严格晚于delayed。'],
+    negative_boundary='86400秒仅为本候选有限协议阈值，不是普遍或最优学习间隔；caller delay_positive/minimum_delay_seconds不构成证据。',
+    clauses=[dict(field='computed_delay_seconds',op='GE',value=86400),
+             dict(field='minimum_delay_seconds',op='EQ',value=86400),
+             dict(field='computed_timestamp_order_valid',op='EQ',value=True)],
+    combination='ALL',unknown='HOLD')
+   composite=add(o,'ConditionSpec','P09.GUARD.COMPOSITE_VALID',cr,
+    conditions=['同一typed learner identity、统一UTC秒时基、至少86400秒派生延迟、严格event/recording顺序和完整summary全部通过才可完成。'],
+    negative_boundary='仅由P09语义校验器派生结果驱动；任何身份/时基/间隔/顺序/summary缺失或不匹配均HOLD。',
+    clauses=[dict(field='computed_same_learner_identity',op='EQ',value=True),
+             dict(field='immediate_subject_id',op='NE',value=''),
+             dict(field='delayed_subject_id',op='NE',value=''),
+             dict(field='transfer_subject_id',op='NE',value=''),
+             dict(field='time_basis',op='EQ',value='UTC_EPOCH_SECONDS'),
+             dict(field='time_unit',op='EQ',value='SECOND'),
+             dict(field='recording_time_basis',op='EQ',value='UTC_EPOCH_SECONDS'),
+             dict(field='recording_time_unit',op='EQ',value='SECOND'),
+             dict(field='clock_source_id',op='NE',value=''),
+             dict(field='recording_clock_source_id',op='NE',value=''),
+             dict(field='computed_delay_seconds',op='GE',value=86400),
+             dict(field='minimum_delay_seconds',op='EQ',value=86400),
+             dict(field='computed_timestamp_order_valid',op='EQ',value=True),
+             dict(field='computed_recording_order_valid',op='EQ',value=True),
+             dict(field='evidence_separated',op='EQ',value=True),
+             dict(field='goal_reviewed',op='EQ',value=True)],
+    combination='ALL',unknown='HOLD')
+   guards.extend([same,time,delay,composite])
+   policy=add(o,'PolicySpec','P09.POLICY',cr,
+    conditions=['仅在P09 FlowSpec与组合校验全部完成后，向调用者建议保存三任务观察摘要；此策略不推断真实保持、迁移、掌握或因果效果。缺失/无效身份或时间输入必须先由FlowSpec/evaluator保持HOLD，不得由策略覆盖。'],
+    negative_boundary='ADVICE_ONLY；不执行调度、不更新学习者状态、不认证现实身份/时钟来源、不形成真实学习效果结论。',
+    policy_type='ASSESSMENT',
+    rules=[dict(condition_ref=composite,action='SUGGEST',reason='仅建议记录通过有限协议校验的三任务观察摘要；不推断保持/迁移/掌握或因果',priority=1)],
+    unknown_action='CLARIFY',effect='ADVICE_ONLY')
+   trans[-1]['condition_ref']=composite
+   for i,e in enumerate(events[:3]):
+    stage=('IMMEDIATE','DELAYED','TRANSFER')[i]
+    observed=1800000000+i*86400
+    e.update(dict(stage=stage,
+                 learner_identity={'kind':'LEARNER_SUBJECT','subject_id':'SUBJECT-01','identity_version':'V1'},
+                 time_basis='UTC_EPOCH_SECONDS',time_unit='SECOND',
+                 recording_time_basis='UTC_EPOCH_SECONDS',recording_time_unit='SECOND',
+                 clock_source_id='SYNTHETIC-UTC-CLOCK-01',
+                 recording_clock_source_id='SYNTHETIC-SERVER-UTC-01',
+                 observed_at=observed,recorded_at=observed+1,
+                 goal='G',scoring_version='S1',
+                 family='F2' if stage=='TRANSFER' else 'F1',
+                 criteria_met=i!=1,dimension='CONTEXT',construct_match=True,scoring_version_match=True,
+                 new_task_family=stage=='TRANSFER',
+                 transfer_dimension_declared=stage=='TRANSFER'))
+   events[3].update(dict(stage='SUMMARY',evidence_separated=True,goal_reviewed=True))
   target=flow(o,cr,steps,trans,[],len(steps)*2+3)
   x=dict(budget=len(steps),version='V1',authorized=True,goal_confirmed=True,events=events)
+  if o=='P09':
+   x.update(dict(goal='G',scoring_version='S1',trained_family='F1',transfer_dimension='CONTEXT'))
+   records['P09.FLOW']['conditions']=[
+    'IMMEDIATE、DELAYED、TRANSFER三条ObservationSpec必须携带完全一致的typed LEARNER_SUBJECT identity对象。',
+    '三个observed_at使用UTC_EPOCH_SECONDS/SECOND；recorded_at单独记录，仅在其recording clock stream内检查追加顺序。',
+    'DELAYED-IMMEDIATE间隔由时间戳计算且至少86400秒；TRANSFER时间严格晚于DELAYED；不读取caller delay_positive。',
+    '86400秒是本候选协议边界，不是普遍或最优学习间隔；所有缺失/冲突/未知保持HOLD。']
+   records['P09.FLOW']['negative_boundary']='身份一致性、event time和recording time分别由有限语义校验器验证；不跨时钟比较，不认证真实学习者身份或时钟准确性。'
   evs=[case(o,target,x,'COMPLETE')]
   for i,(_,_,_,flags) in enumerate(d[o]['stages']):
    for f in flags:
@@ -152,12 +264,26 @@ def main():
   y=copy.deepcopy(x);y['events'][1]['version']='V2';evs.append(case(o,target,y,'HOLD','COUNTEREXAMPLE'))
   y=copy.deepcopy(x);y['events'].insert(1,events[0]|{'cost':0});evs.append(case(o,target,y,'HOLD','COUNTEREXAMPLE'))
   composition(o,cr,target,guards,evs[:2])
+  if o=='P09':
+   records['P09.COMPOSITION']['output_refs'].append(policy)
+   records['P09.COMPOSITION']['conditions']=[
+    '每条即时/延迟/迁移ObservationSpec必须携带相同typed learner_identity，subject_id与identity_version精确一致。',
+    '延迟间隔只从UTC epoch-second observed_at相减计算，阈值86400秒仅为本候选有限协议边界。',
+    'recorded_at使用独立recording time basis/unit，只验证其自身顺序；绝不与observed_at跨时钟比较。',
+    'caller delay_positive与caller minimum_delay_seconds均不作为证据；缺失、冲突和未知保持HOLD。']
+   records['P09.COMPOSITION']['failure_policy']='任何身份不一致、时间单位/时基混用、延迟不足、时间顺序错误、recording顺序错误或summary缺失均HOLD；不认证现实身份/时钟来源，不声称学习效果。'
  for o,x,y in fixture_rows():case(o,local(o+'.FLOW'),x,y,'COMPOSITION')
  # Write one version with local references only.
  PKG.mkdir(exist_ok=True);files=[]
  for o in [f'P{i:02}' for i in range(1,11)]:
-  rows=[r for r in records.values() if r['owner']==o];f=PKG/(o+'.jsonl');f.write_text(''.join(json.dumps(r,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n' for r in rows))
-  files.append(dict(path=f.name,sha256=sha(f),format='JSONL_RECORDS',record_count=len(rows)))
+  f=PKG/(o+'.jsonl')
+  if o=='P09':
+   rows=[r for r in records.values() if r['owner']==o]
+   f.write_text(''.join(json.dumps(r,ensure_ascii=False,sort_keys=True,separators=(',',':'))+'\n' for r in rows))
+  else:
+   assert o in preserved_shards and f.read_bytes()==preserved_shards[o],(o,'CANONICAL_SHARD_MUST_REMAIN_BYTE_IDENTICAL')
+  on_disk=[json.loads(line) for line in f.read_text().splitlines()]
+  files.append(dict(path=f.name,sha256=sha(f),format='JSONL_RECORDS',record_count=len(on_disk)))
  m=dict(schema_version='learn-kg-canonical-candidate-1',package_id='learning-process',version=v,status='CANDIDATE',rights='HOLD',owners=[f'P{i:02}' for i in range(1,11)],dependencies=list(deps.values()),files=files,qualification_receipt_refs=[])
  mf=PKG/'learning-process.manifest.json';write(mf,m);catalog['learning-process',v]=ManifestPin(mf.relative_to(ROOT).as_posix(),sha(mf))
  write(P/'migration.json',dict(count=len(migration),records=migration,old_versions_preserved=True,limits='Internal process ref version only; no changed professional claims. Prior receipts not current for cumulative snapshot.'))
@@ -177,16 +303,89 @@ def main():
   for f in fixtures:
    c=load_record(im,local(f['case_id']));x=json.loads(c['input_spec']);assert x==f['input'] and c['expected_spec']==(json.dumps(f['expected'],ensure_ascii=False,sort_keys=True,separators=(',',':')) if isinstance(f['expected'],dict) else f['expected'])
    t=c['target_refs'][0];a=load_record(im,t)
-   y=evaluate(im,a,x,f['owner'],load_record) if x.get('scenario')=='CONCRETE_FINITE' else policy_eval(im,a,x) if f['owner']=='P07' else flow_eval(im,a,x)
-   assert y==f['expected'],(f['case_id'],y,f['expected']);results.append(dict(owner=f['owner'],case_id=f['case_id'],actual=y))
+   y=evaluate(im,a,x,f['owner'],load_record) if x.get('scenario')=='CONCRETE_FINITE' else policy_eval(im,a,x) if f['owner']=='P07' else flow_eval(im,a,x,f['owner'])
+   assert y==f['expected'],(f['case_id'],y,f['expected'],x);results.append(dict(owner=f['owner'],case_id=f['case_id'],actual=y))
   write(P/'import-receipt.json',receipt);write(P/'results.json',dict(status='SQL_BOUND_BUILDER_ONLY',cases=len(results),results=results,manifest_sha256=sha(mf),fixture_sha256=sha(P/'fixtures.json'),migration_count=len(migration),limits='Finite contract replay only. No generic engine, real state, empirical effect, rights, CQ/LC or independent verdict.'))
   print('MIGRATED',len(migration),'NEW',len(records)-len(migration),'SQL CASES',len(results),'PACKAGE',len(records))
  finally:im.close()
 def check(im,c,e):
  if c is None:return True
- z=load_record(im,c);assert z['combination']=='ALL' and z['unknown']=='HOLD'
- return all(q['op']=='EQ' and type(e.get(q['field'])) is type(q['value']) and e[q['field']]==q['value'] for q in z['clauses'])
-def flow_eval(im,f,x):
+ z=load_record(im,c);assert z['combination'] in ('ALL','ANY') and z['unknown']=='HOLD'
+ def value(path):
+  if path in e:return True,e[path]
+  cur=e
+  for part in path.split('.'):
+   if not isinstance(cur,dict) or part not in cur:return False,None
+   cur=cur[part]
+  return True,cur
+ def clause(q):
+  exists,actual=value(q['field'])
+  if not exists:return False
+  expected=q['value'];op=q['op']
+  if op=='EQ':return type(actual) is type(expected) and actual==expected
+  if op=='NE':return type(actual) is type(expected) and actual!=expected
+  if op in ('LT','LE','GT','GE'):
+   if type(actual) not in (int,float) or type(expected) not in (int,float):return False
+   return {'LT':actual<expected,'LE':actual<=expected,'GT':actual>expected,'GE':actual>=expected}[op]
+  return False
+ values=[clause(q) for q in z['clauses']]
+ return all(values) if z['combination']=='ALL' else any(values)
+def p09_flow_eval(im,f,x):
+ events=x.get('events')
+ if not isinstance(events,list) or any(not isinstance(e,dict) for e in events):return 'HOLD'
+ if any(e.get('type')=='STOP' for e in events):return 'STOP'
+ if any(e.get('type')=='PAUSE' for e in events):return 'PAUSE'
+ if (not int0(x.get('budget')) or not isinstance(x.get('version'),str) or not x['version']
+     or x.get('authorized') is not True or x.get('goal_confirmed') is not True
+     or not all(isinstance(x.get(k),str) and x[k] for k in ('goal','scoring_version','trained_family','transfer_dimension'))):return 'HOLD'
+ unique=[];seen={}
+ for event in events:
+  event_id=event.get('id')
+  if not isinstance(event_id,str) or not event_id.strip():return 'HOLD'
+  if event_id in seen:
+   if event!=seen[event_id]:return 'HOLD'
+   continue
+  seen[event_id]=event;unique.append(event)
+ if len(unique)!=4 or len(unique)>f['max_events']:return 'HOLD'
+ if any(e.get('version')!=x['version'] or not int0(e.get('cost')) for e in unique):return 'HOLD'
+ if sum(e['cost'] for e in unique)>x['budget']:return 'HOLD'
+ expected=[('IMMEDIATE','IMMEDIATE_RECORDED'),('DELAYED','DELAYED_RECORDED'),
+           ('TRANSFER','TRANSFER_RECORDED'),('SUMMARY','SUMMARY_RECORDED')]
+ if any(e.get('stage')!=stage or e.get('type')!=event_type for e,(stage,event_type) in zip(unique,expected)):return 'HOLD'
+ observations=[{k:v for k,v in e.items() if k not in ('type','version','cost')} for e in unique[:3]]
+ result=p09(dict(goal=x['goal'],scoring_version=x['scoring_version'],trained_family=x['trained_family'],
+                 transfer_dimension=x['transfer_dimension'],observations=observations))
+ if result=='HOLD':return 'HOLD'
+ # Check each stage's SQL-read guard against the raw event object.
+ for step_id,event_type,event in [('IMMEDIATE','IMMEDIATE_RECORDED',unique[0]),
+                                  ('DELAYED','DELAYED_RECORDED',unique[1]),
+                                  ('NOVEL','TRANSFER_RECORDED',unique[2])]:
+  transition=next((t for t in f['transitions'] if t['from_step']==step_id and t['event']==event_type),None)
+  if transition is None or not check(im,transition['condition_ref'],event):return 'HOLD'
+ summary=unique[3]
+ # The SUMMARY step's own event contract is represented by its declared activity observation.
+ # The composite completion guard consumes only values derived here, never caller booleans.
+ derived=dict(computed_same_learner_identity=result['computed_same_learner_identity'],
+              immediate_subject_id=result['immediate_subject_id'],
+              delayed_subject_id=result['delayed_subject_id'],
+              transfer_subject_id=result['transfer_subject_id'],
+              time_basis=result['time_basis'],time_unit=result['time_unit'],
+              recording_time_basis=result['recording_time_basis'],recording_time_unit=result['recording_time_unit'],
+              clock_source_id=result['clock_source_id'],recording_clock_source_id=result['recording_clock_source_id'],
+              computed_delay_seconds=result['computed_delay_seconds'],
+              minimum_delay_seconds=result['minimum_delay_seconds'],
+              computed_timestamp_order_valid=result['computed_timestamp_order_valid'],
+              computed_recording_order_valid=result['computed_recording_order_valid'])
+ # Summary fields must be checked separately before the final composite condition.
+ summary_spec=next((t for t in f['transitions'] if t['from_step']=='SUMMARY' and t['to_step']=='COMPLETE'),None)
+ if summary_spec is None:return 'HOLD'
+ # A dedicated summary guard is in the FlowSpec's claim-linked condition refs.
+ # The final composite condition also includes both summary fields.
+ if not check(im,summary_spec['condition_ref'],summary|derived):return 'HOLD'
+ return 'COMPLETE'
+
+def flow_eval(im,f,x,owner=None):
+ if owner=='P09':return p09_flow_eval(im,f,x)
  events=x.get('events')
  if not isinstance(events,list) or any(not isinstance(e,dict) for e in events):return 'HOLD'
  if events and events[0].get('type')=='STOP':return f['stop_terminal']

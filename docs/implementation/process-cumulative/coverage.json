@@ -472,45 +472,45 @@
     },
     {
       "owner": "P09",
-      "records": 132,
-      "finite_cases": 51,
-      "concrete_cases": 8,
+      "records": 197,
+      "finite_cases": 81,
+      "concrete_cases": 38,
       "status": "RESTRICTED_BUILDER_CANDIDATE_ONLY",
       "requirements": [
         {
           "id": "P09.RQ01",
-          "scope": "即时及延迟观测分离",
+          "scope": "即时、延迟与陌生任务迁移观察必须携带同一typed LEARNER_SUBJECT identity对象；subject_id与identity_version精确相等",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "真实延迟测量及复杂量规",
+          "remaining": "协议级身份相等不是真实身份认证；可信身份提供者和真实主体认证未接入",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
         },
         {
           "id": "P09.RQ02",
-          "scope": "陌生任务、综合任务及目标维度明确",
+          "scope": "三个observed_at使用UTC_EPOCH_SECONDS/SECOND；recorded_at单独记录，使用独立时基/单位并只验证自身追加顺序",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "真实迁移任务难度与因果外推",
+          "remaining": "真实clock source真实性、准确度、跨设备同步和时间证明未验证",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
         },
         {
           "id": "P09.RQ03",
-          "scope": "独立性、评分及实际条件绑定",
+          "scope": "延迟间隔由delayed.observed_at减immediate.observed_at计算且至少86400秒；novel严格晚于delayed；caller delay_positive/minimum_delay_seconds不作为证据",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "真实独立表现、测量效度",
+          "remaining": "真实延迟保持、迁移效度、个体间隔适配及因果效果未验证；86400秒仅为本候选协议边界",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
         },
         {
           "id": "P09.RQ04",
-          "scope": "各阶段结果保存，失败不抹除；目标修订非自动",
+          "scope": "即时、延迟、迁移与summary分开保存；缺失/冲突/失败保持HOLD；不由同题族或短时正确推断迁移/掌握",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "目标调整和阶段总结实际效果",
+          "remaining": "真实学习者任务执行、跨会话持久化和阶段总结效果未验证",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
         }
       ],
@@ -565,8 +565,39 @@
         "P09.C048",
         "P09.C049",
         "P09.C050",
-        "P09.C051"
-      ]
+        "P09.C051",
+        "P09.C052",
+        "P09.C053",
+        "P09.C054",
+        "P09.C055",
+        "P09.C056",
+        "P09.C057",
+        "P09.C058",
+        "P09.C059",
+        "P09.C060",
+        "P09.C061",
+        "P09.C062",
+        "P09.C063",
+        "P09.C064",
+        "P09.C065",
+        "P09.C066",
+        "P09.C067",
+        "P09.C068",
+        "P09.C069",
+        "P09.C070",
+        "P09.C071",
+        "P09.C072",
+        "P09.C073",
+        "P09.C074",
+        "P09.C075",
+        "P09.C076",
+        "P09.C077",
+        "P09.C078",
+        "P09.C079",
+        "P09.C080",
+        "P09.C081"
+      ],
+      "independent_delta_review": "PENDING"
     },
     {
       "owner": "P10",
@@ -669,5 +700,89 @@
   "rights": "HOLD",
   "cq": "NOT_RUN",
   "lc": "NOT_RUN",
-  "independent_qualification": "NOT_RUN"
+  "independent_qualification": "NOT_RUN",
+  "p09_remediation": {
+    "status": "IMPLEMENTED_PREPARATION_ONLY",
+    "task_issue": 21,
+    "base_head": "4a8cd2b6aef68d5a574842325ef9fddaa0559c16",
+    "manifest_sha256": "c4cc5334849c12a5a9a7cddb47be45fe44da556e497cf2901b06ac1612817ab0",
+    "contract_path": "docs/implementation/process-cumulative/p09-remediation.json",
+    "contract_sha256": "43da419ef95fdb9436bac428fcc8b48a7d65abf4e8ef63a36b566935ae0f3f92",
+    "p09_records": 197,
+    "p09_cases": 81,
+    "p09_concrete_identity_time_cases": 38,
+    "semantic_boundary_tests": {
+      "passed": 8,
+      "total": 8
+    },
+    "independent_reference_oracle_cases": {
+      "passed": 38,
+      "total": 38
+    },
+    "preserved_canonical_modules": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P10"
+    ],
+    "changed_canonical_modules": [
+      "P09"
+    ],
+    "identity_authentication": "NOT_PROVIDED_PROTOCOL_BINDING_ONLY",
+    "clock_source_authentication": "NOT_PROVIDED",
+    "real_retention_or_transfer_effect": "NOT_VALIDATED",
+    "independent_delta_review": "PENDING",
+    "qualification": "NOT_GRANTED",
+    "artifact_hashes": {
+      "p09_jsonl_sha256": "a3018e3a5af586c3d2ef701e50aa69c55653c16ddb8a696cb4af1a855e3b2fa5",
+      "manifest_sha256": "a739e55e122f1358fdfcf7bfe1f8993b53ec6af5bab5ef8f0d553e30cdfa2a65",
+      "contract_sha256": "43da419ef95fdb9436bac428fcc8b48a7d65abf4e8ef63a36b566935ae0f3f92",
+      "fixtures_sha256": "c27fda5270e81985e832389af60b58d88902cb7c96ece23b01784b673701def7",
+      "results_sha256": "ce2a2f24f306e92bae35f6dc7e7c60eb6fe172f8e3ed1be72293867ad2cfcf30",
+      "import_receipt_sha256": "a5775674c37f86271f28e80e3e5403335e56d73dd7290804a278ac6bf038f09e",
+      "migration_sha256": "5d2b3286d45d5cf89c04b35cec4c157b723915bc34bf4880c3c36e30c58946e7",
+      "bindings_sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391"
+    },
+    "validation": {
+      "semantic_boundary_tests": {
+        "passed": 8,
+        "total": 8
+      },
+      "independent_reference_oracle": {
+        "passed": 38,
+        "total": 38
+      },
+      "knowledge_importer_tests": {
+        "passed": 37,
+        "total": 37
+      },
+      "if01": {
+        "status": "IF01_FINITE_INTERFACE_CANDIDATE_VALIDATION",
+        "contract_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+        "fixtures_sha256": "26985636445b22837342a690d8c26fc63385c883fa5f310cb751472668285c9c",
+        "shared_objects": 20,
+        "all_reference_field_paths": 90,
+        "schema_kind_count": 39,
+        "views": 27,
+        "view_requirements": 108,
+        "positive_records": 40,
+        "typed_refs": 107,
+        "negative_rejected": 17
+      },
+      "deterministic_replay": {
+        "status": "PASS",
+        "artifact_count": 26
+      },
+      "p09_remediation_invariants": "PASS",
+      "preserved_p01_p08_p10_byte_identity": "PASS",
+      "git_diff_check": "PASS"
+    },
+    "package_records": 1377,
+    "builder_cases": 348
+  }
 }

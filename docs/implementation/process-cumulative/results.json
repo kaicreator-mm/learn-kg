@@ -1,6 +1,6 @@
 {
   "status": "SQL_BOUND_BUILDER_ONLY",
-  "cases": 318,
+  "cases": 348,
   "results": [
     {
       "owner": "P04",
@@ -1571,13 +1571,58 @@
           "IMMEDIATE": true,
           "DELAYED": false,
           "TRANSFER": true
-        }
+        },
+        "learner_identity_binding": {
+          "identity_version": "V1",
+          "kind": "LEARNER_SUBJECT",
+          "subject_id": "SUBJECT-01"
+        },
+        "computed_same_learner_identity": true,
+        "immediate_subject_id": "SUBJECT-01",
+        "delayed_subject_id": "SUBJECT-01",
+        "transfer_subject_id": "SUBJECT-01",
+        "time_basis": "UTC_EPOCH_SECONDS",
+        "time_unit": "SECOND",
+        "recording_time_basis": "UTC_EPOCH_SECONDS",
+        "recording_time_unit": "SECOND",
+        "clock_source_id": "SYNTHETIC-UTC-CLOCK-01",
+        "recording_clock_source_id": "SYNTHETIC-SERVER-UTC-01",
+        "computed_delay_seconds": 86400,
+        "minimum_delay_seconds": 86400,
+        "computed_timestamp_order_valid": true,
+        "computed_recording_order_valid": true
       }
     },
     {
       "owner": "P09",
       "case_id": "P09.C045",
-      "actual": "HOLD"
+      "actual": {
+        "status": "THREE_TASK_OBSERVATIONS_ONLY",
+        "criteria": {
+          "IMMEDIATE": true,
+          "DELAYED": false,
+          "TRANSFER": true
+        },
+        "learner_identity_binding": {
+          "identity_version": "V1",
+          "kind": "LEARNER_SUBJECT",
+          "subject_id": "SUBJECT-01"
+        },
+        "computed_same_learner_identity": true,
+        "immediate_subject_id": "SUBJECT-01",
+        "delayed_subject_id": "SUBJECT-01",
+        "transfer_subject_id": "SUBJECT-01",
+        "time_basis": "UTC_EPOCH_SECONDS",
+        "time_unit": "SECOND",
+        "recording_time_basis": "UTC_EPOCH_SECONDS",
+        "recording_time_unit": "SECOND",
+        "clock_source_id": "SYNTHETIC-UTC-CLOCK-01",
+        "recording_clock_source_id": "SYNTHETIC-SERVER-UTC-01",
+        "computed_delay_seconds": 86400,
+        "minimum_delay_seconds": 86400,
+        "computed_timestamp_order_valid": true,
+        "computed_recording_order_valid": true
+      }
     },
     {
       "owner": "P09",
@@ -1607,6 +1652,182 @@
     {
       "owner": "P09",
       "case_id": "P09.C051",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C052",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C053",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C054",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C055",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C056",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C057",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C058",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C059",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C060",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C061",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C062",
+      "actual": {
+        "status": "THREE_TASK_OBSERVATIONS_ONLY",
+        "criteria": {
+          "IMMEDIATE": true,
+          "DELAYED": false,
+          "TRANSFER": true
+        },
+        "learner_identity_binding": {
+          "identity_version": "V1",
+          "kind": "LEARNER_SUBJECT",
+          "subject_id": "SUBJECT-01"
+        },
+        "computed_same_learner_identity": true,
+        "immediate_subject_id": "SUBJECT-01",
+        "delayed_subject_id": "SUBJECT-01",
+        "transfer_subject_id": "SUBJECT-01",
+        "time_basis": "UTC_EPOCH_SECONDS",
+        "time_unit": "SECOND",
+        "recording_time_basis": "UTC_EPOCH_SECONDS",
+        "recording_time_unit": "SECOND",
+        "clock_source_id": "SYNTHETIC-UTC-CLOCK-01",
+        "recording_clock_source_id": "SYNTHETIC-SERVER-UTC-01",
+        "computed_delay_seconds": 86400,
+        "minimum_delay_seconds": 86400,
+        "computed_timestamp_order_valid": true,
+        "computed_recording_order_valid": true
+      }
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C063",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C064",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C065",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C066",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C067",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C068",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C069",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C070",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C071",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C072",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C073",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C074",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C075",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C076",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C077",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C078",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C079",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C080",
+      "actual": "HOLD"
+    },
+    {
+      "owner": "P09",
+      "case_id": "P09.C081",
       "actual": "HOLD"
     },
     {
@@ -1670,8 +1891,8 @@
       "actual": "HOLD"
     }
   ],
-  "manifest_sha256": "20493c359d8e890d3373a70d1cfd1c09d34ca08d994883ae8a89cfc89230dc7f",
-  "fixture_sha256": "1389c982f4ee680abe4fb11c2dc41e222dfe4f0368abe8cdcd29bce365cb8d52",
+  "manifest_sha256": "a739e55e122f1358fdfcf7bfe1f8993b53ec6af5bab5ef8f0d553e30cdfa2a65",
+  "fixture_sha256": "c27fda5270e81985e832389af60b58d88902cb7c96ece23b01784b673701def7",
   "migration_count": 490,
   "limits": "Finite contract replay only. No generic engine, real state, empirical effect, rights, CQ/LC or independent verdict."
 }
