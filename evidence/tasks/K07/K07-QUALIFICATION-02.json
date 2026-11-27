@@ -1,0 +1,162 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-r10-registration-20261127",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "reviewer": "chatgpt-web:learn-kg-kr02-r10-restricted-qualification-independent-reviewer",
+  "review_session": "learn-kg-kr02-r10-guards-20261127",
+  "branch": "version/v0.1.0",
+  "base": "c75e25ef324db63c63c41d279f5f40fff4e7c66a",
+  "exact_head": "699153f58d7c6dbcc0f9b53f3bb5bfd85da49946",
+  "version": "699153f58d7c6dbcc0f9b53f3bb5bfd85da49946",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K07",
+  "attempt_id": "K07-QUALIFICATION-02",
+  "receipt_id": "TASK:K07:K07-QUALIFICATION-02",
+  "input": [
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-02",
+      "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+          "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+      "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64",
+      "type": "REVIEWED_CANDIDATE_RECEIPT"
+    }
+  ],
+  "reviewed_content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+  "consumed_tuple": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "K03",
+      "receipt_id": "TASK:K03:K03-FORMAL-03",
+      "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+          "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+        },
+        {
+          "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+          "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+        }
+      ]
+    },
+    {
+      "task_id": "K04",
+      "receipt_id": "TASK:K04:K04-FORMAL-03",
+      "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+          "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+        },
+        {
+          "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+          "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "state": "QUALIFIED_LOCAL",
+  "receipt_type": "QUALIFIED_LOCAL",
+  "scope": "Conditional objectives/path/necessity, synthetic identity, 5 bounded source propositions; no general prerequisites or external standards mapping.",
+  "scope_restriction": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "source_allowlist": [
+      "K05.01.01.D4.01",
+      "K05.02.01.D4.01",
+      "K05.02.02.D4.01",
+      "K05.02.04.D4.01",
+      "K05.03.01.R9.S01",
+      "K05.05.02.R9.S01",
+      "K05.05.04.R9.S01",
+      "K05.06.01.R9.S01",
+      "K05.06.02.R9.S01",
+      "K05.06.04.D4.01",
+      "K06.01.02.D4.01",
+      "K06.04.03.R9.S01",
+      "K06.06.01.D4.01",
+      "K06.06.02.D4.01",
+      "K06.06.04.D4.01",
+      "K06.07.02.D4.01",
+      "K06.07.04.R9.S01",
+      "K07.01.02.R9.S01",
+      "K07.02.04.D4.01",
+      "K07.04.01.D4.01",
+      "K07.04.03.D4.01",
+      "K07.05.02.D4.01",
+      "K08.01.01.R9.S01",
+      "K08.02.01.D4.01",
+      "K08.03.01.D4.03",
+      "K08.03.03.D4.01",
+      "K08.04.01.D4.01",
+      "K08.04.02.D4.01",
+      "K08.04.04.D4.01",
+      "K08.04.05.D4.01",
+      "K08.05.04.R9.S01",
+      "K08.05.05.R9.S01",
+      "K08.06.03.R9.S01"
+    ],
+    "scope_ledger": "knowledge/v0.1.0/practice-teaching-r10/source-consumer-dispositions.json",
+    "scope_ledger_sha256": "7a014129d97c9f0afef9432d0e85e2a6e685667b2d038a00b36238708ca528dc",
+    "excluded": 47,
+    "prior_hold": 74,
+    "unresolved_topics": 67,
+    "limits": "No unrestricted source qualification, complete D3, G03, CQ/LC, rights or release. Mandatory unresolved coverage remains blocked."
+  },
+  "validation": {
+    "review_task_comment": 7219877144,
+    "review_result_comment": 7220019599,
+    "review_body_sha256": "72f7a422c8c1e8a22954d67f8da147dd2dcee6fdaf3e97e73dfbacaea00638d1",
+    "tree": "fab718d19d32cf6d4fc95cede14638138004b65f",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 0,
+    "verdict": "QUALIFIED_LOCAL_RESTRICTED",
+    "proposal_sha256": "13f31d6f357b1ff82cab61323cb0b28ba35b51d38f9c5a90ece182ed1aba314f"
+  },
+  "issues": [
+    "No unrestricted source qualification, complete D3, G03, CQ/LC, rights or release. Mandatory unresolved coverage remains blocked."
+  ],
+  "next": "G03 exact restricted scope closure required.",
+  "content_digest": "446a8c541c6882450a4e9ef5af6b6ee6b64b036219e56bc92fc76a83cf4eb530"
+}
