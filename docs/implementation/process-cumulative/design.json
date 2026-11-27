@@ -1,0 +1,383 @@
+{
+  "status": "RESTRICTED_BUILDER_CANDIDATE_DESIGN",
+  "version": "0.1.0-process-candidate-2",
+  "P04": {
+    "claims": [
+      "K06.03.03.PT.01",
+      "K06.03.02.PT.01",
+      "K07.03.03.PT.01",
+      "K11.04.02.TR.01",
+      "K11.05.04.TR.01",
+      "K12.05.02.TR.01"
+    ],
+    "inputs": [
+      "FLOW_GUIDED_CONCEPT_PRACTICE",
+      "P02.PREPARATION"
+    ],
+    "requirements": {
+      "P04.RQ01": "受限顺序与有条件替代，组合表现另测",
+      "P04.RQ02": "逻辑 ALL 汇合与子流程返回；无并发执行承诺",
+      "P04.RQ03": "一次补救重试、独立复测及条件化渐撤",
+      "P04.RQ04": "冻结同单位预算、检查点、去重、退出、未知拒绝"
+    },
+    "logical_flow": "START/ALTERNATIVE -> A,B logical ALL join (either submission order) -> SUBFLOW return -> ASSESS -> COMPLETE or RETRY -> ASSESS; at most one retry; FADE in active member/evaluation states; PAUSE/RESUME is same-invocation checkpoint replay; no generic nested or concurrent engine.",
+    "controls": "STOP and PAUSE are non-consuming control events; explicit resume restores the in-memory replay checkpoint without charging an activity; actual cross-invocation checkpoint witness is separate P10."
+  },
+  "P07": {
+    "claims": [
+      "K08.02.03.D4.02",
+      "K08.02.05.D4.02",
+      "K08.04.04.D4.02",
+      "K08.05.04.PT.01",
+      "K13.04.04.SR.01",
+      "K16.03.02.TG.01",
+      "K16.05.03.TG.01",
+      "K19.03.02.TG.01",
+      "K19.02.01.TG.01"
+    ],
+    "inputs": [
+      "P02.GOAL",
+      "P02.PLAN",
+      "P03.REFLECTION"
+    ],
+    "options": {
+      "ADJUST_CHALLENGE": {
+        "target_match": true
+      },
+      "REFLECT": {},
+      "REQUEST_SUPPORT": {
+        "no_answer_substitution": true
+      },
+      "REST": {}
+    },
+    "requirements": {
+      "P07.RQ01": "本人认可目标、可拒绝的挑战调整",
+      "P07.RQ02": "同目标、评分版本、支持及单位的任务观察变化",
+      "P07.RQ03": "支持和自述分离，不代答、不贴标签",
+      "P07.RQ04": "退出、拒绝、暂停及显式恢复优先"
+    },
+    "progress_boundary": "Comparable synthetic integer scores only; no universal scoring scale or motivational/clinical inference."
+  },
+  "P05": {
+    "claims": [
+      "K02.06.03.D4.03",
+      "K04.04.01.D4.02",
+      "K05.01.02.PT.01",
+      "K05.02.01.PT.01",
+      "K05.03.02.PT.01",
+      "K10.03.01.TR.01",
+      "K11.02.04.TR.01"
+    ],
+    "inputs": [
+      "P04.FLOW",
+      "P03.RECALL",
+      "P03.DISCRIMINATION"
+    ],
+    "stages": [
+      [
+        "INITIAL",
+        "P05.ACT.INITIAL",
+        "INITIAL_RECORDED",
+        {
+          "goal_match": true,
+          "exposure_recorded": true
+        }
+      ],
+      [
+        "RETRIEVE",
+        "P05.ACT.RETRIEVE",
+        "RETRIEVAL_RECORDED",
+        {
+          "generated_response": true,
+          "support_recorded": true
+        }
+      ],
+      [
+        "SCHEDULE",
+        "P05.ACT.SCHEDULE",
+        "SCHEDULE_CONFIRMED",
+        {
+          "same_unit": true,
+          "model_version_match": true,
+          "learner_opt_in": true
+        }
+      ],
+      [
+        "DELAYED",
+        "P05.ACT.DELAYED",
+        "DELAYED_RECORDED",
+        {
+          "independent": true,
+          "goal_match": true,
+          "retention_interval_positive": true
+        }
+      ],
+      [
+        "TRANSFER",
+        "P05.ACT.TRANSFER",
+        "TRANSFER_RECORDED",
+        {
+          "independent": true,
+          "new_task_family": true,
+          "goal_match": true
+        }
+      ]
+    ],
+    "requirements": {
+      "P05.RQ01": "首次呈现与生成式提取分离",
+      "P05.RQ02": "学习间隔、保持时距、组块/混合及策略选择条件分开；固定参数仅候选模型",
+      "P05.RQ03": "跨会话复习由本人选定时窗；预算包括所有动作",
+      "P05.RQ04": "独立延迟和陌生任务分别记录；不由即时或提示表现推导"
+    }
+  },
+  "P06": {
+    "claims": [
+      "K06.06.01.PT.01",
+      "K06.06.03.PT.01",
+      "K06.06.04.PT.01",
+      "K09.01.04.ME.01",
+      "K10.01.02.TR.01",
+      "K12.03.03.TR.01"
+    ],
+    "inputs": [
+      "P04.FLOW",
+      "P03.EXPLANATION"
+    ],
+    "stages": [
+      [
+        "OBSERVE",
+        "P06.ACT.OBSERVE",
+        "OBSERVATION_VALID",
+        {
+          "task_version_match": true,
+          "response_valid": true,
+          "support_recorded": true
+        }
+      ],
+      [
+        "SCORE",
+        "P06.ACT.SCORE",
+        "SCORE_RECORDED",
+        {
+          "scoring_version_match": true,
+          "denominator_valid": true
+        }
+      ],
+      [
+        "DISCRIMINATE",
+        "P06.ACT.DISCRIMINATE",
+        "GAP_SUPPORTED",
+        {
+          "competing_explanations_checked": true,
+          "gap_evidence": true
+        }
+      ],
+      [
+        "FEEDBACK",
+        "P06.ACT.FEEDBACK",
+        "FEEDBACK_SELECTED",
+        {
+          "learner_opt_in": true,
+          "target_match": true
+        }
+      ],
+      [
+        "RETEST",
+        "P06.ACT.RETEST",
+        "RETEST_RECORDED",
+        {
+          "independent": true,
+          "new_variant": true,
+          "scoring_version_match": true
+        }
+      ]
+    ],
+    "requirements": {
+      "P06.RQ01": "原始事件、版本、分母、缺答无效与错误分开",
+      "P06.RQ02": "现象与竞争原因、区分证据分开",
+      "P06.RQ03": "提示和纠错有界，保留原响应",
+      "P06.RQ04": "新变式独立复测；不据此推断因果效果"
+    }
+  },
+  "P08": {
+    "claims": [
+      "K09.05.04.ME.01",
+      "K10.06.06.TR.01",
+      "K11.03.01.TR.01",
+      "K11.05.01.TR.01",
+      "K16.03.04.TG.01"
+    ],
+    "inputs": [
+      "P04.FLOW",
+      "P05.FLOW",
+      "P06.FLOW",
+      "P07.POLICY"
+    ],
+    "stages": [
+      [
+        "STATE",
+        "P08.ACT.STATE",
+        "STATE_VALID",
+        {
+          "model_version_match": true,
+          "uncertainty_recorded": true,
+          "evidence_match": true
+        }
+      ],
+      [
+        "FILTER",
+        "P08.ACT.FILTER",
+        "FEASIBLE_SET",
+        {
+          "goal_match": true,
+          "resource_ready": true,
+          "constraints_known": true
+        }
+      ],
+      [
+        "SELECT",
+        "P08.ACT.SELECT",
+        "ACTION_SELECTED",
+        {
+          "learner_opt_in": true,
+          "construct_preserved": true,
+          "selection_unambiguous": true
+        }
+      ],
+      [
+        "REVIEW",
+        "P08.ACT.REVIEW",
+        "OUTCOME_RECORDED",
+        {
+          "observation_valid": true,
+          "alternative_recorded": true
+        }
+      ]
+    ],
+    "requirements": {
+      "P08.RQ01": "状态估计、观察和不确定性分开",
+      "P08.RQ02": "有限可行候选与明确选择；未知或多解澄清",
+      "P08.RQ03": "升降阶、帮助、模式切换不得改变构念而不标识",
+      "P08.RQ04": "退出、无预算或风险未知停止；无自动执行"
+    }
+  },
+  "P09": {
+    "claims": [
+      "K04.04.02.D4.02",
+      "K07.04.01.PT.01",
+      "K09.07.02.ME.01",
+      "K17.06.03.SR.01"
+    ],
+    "inputs": [
+      "P04.FLOW",
+      "P06.FLOW"
+    ],
+    "stages": [
+      [
+        "IMMEDIATE",
+        "P09.ACT.IMMEDIATE",
+        "IMMEDIATE_RECORDED",
+        {
+          "independent": true,
+          "construct_match": true,
+          "scoring_version_match": true
+        }
+      ],
+      [
+        "DELAYED",
+        "P09.ACT.DELAYED",
+        "DELAYED_RECORDED",
+        {
+          "independent": true,
+          "delay_positive": true,
+          "construct_match": true
+        }
+      ],
+      [
+        "NOVEL",
+        "P09.ACT.NOVEL",
+        "TRANSFER_RECORDED",
+        {
+          "independent": true,
+          "new_task_family": true,
+          "transfer_dimension_declared": true
+        }
+      ],
+      [
+        "SUMMARY",
+        "P09.ACT.SUMMARY",
+        "SUMMARY_RECORDED",
+        {
+          "evidence_separated": true,
+          "goal_reviewed": true
+        }
+      ]
+    ],
+    "requirements": {
+      "P09.RQ01": "即时及延迟观测分离",
+      "P09.RQ02": "陌生任务、综合任务及目标维度明确",
+      "P09.RQ03": "独立性、评分及实际条件绑定",
+      "P09.RQ04": "各阶段结果保存，失败不抹除；目标修订非自动"
+    }
+  },
+  "P10": {
+    "claims": [
+      "K08.05.04.PT.01",
+      "K11.05.04.TR.01",
+      "K15.06.04.TG.01",
+      "K16.03.04.TG.01",
+      "K17.06.04.SR.01",
+      "K19.03.02.TG.01"
+    ],
+    "inputs": [
+      "P08.FLOW",
+      "P09.FLOW"
+    ],
+    "stages": [
+      [
+        "PLAN",
+        "P10.ACT.PLAN",
+        "SESSION_SELECTED",
+        {
+          "learner_opt_in": true,
+          "goal_match": true,
+          "accessible": true
+        }
+      ],
+      [
+        "CHECKPOINT",
+        "P10.ACT.CHECKPOINT",
+        "CHECKPOINT_COMMITTED",
+        {
+          "checkpoint_valid": true,
+          "version_match": true
+        }
+      ],
+      [
+        "RESUME",
+        "P10.ACT.RESUME",
+        "RESUME_CONFIRMED",
+        {
+          "learner_resume": true,
+          "checkpoint_match": true,
+          "version_match": true
+        }
+      ],
+      [
+        "AUDIT",
+        "P10.ACT.AUDIT",
+        "AUDIT_RECORDED",
+        {
+          "event_identity_valid": true,
+          "actual_evidence_separated": true
+        }
+      ]
+    ],
+    "requirements": {
+      "P10.RQ01": "跨日会话衔接由本人选择",
+      "P10.RQ02": "检查点、版本、事件ID去重；冲突拒绝",
+      "P10.RQ03": "可及性、授权、退出优先，无后台自动继续",
+      "P10.RQ04": "执行与证据分别追溯，修订不覆盖历史"
+    }
+  }
+}
