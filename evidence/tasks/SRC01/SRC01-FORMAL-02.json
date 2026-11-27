@@ -1,0 +1,106 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-src01-reconciliation-20261128",
+  "role": "BUILDER_NON_REVIEWER",
+  "branch": "prep/src01-preservation",
+  "base": "4e5d938a2f4e61ff82827d2c93ddca43c66411fc",
+  "exact_head": "94004f85fb768f611930f87ffaf203d7d9827595",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "SRC01",
+  "attempt_id": "SRC01-FORMAL-02",
+  "receipt_id": "TASK:SRC01:SRC01-FORMAL-02",
+  "input": [
+    {
+      "role": "PREVIOUS_NONQUALIFYING_RECEIPT",
+      "path": "evidence/tasks/SRC01/SRC01-FORMAL-PARTIAL-01.json",
+      "sha256": "5c642af026c49ba070e4a4bb7122862f36450ac57ba4b17d2395da84195a7e97"
+    },
+    {
+      "role": "PREVIOUS_SOURCE_PRESERVATION_EVIDENCE",
+      "path": "docs/implementation/src01-preservation-evidence.json",
+      "sha256": "37fae52733bc25167605cf58e0e4395c00716c8337135ae10cf7ef67d190738e"
+    },
+    {
+      "role": "PREVIOUS_PDF_IDENTITY_EVIDENCE",
+      "path": "docs/drafts/stage-handoff/src01-pdf-identity-evidence.json",
+      "sha256": "f3231f9d9b61828ab508875f387d89c1f6eacd570261e55257add232e4494728"
+    },
+    {
+      "role": "PREVIOUS_LAYOUT_EVIDENCE",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/src01-layout-evidence.json",
+      "sha256": "0a51419cbc7aba389d78a219b3746889ca3f6ced07583cdeaed801600197750b"
+    },
+    {
+      "role": "PREVIOUS_RAW_PDF_BACKUP_EVIDENCE",
+      "path": "docs/drafts/stage-handoff/qualification-preparation/src01-original-pdf-backup-evidence.json",
+      "sha256": "7e6e020a24b78e949927ccb72a67d3600dd544849067dda1b671d2942c1b3344"
+    },
+    {
+      "role": "CURRENT_DRIVE_METADATA_INVENTORY",
+      "path": "docs/implementation/hsk-exam-reference/drive-metadata-inventory.json",
+      "sha256": "b9af1fea8aa581fc21dcc220afaefe0ca0b8c774426d6010bd7284e67904110f"
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/drafts/stage-handoff/src01-reconciliation-delta-20261128.json",
+      "sha256": "4d2fcbb1d69e2daa339a933d9965bb2888a5c68ae99ccdfb63dee3a796e4a459",
+      "type": "SAFE_PRESERVATION_EVIDENCE"
+    },
+    {
+      "path": "docs/drafts/stage-handoff/src01-cross-fault-backup-evidence-20261128.json",
+      "sha256": "edac3d16b401d9d9e31c3190582562bb79d2ad381aad824b99f47c631ddf050a",
+      "type": "SAFE_PRESERVATION_EVIDENCE"
+    },
+    {
+      "path": "evidence/validation/SRC01-PRESERVATION-RECONCILIATION-01.json",
+      "sha256": "e106b814312a4f0d6b7e08ed081dbac8cd7bf90194f9d2c4acfee067e0e2c662",
+      "type": "SAFE_PRESERVATION_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Private source and RDF preservation; restricted candidate only",
+  "scope_restriction": {
+    "status": "RESTRICTED_PRESERVATION_CANDIDATE",
+    "current_pdf_raw_bytes": "VERIFIED_3_OF_3",
+    "drive_current_revisions": "ONE_CURRENT_REVISION_PER_SOURCE; NO_PRIOR_REVISION",
+    "historical_pdf_raw_byte_identity": "HOLD",
+    "canonical_connector_text_reproduction": "VERIFIED_3_OF_3_EXACT",
+    "sourceblock_replay": "VERIFIED_94_OF_94_EXACT",
+    "direct_pdf_parser_difference_count": 14,
+    "parser_difference_disposition": "METHOD_DIFFERENCE_REPRODUCED_AT_CANONICAL_TEXT_LAYER",
+    "visual_layout_qualification": "HOLD",
+    "cross_fault_copies": [
+      "GOOGLE_DRIVE_ORIGINAL",
+      "ALIYUN_SG_PRIVATE_COPY",
+      "V100_PRIVATE_COPY"
+    ],
+    "isolated_restore": "V100_RAW_PDF_3_OF_3_AND_RDF_READABLE_EXPORT_17_OF_17_EXACT",
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION",
+    "publication": "NOT_AUTHORIZED",
+    "downstream_usage": "PRIVATE_CANDIDATE_REFERENCE_ONLY; no public release or rights promotion",
+    "preserved_rdf_export": "NQUADS_PLUS_COMPLETE_READABLE_JSONL_ARCHIVE; binary restored-db retained on Aliyun and excluded from portable export"
+  },
+  "validation": {
+    "current_pdf_sha256": "3_OF_3_MATCHES_EXISTING_SOURCE_RECORDS",
+    "drive_revision_history": "3_OF_3_HAVE_ONLY_CURRENT_REVISION",
+    "connector_text": "3_OF_3_EXACT_HISTORICAL_MATCH",
+    "sourceblock_replay": "94_OF_94_EXACT",
+    "prior_pdf_parser_differences": "14_RECLASSIFIED_AS_METHOD_DIFFERENCE; VISUAL_LAYOUT_STILL_HOLD",
+    "raw_pdf_cross_fault_backup": "GOOGLE_DRIVE_ALIYUN_V100_ALL_SHA256_MATCH",
+    "raw_pdf_restore": "3_OF_3_EXACT_ON_ISOLATED_V100_DIRECTORY",
+    "rdf_readable_export_restore": "17_OF_17_FILES_AND_45610208_BYTES_EXACT",
+    "private_backup_manifest_sha256": "8bf073aebb6475aab65ed580af58ef5a7db07b43dc51788393c7099c69375837",
+    "independent_qualification": "NOT_RUN"
+  },
+  "issues": [
+    "Historical PDF raw byte identity remains HOLD: Drive exposes only one current revision and no historical raw digest.",
+    "Source publication/redistribution rights remain HOLD; no public release is authorized.",
+    "Visual page-layout qualification remains HOLD; this delta reconciles canonical text extraction and source blocks, not full visual review."
+  ],
+  "next": "Independent restricted preservation review. Only after review may SRC01 emit PRESERVATION_VERIFIED with explicit holds and unlock HS00/HSK01.",
+  "content_digest": "8b5eaf476a1ff0cb61c3bcb79957ff5b01cad4bf2bfaf161b6cc3620ab8cfc96"
+}

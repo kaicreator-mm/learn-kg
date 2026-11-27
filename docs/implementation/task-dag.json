@@ -93,10 +93,12 @@
       "deliverable": "非破坏性原始来源与RDF/抽取文本保全；备份manifest、hash、导出和独立恢复记录",
       "acceptance": "实读既有数据、导出并在隔离位置恢复比对；原PDF身份/权利、文本hash与PDF hash区分；缺失明确BLOCKED/HOLD；禁止公开全文及删除原数据",
       "kind": "implementation",
-      "status": "BLOCKED",
+      "status": "CANDIDATE_READY",
       "requirements": [],
       "output_receipt": "PRESERVATION_VERIFIED",
-      "current_nonqualifying_evidence": "evidence/tasks/SRC01/SRC01-FORMAL-PARTIAL-01.json"
+      "current_nonqualifying_evidence": "evidence/tasks/SRC01/SRC01-FORMAL-PARTIAL-01.json",
+      "current_receipt": "evidence/tasks/SRC01/SRC01-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED_PRESERVATION"
     },
     {
       "id": "HSK01",
@@ -3558,7 +3560,7 @@
       "status": "BUILDER_CORRECTED_STRUCTURAL_CHECKS_PASS",
       "disposition": "G03 requires V01 and DB03 CANDIDATE_READY receipts; G04 independently freezes actual evidence."
     },
-    "current_task_state_note": "K01–K19 current restricted/local qualifications; P01–P10 current restricted cumulative candidates pending PR01/PR02; old P01–P03 superseded historical. SRC01 blocked; no final gate.",
+    "current_task_state_note": "SRC01 restricted preservation candidate awaits independent review; historical PDF byte identity, rights and visual layout remain HOLD. HS00/HSK01 remain blocked pending PRESERVATION_VERIFIED.",
     "source_evidence_restriction": {
       "path": "docs/implementation/source-evidence-correction/trace-disposition.json",
       "sha256": "fe267d992a90e2535e3635744c36923b90fe2978d083ca497d3ed1171532c3f8",
