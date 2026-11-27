@@ -1,0 +1,4 @@
+# K15/K16/K19 preparation R1 — technology, inclusion and governance
+70 exact G01 D3 topics, 193 preserved historical claims, 70 original project methods and 9 bounded source propositions from actual observed xAPI, CAST, WCAG, NIST and Belmont sections. Historical source assertions are not promoted. xAPI master is not a fixed release, standards/frameworks are not actual conformance or law. Pashler abstract access returned a challenge page. No clinical diagnosis or legal compliance conclusion.
+
+1192 records, 2447 typed refs, 272 claims, 459 cases, 85 relations, 47 finite builder cases. All 47 checked from actual memory SQL Case records; 13 additionally read typed composition, policy and condition records. Advice only. Historical view narratives NOT_RUN, all foreign anchors pending; source gap 61 topics. Formal prerequisites not met; no candidate receipts or qualification. No persistent SQLite.

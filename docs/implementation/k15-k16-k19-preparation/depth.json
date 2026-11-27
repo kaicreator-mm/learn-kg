@@ -1,0 +1,632 @@
+[
+  {
+    "topic": "K15.01.01",
+    "method": "媒介组合按任务目标、信息通道、相关性与访问条件设计，分别验证实际表现。",
+    "fixture": "词义讲解同屏动画、文字与无关背景音乐；学习者反馈音乐干扰。",
+    "expected_and_boundary": "移除干扰作为可选版本；对比匹配新任务，不能仅凭媒介数量断言效果。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.01.01.RQ01"
+  },
+  {
+    "topic": "K15.01.02",
+    "method": "仿真记录模型版本、可控变量、缺失现实因素和任务授权。",
+    "fixture": "模拟维修可重置错误，真实设备不可重置且需授权。",
+    "expected_and_boundary": "仅模拟操作证据；真实任务须另行核证安全权限与迁移。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.01.02.RQ01"
+  },
+  {
+    "topic": "K15.01.03",
+    "method": "移动场景预算包括网络、设备、输入能力、暂停与恢复。",
+    "fixture": "离线10分钟可用，任务要求实时视频20分钟。",
+    "expected_and_boundary": "不可行；候选离线短任务另核目标，不能判低能力。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.01.03.RQ01"
+  },
+  {
+    "topic": "K15.01.04",
+    "method": "线上、混合和面授比较应匹配内容、练习机会、支持与结果。",
+    "fixture": "线上组额外两次辅导且得分高。",
+    "expected_and_boundary": "不能隔离媒介形式因果；报告联合条件。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.01.04.RQ01"
+  },
+  {
+    "topic": "K15.02.01",
+    "method": "领域模型区分对象类型、语义关系、来源及版本；未知边不传递。",
+    "fixture": "词义A与B同主题，未证先修。",
+    "expected_and_boundary": "同主题不产生必要先修；保持HOLD。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.02.01.RQ01"
+  },
+  {
+    "topic": "K15.02.02",
+    "method": "教学模型分开候选目标、条件、动作、反馈、退出和实际执行记录。",
+    "fixture": "模型推荐练习，但本人拒绝。",
+    "expected_and_boundary": "推荐未执行，不生成练习观测。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.02.02.RQ01"
+  },
+  {
+    "topic": "K15.02.03",
+    "method": "接口分别传递响应事实、估计值、模型版本和未知状态。",
+    "fixture": "接口输出probability=.8，缺模型版本；另事实correct=true。",
+    "expected_and_boundary": "仅后者可作响应记录；概率身份不足HOLD。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.02.03.RQ01"
+  },
+  {
+    "topic": "K15.02.04",
+    "method": "辅导记录提示、示范、用户自答和独立新任务的时序。",
+    "fixture": "助手先给完整答案，用户复述正确。",
+    "expected_and_boundary": "仅辅助表现；不得写入无提示掌握状态。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.02.04.RQ01"
+  },
+  {
+    "topic": "K15.03.01",
+    "method": "事件身份按主体、动作、对象、时点及授权绑定，语义版本化。",
+    "fixture": "同事件id重传；另同id响应改变。",
+    "expected_and_boundary": "相同内容幂等，冲突隔离；事件格式不证明行为真实。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.03.01.RQ01"
+  },
+  {
+    "topic": "K15.03.02",
+    "method": "指标固定分母、目标、时间窗和缺失政策。",
+    "fixture": "正确8、错误2、缺答5；甲分母10乙15。",
+    "expected_and_boundary": "有效作答率.8与全部施测正确率8/15不同，不直接比较。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.03.02.RQ01"
+  },
+  {
+    "topic": "K15.03.03",
+    "method": "可视化显示量尺、缺测及适用范围；无数据不绘零。",
+    "fixture": "周一分数80、周二未测、周三85。",
+    "expected_and_boundary": "周二缺测，不能推断0或插值为82.5；访问方式另验。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.03.03.RQ01"
+  },
+  {
+    "topic": "K15.03.04",
+    "method": "分析输出与行动建议分层，竞争解释及未知触发澄清。",
+    "fixture": "停留时长低且完成率高，任务难度不同。",
+    "expected_and_boundary": "不能诊断低动机；先核目标、任务及独立表现。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.03.04.RQ01"
+  },
+  {
+    "topic": "K15.04.01",
+    "method": "生成内容只有事实、来源、权利和适用性核对后进入候选审查。",
+    "fixture": "生成器给出公式及自称来源，实际来源未取回。",
+    "expected_and_boundary": "HOLD，保留原输出及错误，不自动转知识命题。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.04.01.RQ01"
+  },
+  {
+    "topic": "K15.04.02",
+    "method": "检索按固定包版本、适用范围及来源身份；未命中显式未知。",
+    "fixture": "命中v1语法命题，目标要求已撤回v2。",
+    "expected_and_boundary": "不消费不匹配版本；请求有效来源。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.04.02.RQ01"
+  },
+  {
+    "topic": "K15.04.03",
+    "method": "解释引用实际可核依据、决策输入和边界；不编造模型内部原因。",
+    "fixture": "模型选A，记录仅包含预算及目标匹配。",
+    "expected_and_boundary": "可解释已记录选择条件，不断言内部神经机制。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.04.03.RQ01"
+  },
+  {
+    "topic": "K15.04.04",
+    "method": "自动评分先验证量规、人工参考、误差和留出群体表现。",
+    "fixture": "模型高置信判写作正确，人工基准未核。",
+    "expected_and_boundary": "评分建议待人工复核，不自动给正式分。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.04.04.RQ01"
+  },
+  {
+    "topic": "K15.04.05",
+    "method": "明确风险责任、权限、人工升级、停止和回退。",
+    "fixture": "AI建议改变课程，教师尚未批准且涉及高风险决定。",
+    "expected_and_boundary": "仅建议候选，实际变更由有权人裁决。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.04.05.RQ01"
+  },
+  {
+    "topic": "K15.05.01",
+    "method": "软件任务成功率与学习目标效果分别设计观测。",
+    "fixture": "导航成功9/10，独立保持成绩未知。",
+    "expected_and_boundary": "可记录可用性.9，不称教学效果提升。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.05.01.RQ01"
+  },
+  {
+    "topic": "K15.05.02",
+    "method": "解释充分性按受众、决策风险和可核证据判断。",
+    "fixture": "向教师提供一个概率，但无适用模型和误差说明。",
+    "expected_and_boundary": "解释不足，禁止仅凭分数执行高风险决定。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.05.02.RQ01"
+  },
+  {
+    "topic": "K15.05.03",
+    "method": "可控性以实际撤回、停止和权限测试证实。",
+    "fixture": "用户点击停止，系统仍发任务提醒。",
+    "expected_and_boundary": "停止合同失败；不以按钮存在证明可控。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.05.03.RQ01"
+  },
+  {
+    "topic": "K15.05.04",
+    "method": "教育效果验证目标、匹配新任务、保持时距、比较设计。",
+    "fixture": "新UI令完成数翻倍，目标能力未测。",
+    "expected_and_boundary": "仅过程变化；学习效应未知。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.05.04.RQ01"
+  },
+  {
+    "topic": "K15.05.05",
+    "method": "成本比较须同量尺、明确受益主体和约束。",
+    "fixture": "A耗时5分钟准确率未知，B耗时8分钟已验证可用。",
+    "expected_and_boundary": "仅时间可比较，未知收益不补零。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.05.05.RQ01"
+  },
+  {
+    "topic": "K15.06.01",
+    "method": "交换格式兼容与语义保真分开；版本映射显式核对。",
+    "fixture": "JSON schema通过但把提示后正确当独立正确。",
+    "expected_and_boundary": "结构可读，语义失败，不导入能力证据。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.06.01.RQ01"
+  },
+  {
+    "topic": "K15.06.02",
+    "method": "事件发生时点和写入时点独立，预测依可用时点。",
+    "fixture": "事件9时发生、11时写入，10时预测。",
+    "expected_and_boundary": "10时不可使用该事件；不可回填为在线性能。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.06.02.RQ01"
+  },
+  {
+    "topic": "K15.06.03",
+    "method": "导出导入验证身份、字段、版本、权限与往返差异。",
+    "fixture": "导出遗漏提示标记，重新导入后默认无提示。",
+    "expected_and_boundary": "信息丢失，拒绝无损声明；缺项UNKNOWN。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.06.03.RQ01"
+  },
+  {
+    "topic": "K15.06.04",
+    "method": "离线同步用稳定事件ID及内容摘要做幂等；冲突不静默覆盖。",
+    "fixture": "同ID同内容两次上传；同ID不同分数。",
+    "expected_and_boundary": "前者去重，后者隔离；需要正式裁决。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K15.06.04.RQ01"
+  },
+  {
+    "topic": "K16.01.01",
+    "method": "先备证据须匹配目标和任务，不以学段、年龄或语言身份替代。",
+    "fixture": "同班两人分别能识字但不理解句子、能听懂但不识字。",
+    "expected_and_boundary": "分别记录能力证据，不能以同班推统一起点。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.01.01.RQ01"
+  },
+  {
+    "topic": "K16.01.02",
+    "method": "差异描述保留构念、量尺、条件与误差；无合成模型不汇总。",
+    "fixture": "阅读80、口语60，量尺及测验不同。",
+    "expected_and_boundary": "分别报告，不能平均70为整体语言水平。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.01.02.RQ01"
+  },
+  {
+    "topic": "K16.01.03",
+    "method": "语言要求与学科构念分开评估，核对适配是否改变任务。",
+    "fixture": "数学比例题文字复杂，等结构图示题独立正确。",
+    "expected_and_boundary": "可提出语言负担竞争解释，需匹配题型与条件。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.01.03.RQ01"
+  },
+  {
+    "topic": "K16.01.04",
+    "method": "比较同人跨时点需匹配条件与尺度，单次波动不固化标签。",
+    "fixture": "初测缺网络、复测离线完整且高分。",
+    "expected_and_boundary": "条件变化，不能直接推技能增长。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.01.04.RQ01"
+  },
+  {
+    "topic": "K16.02.01",
+    "method": "读写支持以实际功能障碍及本人选择为限，保留不确定性。",
+    "fixture": "本人说小字难辨，要求放大文字。",
+    "expected_and_boundary": "可提供放大选项；不诊断读写障碍。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.02.01.RQ01"
+  },
+  {
+    "topic": "K16.02.02",
+    "method": "注意困难的行为代理含竞争解释，拒绝未授权疾病推断。",
+    "fixture": "用户频繁切换页面，任务资料在另一窗口。",
+    "expected_and_boundary": "记录行为及环境，不诊断注意疾病。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.02.02.RQ01"
+  },
+  {
+    "topic": "K16.02.03",
+    "method": "辅助通道按具体目标及实际选择；替代可能改变构念。",
+    "fixture": "语义理解任务允许语音输入，手写字形任务则不允许替代评分。",
+    "expected_and_boundary": "前者候选适配；后者构念改变需另评。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.02.03.RQ01"
+  },
+  {
+    "topic": "K16.02.04",
+    "method": "功能支持以确认需求、适用授权和撤回为前提。",
+    "fixture": "本人拒绝公开健康详情，只请求字幕。",
+    "expected_and_boundary": "提供可选字幕，不要求诊断；不推断敏感属性。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.02.04.RQ01"
+  },
+  {
+    "topic": "K16.03.01",
+    "method": "差异化教学修改呈现、支架或活动时保留目标和证据合同。",
+    "fixture": "A自由回忆，B带首字提示，均答对。",
+    "expected_and_boundary": "分别计独立和辅助证据，不能按同条件比较。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.03.01.RQ01"
+  },
+  {
+    "topic": "K16.03.02",
+    "method": "多种参与、表征与表达选项用于减少障碍，选择与目标绑定。",
+    "fixture": "同一概念可读文字或听解释，口语发音目标需实际口语观测。",
+    "expected_and_boundary": "提供多入口不等于所有评价方式互换。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.03.02.RQ01"
+  },
+  {
+    "topic": "K16.03.03",
+    "method": "辅助技术检查平台、实际功能、用户操作与目标。",
+    "fixture": "屏幕阅读器可读菜单但题目图片无描述。",
+    "expected_and_boundary": "导航部分可达，题目未验证；不宣称全可用。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.03.03.RQ01"
+  },
+  {
+    "topic": "K16.03.04",
+    "method": "测量适配区分构念相关和无关障碍；条件变化写入评分解释。",
+    "fixture": "阅读理解题字体放大；拼写题自动纠错。",
+    "expected_and_boundary": "前者可作候选无关障碍调整，后者改变拼写证据；实际等效待验。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.03.04.RQ01"
+  },
+  {
+    "topic": "K16.04.01",
+    "method": "可及性按具体功能逐项测试并保留异常，不以标准标签代替实测。",
+    "fixture": "图像有替代文本，但键盘无法提交。",
+    "expected_and_boundary": "至少提交功能不可达；不宣称全面WCAG符合。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.04.01.RQ01"
+  },
+  {
+    "topic": "K16.04.02",
+    "method": "键盘替代按底层功能判断路径依赖，不把鼠标实现方式当例外。",
+    "fixture": "点击选项可由键盘触发；描绘曲线目标依赖路径。",
+    "expected_and_boundary": "前者不应仅鼠标，后者需核实际例外及其他可达方案。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.04.02.RQ01"
+  },
+  {
+    "topic": "K16.04.03",
+    "method": "适配若移除目标构念要求，应另立任务和解释。",
+    "fixture": "听力题给全转写后答对。",
+    "expected_and_boundary": "文字理解候选，不等效听辨；原听辨UNKNOWN。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.04.03.RQ01"
+  },
+  {
+    "topic": "K16.04.04",
+    "method": "支持效果以实际参与、独立任务表现、负担和本人反馈判断。",
+    "fixture": "放大文字后完成率高但独立正确率无变化，用户选择保留。",
+    "expected_and_boundary": "可报告参与和偏好，不称能力提升。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.04.04.RQ01"
+  },
+  {
+    "topic": "K16.05.01",
+    "method": "个人推断须使用其情境证据及授权，群体统计非个人标签。",
+    "fixture": "某群体平均读分低，个人读分未测。",
+    "expected_and_boundary": "个人状态UNKNOWN，不代入均值。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.05.01.RQ01"
+  },
+  {
+    "topic": "K16.05.02",
+    "method": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。",
+    "fixture": "两组测试语言不同、难度未等值。",
+    "expected_and_boundary": "观测差存在，能力组差解释HOLD。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.05.02.RQ01"
+  },
+  {
+    "topic": "K16.05.03",
+    "method": "标签须有特定用途、有效证据、版本及撤回纠正途径。",
+    "fixture": "旧日志称偏好视频，当前本人选择文字。",
+    "expected_and_boundary": "更新当前选择，旧情境保留，不永久固化身份。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.05.03.RQ01"
+  },
+  {
+    "topic": "K16.05.04",
+    "method": "偏好和匹配效应假说分开；后者需事前设计交互比较。",
+    "fixture": "用户喜欢图片，图片组平均高但未比较不同偏好类别。",
+    "expected_and_boundary": "只能记录偏好及组结果，不能验证匹配假说。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K16.05.04.RQ01"
+  },
+  {
+    "topic": "K19.01.01",
+    "method": "机会以可达资源、可用时间、实际参与及任务条件区分。",
+    "fixture": "A可访问全部资源但未参与，B无网络不能访问。",
+    "expected_and_boundary": "分别登记选择与约束；不从参与差判断能力。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.01.01.RQ01"
+  },
+  {
+    "topic": "K19.01.02",
+    "method": "资源分配先声明目标、公平原则、硬约束及决策主体。",
+    "fixture": "资源10份，两组各10人，一组已有8份另一0份。",
+    "expected_and_boundary": "均分和按缺口补足不同；呈现规则和影响，未经确认不定权重。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.01.02.RQ01"
+  },
+  {
+    "topic": "K19.01.03",
+    "method": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。",
+    "fixture": "同文化两人对情境题熟悉程度不同。",
+    "expected_and_boundary": "使用本人经验记录，不凭群体身份推断表现。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.01.03.RQ01"
+  },
+  {
+    "topic": "K19.01.04",
+    "method": "系统性排除按流程、机会、分母、障碍和影响机制调查。",
+    "fixture": "线上组完成率低，部分账号无法登录。",
+    "expected_and_boundary": "先核可达性，不能单比例证明特定偏见原因。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.01.04.RQ01"
+  },
+  {
+    "topic": "K19.02.01",
+    "method": "项目数据字段须与声明用途相称，额外敏感字段默认不采集。",
+    "fixture": "词汇练习需事件ID和响应，另要求疾病史。",
+    "expected_and_boundary": "不采集无必要疾病史；法律依据及保留政策另核。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.02.01.RQ01"
+  },
+  {
+    "topic": "K19.02.02",
+    "method": "用途授权和撤回状态分别记录；适用法律依据须具体核验。",
+    "fixture": "本人同意练习记录，不同意模型训练。",
+    "expected_and_boundary": "训练未授权，拒绝二次用途；不作普遍法律结论。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.02.02.RQ01"
+  },
+  {
+    "topic": "K19.02.03",
+    "method": "访问检查身份、角色、用途、范围和期限，未知默认拒绝。",
+    "fixture": "教师角色允许读本班成绩，要求导出另一班原始日志。",
+    "expected_and_boundary": "拒绝越范围请求；已登录不等于所有权限。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.02.03.RQ01"
+  },
+  {
+    "topic": "K19.02.04",
+    "method": "保留与删除策略明确目的、期限、备份与法定保留冲突。",
+    "fixture": "记录过期但法律保留义务未知。",
+    "expected_and_boundary": "暂停普通使用，交有权人处理；不承诺已删除所有副本。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.02.04.RQ01"
+  },
+  {
+    "topic": "K19.02.05",
+    "method": "新的数据用途须有单独依据及批准，不沿用旧同意。",
+    "fixture": "用于学习建议的日志被拟用于训练商业模型。",
+    "expected_and_boundary": "没有明确新用途许可，HOLD；不得默认转移。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.02.05.RQ01"
+  },
+  {
+    "topic": "K19.03.01",
+    "method": "说明来源、用途、自动化、限制与退出选项，确认理解而非只显示条款。",
+    "fixture": "页面写“提升服务”，未说明训练或数据访问。",
+    "expected_and_boundary": "用途过宽不充分，澄清并保持HOLD。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.03.01.RQ01"
+  },
+  {
+    "topic": "K19.03.02",
+    "method": "退出合同需实际停止后续非授权动作，并解释必要后果。",
+    "fixture": "用户撤回提醒权限，下一次仍发送。",
+    "expected_and_boundary": "实际退出失败，停止后续发送并修复；历史数据处理另审。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.03.02.RQ01"
+  },
+  {
+    "topic": "K19.03.03",
+    "method": "解释提供证据链、适用边界和纠错入口，禁止虚构内部机制。",
+    "fixture": "算法建议复习，只有明确预算和预测模型。",
+    "expected_and_boundary": "解释已记录依据，不声称神经原因；提供更正。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.03.03.RQ01"
+  },
+  {
+    "topic": "K19.03.04",
+    "method": "错误修订保留旧版本、影响范围及传播记录，禁止静默覆盖。",
+    "fixture": "答案键v1错，10份旧结果引用。",
+    "expected_and_boundary": "冻结v1历史，识别10条影响，重评需另立授权结果。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.03.04.RQ01"
+  },
+  {
+    "topic": "K19.03.05",
+    "method": "风险责任明确，人工监督须有真实停止、拒绝和纠错能力。",
+    "fixture": "审核员只能查看建议，不能否决自动发布。",
+    "expected_and_boundary": "监督权限不足；高风险发布HOLD。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.03.05.RQ01"
+  },
+  {
+    "topic": "K19.04.01",
+    "method": "偏差评估区分输入、测量、模型和流程；按目标和受影响群体分析。",
+    "fixture": "某组误判高但样本仅5，测验语言不同。",
+    "expected_and_boundary": "报告不确定性及竞争解释；调查，不宣称已识别歧视机制。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.04.01.RQ01"
+  },
+  {
+    "topic": "K19.04.02",
+    "method": "代理优化同时核目标结果和副作用，禁止以点击代替学习。",
+    "fixture": "点击上升而新题保持下降。",
+    "expected_and_boundary": "代理与目标冲突，暂停单指标优化，查独立目标证据。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.04.02.RQ01"
+  },
+  {
+    "topic": "K19.04.03",
+    "method": "错误反馈定位源、版本及受影响记录，分别裁定已知与未知。",
+    "fixture": "错误来自单版本提示，其他任务不使用该版本。",
+    "expected_and_boundary": "仅确认受影响范围，未知待查；不作全库失效断言。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.04.03.RQ01"
+  },
+  {
+    "topic": "K19.04.04",
+    "method": "保护用户自主选择，过度依赖通过独立任务及可撤替代观察。",
+    "fixture": "带AI答案正确，无辅助新题错。",
+    "expected_and_boundary": "提示依赖候选，不能诊断成瘾或强制使用。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.04.04.RQ01"
+  },
+  {
+    "topic": "K19.04.05",
+    "method": "自动建议与高风险裁决分离，需明确权限、风险和人工复核。",
+    "fixture": "预测不及格概率.8，拟自动拒绝入学。",
+    "expected_and_boundary": "拒绝自动裁决；交有权人核适用测量、证据及申诉。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.04.05.RQ01"
+  },
+  {
+    "topic": "K19.05.01",
+    "method": "研究伦理审查分开自主、风险收益、公平选择及具体制度。",
+    "fixture": "教育试验拟只招资源不足者，风险和同意不清。",
+    "expected_and_boundary": "伦理问题待审，不能以潜在收益直接批准。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.05.01.RQ01"
+  },
+  {
+    "topic": "K19.05.02",
+    "method": "教师、学习者及AI各自负责明确范围，建议不转移专业责任。",
+    "fixture": "AI建议更换课程，教师未确认。",
+    "expected_and_boundary": "不得自动实施；有权人审证据及替代选项。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.05.02.RQ01"
+  },
+  {
+    "topic": "K19.05.03",
+    "method": "来源访问、引用、复制、公开分发分别检查，不以可下载替代许可。",
+    "fixture": "私有Drive试卷能下载但再发布权未知。",
+    "expected_and_boundary": "仅限定私有分析候选，原题公开HOLD。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.05.03.RQ01"
+  },
+  {
+    "topic": "K19.05.04",
+    "method": "文档需对应实际执行证据、职责、监测和修订；文本非合规证明。",
+    "fixture": "政策写停止可用，但没有实际停止测试。",
+    "expected_and_boundary": "记录缺证据，不能签署实际合规。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.05.04.RQ01"
+  },
+  {
+    "topic": "K19.05.05",
+    "method": "申诉绑定决定、责任主体、证据、时限及复核路径。",
+    "fixture": "模型拒绝建议，仅告知“系统判定”，无法联系复核。",
+    "expected_and_boundary": "解释与申诉不足；高风险决定暂停，建立人工复核。",
+    "origin": "ORIGINAL_PROJECT_METHOD_AND_SYNTHETIC_DISCRIMINATION_NOT_EMPIRICAL",
+    "qualification": "NOT_RUN",
+    "requirement_id": "K19.05.05.RQ01"
+  }
+]

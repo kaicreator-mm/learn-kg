@@ -1,0 +1,1019 @@
+{
+  "cq_routes": [
+    {
+      "id": "CQ09",
+      "route": [
+        "K09",
+        "K16",
+        "K19",
+        "A08"
+      ],
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CQ13",
+      "route": [
+        "A07",
+        "K08",
+        "K13",
+        "K16",
+        "F07",
+        "P07"
+      ],
+      "status": "NOT_RUN"
+    }
+  ],
+  "cross_topic_candidate_source": {
+    "json_pointer": "/records",
+    "source_path": "docs/drafts/s01/K16/cross-topic-links.json",
+    "source_sha256": "a89da18b8e21432a775bcf7a9b8aa7714a8a619ccaa2f2481b97c56dde247284",
+    "source_status": "HISTORICAL_CANDIDATE_ONLY"
+  },
+  "independent_receipt": null,
+  "limits": [
+    "Per-topic discriminating synthetic case is new authoring; NOT_RUN for nonnumerical cases. No automatic professional adequacy closure.",
+    "Original claim statement, conditions, boundary and source/case pointers retained; no source/publication qualification, no automatic view applicability or relation promotion.",
+    "New finite cases builder-only; source and professional qualification pending."
+  ],
+  "module_package": "learning-core",
+  "owner": "K16",
+  "record_counts": {
+    "Case": 122,
+    "Claim": 75,
+    "CompositionSpec": 1,
+    "ConditionSpec": 4,
+    "Locator": 31,
+    "PolicySpec": 1,
+    "Relation": 26,
+    "Requirement": 20,
+    "Topic": 26,
+    "Validation": 7
+  },
+  "record_files": [
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K16/records-00.jsonl",
+      "record_count": 82,
+      "sha256": "2b73486434f17bad8aad968cdc5e117f06f0c5da90c0554e23356ba4f179cddc"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K16/records-01.jsonl",
+      "record_count": 70,
+      "sha256": "14104bc985f64edd03af68579c271601663fdf5f75c40376dedde51d020a4498"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K16/records-02.jsonl",
+      "record_count": 60,
+      "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K16/records-03.jsonl",
+      "record_count": 86,
+      "sha256": "9676231931e0005e54739fb2bead5d27d6edcfe4c1f2e29790ee7969f9397965"
+    },
+    {
+      "format": "JSONL_RECORDS",
+      "path": "K16/records-04.jsonl",
+      "record_count": 15,
+      "sha256": "b8d640c765230c4c6a168324dcb2a0557377508c008aec1d075ac8be72afcd73"
+    }
+  ],
+  "status": "STRUCTURAL_CANDIDATE_PARTIAL_PROFESSIONAL_WORK",
+  "topics": [
+    {
+      "active_claim_ids": [
+        "K16.01.01.TG.01",
+        "K16.01.01.D4.02"
+      ],
+      "case_ids": [
+        "K16.01.01.CASE.01:counterexample",
+        "K16.01.01.CASE.01:forward",
+        "K16.01.01.CASE.01:intervention",
+        "K16.01.01.CASE.01:reverse",
+        "K16.01.01.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.01.01.TG.01",
+        "K16.01.01.D4.01",
+        "K16.01.01.D4.02"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.01.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.01.01.TG.01",
+        "K16.01.01.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/11"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.01.01.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.01.02.TG.01",
+        "K16.01.02.D4.02"
+      ],
+      "case_ids": [
+        "K16.01.02.CASE.01:counterexample",
+        "K16.01.02.CASE.01:forward",
+        "K16.01.02.CASE.01:intervention",
+        "K16.01.02.CASE.01:reverse",
+        "K16.01.02.D4.03:inline:example",
+        "K16.01.02.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.01.02.TG.01",
+        "K16.01.02.D4.01",
+        "K16.01.02.D4.02",
+        "K16.01.02.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.01.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.01.02.TG.01",
+        "K16.01.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.01.02.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.01.03.TG.01",
+        "K16.01.03.D4.02"
+      ],
+      "case_ids": [
+        "K16.01.03.CASE.01:counterexample",
+        "K16.01.03.CASE.01:forward",
+        "K16.01.03.CASE.01:intervention",
+        "K16.01.03.CASE.01:reverse",
+        "K16.01.03.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.01.03.TG.01",
+        "K16.01.03.D4.01",
+        "K16.01.03.D4.02"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.01.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.01.03.TG.01",
+        "K16.01.03.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/12"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.01.03.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.01.04.TG.01",
+        "K16.01.04.D4.02"
+      ],
+      "case_ids": [
+        "K16.01.04.CASE.01:counterexample",
+        "K16.01.04.CASE.01:forward",
+        "K16.01.04.CASE.01:intervention",
+        "K16.01.04.CASE.01:reverse",
+        "K16.01.04.D4.03:inline:example",
+        "K16.01.04.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.01.04.TG.01",
+        "K16.01.04.D4.01",
+        "K16.01.04.D4.02",
+        "K16.01.04.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.01.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.01.04.TG.01",
+        "K16.01.04.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.01.04.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.02.01.TG.01",
+        "K16.02.01.D4.01",
+        "K16.02.01.D4.02"
+      ],
+      "case_ids": [
+        "K16.02.01.CASE.01:counterexample",
+        "K16.02.01.CASE.01:forward",
+        "K16.02.01.CASE.01:intervention",
+        "K16.02.01.CASE.01:reverse",
+        "K16.02.01.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.02.01.TG.01",
+        "K16.02.01.D4.01",
+        "K16.02.01.D4.02"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.02.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.02.01.TG.01",
+        "K16.02.01.D4.01",
+        "K16.02.01.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/13"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.02.01.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {},
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.02.02.TG.01",
+        "K16.02.02.D4.01",
+        "K16.02.02.D4.02"
+      ],
+      "case_ids": [
+        "K16.02.02.CASE.01:counterexample",
+        "K16.02.02.CASE.01:forward",
+        "K16.02.02.CASE.01:intervention",
+        "K16.02.02.CASE.01:reverse",
+        "K16.02.02.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.02.02.TG.01",
+        "K16.02.02.D4.01",
+        "K16.02.02.D4.02"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.02.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.02.02.TG.01",
+        "K16.02.02.D4.01",
+        "K16.02.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/14"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.02.02.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {},
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.02.03.TG.01",
+        "K16.02.03.D4.02"
+      ],
+      "case_ids": [
+        "K16.02.03.CASE.01:counterexample",
+        "K16.02.03.CASE.01:forward",
+        "K16.02.03.CASE.01:intervention",
+        "K16.02.03.CASE.01:reverse",
+        "K16.02.03.D4.03:inline:example",
+        "K16.02.03.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.02.03.TG.01",
+        "K16.02.03.D4.01",
+        "K16.02.03.D4.02",
+        "K16.02.03.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.02.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.02.03.TG.01",
+        "K16.02.03.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.02.03.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.02.04.TG.01",
+        "K16.02.04.D4.01",
+        "K16.02.04.D4.02"
+      ],
+      "case_ids": [
+        "K16.02.04.CASE.01:counterexample",
+        "K16.02.04.CASE.01:forward",
+        "K16.02.04.CASE.01:intervention",
+        "K16.02.04.CASE.01:reverse",
+        "K16.02.04.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.02.04.TG.01",
+        "K16.02.04.D4.01",
+        "K16.02.04.D4.02"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.02.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.02.04.TG.01",
+        "K16.02.04.D4.01",
+        "K16.02.04.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/15"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.02.04.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {},
+      "validation_ids": [],
+      "view_scope_refs": [
+        "F06"
+      ]
+    },
+    {
+      "active_claim_ids": [
+        "K16.03.01.TG.01",
+        "K16.03.01.D4.02"
+      ],
+      "case_ids": [
+        "K16.03.01.CASE.01:counterexample",
+        "K16.03.01.CASE.01:forward",
+        "K16.03.01.CASE.01:intervention",
+        "K16.03.01.CASE.01:reverse",
+        "K16.03.01.D4.03:inline:example",
+        "K16.03.01.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.03.01.TG.01",
+        "K16.03.01.D4.01",
+        "K16.03.01.D4.02",
+        "K16.03.01.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.03.01",
+      "explicit_view_claim_refs": {
+        "K16.03.01.D4.01": [
+          [
+            "P08",
+            "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+            "/contracts/7/bindings/3"
+          ]
+        ]
+      },
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.03.01.TG.01",
+        "K16.03.01.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.03.01.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.03.02.TG.01",
+        "K16.03.02.D4.02",
+        "K16.03.02.TG.S01"
+      ],
+      "case_ids": [
+        "K16.03.02.CASE.01:counterexample",
+        "K16.03.02.CASE.01:forward",
+        "K16.03.02.CASE.01:intervention",
+        "K16.03.02.CASE.01:reverse",
+        "K16.03.02.TG.01:case",
+        "K16.03.02.TG.S01:case"
+      ],
+      "claim_ids": [
+        "K16.03.02.TG.01",
+        "K16.03.02.D4.01",
+        "K16.03.02.D4.02",
+        "K16.03.02.TG.S01"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.03.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.03.02.TG.01",
+        "K16.03.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/16"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.03.02.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.03.03.TG.01",
+        "K16.03.03.D4.02"
+      ],
+      "case_ids": [
+        "K16.03.03.CASE.01:counterexample",
+        "K16.03.03.CASE.01:forward",
+        "K16.03.03.CASE.01:intervention",
+        "K16.03.03.CASE.01:reverse",
+        "K16.03.03.D4.03:inline:example",
+        "K16.03.03.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.03.03.TG.01",
+        "K16.03.03.D4.01",
+        "K16.03.03.D4.02",
+        "K16.03.03.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.03.03",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.03.03.TG.01",
+        "K16.03.03.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.03.03.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": [
+        "F07"
+      ]
+    },
+    {
+      "active_claim_ids": [
+        "K16.03.04.TG.01",
+        "K16.03.04.D4.02"
+      ],
+      "case_ids": [
+        "K16.03.04.CASE.01:counterexample",
+        "K16.03.04.CASE.01:forward",
+        "K16.03.04.CASE.01:intervention",
+        "K16.03.04.CASE.01:reverse",
+        "K16.03.04.D4.03:inline:example",
+        "K16.03.04.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.03.04.TG.01",
+        "K16.03.04.D4.01",
+        "K16.03.04.D4.02",
+        "K16.03.04.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.03.04",
+      "explicit_view_claim_refs": {
+        "K16.03.04.D4.01": [
+          [
+            "F06",
+            "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+            "/contracts/15/bindings/3"
+          ]
+        ]
+      },
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.03.04.TG.01",
+        "K16.03.04.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.03.04.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": [
+        "P08",
+        "P10"
+      ]
+    },
+    {
+      "active_claim_ids": [
+        "K16.04.01.TG.01",
+        "K16.04.01.D4.02",
+        "K16.04.01.TG.S01"
+      ],
+      "case_ids": [
+        "K16.04.01.CASE.01:counterexample",
+        "K16.04.01.CASE.01:forward",
+        "K16.04.01.CASE.01:intervention",
+        "K16.04.01.CASE.01:reverse",
+        "K16.04.01.TG.01:case",
+        "K16.04.01.TG.S01:case"
+      ],
+      "claim_ids": [
+        "K16.04.01.TG.01",
+        "K16.04.01.D4.01",
+        "K16.04.01.D4.02",
+        "K16.04.01.TG.S01"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.04.01",
+      "explicit_view_claim_refs": {
+        "K16.04.01.D4.01": [
+          [
+            "F03",
+            "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+            "/contracts/12/bindings/2"
+          ]
+        ]
+      },
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.04.01.TG.01",
+        "K16.04.01.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/17"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.04.01.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.04.02.TG.01",
+        "K16.04.02.D4.02",
+        "K16.04.02.TG.S01"
+      ],
+      "case_ids": [
+        "K16.04.02.CASE.01:counterexample",
+        "K16.04.02.CASE.01:forward",
+        "K16.04.02.CASE.01:intervention",
+        "K16.04.02.CASE.01:reverse",
+        "K16.04.02.TG.01:case",
+        "K16.04.02.TG.S01:case"
+      ],
+      "claim_ids": [
+        "K16.04.02.TG.01",
+        "K16.04.02.D4.01",
+        "K16.04.02.D4.02",
+        "K16.04.02.TG.S01"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.04.02",
+      "explicit_view_claim_refs": {
+        "K16.04.02.D4.01": [
+          [
+            "F07",
+            "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+            "/contracts/16/bindings/2"
+          ]
+        ]
+      },
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.04.02.TG.01",
+        "K16.04.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "APPLICATION_OR_SOURCE_ADEQUACY_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/18"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.04.02.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "VERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.04.03.TG.01",
+        "K16.04.03.D4.02"
+      ],
+      "case_ids": [
+        "K16.04.03.CASE.01:counterexample",
+        "K16.04.03.CASE.01:forward",
+        "K16.04.03.CASE.01:intervention",
+        "K16.04.03.CASE.01:reverse",
+        "K16.04.03.D4.03:inline:example",
+        "K16.04.03.TG.01.F17",
+        "K16.04.03.TG.01.F18",
+        "K16.04.03.TG.01.F19",
+        "K16.04.03.TG.01.F20",
+        "K16.04.03.TG.01.F21",
+        "K16.04.03.TG.01.F22",
+        "K16.04.03.TG.01.F23",
+        "K16.04.03.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.04.03.TG.01",
+        "K16.04.03.D4.01",
+        "K16.04.03.D4.02",
+        "K16.04.03.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.04.03",
+      "explicit_view_claim_refs": {
+        "K16.04.03.D4.01": [
+          [
+            "P10",
+            "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+            "/contracts/9/bindings/3"
+          ],
+          [
+            "A07",
+            "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+            "/contracts/24/bindings/1"
+          ]
+        ]
+      },
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.04.03.TG.01",
+        "K16.04.03.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.04.03.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [
+        "K16.04.03.TG.01.F17:validation",
+        "K16.04.03.TG.01.F18:validation",
+        "K16.04.03.TG.01.F19:validation",
+        "K16.04.03.TG.01.F20:validation",
+        "K16.04.03.TG.01.F21:validation",
+        "K16.04.03.TG.01.F22:validation",
+        "K16.04.03.TG.01.F23:validation"
+      ],
+      "view_scope_refs": [
+        "A07",
+        "F03"
+      ]
+    },
+    {
+      "active_claim_ids": [
+        "K16.04.04.TG.01",
+        "K16.04.04.D4.02"
+      ],
+      "case_ids": [
+        "K16.04.04.CASE.01:counterexample",
+        "K16.04.04.CASE.01:forward",
+        "K16.04.04.CASE.01:intervention",
+        "K16.04.04.CASE.01:reverse",
+        "K16.04.04.D4.03:inline:example",
+        "K16.04.04.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.04.04.TG.01",
+        "K16.04.04.D4.01",
+        "K16.04.04.D4.02",
+        "K16.04.04.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.04.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.04.04.TG.01",
+        "K16.04.04.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.04.04.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.05.01.TG.01",
+        "K16.05.01.D4.02"
+      ],
+      "case_ids": [
+        "K16.05.01.CASE.01:counterexample",
+        "K16.05.01.CASE.01:forward",
+        "K16.05.01.CASE.01:intervention",
+        "K16.05.01.CASE.01:reverse",
+        "K16.05.01.D4.03:inline:example",
+        "K16.05.01.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.05.01.TG.01",
+        "K16.05.01.D4.01",
+        "K16.05.01.D4.02",
+        "K16.05.01.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.05.01",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.05.01.TG.01",
+        "K16.05.01.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.05.01.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": [
+        "A03",
+        "F05"
+      ]
+    },
+    {
+      "active_claim_ids": [
+        "K16.05.02.TG.01",
+        "K16.05.02.D4.02"
+      ],
+      "case_ids": [
+        "K16.05.02.CASE.01:counterexample",
+        "K16.05.02.CASE.01:forward",
+        "K16.05.02.CASE.01:intervention",
+        "K16.05.02.CASE.01:reverse",
+        "K16.05.02.D4.03:inline:example",
+        "K16.05.02.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.05.02.TG.01",
+        "K16.05.02.D4.01",
+        "K16.05.02.D4.02",
+        "K16.05.02.D4.03"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.05.02",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.05.02.TG.01",
+        "K16.05.02.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.05.02.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 1
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    },
+    {
+      "active_claim_ids": [
+        "K16.05.03.TG.01",
+        "K16.05.03.D4.01",
+        "K16.05.03.D4.02"
+      ],
+      "case_ids": [
+        "K16.05.03.CASE.01:counterexample",
+        "K16.05.03.CASE.01:forward",
+        "K16.05.03.CASE.01:intervention",
+        "K16.05.03.CASE.01:reverse",
+        "K16.05.03.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.05.03.TG.01",
+        "K16.05.03.D4.01",
+        "K16.05.03.D4.02"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.05.03",
+      "explicit_view_claim_refs": {
+        "K16.05.03.D4.01": [
+          [
+            "P07",
+            "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+            "/contracts/6/bindings/1"
+          ]
+        ]
+      },
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.05.03.TG.01",
+        "K16.05.03.D4.01",
+        "K16.05.03.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "POLICY_SCOPE_RETAIN_OR_PROFESSIONAL_HOLD",
+        "docs/drafts/s01/depth/D3/remediation/R2/triage-K09-K16-03.json",
+        "/records/19"
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.05.03.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {},
+      "validation_ids": [],
+      "view_scope_refs": [
+        "P07"
+      ]
+    },
+    {
+      "active_claim_ids": [
+        "K16.05.04.TG.01",
+        "K16.05.04.D4.02"
+      ],
+      "case_ids": [
+        "K16.05.04.CASE.01:counterexample",
+        "K16.05.04.CASE.01:forward",
+        "K16.05.04.CASE.01:intervention",
+        "K16.05.04.CASE.01:reverse",
+        "K16.05.04.D4.03:inline:example",
+        "K16.05.04.D4.04:inline:example",
+        "K16.05.04.TG.01:case"
+      ],
+      "claim_ids": [
+        "K16.05.04.TG.01",
+        "K16.05.04.D4.01",
+        "K16.05.04.D4.02",
+        "K16.05.04.D4.03",
+        "K16.05.04.D4.04"
+      ],
+      "current_depth_disposition": "TARGETED_DISCRIMINATION_CASE_ADDED_NOT_ADEQUACY_VERDICT",
+      "d3_id": "K16.05.04",
+      "explicit_view_claim_refs": {},
+      "historical_relation_candidate_refs": [],
+      "no_source_claim_ids": [
+        "K16.05.04.TG.01",
+        "K16.05.04.D4.02"
+      ],
+      "prior_adequacy_disposition": [
+        "DEPTH_CANDIDATES_EXIST_NOT_ADEQUACY_PASS",
+        null,
+        null
+      ],
+      "qualification": "NOT_RUN",
+      "relation_disposition": "Explicit example/evidence relations only; historical semantic anchors pending integration.",
+      "requirement_id": "K16.05.04.RQ01",
+      "source_gap_policy": "Missing/ambiguous/unverified locator and unsupported empirical claims remain HOLD; original derivation and project rules distinguished.",
+      "source_locator_states": {
+        "MISSING": 1,
+        "RECORDED_NOT_REVERIFIED": 2
+      },
+      "validation_ids": [],
+      "view_scope_refs": []
+    }
+  ],
+  "typed_refs": 678,
+  "version": "0.1.0-technology-inclusion-governance-candidate-1"
+}

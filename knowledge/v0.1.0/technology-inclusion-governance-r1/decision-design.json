@@ -1,0 +1,93 @@
+[
+  {
+    "id": "K16.TG.COMP.01",
+    "topics": [
+      "K16.02.04",
+      "K16.03.04",
+      "K16.04.03"
+    ],
+    "type": "ADAPTATION",
+    "rules": [
+      {
+        "field": "need_confirmed",
+        "value": false,
+        "action": "CLARIFY",
+        "reason": "确认功能需求"
+      },
+      {
+        "field": "unauthorized",
+        "value": true,
+        "action": "REFUSE",
+        "reason": "不越权"
+      },
+      {
+        "field": "construct_changed",
+        "value": true,
+        "action": "DEFER",
+        "reason": "需另设测量解释"
+      },
+      {
+        "field": "support_verified",
+        "value": true,
+        "action": "SUGGEST",
+        "reason": "仅提供可撤回适配"
+      }
+    ],
+    "unknown_action": "CLARIFY",
+    "boundary": "仅提供项目适配建议，不作医疗或测量等效裁决。",
+    "ordinals": [
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ]
+  },
+  {
+    "id": "K19.TG.COMP.01",
+    "topics": [
+      "K19.03.02",
+      "K19.04.05",
+      "K19.05.02"
+    ],
+    "type": "GOVERNANCE",
+    "rules": [
+      {
+        "field": "withdrawn",
+        "value": true,
+        "action": "STOP",
+        "reason": "退出优先"
+      },
+      {
+        "field": "high_risk",
+        "value": true,
+        "action": "DEFER",
+        "reason": "交有权人复核"
+      },
+      {
+        "field": "unauthorized",
+        "value": true,
+        "action": "REFUSE",
+        "reason": "不越权"
+      },
+      {
+        "field": "advice_eligible",
+        "value": true,
+        "action": "SUGGEST",
+        "reason": "仅候选建议"
+      }
+    ],
+    "unknown_action": "CLARIFY",
+    "boundary": "不自动执行高风险决定；权限不由预测覆盖。",
+    "ordinals": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  }
+]

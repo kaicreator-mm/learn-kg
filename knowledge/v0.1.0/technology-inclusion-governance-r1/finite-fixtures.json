@@ -1,0 +1,634 @@
+[
+  {
+    "id": "TG-F01",
+    "topic": "K15.06.04",
+    "mode": "event",
+    "input": {
+      "old_id": "e1",
+      "new_id": "e1",
+      "old_hash": "a",
+      "new_hash": "a",
+      "authorized": true
+    },
+    "expected": "DUPLICATE_NO_UPDATE"
+  },
+  {
+    "id": "TG-F02",
+    "topic": "K15.06.04",
+    "mode": "event",
+    "input": {
+      "old_id": "e1",
+      "new_id": "e1",
+      "old_hash": "a",
+      "new_hash": "b",
+      "authorized": true
+    },
+    "expected": "CONFLICT_HOLD"
+  },
+  {
+    "id": "TG-F03",
+    "topic": "K15.06.04",
+    "mode": "event",
+    "input": {
+      "old_id": "e1",
+      "new_id": "e2",
+      "old_hash": "a",
+      "new_hash": "a",
+      "authorized": true
+    },
+    "expected": "NEW_EVENT_CANDIDATE"
+  },
+  {
+    "id": "TG-F04",
+    "topic": "K15.06.04",
+    "mode": "event",
+    "input": {
+      "old_id": "e1",
+      "new_id": "e1",
+      "old_hash": "a",
+      "new_hash": "a",
+      "authorized": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F05",
+    "topic": "K15.06.04",
+    "mode": "event",
+    "input": {
+      "old_id": " ",
+      "new_id": "e1",
+      "old_hash": "a",
+      "new_hash": "a",
+      "authorized": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F06",
+    "topic": "K15.06.02",
+    "mode": "available",
+    "input": {
+      "event_time": 9,
+      "available_at": 11,
+      "prediction_time": 10,
+      "same_clock": true
+    },
+    "expected": "EXCLUDE_FUTURE_OR_UNAVAILABLE"
+  },
+  {
+    "id": "TG-F07",
+    "topic": "K15.06.02",
+    "mode": "available",
+    "input": {
+      "event_time": 9,
+      "available_at": 11,
+      "prediction_time": 11,
+      "same_clock": true
+    },
+    "expected": "AVAILABLE"
+  },
+  {
+    "id": "TG-F08",
+    "topic": "K15.06.02",
+    "mode": "available",
+    "input": {
+      "event_time": 9,
+      "available_at": 11,
+      "prediction_time": 10,
+      "same_clock": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F09",
+    "topic": "K15.06.02",
+    "mode": "available",
+    "input": {
+      "event_time": 9,
+      "available_at": 8,
+      "prediction_time": 10,
+      "same_clock": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F10",
+    "topic": "K15.03.02",
+    "mode": "metric",
+    "input": {
+      "correct": 8,
+      "incorrect": 2,
+      "missing": 5,
+      "same_target": true,
+      "denominator": "VALID_RESPONSE"
+    },
+    "expected": "4/5"
+  },
+  {
+    "id": "TG-F11",
+    "topic": "K15.03.02",
+    "mode": "metric",
+    "input": {
+      "correct": 8,
+      "incorrect": 2,
+      "missing": 5,
+      "same_target": true,
+      "denominator": "ALL_ADMINISTERED"
+    },
+    "expected": "8/15"
+  },
+  {
+    "id": "TG-F12",
+    "topic": "K15.03.02",
+    "mode": "metric",
+    "input": {
+      "correct": 8,
+      "incorrect": 2,
+      "missing": 5,
+      "same_target": true,
+      "denominator": "UNKNOWN"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F13",
+    "topic": "K15.03.02",
+    "mode": "metric",
+    "input": {
+      "correct": 8,
+      "incorrect": 2,
+      "missing": true,
+      "same_target": true,
+      "denominator": "VALID_RESPONSE"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F14",
+    "topic": "K15.03.02",
+    "mode": "metric",
+    "input": {
+      "correct": 0,
+      "incorrect": 0,
+      "missing": 5,
+      "same_target": true,
+      "denominator": "VALID_RESPONSE"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F15",
+    "topic": "K15.06.03",
+    "mode": "roundtrip",
+    "input": {
+      "before": {
+        "id": "e1",
+        "hint": false,
+        "response": "A"
+      },
+      "after": {
+        "id": "e1",
+        "hint": false,
+        "response": "A"
+      },
+      "required_fields": [
+        "id",
+        "hint",
+        "response"
+      ]
+    },
+    "expected": "MATCH_SCOPED_FIELDS_ONLY"
+  },
+  {
+    "id": "TG-F16",
+    "topic": "K15.06.03",
+    "mode": "roundtrip",
+    "input": {
+      "before": {
+        "id": "e1",
+        "hint": false,
+        "response": "A"
+      },
+      "after": {
+        "id": "e1",
+        "response": "A"
+      },
+      "required_fields": [
+        "id",
+        "hint",
+        "response"
+      ]
+    },
+    "expected": "LOSS_HOLD"
+  },
+  {
+    "id": "TG-F17",
+    "topic": "K15.06.03",
+    "mode": "roundtrip",
+    "input": {
+      "before": {
+        "id": "e1",
+        "hint": false,
+        "response": "A"
+      },
+      "after": {
+        "id": "e1",
+        "hint": 0,
+        "response": "A"
+      },
+      "required_fields": [
+        "id",
+        "hint",
+        "response"
+      ]
+    },
+    "expected": "LOSS_HOLD"
+  },
+  {
+    "id": "TG-F18",
+    "topic": "K16.04.03",
+    "mode": "adaptation",
+    "input": {
+      "confirmed_need": true,
+      "authorized": true,
+      "construct_preserved": true,
+      "actual_access_verified": true
+    },
+    "expected": "SUGGEST_REVERSIBLE_SUPPORT_ONLY"
+  },
+  {
+    "id": "TG-F19",
+    "topic": "K16.04.03",
+    "mode": "adaptation",
+    "input": {
+      "confirmed_need": true,
+      "authorized": true,
+      "construct_preserved": false,
+      "actual_access_verified": true
+    },
+    "expected": "SEPARATE_CONSTRUCT"
+  },
+  {
+    "id": "TG-F20",
+    "topic": "K16.04.03",
+    "mode": "adaptation",
+    "input": {
+      "confirmed_need": true,
+      "authorized": true,
+      "construct_preserved": null,
+      "actual_access_verified": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F21",
+    "topic": "K16.04.03",
+    "mode": "adaptation",
+    "input": {
+      "confirmed_need": true,
+      "authorized": true,
+      "construct_preserved": true,
+      "actual_access_verified": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F22",
+    "topic": "K16.04.03",
+    "mode": "adaptation",
+    "input": {
+      "confirmed_need": false,
+      "authorized": true,
+      "construct_preserved": true,
+      "actual_access_verified": true
+    },
+    "expected": "CLARIFY"
+  },
+  {
+    "id": "TG-F23",
+    "topic": "K16.04.03",
+    "mode": "adaptation",
+    "input": {
+      "confirmed_need": true,
+      "authorized": false,
+      "construct_preserved": true,
+      "actual_access_verified": true
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F24",
+    "topic": "K16.04.03",
+    "mode": "adaptation",
+    "input": {
+      "confirmed_need": true,
+      "authorized": null,
+      "construct_preserved": true,
+      "actual_access_verified": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F25",
+    "topic": "K19.02.03",
+    "mode": "access",
+    "input": {
+      "identity_verified": true,
+      "role_permitted": true,
+      "purpose_permitted": true,
+      "scope_permitted": true,
+      "within_term": true,
+      "revoked": false
+    },
+    "expected": "AUTHORIZED_CANDIDATE_ONLY"
+  },
+  {
+    "id": "TG-F26",
+    "topic": "K19.02.03",
+    "mode": "access",
+    "input": {
+      "identity_verified": true,
+      "role_permitted": true,
+      "purpose_permitted": true,
+      "scope_permitted": true,
+      "within_term": true,
+      "revoked": true
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F27",
+    "topic": "K19.02.03",
+    "mode": "access",
+    "input": {
+      "identity_verified": true,
+      "role_permitted": true,
+      "purpose_permitted": true,
+      "scope_permitted": false,
+      "within_term": true,
+      "revoked": false
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F28",
+    "topic": "K19.02.03",
+    "mode": "access",
+    "input": {
+      "identity_verified": true,
+      "role_permitted": true,
+      "purpose_permitted": true,
+      "scope_permitted": null,
+      "within_term": true,
+      "revoked": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F29",
+    "topic": "K19.02.03",
+    "mode": "access",
+    "input": {
+      "identity_verified": true,
+      "role_permitted": true,
+      "purpose_permitted": true,
+      "scope_permitted": true,
+      "within_term": false,
+      "revoked": false
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F30",
+    "topic": "K19.02.03",
+    "mode": "access",
+    "input": {
+      "identity_verified": true,
+      "role_permitted": true,
+      "purpose_permitted": true,
+      "scope_permitted": true,
+      "within_term": true,
+      "revoked": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F31",
+    "topic": "K19.02.03",
+    "mode": "access",
+    "input": {
+      "identity_verified": true,
+      "role_permitted": 1,
+      "purpose_permitted": true,
+      "scope_permitted": true,
+      "within_term": true,
+      "revoked": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F32",
+    "topic": "K19.02.05",
+    "mode": "purpose",
+    "input": {
+      "authorized_purpose": "LEARNING",
+      "requested_purpose": "LEARNING",
+      "withdrawn": false,
+      "original_authorization_valid": true,
+      "new_purpose_authorized": false,
+      "applicable_requirements_checked": true
+    },
+    "expected": "AUTHORIZED_CANDIDATE_ONLY"
+  },
+  {
+    "id": "TG-F33",
+    "topic": "K19.02.05",
+    "mode": "purpose",
+    "input": {
+      "authorized_purpose": "LEARNING",
+      "requested_purpose": "TRAINING",
+      "withdrawn": false,
+      "original_authorization_valid": true,
+      "new_purpose_authorized": false,
+      "applicable_requirements_checked": true
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F34",
+    "topic": "K19.02.05",
+    "mode": "purpose",
+    "input": {
+      "authorized_purpose": "LEARNING",
+      "requested_purpose": "TRAINING",
+      "withdrawn": false,
+      "original_authorization_valid": true,
+      "new_purpose_authorized": null,
+      "applicable_requirements_checked": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F35",
+    "topic": "K19.02.05",
+    "mode": "purpose",
+    "input": {
+      "authorized_purpose": "LEARNING",
+      "requested_purpose": "TRAINING",
+      "withdrawn": false,
+      "original_authorization_valid": true,
+      "new_purpose_authorized": true,
+      "applicable_requirements_checked": true
+    },
+    "expected": "AUTHORIZED_CANDIDATE_ONLY"
+  },
+  {
+    "id": "TG-F36",
+    "topic": "K19.02.05",
+    "mode": "purpose",
+    "input": {
+      "authorized_purpose": "LEARNING",
+      "requested_purpose": "LEARNING",
+      "withdrawn": true,
+      "original_authorization_valid": true,
+      "new_purpose_authorized": false,
+      "applicable_requirements_checked": true
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F37",
+    "topic": "K19.02.05",
+    "mode": "purpose",
+    "input": {
+      "authorized_purpose": "LEARNING",
+      "requested_purpose": "LEARNING",
+      "withdrawn": false,
+      "original_authorization_valid": true,
+      "new_purpose_authorized": false,
+      "applicable_requirements_checked": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F38",
+    "topic": "K19.05.03",
+    "mode": "publication",
+    "input": {
+      "source_identity_verified": true,
+      "public_release_allowed": true,
+      "scope_checked": true,
+      "reviewer_approved": true
+    },
+    "expected": "REVIEW_CANDIDATE_ONLY"
+  },
+  {
+    "id": "TG-F39",
+    "topic": "K19.05.03",
+    "mode": "publication",
+    "input": {
+      "source_identity_verified": true,
+      "public_release_allowed": false,
+      "scope_checked": true,
+      "reviewer_approved": true
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F40",
+    "topic": "K19.05.03",
+    "mode": "publication",
+    "input": {
+      "source_identity_verified": true,
+      "public_release_allowed": null,
+      "scope_checked": true,
+      "reviewer_approved": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F41",
+    "topic": "K19.05.03",
+    "mode": "publication",
+    "input": {
+      "source_identity_verified": true,
+      "public_release_allowed": true,
+      "scope_checked": true,
+      "reviewer_approved": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F42",
+    "topic": "K19.04.05",
+    "mode": "decision",
+    "input": {
+      "withdrawn": false,
+      "high_risk": false,
+      "authorized": true,
+      "evidence_matches": true
+    },
+    "expected": "SUGGEST_ONLY"
+  },
+  {
+    "id": "TG-F43",
+    "topic": "K19.04.05",
+    "mode": "decision",
+    "input": {
+      "withdrawn": true,
+      "high_risk": true,
+      "authorized": true,
+      "evidence_matches": true
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "TG-F44",
+    "topic": "K19.04.05",
+    "mode": "decision",
+    "input": {
+      "withdrawn": false,
+      "high_risk": true,
+      "authorized": true,
+      "evidence_matches": true
+    },
+    "expected": "DEFER_TO_AUTHORIZED_HUMAN"
+  },
+  {
+    "id": "TG-F45",
+    "topic": "K19.04.05",
+    "mode": "decision",
+    "input": {
+      "withdrawn": false,
+      "high_risk": false,
+      "authorized": false,
+      "evidence_matches": true
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TG-F46",
+    "topic": "K19.04.05",
+    "mode": "decision",
+    "input": {
+      "withdrawn": false,
+      "high_risk": false,
+      "authorized": true,
+      "evidence_matches": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TG-F47",
+    "topic": "K19.04.05",
+    "mode": "decision",
+    "input": {
+      "withdrawn": false,
+      "high_risk": null,
+      "authorized": true,
+      "evidence_matches": true
+    },
+    "expected": "HOLD"
+  }
+]
