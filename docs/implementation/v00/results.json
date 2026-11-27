@@ -1,0 +1,666 @@
+{
+  "scope": "V00_FINITE_SYNTHETIC_NOT_QUALIFICATION",
+  "fixture_sha256": "8c7dffbfe22638b23dbc1eff17f13207ef925f7ad1f1b04d8a4389afe4862820",
+  "cases": [
+    {
+      "id": "V00-01",
+      "input_digest": "53ef29da4c46955a0860deee75da9df7279d89f6118ef6cfe2c0a12053240e43",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "COMPLETE",
+        "visited": [
+          "start",
+          "check",
+          "done"
+        ],
+        "consumed": 2,
+        "reason": "TERMINAL"
+      },
+      "expected": {
+        "outcome": "COMPLETE",
+        "visited": [
+          "start",
+          "check",
+          "done"
+        ],
+        "consumed": 2,
+        "reason": "TERMINAL"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-02",
+      "input_digest": "5e6c48faf2fd0f430ad9eaddabcb19faf7097a46e3a7a6e78fd871cf8eccd864",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "check"
+        ],
+        "consumed": 1,
+        "reason": "EVENTS_EXHAUSTED"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "check"
+        ],
+        "consumed": 1,
+        "reason": "EVENTS_EXHAUSTED"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-03",
+      "input_digest": "1fb37e3174cac8263330203502a8ad2d7e32f729afd038a40fe2fbdb010d7d90",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_FALSE"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_FALSE"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-04",
+      "input_digest": "9f87a9c26d64d09266c8c87c31682a769f3d10496a54efc9538efba884c5b715",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_UNKNOWN"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_UNKNOWN"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-05",
+      "input_digest": "f37eada117d61d3260b3fe1c45c0170563bd16d8ac47292e9a2e06cc9944ebfa",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_UNKNOWN"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_UNKNOWN"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-06",
+      "input_digest": "db0cf059d82405b11d1d018183ee2d28bf2b3bea8d1b285cd636a1f40d13f79b",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "STOP",
+        "visited": [
+          "start",
+          "stop"
+        ],
+        "consumed": 0,
+        "reason": "TERMINAL"
+      },
+      "expected": {
+        "outcome": "STOP",
+        "visited": [
+          "start",
+          "stop"
+        ],
+        "consumed": 0,
+        "reason": "TERMINAL"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-07",
+      "input_digest": "e7a49843a78f4b30e3096bb5c3b08f492145555aa89a6adca02150d0f12338c5",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "STOP",
+        "visited": [
+          "start",
+          "check",
+          "stop"
+        ],
+        "consumed": 1,
+        "reason": "TERMINAL"
+      },
+      "expected": {
+        "outcome": "STOP",
+        "visited": [
+          "start",
+          "check",
+          "stop"
+        ],
+        "consumed": 1,
+        "reason": "TERMINAL"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-08",
+      "input_digest": "05b4297f53f70273915429d8871b49979a435212b21f900c15e34d3977405401",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "UNKNOWN_EVENT"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "UNKNOWN_EVENT"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-09",
+      "input_digest": "bdc7d019c107d0972d60a0de1de37a2e54c5ee1890e954efd7c767fde301a319",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "d36973b6a40c80faccc4c4c4fe02b295c17556ad4d516a56f0b86fb8f9bb0738"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "check",
+          "unknown"
+        ],
+        "consumed": 1,
+        "reason": "BUDGET_EXHAUSTED"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "check",
+          "unknown"
+        ],
+        "consumed": 1,
+        "reason": "BUDGET_EXHAUSTED"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-10",
+      "input_digest": "1b9888e2ce96e027f29b9033631d41e04afd2b670600007b2a444dc8c2ce980c",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "COMPLETE",
+        "visited": [
+          "start",
+          "check",
+          "done"
+        ],
+        "consumed": 2,
+        "reason": "TERMINAL"
+      },
+      "expected": {
+        "outcome": "COMPLETE",
+        "visited": [
+          "start",
+          "check",
+          "done"
+        ],
+        "consumed": 2,
+        "reason": "TERMINAL"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-11",
+      "input_digest": "a1c5567c70d2d76ec38193549013365c78761ac2de2165183f13d7b62a457d6b",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_FALSE"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_FALSE"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    },
+    {
+      "id": "V00-12",
+      "input_digest": "96bafc96b02b734dae569747c7d3001eb9d6c58aa2ca27e841b2e43bb6f17a1d",
+      "manifest_pins": [
+        {
+          "package": [
+            "chinese",
+            "v1"
+          ],
+          "sha256": "f14ab7d093aa9a35f182014a103e30e0647a93e2c9b0f1459bb73367f577bdb1"
+        },
+        {
+          "package": [
+            "evidence",
+            "v1"
+          ],
+          "sha256": "88db8e77fe63215720829319344ee392e9ff6d655ec36efa4c34def1631db752"
+        },
+        {
+          "package": [
+            "learning-core",
+            "v1"
+          ],
+          "sha256": "3f8d407ad1767800b4147ddc1bf332ef0c1ba4a46739ff7b8814dc956ad37d87"
+        },
+        {
+          "package": [
+            "learning-process",
+            "v1"
+          ],
+          "sha256": "534efd1644d8a0269dcd758001d8ebd49328f0e64a6417924c179f000511fa98"
+        }
+      ],
+      "import_report_digest": "88125732d90773b91279f911793422d2734b424f97198b6b0979761aa96df2f2",
+      "actual": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_UNKNOWN"
+      },
+      "expected": {
+        "outcome": "HOLD",
+        "visited": [
+          "start",
+          "unknown"
+        ],
+        "consumed": 0,
+        "reason": "CONDITION_UNKNOWN"
+      },
+      "result": "PASS_BUILDER_ONLY"
+    }
+  ],
+  "passed": 12,
+  "persistent_sqlite": false,
+  "release_authority": "NOT_GRANTED",
+  "independent_oracle": "NOT_RUN"
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "V00 synthetic author-expectations, no learner data and no professional qualification",
+  "cases": [
+    {"id":"V00-01","event_budget":2,"events":[{"event":"complete","matched":true,"score":0.8},{"event":"complete","matched":true,"score":0.5}],"expect":{"outcome":"COMPLETE","visited":["start","check","done"],"consumed":2,"reason":"TERMINAL"}},
+    {"id":"V00-02","event_budget":2,"events":[{"event":"complete","matched":true,"score":0.8}],"expect":{"outcome":"HOLD","visited":["start","check"],"consumed":1,"reason":"EVENTS_EXHAUSTED"}},
+    {"id":"V00-03","event_budget":2,"events":[{"event":"complete","matched":false,"score":0.8}],"expect":{"outcome":"HOLD","visited":["start","unknown"],"consumed":0,"reason":"CONDITION_FALSE"}},
+    {"id":"V00-04","event_budget":2,"events":[{"event":"complete","score":0.8}],"expect":{"outcome":"HOLD","visited":["start","unknown"],"consumed":0,"reason":"CONDITION_UNKNOWN"}},
+    {"id":"V00-05","event_budget":2,"events":[{"event":"complete","matched":true,"score":true}],"expect":{"outcome":"HOLD","visited":["start","unknown"],"consumed":0,"reason":"CONDITION_UNKNOWN"}},
+    {"id":"V00-06","event_budget":2,"events":[{"event":"stop"}],"expect":{"outcome":"STOP","visited":["start","stop"],"consumed":0,"reason":"TERMINAL"}},
+    {"id":"V00-07","event_budget":2,"events":[{"event":"complete","matched":true,"score":0.8},{"event":"stop"}],"expect":{"outcome":"STOP","visited":["start","check","stop"],"consumed":1,"reason":"TERMINAL"}},
+    {"id":"V00-08","event_budget":2,"events":[{"event":"invented"}],"expect":{"outcome":"HOLD","visited":["start","unknown"],"consumed":0,"reason":"UNKNOWN_EVENT"}},
+    {"id":"V00-09","event_budget":1,"events":[{"event":"complete","matched":true,"score":0.8},{"event":"complete","matched":true,"score":0.8}],"expect":{"outcome":"HOLD","visited":["start","check","unknown"],"consumed":1,"reason":"BUDGET_EXHAUSTED"}},
+    {"id":"V00-10","event_budget":2,"events":[{"event":"complete","matched":true,"score":0.8},{"event":"complete","matched":true,"score":0.8},{"event":"stop"}],"expect":{"outcome":"COMPLETE","visited":["start","check","done"],"consumed":2,"reason":"TERMINAL"}},
+    {"id":"V00-11","event_budget":2,"events":[{"event":"complete","matched":true,"score":0.49}],"expect":{"outcome":"HOLD","visited":["start","unknown"],"consumed":0,"reason":"CONDITION_FALSE"}},
+    {"id":"V00-12","event_budget":2,"events":[{"event":"complete","matched":true,"score":"0.8"}],"expect":{"outcome":"HOLD","visited":["start","unknown"],"consumed":0,"reason":"CONDITION_UNKNOWN"}}
+  ]
+}
