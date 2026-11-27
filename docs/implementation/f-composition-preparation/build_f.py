@@ -20,6 +20,39 @@ PKG=B/'learning-process-cumulative-r3'
 VERSION='0.1.0-process-candidate-3'
 OWNERS=['P01','P02','P03','P04','P05','P06','P07','P08','P09','P10','F03','F04','F05','F07','A07','E01']
 ACCEPTED_TYPES={'PROJECT_RULE','ENGINEERING_POLICY','ORIGINAL_METHOD_DERIVATION','METHOD','MATHEMATICAL_DERIVATION'}
+ANALYSIS_PLAN_REF='docs/implementation/f-composition-preparation/analysis-plan.json'
+ANALYSIS_PLAN={
+ 'artifact_id':'E01.ANALYSIS_PLAN',
+ 'version':'V2',
+ 'protocol_id':'E01.PROTOCOL',
+ 'population':{
+  'population_id':'LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2',
+  'inclusion':'仅限未来经单独批准、明确同意并满足纳入条件的目标学习者群体；当前无实际招募或研究人群。',
+  'exclusion':'未同意、身份/授权不明、无法按协议安全参与或超出本协议适用边界的对象。',
+  'scope':'候选研究设计模板；不得外推到未定义总体。'
+ },
+ 'allocation':{'unit':'LEARNER','method':'RANDOMIZED','assignment_verified_required':True},
+ 'intervention':{'policy_id':'E01.POLICY.CANDIDATE','version':'CANDIDATE_V1'},
+ 'comparator':{'policy_id':'E01.POLICY.CURRENT','version':'CURRENT_V1'},
+ 'primary_outcome':{'id':'E01.OBS.PRIMARY_OUTCOME','definition':'预先固定的任务版本、评分版本、分母和28日主要结果；当前未采集任何真实结果。'},
+ 'followup':{'days':28,'window':'从预先登记的分配时点起算28日','incomplete':'未完成随访记为缺失/未观测，不插补为成功或失败。'},
+ 'analysis_plan_summary':'预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。',
+ 'estimand':'仅在分配方法经独立核验、处理版本固定、主要结果有效且识别条件满足时，描述分配至候选可拒绝支持建议相对当前流程的28日ITT差；不估计依从者效应，不从模拟或非随机观察推断因果。',
+ 'analysis_rules':{
+  'primary':'ITT；按预先登记的学习者分配单位分析。',
+  'missing':'报告缺失模式和分母；不将缺失设为零，不把未完成随访当作成功。',
+  'safety':'退出、拒绝及不利事件独立报告；不以完成率抵消。',
+  'multiplicity':'当前无次要结果的推断性检验。',
+  'release':'分析结果不自动写入正式知识；须另行授权、独立复核和版本化发布。'
+ },
+ 'required_evidence':{
+  'approval':'RESEARCH_PROTOCOL_APPROVAL_RECEIPT with repository, issue/comment identity, artifact path/hash, subject E01.PROTOCOL@V2 and this plan SHA256.',
+  'independent_review':'INDEPENDENT_NON_WRITER_REVIEW_RECEIPT with repository, issue/comment identity, artifact path/hash, subject E01.PROTOCOL@V2 and this plan SHA256.'
+ },
+ 'authority_status':'NO_TRUSTED_APPROVAL_OR_REVIEW_RESOLVER_BOUND',
+ 'data_status':'NO_REAL_COMPLIANT_RESEARCH_DATA',
+ 'release_status':'NOT_AUTHORIZED'
+}
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def write(p,x):
@@ -34,7 +67,8 @@ def remap(x):
   return y
  return x
 def main():
- design=load(DOC/'design.json');tasks={x['id']:x for x in load(ROOT/'docs/implementation/task-dag.json')['tasks']}
+ write(DOC/'analysis-plan.json',ANALYSIS_PLAN)
+ design=load(DOC/'design.json');design['modules'].update(load(DOC/'remediation-design.json')['modules']);tasks={x['id']:x for x in load(ROOT/'docs/implementation/task-dag.json')['tasks']}
  old_manifest=load(OLD/'learning-process.manifest.json')
  records={};old_records={};bindings={};deps={}
  schema_defs=load(ROOT/'docs/implementation/db01/canonical.schema.json')['$defs']
@@ -91,7 +125,8 @@ def main():
    bindings[owner][id]={'ref':z,'path':p.relative_to(ROOT).as_posix(),'sha256':sha(p),'record_sha256':dig(r),'candidate_receipt':t['current_receipt'],'candidate_receipt_sha256':sha(rp),'candidate_content_digest':rr['content_digest'],'qualification_receipt':t['qualification_receipt'],'qualification_receipt_sha256':sha(qp),'qualification_content_digest':qr['content_digest']}
   return out
  def base(owner,kind,id,cr,conditions,negative):
-  z={'owner':owner,'kind':kind,'stable_id':id,'status':'CANDIDATE','conditions':conditions,'negative_boundary':negative,'provenance':[{'source_path':(DOC/'design.json').relative_to(ROOT).as_posix(),'source_sha256':sha(DOC/'design.json'),'json_pointer':'/modules/'+owner,'source_status':'PROJECT_AUTHORED_CANDIDATE_DESIGN'}]}
+  design_source=DOC/('remediation-design.json' if owner in {'F03','F04','F05','F07','E01'} else 'design.json')
+  z={'owner':owner,'kind':kind,'stable_id':id,'status':'CANDIDATE','conditions':conditions,'negative_boundary':negative,'provenance':[{'source_path':design_source.relative_to(ROOT).as_posix(),'source_sha256':sha(design_source),'json_pointer':'/modules/'+owner,'source_status':'PROJECT_AUTHORED_CANDIDATE_DESIGN'}]}
   if 'claim_refs' in schema_defs[kind]['properties']:z['claim_refs']=cr
   return z
  def add(owner,kind,id,cr,conditions,negative,**kw):
@@ -123,14 +158,16 @@ def main():
   ('VISUAL','VISUAL',['visual rendering','alternative description'],['AUDIO_LISTENING'])]:
   mods[suffix]=add(o,'Modality',o+'.MOD.'+suffix,cr,['目标构念和实际可用通道明确。'],'通道标签不证明可及性或等价性。',label=label,capability_requirements=cap,not_equivalent_to=not_eq)
  resources={}
- for suffix,rights,mod,access in [('TEXT','PUBLIC_AUTHORIZED','TEXT',['private test only','text reader support']),('AUDIO','PUBLIC_AUTHORIZED','AUDIO',['private test only','playback required']),('UNVERIFIED','HOLD','AUDIO',['source and access not verified'])]:
+ for suffix,rights,mod,access in [('TEXT','PUBLIC_AUTHORIZED','TEXT',['private test only','text reader support']),('AUDIO','PUBLIC_AUTHORIZED','AUDIO',['private test only','playback required']),('UNVERIFIED','HOLD','AUDIO',['source and access not verified']),('VISUAL','PUBLIC_AUTHORIZED','VISUAL',['visual rendering tested','alternative description tested'])]:
   resources[suffix]=add(o,'Resource',o+'.RES.'+suffix,cr,['资源身份和版本已声明；内容未嵌入此候选。'],'PRIVATE_ONLY不可公开；HOLD不得消费；下载可用不等于再发布许可。',resource_identity='urn:learn-kg:synthetic:'+suffix.lower(),rights=rights,modality_refs=[mods[mod]],accessibility=access)
  g={}
- g['AUDIO']=cond(o,o+'.GUARD.AUDIO',cr,[{'field':'permission','op':'EQ','value':True},{'field':'rights','op':'EQ','value':'PRIVATE_ONLY'},{'field':'accessible','op':'EQ','value':True},{'field':'modality','op':'EQ','value':'AUDIO'},{'field':'required_construct','op':'EQ','value':'LISTENING'}],['权限、权利、可及性、模态和构念全部明确。'])
+ g['AUDIO']=cond(o,o+'.GUARD.AUDIO',cr,[{'field':'permission','op':'EQ','value':True},{'field':'rights','op':'EQ','value':'PUBLIC_AUTHORIZED'},{'field':'accessible','op':'EQ','value':True},{'field':'modality','op':'EQ','value':'AUDIO'},{'field':'required_construct','op':'EQ','value':'LISTENING'}],['权限、权利、可及性、模态和构念全部明确。'])
+ g['TEXT_READING']=cond(o,o+'.GUARD.TEXT_READING',cr,[{'field':'permission','op':'EQ','value':True},{'field':'rights','op':'EQ','value':'PUBLIC_AUTHORIZED'},{'field':'accessible','op':'EQ','value':True},{'field':'modality','op':'EQ','value':'TEXT'},{'field':'required_construct','op':'EQ','value':'READING'}],['文本资源只用于阅读构念，权利和可及性仍需单独核验。'])
  g['TEXT']=cond(o,o+'.GUARD.TEXT',cr,[{'field':'modality','op':'EQ','value':'TEXT'},{'field':'required_construct','op':'EQ','value':'LISTENING'}],['仅用于反例判别。'])
+ g['VISUAL']=cond(o,o+'.GUARD.VISUAL',cr,[{'field':'permission','op':'EQ','value':True},{'field':'rights','op':'EQ','value':'PUBLIC_AUTHORIZED'},{'field':'accessible','op':'EQ','value':True},{'field':'modality','op':'EQ','value':'VISUAL'},{'field':'required_construct','op':'EQ','value':'VISUAL_RECOGNITION'},{'field':'visual_accessibility_verified','op':'EQ','value':True}],['视觉构念必须明确，且视觉可及性与替代描述已经核验。'])
  g['RIGHTS']=cond(o,o+'.GUARD.RIGHTS',cr,[{'field':'rights','op':'EQ','value':'HOLD'}],['来源权利未知。'])
  g['ACCESS']=cond(o,o+'.GUARD.ACCESS',cr,[{'field':'accessible','op':'EQ','value':False}],['通道不可用。'])
- target=composition(o,cr,[local('P03.PRODUCTION'),local('P04.FLOW'),*mods.values(),*resources.values()],[resources['AUDIO'],resources['TEXT']],[g['AUDIO'],g['TEXT'],g['RIGHTS'],g['ACCESS']],'文本不能替代听辨；私人权利不能升级公开；无障碍/授权未知时HOLD。')
+ target=composition(o,cr,[local('P03.PRODUCTION'),local('P04.FLOW'),*mods.values(),*resources.values()],[resources['AUDIO'],resources['TEXT'],resources['VISUAL']],[g['AUDIO'],g['TEXT_READING'],g['TEXT'],g['VISUAL'],g['RIGHTS'],g['ACCESS']],'文本不能替代听辨；私人权利不能升级公开；无障碍/授权未知时HOLD。')
  owner_claims[o]=cr
  # F04 interaction
  o='F04';cr=claims(o,design['modules'][o]['claims']);owner_claims[o]=cr
@@ -142,11 +179,11 @@ def main():
   ('FINAL','最终提交响应','RESPONSE_EVENT','最终响应不能覆盖首次响应'),
   ('RETEST','新变式无提示独立复测','INDEPENDENT_RETEST','独立复测需新任务变式及明确无提示')]:
   observations[suffix]=obs(o,o+'.OBS.'+suffix,cr,pgoal,method,unit,ind)
- interaction=add(o,'Interaction',o+'.INTERACTION',cr,['任务、评分、角色、帮助、时间和响应版本可追溯。'],'生成答案不属于学习者响应；提示后正确不自动等于独立掌握。',activity_ref=pactivity,role_refs=[prole],observation_refs=list(observations.values()),input_contract='InitialResponse, HintEvent*(stable event ID, task version, event_time, recorded_at), FinalResponse, TaskVersion, ScoringVersion, RoleAuthorization, IndependentRetest; deduplicate identical event IDs, isolate conflicts; preserve event time separately from storage time.',output_contract='Append-only observations; no overwrite; assisted and independent channels remain distinct.',assistance_policy='Record hint before/after and resubmission separately; no answer substitution; ambiguous or missing evidence UNKNOWN.')
+ interaction=add(o,'Interaction',o+'.INTERACTION',cr,['任务、评分、角色、帮助、时间和响应版本可追溯。'],'生成答案不属于学习者响应；提示后正确不自动等于独立掌握。',activity_ref=pactivity,role_refs=[prole],observation_refs=[*observations.values(),local('P06.ACT.OBSERVE.OBS')],input_contract='InitialResponseEvent and FinalResponseEvent are separate append-only learner-authored events with stable IDs, learner/actor identity, task/version/variant, event_time, recorded_at, construct ref and scoring-binding ref; HintEvent* has stable ID/task/version/variant/event_time/recorded_at and exact-payload idempotency; IndependentRetestEvent must bind F04.OBS.RETEST, a new variant, the same declared construct and P06.ACT.OBSERVE.OBS scoring binding, a separate learner response, exact generated_answer=false and assistance_status=NONE; event-record SHA256 is recomputed over the canonical event payload. A bare independent_retest boolean is never evidence.',output_contract='Append-only observations; no overwrite; assisted and independent channels remain distinct.',assistance_policy='Record hint before/after and resubmission separately; no answer substitution; ambiguous or missing evidence UNKNOWN.')
  g={}
- g['INDEPENDENT']=cond(o,o+'.GUARD.INDEPENDENT',cr,[{'field':'role_authorized','op':'EQ','value':True},{'field':'hint_count','op':'EQ','value':0},{'field':'independent_retest','op':'EQ','value':True}],['角色授权、无提示及独立复测均须成立。'])
- g['ASSISTED']=cond(o,o+'.GUARD.ASSISTED',cr,[{'field':'hint_count','op':'GT','value':0}],['发生提示。'])
- g['GENERATED']=cond(o,o+'.GUARD.GENERATED',cr,[{'field':'generated_answer','op':'EQ','value':True}],['响应不是学习者生成。'])
+ g['INDEPENDENT']=cond(o,o+'.GUARD.INDEPENDENT',cr,[{'field':'role_authorized','op':'EQ','value':True},{'field':'generated_answer','op':'EQ','value':False},{'field':'retest_event.event_type','op':'EQ','value':'INDEPENDENT_RETEST'},{'field':'retest_event.observation_ref.stable_id','op':'EQ','value':'F04.OBS.RETEST'},{'field':'retest_event.assistance_status','op':'EQ','value':'NONE'},{'field':'retest_event.generated_answer','op':'EQ','value':False}],['复测事件须有稳定身份、任务变式、时点、构念/评分绑定、独立响应及无辅助证明；事件摘要由有限校验器重算。'])
+ g['ASSISTED']=cond(o,o+'.GUARD.ASSISTED',cr,[{'field':'retest_event.assistance_status','op':'NE','value':'NONE'}],['复测受到提示/辅助，不得作为独立复测。'])
+ g['GENERATED']=cond(o,o+'.GUARD.GENERATED',cr,[{'field':'generated_answer','op':'EQ','value':True}],['响应不是学习者生成；缺失/未知也不得晋升。'])
  target=composition(o,cr,[interaction,pactivity,local('P06.FLOW'),*observations.values()],[interaction,*observations.values()],[g['INDEPENDENT'],g['ASSISTED'],g['GENERATED']],'提示、生成答案、无效/缺失响应及版本错配均不能晋升为独立学习证据。')
  # F05 learner state
  o='F05';cr=claims(o,design['modules'][o]['claims']);owner_claims[o]=cr
@@ -165,7 +202,7 @@ def main():
   ('SCORE',[observations['SCORE']],'评分依赖评分规则/版本/分母；分数不是能力本体。'),
   ('ESTIMATE',[observations['ESTIMATE']],'无当前已核验估计器绑定；保持未估计，禁止自动推断掌握。')]:
   states[suffix]=add(o,'StateDimension',o+'.STATE.'+suffix,cr,['各通道保留原始身份、版本、时间及条件。'],'不得把不同来源、尺度或缺失值合并。',construct_ref=sk,estimator_ref=None,observation_refs=obsids,uncertainty=unc,effect='DEFINITION_ONLY')
- g['VERSION']=cond(o,o+'.GUARD.VERSION',cr,[{'field':'scoring_version','op':'EQ','value':'S1'}],['仅示例评分版本S1。'])
+ g['VERSION']=cond(o,o+'.GUARD.VERSION',cr,[{'field':'expected_scoring_version','op':'EQ','value':'S1'},{'field':'score.scoring_version','op':'EQ','value':'S1'}],['任务预期评分版本与实际评分版本必须相同；缺失/不匹配HOLD。'])
  target=composition(o,cr,[local('P08.FLOW'),local('P10.FLOW'),*observations.values()],[*states.values()],[g['VERSION']],'没有已核验模型时不估计；缺失UNKNOWN；不输出综合掌握标签。')
  # F07 environment/role/governance
  o='F07';cr=claims(o,design['modules'][o]['claims']);owner_claims[o]=cr
@@ -177,17 +214,21 @@ def main():
   envs[suffix]=add(o,'Environment',o+'.ENV.'+suffix,cr,['只记录实际测试能力和限制。'],'环境标签不证明个体身份、无障碍合规或授权。',capabilities=caps,constraints=constraints)
  roles={}
  for suffix,label,caps,perms in [
-  ('LEARNER','LEARNER',['choose goal','submit own response','decline support'],['own session','select optional support','exit']),
-  ('FACILITATOR','FACILITATOR',['explain task','offer optional support'],['explicitly assigned facilitation scope']),
-  ('REVIEWER','REVIEWER',['inspect candidate evidence'],['read-only review scope'])]:
+  ('LEARNER','LEARNER',['choose goal','submit own response','decline support'],['session-bound self selection','purpose-bound optional support','exit']),
+  ('FACILITATOR','FACILITATOR',['explain task','offer optional support'],['explicit learner request','assigned learner and scope','session and expiry bound authority']),
+  ('REVIEWER','REVIEWER',['inspect candidate evidence'],['read-only review scope; no learner-support suggestion authority'])]:
   roles[suffix]=add(o,'Role',o+'.ROLE.'+suffix,cr,['角色身份和当前授权需逐次验证。'],'角色标签不自动授予数据访问或执行权限。',label=label,capability_requirements=caps,permission_requirements=perms)
  guards={}
  guards['EXIT']=cond(o,o+'.GUARD.EXIT',cr,[{'field':'exit','op':'EQ','value':True}],['本人退出。'])
- guards['DENY']=cond(o,o+'.GUARD.DENY',cr,[{'field':'permission','op':'EQ','value':False}],['明确无权限。'])
- guards['UNAVAILABLE']=cond(o,o+'.GUARD.UNAVAILABLE',cr,[{'field':'accessible','op':'EQ','value':False}],['当前通道不可及。'])
- guards['OFFER']=cond(o,o+'.GUARD.OFFER',cr,[{'field':'identity_verified','op':'EQ','value':True},{'field':'permission','op':'EQ','value':True},{'field':'accessible','op':'EQ','value':True},{'field':'capability_match','op':'EQ','value':True},{'field':'learner_selected','op':'EQ','value':True}],['身份、权限、可及性、能力和本人选择全部明确。'])
- rules=[{'condition_ref':guards['EXIT'],'action':'STOP','reason':'本人退出，停止后续非授权动作','priority':0},{'condition_ref':guards['DENY'],'action':'REFUSE','reason':'权限明确为否','priority':1},{'condition_ref':guards['UNAVAILABLE'],'action':'DEFER','reason':'当前环境不可及','priority':2},{'condition_ref':guards['OFFER'],'action':'SUGGEST','reason':'仅提供本人选择的可行支持选项，不自动执行','priority':3}]
- policy=add(o,'PolicySpec',o+'.POLICY',cr,['所有环境和角色字段均需精确绑定版本及实际状态。'],'未知身份/权限不授权；建议不执行；退出优先。',policy_type='GOVERNANCE',rules=rules,unknown_action='CLARIFY',effect='ADVICE_ONLY')
+ guards['EXIT_UNKNOWN']=cond(o,o+'.GUARD.EXIT_UNKNOWN',cr,[{'field':'exit','op':'NE','value':False}],['退出状态不是明确false时澄清；STOP优先。'])
+ guards['DENY']=cond(o,o+'.GUARD.DENY',cr,[{'field':'role_authority.permission','op':'EQ','value':False}],['角色授权证据中的实际权限明确为否。'])
+ guards['REVIEWER']=cond(o,o+'.GUARD.REVIEWER',cr,[{'field':'role','op':'EQ','value':'REVIEWER'}],['审核者只读，不能提出学习者支持建议。'])
+ guards['UNAVAILABLE']=cond(o,o+'.GUARD.UNAVAILABLE',cr,[{'field':'environment_profile.accessible','op':'EQ','value':False}],['当前环境/通道不可及。'])
+ offer_common=[{'field':'identity_verified','op':'EQ','value':True},{'field':'exit','op':'EQ','value':False},{'field':'role_authority.permission','op':'EQ','value':True},{'field':'role_authority.purpose','op':'EQ','value':'OFFER_LEARNER_SUPPORT'},{'field':'role_authority.scope','op':'EQ','value':'LEARNER_SUPPORT_ADVICE_ONLY'},{'field':'support_request.selected_by','op':'EQ','value':'LEARNER'},{'field':'environment_profile.accessible','op':'EQ','value':True},{'field':'environment_profile.capability_match','op':'EQ','value':True}]
+ guards['OFFER_LEARNER']=cond(o,o+'.GUARD.OFFER_LEARNER',cr,offer_common+[{'field':'role','op':'EQ','value':'LEARNER'}],['学习者本人会话身份、本人选择、目的、范围、期限、会话和环境证据匹配。'])
+ guards['FACILITATOR_UNBOUND']=cond(o,o+'.GUARD.FACILITATOR_UNBOUND',cr,[{'field':'role','op':'EQ','value':'FACILITATOR'}],['当前可信促进者授权解析器未绑定；即使有结构化范围/期限对象，促进者路径也必须HOLD。'])
+ rules=[{'condition_ref':guards['EXIT'],'action':'STOP','reason':'本人退出，停止后续非授权动作','priority':0},{'condition_ref':guards['REVIEWER'],'action':'REFUSE','reason':'审核者只读，不提供学习者支持建议','priority':1},{'condition_ref':guards['DENY'],'action':'REFUSE','reason':'角色授权证据中的权限明确为否','priority':2},{'condition_ref':guards['EXIT_UNKNOWN'],'action':'CLARIFY','reason':'退出状态未知，不提供支持建议','priority':3},{'condition_ref':guards['UNAVAILABLE'],'action':'DEFER','reason':'当前环境不可及','priority':4},{'condition_ref':guards['OFFER_LEARNER'],'action':'SUGGEST','reason':'仅提供学习者本人选择的可选建议；不执行','priority':5},{'condition_ref':guards['FACILITATOR_UNBOUND'],'action':'REQUEST_OBSERVATION','reason':'可信促进者授权解析器未绑定，先请求可信授权证据；不提供促进者路径建议','priority':6}]
+ policy=add(o,'PolicySpec',o+'.POLICY',cr,['权限必须由角色/目的/范围/期限/会话绑定的证据对象表达；支持请求和环境配置均需精确事件摘要。'],'审核者只读；促进者必须有明确分配范围/期限/会话并由可信解析器核验；当前解析器未绑定，促进者路径HOLD；未知退出/权限/身份澄清；不自动执行。',policy_type='GOVERNANCE',rules=rules,unknown_action='CLARIFY',effect='ADVICE_ONLY')
  target=composition(o,cr,[local('P10.FLOW'),*envs.values(),*roles.values()],[policy],[*guards.values()],'未授权拒绝、未知澄清、退出停止；不从行为推断健康/身份或固定偏好。')
  # A07 environment/development/difference-to-support integration
  o='A07';claims(o,design['modules'][o]['claims'])
@@ -247,16 +288,24 @@ def main():
  records[o+'.GOAL']['success_evidence_refs']=[obs1,obs2]
  g={}
  g['DIRECT_WRITE']=cond(o,o+'.GUARD.DIRECT_WRITE',cr,[{'field':'direct_knowledge_write','op':'EQ','value':True}],['直接写正式知识请求。'])
- g['APPROVED']=cond(o,o+'.GUARD.APPROVED',cr,[{'field':'approved','op':'EQ','value':True},{'field':'protocol_frozen','op':'EQ','value':True}],['协议已冻结且审批已完成。'])
- g['CURRENT_VERSION']=cond(o,o+'.GUARD.CURRENT_VERSION',cr,[{'field':'approved','op':'EQ','value':True},{'field':'current_policy_version','op':'EQ','value':'CURRENT_V1'}],['当前对照策略版本精确固定。'])
- g['CANDIDATE_VERSION']=cond(o,o+'.GUARD.CANDIDATE_VERSION',cr,[{'field':'approved','op':'EQ','value':True},{'field':'candidate_policy_version','op':'EQ','value':'CANDIDATE_V1'}],['候选干预策略版本精确固定。'])
+ g['APPROVED']=cond(o,o+'.GUARD.APPROVED',cr,[{'field':'approval_evidence_ref.kind','op':'EQ','value':'RESEARCH_PROTOCOL_APPROVAL'},{'field':'approval_evidence_ref.decision','op':'EQ','value':'APPROVED'},{'field':'approval_evidence_ref.subject_id','op':'EQ','value':'E01.PROTOCOL'},{'field':'approval_evidence_ref.subject_version','op':'EQ','value':'V2'},{'field':'approval_evidence_ref.analysis_plan_sha256','op':'EQ','value':sha(DOC/'analysis-plan.json')}],['审批必须绑定E01.PROTOCOL@V2及分析计划摘要的精确外部审批证据；caller boolean不构成审批。'])
+ g['REVIEWED']=cond(o,o+'.GUARD.REVIEWED',cr,[{'field':'independent_review_evidence_ref.kind','op':'EQ','value':'INDEPENDENT_NON_WRITER_REVIEW'},{'field':'independent_review_evidence_ref.decision','op':'EQ','value':'ACCEPT_SCOPED'},{'field':'independent_review_evidence_ref.subject_id','op':'EQ','value':'E01.PROTOCOL'},{'field':'independent_review_evidence_ref.subject_version','op':'EQ','value':'V2'},{'field':'independent_review_evidence_ref.analysis_plan_sha256','op':'EQ','value':sha(DOC/'analysis-plan.json')}],['独立审核必须绑定E01.PROTOCOL@V2及相同分析计划摘要的精确非作者审核证据。'])
+ g['CURRENT_VERSION']=cond(o,o+'.GUARD.CURRENT_VERSION',cr,[{'field':'approval_evidence_ref.decision','op':'EQ','value':'APPROVED'},{'field':'approval_evidence_ref.subject_id','op':'EQ','value':'E01.PROTOCOL'},{'field':'approval_evidence_ref.subject_version','op':'EQ','value':'V2'},{'field':'approval_evidence_ref.analysis_plan_sha256','op':'EQ','value':sha(DOC/'analysis-plan.json')},{'field':'independent_review_evidence_ref.decision','op':'EQ','value':'ACCEPT_SCOPED'},{'field':'independent_review_evidence_ref.subject_id','op':'EQ','value':'E01.PROTOCOL'},{'field':'independent_review_evidence_ref.subject_version','op':'EQ','value':'V2'},{'field':'independent_review_evidence_ref.analysis_plan_sha256','op':'EQ','value':sha(DOC/'analysis-plan.json')},{'field':'current_policy_version','op':'EQ','value':'CURRENT_V1'}],['当前对照策略版本精确固定。'])
+ g['CANDIDATE_VERSION']=cond(o,o+'.GUARD.CANDIDATE_VERSION',cr,[{'field':'approval_evidence_ref.decision','op':'EQ','value':'APPROVED'},{'field':'approval_evidence_ref.subject_id','op':'EQ','value':'E01.PROTOCOL'},{'field':'approval_evidence_ref.subject_version','op':'EQ','value':'V2'},{'field':'approval_evidence_ref.analysis_plan_sha256','op':'EQ','value':sha(DOC/'analysis-plan.json')},{'field':'independent_review_evidence_ref.decision','op':'EQ','value':'ACCEPT_SCOPED'},{'field':'independent_review_evidence_ref.subject_id','op':'EQ','value':'E01.PROTOCOL'},{'field':'independent_review_evidence_ref.subject_version','op':'EQ','value':'V2'},{'field':'independent_review_evidence_ref.analysis_plan_sha256','op':'EQ','value':sha(DOC/'analysis-plan.json')},{'field':'candidate_policy_version','op':'EQ','value':'CANDIDATE_V1'}],['候选干预策略版本精确固定。'])
  current=add(o,'PolicySpec',o+'.POLICY.CURRENT',cr,['只定义当前对照建议策略。'],'不得把当前策略当作已验证有效。',policy_type='GOVERNANCE',rules=[{'condition_ref':g['CURRENT_VERSION'],'action':'DEFER','reason':'继续当前流程，不增加候选支持建议','priority':1}],unknown_action='CLARIFY',effect='ADVICE_ONLY')
  candidate=add(o,'PolicySpec',o+'.POLICY.CANDIDATE',cr,['只定义待评价候选建议策略。'],'候选策略不执行、不发布、不写正式知识。',policy_type='GOVERNANCE',rules=[{'condition_ref':g['CANDIDATE_VERSION'],'action':'SUGGEST','reason':'仅向已批准对象提供可拒绝的候选支持建议','priority':1}],unknown_action='CLARIFY',effect='ADVICE_ONLY')
- protocol=add(o,'EvaluationProtocol',o+'.PROTOCOL',cr,['人群、处理版本、比较、结果、时间点、估计量、审批及随访均预先冻结。'],'模拟不是效果；观察性差异不自动因果；个体记录不直接写正式知识。',comparator_ref=current,intervention_ref=candidate,goal_ref=goal,measurement_refs=[obs1,obs2],population_scope='仅限预先定义、已批准的合成/研究目标人群；不推断其他总体。',estimand='若随机/班级随机分配、版本固定、完整随访和识别条件均成立，估计分配至候选可拒绝支持建议相对当前流程的28日主要结果ITT差；未满足条件不估计。',followup='固定28日随访；未完成不插补为成功。',uncertainty='没有真实合规研究数据；本协议为候选模板。模型模拟、离线测试和即时分数不构成长期效果。',approval_required=True,effect='NO_DIRECT_KNOWLEDGE_WRITE')
- target=composition(o,cr,[protocol,local('P10.FLOW'),current,candidate,goal,obs1,obs2],[candidate],[g['APPROVED'],g['CURRENT_VERSION'],g['CANDIDATE_VERSION'],g['DIRECT_WRITE']],'仅生成待审分析建议；独立复核和授权发布为后续任务，禁止直接修改正式知识。')
+ plan=load(DOC/'analysis-plan.json');plan_hash=sha(DOC/'analysis-plan.json')
+ protocol=add(o,'EvaluationProtocol',o+'.PROTOCOL',cr,['协议字段采用DB01 canonical v1现有字符串槽位中的规范JSON；分析计划作为单独只读文件按SHA256固定。','当前没有可信审批/独立审核解析器，因此不得进行观察数据效果分析。'],'模拟不是效果；观察性差异不自动因果；个体记录不直接写正式知识；审批布尔值和自述审批不构成授权。',comparator_ref=current,intervention_ref=candidate,goal_ref=goal,measurement_refs=[obs1,obs2],population_scope=json.dumps(plan['population'],ensure_ascii=False,sort_keys=True,separators=(',',':')),estimand=json.dumps({'allocation':plan['allocation'],'intervention':plan['intervention'],'comparator':plan['comparator'],'primary_outcome':plan['primary_outcome'],'analysis_plan_ref':ANALYSIS_PLAN_REF,'analysis_plan_sha256':plan_hash,'analysis_plan_summary':plan['analysis_plan_summary'],'estimand':plan['estimand']},ensure_ascii=False,sort_keys=True,separators=(',',':')),followup=json.dumps(plan['followup'],ensure_ascii=False,sort_keys=True,separators=(',',':')),uncertainty=json.dumps({'authority_status':plan['authority_status'],'data_status':plan['data_status'],'release_status':plan['release_status'],'required_evidence':plan['required_evidence'],'limits':'没有真实合规研究数据；模拟、离线测试和即时分数不构成长期效果。'},ensure_ascii=False,sort_keys=True,separators=(',',':')),approval_required=True,effect='NO_DIRECT_KNOWLEDGE_WRITE')
+ records[o+'.PROTOCOL']['provenance'].append({'source_path':ANALYSIS_PLAN_REF,'source_sha256':plan_hash,'json_pointer':'/artifact_id','source_status':'PROJECT_AUTHORED_FROZEN_CANDIDATE_PLAN'})
+ target=composition(o,cr,[protocol,local('P10.FLOW'),current,candidate,goal,obs1,obs2],[candidate],[g['APPROVED'],g['REVIEWED'],g['CURRENT_VERSION'],g['CANDIDATE_VERSION'],g['DIRECT_WRITE']],'仅生成候选协议完整性结果；当前可信审批/独立审核解析器未绑定，观察数据始终HOLD；禁止效果结论、直接修改正式知识或发布。')
  # Add cases and attach exact evidence refs to each composition.
+ all_fixtures=fixtures()
+ for owner,mod in design['modules'].items():
+  expected_names=mod.get('cases',[])
+  actual_names=[name for candidate_owner,name,_,_ in all_fixtures if candidate_owner==owner]
+  assert len(expected_names)==len(set(expected_names)) and len(actual_names)==len(set(actual_names)) and set(expected_names)==set(actual_names),(owner,expected_names,actual_names)
  all_results=[]
- for owner,name,x,y in fixtures():
+ for owner,name,x,y in all_fixtures:
   assert owner in owner_claims
   comp=local(owner+'.COMPOSITION')
   neg = (y.get('action') in ('REFUSE','STOP','DEFER','CLARIFY','REQUEST_OBSERVATION') if isinstance(y,dict) else y in ('HOLD','REFUSE','STOP','DEFER','CLARIFY','REJECT_CONSTRUCT_SUBSTITUTION','NOT_LEARNER_EVIDENCE','ASSISTED_NOT_INDEPENDENT','DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE','SIMULATION_ONLY_NOT_EFFECT'))
@@ -287,7 +336,7 @@ def main():
   migration.append({'owner':r['owner'],'stable_id':id,'old_record_sha256':dig(r),'new_record_sha256':dig(nr),'change':'INTERNAL_PROCESS_VERSION_REF_ONLY' if r!=nr else 'UNCHANGED'})
  write(DOC/'migration.json',{'source_version':old_manifest['version'],'target_version':VERSION,'migrated_record_count':len(migration),'records':migration,'old_shards_unchanged':True,'historical_receipts_preserved':True,'qualification_invalidation':'All prior P01-P10 candidate/qualification receipts require explicit exact tuple rebind because package manifest/version refs changed.'})
  write(DOC/'bindings.json',bindings)
- write(DOC/'fixtures.json',[{'owner':o,'name':n,'input':x,'expected':y} for o,n,x,y in fixtures()])
+ write(DOC/'fixtures.json',[{'owner':o,'name':n,'input':x,'expected':y} for o,n,x,y in all_fixtures])
  write(DOC/'results.json',{'status':'BUILDER_ONLY','case_count':len(all_results),'counts':{o:sum(x['owner']==o for x in all_results) for o in ['F03','F04','F05','F07','A07','E01']},'results':all_results,'manifest_sha256':sha(mf),'limitations':'No independent oracle, CQ/LC, empirical effects, source/rights qualification, generic runtime or authorization.'})
  # In-memory import with exact dependencies; no persistent SQLite file.
  ext=ROOT/'knowledge/v0.1.0/foundation-r3/relation-types.json'
@@ -317,6 +366,11 @@ def main():
    assert all(x in actual_ids for x in expected_ids),(owner,actual_ids,expected_ids)
    for id in expected_ids:load_record(im,local(id))
    binding_results.append({'owner':owner,'expected_process_refs':expected_ids,'actual_process_refs':actual_ids,'status':'STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION'})
+  f04_interaction=load_record(im,local('F04.INTERACTION'))
+  nested_refs=f04_interaction['observation_refs']
+  assert any(x['stable_id']=='F04.OBS.RETEST' and x['owner']=='F04' and x['kind']=='ObservationSpec' for x in nested_refs)
+  assert any(x['stable_id']=='P06.ACT.OBSERVE.OBS' and x['owner']=='P06' and x['kind']=='ObservationSpec' for x in nested_refs)
+  nested_typed_bindings=[{'owner':'F04','interaction_ref':local('F04.INTERACTION'),'retest_observation_ref':local('F04.OBS.RETEST'),'scoring_observation_ref':local('P06.ACT.OBSERVE.OBS'),'status':'STATIC_TYPED_EVENT_AND_SCORING_BINDING_ONLY'}]
   if01_contract=ROOT/'docs/implementation/if01/interface-contract.json'
   if01_receipt=ROOT/'evidence/tasks/IF01/IF01-FORMAL-01.json'
   if01_view=next(v for v in load(if01_contract)['view_routes'] if v['owner']=='A07')
@@ -331,7 +385,7 @@ def main():
    inherited_claims.append({'ref':z,'inherited_from':origin})
   write(DOC/'composition-input-bindings.json',{'owner':'A07','status':'EXACT_PREPARATION_BINDING_ONLY','package_id':'learning-process','version':VERSION,'manifest_sha256':sha(mf),'task_dependencies':tasks['A07']['depends_on'],'inputs':a07_input_records,'inherited_claim_refs':inherited_claims,'if01':{'interface_version':if01_view.get('interface_version',load(if01_contract).get('interface_version')),'contract_path':'docs/implementation/if01/interface-contract.json','contract_sha256':sha(if01_contract),'receipt_path':'evidence/tasks/IF01/IF01-FORMAL-01.json','receipt_sha256':sha(if01_receipt),'content_digest':load(if01_receipt)['content_digest'],'required_scope_ids':if01_view['required_scope_ids'],'task_dependencies':if01_view['task_dependencies']},'limits':'IF01 is a file/receipt contract pin, not a synthetic canonical record; no formal A07 receipt or CQ/LC qualification.'})
   write(DOC/'import-receipt.json',receipt)
-  write(DOC/'sql-results.json',{'status':'MEMORY_SQLITE_BUILDER_ONLY','cases':len(replay),'results':replay,'cross_module_bindings':binding_results,'manifest_sha256':sha(mf),'migration_count':len(migration),'record_count':len(records),'limits':'No persistent SQLite; no independent oracle or task qualification.'})
+  write(DOC/'sql-results.json',{'status':'MEMORY_SQLITE_BUILDER_ONLY','cases':len(replay),'results':replay,'cross_module_bindings':binding_results,'nested_typed_bindings':nested_typed_bindings,'manifest_sha256':sha(mf),'migration_count':len(migration),'record_count':len(records),'limits':'No persistent SQLite; no independent oracle or task qualification.'})
   print('PROCESS_MIGRATED',len(migration),'F_RECORDS',len(records)-len(migration),'TOTAL',len(records),'F_CASES',len(replay),'MANIFEST',sha(mf))
  finally:im.close()
 if __name__=='__main__':main()

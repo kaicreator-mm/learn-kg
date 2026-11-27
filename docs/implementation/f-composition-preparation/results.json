@@ -1,13 +1,13 @@
 {
   "status": "BUILDER_ONLY",
-  "case_count": 66,
+  "case_count": 97,
   "counts": {
-    "F03": 6,
-    "F04": 9,
-    "F05": 9,
-    "F07": 6,
+    "F03": 12,
+    "F04": 18,
+    "F05": 11,
+    "F07": 14,
     "A07": 26,
-    "E01": 10
+    "E01": 16
   },
   "results": [
     {
@@ -101,22 +101,217 @@
       "status": "BUILDER_ONLY"
     },
     {
+      "owner": "F03",
+      "case_id": "F03.VISUAL_RECOGNITION_SYNTHETIC",
+      "input": {
+        "permission": true,
+        "rights": "PUBLIC_AUTHORIZED",
+        "accessible": true,
+        "publication": false,
+        "modality": "VISUAL",
+        "required_construct": "VISUAL_RECOGNITION",
+        "visual_accessibility_verified": true
+      },
+      "expected": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "actual": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.VISUAL_ACCESSIBILITY_UNKNOWN_HOLD",
+      "input": {
+        "permission": true,
+        "rights": "PUBLIC_AUTHORIZED",
+        "accessible": true,
+        "publication": false,
+        "modality": "VISUAL",
+        "required_construct": "VISUAL_RECOGNITION"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.UNSUPPORTED_VIDEO_MODALITY_HOLD",
+      "input": {
+        "permission": true,
+        "rights": "PUBLIC_AUTHORIZED",
+        "accessible": true,
+        "publication": false,
+        "modality": "VIDEO",
+        "required_construct": "VISUAL_RECOGNITION"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.MISSING_MODALITY_HOLD",
+      "input": {
+        "permission": true,
+        "rights": "PUBLIC_AUTHORIZED",
+        "accessible": true,
+        "publication": false,
+        "required_construct": "READING"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.UNSUPPORTED_CONSTRUCT_HOLD",
+      "input": {
+        "permission": true,
+        "rights": "PUBLIC_AUTHORIZED",
+        "accessible": true,
+        "publication": false,
+        "modality": "TEXT",
+        "required_construct": "COMPREHENSION"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.AUDIO_FOR_READING_REJECT",
+      "input": {
+        "permission": true,
+        "rights": "PUBLIC_AUTHORIZED",
+        "accessible": true,
+        "publication": false,
+        "modality": "AUDIO",
+        "required_construct": "READING"
+      },
+      "expected": "REJECT_CONSTRUCT_SUBSTITUTION",
+      "actual": "REJECT_CONSTRUCT_SUBSTITUTION",
+      "status": "BUILDER_ONLY"
+    },
+    {
       "owner": "F04",
       "case_id": "F04.UNASSISTED_INDEPENDENT",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
-        "hint_events": [],
-        "initial_response": "A",
-        "final_response": "A",
         "generated_answer": false,
-        "independent_retest": true
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "71085daff52b07a0ea45a0d09b1843b3c5b8ea5148c8f4bfd98cde8e029e246f"
+        }
       },
-      "expected": "INDEPENDENT_OBSERVATION",
-      "actual": "INDEPENDENT_OBSERVATION",
+      "expected": "INDEPENDENT_RETEST_OBSERVATION",
+      "actual": "INDEPENDENT_RETEST_OBSERVATION",
       "status": "BUILDER_ONLY"
     },
     {
@@ -124,23 +319,96 @@
       "case_id": "F04.HINTED_NOT_INDEPENDENT",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "ASSISTED",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "2a416d401e9ec7a32cf4455cf98be8f9f7a8c9f296b73d2422c2c522b88a93ea"
+        },
         "hint_events": [
           {
-            "id": "H1",
+            "event_id": "H1",
+            "event_type": "HINT",
+            "task_id": "TASK-01",
             "task_version": "T1",
-            "type": "HINT",
-            "event_time": 10,
-            "recorded_at": 25
+            "variant_id": "V1",
+            "learner_id": "LEARNER-01",
+            "actor_id": "SYSTEM-01",
+            "event_time": 20,
+            "recorded_at": 22,
+            "actor_role": "SYSTEM",
+            "assistance_status": "HINT",
+            "event_record_sha256": "639dcd840d606a09472c277a8e0686cc9aee958bcc9b048415a76180ebc5fd65"
           }
         ],
-        "initial_response": "A",
-        "final_response": "A",
-        "generated_answer": false,
-        "independent_retest": false
+        "retest_event": null
       },
       "expected": "ASSISTED_NOT_INDEPENDENT",
       "actual": "ASSISTED_NOT_INDEPENDENT",
@@ -151,30 +419,110 @@
       "case_id": "F04.IDENTICAL_DUPLICATE_HINT_IDEMPOTENT",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "ASSISTED",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "2a416d401e9ec7a32cf4455cf98be8f9f7a8c9f296b73d2422c2c522b88a93ea"
+        },
         "hint_events": [
           {
-            "id": "H1",
+            "event_id": "H1",
+            "event_type": "HINT",
+            "task_id": "TASK-01",
             "task_version": "T1",
-            "type": "HINT",
-            "event_time": 10,
-            "recorded_at": 25
+            "variant_id": "V1",
+            "learner_id": "LEARNER-01",
+            "actor_id": "SYSTEM-01",
+            "event_time": 20,
+            "recorded_at": 22,
+            "actor_role": "SYSTEM",
+            "assistance_status": "HINT",
+            "event_record_sha256": "639dcd840d606a09472c277a8e0686cc9aee958bcc9b048415a76180ebc5fd65"
           },
           {
-            "id": "H1",
+            "event_id": "H1",
+            "event_type": "HINT",
+            "task_id": "TASK-01",
             "task_version": "T1",
-            "type": "HINT",
-            "event_time": 10,
-            "recorded_at": 25
+            "variant_id": "V1",
+            "learner_id": "LEARNER-01",
+            "actor_id": "SYSTEM-01",
+            "event_time": 20,
+            "recorded_at": 22,
+            "actor_role": "SYSTEM",
+            "assistance_status": "HINT",
+            "event_record_sha256": "639dcd840d606a09472c277a8e0686cc9aee958bcc9b048415a76180ebc5fd65"
           }
         ],
-        "initial_response": "A",
-        "final_response": "A",
-        "generated_answer": false,
-        "independent_retest": true
+        "retest_event": null
       },
       "expected": "ASSISTED_NOT_INDEPENDENT",
       "actual": "ASSISTED_NOT_INDEPENDENT",
@@ -185,23 +533,96 @@
       "case_id": "F04.EVENT_AND_STORAGE_TIMES_SEPARATE",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "ASSISTED",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "2a416d401e9ec7a32cf4455cf98be8f9f7a8c9f296b73d2422c2c522b88a93ea"
+        },
         "hint_events": [
           {
-            "id": "H1",
+            "event_id": "H1",
+            "event_type": "HINT",
+            "task_id": "TASK-01",
             "task_version": "T1",
-            "type": "HINT",
-            "event_time": 100,
-            "recorded_at": 20
+            "variant_id": "V1",
+            "learner_id": "LEARNER-01",
+            "actor_id": "SYSTEM-01",
+            "event_time": 25,
+            "recorded_at": 12,
+            "actor_role": "SYSTEM",
+            "assistance_status": "HINT",
+            "event_record_sha256": "930c33142c08f1c6cb7db0af70044d2018f6a8b6875ef7b10590fa0203bf177b"
           }
         ],
-        "initial_response": "A",
-        "final_response": "A",
-        "generated_answer": false,
-        "independent_retest": true
+        "retest_event": null
       },
       "expected": "ASSISTED_NOT_INDEPENDENT",
       "actual": "ASSISTED_NOT_INDEPENDENT",
@@ -212,15 +633,120 @@
       "case_id": "F04.GENERATED_ANSWER_NOT_EVIDENCE",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
-        "hint_events": [],
-        "initial_response": "A",
-        "final_response": "A",
         "generated_answer": true,
-        "independent_retest": true
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "71085daff52b07a0ea45a0d09b1843b3c5b8ea5148c8f4bfd98cde8e029e246f"
+        }
       },
       "expected": "NOT_LEARNER_EVIDENCE",
       "actual": "NOT_LEARNER_EVIDENCE",
@@ -231,15 +757,88 @@
       "case_id": "F04.MISSING_INITIAL_UNKNOWN",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
-        "hint_events": [],
-        "initial_response": null,
-        "final_response": "A",
         "generated_answer": false,
-        "independent_retest": true
+        "initial_response_event": null,
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "71085daff52b07a0ea45a0d09b1843b3c5b8ea5148c8f4bfd98cde8e029e246f"
+        }
       },
       "expected": "UNKNOWN",
       "actual": "UNKNOWN",
@@ -250,15 +849,120 @@
       "case_id": "F04.ROLE_DENIED_HOLD",
       "input": {
         "role_authorized": false,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
-        "hint_events": [],
-        "initial_response": "A",
-        "final_response": "A",
         "generated_answer": false,
-        "independent_retest": true
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "71085daff52b07a0ea45a0d09b1843b3c5b8ea5148c8f4bfd98cde8e029e246f"
+        }
       },
       "expected": "HOLD",
       "actual": "HOLD",
@@ -269,15 +973,120 @@
       "case_id": "F04.VERSION_MISMATCH_HOLD",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S2",
         "expected_scoring_version": "S1",
-        "hint_events": [],
-        "initial_response": "A",
-        "final_response": "A",
         "generated_answer": false,
-        "independent_retest": true
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "71085daff52b07a0ea45a0d09b1843b3c5b8ea5148c8f4bfd98cde8e029e246f"
+        }
       },
       "expected": "HOLD",
       "actual": "HOLD",
@@ -288,39 +1097,1212 @@
       "case_id": "F04.CONFLICTING_DUPLICATE_HINT_HOLD",
       "input": {
         "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
         "task_version": "T1",
         "expected_task_version": "T1",
         "scoring_version": "S1",
         "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "ASSISTED",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "2a416d401e9ec7a32cf4455cf98be8f9f7a8c9f296b73d2422c2c522b88a93ea"
+        },
         "hint_events": [
           {
-            "id": "H1",
+            "event_id": "H1",
+            "event_type": "HINT",
+            "task_id": "TASK-01",
             "task_version": "T1",
-            "type": "HINT",
-            "event_time": 10,
-            "recorded_at": 25
+            "variant_id": "V1",
+            "learner_id": "LEARNER-01",
+            "actor_id": "SYSTEM-01",
+            "event_time": 20,
+            "recorded_at": 22,
+            "actor_role": "SYSTEM",
+            "assistance_status": "HINT",
+            "event_record_sha256": "639dcd840d606a09472c277a8e0686cc9aee958bcc9b048415a76180ebc5fd65"
           },
           {
-            "id": "H1",
+            "event_id": "H1",
+            "event_type": "HINT",
+            "task_id": "TASK-01",
             "task_version": "T1",
-            "type": "HINT",
-            "event_time": 11,
-            "recorded_at": 25
+            "variant_id": "V1",
+            "learner_id": "LEARNER-01",
+            "actor_id": "SYSTEM-01",
+            "event_time": 21,
+            "recorded_at": 22,
+            "actor_role": "SYSTEM",
+            "assistance_status": "HINT",
+            "event_record_sha256": "742a15b420b67ce45efb078454fbff029267474fc05641c73790b1ee931f6373"
           }
         ],
-        "initial_response": "A",
-        "final_response": "A",
-        "generated_answer": false,
-        "independent_retest": true
+        "retest_event": null
       },
       "expected": "HOLD",
       "actual": "HOLD",
       "status": "BUILDER_ONLY"
     },
     {
+      "owner": "F04",
+      "case_id": "F04.GENERATED_ANSWER_UNKNOWN",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": null,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "71085daff52b07a0ea45a0d09b1843b3c5b8ea5148c8f4bfd98cde8e029e246f"
+        }
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.MISSING_RETEST_UNKNOWN",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": null
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.SAME_VARIANT_REPLAY_HOLD",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "350e2cbfa75bda7d5a775350e96319ba06fef98d057d72499e9b49d4e30c647e"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_VERSION_MISMATCH_HOLD",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T2",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "0e678c09a7f627fd59b7f39501512625fc6d45e60927d5e90e74d4b9bb7d6b3b"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.ASSISTED_RETEST_NOT_INDEPENDENT",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "ASSISTED",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "50e8890b3c5fae32809bd1b480d33c0ea3a23b69f00c2b883410a9362954b127"
+        }
+      },
+      "expected": "ASSISTED_NOT_INDEPENDENT",
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_CONSTRUCT_MISMATCH_HOLD",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.EXPOSITION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "c0ed8fc91a3d2091f83846ad083a8d33ba8925806eed2502bcee9c20d2fc159f"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_SCORING_BINDING_MISMATCH_HOLD",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.SCORE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "771885dde3b210f4a98bec78a72d260efc61cdd980c2bd09016a3be1bff24dcd"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_EVENT_HASH_MISMATCH_HOLD",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "837afbf05b275ef972d55f31171b7d6b221c0bcbc564e03e0b4e5b79c5074a71"
+        },
+        "hint_events": [],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.HINTED_THEN_INDEPENDENT_RETEST",
+      "input": {
+        "role_authorized": true,
+        "learner_id": "LEARNER-01",
+        "task_id": "TASK-01",
+        "task_version": "T1",
+        "expected_task_version": "T1",
+        "scoring_version": "S1",
+        "expected_scoring_version": "S1",
+        "generated_answer": false,
+        "initial_response_event": {
+          "event_id": "R1",
+          "event_type": "INITIAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 10,
+          "recorded_at": 11,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "aca5f331504e45ab0075ecb88fc6dbe3472e2d6607092ddc283578fad4a7f61f"
+        },
+        "final_response_event": {
+          "event_id": "R2",
+          "event_type": "FINAL_RESPONSE",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V1",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 30,
+          "recorded_at": 31,
+          "actor_role": "LEARNER",
+          "response": "A",
+          "generated_answer": false,
+          "assistance_status": "ASSISTED",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "event_record_sha256": "2a416d401e9ec7a32cf4455cf98be8f9f7a8c9f296b73d2422c2c522b88a93ea"
+        },
+        "hint_events": [
+          {
+            "event_id": "H1",
+            "event_type": "HINT",
+            "task_id": "TASK-01",
+            "task_version": "T1",
+            "variant_id": "V1",
+            "learner_id": "LEARNER-01",
+            "actor_id": "SYSTEM-01",
+            "event_time": 20,
+            "recorded_at": 22,
+            "actor_role": "SYSTEM",
+            "assistance_status": "HINT",
+            "event_record_sha256": "639dcd840d606a09472c277a8e0686cc9aee958bcc9b048415a76180ebc5fd65"
+          }
+        ],
+        "retest_event": {
+          "event_id": "RT1",
+          "event_type": "INDEPENDENT_RETEST",
+          "task_id": "TASK-01",
+          "task_version": "T1",
+          "variant_id": "V2",
+          "learner_id": "LEARNER-01",
+          "actor_id": "LEARNER-01",
+          "event_time": 40,
+          "recorded_at": 42,
+          "actor_role": "LEARNER",
+          "response": "B",
+          "generated_answer": false,
+          "assistance_status": "NONE",
+          "construct_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "Goal",
+            "stable_id": "P03.PRODUCTION.GOAL",
+            "owner": "P03"
+          },
+          "scoring_binding": {
+            "observation_ref": {
+              "package_id": "learning-process",
+              "version": "0.1.0-process-candidate-3",
+              "kind": "ObservationSpec",
+              "stable_id": "P06.ACT.OBSERVE.OBS",
+              "owner": "P06"
+            },
+            "scoring_version": "S1"
+          },
+          "observation_ref": {
+            "package_id": "learning-process",
+            "version": "0.1.0-process-candidate-3",
+            "kind": "ObservationSpec",
+            "stable_id": "F04.OBS.RETEST",
+            "owner": "F04"
+          },
+          "event_record_sha256": "71085daff52b07a0ea45a0d09b1843b3c5b8ea5148c8f4bfd98cde8e029e246f"
+        }
+      },
+      "expected": "INDEPENDENT_RETEST_OBSERVATION",
+      "actual": "INDEPENDENT_RETEST_OBSERVATION",
+      "status": "BUILDER_ONLY"
+    },
+    {
       "owner": "F05",
       "case_id": "F05.SEPARATE_CHANNELS",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "OBSERVED",
           "value": "response",
@@ -391,6 +2373,7 @@
       "owner": "F05",
       "case_id": "F05.MISSING_SELF_REPORT_UNKNOWN",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "OBSERVED",
           "value": "response",
@@ -461,6 +2444,7 @@
       "owner": "F05",
       "case_id": "F05.MISSING_SCORE_UNKNOWN",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "OBSERVED",
           "value": "response",
@@ -524,6 +2508,7 @@
       "owner": "F05",
       "case_id": "F05.UNPINNED_MODEL_HOLD",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "OBSERVED",
           "value": "response",
@@ -553,6 +2538,7 @@
       "owner": "F05",
       "case_id": "F05.SCORING_VERSION_MISMATCH_HOLD",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "OBSERVED",
           "value": "response",
@@ -564,7 +2550,61 @@
         "score": {
           "status": "OBSERVED",
           "value": 0.75,
-          "scoring_version": null,
+          "scoring_version": "S2",
+          "denominator": 4
+        },
+        "estimate": {
+          "status": "NOT_RUN"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.SCORING_VERSION_EXPECTATION_MISSING_HOLD",
+      "input": {
+        "expected_scoring_version": null,
+        "response": {
+          "status": "OBSERVED",
+          "value": "response",
+          "task_version": "T1"
+        },
+        "self_report": {
+          "status": "MISSING"
+        },
+        "score": {
+          "status": "OBSERVED",
+          "value": 0.75,
+          "scoring_version": "S1",
+          "denominator": 4
+        },
+        "estimate": {
+          "status": "NOT_RUN"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.SCORING_VERSION_EMPTY_HOLD",
+      "input": {
+        "expected_scoring_version": "S1",
+        "response": {
+          "status": "OBSERVED",
+          "value": "response",
+          "task_version": "T1"
+        },
+        "self_report": {
+          "status": "MISSING"
+        },
+        "score": {
+          "status": "OBSERVED",
+          "value": 0.75,
+          "scoring_version": "",
           "denominator": 4
         },
         "estimate": {
@@ -579,6 +2619,7 @@
       "owner": "F05",
       "case_id": "F05.RESPONSE_MISSING_UNKNOWN",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "MISSING"
         },
@@ -645,6 +2686,7 @@
       "owner": "F05",
       "case_id": "F05.RESPONSE_INVALID_UNKNOWN",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "INVALID"
         },
@@ -711,6 +2753,7 @@
       "owner": "F05",
       "case_id": "F05.RESPONSE_NOT_ADMINISTERED_UNKNOWN",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "NOT_ADMINISTERED"
         },
@@ -777,6 +2820,7 @@
       "owner": "F05",
       "case_id": "F05.MODEL_OUTPUT_UNBOUND_HOLD",
       "input": {
+        "expected_scoring_version": "S1",
         "response": {
           "status": "OBSERVED",
           "value": "response",
@@ -808,11 +2852,48 @@
       "input": {
         "identity_verified": true,
         "role": "LEARNER",
-        "permission": true,
-        "accessible": true,
-        "capability_match": true,
-        "learner_selected": true,
-        "exit": false
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "42f8c7446eefd544460dd518109fba0e0ff83dc5a1e4fe3a83cd11ccb06e35a3"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
       },
       "expected": "SUGGEST_ONLY_NO_EXECUTION",
       "actual": "SUGGEST_ONLY_NO_EXECUTION",
@@ -824,11 +2905,48 @@
       "input": {
         "identity_verified": true,
         "role": "LEARNER",
-        "permission": false,
-        "accessible": true,
-        "capability_match": true,
-        "learner_selected": true,
-        "exit": false
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": false,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "3051708ca86f79abc821f2cd58f6a5a988e8d73304deb9c70f32c72b8643643a"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
       },
       "expected": "REFUSE",
       "actual": "REFUSE",
@@ -840,11 +2958,48 @@
       "input": {
         "identity_verified": null,
         "role": "LEARNER",
-        "permission": true,
-        "accessible": true,
-        "capability_match": true,
-        "learner_selected": true,
-        "exit": false
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "42f8c7446eefd544460dd518109fba0e0ff83dc5a1e4fe3a83cd11ccb06e35a3"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
       },
       "expected": "CLARIFY",
       "actual": "CLARIFY",
@@ -856,11 +3011,48 @@
       "input": {
         "identity_verified": true,
         "role": "LEARNER",
-        "permission": true,
-        "accessible": false,
-        "capability_match": true,
-        "learner_selected": true,
-        "exit": false
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "42f8c7446eefd544460dd518109fba0e0ff83dc5a1e4fe3a83cd11ccb06e35a3"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": false,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "e0b24aa93da2fbb5fc248947a524ab9b6c67dd7573193b7437aa3578eca00d62"
+        }
       },
       "expected": "DEFER",
       "actual": "DEFER",
@@ -872,11 +3064,48 @@
       "input": {
         "identity_verified": true,
         "role": "LEARNER",
-        "permission": null,
-        "accessible": true,
-        "capability_match": true,
-        "learner_selected": true,
-        "exit": true
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": true,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "42f8c7446eefd544460dd518109fba0e0ff83dc5a1e4fe3a83cd11ccb06e35a3"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
       },
       "expected": "STOP",
       "actual": "STOP",
@@ -888,10 +3117,434 @@
       "input": {
         "identity_verified": true,
         "role": "LEARNER",
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "FACILITATOR",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "2405d03fdac8bd21635fe64156ca638d61dea4f092a7664f804a41c02d4384b2"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "42f8c7446eefd544460dd518109fba0e0ff83dc5a1e4fe3a83cd11ccb06e35a3"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "CLARIFY",
+      "actual": "CLARIFY",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.REVIEWER_READ_ONLY_REFUSE",
+      "input": {
+        "identity_verified": true,
+        "role": "REVIEWER",
+        "actor_id": "FACILITATOR-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "FACILITATOR-01",
+          "learner_id": "LEARNER-01",
+          "role": "REVIEWER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "ASSIGNED_FACILITATOR",
+          "grantor_id": "ORG-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": "ASSIGN-01",
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "9d63ada0627fffcf833975fc942f0f386814a4125c336022d5485edf0f418737"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "REFUSE",
+      "actual": "REFUSE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.EXIT_UNKNOWN_CLARIFY",
+      "input": {
+        "identity_verified": true,
+        "role": "LEARNER",
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": null,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "42f8c7446eefd544460dd518109fba0e0ff83dc5a1e4fe3a83cd11ccb06e35a3"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "CLARIFY",
+      "actual": "CLARIFY",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.FACILITATOR_ASSIGNED_SCOPE_OPTION",
+      "input": {
+        "identity_verified": true,
+        "role": "FACILITATOR",
+        "actor_id": "FACILITATOR-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "FACILITATOR-01",
+          "learner_id": "LEARNER-01",
+          "role": "FACILITATOR",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "ASSIGNED_FACILITATOR",
+          "grantor_id": "ORG-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": "ASSIGN-01",
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "37f67139f6295adc5d78d6183b02bd1e2fe97f86f61cc609406ac267e94f5806"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.FACILITATOR_SCOPE_MISMATCH_REFUSE",
+      "input": {
+        "identity_verified": true,
+        "role": "FACILITATOR",
+        "actor_id": "FACILITATOR-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "FACILITATOR-01",
+          "learner_id": "LEARNER-01",
+          "role": "FACILITATOR",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "GENERAL_ADMIN",
+          "session_id": "SESSION-01",
+          "authority_kind": "ASSIGNED_FACILITATOR",
+          "grantor_id": "ORG-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": "ASSIGN-01",
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "a2ad5a197039559f89a8b1f684660176a46529ec683edb491fe666977aae9733"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "REFUSE",
+      "actual": "REFUSE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.EXPIRED_FACILITATOR_AUTHORITY_REFUSE",
+      "input": {
+        "identity_verified": true,
+        "role": "FACILITATOR",
+        "actor_id": "FACILITATOR-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "FACILITATOR-01",
+          "learner_id": "LEARNER-01",
+          "role": "FACILITATOR",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "ASSIGNED_FACILITATOR",
+          "grantor_id": "ORG-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 99,
+          "permission": true,
+          "assignment_id": "ASSIGN-01",
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "41ff73fcba7df1d074a5996c95007184a9a3bfad48b08fefc4ac0cf7aad03bd9"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "REFUSE",
+      "actual": "REFUSE",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.AUTHORITY_HASH_MISMATCH_HOLD",
+      "input": {
+        "identity_verified": true,
+        "role": "LEARNER",
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "SESSION-01",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.SESSION_MISMATCH_HOLD",
+      "input": {
+        "identity_verified": true,
+        "role": "LEARNER",
+        "actor_id": "LEARNER-01",
+        "learner_id": "LEARNER-01",
+        "session_id": "SESSION-01",
+        "now": 100,
+        "exit": false,
+        "support_request": {
+          "event_id": "SUPPORT-REQ-01",
+          "learner_id": "LEARNER-01",
+          "session_id": "SESSION-01",
+          "selected_option_id": "OPTION-01",
+          "selected_by": "LEARNER",
+          "event_time": 90,
+          "recorded_at": 91,
+          "event_sha256": "d57af1dbb6230f2627e464f46828bfbaf99bcbdd46ee86d2bc7dbbea5b75b997"
+        },
+        "role_authority": {
+          "authority_id": "AUTH-01",
+          "authority_version": "V1",
+          "actor_id": "LEARNER-01",
+          "learner_id": "LEARNER-01",
+          "role": "LEARNER",
+          "purpose": "OFFER_LEARNER_SUPPORT",
+          "scope": "LEARNER_SUPPORT_ADVICE_ONLY",
+          "session_id": "OTHER-SESSION",
+          "authority_kind": "LEARNER_SESSION_SELF",
+          "grantor_id": "LEARNER-01",
+          "not_before": 80,
+          "issued_at": 80,
+          "expires_at": 120,
+          "permission": true,
+          "assignment_id": null,
+          "assigned_learner_id": "LEARNER-01",
+          "evidence_sha256": "78e193c54e35dc4061761bdc6e2d1cd5ef7e46097707d15ce2249bc8cee3d534"
+        },
+        "environment_profile": {
+          "profile_id": "ENV-SHARED-01",
+          "profile_version": "V1",
+          "accessible": true,
+          "capability_match": true,
+          "tested_at": 85,
+          "profile_sha256": "ad74558ff54c95c7bdb9597db7398fd2c44060f1010609e4b97f8b64c3706e91"
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.GENERIC_PERMISSION_BOOLEAN_NOT_AUTHORITY_CLARIFY",
+      "input": {
+        "identity_verified": true,
+        "role": "LEARNER",
         "permission": true,
         "accessible": true,
         "capability_match": true,
-        "learner_selected": false,
+        "learner_selected": true,
         "exit": false
       },
       "expected": "CLARIFY",
@@ -2234,59 +4887,50 @@
     },
     {
       "owner": "E01",
-      "case_id": "E01.VALID_FROZEN_PROTOCOL_CANDIDATE_ONLY",
+      "case_id": "E01.PINNED_PROTOCOL_AWAITING_APPROVAL_AND_REVIEW_HOLD",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
       },
-      "expected": "CANDIDATE_ANALYSIS_ONLY_NO_RELEASE",
-      "actual": "CANDIDATE_ANALYSIS_ONLY_NO_RELEASE",
+      "expected": "HOLD",
+      "actual": "HOLD",
       "status": "BUILDER_ONLY"
     },
     {
       "owner": "E01",
       "case_id": "E01.APPROVAL_MISSING_HOLD",
       "input": {
-        "approved": false,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED",
+        "approval_evidence_ref": null
       },
       "expected": "HOLD",
       "actual": "HOLD",
@@ -2296,27 +4940,22 @@
       "owner": "E01",
       "case_id": "E01.COMPARATOR_MISSING_HOLD",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": false,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
-        "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
+        "comparator_version": "UNKNOWN",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
       },
       "expected": "HOLD",
       "actual": "HOLD",
@@ -2326,27 +4965,22 @@
       "owner": "E01",
       "case_id": "E01.SIMULATION_NOT_EFFECT",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "SIMULATED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "SIMULATED"
       },
       "expected": "SIMULATION_ONLY_NOT_EFFECT",
       "actual": "SIMULATION_ONLY_NOT_EFFECT",
@@ -2356,27 +4990,22 @@
       "owner": "E01",
       "case_id": "E01.ASSIGNMENT_UNVERIFIED_DESCRIPTIVE_ONLY",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": false,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
-        "assignment_method": "OBSERVATIONAL",
+        "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": false,
+        "data_kind": "OBSERVED"
       },
       "expected": "DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE",
       "actual": "DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE",
@@ -2386,27 +5015,22 @@
       "owner": "E01",
       "case_id": "E01.DIRECT_KNOWLEDGE_WRITE_REFUSE",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": true,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
       },
       "expected": "REFUSE",
       "actual": "REFUSE",
@@ -2414,29 +5038,49 @@
     },
     {
       "owner": "E01",
-      "case_id": "E01.FOLLOWUP_MISSING_HOLD",
+      "case_id": "E01.DIRECT_KNOWLEDGE_WRITE_UNKNOWN_HOLD",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": false,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
-        "direct_knowledge_write": false,
+        "direct_knowledge_write": null,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.FOLLOWUP_MISSING_HOLD",
+      "input": {
+        "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+        "protocol_id": "E01.PROTOCOL",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+        "assignment_unit": "LEARNER",
+        "assignment_method": "RANDOMIZED",
+        "intervention_version": "CANDIDATE_V1",
+        "comparator_version": "CURRENT_V1",
+        "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+        "followup_days": null,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
       },
       "expected": "HOLD",
       "actual": "HOLD",
@@ -2446,27 +5090,22 @@
       "owner": "E01",
       "case_id": "E01.IDENTICAL_POLICY_VERSIONS_HOLD",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CURRENT_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
       },
       "expected": "HOLD",
       "actual": "HOLD",
@@ -2476,27 +5115,22 @@
       "owner": "E01",
       "case_id": "E01.INVALID_ANALYSIS_PLAN_HOLD",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "not-a-sha256",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V1",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "not-a-sha256",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
       },
       "expected": "HOLD",
       "actual": "HOLD",
@@ -2506,33 +5140,186 @@
       "owner": "E01",
       "case_id": "E01.POLICY_VERSION_MISMATCH_HOLD",
       "input": {
-        "approved": true,
-        "protocol_frozen": true,
-        "population_defined": true,
-        "outcome_defined": true,
-        "comparator_pinned": true,
-        "followup_complete": true,
-        "independent_review": true,
-        "assignment_verified": true,
-        "data_kind": "OBSERVED",
         "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
         "protocol_id": "E01.PROTOCOL",
-        "protocol_version": "V1",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+        "assignment_unit": "LEARNER",
+        "assignment_method": "RANDOMIZED",
+        "intervention_version": "CANDIDATE_V0",
+        "comparator_version": "CURRENT_V1",
+        "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.ASSIGNMENT_UNIT_METHOD_MISMATCH_HOLD",
+      "input": {
+        "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+        "protocol_id": "E01.PROTOCOL",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+        "assignment_unit": "LEARNER",
+        "assignment_method": "CLUSTER_RANDOMIZED",
+        "intervention_version": "CANDIDATE_V1",
+        "comparator_version": "CURRENT_V1",
+        "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.LEGACY_BOOLEAN_APPROVAL_NOT_EVIDENCE_HOLD",
+      "input": {
+        "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+        "protocol_id": "E01.PROTOCOL",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
         "assignment_unit": "LEARNER",
         "assignment_method": "RANDOMIZED",
         "intervention_version": "CANDIDATE_V1",
         "comparator_version": "CURRENT_V1",
-        "current_policy_version": "CURRENT_V1",
-        "candidate_policy_version": "CANDIDATE_V0",
         "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
-        "analysis_plan_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-        "followup_days": 28
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED",
+        "approved": true,
+        "protocol_frozen": true,
+        "independent_review": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.UNRESOLVED_TYPED_APPROVAL_AND_REVIEW_HOLD",
+      "input": {
+        "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+        "protocol_id": "E01.PROTOCOL",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+        "assignment_unit": "LEARNER",
+        "assignment_method": "RANDOMIZED",
+        "intervention_version": "CANDIDATE_V1",
+        "comparator_version": "CURRENT_V1",
+        "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED",
+        "approval_evidence_ref": {
+          "kind": "RESEARCH_PROTOCOL_APPROVAL",
+          "subject_id": "E01.PROTOCOL",
+          "subject_version": "V2",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "decision": "APPROVED",
+          "repository": "kaicreator-mm/learn-kg",
+          "issue_number": 999,
+          "comment_id": 999,
+          "artifact_path": "evidence/e01/approval.json",
+          "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "authority_id": "AUTHORITY-PLACEHOLDER",
+          "issued_at": 1,
+          "expires_at": 9999999999
+        },
+        "independent_review_evidence_ref": {
+          "kind": "INDEPENDENT_NON_WRITER_REVIEW",
+          "subject_id": "E01.PROTOCOL",
+          "subject_version": "V2",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "decision": "ACCEPT_SCOPED",
+          "repository": "kaicreator-mm/learn-kg",
+          "issue_number": 999,
+          "comment_id": 998,
+          "artifact_path": "evidence/e01/review.json",
+          "artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "authority_id": "REVIEWER-PLACEHOLDER",
+          "issued_at": 1,
+          "expires_at": 9999999999
+        }
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.ANALYSIS_PLAN_REF_MISMATCH_HOLD",
+      "input": {
+        "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/other-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+        "protocol_id": "E01.PROTOCOL",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+        "assignment_unit": "LEARNER",
+        "assignment_method": "RANDOMIZED",
+        "intervention_version": "CANDIDATE_V1",
+        "comparator_version": "CURRENT_V1",
+        "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "status": "BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.ANALYSIS_PLAN_SUMMARY_MISMATCH_HOLD",
+      "input": {
+        "direct_knowledge_write": false,
+        "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+        "analysis_plan_version": "V2",
+        "analysis_plan_summary": "not the pinned summary",
+        "protocol_id": "E01.PROTOCOL",
+        "protocol_version": "V2",
+        "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+        "assignment_unit": "LEARNER",
+        "assignment_method": "RANDOMIZED",
+        "intervention_version": "CANDIDATE_V1",
+        "comparator_version": "CURRENT_V1",
+        "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+        "followup_days": 28,
+        "assignment_verified": true,
+        "data_kind": "OBSERVED"
       },
       "expected": "HOLD",
       "actual": "HOLD",
       "status": "BUILDER_ONLY"
     }
   ],
-  "manifest_sha256": "8e53674e9a0340cc7533bddb80a7693a5936d18918424531868cbb515969b9d6",
+  "manifest_sha256": "243c92eec70ce8f54058beae7b41d43d5a430c8f1835596b36705b3878352a1f",
   "limitations": "No independent oracle, CQ/LC, empirical effects, source/rights qualification, generic runtime or authorization."
 }

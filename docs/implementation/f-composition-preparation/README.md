@@ -1,40 +1,69 @@
-# F03/F04/F05/F07/A07/E01 受限流程组合候选准备
+# F03/F04/F05/F07/A07/E01 受限流程组合候选与整改
 
-状态：PREPARATION_ONLY；尚未写入 version/v0.1.0，也没有候选/资格收据。当前版本分支的 P01–P10 精确审核目标保持不变。
+状态：PREPARATION_ONLY；当前 remediation 分支尚未合并 version/v0.1.0，没有新候选资格收据或正式资格收据。
 
-## 为什么使用单一累计快照
+## 当前候选快照
 
-DB01/IF01 明确拒绝同一 package_id 内跨版本替代直接依赖。learning-process 同时承载 P01–P10、F01–F08、A01–A08、E01，不能将 F 模块作为另一个 learning-process 版本来引用 P01/P10。此准备分支生成 learning-process@0.1.0-process-candidate-3：保留 P01–P10 的 1,312 条记录，只将这些记录中的同包内部引用从 candidate-2 重绑定到 candidate-3；不改专业主张、案例期望或历史收据。新增 F03/F04/F05/F07/A07/E01 共 203 条记录。旧 candidate-2 分包与收据不删除。新版本一旦集成，所有 P01–P10 旧收据都必须重新登记精确 tuple，并做受限迁移增量复核，不能直接沿用。
+- Package：learning-process@0.1.0-process-candidate-3
+- 迁移：P01–P10 共 1,312 条记录，迁移差异仅为同包内部引用版本重绑定；本轮没有改动 P01–P10 专业记录。
+- 新增：F03 38、F04 45、F05 33、F07 43、A07 68、E01 45 条 canonical records；合计 272 条。F/E 整改设计单独保存在 remediation-design.json，A07 原设计文件与记录字节保持不变。
+- 总计：1,584 条记录。
+- 有限案例：F03 12、F04 18、F05 11、F07 14、E01 16，共 71 项；A07 另有 26 项，本次独立审核明确不覆盖 A07。
+- 构建回放：97 项 SQL builder-only cases（包含 A07 的 26 项）；37 项导入器既有单元测试和 19 项新增语义边界单元测试。均不是独立专业 oracle、CQ/LC 或真实学习者证据。
 
-## 模块范围
+## 本轮独立审核与整改
 
-- **F03 资源与表达组合**：显式区分模态、资源身份、构念、可及性和权利。文字不能替代听辨。Resource 的 PUBLIC_AUTHORIZED 正例仅是无实际媒体字节的合成描述；未知权利仍 HOLD。当前导入器拒绝 PRIVATE_ONLY 记录，未引入任何私有源内容。
-- **F04 学习交互组合**：首次响应、提示事件、最终响应和无提示独立复测分离；事件带稳定 ID、任务版本、发生时间和记录时间。相同事件 ID/内容幂等，冲突隔离；生成答案不是学习者证据。
-- **F05 学习者状态组合**：原始响应、自述、评分、模型输出分开保存；缺失、无效、未施测保持 UNKNOWN。当前没有绑定已核验估计器，StateDimension.estimator_ref=null；任何声称已计算掌握或综合能力的输入均 HOLD。
-- **F07 环境与角色组合**：身份、角色、权限、环境能力、可及性和本人选择分别判断。未授权拒绝、未知澄清、退出停止；PolicySpec 仅 ADVICE_ONLY，建议不是执行授权。
-- **E01 外部改进闭环**：当前对照建议与候选建议策略分开，预先固定协议版本、目标人群、随机/班级随机分配单位、处理版本、比较版本、主要结果、28 日随访和分析计划摘要。模拟不等于效果；未验证分配只能描述；缺少审批/随访/独立复核则 HOLD；禁止直接写正式知识。协议只生成候选分析意见。
+Issue #10 的 F03/F04/F05/F07/E01 独立审核结论为 REWORK_REQUIRED：P0=0、P1=1、P2=4、P3=1。六项有限整改已写入本候选分支，新的精确 SHA 尚待提交后建立独立增量审核。
 
-## 验证范围
+### F03 — 资源与表达
 
-- P01–P10 旧快照：1,312 条记录迁移；migration.json 逐记录保存旧/新规范化内容摘要。变化仅为同包内部引用版本。
-- F03/F04/F05/F07/A07/E01：203 条新记录、66 项合成有限案例；每个 Case 都有 Validation，但 oracle_identity 明确为项目作者期望，结果只标 BUILDER。
-- 37 项导入器单元测试与完整内存 SQLite 导入/回读由构建流程执行；无持久 SQLite 文件。
-- 六个跨模块输入绑定（F03→P03/P04、F04→P03/P06、F05→P08/P10、F07→P10、A07→F05/F07、E01→P10）做精确 typed-ref/SQL 回读，仅证明静态引用存在，不代表运行流程或行为执行。
-- K 领域 claim 引用均从当前已登记的受限资格收据 allowlist 选择，排除 source-limited/model-only claims，并核对资格收据所审内容 digest。F 结果仍是候选消费，不升级 K 或 P 资格。
+- 严格白名单：TEXT→READING、AUDIO→LISTENING、VISUAL→VISUAL_RECOGNITION。
+- 未知/缺失模态或构念保持 HOLD；已知但错配返回 REJECT_CONSTRUCT_SUBSTITUTION。
+- VISUAL 额外要求 visual_accessibility_verified=true；三条正向映射分别具有明确有限条件。
+- PUBLIC_AUTHORIZED 正例仍是无实际媒体字节的合成描述，不代表真实资源权利或发布许可。
 
-## 明确未通过/未运行
+### F04 — 学习交互
 
-没有独立 F/A 审核、CQ13/17/18/19/21/24、LC03/04/05/07/10、G03/G04/G05、权利/来源公开资格或真实学习效果验证。没有通用运行时、真实状态估计器、调度器、跨进程检查点、权限执行器或知识库写入器。不得把 66 项 builder 案例当作独立 oracle，也不得将 1,312 项 P 迁移回归当作新专业审核。
+- 首次响应、提示事件、最终响应、独立复测均为独立追加事件，包含稳定事件 ID、任务/版本/变式、发生时间、记录时间和学习者响应。
+- 独立复测必须是新变式、独立响应、generated_answer=false、assistance_status=NONE，并绑定 F04.OBS.RETEST、原目标构念和 P06.ACT.OBSERVE.OBS 评分观察合同。
+- 事件 SHA256 只验证候选事件对象的确定性完整性，不验证真实主体身份或签名。相同提示事件 ID/内容幂等，冲突 HOLD；缺少复测或生成答案来源未知不得晋升。
+- 提示后的初始/最终响应不污染一个独立、无辅助的新变式复测；两者仍分别保留。
 
-## 当前分支边界
+### F05 — 学习者状态
 
-准备分支 prep/f-composition 从 version 分支 EXACT_HEAD 4e5d938a2f4e61ff82827d2c93ddca43c66411fc 派生，尚未合并或改变 version/v0.1.0。PR01/PR02 对 P01–P10 的独立审核目标继续固定在原精确 HEAD。待其结果明确后，再整合 candidate-3、重建十个 P 的精确输入/输出收据，进行 P 迁移 delta 复核及 F 模块独立分批审核。
+- 显式要求 expected_scoring_version，观察评分版本必须精确匹配；缺失预期版本、空版本或非空错误版本均 HOLD。
+- 缺失/无效/未施测继续保持 UNKNOWN；模型估计与其它证据通道分离，estimator_ref=null，不推断综合掌握。
 
-## A07 环境/发展/差异→支持组合（新增候选）
+### F07 — 环境与角色
 
-A07 直接消费 F05 的四个独立状态维度/组合视图，以及 F07 的环境、角色和治理策略。IF01 view_routes 中 A07 的精确依赖、四项 scope ID 和 IF01 FORMAL-01 收据/契约摘要保存在 composition-input-bindings.json。
+- 审核者角色明确只读并拒绝学习者支持建议；exit 必须精确为 false 才能继续，true 为 STOP，缺失/未知为 CLARIFY。
+- 学习者支持请求有稳定事件身份、本人选择和摘要；角色授权对象绑定 actor、learner、role、purpose、scope、session、issued/not-before/expiry、permission 和 facilitator assignment。
+- 促进者必须绑定指定学习者、明确范围、用途、会话和有效期限；但当前没有可信促进者授权解析器，因此促进者路径一律 HOLD。环境配置另有 profile/version/测试时间和摘要。
+- 这些 SHA256 是合成候选对象的完整性摘要，不是可信签名/身份认证；学习者自选路径仅建议不执行，促进者路径在可信解析器绑定前保持 HOLD。没有运行时权限执行器。
 
-- 26 项合成案例区分本人选择、促进者代选、审核只读、明确拒绝、退出、环境不可及、未知环境、未绑定估计、缺失自述/响应、年龄/诊断标签不变性、任务级构念审查缺失/不可信、构念变化后评估延后与独立练习。
-- 当前策略仅 ADVICE_ONLY。需要当前环境配置身份/版本/SHA256、本人支持请求事件身份，以及任务级构念审查身份/版本/SHA256；未核验时请求补充观察/审查。支持若改变构念，不替代原测量、不合并评分，只能作为独立练习建议。
-- A07.RQ01/RQ03 为候选 exemplification；RQ02 仅覆盖任务相关观测与本人自述的缺失/反标签边界，不包含发展阶段、年龄常模或诊断判断；RQ04 仅定义本人选择和权限边界，没有真实身份/权限执行器。上述均未独立资格认定。
-- 变更年龄、诊断或分数值的合成不变性案例仅证明此候选逻辑未读取这些字段，不证明对真实学习者的适用性或效果。
+### E01 — 外部改进闭环
+
+- 新增只读 analysis-plan.json，定义 population identity/inclusion/exclusion、allocation unit/method、intervention/comparator versions、primary outcome、28-day follow-up、ITT estimand、missingness/safety rules 和发布边界。
+- E01.PROTOCOL 使用 DB01 canonical v1 现有字符串槽位保存规范 JSON，并在 provenance 精确绑定分析计划路径与 SHA256；不修改 DB01 schema。
+- 审批与独立复核要求使用类型化外部证据身份（repository、issue/comment、artifact path/hash、subject/version、plan hash、decision、authority、有效期）；旧的 approved / protocol_frozen / independent_review caller booleans 不再被接受。
+- 当前没有可信审批/独立复核解析器，也没有实际审批文件。即使输入携带结构化证据引用，观察数据分析仍保持 HOLD；模拟仅为 SIMULATION_ONLY_NOT_EFFECT，未验证分配仅为 DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE。禁止直接写正式知识或发布。
+
+### P3-01
+
+E01 design case list 已去重，并与 16 个实际 fixture 名称精确一致。
+
+## 精确验证边界
+
+- P01–P10：本次审核已独立通过 1,312 条迁移完整性，但没有审核其专业内容。所有 P01–P10 candidate-3 收据精确重绑定与迁移 delta review 仍待完成，不能据此登记 F/E 资格。
+- F/E：71 项 builder cases；A07：26 项 builder cases，明确不属于 Issue #10 审核范围。SQL 回放包含 A07 仅表示结构性加载和 builder 重放，不构成 A07 语义审核。
+- F04 的 nested typed binding：F04.OBS.RETEST + P06.ACT.OBSERVE.OBS；F03/F04/F05/F07/A07/E01 的六组静态跨模块绑定均不是运行时执行证据。
+- 导入器 37/37 与本模块语义边界单元测试 18/18 通过，仅证明有限软件合同/边界。
+- 不含真实学习者数据、真实实验结果、实际媒体字节或发布授权。
+
+## 未完成事项
+
+- 新 remediation exact HEAD 的 F/E 分批独立增量审核：NOT_RUN。
+- A07 独立审核：NOT_RUN。
+- P01–P10 candidate-3 exact tuple rebind 与 migration delta review：PENDING。
+- SRC01 历史原始 PDF 身份/权利、G03/G04/G05、CQ/LC、专业覆盖充分性和发布资格：仍各自 HOLD/NOT_RUN。
+- 无通用运行时、真实状态估计器、调度器、跨进程检查点、身份认证器、权限执行器或知识库写入器。

@@ -1,0 +1,49 @@
+{
+  "artifact_id": "E01.ANALYSIS_PLAN",
+  "version": "V2",
+  "protocol_id": "E01.PROTOCOL",
+  "population": {
+    "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+    "inclusion": "仅限未来经单独批准、明确同意并满足纳入条件的目标学习者群体；当前无实际招募或研究人群。",
+    "exclusion": "未同意、身份/授权不明、无法按协议安全参与或超出本协议适用边界的对象。",
+    "scope": "候选研究设计模板；不得外推到未定义总体。"
+  },
+  "allocation": {
+    "unit": "LEARNER",
+    "method": "RANDOMIZED",
+    "assignment_verified_required": true
+  },
+  "intervention": {
+    "policy_id": "E01.POLICY.CANDIDATE",
+    "version": "CANDIDATE_V1"
+  },
+  "comparator": {
+    "policy_id": "E01.POLICY.CURRENT",
+    "version": "CURRENT_V1"
+  },
+  "primary_outcome": {
+    "id": "E01.OBS.PRIMARY_OUTCOME",
+    "definition": "预先固定的任务版本、评分版本、分母和28日主要结果；当前未采集任何真实结果。"
+  },
+  "followup": {
+    "days": 28,
+    "window": "从预先登记的分配时点起算28日",
+    "incomplete": "未完成随访记为缺失/未观测，不插补为成功或失败。"
+  },
+  "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+  "estimand": "仅在分配方法经独立核验、处理版本固定、主要结果有效且识别条件满足时，描述分配至候选可拒绝支持建议相对当前流程的28日ITT差；不估计依从者效应，不从模拟或非随机观察推断因果。",
+  "analysis_rules": {
+    "primary": "ITT；按预先登记的学习者分配单位分析。",
+    "missing": "报告缺失模式和分母；不将缺失设为零，不把未完成随访当作成功。",
+    "safety": "退出、拒绝及不利事件独立报告；不以完成率抵消。",
+    "multiplicity": "当前无次要结果的推断性检验。",
+    "release": "分析结果不自动写入正式知识；须另行授权、独立复核和版本化发布。"
+  },
+  "required_evidence": {
+    "approval": "RESEARCH_PROTOCOL_APPROVAL_RECEIPT with repository, issue/comment identity, artifact path/hash, subject E01.PROTOCOL@V2 and this plan SHA256.",
+    "independent_review": "INDEPENDENT_NON_WRITER_REVIEW_RECEIPT with repository, issue/comment identity, artifact path/hash, subject E01.PROTOCOL@V2 and this plan SHA256."
+  },
+  "authority_status": "NO_TRUSTED_APPROVAL_OR_REVIEW_RESOLVER_BOUND",
+  "data_status": "NO_REAL_COMPLIANT_RESEARCH_DATA",
+  "release_status": "NOT_AUTHORIZED"
+}
