@@ -1,0 +1,76 @@
+{
+  "status": "INDEPENDENT_FINITE_ORACLE_ACCEPT_SCOPED",
+  "review_comment": 7217469189,
+  "review_url": "https://github.com/kaicreator-mm/learn-kg/issues/6#issuecomment-7217469189",
+  "review_body_sha256": "148863ecd98ee197a8b41b0f4b85c1c9efa42747d19b27246bddf3efb198e8dd",
+  "reviewer": "chatgpt-web:learn-kg-kr02-k09-independent-oracle-reviewer",
+  "session": "learn-kg-kr02-r6-k09-20261127",
+  "reviewed_head": "d7dedf0926caaecdbadbb1f551852a7cffedee37",
+  "reviewed_tree": "db25eb5513a6ed3f2105d79289c3a7fa38141059",
+  "groups": [
+    {
+      "fixture": "knowledge/v0.1.0/practice-teaching-r6/finite-oracles.json",
+      "fixture_sha256": "9eaa38cb3f88b52ed61c5d3cb78b70b0a26d957d19db281fc1e8026a05a78897",
+      "result": "knowledge/v0.1.0/practice-teaching-r6/oracle-results.json",
+      "result_sha256": "bef81d3c8e5301507427e1a2cc812903d7bb61ac8dd59fbb8825cdae8e978888",
+      "count": 32
+    },
+    {
+      "fixture": "knowledge/v0.1.0/practice-teaching-r6/compositions.json",
+      "fixture_sha256": "5168362ba9c68cecbe5d3f0279d4a2a3512f0a287dc168ad88dbc1d393d7ace5",
+      "result": "knowledge/v0.1.0/practice-teaching-r6/composition-results.json",
+      "result_sha256": "ccae228499e6f038e242180f90ba57adc5d67d7283dc700934d952deda5bd186",
+      "count": 16
+    },
+    {
+      "fixture": "knowledge/v0.1.0/practice-teaching-r6/raw-composition-design.json",
+      "fixture_sha256": "7868d6ba2c6a735dc1af59bad258a6d671e88bf002ca2c44f2bbf1d496e2e3e2",
+      "result": "knowledge/v0.1.0/practice-teaching-r6/raw-composition-results.json",
+      "result_sha256": "aaacf1273183a8e6b161c0d9cd36e9398770b95636386b18d30c85c61d087618",
+      "count": 40
+    },
+    {
+      "fixture": "knowledge/v0.1.0/practice-teaching-r6/cross-semantic-fixtures.json",
+      "fixture_sha256": "c36da59b9dd59d880c820a41f703fff0aafa3e1088b13e1676784bc72ef43cba",
+      "result": "knowledge/v0.1.0/practice-teaching-r6/cross-semantic-results.json",
+      "result_sha256": "2c5509daf226c023c6431c8bcbbda5373d1a2015222a321c17a7c1a068b2fd62",
+      "count": 28
+    },
+    {
+      "fixture": "docs/implementation/k09-preparation/finite-fixtures.json",
+      "fixture_sha256": "e555d817d54e2dc1d561a94647221cd6620c67ade74182b3a25fe41c5b63769f",
+      "result": "docs/implementation/k09-preparation/finite-results.json",
+      "result_sha256": "35355ca0cb5763f3ab1a322b22117fdf7546f5c06d14721003c5749706ddab2c",
+      "count": 38
+    }
+  ],
+  "method_identity": [
+    {
+      "path": "knowledge/v0.1.0/practice-teaching-r6/depth-additions.json",
+      "sha256": "a4ab28bf76e8b906f144235254677c8a0497659001df46c432148e6ddaa59a64"
+    },
+    {
+      "path": "knowledge/v0.1.0/practice-teaching-r6/cross-input-witness.json",
+      "sha256": "9454dbef558c75de5af7ccaa0734f05c79de27b86ea58cd4bddeb42b10f21d8a"
+    },
+    {
+      "path": "knowledge/v0.1.0/practice-teaching-r6/upstream-input-witness.json",
+      "sha256": "4145e26f01297403cd08604ebc62d76a65bc9245cd75ca62c83a52e563415494"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/depth.json",
+      "sha256": "abde92c9617971f0dc4942f9558c918f1209104b96e3af493df410a029c60772"
+    },
+    {
+      "path": "docs/implementation/k09-preparation/K09-depth.md",
+      "sha256": "e2843ffb0a4a8554a1558abf906faace479caee233dc451995a2b1c199e14eed"
+    }
+  ],
+  "independent_expectations": 154,
+  "mismatches": 0,
+  "P0": 0,
+  "P1": 0,
+  "P2": 0,
+  "P3": 0,
+  "limits": "Exact finite artifacts only; no module qualification, rights, CQ/LC, source adequacy or evaluator robustness. Later consumption must bind unchanged input/method and fixture/result hashes or require scoped delta."
+}
