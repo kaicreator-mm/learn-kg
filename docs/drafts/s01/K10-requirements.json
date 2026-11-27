@@ -1,0 +1,563 @@
+{
+  "owner": "K10",
+  "base": "a2b9e7ffea6e2db86379760372141f907815f468",
+  "status": "SCOPE_DRAFT_NOT_CLAIMS",
+  "records": [
+    {
+      "d3_id": "K10.01.01",
+      "owner": "K10",
+      "label": "行为事件",
+      "requirement_id": "K10.01.01.RQ01",
+      "research_requirement": "事件ID、时序、任务版本、动作和观测原值",
+      "negative_boundary": "日志存在不等于知识状态改变",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.01.02",
+      "owner": "K10",
+      "label": "提示",
+      "requirement_id": "K10.01.02.RQ01",
+      "research_requirement": "提示类型、次数、时机、独立性及使用证据",
+      "negative_boundary": "不能将提示正确合并为无提示正确",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.01.03",
+      "owner": "K10",
+      "label": "耗时",
+      "requirement_id": "K10.01.03.RQ01",
+      "research_requirement": "开始结束、暂停、离线、超时及测量单位",
+      "negative_boundary": "耗时长不能唯一推断困难",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.01.04",
+      "owner": "K10",
+      "label": "潜变量",
+      "requirement_id": "K10.01.04.RQ01",
+      "research_requirement": "模型定义、观测映射及后验不确定性",
+      "negative_boundary": "估计值不等于直接观测",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.01.05",
+      "owner": "K10",
+      "label": "观测缺失",
+      "requirement_id": "K10.01.05.RQ01",
+      "research_requirement": "缺失机制、未知、未作答、丢包及处理规则",
+      "negative_boundary": "缺失不默认错误或零能力",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.02.01",
+      "owner": "K10",
+      "label": "BKT",
+      "requirement_id": "K10.02.01.RQ01",
+      "research_requirement": "初始掌握、观测更新、学习转移、独立计算例",
+      "negative_boundary": "后验概率不等于已验证掌握",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [
+        "QD4-06"
+      ],
+      "validation_requirement": {
+        "kind": "NUMERIC_OR_DECISION_ORACLE",
+        "description": "固定L0、guess、slip、transition，一次正确/错误后验及转移；零似然拒绝",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.02.02",
+      "owner": "K10",
+      "label": "猜测滑移",
+      "requirement_id": "K10.02.02.RQ01",
+      "research_requirement": "条件概率、可识别性、校准和反例",
+      "negative_boundary": "猜测参数不等于真实意图",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [
+        "QD4-07"
+      ],
+      "validation_requirement": {
+        "kind": "NUMERIC_OR_DECISION_ORACLE",
+        "description": "条件概率边界，guess/slip无法识别的反例",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.02.03",
+      "owner": "K10",
+      "label": "学习转移",
+      "requirement_id": "K10.02.03.RQ01",
+      "research_requirement": "观测与转移时序、学习与遗忘扩展",
+      "negative_boundary": "不能把模型转移率视为因果教学效果",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.02.04",
+      "owner": "K10",
+      "label": "组件映射",
+      "requirement_id": "K10.02.04.RQ01",
+      "research_requirement": "题目、技能、组件及多组件更新条件",
+      "negative_boundary": "未证映射不强制更新所有组件",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.03.01",
+      "owner": "K10",
+      "label": "回忆概率",
+      "requirement_id": "K10.03.01.RQ01",
+      "research_requirement": "指定时距、任务及提示条件下预测",
+      "negative_boundary": "回忆概率不等于迁移能力",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.03.02",
+      "owner": "K10",
+      "label": "半衰期",
+      "requirement_id": "K10.03.02.RQ01",
+      "research_requirement": "时间单位、衰减函数、参数及独立算例",
+      "negative_boundary": "同一半衰期不适用所有材料",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "NUMERIC_OR_DECISION_ORACLE",
+        "description": "固定半衰期，同单位0、1、2倍时距；负时距拒绝",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.03.03",
+      "owner": "K10",
+      "label": "稳定性难度",
+      "requirement_id": "K10.03.03.RQ01",
+      "research_requirement": "模型专属定义、状态更新、版本与参数",
+      "negative_boundary": "不同复习模型的稳定性不可直接互换",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.03.04",
+      "owner": "K10",
+      "label": "遗忘模型",
+      "requirement_id": "K10.03.04.RQ01",
+      "research_requirement": "指数等候选模型、拟合、预测与适用域",
+      "negative_boundary": "不假设所有遗忘呈单一曲线",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.03.05",
+      "owner": "K10",
+      "label": "参数估计",
+      "requirement_id": "K10.03.05.RQ01",
+      "research_requirement": "目标函数、可识别性、分割、区间与冷启动",
+      "negative_boundary": "训练拟合不证明个体校准",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "NUMERIC_OR_DECISION_ORACLE",
+        "description": "参数估计固定小样本、切分、目标函数及不可识别反例",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.04.01",
+      "owner": "K10",
+      "label": "PFA",
+      "requirement_id": "K10.04.01.RQ01",
+      "research_requirement": "成功失败计数、组件参数、logit约定及算例",
+      "negative_boundary": "累计次数不直接证明因果",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "NUMERIC_OR_DECISION_ORACLE",
+        "description": "固定组件参数及成功失败计数；独立sigmoid算例",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.04.02",
+      "owner": "K10",
+      "label": "DKT",
+      "requirement_id": "K10.04.02.RQ01",
+      "research_requirement": "序列输入、预测目标、训练评估和可解释性",
+      "negative_boundary": "隐藏向量不能直接作为知识实体",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.04.03",
+      "owner": "K10",
+      "label": "注意力追踪",
+      "requirement_id": "K10.04.03.RQ01",
+      "research_requirement": "时序注意力架构、掩码、输入输出及评估",
+      "negative_boundary": "注意力权重不是因果解释",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.04.04",
+      "owner": "K10",
+      "label": "时间与上下文特征",
+      "requirement_id": "K10.04.04.RQ01",
+      "research_requirement": "时距、提示、情境、可用时间点和泄漏边界",
+      "negative_boundary": "未来事件不得进入过去预测",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.05.01",
+      "owner": "K10",
+      "label": "技能",
+      "requirement_id": "K10.05.01.RQ01",
+      "research_requirement": "技能构念、观测、状态及组合",
+      "negative_boundary": "单任务成功不等于普遍技能",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.05.02",
+      "owner": "K10",
+      "label": "知识",
+      "requirement_id": "K10.05.02.RQ01",
+      "research_requirement": "知识组件证据、置信与状态变化",
+      "negative_boundary": "答对不直接等于理解",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.05.03",
+      "owner": "K10",
+      "label": "目标",
+      "requirement_id": "K10.05.03.RQ01",
+      "research_requirement": "学习者目标、自主选择、变更和版本",
+      "negative_boundary": "目标不由模型估计擅自替代",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.05.04",
+      "owner": "K10",
+      "label": "偏好",
+      "requirement_id": "K10.05.04.RQ01",
+      "research_requirement": "显式选择、可撤回及情境性",
+      "negative_boundary": "偏好不等于固定学习风格",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.05.05",
+      "owner": "K10",
+      "label": "状态耦合",
+      "requirement_id": "K10.05.05.RQ01",
+      "research_requirement": "多个状态间假设、观测条件和竞争解释",
+      "negative_boundary": "相关状态不自动建立因果边",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.06.01",
+      "owner": "K10",
+      "label": "校准",
+      "requirement_id": "K10.06.01.RQ01",
+      "research_requirement": "预测概率与实际频率、可靠性图及Brier分数",
+      "negative_boundary": "准确率高不证明概率校准",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "validation_requirement": {
+        "kind": "NUMERIC_OR_DECISION_ORACLE",
+        "description": "固定概率和二元结果，Brier独立计算及校准分箱",
+        "status": "NOT_RUN"
+      },
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.06.02",
+      "owner": "K10",
+      "label": "区分度",
+      "requirement_id": "K10.06.02.RQ01",
+      "research_requirement": "预测排序指标、样本和类别分布",
+      "negative_boundary": "AUC高不证明个体可靠性",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.06.03",
+      "owner": "K10",
+      "label": "冷启动",
+      "requirement_id": "K10.06.03.RQ01",
+      "research_requirement": "先验、有限证据、缺失和保守策略",
+      "negative_boundary": "无历史不能默认为零掌握",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.06.04",
+      "owner": "K10",
+      "label": "概念漂移",
+      "requirement_id": "K10.06.04.RQ01",
+      "research_requirement": "时间/任务变化、分布变化检测及再验证",
+      "negative_boundary": "分布漂移不自动更新正式知识",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.06.05",
+      "owner": "K10",
+      "label": "数据泄漏",
+      "requirement_id": "K10.06.05.RQ01",
+      "research_requirement": "用户、时间、题目族隔离及特征时间",
+      "negative_boundary": "随机拆分不一定避免泄漏",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "d3_id": "K10.06.06",
+      "owner": "K10",
+      "label": "个体不确定性",
+      "requirement_id": "K10.06.06.RQ01",
+      "research_requirement": "参数、观测和模型误差、区间或未知",
+      "negative_boundary": "不以点估计掩盖证据不足",
+      "source_leads": [
+        "S004",
+        "S013",
+        "S033",
+        "S034",
+        "S035"
+      ],
+      "existing_d4_refs": [],
+      "status": "SCOPE_DRAFT",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

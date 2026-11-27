@@ -1,0 +1,94 @@
+{
+  "status": "SRC01_PARTIAL_CURRENT_RAW_PDF_BACKUP_VERIFIED_NOT_TASK_RECEIPT",
+  "attempt_id": "SRC01-RAW-PDF-PRIVATE-BACKUP-01",
+  "source_candidate_head": "6fd65be044fd073984bc84b26b5d4ccbefffb65f",
+  "source_candidate_tree": "b2efcf68695f80621d2c12d0b5fa96d45d859c87",
+  "prior_refs": {
+    "identity": "docs/drafts/stage-handoff/src01-pdf-identity-evidence.json",
+    "identity_blob": "4acc760ccab0554c0a1847cc026d868904bb51a6",
+    "layout": "docs/drafts/stage-handoff/qualification-preparation/src01-layout-evidence.json",
+    "layout_blob": "8f43bcfc67371e492880e1958203dd0b7ea104a2",
+    "prior_issue_comment": 7204060364
+  },
+  "source": "Existing private Drive originals, exact three previously identified PDFs; actual configured rclone connection read-only copy, original names and IDs checked against prior metadata, no sharing changes.",
+  "backup": {
+    "server_label": "aliyun-sg",
+    "storage_class": "EXISTING_PRIVATE_SOURCE_PRESERVATION_DIRECTORY",
+    "directory_mode": "0700",
+    "file_mode": "0600",
+    "non_overwriting_new_directory": true,
+    "manifest_sha256": "ee7627e732bcc0dd82d306b980fb8ff97586c01df2f20b8220c0f7c7b3ad16af",
+    "private_directory_location": "Retained in owner-accessible Gateway job output; not published here.",
+    "copy_job": "job_01M8DTZVYX00CZWJT5MG4NHQMW",
+    "result": "3_OF_3_CURRENT_SOURCE_BYTES_MATCHED"
+  },
+  "files": [
+    {
+      "source_id": "RHSK01",
+      "size": 4636209,
+      "sha256": "ec74ce0439e837bbb15154be13e747ae798903b2fd3a331629df6c3b45504941",
+      "pages": 406,
+      "current_drive_to_server_sha256_match": true,
+      "restore_sha256_match": true,
+      "conversation_attachment_sha256_match": true,
+      "all_pages_opened_and_text_extracted_on_matching_attachment": true,
+      "publication_rights": "HOLD",
+      "historical_pdf_sha256_match": "UNKNOWN"
+    },
+    {
+      "source_id": "RHSK02",
+      "size": 3696686,
+      "sha256": "a4544ceb385349a0ea078cccecb9319c7338a0cbd8308fa08d47d6d4d3bba023",
+      "pages": 330,
+      "current_drive_to_server_sha256_match": true,
+      "restore_sha256_match": true,
+      "conversation_attachment_sha256_match": true,
+      "all_pages_opened_and_text_extracted_on_matching_attachment": true,
+      "publication_rights": "HOLD",
+      "historical_pdf_sha256_match": "UNKNOWN"
+    },
+    {
+      "source_id": "RHSK03",
+      "size": 73684,
+      "sha256": "8cb62d88440287d0a94f05d7f011e0af89af907455ab3fb2f4a1d25f2085fa16",
+      "pages": 1,
+      "current_drive_to_server_sha256_match": true,
+      "restore_sha256_match": true,
+      "conversation_attachment_sha256_match": true,
+      "all_pages_opened_and_text_extracted_on_matching_attachment": true,
+      "publication_rights": "HOLD",
+      "historical_pdf_sha256_match": "UNKNOWN"
+    }
+  ],
+  "restoration": {
+    "job": "job_01M8DV2P06002A7TH7AADG7S55",
+    "method": "Fresh private temporary directory on aliyun-sg, copy three PDFs plus manifest, assert separate inode, identical bytes and expected SHA256, permission check, delete only temporary restore directory",
+    "result": "3_OF_3_BYTE_RESTORATION_MATCH",
+    "parser_attempts": [
+      {
+        "job": "job_01M8DV10Y1005HNY9R20ZTBRRA",
+        "result": "FAILED_MISSING_FITZ_ON_SERVER"
+      },
+      {
+        "job": "job_01M8DV1HKA00PM6E1T4Y4FYPDP",
+        "result": "FAILED_PDFINFO_UNAVAILABLE"
+      }
+    ],
+    "matching_attachment_parse": {
+      "environment": "Current conversation container, PyMuPDF 1.26.7",
+      "method": "Each attachment independently hashed to expected server original digest; actually opened all pages, checked nonencrypted PDF and positive page boxes, extracted text per page",
+      "pages_opened": 737,
+      "result": "3_OF_3_FILES_ALL_PAGES_OPENED",
+      "limit": "Parsing performed on identical-digest attachments, not server restore bytes directly; not complete visual/semantic verification."
+    }
+  },
+  "remaining": [
+    "Historical PDF bytes identity unavailable (no historical PDF digest)",
+    "14 source-block extraction discrepancies retained HOLD; no semantic inference or historical overwrite",
+    "Publication rights and private HSK source qualification remain HOLD",
+    "Independent storage copy exists on private server, but no claim of offsite multi-generation retention, long-term backup policy or formal SRC01 PRESERVATION_VERIFIED"
+  ],
+  "formal_receipt": null,
+  "formal_dispatch": "HOLD_PENDING_SCOPED_REVIEW",
+  "limits": "Only safe evidence metadata stored in Git; no raw PDFs, original content, private IDs, private paths, new learner data, or persistent SQLite. Server source preservation is non-destructive, no change to formal DAG or R6 review scope."
+}

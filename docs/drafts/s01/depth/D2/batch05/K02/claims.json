@@ -1,0 +1,164 @@
+{
+  "owner": "K02",
+  "base": "b4640a614971aa6df6f4896f97eec03434f35a8f",
+  "prior_claim_blob": "af52004c041c2cead6770b67578e695cc6980208",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K02.01.02.D4.05",
+      "owner": "K02",
+      "d3_id": "K02.01.02",
+      "requirement_id": "K02.01.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "在等方差正态yes/no模型中，d′=Φ⁻¹(H)−Φ⁻¹(F)，H、F各由相应刺激条件分母估计。",
+      "conditions": [
+        "双类分母非零，内部概率或预设校正，模型假设需检验"
+      ],
+      "negative_boundary": "高命中不一定高敏感性；不能直接用于多选正确率。",
+      "source_refs": [
+        "K02-B05-SDT"
+      ],
+      "source_locator": "pp140,142 Eq1",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K02.01.02.D4.02",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "H=.8,F=.2",
+        "expected": "d′约1.683",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K02.01.02.D4.06",
+      "owner": "K02",
+      "d3_id": "K02.01.02",
+      "requirement_id": "K02.01.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "判准c=−(zH+zF)/2；此符号约定下正值倾向回答无信号，负值倾向有信号。",
+      "conditions": [
+        "与d′相同的正态等方差假设及符号约定"
+      ],
+      "negative_boundary": "判准不是能力或诚实程度。",
+      "source_refs": [
+        "K02-B05-SDT"
+      ],
+      "source_locator": "pp140,142 Eq7",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K02.01.02.D4.03",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "H=.9,F=.4",
+        "expected": "c约−.514",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K02.01.02.D4.07",
+      "owner": "K02",
+      "d3_id": "K02.01.02",
+      "requirement_id": "K02.01.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "端点处理可采用预先声明的loglinear估计：H=(hit+.5)/(signal+1)，F=(falseAlarm+.5)/(noise+1)，所有单元均采用同一校正。",
+      "conditions": [
+        "作为额外候选方法；原试点拒绝端点的合同不改变"
+      ],
+      "negative_boundary": "不把校正计数冒充真实试次；零分母仍拒绝。",
+      "source_refs": [
+        "K02-B05-SDT"
+      ],
+      "source_locator": "p144 loglinear",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K02.01.02.D4.04",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "10个信号全中，10个噪声无误报",
+        "expected": "校正H=10.5/11,F=.5/11",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K02.02.03.D4.04",
+      "owner": "K02",
+      "d3_id": "K02.02.03",
+      "requirement_id": "K02.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "准备间隔增加可减少特定任务切换实验的切换成本，但图示仍有残余；不同任务和线索改变结果。",
+      "conditions": [
+        "综述示例，非跨领域固定毫秒阈值"
+      ],
+      "negative_boundary": "不从准备时间推导必然消除成本。",
+      "source_refs": [
+        "K02-B05-SW"
+      ],
+      "source_locator": "p136 Fig1–2",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K02.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "同一任务短/长准备比较",
+        "expected": "按实际条件报告",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K02.02.03.D4.05",
+      "owner": "K02",
+      "d3_id": "K02.02.03",
+      "requirement_id": "K02.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "局部切换成本比较混合块切换与重复试次；混合成本比较混合块重复与单任务块，两个对照不能混用。",
+      "conditions": [
+        "同任务、匹配计分及反应时统计量；错误率另报"
+      ],
+      "negative_boundary": "差值不唯一确定认知机制。",
+      "source_refs": [
+        "K02-B05-SW"
+      ],
+      "source_locator": "p136 Fig2; p135 mixing cost",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K02.02.03.D4.02",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "切换700ms，重复600ms，单任务550ms",
+        "expected": "局部100ms，混合50ms",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K02.02.04.D4.03",
+      "owner": "K02",
+      "d3_id": "K02.02.04",
+      "requirement_id": "K02.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "执行功能框架区分行为抑制、干扰控制、工作记忆与灵活性；单任务表现可能涉及多个成分。",
+      "conditions": [
+        "摘要级，后句为解释边界"
+      ],
+      "negative_boundary": "不以一次冲突题诊断执行功能缺陷。",
+      "source_refs": [
+        "K02-B05-EF"
+      ],
+      "source_locator": "abstract l102",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "K02.02.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "Stroop表现下降同时材料阅读困难",
+        "expected": "保留竞争解释",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

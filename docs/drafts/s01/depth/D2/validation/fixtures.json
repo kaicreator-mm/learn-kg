@@ -1,0 +1,334 @@
+{
+  "scope": "BUILDER_SYNTHETIC_NUMERICAL_AND_POLICY_GUARD_ONLY",
+  "independent_oracle": false,
+  "qualification": "NOT_RUN",
+  "limits": "人工给定结构化输入与预期；非实际NLP、意图识别、心理测量模型拟合或正式推理器。H05为保守项目守卫，不证明经验语言规律；DINA输入限定合法二元与概率。",
+  "cases": [
+    {
+      "id": "D2-SYN-01",
+      "claim_ref": "K09.02.01.D4.03",
+      "op": "recode",
+      "input": [
+        1,
+        2,
+        10
+      ],
+      "expected": {
+        "ordered": true,
+        "gaps": [
+          1,
+          8
+        ]
+      }
+    },
+    {
+      "id": "D2-SYN-02",
+      "claim_ref": "K09.02.02.D4.03",
+      "op": "variance",
+      "input": {
+        "t": 64,
+        "e": 36
+      },
+      "expected": 0.64
+    },
+    {
+      "id": "D2-SYN-03",
+      "claim_ref": "K09.02.02.D4.03",
+      "op": "variance",
+      "input": {
+        "t": 0,
+        "e": 0
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-SYN-04",
+      "claim_ref": "K09.07.04.D4.03",
+      "op": "align",
+      "input": {
+        "samePopulation": true,
+        "x": 60,
+        "mx": 50,
+        "my": 70,
+        "sx": 10,
+        "sy": 10,
+        "r": 0.5
+      },
+      "expected": {
+        "aligned": 80,
+        "prediction": 75,
+        "equivalence": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "D2-SYN-05",
+      "claim_ref": "K09.07.04.D4.03",
+      "op": "align",
+      "input": {
+        "samePopulation": false,
+        "x": 60,
+        "mx": 50,
+        "my": 70,
+        "sx": 10,
+        "sy": 10,
+        "r": 0.5
+      },
+      "expected": "INSUFFICIENT_CONDITIONS"
+    },
+    {
+      "id": "D2-SYN-06",
+      "claim_ref": "K09.05.01.D4.03",
+      "op": "dina",
+      "input": {
+        "q": [
+          1,
+          1
+        ],
+        "profile": [
+          1,
+          1
+        ],
+        "s": 0.2,
+        "g": 0.25
+      },
+      "expected": 0.8
+    },
+    {
+      "id": "D2-SYN-07",
+      "claim_ref": "K09.05.01.D4.03",
+      "op": "dina",
+      "input": {
+        "q": [
+          1,
+          1
+        ],
+        "profile": [
+          1,
+          0
+        ],
+        "s": 0.2,
+        "g": 0.25
+      },
+      "expected": 0.25
+    },
+    {
+      "id": "D2-SYN-08",
+      "claim_ref": "K09.05.02.D4.03",
+      "op": "q",
+      "input": {
+        "q": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "profiles": 4,
+        "signatures": 2,
+        "allDistinct": false,
+        "statisticalIdentification": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "D2-SYN-09",
+      "claim_ref": "K09.05.02.D4.03",
+      "op": "q",
+      "input": {
+        "q": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "profiles": 4,
+        "signatures": 4,
+        "allDistinct": true,
+        "statisticalIdentification": "NOT_ESTABLISHED"
+      }
+    },
+    {
+      "id": "D2-SYN-10",
+      "claim_ref": "K09.05.02.D4.03",
+      "op": "q",
+      "input": {
+        "q": [
+          [
+            1,
+            0
+          ],
+          [
+            1
+          ]
+        ]
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-SYN-11",
+      "claim_ref": "K09.04.01.D4.03",
+      "op": "rasch",
+      "input": {
+        "score": 0,
+        "n": 5
+      },
+      "expected": "NEGATIVE_INFINITY_LIMIT"
+    },
+    {
+      "id": "D2-SYN-12",
+      "claim_ref": "K09.04.01.D4.03",
+      "op": "rasch",
+      "input": {
+        "score": 5,
+        "n": 5
+      },
+      "expected": "POSITIVE_INFINITY_LIMIT"
+    },
+    {
+      "id": "D2-SYN-13",
+      "claim_ref": "K09.04.01.D4.03",
+      "op": "rasch",
+      "input": {
+        "score": 3,
+        "n": 5
+      },
+      "expected": "INTERIOR"
+    },
+    {
+      "id": "D2-SYN-14",
+      "claim_ref": "H05.01.02.D4.03",
+      "op": "invite",
+      "input": {
+        "accepted": false,
+        "arrangement": false
+      },
+      "expected": "ARRANGEMENT_UNKNOWN"
+    },
+    {
+      "id": "D2-SYN-15",
+      "claim_ref": "H05.01.02.D4.03",
+      "op": "invite",
+      "input": {
+        "accepted": true,
+        "arrangement": true
+      },
+      "expected": "ARRANGEMENT_CONFIRMED"
+    },
+    {
+      "id": "D2-SYN-16",
+      "claim_ref": "H05.01.03.D4.03",
+      "op": "refusal",
+      "input": {
+        "explicitRefusal": true
+      },
+      "expected": "STOP"
+    },
+    {
+      "id": "D2-SYN-17",
+      "claim_ref": "H05.01.03.D4.03",
+      "op": "refusal",
+      "input": {
+        "explicitRefusal": false
+      },
+      "expected": "INTENT_UNKNOWN"
+    },
+    {
+      "id": "D2-SYN-18",
+      "claim_ref": "H05.02.03.D4.03",
+      "op": "reference",
+      "input": {
+        "candidates": [
+          "A",
+          "B"
+        ],
+        "sufficientContext": false
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "D2-SYN-19",
+      "claim_ref": "H05.02.03.D4.03",
+      "op": "reference",
+      "input": {
+        "candidates": [
+          "A"
+        ],
+        "sufficientContext": true
+      },
+      "expected": "A"
+    },
+    {
+      "id": "D2-SYN-20",
+      "claim_ref": "H05.02.03.D4.03",
+      "op": "reference",
+      "input": {
+        "candidates": [
+          "A"
+        ],
+        "sufficientContext": false
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "id": "D2-SYN-21",
+      "claim_ref": "H05.05.04.D4.04",
+      "op": "repair",
+      "input": {
+        "requested": [
+          "time",
+          "place"
+        ],
+        "confirmed": [
+          "time"
+        ]
+      },
+      "expected": [
+        "place"
+      ]
+    },
+    {
+      "id": "D2-SYN-22",
+      "claim_ref": "H05.05.04.D4.04",
+      "op": "repair",
+      "input": {
+        "requested": [
+          "time"
+        ],
+        "confirmed": [
+          "time"
+        ]
+      },
+      "expected": []
+    },
+    {
+      "id": "D2-SYN-23",
+      "claim_ref": "H05.01.04.D4.03",
+      "op": "apology",
+      "input": {
+        "promise": true,
+        "actionObserved": false
+      },
+      "expected": "PROMISED_NOT_VERIFIED"
+    },
+    {
+      "id": "D2-SYN-24",
+      "claim_ref": "H05.01.04.D4.03",
+      "op": "apology",
+      "input": {
+        "promise": true,
+        "actionObserved": true
+      },
+      "expected": "REMEDY_OBSERVED"
+    }
+  ]
+}

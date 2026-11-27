@@ -22,3 +22,6 @@ coverage-ledger.json 当前是任务路由与必需字段模板，所有CQ/LC NO
  
 ## 修正账本
 RV01 receipt语义+失效；RV02 IF01和缺失F/A边；RV03 DB01–03/V02/REL发布；RV04 V00/V01/G03/G04/V02/G05精确绑定；RV05 全CQ/LC账本与逐D3/D4；RV06 HS00与H并行；RV07 历史RDF入口标识和issue职责；RV08 master/调度/CASE命名/收据。全部为修正候选，待独立复审，不标CLOSED。
+
+## D014 优先级覆盖（用户新增交付要求）
+此前RV03/RV04中的“SQLite候选包/最终包/激活”在本版本实施交付上以文本知识包为准：权威输入与发布为可读UTF-8文本、schema、映射、导入器和验证证据。DB02/03支持显式下游导入；本项目不直接生成持久SQLite文件，不将SQLite文件作为正式知识产物。默认用内存SQLite执行正负导入与查询测试；文本manifest可在文件系统做实际中断/回退测试；涉及实际多文件SQLite崩溃或文件级事务的保证，未实测明确HOLD，不能由内存测试外推，未来经用户要求另行执行。G03/G04/G05/REL绑定获准文本实际字节及导入器版本，保持原资格/失效/权限约束。详见 [文本合同](../design/text-knowledge-package.md)。

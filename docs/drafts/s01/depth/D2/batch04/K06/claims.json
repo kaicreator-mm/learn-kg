@@ -1,0 +1,86 @@
+{
+  "owner": "K06",
+  "base": "7e1d883c9d679686dab925812d0870c3601dfeb0",
+  "prior_claim_blob": "511ce4ed06d129d9f63fa6bf9e1b913ca9b92892",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K06.04.03.D4.03",
+      "owner": "K06",
+      "d3_id": "K06.04.03",
+      "requirement_id": "K06.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "两组元分析分别比较无辅助发现与显式教学（580比较,d=-.38）及增强发现与其他教学（360比较,d=.30）。比较对象不同，不能把差值.68当增强发现相对无辅助发现的直接效应。",
+      "conditions": [
+        "164项研究汇总，随机效应；保留比较定义"
+      ],
+      "negative_boundary": "不从两组效应直接相减产生新因果估计。",
+      "source_refs": [
+        "K06-B04-ALF"
+      ],
+      "source_locator": "p1 abstract",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K06.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两个汇总效应的对照组不一致",
+        "expected": "拒绝直接相减为处理效应",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K06.04.03.D4.04",
+      "owner": "K06",
+      "d3_id": "K06.04.03",
+      "requirement_id": "K06.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "发现活动可以加入反馈、示例、支架与自我解释；作者强调活动参与不自动意味着知识建构，错误解释需要重新导向。",
+      "conditions": [
+        "作者综合及教学建议，不是每一组件独立随机效应"
+      ],
+      "negative_boundary": "不把动手参与当掌握；不规定所有任务均采用同一支架。",
+      "source_refs": [
+        "K06-B04-ALF"
+      ],
+      "source_locator": "p12 Implications for Teaching",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K06.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "学习者探索出错误规则",
+        "expected": "提供反例/解释支架，再用新任务独立检验",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K06.07.03.D4.03",
+      "owner": "K06",
+      "d3_id": "K06.07.03",
+      "requirement_id": "K06.07.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "教师辅导研究汇总中教学实践和学生成绩是不同结果维度，且大规模实施效果可能低于小规模试验；须分别记录实施规模与结果。",
+      "conditions": [
+        "摘要级；美国学前小学读写项目为重要证据来源"
+      ],
+      "negative_boundary": "不将教师实践变化直接当学生成绩增量，不外推AI辅导效果。",
+      "source_refs": [
+        "K06-B04-COACH"
+      ],
+      "source_locator": "abstract l30–33",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "K06.07.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "小规模教师辅导取得积极结果",
+        "expected": "另核规模扩大后实际结果",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

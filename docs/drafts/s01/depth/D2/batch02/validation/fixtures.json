@@ -1,0 +1,520 @@
+{
+  "status": "BUILDER_SYNTHETIC_ONLY",
+  "base": "860af0522b5d7e45f5e58bfe7f427159407d5f9f",
+  "independent_oracle": false,
+  "qualification": "NOT_RUN",
+  "limits": "有限人工输入与手算预期；CAT仅指定信息值和可用状态的单步选择与停止守卫，不拟合或施测；Kappa未加权名义分类；筛查不是诊断或教育判定；搭配使用同一二元事件空间合成计数，不运行实际语料检索。H04/H05语言例证未执行。",
+  "cases": [
+    {
+      "id": "D2-B02-SYN-01",
+      "claim_ref": "K09.05.03.D4.04",
+      "input": {
+        "mode": "cat",
+        "items": [
+          {
+            "id": "A",
+            "info": 0.2,
+            "eligible": "yes"
+          },
+          {
+            "id": "B",
+            "info": 0.4,
+            "eligible": "yes"
+          }
+        ]
+      },
+      "expected": {
+        "id": "B",
+        "optimality": "ELIGIBLE_ONLY"
+      }
+    },
+    {
+      "id": "D2-B02-SYN-02",
+      "claim_ref": "K09.05.03.D4.04",
+      "input": {
+        "mode": "cat",
+        "items": [
+          {
+            "id": "A",
+            "info": 0.9,
+            "eligible": "no"
+          },
+          {
+            "id": "B",
+            "info": 0.5,
+            "eligible": "yes"
+          }
+        ]
+      },
+      "expected": {
+        "id": "B",
+        "optimality": "ELIGIBLE_ONLY"
+      }
+    },
+    {
+      "id": "D2-B02-SYN-03",
+      "claim_ref": "K09.05.03.D4.04",
+      "input": {
+        "mode": "cat",
+        "items": [
+          {
+            "id": "A",
+            "info": 0.9,
+            "eligible": "unknown"
+          },
+          {
+            "id": "B",
+            "info": 0.5,
+            "eligible": "no"
+          }
+        ]
+      },
+      "expected": "HOLD_NO_ELIGIBLE"
+    },
+    {
+      "id": "D2-B02-SYN-04",
+      "claim_ref": "K09.05.03.D4.04",
+      "input": {
+        "mode": "cat",
+        "items": [
+          {
+            "id": "B",
+            "info": 0.5,
+            "eligible": "yes"
+          },
+          {
+            "id": "A",
+            "info": 0.5,
+            "eligible": "yes"
+          }
+        ]
+      },
+      "expected": {
+        "id": "A",
+        "optimality": "ELIGIBLE_ONLY"
+      }
+    },
+    {
+      "id": "D2-B02-SYN-05",
+      "claim_ref": "K09.05.03.D4.04",
+      "input": {
+        "mode": "cat",
+        "items": [
+          {
+            "id": "A",
+            "info": 0.5,
+            "eligible": "yes"
+          },
+          {
+            "id": "A",
+            "info": 0.2,
+            "eligible": "yes"
+          }
+        ]
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B02-SYN-06",
+      "claim_ref": "K09.05.04.D4.03",
+      "input": {
+        "mode": "stop",
+        "se": 0.4,
+        "target": 0.3,
+        "used": 5,
+        "max": 10,
+        "available": 0,
+        "contentComplete": true
+      },
+      "expected": {
+        "reason": "EXHAUSTED",
+        "precision": false,
+        "contentComplete": true
+      }
+    },
+    {
+      "id": "D2-B02-SYN-07",
+      "claim_ref": "K09.05.04.D4.03",
+      "input": {
+        "mode": "stop",
+        "se": 0.4,
+        "target": 0.3,
+        "used": 10,
+        "max": 10,
+        "available": 3,
+        "contentComplete": true
+      },
+      "expected": {
+        "reason": "ITEM_LIMIT",
+        "precision": false,
+        "contentComplete": true
+      }
+    },
+    {
+      "id": "D2-B02-SYN-08",
+      "claim_ref": "K09.05.04.D4.03",
+      "input": {
+        "mode": "stop",
+        "se": 0.3,
+        "target": 0.3,
+        "used": 5,
+        "max": 10,
+        "available": 2,
+        "contentComplete": true
+      },
+      "expected": {
+        "reason": "TARGET_CRITERIA",
+        "precision": true,
+        "contentComplete": true
+      }
+    },
+    {
+      "id": "D2-B02-SYN-09",
+      "claim_ref": "K09.05.04.D4.03",
+      "input": {
+        "mode": "stop",
+        "se": 0.2,
+        "target": 0.3,
+        "used": 5,
+        "max": 10,
+        "available": 2,
+        "contentComplete": false
+      },
+      "expected": {
+        "reason": "CONTINUE",
+        "precision": true,
+        "contentComplete": false
+      }
+    },
+    {
+      "id": "D2-B02-SYN-10",
+      "claim_ref": "K09.05.04.D4.03",
+      "input": {
+        "mode": "stop",
+        "se": 0.2,
+        "target": 0.3,
+        "used": 10,
+        "max": 10,
+        "available": 2,
+        "contentComplete": false
+      },
+      "expected": {
+        "reason": "ITEM_LIMIT",
+        "precision": true,
+        "contentComplete": false
+      }
+    },
+    {
+      "id": "D2-B02-SYN-11",
+      "claim_ref": "K09.06.02.D4.03",
+      "input": {
+        "mode": "kappa",
+        "table": [
+          [
+            40,
+            10
+          ],
+          [
+            10,
+            40
+          ]
+        ]
+      },
+      "expected": {
+        "po": 0.8,
+        "pe": 0.5,
+        "kappa": 0.6
+      }
+    },
+    {
+      "id": "D2-B02-SYN-12",
+      "claim_ref": "K09.06.02.D4.03",
+      "input": {
+        "mode": "kappa",
+        "table": [
+          [
+            98,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "expected": {
+        "po": 0.98,
+        "pe": 0.9802,
+        "kappa": -0.010101010101010102
+      }
+    },
+    {
+      "id": "D2-B02-SYN-13",
+      "claim_ref": "K09.06.02.D4.03",
+      "input": {
+        "mode": "kappa",
+        "table": [
+          [
+            10,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": {
+        "po": 1,
+        "pe": 1,
+        "kappa": "UNDEFINED"
+      }
+    },
+    {
+      "id": "D2-B02-SYN-14",
+      "claim_ref": "K09.06.02.D4.03",
+      "input": {
+        "mode": "kappa",
+        "table": [
+          [
+            0,
+            5
+          ],
+          [
+            5,
+            0
+          ]
+        ]
+      },
+      "expected": {
+        "po": 0,
+        "pe": 0.5,
+        "kappa": -1
+      }
+    },
+    {
+      "id": "D2-B02-SYN-15",
+      "claim_ref": "K09.06.02.D4.03",
+      "input": {
+        "mode": "kappa",
+        "table": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "expected": {
+        "po": 1,
+        "pe": 0.3333333333333333,
+        "kappa": 1
+      }
+    },
+    {
+      "id": "D2-B02-SYN-16",
+      "claim_ref": "K09.06.02.D4.03",
+      "input": {
+        "mode": "kappa",
+        "table": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B02-SYN-17",
+      "claim_ref": "K09.07.03.D4.03",
+      "input": {
+        "mode": "screen",
+        "tp": 18,
+        "fn": 2,
+        "fp": 8,
+        "tn": 72,
+        "reference": true
+      },
+      "expected": {
+        "sensitivity": 0.9,
+        "specificity": 0.9,
+        "ppv": 0.6923076923076923,
+        "npv": 0.972972972972973
+      }
+    },
+    {
+      "id": "D2-B02-SYN-18",
+      "claim_ref": "K09.07.03.D4.03",
+      "input": {
+        "mode": "screen",
+        "tp": 0,
+        "fn": 0,
+        "fp": 8,
+        "tn": 72,
+        "reference": true
+      },
+      "expected": {
+        "sensitivity": "UNDEFINED",
+        "specificity": 0.9,
+        "ppv": 0,
+        "npv": 1
+      }
+    },
+    {
+      "id": "D2-B02-SYN-19",
+      "claim_ref": "K09.07.03.D4.03",
+      "input": {
+        "mode": "screen",
+        "tp": 18,
+        "fn": 2,
+        "fp": 8,
+        "tn": 72,
+        "reference": false
+      },
+      "expected": "REFERENCE_REQUIRED"
+    },
+    {
+      "id": "D2-B02-SYN-20",
+      "claim_ref": "K09.07.03.D4.04",
+      "input": {
+        "mode": "ppv",
+        "se": 0.9,
+        "sp": 0.9,
+        "base": 0.1
+      },
+      "expected": 0.5
+    },
+    {
+      "id": "D2-B02-SYN-21",
+      "claim_ref": "K09.07.03.D4.04",
+      "input": {
+        "mode": "ppv",
+        "se": 0.9,
+        "sp": 0.9,
+        "base": 0.5
+      },
+      "expected": 0.9
+    },
+    {
+      "id": "D2-B02-SYN-22",
+      "claim_ref": "K09.07.03.D4.04",
+      "input": {
+        "mode": "ppv",
+        "se": 1,
+        "sp": 1,
+        "base": 0
+      },
+      "expected": "UNDEFINED"
+    },
+    {
+      "id": "D2-B02-SYN-23",
+      "claim_ref": "K09.07.03.D4.04",
+      "input": {
+        "mode": "ppv",
+        "se": 1.1,
+        "sp": 0.9,
+        "base": 0.5
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B02-SYN-24",
+      "claim_ref": "H03.05.01.D4.04",
+      "input": {
+        "mode": "collocation",
+        "N": 1000,
+        "fx": 100,
+        "fy": 200,
+        "fxy": 40
+      },
+      "expected": {
+        "pmi": 1,
+        "dice": 0.26666666666666666
+      }
+    },
+    {
+      "id": "D2-B02-SYN-25",
+      "claim_ref": "H03.05.01.D4.04",
+      "input": {
+        "mode": "collocation",
+        "N": 1000,
+        "fx": 100,
+        "fy": 200,
+        "fxy": 20
+      },
+      "expected": {
+        "pmi": 0,
+        "dice": 0.13333333333333333
+      }
+    },
+    {
+      "id": "D2-B02-SYN-26",
+      "claim_ref": "H03.05.01.D4.04",
+      "input": {
+        "mode": "collocation",
+        "N": 1000,
+        "fx": 100,
+        "fy": 200,
+        "fxy": 0
+      },
+      "expected": {
+        "pmi": "NEGATIVE_INFINITY",
+        "dice": 0
+      }
+    },
+    {
+      "id": "D2-B02-SYN-27",
+      "claim_ref": "H03.05.01.D4.04",
+      "input": {
+        "mode": "collocation",
+        "N": 1000,
+        "fx": 0,
+        "fy": 0,
+        "fxy": 0
+      },
+      "expected": {
+        "pmi": "UNDEFINED",
+        "dice": "UNDEFINED"
+      }
+    },
+    {
+      "id": "D2-B02-SYN-28",
+      "claim_ref": "H03.05.01.D4.04",
+      "input": {
+        "mode": "collocation",
+        "N": 1000,
+        "fx": 100,
+        "fy": 200,
+        "fxy": 101
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B02-SYN-29",
+      "claim_ref": "H03.05.01.D4.04",
+      "input": {
+        "mode": "collocation",
+        "N": 100,
+        "fx": 80,
+        "fy": 80,
+        "fxy": 20
+      },
+      "expected": "INVALID"
+    }
+  ]
+}

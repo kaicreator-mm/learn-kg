@@ -1,0 +1,41 @@
+{
+  "status": "DESIGN_ONLY_PROJECT_RULES",
+  "rules": [
+    {
+      "id": "D3-P01",
+      "refs": [
+        "H02.02.02.D4.01",
+        "H02.05.02.D4.01",
+        "H06.04.01.D4.01"
+      ],
+      "kind": "PROJECT_EVIDENCE_BOUNDARY",
+      "inputs": "target=handwriting_order, observed_channel, ordered_trace, independent",
+      "output": "ELIGIBLE_FOR_SCORING or UNKNOWN; never mastery",
+      "boundary": "No handwriting qualification; restricted claims not sole positive scoring evidence."
+    },
+    {
+      "id": "D3-P02",
+      "refs": [
+        "H05.04.01.D4.01",
+        "H05.04.04.D4.01"
+      ],
+      "kind": "PROJECT_EVIDENCE_BOUNDARY",
+      "inputs": "target=real_transaction, observed_channel, external_receipt",
+      "output": "SIMULATION_ONLY / UNKNOWN / EXTERNAL_RESULT_PRESENT",
+      "boundary": "Language skill and real-world outcome separate; no authorization from task."
+    },
+    {
+      "id": "D3-P03",
+      "refs": [
+        "H05.01.01.D4.01",
+        "H05.01.02.D4.01",
+        "H05.05.03.D4.01"
+      ],
+      "kind": "PROJECT_EVIDENCE_BOUNDARY",
+      "inputs": "utterance, context_known, stated_intent, identity_label",
+      "output": "UNKNOWN or STATED_INTENT_ONLY",
+      "boundary": "No inference from identity or expression alone, never asserted actual intent."
+    }
+  ],
+  "limits": "Synthetic evidence-routing only. Does not score correctness, authenticate receipts, establish intent or validate learning effects. No promotion of D2 candidates."
+}

@@ -1,0 +1,247 @@
+{
+  "owner": "K09",
+  "base": "41d936638ec823fd164d42d5be2f2150d000fe43",
+  "scope": "SYNTHETIC_BUILDER_ONLY",
+  "independent_oracle": false,
+  "limitations": "合成数值及守卫；不是参数拟合、实际测验效度或独立oracle；DINA单调性是本试点保守条件；κ与CTT等专门来源待核。",
+  "records": [
+    {
+      "id": "K09-LOGIC-1",
+      "input": {
+        "mode": "sem",
+        "sd": 10,
+        "r": 0.84
+      },
+      "expected": 4,
+      "actual": 4,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-2",
+      "input": {
+        "mode": "sem",
+        "sd": 10,
+        "r": 1
+      },
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-3",
+      "input": {
+        "mode": "sem",
+        "sd": 1,
+        "r": 1.1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-4",
+      "input": {
+        "mode": "irt",
+        "a": 1,
+        "b": 0,
+        "theta": 0,
+        "c": 0
+      },
+      "expected": 0.5,
+      "actual": 0.5,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-5",
+      "input": {
+        "mode": "irt",
+        "a": 2,
+        "b": 0,
+        "theta": 0,
+        "c": 0.2
+      },
+      "expected": 0.6,
+      "actual": 0.6000000000000001,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-6",
+      "input": {
+        "mode": "irt",
+        "a": 0,
+        "b": 0,
+        "theta": 0,
+        "c": 0
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-7",
+      "input": {
+        "mode": "info",
+        "a": 1,
+        "P": 0.5
+      },
+      "expected": 0.25,
+      "actual": 0.25,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-8",
+      "input": {
+        "mode": "info",
+        "a": 2,
+        "P": 0.5
+      },
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-9",
+      "input": {
+        "mode": "dina",
+        "q": [
+          1,
+          1
+        ],
+        "alpha": [
+          1,
+          0
+        ],
+        "g": 0.2,
+        "s": 0.1
+      },
+      "expected": 0.2,
+      "actual": 0.2,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-10",
+      "input": {
+        "mode": "dina",
+        "q": [
+          1,
+          1
+        ],
+        "alpha": [
+          1,
+          1
+        ],
+        "g": 0.2,
+        "s": 0.1
+      },
+      "expected": 0.9,
+      "actual": 0.9,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-11",
+      "input": {
+        "mode": "dina",
+        "q": [
+          0,
+          0
+        ],
+        "alpha": [
+          1,
+          1
+        ],
+        "g": 0.2,
+        "s": 0.1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-12",
+      "input": {
+        "mode": "ratio",
+        "correct": 8,
+        "total": 10
+      },
+      "expected": 0.8,
+      "actual": 0.8,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-13",
+      "input": {
+        "mode": "ratio",
+        "correct": 0,
+        "total": 0
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-14",
+      "input": {
+        "mode": "cat",
+        "count": 10,
+        "max": 10,
+        "se": 0.8,
+        "target": 0.3,
+        "content": true
+      },
+      "expected": "LIMIT_INSUFFICIENT",
+      "actual": "LIMIT_INSUFFICIENT",
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-15",
+      "input": {
+        "mode": "cat",
+        "count": 5,
+        "max": 10,
+        "se": 0.2,
+        "target": 0.3,
+        "content": true
+      },
+      "expected": "PRECISION_AND_CONTENT",
+      "actual": "PRECISION_AND_CONTENT",
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-16",
+      "input": {
+        "mode": "cat",
+        "count": 5,
+        "max": 10,
+        "se": 0.2,
+        "target": 0.3,
+        "content": false
+      },
+      "expected": "CONTINUE",
+      "actual": "CONTINUE",
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-17",
+      "input": {
+        "mode": "kappa",
+        "po": 0.8,
+        "pe": 0.5
+      },
+      "expected": 0.6,
+      "actual": 0.6000000000000001,
+      "pass": true
+    },
+    {
+      "id": "K09-LOGIC-18",
+      "input": {
+        "mode": "kappa",
+        "po": 1,
+        "pe": 1
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    }
+  ],
+  "passed": 18
+}

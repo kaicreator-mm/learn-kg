@@ -1,0 +1,171 @@
+{
+  "owner": "K05",
+  "base": "fcdddbbd416f9d00d3a4ae33b3b7d71c8b8507e4",
+  "scope": "SYNTHETIC_INTERVAL_AND_SCHEDULE_CLASSIFICATION_ONLY",
+  "execution": "ACTUAL_JS_BUILDER_EXECUTION",
+  "independent_oracle": false,
+  "limitations": "只验证时间点定义和安排分类，不预测保持、选择最优间隔、检验策略有效性或运行真实学习流程；时间采用同一抽象单位，实际时间单位转换与跨时区未验证。",
+  "records": [
+    {
+      "mode": "intervals",
+      "input": [
+        0,
+        7,
+        35
+      ],
+      "expected": {
+        "gap": 7,
+        "retention": 28
+      },
+      "id": "K05-LOGIC-1",
+      "actual": {
+        "gap": 7,
+        "retention": 28
+      },
+      "pass": true
+    },
+    {
+      "mode": "intervals",
+      "input": [
+        2,
+        2,
+        9
+      ],
+      "expected": {
+        "gap": 0,
+        "retention": 7
+      },
+      "id": "K05-LOGIC-2",
+      "actual": {
+        "gap": 0,
+        "retention": 7
+      },
+      "pass": true
+    },
+    {
+      "mode": "intervals",
+      "input": [
+        0,
+        8,
+        7
+      ],
+      "expected": "INVALID",
+      "id": "K05-LOGIC-3",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "mode": "intervals",
+      "input": [
+        0,
+        7,
+        7
+      ],
+      "expected": "INVALID",
+      "id": "K05-LOGIC-4",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "mode": "intervals",
+      "input": [
+        0,
+        null,
+        7
+      ],
+      "expected": "INVALID",
+      "id": "K05-LOGIC-5",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "mode": "schedule",
+      "input": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "expected": "EQUAL",
+      "id": "K05-LOGIC-6",
+      "actual": "EQUAL",
+      "pass": true
+    },
+    {
+      "mode": "schedule",
+      "input": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "expected": "EXPANDING",
+      "id": "K05-LOGIC-7",
+      "actual": "EXPANDING",
+      "pass": true
+    },
+    {
+      "mode": "schedule",
+      "input": [
+        0,
+        1,
+        4,
+        6
+      ],
+      "expected": "OTHER",
+      "id": "K05-LOGIC-8",
+      "actual": "OTHER",
+      "pass": true
+    },
+    {
+      "mode": "schedule",
+      "input": [
+        0,
+        0,
+        2,
+        5
+      ],
+      "expected": "INVALID",
+      "id": "K05-LOGIC-9",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "mode": "schedule",
+      "input": [
+        0,
+        2
+      ],
+      "expected": "INSUFFICIENT",
+      "id": "K05-LOGIC-10",
+      "actual": "INSUFFICIENT",
+      "pass": true
+    },
+    {
+      "mode": "schedule",
+      "input": [
+        0,
+        3,
+        5,
+        6
+      ],
+      "expected": "OTHER",
+      "id": "K05-LOGIC-11",
+      "actual": "OTHER",
+      "pass": true
+    },
+    {
+      "mode": "schedule",
+      "input": [
+        0,
+        2,
+        1
+      ],
+      "expected": "INVALID",
+      "id": "K05-LOGIC-12",
+      "actual": "INVALID",
+      "pass": true
+    }
+  ],
+  "passed": 12
+}

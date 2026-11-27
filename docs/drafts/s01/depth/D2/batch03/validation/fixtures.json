@@ -1,0 +1,381 @@
+{
+  "status": "BUILDER_SYNTHETIC_ONLY",
+  "base": "2f39a344154a9f1c22572675e8d364325429ae15",
+  "independent_oracle": false,
+  "qualification": "NOT_RUN",
+  "limits": "人工给定边界及期望；VOT仅时间差与单位转换，不是声学检测；声旁家族为人工构造的成员/读音标签，不是2015论文原始数据或实际字表；IDS仅明确列出的5个运算符及14个操作数的有限语法子集，其他符号保留HOLD，非完整Unicode17验证；笔画序列为抽象类别合成值，非真实规范字或实际轨迹；H03/H04未进行自然语言判断。",
+  "cases": [
+    {
+      "id": "D2-B03-SYN-01",
+      "claim_ref": "H01.01.03.D4.03",
+      "input": {
+        "mode": "vot",
+        "release": 100,
+        "onset": 145,
+        "unit": "ms"
+      },
+      "expected": {
+        "votMs": 45,
+        "category": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-02",
+      "claim_ref": "H01.01.03.D4.03",
+      "input": {
+        "mode": "vot",
+        "release": 100,
+        "onset": 80,
+        "unit": "ms"
+      },
+      "expected": {
+        "votMs": -20,
+        "category": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-03",
+      "claim_ref": "H01.01.03.D4.03",
+      "input": {
+        "mode": "vot",
+        "release": 0.1,
+        "onset": 0.145,
+        "unit": "s"
+      },
+      "expected": {
+        "votMs": 45,
+        "category": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-04",
+      "claim_ref": "H01.01.03.D4.03",
+      "input": {
+        "mode": "vot",
+        "release": 10,
+        "onset": 10,
+        "unit": "ms"
+      },
+      "expected": {
+        "votMs": 0,
+        "category": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-05",
+      "claim_ref": "H01.01.03.D4.03",
+      "input": {
+        "mode": "vot",
+        "release": 10,
+        "onset": 20,
+        "unit": "Hz"
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B03-SYN-06",
+      "claim_ref": "H02.02.05.D4.04",
+      "input": {
+        "mode": "family",
+        "members": [
+          {
+            "id": "A",
+            "segment": "qing",
+            "tone": 1
+          },
+          {
+            "id": "B",
+            "segment": "qing",
+            "tone": 2
+          },
+          {
+            "id": "C",
+            "segment": "qing",
+            "tone": 3
+          },
+          {
+            "id": "D",
+            "segment": "jiang",
+            "tone": 1
+          }
+        ],
+        "segment": "qing",
+        "tone": 1,
+        "includeTone": false
+      },
+      "expected": {
+        "numerator": 3,
+        "denominator": 4,
+        "consistency": 0.75,
+        "individualReading": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-07",
+      "claim_ref": "H02.02.05.D4.04",
+      "input": {
+        "mode": "family",
+        "members": [
+          {
+            "id": "A",
+            "segment": "qing",
+            "tone": 1
+          },
+          {
+            "id": "B",
+            "segment": "qing",
+            "tone": 2
+          },
+          {
+            "id": "C",
+            "segment": "qing",
+            "tone": 3
+          },
+          {
+            "id": "D",
+            "segment": "jiang",
+            "tone": 1
+          }
+        ],
+        "segment": "qing",
+        "tone": 1,
+        "includeTone": true
+      },
+      "expected": {
+        "numerator": 1,
+        "denominator": 4,
+        "consistency": 0.25,
+        "individualReading": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-08",
+      "claim_ref": "H02.02.05.D4.04",
+      "input": {
+        "mode": "family",
+        "members": [
+          {
+            "id": "A",
+            "segment": "qing",
+            "tone": 1
+          },
+          {
+            "id": "B",
+            "segment": "qing",
+            "tone": 2
+          },
+          {
+            "id": "C",
+            "segment": "qing",
+            "tone": 3
+          },
+          {
+            "id": "D",
+            "segment": "jiang",
+            "tone": 1
+          }
+        ],
+        "segment": "gong",
+        "tone": 1,
+        "includeTone": true
+      },
+      "expected": {
+        "numerator": 0,
+        "denominator": 4,
+        "consistency": 0,
+        "individualReading": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-09",
+      "claim_ref": "H02.02.05.D4.04",
+      "input": {
+        "mode": "family",
+        "members": [],
+        "segment": "qing",
+        "tone": 1,
+        "includeTone": false
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B03-SYN-10",
+      "claim_ref": "H02.02.05.D4.04",
+      "input": {
+        "mode": "family",
+        "members": [
+          {
+            "id": "A",
+            "segment": "qing",
+            "tone": 1
+          },
+          {
+            "id": "A",
+            "segment": "qing",
+            "tone": 1
+          }
+        ],
+        "segment": "qing",
+        "tone": 1,
+        "includeTone": false
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B03-SYN-11",
+      "claim_ref": "H02.02.04.D4.03",
+      "input": {
+        "mode": "ids",
+        "text": "⿰木⿱日日"
+      },
+      "expected": {
+        "syntax": "VALID_SUBSET",
+        "encoded": "NOT_INFERRED",
+        "equivalence": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-12",
+      "claim_ref": "H02.02.04.D4.03",
+      "input": {
+        "mode": "ids",
+        "text": "⿲木日月"
+      },
+      "expected": {
+        "syntax": "VALID_SUBSET",
+        "encoded": "NOT_INFERRED",
+        "equivalence": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-13",
+      "claim_ref": "H02.04.03.D4.03",
+      "input": {
+        "mode": "ids",
+        "text": "⿰木木"
+      },
+      "expected": {
+        "syntax": "VALID_SUBSET",
+        "encoded": "NOT_INFERRED",
+        "equivalence": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-14",
+      "claim_ref": "H02.02.04.D4.03",
+      "input": {
+        "mode": "ids",
+        "text": "⿰木"
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B03-SYN-15",
+      "claim_ref": "H02.02.04.D4.03",
+      "input": {
+        "mode": "ids",
+        "text": "⿰木日日"
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B03-SYN-16",
+      "claim_ref": "H02.02.04.D4.03",
+      "input": {
+        "mode": "ids",
+        "text": "⿾木"
+      },
+      "expected": "HOLD_OUTSIDE_SUBSET"
+    },
+    {
+      "id": "D2-B03-SYN-17",
+      "claim_ref": "H02.02.04.D4.03",
+      "input": {
+        "mode": "ids",
+        "text": "⿰木A"
+      },
+      "expected": "HOLD_OUTSIDE_SUBSET"
+    },
+    {
+      "id": "D2-B03-SYN-18",
+      "claim_ref": "H02.02.02.D4.03",
+      "input": {
+        "mode": "stroke",
+        "a": [
+          1,
+          2,
+          5
+        ],
+        "b": [
+          2,
+          1,
+          5
+        ]
+      },
+      "expected": {
+        "sameSequence": false,
+        "sameCount": true,
+        "handwriting": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-19",
+      "claim_ref": "H02.02.02.D4.03",
+      "input": {
+        "mode": "stroke",
+        "a": [
+          1,
+          2,
+          5
+        ],
+        "b": [
+          1,
+          2,
+          5
+        ]
+      },
+      "expected": {
+        "sameSequence": true,
+        "sameCount": true,
+        "handwriting": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-20",
+      "claim_ref": "H02.02.02.D4.03",
+      "input": {
+        "mode": "stroke",
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          1,
+          2,
+          5
+        ]
+      },
+      "expected": {
+        "sameSequence": false,
+        "sameCount": false,
+        "handwriting": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B03-SYN-21",
+      "claim_ref": "H02.02.02.D4.03",
+      "input": {
+        "mode": "stroke",
+        "a": [
+          1,
+          6
+        ],
+        "b": [
+          1,
+          6
+        ]
+      },
+      "expected": "INVALID"
+    }
+  ]
+}

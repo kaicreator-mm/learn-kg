@@ -1,0 +1,60 @@
+{
+  "owner": "H01",
+  "base": "ea74b2bd823d9c3374754b40dbf32b2eb2cacd7d",
+  "prior_claim_blob": "b1a7dd399de4e5db17652111fe64f5e970589688",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H01.02.03.D4.03",
+      "owner": "H01",
+      "d3_id": "H01.02.03",
+      "requirement_id": "H01.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "普通话音节的声韵组合并非所有声母与韵母的笛卡尔积；研究刺激设计指出j、q、x只与有限韵母共现，部分韵母无相应辅音声母邻项。",
+      "conditions": [
+        "该研究音节表和分析约定；实际规范表成员及具体词读音需另核。"
+      ],
+      "negative_boundary": "不由理论可组合性推出存在词项；不把表中缺项自动定为不合法。",
+      "source_refs": [
+        "H01-B13-PH"
+      ],
+      "source_locator": "§2.1.2–2.1.3 l197–205",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H01.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "构造新声韵组合",
+        "expected": "分别查组合规则、音节表版本和词项读音",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H01.02.03.D4.04",
+      "owner": "H01",
+      "d3_id": "H01.02.03",
+      "requirement_id": "H01.02.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "普通话音系研究区分违反约束的系统空缺与未形成词项的偶然空缺；摘要报告两类非词在词汇判断中反应不同。",
+      "conditions": [
+        "受限摘要，未核具体刺激及统计模型。"
+      ],
+      "negative_boundary": "无词项不能直接推出违反音系约束。",
+      "source_refs": [
+        "H01-B13-GAP"
+      ],
+      "source_locator": "l16,30–35 abstract",
+      "evidence_status": "ABSTRACT_LIMITED",
+      "base_claim_ref": "H01.02.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "无既有词对应的音节",
+        "expected": "保留词汇空缺/约束违反两种待核状态",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

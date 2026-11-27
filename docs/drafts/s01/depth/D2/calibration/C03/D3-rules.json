@@ -1,0 +1,50 @@
+{
+  "status": "PROJECT_RULES_DRAFT",
+  "rules": [
+    {
+      "id": "D3-P04",
+      "refs": [
+        "K09.01.03.D4.01",
+        "K10.01.02.D4.01",
+        "K10.01.05.D4.02",
+        "K12.03.03.D4.01",
+        "K15.02.04.D4.01"
+      ],
+      "kind": "PROJECT_EVIDENCE_ROUTING",
+      "purpose": "区分独立与辅助观察，失败关闭"
+    },
+    {
+      "id": "D3-P05",
+      "refs": [
+        "K11.05.03.D4.01",
+        "K12.05.02.D4.01",
+        "K10.05.01.D4.01"
+      ],
+      "kind": "PROJECT_RETEST_ELIGIBILITY",
+      "purpose": "区分重复练习、保持与新情境任务；不授予掌握"
+    },
+    {
+      "id": "D3-P06",
+      "refs": [
+        "K08.03.03.D4.01",
+        "K08.05.03.D4.02",
+        "K11.05.04.D4.01",
+        "K15.05.03.D4.01"
+      ],
+      "kind": "PROJECT_FEEDBACK_CHOICE",
+      "purpose": "反馈与激励须可选，明确退出优先"
+    },
+    {
+      "id": "D3-P07",
+      "refs": [
+        "K10.05.03.D4.01",
+        "K15.06.04.D4.01",
+        "K12.06.05.D4.01",
+        "K11.06.03.D4.01"
+      ],
+      "kind": "PROJECT_STATE_INGRESS",
+      "purpose": "事件身份、目标版本与重复冲突；仅候选，不提交状态"
+    }
+  ],
+  "limits": "Caller booleans/digests are fixture inputs, not authenticated events; independent retest and update eligibility only, no mastery or real commit. Incentive delivery not implemented."
+}

@@ -1,0 +1,154 @@
+{
+  "execution": "CODE_MODE_JS_FUNCTION_DIRECT_INVOCATION",
+  "runner_file_replay": "NOT_RUN",
+  "cases": [
+    {
+      "id": "P01-keyboard",
+      "rule": "D3-P01",
+      "input": {
+        "observed_channel": "KEYBOARD",
+        "ordered_trace": [
+          1,
+          2
+        ],
+        "independent": true
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P01-image",
+      "rule": "D3-P01",
+      "input": {
+        "observed_channel": "HANDWRITING",
+        "independent": true
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P01-assisted",
+      "rule": "D3-P01",
+      "input": {
+        "observed_channel": "HANDWRITING",
+        "ordered_trace": [
+          1,
+          2
+        ],
+        "independent": false
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P01-trace",
+      "rule": "D3-P01",
+      "input": {
+        "observed_channel": "HANDWRITING",
+        "ordered_trace": [
+          1,
+          2
+        ],
+        "independent": true
+      },
+      "expected": "ELIGIBLE_FOR_SCORING",
+      "actual": "ELIGIBLE_FOR_SCORING",
+      "pass": true
+    },
+    {
+      "id": "P02-sim",
+      "rule": "D3-P02",
+      "input": {
+        "observed_channel": "SIMULATION",
+        "external_receipt": true
+      },
+      "expected": "SIMULATION_ONLY",
+      "actual": "SIMULATION_ONLY",
+      "pass": true
+    },
+    {
+      "id": "P02-missing",
+      "rule": "D3-P02",
+      "input": {
+        "observed_channel": "REAL",
+        "external_receipt": false
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P02-external",
+      "rule": "D3-P02",
+      "input": {
+        "observed_channel": "REAL",
+        "external_receipt": true
+      },
+      "expected": "EXTERNAL_RESULT_PRESENT",
+      "actual": "EXTERNAL_RESULT_PRESENT",
+      "pass": true
+    },
+    {
+      "id": "P02-unknown",
+      "rule": "D3-P02",
+      "input": {
+        "external_receipt": true
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P03-ambiguous",
+      "rule": "D3-P03",
+      "input": {
+        "utterance": "你能过来吗",
+        "context_known": false
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P03-identity",
+      "rule": "D3-P03",
+      "input": {
+        "utterance": "谢谢",
+        "identity_label": "group-A",
+        "context_known": true
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P03-empty",
+      "rule": "D3-P03",
+      "input": {
+        "context_known": true,
+        "stated_intent": " "
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "P03-stated",
+      "rule": "D3-P03",
+      "input": {
+        "context_known": true,
+        "stated_intent": "邀请"
+      },
+      "expected": "STATED_INTENT_ONLY",
+      "actual": "STATED_INTENT_ONLY",
+      "pass": true
+    }
+  ],
+  "passed": 12,
+  "failed": 0,
+  "independent_oracle": false,
+  "limits": "Expected values authored with rule; synthetic project behavior only; not independent or scientific qualification."
+}

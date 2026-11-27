@@ -1,0 +1,1630 @@
+{
+  "schema_version": 1,
+  "base": "a4f084a26ae9153b2b2743ffd31ccf51b5d8d74c",
+  "status": "SCOPE_DRAFT_NOT_IMPLEMENTED",
+  "shared_requirements": {
+    "record_identity": "Stable ID and version; owner and type; source/claim/validation references; applicable conditions and exceptions",
+    "process": "Explicit entry, terminal, bounded cycles, guard, event, priority, unknown branch, budget, checkpoint; actual events belong to xLearn",
+    "qualification": "No professional claim, independent qualification, frozen oracle or actual execution implied",
+    "dependency": "Task dependencies are copied from D014 draft; topic refs are research anchors, not additional approved task edges; IF01 common interfaces and G03 closure still required"
+  },
+  "views": [
+    {
+      "id": "P01",
+      "label": "学习模式",
+      "original_scope": "自主/引导、练习/探究、掌握学习、任务驱动、合作、混合",
+      "owner": "P01",
+      "professional_topic_refs": [
+        "K05.06.01",
+        "K06.04.04",
+        "K07.01.01",
+        "K08.01.02",
+        "K13.05.02"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K13",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P01.RQ01",
+          "scope": "模式定义与角色",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P01.RQ02",
+          "scope": "目标/材料/情境适配",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P01.RQ03",
+          "scope": "选择权与切换",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P01.RQ04",
+          "scope": "适用反例",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标、已有知识证据、资源、角色、学习者选择",
+      "output": "适用模式及备选模式、选择理由与切换条件",
+      "transition_candidate": "协商目标→筛选可行模式→学习者选择→生成候选会话",
+      "negative_boundary": "不按固定学习风格分配；无可行模式时澄清或停止",
+      "validation_requirement": {
+        "description": "自主/引导、练习/探究、掌握学习、任务驱动、合作、混合模式分别给出适用和不适用场景",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P02",
+      "label": "目标与学习准备",
+      "original_scope": "目标协商、现状诊断、先备激活、资源/时间约束、学习计划",
+      "owner": "P02",
+      "professional_topic_refs": [
+        "K07.03.01",
+        "K07.05.01",
+        "K08.04.01",
+        "K09.01.01",
+        "K10.01.05",
+        "K11.01.04"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P02.RQ01",
+          "scope": "目标协商",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P02.RQ02",
+          "scope": "诊断与先备激活",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P02.RQ03",
+          "scope": "资源和时间",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P02.RQ04",
+          "scope": "计划及未知",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标意图、时间预算、已有观测、可用资源",
+      "output": "目标引用、诊断请求、先备知识候选、计划及未知项",
+      "transition_candidate": "协商→查证已有信息→必要时补测→限定目标和预算",
+      "negative_boundary": "未明确目标不擅自规划；无证先备不当必需先修",
+      "validation_requirement": {
+        "description": "时间不足时缩小目标或延期；未知初始状态保持未知",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P03",
+      "label": "学习活动单元",
+      "original_scope": "讲解、示范、辨别、回忆、模仿、解释、产出、问题解决、反思",
+      "owner": "P03",
+      "professional_topic_refs": [
+        "K03.06.02",
+        "K04.01.04",
+        "K05.01.01",
+        "K06.02.02",
+        "K12.02.03"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K12",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P03.RQ01",
+          "scope": "活动类型目录",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P03.RQ02",
+          "scope": "目标与对象绑定",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P03.RQ03",
+          "scope": "行为产出与独立性",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P03.RQ04",
+          "scope": "观测和评分条件",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标、知识/技能对象、活动类型、角色、资源条件",
+      "output": "活动契约、可观察产出、提示与独立性要求",
+      "transition_candidate": "选择活动→实例化输入→记录预期产出→交付",
+      "negative_boundary": "讲解、示范与学员表现分开；资源不满足则拒绝",
+      "validation_requirement": {
+        "description": "解释、辨别、回忆、产出、问题解决等活动各有观测口径",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P04",
+      "label": "学习流程",
+      "original_scope": "结构化序列、分支、并行、子流程、支架渐撤、补救与终止",
+      "owner": "P04",
+      "professional_topic_refs": [
+        "K06.03.03",
+        "K07.03.03",
+        "K11.04.02",
+        "K12.05.01"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K07",
+        "K11",
+        "K12",
+        "P01",
+        "P02",
+        "P03",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P04.RQ01",
+          "scope": "步骤序列及分支",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P04.RQ02",
+          "scope": "并行及子流程",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P04.RQ03",
+          "scope": "支架渐撤和重试",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P04.RQ04",
+          "scope": "预算/终止/暂停",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "模式、活动契约、条件、预算、入口及终止",
+      "output": "结构化步骤、转移表、子流程、暂停和终止出口",
+      "transition_candidate": "入口→序列/条件分支/可控并行→有界重试或子流程→结束",
+      "negative_boundary": "拒绝不可达终止、未定义守卫、冲突分支、无界循环及无授权执行",
+      "validation_requirement": {
+        "description": "每个分支验证成功、失败、未知和预算耗尽；子流程返回明确",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P05",
+      "label": "练习与保持流程",
+      "original_scope": "首学、提取、间隔、交错、巩固、跨次复习、迁移任务",
+      "owner": "P05",
+      "professional_topic_refs": [
+        "K02.06.03",
+        "K04.04.01",
+        "K05.02.01",
+        "K10.03.01",
+        "K11.02.04"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K02",
+        "K04",
+        "K05",
+        "K10",
+        "K11",
+        "P03",
+        "P04",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P05.RQ01",
+          "scope": "首学与提取",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P05.RQ02",
+          "scope": "间隔/交错/巩固",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P05.RQ03",
+          "scope": "跨会话复习",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P05.RQ04",
+          "scope": "保持及迁移",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标保持期、任务类型、独立回忆观测、模型版本与预算",
+      "output": "练习选择、到期候选、独立复测和跨会话计划",
+      "transition_candidate": "首学→独立提取→反馈→计划复测→延迟证据→调整",
+      "negative_boundary": "不把提示成功当保持；模型参数未知不填默认最佳间隔",
+      "validation_requirement": {
+        "description": "集中/间隔/交错条件对照，延迟复测与陌生任务分离",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ03",
+        "CQ22"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P06",
+      "label": "观测与反馈流程",
+      "original_scope": "采集、评分、解释差距、提示、纠错、重试、复测、反馈有效性",
+      "owner": "P06",
+      "professional_topic_refs": [
+        "K06.06.01",
+        "K09.01.04",
+        "K10.01.02",
+        "K12.03.03"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K09",
+        "K10",
+        "K12",
+        "P03",
+        "P04",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P06.RQ01",
+          "scope": "采集与评分",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P06.RQ02",
+          "scope": "差距及竞争解释",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P06.RQ03",
+          "scope": "提示纠错及重试",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P06.RQ04",
+          "scope": "独立复测与效果",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "原始事件、任务版本、评分契约、提示记录、目标",
+      "output": "评分证据、差距描述、候选反馈及复测请求",
+      "transition_candidate": "采集→验证身份/条件→评分→解释差距→反馈→独立变式复测",
+      "negative_boundary": "无效任务不更新能力；单错不定因；反馈超预算停止",
+      "validation_requirement": {
+        "description": "同一错误的词义/声调/任务理解等竞争解释须可区分",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ02",
+        "CQ08",
+        "CQ20"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P07",
+      "label": "动机与激励流程",
+      "original_scope": "目标价值、适度挑战、自主选择、能力进步、社会支持、反思、恢复",
+      "owner": "P07",
+      "professional_topic_refs": [
+        "K08.01.02",
+        "K08.02.03",
+        "K13.04.04",
+        "K16.05.03",
+        "K19.03.02"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K13",
+        "K16",
+        "K19",
+        "P02",
+        "P03",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P07.RQ01",
+          "scope": "目标价值及适度挑战",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P07.RQ02",
+          "scope": "自主选择和进步",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P07.RQ03",
+          "scope": "关系支持与反思",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P07.RQ04",
+          "scope": "暂停/恢复和拒绝",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "自主目标、自述或用户选择、客观进步证据、支持资源",
+      "output": "可拒绝的激励/休息/求助选项及反馈理由",
+      "transition_candidate": "询问或识别明确请求→核对进步证据→提供选择→接受/拒绝/暂停→重新评估",
+      "negative_boundary": "禁止虚假进步、强制打卡、羞辱、行为代理诊断情绪或动机",
+      "validation_requirement": {
+        "description": "自述缺失时不贴标签；用户选择退出时保留自主权",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ13",
+        "CQ23"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P08",
+      "label": "自适应调节流程",
+      "original_scope": "状态估计、模式切换、任务选择、降阶/升阶、求助、未知与回退",
+      "owner": "P08",
+      "professional_topic_refs": [
+        "K09.05.04",
+        "K10.06.06",
+        "K11.03.01",
+        "K11.05.01",
+        "K16.03.04"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P08.RQ01",
+          "scope": "状态及不确定性",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P08.RQ02",
+          "scope": "模式切换和任务选择",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P08.RQ03",
+          "scope": "升阶/降阶与求助",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P08.RQ04",
+          "scope": "未知/回退/停止",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "估计状态与不确定性、候选任务、目标、预算、授权",
+      "output": "下一活动、澄清/补测/降阶/升阶/停止及理由",
+      "transition_candidate": "校验状态→筛可行动作→评估条件→选择或询问→执行接口",
+      "negative_boundary": "无证估计不硬分类；无可行动作或预算耗尽停止；权限优先",
+      "validation_requirement": {
+        "description": "固定候选和预算可复算选择；错误版本和未知目标拒绝",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ07",
+        "CQ12",
+        "CQ20"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P09",
+      "label": "评价与迁移流程",
+      "original_scope": "即时/延迟/迁移评价、综合任务、独立表现、阶段总结、目标调整",
+      "owner": "P09",
+      "professional_topic_refs": [
+        "K04.04.02",
+        "K07.04.01",
+        "K09.07.02",
+        "K17.06.03"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K04",
+        "K07",
+        "K09",
+        "K17",
+        "P04",
+        "P06",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P09.RQ01",
+          "scope": "即时与延迟",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P09.RQ02",
+          "scope": "陌生情境及综合任务",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P09.RQ03",
+          "scope": "独立表现及评分",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P09.RQ04",
+          "scope": "总结及目标调整",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标构念、评价规格、训练/延迟/迁移任务及独立性条件",
+      "output": "分离的表现/保持/迁移证据、目标调整建议",
+      "transition_candidate": "即时评价→延期计划→陌生任务→评价→目标复核",
+      "negative_boundary": "同题复现不算迁移；模拟不算真实资格；失败仍保存证据",
+      "validation_requirement": {
+        "description": "独立延迟和新情境表现各自判定，不由即时正确率推导",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ04",
+        "CQ22"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "P10",
+      "label": "连贯学习与治理",
+      "original_scope": "会话衔接、跨日计划、暂停恢复、学习者选择、可及性、退出、策略验证",
+      "owner": "P10",
+      "professional_topic_refs": [
+        "K08.05.04",
+        "K11.05.04",
+        "K15.06.04",
+        "K16.03.04",
+        "K17.06.04",
+        "K19.03.02"
+      ],
+      "task_dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K11",
+        "K15",
+        "K16",
+        "K17",
+        "K19",
+        "P08",
+        "P09",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "P10.RQ01",
+          "scope": "跨日会话衔接",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P10.RQ02",
+          "scope": "检查点和恢复幂等",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P10.RQ03",
+          "scope": "可及性/授权/退出",
+          "status": "PLANNED"
+        },
+        {
+          "id": "P10.RQ04",
+          "scope": "验证及版本追溯",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "会话版本、检查点、预算、用户意愿、事件ID、权限",
+      "output": "跨会话计划、恢复状态、停止/退出/审计记录",
+      "transition_candidate": "计划→运行→检查点→暂停/恢复→幂等事件处理→结束或下次计划",
+      "negative_boundary": "不重复计入事件；禁止无限后台循环、无权访问和强制坚持",
+      "validation_requirement": {
+        "description": "恢复使用原版本，重复事件不重复更新；退出后不继续执行",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ21",
+        "CQ23"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F01",
+      "label": "学习目标与能力",
+      "original_scope": "目标协商、构念、知识与技能、能力分解、成功证据、阶段目标、版本化标准",
+      "owner": "F01",
+      "professional_topic_refs": [
+        "K03.01.02",
+        "K04.01.04",
+        "K07.01.01",
+        "K09.01.01",
+        "H06.06.03",
+        "H07.02.03"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K09",
+        "P02",
+        "P09",
+        "H06",
+        "H07",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "F01.RQ01",
+          "scope": "构念及多维目标",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F01.RQ02",
+          "scope": "能力/知识/技能分解",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F01.RQ03",
+          "scope": "任务及量规",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F01.RQ04",
+          "scope": "标准及成功证据",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标意图、标准版本、能力构念、任务条件",
+      "output": "目标/能力分解、量规及必要证据引用",
+      "transition_candidate": "解析目标→确定构念→绑定能力与任务证据→确认目标",
+      "negative_boundary": "等级范围不等于掌握；维度不强制线性进阶",
+      "validation_requirement": {
+        "description": "购物情境的独立交际目标与词表覆盖分别评价",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ01",
+        "CQ15"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F02",
+      "label": "学习对象与粒度",
+      "original_scope": "原子知识、关系、知识组合、技能单元、任务、能力、学习单元、课程单元、项目",
+      "owner": "F02",
+      "professional_topic_refs": [
+        "K03.03.01",
+        "K03.03.02",
+        "K04.06.01",
+        "K07.02.05",
+        "K12.01.03",
+        "H03.01.04"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K12",
+        "P03",
+        "P04",
+        "H03",
+        "IF01",
+        "H04",
+        "H05",
+        "H06",
+        "H07"
+      ],
+      "requirements": [
+        {
+          "id": "F02.RQ01",
+          "scope": "D4与学习对象",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F02.RQ02",
+          "scope": "技能/任务/活动区别",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F02.RQ03",
+          "scope": "单元/课程/项目",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F02.RQ04",
+          "scope": "关系语义及唯一身份",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "原子知识引用、技能、学习对象、目标、活动/课程结构",
+      "output": "对象组合、粒度、组件与关系类型",
+      "transition_candidate": "确认身份→区分组成/顺序/必要先修→组织任务→检查引用",
+      "negative_boundary": "同一事实不重复；不得从课程顺序推出必要先修",
+      "validation_requirement": {
+        "description": "买/卖可构成辨别单元但保留独立词条身份",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ01",
+        "CQ16"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F03",
+      "label": "学习资源与内容表达",
+      "original_scope": "文本、语音、图像、动态示范、对话、实践/模拟、内容选择与生成、质量与可及性",
+      "owner": "F03",
+      "professional_topic_refs": [
+        "K06.02.02",
+        "K12.04.03",
+        "K15.01.01",
+        "K16.04.03",
+        "K19.05.03"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K06",
+        "K12",
+        "K15",
+        "K16",
+        "K19",
+        "P03",
+        "IF01",
+        "P04"
+      ],
+      "requirements": [
+        {
+          "id": "F03.RQ01",
+          "scope": "模态与资源",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F03.RQ02",
+          "scope": "选择与生成",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F03.RQ03",
+          "scope": "质量/许可",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F03.RQ04",
+          "scope": "可及性及构念保护",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标、资源描述、模态、语言、许可、设备和质量证据",
+      "output": "可用资源引用、表达方式、替代路径或拒绝",
+      "transition_candidate": "筛许可→筛构念与设备→评质量/可及性→提供选择",
+      "negative_boundary": "无音频不以文本替代听辨；无许可不交付",
+      "validation_requirement": {
+        "description": "同目标可选资源，构念变化单独标识",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ08",
+        "CQ17"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F04",
+      "label": "学习交互",
+      "original_scope": "阅读观看、提问回答、引导问答、模仿、练习、讨论辩论、探索实验、角色扮演、创作、教授、自解释、自反思",
+      "owner": "F04",
+      "professional_topic_refs": [
+        "K04.01.04",
+        "K05.04.01",
+        "K06.05.04",
+        "K08.04.03",
+        "K12.02.04",
+        "K13.05.02",
+        "K15.02.04"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K04",
+        "K05",
+        "K06",
+        "K08",
+        "K12",
+        "K13",
+        "K15",
+        "P03",
+        "P06",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "F04.RQ01",
+          "scope": "阅读观看与问答",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F04.RQ02",
+          "scope": "模仿练习与讨论",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F04.RQ03",
+          "scope": "探索实验/角色扮演/创作",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F04.RQ04",
+          "scope": "教授/自解释/反思及独立性",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "交互类型、角色、活动契约、输入资源、支持及提示条件",
+      "output": "参与者行为、观测规格、独立性分类",
+      "transition_candidate": "角色绑定→执行允许交互→记录本人/辅助产出→转交评价",
+      "negative_boundary": "AI代答不算学习者观测；无授权不执行",
+      "validation_requirement": {
+        "description": "引导对话与独立产出分别记录；阅读、实践、合作等有各自行为证据",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ18"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F05",
+      "label": "学习者状态与发展",
+      "original_scope": "知识、技能、理解、迁移、认知、情绪、动机、自我调节、资源、证据质量与不确定性",
+      "owner": "F05",
+      "professional_topic_refs": [
+        "K02.06.04",
+        "K03.05.01",
+        "K04.04.01",
+        "K08.03.02",
+        "K09.02.03",
+        "K10.01.04",
+        "K16.05.01",
+        "K18.05.03"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K08",
+        "K09",
+        "K10",
+        "K16",
+        "K18",
+        "P08",
+        "IF01",
+        "P10"
+      ],
+      "requirements": [
+        {
+          "id": "F05.RQ01",
+          "scope": "知识/技能/理解/迁移",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F05.RQ02",
+          "scope": "认知/情绪/动机/调节",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F05.RQ03",
+          "scope": "资源及发展条件",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F05.RQ04",
+          "scope": "观察/自述/估计/判断及未知",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "观测、自述、评分、模型版本、人工判断、时间及环境",
+      "output": "分类型状态引用、置信/缺失/冲突、估计适用条件",
+      "transition_candidate": "记录原值→验证来源→按构念估计→标注不确定性→输出状态",
+      "negative_boundary": "禁止缺失填零、单次错误诊断情绪/障碍、估计冒充观察",
+      "validation_requirement": {
+        "description": "提示成功与独立成功、不同时间/技能状态、未知保持可区分",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ05",
+        "CQ07",
+        "CQ19",
+        "CQ23"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F06",
+      "label": "学习障碍、错误与补救",
+      "original_scope": "缺失、误概念、混淆、技能瓶颈、提取困难、负荷、策略失配、任务/环境障碍；候选原因、诊断、补救、复测",
+      "owner": "F06",
+      "professional_topic_refs": [
+        "K02.06.02",
+        "K03.05.01",
+        "K04.03.04",
+        "K06.06.03",
+        "K09.01.03",
+        "K10.02.04",
+        "K11.05.02",
+        "K16.02.04",
+        "H01.03.01",
+        "H03.03.03"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K06",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P06",
+        "P08",
+        "H06",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "F06.RQ01",
+          "scope": "知识缺口/误概念/混淆",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F06.RQ02",
+          "scope": "技能瓶颈/提取/负荷",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F06.RQ03",
+          "scope": "策略/任务/环境障碍",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F06.RQ04",
+          "scope": "诊断区分/补救/复测/停止",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "错误观测、任务条件、候选原因、诊断证据及预算",
+      "output": "多假设、区分任务、补救候选、复测及停止条件",
+      "transition_candidate": "描述现象→列竞争解释→检查区分证据→补测/补救→复测",
+      "negative_boundary": "不把现象与原因等同；证据不足UNKNOWN；预算耗尽停止",
+      "validation_requirement": {
+        "description": "声调错误与词义混淆须分开诊断；一次错不确诊",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ02",
+        "CQ08",
+        "CQ12",
+        "CQ20"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F07",
+      "label": "学习环境与角色",
+      "original_scope": "学习者、教师、AI、同伴、专家、评价者、管理者；课堂、家庭、移动、职场、模拟及真实环境；资源、能力和权限",
+      "owner": "F07",
+      "professional_topic_refs": [
+        "K06.07.01",
+        "K13.04.02",
+        "K15.05.03",
+        "K16.03.03",
+        "K19.02.03"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K06",
+        "K13",
+        "K15",
+        "K16",
+        "K19",
+        "P10",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "F07.RQ01",
+          "scope": "学习者/教师/AI/同伴",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F07.RQ02",
+          "scope": "专家/评价者/管理者",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F07.RQ03",
+          "scope": "课堂/家庭/移动/职场",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F07.RQ04",
+          "scope": "真实/模拟、能力权限及资源",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "实际角色、权限、资源、时间、语言、设备、环境条件",
+      "output": "可执行能力清单、环境适配和监督要求",
+      "transition_candidate": "核身份授权→核资源与构念→筛动作→支持或拒绝",
+      "negative_boundary": "知识模板不能自授权；模拟不替代真实资格",
+      "validation_requirement": {
+        "description": "无监督职业任务拒绝；无设备时选择合法替代且不改变评价口径",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ13",
+        "CQ18",
+        "CQ21"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "F08",
+      "label": "学习迁移与实践",
+      "original_scope": "知识、单项/组合技能、情境任务、真实实践、近远迁移、延迟表现、独立性与泛化条件",
+      "owner": "F08",
+      "professional_topic_refs": [
+        "K04.04.01",
+        "K04.04.02",
+        "K06.02.03",
+        "K07.04.01",
+        "K09.01.03",
+        "K14.05.04",
+        "K17.06.03",
+        "H06.06.02"
+      ],
+      "task_dependencies": [
+        "DB01",
+        "K04",
+        "K06",
+        "K07",
+        "K09",
+        "K14",
+        "K17",
+        "P05",
+        "P09",
+        "H06",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "F08.RQ01",
+          "scope": "单项与组合技能",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F08.RQ02",
+          "scope": "情境任务与实践",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F08.RQ03",
+          "scope": "近远迁移及延迟",
+          "status": "PLANNED"
+        },
+        {
+          "id": "F08.RQ04",
+          "scope": "独立性/泛化及资格边界",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "知识/技能组合、任务情境、训练历史、时间、独立性及量规",
+      "output": "保持/近远迁移任务规格及真实实践证据分类",
+      "transition_candidate": "确定变化维度→安排独立任务→比较证据→标记适用范围",
+      "negative_boundary": "无延迟证据不认定保持；模拟不认定真实胜任；非固定线性阶段",
+      "validation_requirement": {
+        "description": "同词不同购物场景，独立完成且记录陌生程度和保持时距",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ04",
+        "CQ11",
+        "CQ22"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "E01",
+      "label": "外部证据与改进闭环",
+      "original_scope": "研究设计、干预版本、比较条件、结果、失败/副作用、偏差、不确定性、独立审核、发布/回退",
+      "owner": "E01",
+      "professional_topic_refs": [
+        "K09.02.05",
+        "K15.05.04",
+        "K17.05.05",
+        "K17.06.01",
+        "K19.02.05",
+        "K19.03.04"
+      ],
+      "task_dependencies": [
+        "K09",
+        "K15",
+        "K17",
+        "K19",
+        "P10",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "E01.RQ01",
+          "scope": "研究协议及版本",
+          "status": "PLANNED"
+        },
+        {
+          "id": "E01.RQ02",
+          "scope": "实际结果/失败/副作用",
+          "status": "PLANNED"
+        },
+        {
+          "id": "E01.RQ03",
+          "scope": "证据和独立评价",
+          "status": "PLANNED"
+        },
+        {
+          "id": "E01.RQ04",
+          "scope": "候选/审核/批准/回退",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "已发布版本、合法执行证据、固定评价协议、失败与副作用",
+      "output": "证据账本、候选修改、验证/独立审核记录、批准或回退请求",
+      "transition_candidate": "固定版本→独立评价→证据审查→候选修订→验证→批准或拒绝→保留历史",
+      "negative_boundary": "无授权个体数据不进入知识库；无独立批准不发布；不覆盖原观察",
+      "validation_requirement": {
+        "description": "旧版可回退；效果未证时拒绝自动晋升，保留负结果",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ14",
+        "CQ24",
+        "CQ26"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A01",
+      "label": "目标→构念→知识组件贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A01",
+      "professional_topic_refs": [
+        "K03.03.02",
+        "K07.03.01",
+        "K09.01.01",
+        "H07.04.01"
+      ],
+      "task_dependencies": [
+        "F01",
+        "F02",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "A01.RQ01",
+          "scope": "目标分解",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A01.RQ02",
+          "scope": "构念绑定",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A01.RQ03",
+          "scope": "组件/依赖类型",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A01.RQ04",
+          "scope": "证据追溯与拒绝",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标、标准/构念引用、知识类型、组件及依赖证据",
+      "output": "组合目标及必需/推荐/未知依赖、证据路径",
+      "transition_candidate": "校验版本→分解目标→绑定构念与组件→检验依赖类型",
+      "negative_boundary": "词表级别、分类成员不生成先修；不兼容类型拒绝",
+      "validation_requirement": {
+        "description": "汉语符号映射与最小数学符号映射复用类型而不复用学科事实",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ01",
+        "CQ15",
+        "CQ16",
+        "CQ25"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A02",
+      "label": "知识→任务→观测贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A02",
+      "professional_topic_refs": [
+        "K03.06.02",
+        "K06.02.02",
+        "K09.01.03",
+        "K12.02.01",
+        "H06.01.01"
+      ],
+      "task_dependencies": [
+        "F02",
+        "F03",
+        "F04",
+        "IF01",
+        "H04",
+        "H05",
+        "H06"
+      ],
+      "requirements": [
+        {
+          "id": "A02.RQ01",
+          "scope": "对象与任务",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A02.RQ02",
+          "scope": "资源和交互",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A02.RQ03",
+          "scope": "观测规格",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A02.RQ04",
+          "scope": "辅助与独立证据",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "知识对象、目标、任务/资源规格、角色和观测条件",
+      "output": "任务绑定、可观察证据、提示与独立性标记",
+      "transition_candidate": "校验对象→选择任务和资源→限定角色/提示→输出观测规格",
+      "negative_boundary": "无效题、AI代做、无资源或构念改变拒绝作为原证据",
+      "validation_requirement": {
+        "description": "买/卖音辨、字形辨别、语义产出为不同任务",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ16",
+        "CQ18",
+        "CQ25"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A03",
+      "label": "观测→诊断→状态贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A03",
+      "professional_topic_refs": [
+        "K02.06.04",
+        "K04.03.04",
+        "K09.02.03",
+        "K10.02.01",
+        "K16.05.01"
+      ],
+      "task_dependencies": [
+        "F05",
+        "F06",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "A03.RQ01",
+          "scope": "观察评分与假设",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A03.RQ02",
+          "scope": "区分证据",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A03.RQ03",
+          "scope": "状态估计及模型条件",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A03.RQ04",
+          "scope": "冲突/缺失/未知",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "原观测、评分、任务条件、候选原因、模型及参数",
+      "output": "诊断假设、补测需求、估计状态及不确定性",
+      "transition_candidate": "核观测条件→枚举竞争解释→区分证据→模型估计或未知",
+      "negative_boundary": "单错不定因；提示、缺失及模型不适用不晋升掌握",
+      "validation_requirement": {
+        "description": "固定BKT参数的独立算例与竞争诊断案例分开",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ02",
+        "CQ05",
+        "CQ06",
+        "CQ19",
+        "CQ20"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A04",
+      "label": "状态→策略→规划贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A04",
+      "professional_topic_refs": [
+        "K05.06.01",
+        "K08.04.02",
+        "K10.06.06",
+        "K11.04.01"
+      ],
+      "task_dependencies": [
+        "F05",
+        "F06",
+        "P08",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "A04.RQ01",
+          "scope": "状态与策略条件",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A04.RQ02",
+          "scope": "目标/约束及备选",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A04.RQ03",
+          "scope": "选择与理由",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A04.RQ04",
+          "scope": "停止/澄清/回退",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "目标、状态估计、候选策略、适用条件、预算、权限",
+      "output": "可复算决策、理由、替代方案、停止或澄清",
+      "transition_candidate": "校验状态→筛策略条件→预算/权限约束→排序→选择/拒绝",
+      "negative_boundary": "未知目标或不可行时不得伪造方案；不得宣称唯一最优",
+      "validation_requirement": {
+        "description": "两候选固定成本与条件，拒绝超预算者",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ03",
+        "CQ07",
+        "CQ12",
+        "CQ20",
+        "CQ23"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A05",
+      "label": "教学→表现→保持/迁移贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A05",
+      "professional_topic_refs": [
+        "K04.04.02",
+        "K06.03.04",
+        "K09.07.02",
+        "K17.06.03"
+      ],
+      "task_dependencies": [
+        "F01",
+        "F08",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "A05.RQ01",
+          "scope": "教学活动及表现",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A05.RQ02",
+          "scope": "延迟保持",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A05.RQ03",
+          "scope": "陌生情境与迁移",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A05.RQ04",
+          "scope": "独立性及证据范围",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "教学活动、目标构念、即时/延迟/新情境任务及量规",
+      "output": "分离表现、保持、迁移证据与适用范围",
+      "transition_candidate": "核活动和任务版本→分别评价→比较→限定结论",
+      "negative_boundary": "即时结果不推出长期保持；同题非迁移；模拟非真实资格",
+      "validation_requirement": {
+        "description": "固定时距与新场景；独立正确/提示正确分开",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ04",
+        "CQ11",
+        "CQ22",
+        "CQ25"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A06",
+      "label": "内容生成→核查→交付贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A06",
+      "professional_topic_refs": [
+        "K12.03.05",
+        "K12.05.05",
+        "K15.04.01",
+        "K19.05.03",
+        "H04.07.03"
+      ],
+      "task_dependencies": [
+        "F03",
+        "F04",
+        "K19",
+        "IF01",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "requirements": [
+        {
+          "id": "A06.RQ01",
+          "scope": "内容/事实与来源",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A06.RQ02",
+          "scope": "答案和测量",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A06.RQ03",
+          "scope": "许可与可及性",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A06.RQ04",
+          "scope": "复核及候选交付",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "内容候选、目标、专业来源、答案规则、角色、资源和许可",
+      "output": "可交付资源候选、核查证据、拒绝/修订原因",
+      "transition_candidate": "核源与许可→查专业正确→查任务/评分→查可及性和提示→交付候选",
+      "negative_boundary": "虚构引用、歧义强制唯一、未授权来源或答案泄漏拒绝",
+      "validation_requirement": {
+        "description": "AI生成汉语构式例句需原理/反例/答案核查",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ08",
+        "CQ17"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A07",
+      "label": "环境/发展/差异→支持贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A07",
+      "professional_topic_refs": [
+        "K08.01.02",
+        "K13.04.02",
+        "K16.04.03",
+        "K18.05.03",
+        "K19.03.02"
+      ],
+      "task_dependencies": [
+        "F05",
+        "F07",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "A07.RQ01",
+          "scope": "环境及角色",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A07.RQ02",
+          "scope": "发展和差异证据",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A07.RQ03",
+          "scope": "支持与构念保护",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A07.RQ04",
+          "scope": "自主选择与授权",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "环境、角色权限、用户自述、功能需求、发展及差异证据",
+      "output": "合法支持、可及替代、监督要求或拒绝",
+      "transition_candidate": "区分实际条件和推断→筛支持→核构念→允许选择或退出",
+      "negative_boundary": "不按年龄/群体/固定风格贴标签；无权限不执行",
+      "validation_requirement": {
+        "description": "无音频、无自述、无监督三类拒绝或替代路径",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ13",
+        "CQ21"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    },
+    {
+      "id": "A08",
+      "label": "证据→模型/政策→实证评价贯通组合",
+      "original_scope": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本",
+      "owner": "A08",
+      "professional_topic_refs": [
+        "K09.02.04",
+        "K10.06.01",
+        "K11.06.01",
+        "K17.03.02",
+        "K19.05.01"
+      ],
+      "task_dependencies": [
+        "F08",
+        "E01",
+        "IF01"
+      ],
+      "requirements": [
+        {
+          "id": "A08.RQ01",
+          "scope": "研究设计和证据",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A08.RQ02",
+          "scope": "模型及策略版本",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A08.RQ03",
+          "scope": "效果/偏差/局限",
+          "status": "PLANNED"
+        },
+        {
+          "id": "A08.RQ04",
+          "scope": "候选改进与拒绝",
+          "status": "PLANNED"
+        }
+      ],
+      "input": "研究证据、模型/策略版本、协议、比较条件、结果及局限",
+      "output": "受限证据结论、改进候选、复核请求或拒绝",
+      "transition_candidate": "核研究设计→查适用性与偏差→判定证据→候选验证→独立审核",
+      "negative_boundary": "相关不晋升因果；模拟不证明长期效果；不得自动发布",
+      "validation_requirement": {
+        "description": "即时离线指标不足以支持真实学习增益，候选保持待证",
+        "status": "NOT_RUN"
+      },
+      "direct_cq_refs": [
+        "CQ09",
+        "CQ10",
+        "CQ14",
+        "CQ24"
+      ],
+      "qualification": "NOT_RUN",
+      "status": "SCOPE_DRAFT"
+    }
+  ]
+}

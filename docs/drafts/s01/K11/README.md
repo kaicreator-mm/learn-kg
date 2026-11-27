@@ -1,0 +1,2 @@
+# K11 自适应学习决策
+27主题，54候选，9来源定位（含历史试点），27四视角，9研究锚点，19有限检查。{"HTML_LOCATED_CANDIDATE":9,"PROJECT_POLICY":36,"PDF_LOCATED_CANDIDATE":7,"HOLD_SOURCE_DETAIL":2}。基线 d6f1aed3ccb93a1349b8566945e255da0559f922。RL教材为公开第二版草稿，实际核对Ch5文字/印刷p130图；HLR原文1851页；MIT POMDP草稿、Toronto互信息、OR-Tools求解状态；IPS文章摘要和WWC手册索引不冒充正文。动作权限、目标、预算、退出是工程守卫；风险排序及在线研究详细证据待核。信息增益、折扣回报和模拟策略不证明教育收益。旧HLR策略保持不变；四视角未执行，非独立oracle，未执行真实决策或生成数据库，不发正式收据。

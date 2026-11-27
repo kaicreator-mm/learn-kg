@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "tested_head": "2adc03a1f939fae1231e439f26b19c58d9a413b9",
+  "version_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+  "failed_attempt": {
+    "head": "edcc64dffbe393a5042ce5d9a0a6c96cb12a89ee",
+    "job": "job_01M8C0WCG600C1A5S1E0SFPK8S",
+    "exit_code": 1,
+    "error": "SyntaxError: unterminated string literal (line 210), prior to test execution",
+    "correction": "fixed DDL string and strengthened NOT NULL identity keys"
+  },
+  "gateway_job": "job_01M8C0Y3A100Q8HW2AHW4VQ235",
+  "job_status": "succeeded",
+  "exit_code": 0,
+  "evidence_read_job": "job_01M8C0YZ8W00AVYPV778NP7SAQ",
+  "syntax_check": "PASS",
+  "git_blob_verified": true,
+  "blobs": {
+    "schema.json": "d02d883c00be55837407052912d64eed637015b6",
+    "bkt.json": "c0d311f2ef96920547cd684c80924121f41c9f50",
+    "hlr.json": "c80d3d02d05ac51bd879f141b7b790dcc35c39d7",
+    "review.json": "a02d82e4f0d1483dfdf8a9bef82e9a349fd1a5d9",
+    "manifest.json": "fbd550e55da20210590d60f775cb35e1a0e92b20",
+    "validate.py": "83cbda713d94aa6138a35c474627aac5e55f7e0f"
+  },
+  "result": {
+    "scope": "DB01_INVESTIGATION_ONLY",
+    "python": "3.12.3",
+    "jsonschema": "4.10.3",
+    "legacy_roundtrip": 65,
+    "records": 65,
+    "routes": {
+      "all": [
+        "bkt.json",
+        "hlr.json",
+        "review.json"
+      ],
+      "review": [
+        "hlr.json",
+        "review.json"
+      ],
+      "bkt": [
+        "bkt.json"
+      ]
+    },
+    "cases": [
+      {
+        "id": "bkt:case:correct",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:incorrect",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "1/13",
+          "next_prior": "11/65"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "1/13",
+          "next_prior": "11/65"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:non-discriminating",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "4/5",
+          "posterior": "2/5",
+          "next_prior": "23/50"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "4/5",
+          "posterior": "2/5",
+          "next_prior": "23/50"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:missing",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:hint",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:multi",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:zero-likelihood",
+        "expected": {
+          "status": "REJECT_ZERO_LIKELIHOOD"
+        },
+        "actual": {
+          "status": "REJECT_ZERO_LIKELIHOOD"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:invalid-parameter",
+        "expected": {
+          "status": "REJECT_PARAMETER"
+        },
+        "actual": {
+          "status": "REJECT_PARAMETER"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:certain-transition",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "1"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "1"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "bkt:case:strategy-no-threshold",
+        "expected": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "actual": {
+          "status": "OK",
+          "prediction_correct": "12/25",
+          "posterior": "3/4",
+          "next_prior": "31/40"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:zero",
+        "expected": {
+          "status": "OK",
+          "value": 1
+        },
+        "actual": {
+          "status": "OK",
+          "value": 1
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:half",
+        "expected": {
+          "status": "OK",
+          "value": 0.5
+        },
+        "actual": {
+          "status": "OK",
+          "value": 0.5
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:double",
+        "expected": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "actual": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:fraction",
+        "expected": {
+          "status": "OK",
+          "value": 0.7071067811865476
+        },
+        "actual": {
+          "status": "OK",
+          "value": 0.7071067811865476
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:negative-time",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:zero-h",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:wrong-unit",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:underflow",
+        "expected": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "actual": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:regression",
+        "expected": {
+          "status": "OK",
+          "value": 4
+        },
+        "actual": {
+          "status": "OK",
+          "value": 4
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:mismatch",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:overflow",
+        "expected": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "actual": {
+          "status": "REJECT_NUMERIC_RANGE"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse",
+        "expected": {
+          "status": "OK",
+          "value": 2
+        },
+        "actual": {
+          "status": "OK",
+          "value": 2
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse-one",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse-zero",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:inverse-zero-time",
+        "expected": {
+          "status": "REJECT_INPUT"
+        },
+        "actual": {
+          "status": "REJECT_INPUT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-due",
+        "expected": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "actual": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-equal",
+        "expected": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "actual": {
+          "status": "SUGGEST_REVIEW"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-wait",
+        "expected": {
+          "status": "WAIT"
+        },
+        "actual": {
+          "status": "WAIT"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-budget",
+        "expected": {
+          "status": "DEFER_BUDGET"
+        },
+        "actual": {
+          "status": "DEFER_BUDGET"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-permission",
+        "expected": {
+          "status": "REJECT_PERMISSION"
+        },
+        "actual": {
+          "status": "REJECT_PERMISSION"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-unknown",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-not-applicable",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-unknown-target",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-bad-target",
+        "expected": {
+          "status": "UNKNOWN"
+        },
+        "actual": {
+          "status": "UNKNOWN"
+        },
+        "status": "PASS"
+      },
+      {
+        "id": "hlr:case:policy-denied-unknown",
+        "expected": {
+          "status": "REJECT_PERMISSION"
+        },
+        "actual": {
+          "status": "REJECT_PERMISSION"
+        },
+        "status": "PASS"
+      }
+    ],
+    "composition": [
+      {
+        "id": "due",
+        "prediction": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "expected": "SUGGEST_REVIEW",
+        "actual": "SUGGEST_REVIEW",
+        "status": "PASS"
+      },
+      {
+        "id": "wait",
+        "prediction": {
+          "status": "OK",
+          "value": 0.7071067811865476
+        },
+        "expected": "WAIT",
+        "actual": "WAIT",
+        "status": "PASS"
+      },
+      {
+        "id": "budget",
+        "prediction": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "expected": "DEFER_BUDGET",
+        "actual": "DEFER_BUDGET",
+        "status": "PASS"
+      },
+      {
+        "id": "permission",
+        "prediction": {
+          "status": "OK",
+          "value": 0.25
+        },
+        "expected": "REJECT_PERMISSION",
+        "actual": "REJECT_PERMISSION",
+        "status": "PASS"
+      },
+      {
+        "id": "invalid-time",
+        "prediction": {
+          "status": "REJECT_INPUT"
+        },
+        "expected": "UNKNOWN",
+        "actual": "UNKNOWN",
+        "status": "PASS"
+      }
+    ],
+    "negative_tests": [
+      {
+        "id": "duplicate-id",
+        "error": "ValueError"
+      },
+      {
+        "id": "unknown-field",
+        "error": "ValidationError"
+      },
+      {
+        "id": "wrong-kind",
+        "error": "ValueError"
+      },
+      {
+        "id": "wrong-version",
+        "error": "ValueError"
+      },
+      {
+        "id": "orphan-ref",
+        "error": "ValueError"
+      },
+      {
+        "id": "undeclared-dependency",
+        "error": "ValueError"
+      },
+      {
+        "id": "missing-package",
+        "error": "ValueError"
+      },
+      {
+        "id": "dependency-digest",
+        "error": "ValueError"
+      },
+      {
+        "id": "unsafe-path",
+        "error": "ValueError"
+      },
+      {
+        "id": "unapproved-op",
+        "error": "ValidationError"
+      },
+      {
+        "id": "policy-order",
+        "error": "ValueError"
+      },
+      {
+        "id": "unearned-qualification",
+        "error": "ValidationError"
+      },
+      {
+        "id": "missing-evidence",
+        "error": "ValueError"
+      },
+      {
+        "id": "hash-mismatch",
+        "error": "ValueError"
+      },
+      {
+        "id": "duplicate-key",
+        "error": "ValueError"
+      },
+      {
+        "id": "dependency-cycle",
+        "error": "ValueError"
+      }
+    ],
+    "sql": {
+      "rows": 65,
+      "record_roundtrip": 65,
+      "references": 189,
+      "reference_roundtrip": 189,
+      "per_kind_rows": {
+        "Source": 2,
+        "EvidenceLocator": 7,
+        "Claim": 12,
+        "Element": 2,
+        "ModelSpec": 2,
+        "PolicySpec": 1,
+        "Relation": 2,
+        "Case": 35,
+        "ValidationSpec": 2
+      },
+      "foreign_key_check": "PASS",
+      "cross_package_query": [
+        [
+          "hlr:policy:review",
+          "hlr:model:hlr"
+        ]
+      ],
+      "negative_tests": [
+        "sql-duplicate",
+        "sql-orphan",
+        "sql-wrong-kind"
+      ],
+      "database": ":memory:",
+      "sqlite_version": "3.45.1"
+    },
+    "files_sha256": {
+      "manifest.json": "26ac0f16aea564bf0ceda3cfeb826b4ceaf6fecdb038957918f3270720eab15a",
+      "schema.json": "6dfea9562ac31be9b8946017f8a6a0784ed9c8722e1c42834631f0d785fc33c7",
+      "bkt.json": "657ab5494a1f960ff926f1f55ff0b68e8280dc727b3fe62aea33cb42e9271235",
+      "hlr.json": "12246d38ae859cabbf687ff31d821d753f91a5e91154e8e29264272e59e82ec8",
+      "review.json": "e22e4c7a40246a7081a0d9630de7f6c6d3a8d1d6d38d31fd280afae1a1afade9",
+      "validate.py": "d762b9459e84a68696eb254897ac402d996563192046cb9662b9a5cf94faa482"
+    },
+    "professional_qualification": "NOT_RUN",
+    "persistent_sqlite_generated": false
+  },
+  "local_validation_status": "PASS",
+  "persistent_sqlite_file_check": "PASS",
+  "task_receipt": null,
+  "limitations": [
+    "同一Builder编写转换、验证脚本和期望值，不是独立专业审核",
+    "统一schema覆盖9类试点记录；BKT/HLR计算共用AST求值器，但输入/编排仍为显式模型适配器，策略守卫有限集合",
+    "逻辑分包是试点，不冻结正式包或物理库布局",
+    "SQL仅单个:memory:连接、9类表与类型引用表，嵌套属性暂用逐字段JSON；非完整专业表、正式持久导入器或性能测试",
+    "按需加载验证为文本文件读取路径，不是多物理SQLite文件路由",
+    "无真实学习者、参数训练校准、完整CQ06/07/25/26验证、崩溃恢复或正式发布资格",
+    "来源资格继承原候选限制；manifest摘要核对不等同独立签名、授权或防篡改发布证明"
+  ]
+}

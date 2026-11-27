@@ -1,0 +1,918 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "HLR investigation profile; not IF01",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "package_id",
+    "version",
+    "status",
+    "records"
+  ],
+  "properties": {
+    "package_id": {
+      "const": "learn-kg.draft.hlr"
+    },
+    "version": {
+      "const": "0.0.1"
+    },
+    "status": {
+      "const": "INVESTIGATION_ONLY"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/Source"
+          },
+          {
+            "$ref": "#/$defs/EvidenceLocator"
+          },
+          {
+            "$ref": "#/$defs/Claim"
+          },
+          {
+            "$ref": "#/$defs/Element"
+          },
+          {
+            "$ref": "#/$defs/ModelSpec"
+          },
+          {
+            "$ref": "#/$defs/PolicySpec"
+          },
+          {
+            "$ref": "#/$defs/Relation"
+          },
+          {
+            "$ref": "#/$defs/Case"
+          },
+          {
+            "$ref": "#/$defs/ValidationSpec"
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "package_id",
+        "version",
+        "stable_id",
+        "kind"
+      ],
+      "properties": {
+        "package_id": {
+          "const": "learn-kg.draft.hlr"
+        },
+        "version": {
+          "const": "0.0.1"
+        },
+        "stable_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "Source",
+            "EvidenceLocator",
+            "Claim",
+            "Element",
+            "ModelSpec",
+            "PolicySpec",
+            "Relation",
+            "Case",
+            "ValidationSpec"
+          ]
+        }
+      }
+    },
+    "expr": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "var"
+          ],
+          "properties": {
+            "var": {
+              "enum": [
+                "delta",
+                "half_life",
+                "p",
+                "weights",
+                "features"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "const"
+          ],
+          "properties": {
+            "const": {
+              "type": "number"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "args"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "pow2",
+                "neg",
+                "log2"
+              ]
+            },
+            "args": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 1,
+              "items": {
+                "$ref": "#/$defs/expr"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "op",
+            "args"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "div",
+                "dot"
+              ]
+            },
+            "args": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "$ref": "#/$defs/expr"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "title",
+        "authors",
+        "doi",
+        "year",
+        "url",
+        "rights",
+        "qualification"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Source"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "doi": {
+          "type": "string",
+          "minLength": 1
+        },
+        "year": {
+          "type": "integer"
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rights": {
+          "type": "string",
+          "minLength": 1
+        },
+        "qualification": {
+          "const": "NOT_RUN"
+        }
+      }
+    },
+    "EvidenceLocator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "source_ref",
+        "location",
+        "scope",
+        "verification"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "EvidenceLocator"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "source_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verification": {
+          "const": "TEXT_AND_PAGE_IMAGE_READ"
+        }
+      }
+    },
+    "Claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "claim_type",
+        "statement",
+        "conditions",
+        "limitations",
+        "evidence_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Claim"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_type": {
+          "enum": [
+            "MATHEMATICAL_MODEL",
+            "DEFINITION",
+            "EMPIRICAL_RESULT",
+            "ENGINEERING_POLICY"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      }
+    },
+    "Element": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "label",
+        "model_ref",
+        "claim_refs"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Element"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      }
+    },
+    "ModelSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "element_ref",
+        "claim_refs",
+        "formulas",
+        "conditions",
+        "limits"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "ModelSpec"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "element_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "formulas": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "expr"
+            ],
+            "properties": {
+              "name": {
+                "enum": [
+                  "recall",
+                  "estimate_half_life",
+                  "inverse_half_life"
+                ]
+              },
+              "expr": {
+                "$ref": "#/$defs/expr"
+              }
+            }
+          }
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "PolicySpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "topic",
+        "claim_refs",
+        "model_ref",
+        "rules",
+        "rule_order",
+        "effect"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "PolicySpec"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "topic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "model_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "rules": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "guard",
+              "action"
+            ],
+            "properties": {
+              "guard": {
+                "enum": [
+                  "NOT_AUTHORIZED",
+                  "MISSING_OR_INVALID_INPUT",
+                  "NOT_APPLICABLE",
+                  "PROBABILITY_ABOVE_TARGET",
+                  "COST_EXCEEDS_BUDGET",
+                  "ALWAYS"
+                ]
+              },
+              "action": {
+                "enum": [
+                  "REJECT_PERMISSION",
+                  "UNKNOWN",
+                  "WAIT",
+                  "DEFER_BUDGET",
+                  "SUGGEST_REVIEW"
+                ]
+              }
+            }
+          }
+        },
+        "rule_order": {
+          "const": "FIRST_MATCH"
+        },
+        "effect": {
+          "const": "ADVICE_ONLY"
+        }
+      }
+    },
+    "Relation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "relation_type",
+        "from_ref",
+        "to_ref",
+        "claim_refs",
+        "conditions",
+        "transitive",
+        "reversible"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Relation"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "relation_type": {
+          "const": "informs_decision"
+        },
+        "from_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "to_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "claim_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "transitive": {
+          "const": false
+        },
+        "reversible": {
+          "const": false
+        }
+      }
+    },
+    "Case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "target_ref",
+        "mode",
+        "input",
+        "expected",
+        "explanation"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "Case"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "target_ref": {
+          "$ref": "#/$defs/ref"
+        },
+        "mode": {
+          "enum": [
+            "recall",
+            "estimate_half_life",
+            "inverse_half_life",
+            "policy"
+          ]
+        },
+        "input": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "delta",
+                "half_life",
+                "unit"
+              ],
+              "properties": {
+                "delta": {
+                  "type": "number"
+                },
+                "half_life": {
+                  "type": "number"
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "weights",
+                "features",
+                "unit"
+              ],
+              "properties": {
+                "weights": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 128,
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "features": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 128,
+                  "items": {
+                    "type": "number"
+                  }
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "delta",
+                "p",
+                "unit"
+              ],
+              "properties": {
+                "delta": {
+                  "type": "number"
+                },
+                "p": {
+                  "type": "number"
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "p",
+                "target",
+                "authorized",
+                "applicable",
+                "cost_minutes",
+                "budget_minutes"
+              ],
+              "properties": {
+                "p": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "target": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "authorized": {
+                  "type": "boolean"
+                },
+                "applicable": {
+                  "type": "boolean"
+                },
+                "cost_minutes": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "budget_minutes": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "expected": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status",
+                "value"
+              ],
+              "properties": {
+                "status": {
+                  "const": "OK"
+                },
+                "value": {
+                  "type": "number"
+                }
+              }
+            },
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "status"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "REJECT_INPUT",
+                    "REJECT_NUMERIC_RANGE",
+                    "REJECT_PERMISSION",
+                    "UNKNOWN",
+                    "WAIT",
+                    "DEFER_BUDGET",
+                    "SUGGEST_REVIEW"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "explanation": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "ValidationSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stable_id",
+        "kind",
+        "owner",
+        "status",
+        "case_refs",
+        "method",
+        "run_status",
+        "qualification"
+      ],
+      "properties": {
+        "stable_id": {
+          "type": "string",
+          "pattern": "^hlr:[a-z0-9:-]+$"
+        },
+        "kind": {
+          "const": "ValidationSpec"
+        },
+        "owner": {
+          "enum": [
+            "K10",
+            "K11"
+          ]
+        },
+        "status": {
+          "const": "DRAFT"
+        },
+        "case_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_status": {
+          "const": "NOT_RUN"
+        },
+        "qualification": {
+          "const": "NOT_RUN"
+        }
+      }
+    }
+  }
+}

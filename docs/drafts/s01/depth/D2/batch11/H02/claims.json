@@ -1,0 +1,138 @@
+{
+  "owner": "H02",
+  "base": "295142346183c1387d3646b19d7d0aea8196a971",
+  "prior_claim_blob": "c13fca353566dbf218291690fb6912a071903812",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H02.03.02.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.03.02",
+      "requirement_id": "H02.03.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "汉字字形可关联多个语素意义；复合词中共享字形不必共享同一个义项。",
+      "conditions": [
+        "§2.2–2.3；词典具体义项另证。"
+      ],
+      "negative_boundary": "不将字形主键与义项主键合并。",
+      "source_refs": [
+        "H02-B11-MORPH"
+      ],
+      "source_locator": "§2.2–2.3 l213–224; §4–5 l276–307",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.03.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "花费与花朵",
+        "expected": "共享字形而意义分别存储",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.03.03.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.03.03",
+      "requirement_id": "H02.03.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "汉语存在同音和字形多义现象，学习任务需分别控制字形、读音与语义关系。",
+      "conditions": [
+        "论文背景支持；具体读音—义项三元组需词典核证。"
+      ],
+      "negative_boundary": "不能凭读音相同合并词项。",
+      "source_refs": [
+        "H02-B11-MORPH"
+      ],
+      "source_locator": "§2.2–2.3 l213–224; §4–5 l276–307",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.03.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "工与公",
+        "expected": "读音关系不等于义项身份",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.03.04.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.03.04",
+      "requirement_id": "H02.03.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "汉字具有明确书写边界，复合词通常包含多个语素；字形、语素与复合词表征需分别记录。",
+      "conditions": [
+        "论文§2.2及§5.1；不声称所有字形均对应独立语素。"
+      ],
+      "negative_boundary": "不按字数自动确定词界或语素数。",
+      "source_refs": [
+        "H02-B11-MORPH"
+      ],
+      "source_locator": "§2.2–2.3 l213–224; §4–5 l276–307",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.03.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "比较花与花朵",
+        "expected": "分别建立字形与词层身份",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.04.04.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.04.04",
+      "requirement_id": "H02.04.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "形似、同音及同形异义涉及不同表征关系，可作为不同错误假设；论文词汇判断任务分别观察正确率和反应时间。",
+      "conditions": [
+        "§2.2、§4；个人错误诊断是项目推论。"
+      ],
+      "negative_boundary": "不能从一次误读唯一确定混淆原因。",
+      "source_refs": [
+        "H02-B11-MORPH"
+      ],
+      "source_locator": "§2.2–2.3 l213–224; §4–5 l276–307",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.04.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "误认未为末",
+        "expected": "记录形似假设，另行复测",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H02.05.01.D4.03",
+      "owner": "H02",
+      "d3_id": "H02.05.01",
+      "requirement_id": "H02.05.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "词汇判断任务的目标是判断刺激是否为词；该任务测量正确率及反应时，并非直接测试每个义项的解释。",
+      "conditions": [
+        "§4实际任务；认读综合量表另证。"
+      ],
+      "negative_boundary": "词汇判断正确不能自动推出语境理解。",
+      "source_refs": [
+        "H02-B11-MORPH"
+      ],
+      "source_locator": "§2.2–2.3 l213–224; §4–5 l276–307",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H02.05.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "正确判断花朵是真词",
+        "expected": "语境释义未测",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

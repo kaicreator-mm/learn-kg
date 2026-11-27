@@ -1,0 +1,436 @@
+{
+  "owner": "K07",
+  "base": "0c874360f2ff0bcde25b5623eb9e2c51bc1ff18b",
+  "scope": "SYNTHETIC_PROJECT_RULES_ONLY",
+  "execution": "ACTUAL_JS_BUILDER_EXECUTION",
+  "independent_oracle": false,
+  "limitations": "仅核对合成AND/OR路径、覆盖差集、候选门槛；不验证依赖必要性、实际证据资格、课程效果、测量精度、真实授权、预算或完整图路由。推荐边不参与必要性判定。脚本保存；本轮直接运行同函数，未独立执行Node文件。",
+  "records": [
+    {
+      "id": "K07-LOGIC-01",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "SAT",
+              "status": "qualified"
+            },
+            {
+              "id": "B",
+              "state": "SAT",
+              "status": "qualified"
+            }
+          ]
+        ],
+        "recommended": [
+          "C"
+        ]
+      },
+      "expected": "CANDIDATE_PATH_AVAILABLE",
+      "actual": "CANDIDATE_PATH_AVAILABLE",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-02",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "UNSAT",
+              "status": "qualified"
+            }
+          ],
+          [
+            {
+              "id": "B",
+              "state": "SAT",
+              "status": "qualified"
+            }
+          ]
+        ],
+        "recommended": []
+      },
+      "expected": "CANDIDATE_PATH_AVAILABLE",
+      "actual": "CANDIDATE_PATH_AVAILABLE",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-03",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "UNKNOWN",
+              "status": "qualified"
+            }
+          ],
+          [
+            {
+              "id": "B",
+              "state": "UNSAT",
+              "status": "qualified"
+            }
+          ]
+        ],
+        "recommended": []
+      },
+      "expected": "HOLD_UNKNOWN",
+      "actual": "HOLD_UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-04",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "SAT",
+              "status": "draft"
+            }
+          ]
+        ],
+        "recommended": []
+      },
+      "expected": "HOLD_UNKNOWN",
+      "actual": "HOLD_UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-05",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "UNSAT",
+              "status": "draft"
+            }
+          ]
+        ],
+        "recommended": []
+      },
+      "expected": "HOLD_UNKNOWN",
+      "actual": "HOLD_UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-06",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "UNSAT",
+              "status": "qualified"
+            }
+          ],
+          [
+            {
+              "id": "B",
+              "state": "UNSAT",
+              "status": "qualified"
+            }
+          ]
+        ],
+        "recommended": []
+      },
+      "expected": "NO_PATH_CONFIRMED",
+      "actual": "NO_PATH_CONFIRMED",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-07",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "SAT",
+              "status": "qualified"
+            },
+            {
+              "id": "A",
+              "state": "SAT",
+              "status": "qualified"
+            }
+          ]
+        ],
+        "recommended": []
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-08",
+      "input": {
+        "mode": "route",
+        "paths": [
+          []
+        ],
+        "recommended": []
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-09",
+      "input": {
+        "mode": "route",
+        "paths": [
+          [
+            {
+              "id": "A",
+              "state": "SAT",
+              "status": "qualified"
+            },
+            {
+              "id": "B",
+              "state": "UNKNOWN",
+              "status": "qualified"
+            }
+          ]
+        ],
+        "recommended": []
+      },
+      "expected": "HOLD_UNKNOWN",
+      "actual": "HOLD_UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-10",
+      "input": {
+        "mode": "alignment",
+        "required": [
+          "oral",
+          "write"
+        ],
+        "taught": [
+          "oral"
+        ],
+        "assessed": [
+          "write"
+        ]
+      },
+      "expected": {
+        "teachingGap": [
+          "write"
+        ],
+        "assessmentGap": [
+          "oral"
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "actual": {
+        "teachingGap": [
+          "write"
+        ],
+        "assessmentGap": [
+          "oral"
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-11",
+      "input": {
+        "mode": "alignment",
+        "required": [
+          "oral"
+        ],
+        "taught": [
+          "oral"
+        ],
+        "assessed": [
+          "oral"
+        ]
+      },
+      "expected": {
+        "teachingGap": [],
+        "assessmentGap": [],
+        "mastery": "NOT_INFERRED"
+      },
+      "actual": {
+        "teachingGap": [],
+        "assessmentGap": [],
+        "mastery": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-12",
+      "input": {
+        "mode": "alignment",
+        "required": [
+          "oral"
+        ],
+        "taught": [
+          "oral"
+        ],
+        "assessed": [
+          "recognize"
+        ]
+      },
+      "expected": {
+        "teachingGap": [],
+        "assessmentGap": [
+          "oral"
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "actual": {
+        "teachingGap": [],
+        "assessmentGap": [
+          "oral"
+        ],
+        "mastery": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-13",
+      "input": {
+        "mode": "alignment",
+        "required": [
+          "oral",
+          "oral"
+        ],
+        "taught": [],
+        "assessed": []
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-14",
+      "input": {
+        "mode": "alignment",
+        "required": [],
+        "taught": [],
+        "assessed": []
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-15",
+      "input": {
+        "mode": "gate",
+        "evidence": "valid",
+        "criterion": "pass",
+        "integration": "pass",
+        "authorized": true
+      },
+      "expected": "ADVANCE_CANDIDATE_NOT_MASTERY",
+      "actual": "ADVANCE_CANDIDATE_NOT_MASTERY",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-16",
+      "input": {
+        "mode": "gate",
+        "evidence": "valid",
+        "criterion": "pass",
+        "integration": "unknown",
+        "authorized": true
+      },
+      "expected": "HOLD_EVIDENCE",
+      "actual": "HOLD_EVIDENCE",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-17",
+      "input": {
+        "mode": "gate",
+        "evidence": "valid",
+        "criterion": "pass",
+        "integration": "fail",
+        "authorized": true
+      },
+      "expected": "REMEDIATE_CANDIDATE",
+      "actual": "REMEDIATE_CANDIDATE",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-18",
+      "input": {
+        "mode": "gate",
+        "evidence": "unknown",
+        "criterion": "pass",
+        "integration": "pass",
+        "authorized": true
+      },
+      "expected": "HOLD_EVIDENCE",
+      "actual": "HOLD_EVIDENCE",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-19",
+      "input": {
+        "mode": "gate",
+        "evidence": "valid",
+        "criterion": "fail",
+        "integration": "not_required",
+        "authorized": true
+      },
+      "expected": "REMEDIATE_CANDIDATE",
+      "actual": "REMEDIATE_CANDIDATE",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-20",
+      "input": {
+        "mode": "gate",
+        "evidence": "valid",
+        "criterion": "pass",
+        "integration": "not_required",
+        "authorized": false
+      },
+      "expected": "HOLD_AUTH",
+      "actual": "HOLD_AUTH",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-21",
+      "input": {
+        "mode": "gate",
+        "evidence": "invalid",
+        "criterion": "pass",
+        "integration": "pass",
+        "authorized": true
+      },
+      "expected": "HOLD_EVIDENCE",
+      "actual": "HOLD_EVIDENCE",
+      "pass": true
+    },
+    {
+      "id": "K07-LOGIC-22",
+      "input": {
+        "mode": "gate",
+        "evidence": "valid",
+        "criterion": "pass",
+        "integration": "not_required",
+        "authorized": true
+      },
+      "expected": "ADVANCE_CANDIDATE_NOT_MASTERY",
+      "actual": "ADVANCE_CANDIDATE_NOT_MASTERY",
+      "pass": true
+    }
+  ],
+  "passed": 22
+}

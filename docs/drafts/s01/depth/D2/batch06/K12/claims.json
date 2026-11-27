@@ -1,0 +1,164 @@
+{
+  "owner": "K12",
+  "base": "1e2796240fae404cc614081c2e6e8d6a2e659932",
+  "prior_claim_blob": "0b2fbf90921bf6b95e27c8cf0505e1df6415bb5b",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K12.01.02.D4.03",
+      "owner": "K12",
+      "d3_id": "K12.01.02",
+      "requirement_id": "K12.01.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "任务规格分开记录目标能力、非目标需求、可观察表现和解释规则，先确定推断目标再定义题目。",
+      "conditions": [
+        "ECD框架及案例，非唯一任务模型"
+      ],
+      "negative_boundary": "任务包含某术语不证明测量该知识。",
+      "source_refs": [
+        "K12-B06-ECD"
+      ],
+      "source_locator": "l389–401",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K12.01.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "识别if-then与独立构造if-then",
+        "expected": "两种目标分别绑定任务",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K12.02.01.D4.03",
+      "owner": "K12",
+      "d3_id": "K12.02.01",
+      "requirement_id": "K12.02.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "选择正确代码对应的结果与主动构造满足情境的代码具有不同证据需求。",
+      "conditions": [
+        "特定计算机科学例子；其他学科另核"
+      ],
+      "negative_boundary": "不能将选中答案直接当独立生成。",
+      "source_refs": [
+        "K12-B06-ECD"
+      ],
+      "source_locator": "l426–433",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K12.02.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "从三条条件语句选出一条 vs 自写条件",
+        "expected": "区分观察类型",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K12.02.04.D4.03",
+      "owner": "K12",
+      "d3_id": "K12.02.04",
+      "requirement_id": "K12.02.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "开放产出任务可通过符合目标的实际产物提供证据；评分需要明确功能约束与可接受变体。",
+      "conditions": [
+        "项目操作化；原研究并非通用自动评分"
+      ],
+      "negative_boundary": "不以唯一参考文本排斥等效解法。",
+      "source_refs": [
+        "K12-B06-ECD"
+      ],
+      "source_locator": "l429–431",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K12.02.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "两段不同代码均满足给定条件",
+        "expected": "按目标和副作用审查",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K12.05.02.D4.03",
+      "owner": "K12",
+      "d3_id": "K12.05.02",
+      "requirement_id": "K12.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "任务族变式需说明哪些特征保持测量目标、哪些改变难度或非目标要求。",
+      "conditions": [
+        "设计模式层；变式等值待校准"
+      ],
+      "negative_boundary": "不同题目ID不证明真实迁移或等难。",
+      "source_refs": [
+        "K12-B06-ECD"
+      ],
+      "source_locator": "l398–401,430–431",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K12.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "用新变量名重写原问题",
+        "expected": "只声明数值/表面变式",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K12.06.03.D4.03",
+      "owner": "K12",
+      "d3_id": "K12.06.03",
+      "requirement_id": "K12.06.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "设计模式映射目标到题目或作品可发现覆盖空白及重复，但只描述设计覆盖，不能证明学习者能力。",
+      "conditions": [
+        "案例设计方法"
+      ],
+      "negative_boundary": "不能把覆盖数当掌握数。",
+      "source_refs": [
+        "K12-B06-ECD"
+      ],
+      "source_locator": "l434–436",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K12.06.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "识别覆盖3题、构造覆盖0题",
+        "expected": "构造证据缺失",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K12.06.01.D4.03",
+      "owner": "K12",
+      "d3_id": "K12.06.01",
+      "requirement_id": "K12.06.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "题次、题族、知识组件及评分版本应分别登记；同题多KC映射共享原始作答身份。",
+      "conditions": [
+        "项目数据规则，依据泄漏案例"
+      ],
+      "negative_boundary": "不能将展开行当独立回答或改写历史身份。",
+      "source_refs": [
+        "K12-B06-PYKT"
+      ],
+      "source_locator": "p6 §3.3.2, p8 Observation2",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "base_claim_ref": "K12.06.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "一作答映射两个KC",
+        "expected": "原观察只有1次",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

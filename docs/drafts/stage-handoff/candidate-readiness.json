@@ -1,0 +1,256 @@
+{
+  "status": "DRAFT_SCOPED_CLOSEOUT_NOT_TASK_RECEIPT",
+  "repo": "kaicreator-mm/learn-kg",
+  "formal_branch": {
+    "name": "version/v0.1.0",
+    "head": "05a0a759bc10051adefd3eb966f16694cb2c03fc"
+  },
+  "reviewed_candidate": {
+    "head": "88d29883a27c5e66cb3c82dc9ecf44ff82e0af1a",
+    "tree": "3ec03d72204497259bc9b429f03dcb43499bf17e",
+    "pr": 7,
+    "review_comment": 7203533827,
+    "issue_review_comment": 7203533005,
+    "decision": "ACCEPT_SCOPED",
+    "closed": [
+      "RV01",
+      "RV02",
+      "RV03",
+      "RV04",
+      "RV05",
+      "RV06",
+      "RV07"
+    ],
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "independent_added_invocations": 62,
+    "formal_gates": "NOT_ISSUED",
+    "scope": "Cumulative candidate remediation only; do not reopen unless affected content changes."
+  },
+  "planning": {
+    "actual": "HOLD_PENDING_SCOPED_REVIEW",
+    "task_comment": 7189901951,
+    "review_exact_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+    "review_output_label": "LEARN_KG_V010_D013_R3_R2_FIVE_P1_THREE_P2_SCOPED_INDEPENDENT_REVIEW",
+    "result": "NOT_LOCATED_IN_ISSUE_2_OR_6_OR_PRIOR_CONTEXT",
+    "required": "Existing review verdict body and actual writeback or comment ID; no duplicate review requested. Do not infer acceptance from R6.",
+    "ready_static": 3,
+    "planned": 75,
+    "formal_receipts": []
+  },
+  "candidate_inventory": {
+    "taxonomy_nodes": 823,
+    "d3_themes": 648,
+    "module_count": 26,
+    "original_claims": 1348,
+    "depth_claims": 364,
+    "R2_additional": 31,
+    "physical_claim_records": 1743,
+    "superseded_old_mixed_claims": 3,
+    "candidate_consumption_claims": 1740,
+    "source_records": 455,
+    "case_records": 648,
+    "scope_source_leads": 45,
+    "composition_views": 27,
+    "view_requirements": {
+      "exemplified": 61,
+      "partial": 37,
+      "hold": 10
+    },
+    "cq": 26,
+    "lc": 12,
+    "qualification": "NOT_RUN",
+    "formal_CQ": "26_NOT_RUN"
+  },
+  "consumption_order": [
+    "Preserve historical D1/D2 and D3/G01–G06/D4 snapshots; do not treat D4 historical manifest as current formal package.",
+    "Apply existing R1/R2/R3 candidate-consumption manifest: retain older records but supersede R1 gate and relation/provenance interpretations and R2 three mixed records; no duplicate evidence counting.",
+    "Then R5 depth-disposition replaces generic-retain adequacy semantics, requirement-corrections replaces 14 map rows, R5 contracts+fixtures+probe supersede affected R3 scoring and exposure predicates. R6 accepts only scoped remediation; current candidate view does not confer qualification.",
+    "Use canonical source record IDs and explicit status; no source identity promotion based on reference counts. SRC01 evidence separately scoped."
+  ],
+  "task_readiness": [
+    {
+      "id": "S01",
+      "dag_status": "READY",
+      "execution": "INVESTIGATION_AND_DRAFT_ONLY",
+      "current": "648 D3/26 module scope inventory, 1743 records, 27 views/108 requirements, 26 CQ/12 LC routes, source ledgers, R6 closed candidate fixes",
+      "remaining": "D001–D015 scope and omission dispositions, per-D4 canonical coverage and consumed tuple, source status and applicable view/validation fields integrated for formal S01 candidate receipt; cannot issue until planning gate verified",
+      "output_receipt": null
+    },
+    {
+      "id": "DB01",
+      "dag_status": "READY",
+      "execution": "INVESTIGATION_AND_DRAFT_ONLY",
+      "current": "unified V2 113/17 kinds pilot, D4 253 file mapping memory projection, D014/DB01 design, R1/R5 overlays",
+      "remaining": "canonical versioned schema with professional typed endpoint/locator/rights/permission resolver and deterministic mapping for actual current candidate and private HSK/source/learner isolation; publication manifest design and qualification; no DB01 receipt, DB02 not dispatched",
+      "output_receipt": null
+    },
+    {
+      "id": "SRC01",
+      "dag_status": "READY",
+      "execution": "NONDESTRUCTIVE_PRESERVATION_ONLY",
+      "current": "prior 19317 text archive/159708 exact quad restoration; 3 current PDF identities and record reconciliation in src01-pdf-identity-evidence.json",
+      "remaining": "14 source blocks and historical PDF identity/rights, independent durable backup/recovery boundary; PRESERVATION_VERIFIED not issued",
+      "output_receipt": null
+    },
+    {
+      "id": "G01",
+      "dag_status": "PLANNED",
+      "depends_on": [
+        "S01"
+      ],
+      "block": "S01 CANDIDATE_READY absent; R6 draft review not formal range gate"
+    },
+    {
+      "id": "IF01",
+      "dag_status": "PLANNED",
+      "depends_on": [
+        "S01",
+        "DB01",
+        "G01"
+      ],
+      "block": "Required candidate receipts and G01 gate absent"
+    },
+    {
+      "id": "HS00",
+      "dag_status": "PLANNED",
+      "depends_on": [
+        "S01",
+        "SRC01"
+      ],
+      "block": "Required S01 and SRC01 preservation receipts absent"
+    },
+    {
+      "id": "DB02",
+      "dag_status": "PLANNED",
+      "depends_on": [
+        "DB01"
+      ],
+      "block": "DB01 candidate receipt absent; no persistent SQLite"
+    }
+  ],
+  "artifact_refs": [
+    {
+      "path": "docs/implementation/task-dag.json",
+      "git_blob": "6bb0c6d34a241760280f0a37c7b34af79b904a05"
+    },
+    {
+      "path": "docs/implementation/task-execution-contract.md",
+      "git_blob": "7dede78f149e1b9c0054e62de53ca7b49b40d60f"
+    },
+    {
+      "path": "docs/implementation/coverage-ledger.json",
+      "git_blob": "b7c068329dd9c403dd631f065b7c5eafdccdc6e9"
+    },
+    {
+      "path": "docs/implementation/src01-preservation-evidence.json",
+      "git_blob": "a6ff0974754668f0cc80e117142df8d14bcd1820"
+    },
+    {
+      "path": "docs/implementation/src01-readable-archive.md",
+      "git_blob": "d9496e2525f0989a7231b2e88f5f65951f67b53e"
+    },
+    {
+      "path": "docs/product/decision-index.md",
+      "git_blob": "8da919a538110c6da1e9e976e613e922af72e6e3"
+    },
+    {
+      "path": "docs/drafts/s01-scope-inventory.json",
+      "git_blob": "e748b42c8fd5a2743e6fc3a096797f88f9298855"
+    },
+    {
+      "path": "docs/drafts/s01/source-leads.json",
+      "git_blob": "6a64e35532ac56f405013f7f40a553894bcb7134"
+    },
+    {
+      "path": "docs/drafts/s01/process-view-requirements.json",
+      "git_blob": "015b0ef9a6ef852e15d3198601e12c70a1e8132e"
+    },
+    {
+      "path": "docs/drafts/s01/cq-lifecycle-fixture-requirements.json",
+      "git_blob": "18df5faf4b32d24a60944640d11d7bf959479ddf"
+    },
+    {
+      "path": "docs/drafts/s01/hsk-source-domain-mapping.json",
+      "git_blob": "c21d88a08b31e1fe11ee544a3864de32a9d10bc0"
+    },
+    {
+      "path": "docs/drafts/db01-sqlite-design.md",
+      "git_blob": "b266b4f48046ef62cf73c2335c806fa4552dc833"
+    },
+    {
+      "path": "docs/drafts/db01-unified-pilot/schema.json",
+      "git_blob": "b5d9070267dbf33ebccdac7da6f8468828bc8ae4"
+    },
+    {
+      "path": "docs/drafts/db01-unified-pilot/validation-evidence-v2.json",
+      "git_blob": "1db29ce33b55400db3af38e6a2429df5a1a0e4da"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/G01/formal-dag-routing.json",
+      "git_blob": "62bec60fed4ec830e286de6aaa34f4e73c17a8cd"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/G02/depth-reconciliation.json",
+      "git_blob": "b20371fb14c597bc5c6253c37fa3fba3887b83c2"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/G02/composition-contracts.json",
+      "git_blob": "94232faf92557752f4a99ed22c6156a521ad9f6c"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/G03/claim-bindings.json",
+      "git_blob": "7b9704cec6e7d8a79450f3a3457a45523a26a62a"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/D4/manifest.json",
+      "git_blob": "ea78e169574e2e4d7543548de443898c3b465b18"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/D4/receipt.json",
+      "git_blob": "b5405014e1f1e1934e4f29de239904c783a3cadc"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/convergence/summary.json",
+      "git_blob": "8fcc038ded7bba807cb3175c7474ad326c69e1f0"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/convergence/composition-cq-gaps.json",
+      "git_blob": "91ee74ad8d378efc6355311999caf0962d55ece6"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/remediation/candidate-consumption.json",
+      "git_blob": "1a31571276e7121d47ef6491de3f7993189a44c3"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/remediation/R5/depth-disposition.json",
+      "git_blob": "fc803054796401a247be4cb7adc8609afb4975c3"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/remediation/R5/requirement-corrections.json",
+      "git_blob": "fd09045304dd3cbf724775798f6c6496a7353bb4"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/remediation/R5/contracts.json",
+      "git_blob": "495a1aeb13bf27166fa61bae4afad58bb1d2e61c"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/remediation/R5/probe.py",
+      "git_blob": "b581ad20640dc164d51539b22bb46059821248a0"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/remediation/R5/fixtures.json",
+      "git_blob": "21875bbda5dffcd87d5d41093cd27ffe6f0aa1cb"
+    },
+    {
+      "path": "docs/drafts/s01/depth/D3/remediation/R5/receipt.json",
+      "git_blob": "2b6f148b09830d7dadbb56defe02f776a769ecae"
+    }
+  ],
+  "limits": [
+    "Builder census on reconstructed exact reviewed tree; first source glob accidentally included calibration source formats; corrected by pairing each claim file with same-directory source file; actual ID/owner/topic/requirement/source checks and CQ/LC route check passed.",
+    "R6 accepted seven original finding families, not all knowledge adequacy or formal dispatch. R5 explicitly 180 generic retained unassessed, targeted 12/44 facets, 90 historical application/source HOLD and 22 policy/adequacy boundary remain as downstream; do not treat all as P1.",
+    "No formal task state, branch activation, merge, source rights or knowledge qualification change."
+  ]
+}

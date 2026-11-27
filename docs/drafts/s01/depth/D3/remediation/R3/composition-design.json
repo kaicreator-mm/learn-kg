@@ -1,0 +1,538 @@
+{
+  "status": "R3_CANDIDATE_ONLY",
+  "modes": [
+    {
+      "id": "SELF_DIRECTED",
+      "axis": "agency",
+      "meaning": "学习者在目标和可用资源边界内决定路径与时间。",
+      "suitable": "已有先备能力并能独立检索时，选择Z2或M2",
+      "unsuitable": "连目标词义/分数单位都未理解时，不将独立摸索作为唯一方式",
+      "switch": "独立探查反复失败且学习者同意时转引导；可拒绝"
+    },
+    {
+      "id": "GUIDED",
+      "axis": "agency",
+      "meaning": "教练提供示范、提示与即时过程支持，逐渐交还责任。",
+      "suitable": "Z0或M0出现错误，采用Z1/M1支架",
+      "unsuitable": "辅助正确不得计独立测量；已有稳定表现者不强制完整示范",
+      "switch": "能解释或执行当前步骤后用新任务渐撤，再独立观察"
+    },
+    {
+      "id": "PRACTICE",
+      "axis": "activity",
+      "meaning": "以明确目标的反复产出、变式及反馈改善技能或保持。",
+      "suitable": "已有对应知识，Z2/M2后安排Z3/M3",
+      "unsuitable": "只重复同题或提示答案不构成独立保持",
+      "switch": "材料过于熟悉或错误模式持续时换区分性任务"
+    },
+    {
+      "id": "INQUIRY",
+      "axis": "activity",
+      "meaning": "围绕问题提出假设、比较证据与解释，并在需要时提供指导。",
+      "suitable": "数学比较同分子/不同分母的规律，再构造反例；汉语比较同交易不同人物视角",
+      "unsuitable": "不给初学者必要材料、无可检验问题或将自由操作当证据",
+      "switch": "出现缺少基础单位/词义时先示范，再恢复探究"
+    },
+    {
+      "id": "MASTERY_ORIENTED",
+      "axis": "progression",
+      "meaning": "目标、明确标准、针对性纠正、重新评价循环，推进以符合当前目标证据为条件。",
+      "suitable": "Z0/M0初错后进行补救与独立新题；记录各评分维度",
+      "unsuitable": "不设全领域统一百分比；一次正确不证明长保持",
+      "switch": "满足当前目标则安排延迟复测；预算不足保留未完成目标"
+    },
+    {
+      "id": "TASK_BASED",
+      "axis": "organization",
+      "meaning": "围绕有意义任务组织多个知识与技能组件。",
+      "suitable": "二手交易书面表达或同规格量杯比较",
+      "unsuitable": "模拟完成不等于现实交际/职业胜任，缺授权不进入真实任务",
+      "switch": "若任务暴露具体词义/单位缺口，插入短组件练习"
+    },
+    {
+      "id": "COOPERATIVE",
+      "axis": "social",
+      "meaning": "在角色明确、共同目标与个体责任条件下组织互动。",
+      "suitable": "买卖双方互演；同伴分别解释两种分数比较方法",
+      "unsuitable": "代答或小组答案不能计个体独立证据",
+      "switch": "同伴讨论后分开无提示测验；本人不愿合作则替代"
+    },
+    {
+      "id": "MIXED",
+      "axis": "organization",
+      "meaning": "按任务阶段组合以上模式，明确切换条件及各阶段证据。",
+      "suitable": "指导→独立检索→同伴反思→独立延迟复测",
+      "unsuitable": "多模式堆叠无目的或超过预算；不得合并辅助与独立评分",
+      "switch": "根据诊断、目标、选择和时间有限切换"
+    }
+  ],
+  "activities": [
+    {
+      "id": "READ",
+      "name": "阅读",
+      "material": "ZH交易卡文字",
+      "output": "标出付钱者/收货者",
+      "boundary": "只能支持阅读及任务特定角色理解",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "WATCH",
+      "name": "观看",
+      "material": "M共同单位数轴示范",
+      "output": "指出两分数位置并说明",
+      "boundary": "看完视频不等于能独立构造",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "QUESTION_ANSWER",
+      "name": "问答",
+      "material": "Z0角色及词义问答",
+      "output": "独立填写角色、动词",
+      "boundary": "提示后的回答另标",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "IMITATE",
+      "name": "模仿",
+      "material": "教练示范‘小林买了书’",
+      "output": "复述相同句式",
+      "boundary": "仅模仿，不证明新情境表达",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "DELIBERATE_PRACTICE",
+      "name": "练习",
+      "material": "M1/M2变式分数",
+      "output": "比较并说明合法方法",
+      "boundary": "题族不同不自动等值",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "DISCUSS",
+      "name": "讨论",
+      "material": "比较3/5和2/3的两种方法",
+      "output": "小组提出理由与反例",
+      "boundary": "群体答案不计个人掌握",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "EXPLORE",
+      "name": "探索",
+      "material": "同分子、同分母、均不同的分数对",
+      "output": "提出分母规则的条件",
+      "boundary": "错误假设作为探究产物非正确知识",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "EXPERIMENT",
+      "name": "实验",
+      "material": "同一长度纸条按不同份数分割",
+      "output": "记录单位及数轴位置",
+      "boundary": "纸条长度不等时不直接比较实际长度",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "ROLEPLAY",
+      "name": "角色扮演",
+      "material": "模拟二手买卖双方",
+      "output": "各自按角色生成句子",
+      "boundary": "共同脚本非独立语言证据",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "CREATE",
+      "name": "创作",
+      "material": "自主编一条明确已完成的交易卡",
+      "output": "题干+两个角色答案",
+      "boundary": "生成内容需核查，不能即刻用于评价",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "TEACH",
+      "name": "教授同伴",
+      "material": "说明为什么3/5<2/3",
+      "output": "同伴提问及本人解释",
+      "boundary": "他人理解不自动证明讲解者全面掌握",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "SELF_EXPLAIN",
+      "name": "自解释",
+      "material": "M2说明正分母为何可交叉相乘",
+      "output": "原始理由及计算",
+      "boundary": "复述教练理由不等于独立推理",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "REFLECT",
+      "name": "反思",
+      "material": "回顾Z0角色正确词误",
+      "output": "自述下次先判断角色",
+      "boundary": "自述不是保持观察",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    },
+    {
+      "id": "ASSESS",
+      "name": "独立评价",
+      "material": "Z2/M2、Z3/M3",
+      "output": "独立响应、版本量规、时间",
+      "boundary": "不得显示答案、代做或漏记曝光",
+      "role": "learner; teacher may support only outside independent assessment",
+      "status": "CANDIDATE_DESIGN"
+    }
+  ],
+  "flow": {
+    "id": "R3-FLOW-01",
+    "version": "v1",
+    "status": "DECLARATIVE_CANDIDATE_NOT_RUNTIME",
+    "steps": [
+      {
+        "id": "NEGOTIATE",
+        "contract": "P02",
+        "action": "协商目标、可用资源、授权、12分钟预算和成功标准"
+      },
+      {
+        "id": "PREPARE_PARALLEL",
+        "contract": "P04",
+        "action": "两个可并行准备子流程：材料/来源检查与任务/量规检查；只读候选数据，完成后合流"
+      },
+      {
+        "id": "DIAGNOSE",
+        "contract": "P06",
+        "action": "独立诊断Z0/M0，保存原始响应和可能原因"
+      },
+      {
+        "id": "SUPPORT_SUBFLOW",
+        "contract": "P03",
+        "action": "根据区分性探查示范→最小提示→无提示变式，最多2轮，每轮预留预算"
+      },
+      {
+        "id": "INDEPENDENT",
+        "contract": "P06",
+        "action": "Z2/M2无提示独立产出并分维度评分"
+      },
+      {
+        "id": "DECIDE",
+        "contract": "P08",
+        "action": "比较可行替代；安排复测、进一步探查或暂停"
+      },
+      {
+        "id": "CHECKPOINT",
+        "contract": "P10",
+        "action": "保存候选会话版本、最后暴露、剩余预算、未完成目标及授权状态"
+      },
+      {
+        "id": "DELAYED",
+        "contract": "P05",
+        "action": "经恢复检查的新材料无提示延迟观察，区分保持/近迁移"
+      },
+      {
+        "id": "PAUSE",
+        "contract": "P10",
+        "action": "用户拒绝或未知时暂停，不自动发送额外激励"
+      },
+      {
+        "id": "EXIT",
+        "contract": "P10",
+        "action": "确认退出，优先终止新动作"
+      },
+      {
+        "id": "END",
+        "contract": "P10",
+        "action": "保存允许的候选证据及未知，不更新实际掌握"
+      }
+    ],
+    "subflows": [
+      {
+        "id": "MATERIAL",
+        "parent": "PREPARE_PARALLEL",
+        "inputs": [
+          "resource_id",
+          "source",
+          "rights",
+          "accessibility"
+        ],
+        "outputs": [
+          "material_candidate",
+          "rights_status"
+        ],
+        "join": "both required preparation results",
+        "max_steps": 3
+      },
+      {
+        "id": "RUBRIC",
+        "parent": "PREPARE_PARALLEL",
+        "inputs": [
+          "construct",
+          "task_version",
+          "rubric"
+        ],
+        "outputs": [
+          "task_scope_check",
+          "rubric_candidate"
+        ],
+        "join": "both required preparation results",
+        "max_steps": 3
+      },
+      {
+        "id": "FADE",
+        "parent": "SUPPORT_SUBFLOW",
+        "inputs": [
+          "diagnosis",
+          "consent",
+          "remaining_budget"
+        ],
+        "outputs": [
+          "assisted_observation",
+          "next_independent_task"
+        ],
+        "max_rounds": 2,
+        "stages": [
+          "WORKED_EXAMPLE",
+          "MINIMAL_HINT",
+          "INDEPENDENT"
+        ],
+        "unknown": "PAUSE"
+      }
+    ],
+    "transitions": [
+      {
+        "id": "T1",
+        "from": "NEGOTIATE",
+        "to": "PREPARE_PARALLEL",
+        "guard": "authorized and goal/rubric and budget known",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T2",
+        "from": "PREPARE_PARALLEL",
+        "to": "DIAGNOSE",
+        "guard": "both checks complete and no unresolved task-blocking defect; rights HOLD excludes public delivery",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T3",
+        "from": "DIAGNOSE",
+        "to": "SUPPORT_SUBFLOW",
+        "guard": "error and consent and competing cause probe",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T4",
+        "from": "DIAGNOSE",
+        "to": "INDEPENDENT",
+        "guard": "valid prior independent evidence and agreed target",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T5",
+        "from": "SUPPORT_SUBFLOW",
+        "to": "INDEPENDENT",
+        "guard": "new task, scaffolding removed; support outcome kept distinct",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T6",
+        "from": "INDEPENDENT",
+        "to": "DECIDE",
+        "guard": "raw observation scored or missing explicitly",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T7",
+        "from": "DECIDE",
+        "to": "SUPPORT_SUBFLOW",
+        "guard": "reversible help chosen; remaining rounds and shared budget",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T8",
+        "from": "DECIDE",
+        "to": "CHECKPOINT",
+        "guard": "retention plan or voluntary pause",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T9",
+        "from": "CHECKPOINT",
+        "to": "DELAYED",
+        "guard": "explicit resume consent, exact scope/version, last exposure and available time",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      },
+      {
+        "id": "T10",
+        "from": "DELAYED",
+        "to": "END",
+        "guard": "separate observation with known exposure and comparability, or UNKNOWN",
+        "unknown": "PAUSE",
+        "failure": "PAUSE",
+        "cost": "shared session budget; no double debit",
+        "priority": 10
+      }
+    ],
+    "parallel_contract": {
+      "join": "ALL_MATERIAL_AND_RUBRIC",
+      "not_equal": "parallel preparation not parallel independent responses",
+      "conflict": "if either branch reports conflicting version or material, hold both; no partial promotion",
+      "budget": "single shared allocation; reserve each cost before start; cancel unstarted when exit",
+      "independent_evidence": "all group/assisted work tagged; only separate individual assessment qualifies as candidate"
+    },
+    "control": {
+      "exit": {
+        "priority": 0,
+        "scope": "session/subject/global",
+        "known": true,
+        "action": "stop regardless ordinary time order"
+      },
+      "resume": {
+        "required": [
+          "checkpoint_id",
+          "learner",
+          "subject",
+          "construct",
+          "knowledge_version",
+          "task_version",
+          "rubric_version",
+          "last_exposure",
+          "budget",
+          "new_processing_permission"
+        ],
+        "replay": "same checkpoint no duplicate exposure/score, conflict HOLD",
+        "revocation": "withdrawal blocks resume; new authorization explicitly scoped and independently checked; not supplied by new task version"
+      },
+      "motivation": "optional, no punishment; decline does not by itself revoke learning authorization"
+    },
+    "limits": [
+      "One candidate example with parallel preparation and bounded support, not general executable engine.",
+      "Guard descriptions require separately qualified interpretation; no claim physical concurrency, actual reauthorization or live runtime."
+    ]
+  },
+  "content_precheck": {
+    "id": "R3-A06-TRADE-01",
+    "version": "v1",
+    "author": "builder",
+    "status": "AUTHOR_PRECHECK_ONLY_HOLD_DELIVERY",
+    "candidate": {
+      "prompt": "小顾付给小柳6元，小柳交给小顾一把尺子。指定小柳：小柳___了一把尺子；另写角色。",
+      "expected": {
+        "verb": "卖",
+        "actor": "小柳",
+        "object": "尺子",
+        "role": "GIVE_RECEIVE_MONEY"
+      },
+      "source_refs": [
+        "R2-S11",
+        "R2-S12"
+      ],
+      "rubric": "ZH-TRADE-RUBRIC-v1"
+    },
+    "checks": [
+      {
+        "kind": "fact",
+        "decision": "AUTHOR_CANDIDATE_MATCH",
+        "reason": "货物流向及钱款流向反向，指定交货收款者"
+      },
+      {
+        "kind": "domain_language",
+        "decision": "AUTHOR_CANDIDATE_MATCH",
+        "reason": "普通商品交易义项；不用于比喻/特殊语义"
+      },
+      {
+        "kind": "rubric",
+        "decision": "AUTHOR_CANDIDATE_MATCH",
+        "reason": "角色、词义与人物/物品分维度；有明确语境"
+      },
+      {
+        "kind": "source",
+        "decision": "RECORDED_SOURCE_READ_NOT_QUALIFIED",
+        "reason": "汉典两个义项定位，未独立核证源字节"
+      },
+      {
+        "kind": "rights",
+        "decision": "HOLD",
+        "reason": "题干原创但外部来源再发布权限未裁定"
+      },
+      {
+        "kind": "accessibility",
+        "decision": "HOLD_ACTUAL_ACCESSIBILITY",
+        "reason": "文本候选，不声称已实际测试屏幕阅读器"
+      }
+    ],
+    "negative": {
+      "prompt": "他___了一把尺子。",
+      "reason": "未给钱/物/指定角色，买卖均可能，不发布唯一答案"
+    },
+    "independent_receipts": "NOT_ISSUED",
+    "gate": "HOLD",
+    "not_claimed": "不伪造六个独立审核收据；R1有限门禁合成案例另保留"
+  },
+  "external_improvement": {
+    "id": "R3-E01-DESIGN-01",
+    "status": "PROTOCOL_CANDIDATE_NO_STUDY",
+    "version": "p1",
+    "candidate_policy": "R3-SHARED-RETRIEVAL-01@v1",
+    "question": "在相同教学内容与总用时的条件下，独立提取加针对反馈与重新学习相比是否改善指定任务的延迟保持？",
+    "target_population": "需经伦理及招募批准的目标学习者；不虚构人数",
+    "design": "候选随机分配或明确可交换设计；分别在汉语与数学构念内，分层初始水平；不把两学科分数直接混合",
+    "comparators": [
+      "independent retrieval + targeted feedback",
+      "matched time review"
+    ],
+    "primary": "指定24h后未见且构念可比的独立题的各评分维度；暴露历史完整，缺失与错误分开",
+    "estimand": "各学科各自 E[Y(1)-Y(0)]，Y由预先指定任务与维度定义；分配及缺失处理另经协议确定",
+    "secondary": "即时表现、近迁移、时间成本、本人可接受性及负面体验；不事后替换主要指标",
+    "risk": "参与自愿，退出优先，权利/隐私及公平，记录脱落和中途接触；若任务不可比或无比较则探索性",
+    "analysis": "事前说明随机化、依从/脱落、区间估计与缺失敏感性；必要时按学科单独估计；没有实际数据不计算效应",
+    "outcome": "NOT_RUN",
+    "ethics": "NOT_CLEARED",
+    "independent_review": "NOT_RUN",
+    "approval": "NOT_RUN",
+    "decision": "KEEP_BASELINE_HOLD",
+    "negative": "即使离线准确率改善也不能代替延迟教育结果；负面效果/安全风险保留原策略并评估回退",
+    "source_refs": [
+      "R2-S02",
+      "R2-S03",
+      "R2-S08"
+    ]
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "base": "3542989d2c4d67ecfe0b5f8b3f49b344a792913b",
+  "status": "PROJECT_CANDIDATES_NOT_FORMAL_RELATIONS",
+  "records": [
+    {
+      "id": "D3G-R01",
+      "from": "K05.01.01",
+      "to": "K12.02.02",
+      "type": "INFORMS_TASK_DESIGN",
+      "meaning": "主动回忆策略映射到自由或线索回忆任务",
+      "conditions": [
+        "目标为保持；区分自由回忆、线索及测试时距"
+      ],
+      "negative_boundary": "不将回忆任务的完成率视为长期保持",
+      "claim_refs": [
+        "K05.01.01.D4.01",
+        "K12.02.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R02",
+      "from": "K05.06.01",
+      "to": "K11.01.02",
+      "type": "INFORMS_PLAN",
+      "meaning": "将任务目标与材料的适配作为学习模式候选约束",
+      "conditions": [
+        "有可比较目标、任务版本、材料和成本"
+      ],
+      "negative_boundary": "不证明最优动作",
+      "claim_refs": [
+        "K05.06.01.D4.01",
+        "K11.01.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R03",
+      "from": "K05.06.02",
+      "to": "K11.01.02",
+      "type": "INFORMS_PLAN",
+      "meaning": "交错的材料边界进入候选选择",
+      "conditions": [
+        "明确材料类别、相似性和适用条件"
+      ],
+      "negative_boundary": "不把数学交错效应外推至词汇",
+      "claim_refs": [
+        "K05.06.02.D4.01",
+        "K11.01.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R04",
+      "from": "K12.03.03",
+      "to": "K10.01.02",
+      "type": "CONSTRAINS_INTERPRETATION",
+      "meaning": "反馈后重提交的提示条件必须传入观察解释",
+      "conditions": [
+        "有提示内容、次数及响应来源"
+      ],
+      "negative_boundary": "辅助表现不当独立表现",
+      "claim_refs": [
+        "K12.03.03.D4.01",
+        "K10.01.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R05",
+      "from": "K09.01.03",
+      "to": "K10.01.02",
+      "type": "CONSTRAINS_INTERPRETATION",
+      "meaning": "构念及任务证据约束知识追踪的提示解释",
+      "conditions": [
+        "目标、工具、作答者和提示一致可定位"
+      ],
+      "negative_boundary": "不从提示后的正确直接更新独立能力",
+      "claim_refs": [
+        "K09.01.03.D4.01",
+        "K10.01.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R06",
+      "from": "K09.01.04",
+      "to": "K10.01.05",
+      "type": "CONSTRAINS_INTERPRETATION",
+      "meaning": "缺失与错误在评分和模型观察之间保持不同身份",
+      "conditions": [
+        "已知任务是否可作答、评分规则和环境"
+      ],
+      "negative_boundary": "不得自动把中断编码为错误",
+      "claim_refs": [
+        "K09.01.04.D4.01",
+        "K10.01.05.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R07",
+      "from": "K06.06.03",
+      "to": "K09.01.03",
+      "type": "CONSTRAINS_INTERPRETATION",
+      "meaning": "错误分类要求符合构念的独立对照证据",
+      "conditions": [
+        "已核量规、辅助条件及辨别性任务"
+      ],
+      "negative_boundary": "单一错误不确定原因",
+      "claim_refs": [
+        "K06.06.03.D4.01",
+        "K09.01.03.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R08",
+      "from": "K06.06.03",
+      "to": "K06.06.02",
+      "type": "INFORMS_FEEDBACK",
+      "meaning": "错误假设约束针对性过程反馈",
+      "conditions": [
+        "错误模式经对照，允许学习者选择"
+      ],
+      "negative_boundary": "不以人格评价代替反馈",
+      "claim_refs": [
+        "K06.06.03.D4.01",
+        "K06.06.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R09",
+      "from": "K06.06.02",
+      "to": "K08.03.03",
+      "type": "INFORMS_FEEDBACK",
+      "meaning": "过程信息供学习者监控与调整策略",
+      "conditions": [
+        "本人目标及任务差距明确"
+      ],
+      "negative_boundary": "反馈不是本人已接受或实际实施",
+      "claim_refs": [
+        "K06.06.02.D4.01",
+        "K08.03.03.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R10",
+      "from": "K08.03.03",
+      "to": "K11.01.02",
+      "type": "INFORMS_PLAN",
+      "meaning": "监控和调节结果进入下一轮活动候选",
+      "conditions": [
+        "目标、约束与观测独立保留"
+      ],
+      "negative_boundary": "不把自我判断当真实掌握",
+      "claim_refs": [
+        "K08.03.03.D4.01",
+        "K11.01.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R11",
+      "from": "K10.05.03",
+      "to": "K11.01.02",
+      "type": "INFORMS_PLAN",
+      "meaning": "学习者授权目标的版本约束下一任务",
+      "conditions": [
+        "授权主体和目标版本明确"
+      ],
+      "negative_boundary": "模型概率不能覆盖本人目标",
+      "claim_refs": [
+        "K10.05.03.D4.01",
+        "K11.01.02.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R12",
+      "from": "K12.05.02",
+      "to": "K11.05.03",
+      "type": "INFORMS_TASK_DESIGN",
+      "meaning": "复测候选必须保留构念并控制变式",
+      "conditions": [
+        "记录题族、变动因素、提示、时距"
+      ],
+      "negative_boundary": "同题族变化不证明迁移或难度等值",
+      "claim_refs": [
+        "K12.05.02.D4.01",
+        "K11.05.03.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R13",
+      "from": "K11.05.03",
+      "to": "K09.01.03",
+      "type": "CONSTRAINS_INTERPRETATION",
+      "meaning": "复测结果需按原目标和观测条件解释",
+      "conditions": [
+        "独立任务及量规明确"
+      ],
+      "negative_boundary": "不由重复表现推出独立保持",
+      "claim_refs": [
+        "K11.05.03.D4.01",
+        "K09.01.03.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R14",
+      "from": "H01.02.04",
+      "to": "H06.01.01",
+      "type": "INFORMS_TASK_DESIGN",
+      "meaning": "音位对立用于设计实际音频辨别任务",
+      "conditions": [
+        "控制对立维度、声音质量及词项"
+      ],
+      "negative_boundary": "拼音辨形不能替代音辨",
+      "claim_refs": [
+        "H01.02.04.D4.01",
+        "H06.01.01.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R15",
+      "from": "H02.02.02",
+      "to": "H06.04.01",
+      "type": "REQUIRES_DISTINCT_EVIDENCE",
+      "meaning": "笔顺知识需要有序手写过程证据",
+      "conditions": [
+        "有序笔画、目标字形与书写条件"
+      ],
+      "negative_boundary": "静态图片或键入不能证明笔顺",
+      "claim_refs": [
+        "H02.02.02.D4.01",
+        "H06.04.01.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R16",
+      "from": "H02.05.02",
+      "to": "H06.04.01",
+      "type": "REQUIRES_DISTINCT_EVIDENCE",
+      "meaning": "手写目标及工具约束手写技能观测",
+      "conditions": [
+        "目标字形、实际工具与本人产出"
+      ],
+      "negative_boundary": "其他输入方式不当手写",
+      "claim_refs": [
+        "H02.05.02.D4.01",
+        "H06.04.01.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R17",
+      "from": "H02.04.04",
+      "to": "K06.06.03",
+      "type": "CONSTRAINS_INTERPRETATION",
+      "meaning": "形近、音近、义近混淆应作为不同错误假设",
+      "conditions": [
+        "分别控制的对照任务及重复独立观察"
+      ],
+      "negative_boundary": "不从单次误读唯一诊断",
+      "claim_refs": [
+        "H02.04.04.D4.01",
+        "K06.06.03.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R18",
+      "from": "H03.03.03",
+      "to": "K09.01.03",
+      "type": "CONSTRAINS_INTERPRETATION",
+      "meaning": "语境消歧条件约束词义理解任务证据",
+      "conditions": [
+        "目标义项、上下文和评分量规"
+      ],
+      "negative_boundary": "孤立翻译正确不证明目标义项掌握",
+      "claim_refs": [
+        "H03.03.03.D4.01",
+        "K09.01.03.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R19",
+      "from": "H07.03.03",
+      "to": "H06.06.04",
+      "type": "SCOPES_ONLY_NOT_MASTERY",
+      "meaning": "规范词表成员可描述任务覆盖，但不代表个人表现",
+      "conditions": [
+        "保留版本、原字段及个人任务证据"
+      ],
+      "negative_boundary": "不由等级成员推出能力或先修",
+      "claim_refs": [
+        "H07.03.03.D4.01",
+        "H06.06.04.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    },
+    {
+      "id": "D3G-R20",
+      "from": "H07.04.03",
+      "to": "H06.06.04",
+      "type": "SCOPES_ONLY_NOT_MASTERY",
+      "meaning": "版本范围覆盖对账与学习者任务证据分离",
+      "conditions": [
+        "规范记录身份、版本及独立任务分别核验"
+      ],
+      "negative_boundary": "数量相等不证明语义一致或掌握",
+      "claim_refs": [
+        "H07.04.03.D4.01",
+        "H06.06.04.D4.01"
+      ],
+      "status": "PROJECT_SEMANTIC_CANDIDATE",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "materialize_accepted": false
+    }
+  ]
+}

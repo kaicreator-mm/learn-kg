@@ -1,0 +1,426 @@
+{
+  "status": "BUILDER_SYNTHETIC_ONLY",
+  "base": "2ac1145227d8772e6f8a5c730daff5d5faade4fb",
+  "independent_oracle": false,
+  "qualification": "NOT_RUN",
+  "limits": "习惯曲线仅合成参数算例，非拟合；保持组均值来自RK p252已报告四个描述性数字，未重做原实验/显著性检验；比较守卫为工程候选；语言证据、语义字段匹配只处理人工标注条件，非自动汉语理解、实际测评或学习者状态。",
+  "cases": [
+    {
+      "id": "D2-B04-SYN-01",
+      "claim_ref": "K08.05.02.D4.03",
+      "input": {
+        "mode": "habit",
+        "a": 40,
+        "b": 40,
+        "c": 0.05,
+        "day": 0,
+        "fit": true
+      },
+      "expected": {
+        "value": 0,
+        "t95": 59.914645471079815,
+        "mastery": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-02",
+      "claim_ref": "K08.05.02.D4.03",
+      "input": {
+        "mode": "habit",
+        "a": 40,
+        "b": 40,
+        "c": 0.05,
+        "day": 59.914645471079815,
+        "fit": true
+      },
+      "expected": {
+        "value": 38,
+        "t95": 59.914645471079815,
+        "mastery": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-03",
+      "claim_ref": "K08.05.02.D4.03",
+      "input": {
+        "mode": "habit",
+        "a": 40,
+        "b": 1,
+        "c": 0.05,
+        "day": 0,
+        "fit": true
+      },
+      "expected": {
+        "value": 39,
+        "t95": 0,
+        "mastery": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-04",
+      "claim_ref": "K08.05.02.D4.03",
+      "input": {
+        "mode": "habit",
+        "a": 40,
+        "b": 40,
+        "c": 0,
+        "day": 1,
+        "fit": true
+      },
+      "expected": "INVALID"
+    },
+    {
+      "id": "D2-B04-SYN-05",
+      "claim_ref": "K08.05.02.D4.03",
+      "input": {
+        "mode": "habit",
+        "a": 40,
+        "b": 40,
+        "c": 0.05,
+        "day": 10,
+        "fit": false
+      },
+      "expected": "HOLD_FIT"
+    },
+    {
+      "id": "D2-B04-SYN-06",
+      "claim_ref": "K05.01.01.D4.03",
+      "input": {
+        "mode": "retention",
+        "rows": [
+          {
+            "id": "SSSS",
+            "delayMinutes": 5,
+            "score": 0.83,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 5,
+            "score": 0.71,
+            "measure": "recall"
+          },
+          {
+            "id": "SSSS",
+            "delayMinutes": 10080,
+            "score": 0.4,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 10080,
+            "score": 0.61,
+            "measure": "recall"
+          }
+        ],
+        "delayMinutes": 5,
+        "measure": "recall",
+        "expectedGroups": [
+          "SSSS",
+          "STTT"
+        ]
+      },
+      "expected": {
+        "highest": [
+          "SSSS"
+        ],
+        "scope": "DESCRIPTIVE_ONLY"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-07",
+      "claim_ref": "K05.01.01.D4.03",
+      "input": {
+        "mode": "retention",
+        "rows": [
+          {
+            "id": "SSSS",
+            "delayMinutes": 5,
+            "score": 0.83,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 5,
+            "score": 0.71,
+            "measure": "recall"
+          },
+          {
+            "id": "SSSS",
+            "delayMinutes": 10080,
+            "score": 0.4,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 10080,
+            "score": 0.61,
+            "measure": "recall"
+          }
+        ],
+        "delayMinutes": 10080,
+        "measure": "recall",
+        "expectedGroups": [
+          "SSSS",
+          "STTT"
+        ]
+      },
+      "expected": {
+        "highest": [
+          "STTT"
+        ],
+        "scope": "DESCRIPTIVE_ONLY"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-08",
+      "claim_ref": "K05.02.02.D4.03",
+      "input": {
+        "mode": "retention",
+        "rows": [
+          {
+            "id": "SSSS",
+            "delayMinutes": 5,
+            "score": 0.83,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 5,
+            "score": 0.71,
+            "measure": "recall"
+          },
+          {
+            "id": "SSSS",
+            "delayMinutes": 10080,
+            "score": 0.4,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 10080,
+            "score": 0.61,
+            "measure": "recall"
+          }
+        ],
+        "delayMinutes": 60,
+        "measure": "recall",
+        "expectedGroups": [
+          "SSSS",
+          "STTT"
+        ]
+      },
+      "expected": "HOLD_COMPARABILITY"
+    },
+    {
+      "id": "D2-B04-SYN-09",
+      "claim_ref": "K05.06.04.D4.03",
+      "input": {
+        "mode": "retention",
+        "rows": [
+          {
+            "id": "SSSS",
+            "delayMinutes": 5,
+            "score": 0.83,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 5,
+            "score": 0.71,
+            "measure": "recall"
+          },
+          {
+            "id": "SSSS",
+            "delayMinutes": 10080,
+            "score": 0.4,
+            "measure": "recall"
+          },
+          {
+            "id": "STTT",
+            "delayMinutes": 10080,
+            "score": 0.61,
+            "measure": "recall"
+          }
+        ],
+        "delayMinutes": 10080,
+        "measure": "confidence",
+        "expectedGroups": [
+          "SSSS",
+          "STTT"
+        ]
+      },
+      "expected": "HOLD_COMPARABILITY"
+    },
+    {
+      "id": "D2-B04-SYN-10",
+      "claim_ref": "K06.04.03.D4.03",
+      "input": {
+        "mode": "contrast",
+        "effectA": 0.3,
+        "effectB": -0.38,
+        "commonEstimand": false,
+        "validDirectDesign": false
+      },
+      "expected": "HOLD_COMPARISON"
+    },
+    {
+      "id": "D2-B04-SYN-11",
+      "claim_ref": "K06.04.03.D4.03",
+      "input": {
+        "mode": "contrast",
+        "effectA": 0.3,
+        "effectB": -0.38,
+        "commonEstimand": true,
+        "validDirectDesign": false
+      },
+      "expected": "HOLD_COMPARISON"
+    },
+    {
+      "id": "D2-B04-SYN-12",
+      "claim_ref": "H06.06.01.D4.03",
+      "input": {
+        "mode": "evidence",
+        "target": "audio",
+        "actual": "text",
+        "answerProvided": false,
+        "support": "independent",
+        "correct": true
+      },
+      "expected": "NOT_TARGET_EVIDENCE"
+    },
+    {
+      "id": "D2-B04-SYN-13",
+      "claim_ref": "H06.06.01.D4.03",
+      "input": {
+        "mode": "evidence",
+        "target": "audio",
+        "actual": "multimodal",
+        "answerProvided": true,
+        "support": "independent",
+        "correct": true
+      },
+      "expected": "NOT_TARGET_EVIDENCE"
+    },
+    {
+      "id": "D2-B04-SYN-14",
+      "claim_ref": "H06.01.04.D4.03",
+      "input": {
+        "mode": "evidence",
+        "target": "audio",
+        "actual": "audio",
+        "answerProvided": false,
+        "support": "independent",
+        "correct": false
+      },
+      "expected": {
+        "observed": "INCORRECT",
+        "condition": "independent",
+        "mastery": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-15",
+      "claim_ref": "H06.01.04.D4.03",
+      "input": {
+        "mode": "evidence",
+        "target": "audio",
+        "actual": "audio",
+        "answerProvided": false,
+        "support": "replay",
+        "correct": true
+      },
+      "expected": {
+        "observed": "CORRECT",
+        "condition": "replay",
+        "mastery": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-16",
+      "claim_ref": "H06.01.04.D4.03",
+      "input": {
+        "mode": "evidence",
+        "target": "audio",
+        "actual": "audio",
+        "answerProvided": false,
+        "support": "unknown",
+        "correct": true
+      },
+      "expected": "HOLD_SUPPORT"
+    },
+    {
+      "id": "D2-B04-SYN-17",
+      "claim_ref": "H06.02.04.D4.03",
+      "input": {
+        "mode": "evidence",
+        "target": "oral_interaction",
+        "actual": "audio",
+        "answerProvided": false,
+        "support": "independent",
+        "correct": true
+      },
+      "expected": "NOT_TARGET_EVIDENCE"
+    },
+    {
+      "id": "D2-B04-SYN-18",
+      "claim_ref": "H06.05.02.D4.03",
+      "input": {
+        "mode": "mediation",
+        "required": [
+          "deadline",
+          "condition"
+        ],
+        "conveyed": [
+          "deadline"
+        ],
+        "conflict": false
+      },
+      "expected": {
+        "missing": [
+          "condition"
+        ],
+        "fieldCoverage": "INCOMPLETE",
+        "languageQuality": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-19",
+      "claim_ref": "H06.05.02.D4.03",
+      "input": {
+        "mode": "mediation",
+        "required": [
+          "deadline",
+          "condition"
+        ],
+        "conveyed": [
+          "deadline",
+          "condition"
+        ],
+        "conflict": false
+      },
+      "expected": {
+        "missing": [],
+        "fieldCoverage": "COMPLETE",
+        "languageQuality": "NOT_INFERRED"
+      }
+    },
+    {
+      "id": "D2-B04-SYN-20",
+      "claim_ref": "H06.05.02.D4.03",
+      "input": {
+        "mode": "mediation",
+        "required": [
+          "deadline",
+          "condition"
+        ],
+        "conveyed": [
+          "deadline",
+          "condition"
+        ],
+        "conflict": true
+      },
+      "expected": "HOLD_DISTORTION"
+    }
+  ]
+}

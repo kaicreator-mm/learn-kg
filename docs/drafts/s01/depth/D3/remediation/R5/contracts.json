@@ -1,0 +1,49 @@
+{
+  "reason_contract": {
+    "status": "FINITE_STRUCTURED_REASON_WITNESS_ONLY",
+    "required_assertions": {
+      "CROSS": {
+        "positive_denominators": true,
+        "positive_multiplier_preserves_order": true
+      },
+      "COMMON_DENOM": {
+        "equal_positive_unit": true,
+        "equivalent_fractions": true
+      }
+    },
+    "canonical": {
+      "CROSS": [
+        "两分母为正，乘共同正数不改变不等号",
+        "容量相同，两分母为正，比较21和20",
+        "两分母为正，乘共同正数保持不等号方向"
+      ],
+      "COMMON_DENOM": [
+        "同为十分之一单位",
+        "分数化为同一正单位后比较分子",
+        "两分数等价变为同一正分母，比较分子"
+      ]
+    },
+    "known_contradictions": [
+      "分母并非正数，乘负数不需要反向",
+      "单位不相同，所以不能比较"
+    ],
+    "rules": [
+      "数学关系独立精确计分；正确数值不蕴含理由正确。",
+      "正分母、共同正数保持顺序，或同正单位与等价分数；结构化断言及与方法/计算匹配的有限规范解释均须成立。",
+      "显式反断言、已知矛盾文本、错误计算或分母等价不成立，理由=0；缺失、未知或未支持的开放表达，理由=null，人工/HOLD。",
+      "只在固定案例识别列出的规范表达；不是通用自然语言评分。数轴等合法替代方法仍可人工复核。",
+      "容量比较需明确同整体；同分母允许任意合法共同分母，不要求最小。"
+    ]
+  },
+  "history_contract": {
+    "status": "FINITE_AMBIGUOUS_ORDER_HOLD",
+    "rules": [
+      "时间为合成分钟，只有严格早于目标响应的已知事件才进入之前暴露。相关/目标事件与目标响应同分钟且无可靠先后，HOLD_EVENT_ORDER；同分钟基线的相关事件也保守HOLD。",
+      "目标ID、内容签名及有限夹具TARGET标记属于目标身份。目标被声明related=false或PREVIEW_TARGET与身份/related矛盾时，HOLD_EXPOSURE_CONFLICT；不以不相关标记屏蔽目标。",
+      "同一内容先前已见，HOLD_ITEM_PREEXPOSED；其他明确无关的学科事件可排除。暴露相关性未知、类型/时间缺失或不合法，HOLD_EXPOSURE_HISTORY。",
+      "目标之后的已知非冲突事件不计算为目标前练习。保持以最后相关暴露结束计，未确定实际先后不能声称完整无暴露延迟。",
+      "有效独立基线全维度正确；理由错误阻断基线；目标理由明确错误保留负候选，未知理由HOLD_JUSTIFICATION。近迁移同样须满足身份/独立/历史边界，不把不同情境当保持。"
+    ],
+    "limits": "分钟无可靠同分钟顺序，统一保守HOLD；不假设真实完整日志、不泛化语义近重复。"
+  }
+}

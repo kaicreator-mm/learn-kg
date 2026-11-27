@@ -1,0 +1,1209 @@
+{
+  "base": "934cd4883c705eb3ab0ffcb2839f3888a4283994",
+  "execution": "V8_CODE_MODE_EXACT_FETCHED_LEGACY_RUNNER_BODIES_WITH_FS_URL_PROCESS_SHIMS_AND_NEW_UNIFIED_FUNCTIONS",
+  "legacy": [
+    {
+      "stage": "C02",
+      "runner_blob": "6d200194d8962ef6fe53115329470cd388a12bca",
+      "fixtures_blob": "1d2f7917b15a73d2d4c4e30881dd4a0cd5f73750",
+      "summary": {
+        "cases": 12,
+        "failed": 0
+      }
+    },
+    {
+      "stage": "C03",
+      "runner_blob": "45d8b5a26b921d7dad0de52391ae7ef0058ef5f4",
+      "fixtures_blob": "32740595051c0ae3b01dc21d11dbe3a5c9dabbd0",
+      "summary": {
+        "cases": 24,
+        "failed": 0
+      }
+    },
+    {
+      "stage": "C04",
+      "runner_blob": "6c5e3fe9f69e7144089be429cb13b06ef821c2fe",
+      "fixtures_blob": "e9f3f7837a2cd70bbbe7347b203966b4991b522f",
+      "summary": {
+        "cases": 32,
+        "failed": 0
+      }
+    },
+    {
+      "stage": "C05",
+      "runner_blob": "2cba8a151b5e32fbb995d92654c7c771b761063f",
+      "fixtures_blob": "16c5413b1eb3d6d8ad704d705f49820a1ebb81ed",
+      "summary": {
+        "cases": 18,
+        "sessions": 6,
+        "failed": 0
+      }
+    }
+  ],
+  "legacy_fixed_cases": 92,
+  "legacy_extra_chain_assertions_not_replayed": 4,
+  "initial_failure": "URL not defined; corrected with strict fixture URL shim; native Node execution not performed",
+  "new_cases": [
+    {
+      "id": "missing-envelope",
+      "rule": "D3-P01",
+      "ctx": null,
+      "input": {
+        "observed_channel": "HANDWRITING",
+        "ordered_trace": [
+          1
+        ],
+        "independent": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "unauthorized",
+      "rule": "D3-P01",
+      "ctx": {
+        "exit": false,
+        "permission": false,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {
+        "observed_channel": "HANDWRITING",
+        "ordered_trace": [
+          1
+        ],
+        "independent": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "stop-priority",
+      "rule": "D3-P02",
+      "ctx": {
+        "exit": true,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {
+        "observed_channel": "REAL",
+        "external_receipt": true
+      },
+      "expected": "STOP",
+      "actual": "STOP",
+      "pass": true
+    },
+    {
+      "id": "valid-handwriting",
+      "rule": "D3-P01",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {
+        "observed_channel": "HANDWRITING",
+        "ordered_trace": [
+          1
+        ],
+        "independent": true
+      },
+      "expected": "ELIGIBLE_FOR_SCORING",
+      "actual": "ELIGIBLE_FOR_SCORING",
+      "pass": true
+    },
+    {
+      "id": "unknown-rule",
+      "rule": "D3-P99",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {},
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "unverified-rubric",
+      "rule": "D3-P04",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {
+        "observed": true,
+        "interrupted": false,
+        "result": "CORRECT",
+        "actor": "LEARNER",
+        "assistance": "NONE"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "variant-family",
+      "rule": "D3-P13",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {
+        "targetMatch": true,
+        "rubricVerified": true,
+        "changeControlled": true,
+        "family": "F1",
+        "previousFamily": "F2",
+        "item": "i2",
+        "previousItem": "i1"
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "wrong-target-domain",
+      "rule": "D3-P14",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {
+        "sourceDomain": "zh",
+        "targetDomain": "math",
+        "sharedMechanism": true
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "explicit-no-permission",
+      "rule": "D3-P08",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {
+        "permission": false
+      },
+      "expected": "HOLD",
+      "actual": "HOLD",
+      "pass": true
+    },
+    {
+      "id": "session-required",
+      "rule": "D3-P15",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "input": {},
+      "expected": "USE_FINITE_SESSION",
+      "actual": "USE_FINITE_SESSION",
+      "pass": true
+    }
+  ],
+  "new_loops": [
+    {
+      "id": "assisted-then-independent-and-stop",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "plan": {
+        "budget": 8,
+        "version": "v1",
+        "target": "RETENTION"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "HINT",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e2",
+          "digest": "d2",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "CORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "RESULT",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e3",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        }
+      ],
+      "expected": {
+        "remaining": 4,
+        "stopped": true,
+        "statuses": [
+          "OBSERVED",
+          "OBSERVED",
+          "STOP",
+          "STOPPED"
+        ],
+        "candidates": [
+          "e2"
+        ],
+        "firstIngress": "HOLD",
+        "lastRetest": "RETENTION_CANDIDATE"
+      },
+      "actual": {
+        "remaining": 4,
+        "stopped": true,
+        "trace": [
+          {
+            "status": "OBSERVED",
+            "mode": "MODE_CANDIDATE",
+            "variant": "VARIANT_CANDIDATE_UNCALIBRATED",
+            "observation": "ASSISTED_OR_EXTERNAL_ONLY",
+            "diagnosis": "HOLD",
+            "feedback": "HOLD",
+            "incentive": "HOLD",
+            "retest": "HOLD",
+            "ingress": "HOLD"
+          },
+          {
+            "status": "OBSERVED",
+            "mode": "MODE_CANDIDATE",
+            "variant": "VARIANT_CANDIDATE_UNCALIBRATED",
+            "observation": "INDEPENDENT_OBSERVATION",
+            "diagnosis": "NO_ERROR_OBSERVED",
+            "feedback": "OFFER_TASK_RESULT_FEEDBACK",
+            "incentive": "HOLD",
+            "retest": "RETENTION_CANDIDATE",
+            "ingress": "UPDATE_CANDIDATE_ONLY"
+          },
+          {
+            "status": "STOP"
+          },
+          {
+            "status": "STOPPED"
+          }
+        ],
+        "candidates": [
+          {
+            "eventId": "e2",
+            "result": "CORRECT",
+            "domain": "zh",
+            "construct": "word-meaning",
+            "retest": "RETENTION_CANDIDATE"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "error-clarify-then-retest",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "plan": {
+        "budget": 8,
+        "version": "v1",
+        "target": "RETENTION"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e2",
+          "digest": "d2",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "CORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "RESULT",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        }
+      ],
+      "expected": {
+        "remaining": 4,
+        "stopped": false,
+        "statuses": [
+          "OBSERVED",
+          "OBSERVED"
+        ],
+        "candidates": [
+          "e1",
+          "e2"
+        ],
+        "firstFeedback": "OFFER_CLARIFYING_TASK",
+        "lastRetest": "RETENTION_CANDIDATE"
+      },
+      "actual": {
+        "remaining": 4,
+        "stopped": false,
+        "trace": [
+          {
+            "status": "OBSERVED",
+            "mode": "MODE_CANDIDATE",
+            "variant": "VARIANT_CANDIDATE_UNCALIBRATED",
+            "observation": "INDEPENDENT_OBSERVATION",
+            "diagnosis": "REQUEST_DISCRIMINATING_TASK",
+            "feedback": "OFFER_CLARIFYING_TASK",
+            "incentive": "HOLD",
+            "retest": "RETENTION_CANDIDATE",
+            "ingress": "UPDATE_CANDIDATE_ONLY"
+          },
+          {
+            "status": "OBSERVED",
+            "mode": "MODE_CANDIDATE",
+            "variant": "VARIANT_CANDIDATE_UNCALIBRATED",
+            "observation": "INDEPENDENT_OBSERVATION",
+            "diagnosis": "NO_ERROR_OBSERVED",
+            "feedback": "OFFER_TASK_RESULT_FEEDBACK",
+            "incentive": "HOLD",
+            "retest": "RETENTION_CANDIDATE",
+            "ingress": "UPDATE_CANDIDATE_ONLY"
+          }
+        ],
+        "candidates": [
+          {
+            "eventId": "e1",
+            "result": "INCORRECT",
+            "domain": "zh",
+            "construct": "word-meaning",
+            "retest": "RETENTION_CANDIDATE"
+          },
+          {
+            "eventId": "e2",
+            "result": "CORRECT",
+            "domain": "zh",
+            "construct": "word-meaning",
+            "retest": "RETENTION_CANDIDATE"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "duplicates-conflict-budget",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "plan": {
+        "budget": 2,
+        "version": "v1",
+        "target": "RETENTION"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "x",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e2",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        }
+      ],
+      "expected": {
+        "remaining": 0,
+        "stopped": false,
+        "statuses": [
+          "OBSERVED",
+          "DUPLICATE_NO_UPDATE",
+          "CONFLICT_HOLD",
+          "HOLD"
+        ],
+        "candidates": [
+          "e1"
+        ]
+      },
+      "actual": {
+        "remaining": 0,
+        "stopped": false,
+        "trace": [
+          {
+            "status": "OBSERVED",
+            "mode": "MODE_CANDIDATE",
+            "variant": "VARIANT_CANDIDATE_UNCALIBRATED",
+            "observation": "INDEPENDENT_OBSERVATION",
+            "diagnosis": "REQUEST_DISCRIMINATING_TASK",
+            "feedback": "OFFER_CLARIFYING_TASK",
+            "incentive": "HOLD",
+            "retest": "RETENTION_CANDIDATE",
+            "ingress": "UPDATE_CANDIDATE_ONLY"
+          },
+          {
+            "status": "DUPLICATE_NO_UPDATE"
+          },
+          {
+            "status": "CONFLICT_HOLD"
+          },
+          {
+            "status": "HOLD",
+            "mode": "HOLD",
+            "next": "HOLD"
+          }
+        ],
+        "candidates": [
+          {
+            "eventId": "e1",
+            "result": "INCORRECT",
+            "domain": "zh",
+            "construct": "word-meaning",
+            "retest": "RETENTION_CANDIDATE"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "cross-domain-and-stale",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "plan": {
+        "budget": 8,
+        "version": "v1",
+        "target": "RETENTION"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "math",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v0",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        }
+      ],
+      "expected": {
+        "remaining": 6,
+        "stopped": false,
+        "statuses": [
+          "HOLD",
+          "HOLD",
+          "OBSERVED"
+        ],
+        "candidates": [
+          "e1"
+        ]
+      },
+      "actual": {
+        "remaining": 6,
+        "stopped": false,
+        "trace": [
+          {
+            "status": "HOLD"
+          },
+          {
+            "status": "HOLD"
+          },
+          {
+            "status": "OBSERVED",
+            "mode": "MODE_CANDIDATE",
+            "variant": "VARIANT_CANDIDATE_UNCALIBRATED",
+            "observation": "INDEPENDENT_OBSERVATION",
+            "diagnosis": "REQUEST_DISCRIMINATING_TASK",
+            "feedback": "OFFER_CLARIFYING_TASK",
+            "incentive": "HOLD",
+            "retest": "RETENTION_CANDIDATE",
+            "ingress": "UPDATE_CANDIDATE_ONLY"
+          }
+        ],
+        "candidates": [
+          {
+            "eventId": "e1",
+            "result": "INCORRECT",
+            "domain": "zh",
+            "construct": "word-meaning",
+            "retest": "RETENTION_CANDIDATE"
+          }
+        ]
+      },
+      "pass": true
+    },
+    {
+      "id": "interruption-and-invalid-rubric",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "plan": {
+        "budget": 8,
+        "version": "v1",
+        "target": "RETENTION"
+      },
+      "events": [
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": true,
+          "result": "MISSING",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        },
+        {
+          "exit": false,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e2",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": false,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        }
+      ],
+      "expected": {
+        "remaining": 6,
+        "stopped": false,
+        "statuses": [
+          "OBSERVED",
+          "HOLD"
+        ],
+        "candidates": [],
+        "firstFeedback": "OFFER_RESUME_OR_ALTERNATIVE"
+      },
+      "actual": {
+        "remaining": 6,
+        "stopped": false,
+        "trace": [
+          {
+            "status": "OBSERVED",
+            "mode": "MODE_CANDIDATE",
+            "variant": "VARIANT_CANDIDATE_UNCALIBRATED",
+            "observation": "HOLD",
+            "diagnosis": "MISSING_OBSERVATION",
+            "feedback": "OFFER_RESUME_OR_ALTERNATIVE",
+            "incentive": "HOLD",
+            "retest": "HOLD",
+            "ingress": "HOLD"
+          },
+          {
+            "status": "HOLD",
+            "variant": "HOLD"
+          }
+        ],
+        "candidates": []
+      },
+      "pass": true
+    },
+    {
+      "id": "unknown-exit",
+      "ctx": {
+        "exit": false,
+        "permission": true,
+        "versionMatch": true,
+        "domain": "zh",
+        "construct": "word-meaning"
+      },
+      "plan": {
+        "budget": 8,
+        "version": "v1",
+        "target": "RETENTION"
+      },
+      "events": [
+        {
+          "exit": null,
+          "permission": true,
+          "version": "v1",
+          "domain": "zh",
+          "construct": "word-meaning",
+          "id": "e1",
+          "digest": "d1",
+          "cost": 2,
+          "accessible": true,
+          "prerequisitesMet": true,
+          "materialScopeMatch": true,
+          "mode": "RETRIEVAL",
+          "targetMatch": true,
+          "rubricVerified": true,
+          "changeControlled": true,
+          "family": "F1",
+          "previousFamily": "F1",
+          "item": "i2",
+          "previousItem": "i1",
+          "difficultyEquivalenceVerified": false,
+          "observed": true,
+          "interrupted": false,
+          "result": "INCORRECT",
+          "actor": "LEARNER",
+          "assistance": "NONE",
+          "independentContrastVerified": false,
+          "patternRepeated": false,
+          "feedbackChoice": "ACCEPT",
+          "rubricDisputed": false,
+          "feedbackSupport": "CLARIFY",
+          "incentiveChoice": "DECLINE",
+          "nonCoercive": true,
+          "goalOwnedByLearner": true,
+          "incentiveKind": "ENCOURAGEMENT",
+          "feedbackDuring": false,
+          "elapsedVerified": true,
+          "newContext": false,
+          "delayCriterionMet": true
+        }
+      ],
+      "expected": {
+        "remaining": 8,
+        "stopped": false,
+        "statuses": [
+          "HOLD"
+        ],
+        "candidates": []
+      },
+      "actual": {
+        "remaining": 8,
+        "stopped": false,
+        "trace": [
+          {
+            "status": "HOLD"
+          }
+        ],
+        "candidates": []
+      },
+      "pass": true
+    }
+  ],
+  "passed": 108,
+  "failed": 0,
+  "independent_oracle": false
+}

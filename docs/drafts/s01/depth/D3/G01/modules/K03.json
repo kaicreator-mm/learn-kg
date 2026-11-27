@@ -1,0 +1,2608 @@
+{
+  "module": "K03",
+  "base": "3542989d2c4d67ecfe0b5f8b3f49b344a792913b",
+  "status": "DRAFT_GRAPH_INDEX_NOT_SEMANTIC_QUALIFICATION",
+  "inputs": [
+    {
+      "path": "docs/drafts/s01/K03/claims.json",
+      "blob": "66fafed40d0598992d964e7f962d163603663abe"
+    },
+    {
+      "path": "docs/drafts/s01/K03/coverage.json",
+      "blob": "032a75a7b59eb1f77f1d3bc1a4059a48c8d056a6"
+    },
+    {
+      "path": "docs/drafts/s01/K03/sources.json",
+      "blob": "10f1cc335a4ba594387166f3f3458d708f9f6ae1"
+    },
+    {
+      "path": "docs/drafts/s01/K03/cross-topic-links.json",
+      "blob": "11ef4c49b1a8501deea25683e06d324da9475781"
+    }
+  ],
+  "anchor_file_status": "PRESENT",
+  "nodes": [
+    {
+      "id": "K03",
+      "type": "MODULE",
+      "owner": "K03",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.01.01",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "事实",
+      "requirement_id": "K03.01.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.01.02",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "概念",
+      "requirement_id": "K03.01.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.01.03",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "关系",
+      "requirement_id": "K03.01.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.01.04",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "过程",
+      "requirement_id": "K03.01.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.01.05",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "条件知识",
+      "requirement_id": "K03.01.05.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.02.01",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "分类",
+      "requirement_id": "K03.02.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.02.02",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "原型",
+      "requirement_id": "K03.02.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.02.03",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "范例",
+      "requirement_id": "K03.02.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.02.04",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "概念边界",
+      "requirement_id": "K03.02.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.03.01",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "组成",
+      "requirement_id": "K03.03.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.03.02",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "依赖",
+      "requirement_id": "K03.03.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.03.03",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "约束",
+      "requirement_id": "K03.03.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.03.04",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "因果",
+      "requirement_id": "K03.03.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.03.05",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "类比",
+      "requirement_id": "K03.03.05.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.04.01",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "结构整合",
+      "requirement_id": "K03.04.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.04.02",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "推理",
+      "requirement_id": "K03.04.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.04.03",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "解释",
+      "requirement_id": "K03.04.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.04.04",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "模型更新",
+      "requirement_id": "K03.04.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.05.01",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "误概念",
+      "requirement_id": "K03.05.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.05.02",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "认知冲突",
+      "requirement_id": "K03.05.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.05.03",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "重构",
+      "requirement_id": "K03.05.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.05.04",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "解释深度",
+      "requirement_id": "K03.05.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.06.01",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "知识组件识别",
+      "requirement_id": "K03.06.01.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.06.02",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "任务分析",
+      "requirement_id": "K03.06.02.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.06.03",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "组件组合",
+      "requirement_id": "K03.06.03.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.06.04",
+      "type": "TOPIC",
+      "owner": "K03",
+      "label": "前置证据",
+      "requirement_id": "K03.06.04.RQ01",
+      "status": "DRAFT"
+    },
+    {
+      "id": "K03.01.01.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "事实性知识可以为概念理解提供具体内容；孤立事实与概念组织均不能单独代表综合胜任。",
+      "conditions": [
+        "学科相关事实及概念框架"
+      ],
+      "negative_boundary": "背诵事实不证明可应用",
+      "source_refs": [
+        "K03-S02"
+      ]
+    },
+    {
+      "id": "K03.01.01.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.01",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "事实候选区分主体、关系、对象、适用时点及来源记载，来源声称与事实资格分离。",
+      "conditions": [
+        "有可追溯来源及核验条件"
+      ],
+      "negative_boundary": "记录存在不证明其内容真实",
+      "source_refs": []
+    },
+    {
+      "id": "K03.01.02.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.02",
+      "claim_type": "DEFINITION",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "概念是用于概括对象或事件的规律性意义单位，词语可作为其标签。",
+      "conditions": [
+        "概念图框架中的定义"
+      ],
+      "negative_boundary": "标签相同不保证概念相同",
+      "source_refs": [
+        "K03-S04"
+      ]
+    },
+    {
+      "id": "K03.01.02.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.02",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "部分概念可用严格定义判别，日常类别也可能存在典型性及边缘成员。",
+      "conditions": [
+        "区分形式规则与经验类别"
+      ],
+      "negative_boundary": "不能把所有概念强制表示为必要充分条件",
+      "source_refs": [
+        "K03-S03"
+      ]
+    },
+    {
+      "id": "K03.01.02.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "严格定义的必要条件由成员推出，充分条件可推出成员；双向等价须另证。",
+      "conditions": [
+        "给出限定论域及定义版本"
+      ],
+      "negative_boundary": "只证明单向蕴含不得反向推理",
+      "source_refs": []
+    },
+    {
+      "id": "K03.01.03.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.03",
+      "claim_type": "STANDARD_SEMANTICS",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "SKOS区别直接上下位语义边与显式传递闭包属性，也定义关联属性。",
+      "conditions": [
+        "限SKOS标准语义"
+      ],
+      "negative_boundary": "关联边并不表达因果或学习前置",
+      "source_refs": [
+        "K03-S05"
+      ]
+    },
+    {
+      "id": "K03.01.03.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.03",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "知识关系须声明端点类型、方向、适用条件、逆向与传递规则；默认不扩展。",
+      "conditions": [
+        "只有明确批准的规则可推理"
+      ],
+      "negative_boundary": "两个相邻关系不自动组成第三个关系",
+      "source_refs": []
+    },
+    {
+      "id": "K03.01.04.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.04",
+      "claim_type": "STANDARD_SEMANTICS",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "PROV-O将发生于时间范围内的活动与其使用或产生的实体区分。",
+      "conditions": [
+        "限来源追溯模型"
+      ],
+      "negative_boundary": "来源链不是教学过程执行证明",
+      "source_refs": [
+        "K03-S06"
+      ]
+    },
+    {
+      "id": "K03.01.04.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "过程模板、实例、步骤、条件转移及实际事件分别赋予身份；P04负责执行契约。",
+      "conditions": [
+        "模板版本和事件绑定明确"
+      ],
+      "negative_boundary": "流程图存在不代表运行或完成",
+      "source_refs": []
+    },
+    {
+      "id": "K03.01.05.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.05",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "KLI以知识组件的应用条件与响应类型描述其适用情境，包括固定和可变条件。",
+      "conditions": [
+        "采用2012框架而非唯一知识分类"
+      ],
+      "negative_boundary": "同一响应不意味着所有情境使用同一组件",
+      "source_refs": [
+        "K03-S09"
+      ]
+    },
+    {
+      "id": "K03.01.05.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.01.05",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "规则适用性与结论真假分离，缺关键条件保留UNKNOWN。",
+      "conditions": [
+        "条件经明确解释且有反例"
+      ],
+      "negative_boundary": "未知不得当成立或反面成立",
+      "source_refs": []
+    },
+    {
+      "id": "K03.02.01.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "类别可以形成上位、基本及下位层级；偏好的基本层级受领域经验影响。",
+      "conditions": [
+        "经验分类研究"
+      ],
+      "negative_boundary": "层级不等于固定教学顺序",
+      "source_refs": [
+        "K03-S03"
+      ]
+    },
+    {
+      "id": "K03.02.01.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.01",
+      "claim_type": "STANDARD_SEMANTICS",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "SKOS概念方案及关联/层级属性支持区分不同组织语境。",
+      "conditions": [
+        "标准语义，不是认知模型"
+      ],
+      "negative_boundary": "分类成员不意味着先修",
+      "source_refs": [
+        "K03-S05"
+      ]
+    },
+    {
+      "id": "K03.02.01.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.01",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "多维分类保留维度和语境，不默认互斥或穷尽。",
+      "conditions": [
+        "只有明确约束才拒绝重叠"
+      ],
+      "negative_boundary": "一物多标签不必冲突",
+      "source_refs": []
+    },
+    {
+      "id": "K03.02.02.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.02",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "原型观点用类别的概括性表征解释新样本分类及典型性。",
+      "conditions": [
+        "相似性模型及所选特征权重"
+      ],
+      "negative_boundary": "典型特征不必是必要条件",
+      "source_refs": [
+        "K03-S03"
+      ]
+    },
+    {
+      "id": "K03.02.02.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "样例测试包含典型与非典型真成员及相似非成员。",
+      "conditions": [
+        "目标是类别边界而非原型复述"
+      ],
+      "negative_boundary": "远离原型不自动排除",
+      "source_refs": []
+    },
+    {
+      "id": "K03.02.03.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.03",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "范例模型通过与记忆中的具体实例进行比较解释分类，与摘要表征观点不同。",
+      "conditions": [
+        "理论模型比较"
+      ],
+      "negative_boundary": "少量范例不能证明完整外延",
+      "source_refs": [
+        "K03-S03"
+      ]
+    },
+    {
+      "id": "K03.02.03.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.03",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "比较范例、原型和规则时使用能使预测不同的陌生样本。",
+      "conditions": [
+        "固定训练样本和测试协议"
+      ],
+      "negative_boundary": "训练样本分类一致无法区分模型",
+      "source_refs": []
+    },
+    {
+      "id": "K03.02.04.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.04",
+      "claim_type": "REVIEW_CONCLUSION",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "经验类别可能存在典型性渐变和难以稳定归类的边缘成员。",
+      "conditions": [
+        "指定类别及实际判据"
+      ],
+      "negative_boundary": "不是所有形式概念都模糊",
+      "source_refs": [
+        "K03-S03"
+      ]
+    },
+    {
+      "id": "K03.02.04.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.02.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "明确正例、近邻反例、边缘例及缺失信息的UNKNOWN出口。",
+      "conditions": [
+        "区分客观规则与证据不足"
+      ],
+      "negative_boundary": "不能将UNKNOWN当作非成员",
+      "source_refs": []
+    },
+    {
+      "id": "K03.03.01.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "KLI区分简单组件与需要其他组件参与的整合性组件。",
+      "conditions": [
+        "2012模型的认知粒度"
+      ],
+      "negative_boundary": "整合性组件并非简单列表求和",
+      "source_refs": [
+        "K03-S09"
+      ]
+    },
+    {
+      "id": "K03.03.01.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.01",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "组成关系记录整体、部分、角色及粒度；只在定义授权时传递。",
+      "conditions": [
+        "具体结构、版本和条件"
+      ],
+      "negative_boundary": "组成不推出教学顺序或必需先修",
+      "source_refs": []
+    },
+    {
+      "id": "K03.03.02.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "先修候选区分必要前置、推荐前置、路径顺序和替代前置组。",
+      "conditions": [
+        "限定目标、任务条件及允许资源"
+      ],
+      "negative_boundary": "教材顺序或相关性不证必要依赖",
+      "source_refs": []
+    },
+    {
+      "id": "K03.03.02.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "替代路径以路径内ALL、路径间ANY表示；缺证时保留UNKNOWN，不以失败补全全部路径。",
+      "conditions": [
+        "已声明合法路径且证据状态明确"
+      ],
+      "negative_boundary": "一种路径未满足不代表目标不可达",
+      "source_refs": []
+    },
+    {
+      "id": "K03.03.02.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "必要前置断言须有目标及反事实或反例审查，不能仅由图可达性晋升。",
+      "conditions": [
+        "正式教育证据由K17/K09核证"
+      ],
+      "negative_boundary": "无独立证据保持候选",
+      "source_refs": []
+    },
+    {
+      "id": "K03.03.03.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.03",
+      "claim_type": "STANDARD_SEMANTICS",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "SHACL用形状约束检验数据图在特定条件下是否符合类型、数量或值域等要求。",
+      "conditions": [
+        "限指定形状与数据图"
+      ],
+      "negative_boundary": "数据合规不证明领域命题真实",
+      "source_refs": [
+        "K03-S07"
+      ]
+    },
+    {
+      "id": "K03.03.03.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.03",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "领域规则的约束区分已满足、违反、缺证与不适用；约束本身应有版本和来源。",
+      "conditions": [
+        "未知处理及适用条件明确"
+      ],
+      "negative_boundary": "未验证约束不能作为唯一资格拒绝依据",
+      "source_refs": []
+    },
+    {
+      "id": "K03.03.04.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.04",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "因果解释与非因果解释是科学解释讨论中的不同方案。",
+      "conditions": [
+        "限解释理论语境"
+      ],
+      "negative_boundary": "能预测并不一定提供因果机制",
+      "source_refs": [
+        "K03-S13"
+      ]
+    },
+    {
+      "id": "K03.03.04.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "相关、时间先后、因果候选及经识别的效应分别标记，因果识别由K17负责。",
+      "conditions": [
+        "声明干预、混杂、对照及适用范围"
+      ],
+      "negative_boundary": "相关边或机制故事不晋升因果",
+      "source_refs": []
+    },
+    {
+      "id": "K03.03.05.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.05",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "结构映射理论强调跨领域类比保留对象之间的关系及关系系统，而非仅匹配外观属性。",
+      "conditions": [
+        "Gentner 1983框架"
+      ],
+      "negative_boundary": "表面相似并非关系一致",
+      "source_refs": [
+        "K03-S08"
+      ]
+    },
+    {
+      "id": "K03.03.05.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.03.05",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "类比记录源域、目标域、对象映射、关系映射和失配项，投射出的结论待目标域核证。",
+      "conditions": [
+        "保持关系角色和方向"
+      ],
+      "negative_boundary": "不能由部分映射推出全域等价",
+      "source_refs": []
+    },
+    {
+      "id": "K03.04.01.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.01",
+      "claim_type": "REVIEW_CONCLUSION",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "理解涉及把事实组织进解释框架并在新情境应用，事实和概念相互支持。",
+      "conditions": [
+        "学科相关知识、有效应用评价"
+      ],
+      "negative_boundary": "节点和连接数量不等于理解质量",
+      "source_refs": [
+        "K03-S02"
+      ]
+    },
+    {
+      "id": "K03.04.01.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.01",
+      "claim_type": "METHOD",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "概念图以有意义的连接语表达命题，围绕焦点问题组织并考虑跨域连接。",
+      "conditions": [
+        "指定问题和关系含义"
+      ],
+      "negative_boundary": "图形位置或连线不独立证明命题真",
+      "source_refs": [
+        "K03-S04"
+      ]
+    },
+    {
+      "id": "K03.04.01.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.01",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "整合证据要求解释关系准确、冲突可见并在新案例验证。",
+      "conditions": [
+        "记录独立程度与目标"
+      ],
+      "negative_boundary": "不以图的复杂性直接评分",
+      "source_refs": []
+    },
+    {
+      "id": "K03.04.02.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.02",
+      "claim_type": "DEFINITION",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "演绎推理在有效形式和真实前提下保证结论；归纳与溯因不具这种必然性。",
+      "conditions": [
+        "逻辑形式及前提明确"
+      ],
+      "negative_boundary": "有效论证不能替代前提核真",
+      "source_refs": [
+        "K03-S12"
+      ]
+    },
+    {
+      "id": "K03.04.02.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.02",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "溯因提出解释观察的候选，新增信息可能改变所选解释。",
+      "conditions": [
+        "多个候选及证据条件"
+      ],
+      "negative_boundary": "最佳解释候选不是已确立事实",
+      "source_refs": [
+        "K03-S12"
+      ]
+    },
+    {
+      "id": "K03.04.02.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "分别登记前提、规则、结论、反例和未知，禁止肯定后件式反推。",
+      "conditions": [
+        "限定规则语义"
+      ],
+      "negative_boundary": "A蕴含B且B为真不推出A",
+      "source_refs": []
+    },
+    {
+      "id": "K03.04.03.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.03",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "科学解释包含不同类型；机制解释与数学或其他非因果解释的要求并不相同。",
+      "conditions": [
+        "解释目标与学科确定"
+      ],
+      "negative_boundary": "不强制每种解释都包含因果链",
+      "source_refs": [
+        "K03-S13"
+      ]
+    },
+    {
+      "id": "K03.04.03.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.03",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "解释评分区分结论、适用条件、关系/机制、证据与替代解释。",
+      "conditions": [
+        "按目标选择评价维度"
+      ],
+      "negative_boundary": "语言流畅不能证明解释正确",
+      "source_refs": []
+    },
+    {
+      "id": "K03.04.04.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.04",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "概念转变理论描述新旧解释竞争及概念重组，而非总是整体清除旧知识。",
+      "conditions": [
+        "Posner等理论范围"
+      ],
+      "negative_boundary": "不把个别异常当普遍重构定律",
+      "source_refs": [
+        "K03-S10"
+      ]
+    },
+    {
+      "id": "K03.04.04.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.04.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "知识库模型修改作为版本化候选，记录冲突、影响、验证和审核，保留旧证据。",
+      "conditions": [
+        "E01治理和K17研究设计保持主责"
+      ],
+      "negative_boundary": "新候选不得自动覆盖已批准内容",
+      "source_refs": []
+    },
+    {
+      "id": "K03.05.01.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.01",
+      "claim_type": "REVIEW_CONCLUSION",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "学习者已有解释可能与科学解释冲突，且正确答案出现后旧解释仍可能重现。",
+      "conditions": [
+        "所述学科案例及延迟观察"
+      ],
+      "negative_boundary": "一次错误不能确定稳定误概念",
+      "source_refs": [
+        "K03-S11"
+      ]
+    },
+    {
+      "id": "K03.05.01.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.01",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "误概念作为待证假设，比较多题、解释和独立复测并保留偶发失误等竞争原因。",
+      "conditions": [
+        "F06负责诊断流程"
+      ],
+      "negative_boundary": "禁止一次错题贴标签",
+      "source_refs": []
+    },
+    {
+      "id": "K03.05.02.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.02",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "经典概念转变框架认为，只有学习者理解旧解释为何遇到问题等条件成立时，异常证据才可能产生不满。",
+      "conditions": [
+        "Posner 1982条件性理论，不是所有学习的经验定律"
+      ],
+      "negative_boundary": "呈现反例不保证概念更新",
+      "source_refs": [
+        "K03-S10"
+      ]
+    },
+    {
+      "id": "K03.05.02.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "先收集原预测，再呈现可理解反例与替代解释，复测独立预测。",
+      "conditions": [
+        "尊重自主选择、允许不确定"
+      ],
+      "negative_boundary": "不以教师宣布冲突代替学习者理解",
+      "source_refs": []
+    },
+    {
+      "id": "K03.05.03.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.03",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "Posner等提出旧概念难以解决问题、新概念可理解、初步可信且具有拓展潜力等重组条件。",
+      "conditions": [
+        "经典科学概念转变理论，后续争议待核"
+      ],
+      "negative_boundary": "不是四项满足即必然重构的算法",
+      "source_refs": [
+        "K03-S10"
+      ]
+    },
+    {
+      "id": "K03.05.03.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.03",
+      "claim_type": "REVIEW_CONCLUSION",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "教学后的正确应答可能与后续旧误概念重现并存。",
+      "conditions": [
+        "NRC综述中的科学教育案例"
+      ],
+      "negative_boundary": "背出新答案不能证明重构持久",
+      "source_refs": [
+        "K03-S11"
+      ]
+    },
+    {
+      "id": "K03.05.03.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.03",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "比较旧解释、替代解释、延迟新情境的独立预测及理由，记录仍存冲突。",
+      "conditions": [
+        "同构念和明确评价条件"
+      ],
+      "negative_boundary": "无延迟证据时持久重构UNKNOWN",
+      "source_refs": []
+    },
+    {
+      "id": "K03.05.04.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.04",
+      "claim_type": "METHOD",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "科学学习案例中，说明原理为什么及怎样适用于问题，比仅列术语或公式更能提供理解证据。",
+      "conditions": [
+        "NRC所述物理策略写作案例"
+      ],
+      "negative_boundary": "不能以文本长度替代证据",
+      "source_refs": [
+        "K03-S11"
+      ]
+    },
+    {
+      "id": "K03.05.04.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.05.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "候选量规分别评分描述准确、关系正确、机制或推导、条件与反例；不预设线性发展阶段。",
+      "conditions": [
+        "K09负责量规效度，需适配学科"
+      ],
+      "negative_boundary": "短而正确的解释不因长度被降分",
+      "source_refs": []
+    },
+    {
+      "id": "K03.06.01.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.01",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "KLI将知识组件视为可由相关任务表现推断的已习得认知功能或结构单位。",
+      "conditions": [
+        "KLI 2012 §3，构念不可直接观察"
+      ],
+      "negative_boundary": "不是数据库原子记录或神经模块的同义词",
+      "source_refs": [
+        "K03-S09"
+      ]
+    },
+    {
+      "id": "K03.06.01.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.01",
+      "claim_type": "METHOD",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "可变条件知识组件需多种任务情境提供证据，单一实例不能确定所学规则的泛化程度。",
+      "conditions": [
+        "§3.1相关例子"
+      ],
+      "negative_boundary": "一道题不能唯一识别全部组件",
+      "source_refs": [
+        "K03-S09"
+      ]
+    },
+    {
+      "id": "K03.06.01.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.01",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "任务组件映射为待验证假设，比较候选映射能否产生可区分观测。",
+      "conditions": [
+        "K10估计参数另证"
+      ],
+      "negative_boundary": "同样任务签名不能识别具体组件状态",
+      "source_refs": []
+    },
+    {
+      "id": "K03.06.02.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.02",
+      "claim_type": "METHOD",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "认知任务分析把复杂目标分解为可分析的单位及相关能力，以指导教学设计；其有效粒度仍需证据。",
+      "conditions": [
+        "KLI §3及相关分析"
+      ],
+      "negative_boundary": "分析者分解不是实际心理事件序列",
+      "source_refs": [
+        "K03-S09"
+      ]
+    },
+    {
+      "id": "K03.06.02.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "任务规格保存目标、材料、约束、候选组件、步骤、观察与独立性。",
+      "conditions": [
+        "H06/P03具体任务主责"
+      ],
+      "negative_boundary": "分析步骤不等于强制运行顺序",
+      "source_refs": []
+    },
+    {
+      "id": "K03.06.03.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.03",
+      "claim_type": "THEORY_FRAMEWORK",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "整合性KC需要与其他知识组件连接，可能由不同复杂度的相关任务表现推断。",
+      "conditions": [
+        "KLI §3.2"
+      ],
+      "negative_boundary": "单项组件通过不保证整合通过",
+      "source_refs": [
+        "K03-S09"
+      ]
+    },
+    {
+      "id": "K03.06.03.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.03",
+      "claim_type": "METHOD",
+      "evidence_status": "PDF_TEXT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "比较具有重叠组件的单步与多步任务可提出缺少整合性组件的假设。",
+      "conditions": [
+        "KLI的差异分析例子；任务需匹配"
+      ],
+      "negative_boundary": "差值本身不能唯一确证组件",
+      "source_refs": [
+        "K03-S09"
+      ]
+    },
+    {
+      "id": "K03.06.03.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.03",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "综合任务单独记录整合、条件选择及产出，不从单项成绩乘积生成综合掌握。",
+      "conditions": [
+        "组合约束和替代策略明确"
+      ],
+      "negative_boundary": "合取通过仍需整合证据",
+      "source_refs": []
+    },
+    {
+      "id": "K03.06.04.D4.01",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "QD4-04必要先修候选必须绑定目标、条件、允许替代与独立反例检查。",
+      "conditions": [
+        "原范围候选及K03.03.02规则"
+      ],
+      "negative_boundary": "等级排序不能证明必要先修",
+      "source_refs": []
+    },
+    {
+      "id": "K03.06.04.D4.02",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "不同任务覆盖签名、匹配难度、先备干预及未具备前置仍成功的反例应共同用于检查。",
+      "conditions": [
+        "正式因果和测量资格未得前仅保留候选"
+      ],
+      "negative_boundary": "任务映射或相关性不等于前置因果",
+      "source_refs": []
+    },
+    {
+      "id": "K03.06.04.D4.03",
+      "type": "CLAIM",
+      "owner": "K03",
+      "topic": "K03.06.04",
+      "claim_type": "ENGINEERING_POLICY",
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "statement": "未取得必要性证据的边仅作建议或未知，不能阻断学习者选择的其他可行路径。",
+      "conditions": [
+        "明确目标、权限和必要安全约束"
+      ],
+      "negative_boundary": "不把知识分类误用为强制学习门禁",
+      "source_refs": []
+    },
+    {
+      "id": "K03-S01",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "NASEM (2018), How People Learn II, Ch.5 Knowledge and Reasoning",
+      "url": "https://www.nationalacademies.org/read/24783/chapter/7",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Knowledge Integration; Inferential Reasoning; Conclusion 5-1",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S02",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "NRC (2005), How Students Learn, Introduction",
+      "url": "https://www.nationalacademies.org/read/10126/chapter/2",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Learning with Understanding; factual and conceptual knowledge; preconceptions",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S03",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "Murphy, Categories and Concepts, Noba",
+      "url": "https://nobaproject.com/modules/categories-and-concepts",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Typicality; Basic-Level Categories; Theories of Concept Representation",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S04",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "Novak & Cañas, The Theory Underlying Concept Maps and How to Construct and Use Them",
+      "url": "https://cmap.ihmc.us/docs/theory-of-concept-maps.php",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Introduction, concept/proposition, focus question, cross-links and examples",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S05",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "W3C SKOS Reference (2009)",
+      "url": "https://www.w3.org/TR/skos-reference/",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "§8 semantic relations, §10 mapping, broader vs broaderTransitive; engineering standard only",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S06",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "W3C PROV-O (2013)",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Entity, Activity, Agent, wasDerivedFrom and wasGeneratedBy; provenance standard only",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S07",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "W3C SHACL (2017)",
+      "url": "https://www.w3.org/TR/shacl/",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "§4, constraint components, class/datatype/minCount/disjoint; validation vs truth",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S08",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "Gentner (1983), Structure-Mapping: A Theoretical Framework for Analogy",
+      "url": "https://groups.psych.northwestern.edu/gentner/papers/Gentner83.2b.pdf",
+      "access_recorded": "PDF_TEXT_AND_PAGE_READ",
+      "locator": "printed p155 abstract, text on systematicity and comparisons; page 0 screenshot",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S09",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "Koedinger, Corbett & Perfetti (2012), Knowledge-Learning-Instruction Framework",
+      "url": "https://pact.cs.cmu.edu/pubs/Koedinger%2C%20Corbett%2C%20Perfetti%202012-KLI.pdf",
+      "access_recorded": "PDF_TEXT_SCREENSHOT_FAILED",
+      "locator": "§3 pp764,769,771; Table2, §3.2 integrative KC and subtraction logic; screenshot indices 4/12 cache miss",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S10",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "Posner et al. (1982), Accommodation of a Scientific Conception",
+      "url": "https://eclass.uoa.gr/modules/document/file.php/PHS122/%CE%91%CF%81%CE%B8%CF%81%CE%B1/Posner_Strike_Hewson_Gertzog.pdf",
+      "access_recorded": "PDF_TEXT_AND_PAGE_READ",
+      "locator": "p214 Conditions of Accommodation and conceptual ecology; page index 3 screenshot; later Dissatisfaction section text",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S11",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "NRC (2000), How People Learn, Ch.7 Effective Teaching",
+      "url": "https://www.nationalacademies.org/read/9853/chapter/11",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Conceptual Change; physics strategy writing and delayed reappearance of misconceptions",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S12",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "Stanford Encyclopedia of Philosophy, Abduction",
+      "url": "https://plato.stanford.edu/entries/abduction/",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Introduction and §1, deduction/induction/abduction and nonmonotonicity",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    },
+    {
+      "id": "K03-S13",
+      "type": "SOURCE_RECORD",
+      "owner": "K03",
+      "title": "Stanford Encyclopedia of Philosophy, Causal Approaches to Scientific Explanation",
+      "url": "https://plato.stanford.edu/entries/causal-explanation-science/",
+      "access_recorded": "HTML_TEXT_READ",
+      "locator": "Introduction, causal and non-causal accounts",
+      "rights": "ORIGINAL_SUMMARY_ONLY_PUBLICATION_QUALIFICATION_PENDING",
+      "status": "RECORDED_NOT_REVERIFIED"
+    }
+  ],
+  "edges": [
+    {
+      "id": "HAS_TOPIC:K03:K03.01.01:K03.01.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.01.01",
+      "origin": "K03.01.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.01.02:K03.01.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.01.02",
+      "origin": "K03.01.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.01.03:K03.01.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.01.03",
+      "origin": "K03.01.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.01.04:K03.01.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.01.04",
+      "origin": "K03.01.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.01.05:K03.01.05.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.01.05",
+      "origin": "K03.01.05.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.02.01:K03.02.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.02.01",
+      "origin": "K03.02.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.02.02:K03.02.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.02.02",
+      "origin": "K03.02.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.02.03:K03.02.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.02.03",
+      "origin": "K03.02.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.02.04:K03.02.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.02.04",
+      "origin": "K03.02.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.03.01:K03.03.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.03.01",
+      "origin": "K03.03.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.03.02:K03.03.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.03.02",
+      "origin": "K03.03.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.03.03:K03.03.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.03.03",
+      "origin": "K03.03.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.03.04:K03.03.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.03.04",
+      "origin": "K03.03.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.03.05:K03.03.05.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.03.05",
+      "origin": "K03.03.05.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.04.01:K03.04.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.04.01",
+      "origin": "K03.04.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.04.02:K03.04.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.04.02",
+      "origin": "K03.04.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.04.03:K03.04.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.04.03",
+      "origin": "K03.04.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.04.04:K03.04.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.04.04",
+      "origin": "K03.04.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.05.01:K03.05.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.05.01",
+      "origin": "K03.05.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.05.02:K03.05.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.05.02",
+      "origin": "K03.05.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.05.03:K03.05.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.05.03",
+      "origin": "K03.05.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.05.04:K03.05.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.05.04",
+      "origin": "K03.05.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.06.01:K03.06.01.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.06.01",
+      "origin": "K03.06.01.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.06.02:K03.06.02.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.06.02",
+      "origin": "K03.06.02.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.06.03:K03.06.03.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.06.03",
+      "origin": "K03.06.03.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_TOPIC:K03:K03.06.04:K03.06.04.RQ01",
+      "type": "HAS_TOPIC",
+      "from": "K03",
+      "to": "K03.06.04",
+      "origin": "K03.06.04.RQ01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.01:K03.01.01.D4.01:K03.01.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.01",
+      "to": "K03.01.01.D4.01",
+      "origin": "K03.01.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.01.01.D4.01:K03-S02:K03.01.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.01.01.D4.01",
+      "to": "K03-S02",
+      "origin": "K03.01.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.01:K03.01.01.D4.02:K03.01.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.01",
+      "to": "K03.01.01.D4.02",
+      "origin": "K03.01.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.02:K03.01.02.D4.01:K03.01.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.02",
+      "to": "K03.01.02.D4.01",
+      "origin": "K03.01.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.01.02.D4.01:K03-S04:K03.01.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.01.02.D4.01",
+      "to": "K03-S04",
+      "origin": "K03.01.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.02:K03.01.02.D4.02:K03.01.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.02",
+      "to": "K03.01.02.D4.02",
+      "origin": "K03.01.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.01.02.D4.02:K03-S03:K03.01.02.D4.02",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.01.02.D4.02",
+      "to": "K03-S03",
+      "origin": "K03.01.02.D4.02",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.02:K03.01.02.D4.03:K03.01.02.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.02",
+      "to": "K03.01.02.D4.03",
+      "origin": "K03.01.02.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.03:K03.01.03.D4.01:K03.01.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.03",
+      "to": "K03.01.03.D4.01",
+      "origin": "K03.01.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.01.03.D4.01:K03-S05:K03.01.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.01.03.D4.01",
+      "to": "K03-S05",
+      "origin": "K03.01.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.03:K03.01.03.D4.02:K03.01.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.03",
+      "to": "K03.01.03.D4.02",
+      "origin": "K03.01.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.04:K03.01.04.D4.01:K03.01.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.04",
+      "to": "K03.01.04.D4.01",
+      "origin": "K03.01.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.01.04.D4.01:K03-S06:K03.01.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.01.04.D4.01",
+      "to": "K03-S06",
+      "origin": "K03.01.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.04:K03.01.04.D4.02:K03.01.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.04",
+      "to": "K03.01.04.D4.02",
+      "origin": "K03.01.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.05:K03.01.05.D4.01:K03.01.05.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.05",
+      "to": "K03.01.05.D4.01",
+      "origin": "K03.01.05.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.01.05.D4.01:K03-S09:K03.01.05.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.01.05.D4.01",
+      "to": "K03-S09",
+      "origin": "K03.01.05.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.01.05:K03.01.05.D4.02:K03.01.05.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.01.05",
+      "to": "K03.01.05.D4.02",
+      "origin": "K03.01.05.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.01:K03.02.01.D4.01:K03.02.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.01",
+      "to": "K03.02.01.D4.01",
+      "origin": "K03.02.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.02.01.D4.01:K03-S03:K03.02.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.02.01.D4.01",
+      "to": "K03-S03",
+      "origin": "K03.02.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.01:K03.02.01.D4.02:K03.02.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.01",
+      "to": "K03.02.01.D4.02",
+      "origin": "K03.02.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.02.01.D4.02:K03-S05:K03.02.01.D4.02",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.02.01.D4.02",
+      "to": "K03-S05",
+      "origin": "K03.02.01.D4.02",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.01:K03.02.01.D4.03:K03.02.01.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.01",
+      "to": "K03.02.01.D4.03",
+      "origin": "K03.02.01.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.02:K03.02.02.D4.01:K03.02.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.02",
+      "to": "K03.02.02.D4.01",
+      "origin": "K03.02.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.02.02.D4.01:K03-S03:K03.02.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.02.02.D4.01",
+      "to": "K03-S03",
+      "origin": "K03.02.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.02:K03.02.02.D4.02:K03.02.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.02",
+      "to": "K03.02.02.D4.02",
+      "origin": "K03.02.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.03:K03.02.03.D4.01:K03.02.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.03",
+      "to": "K03.02.03.D4.01",
+      "origin": "K03.02.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.02.03.D4.01:K03-S03:K03.02.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.02.03.D4.01",
+      "to": "K03-S03",
+      "origin": "K03.02.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.03:K03.02.03.D4.02:K03.02.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.03",
+      "to": "K03.02.03.D4.02",
+      "origin": "K03.02.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.04:K03.02.04.D4.01:K03.02.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.04",
+      "to": "K03.02.04.D4.01",
+      "origin": "K03.02.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.02.04.D4.01:K03-S03:K03.02.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.02.04.D4.01",
+      "to": "K03-S03",
+      "origin": "K03.02.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.02.04:K03.02.04.D4.02:K03.02.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.02.04",
+      "to": "K03.02.04.D4.02",
+      "origin": "K03.02.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.01:K03.03.01.D4.01:K03.03.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.01",
+      "to": "K03.03.01.D4.01",
+      "origin": "K03.03.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.03.01.D4.01:K03-S09:K03.03.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.03.01.D4.01",
+      "to": "K03-S09",
+      "origin": "K03.03.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.01:K03.03.01.D4.02:K03.03.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.01",
+      "to": "K03.03.01.D4.02",
+      "origin": "K03.03.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.02:K03.03.02.D4.01:K03.03.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.02",
+      "to": "K03.03.02.D4.01",
+      "origin": "K03.03.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.02:K03.03.02.D4.02:K03.03.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.02",
+      "to": "K03.03.02.D4.02",
+      "origin": "K03.03.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.02:K03.03.02.D4.03:K03.03.02.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.02",
+      "to": "K03.03.02.D4.03",
+      "origin": "K03.03.02.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.03:K03.03.03.D4.01:K03.03.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.03",
+      "to": "K03.03.03.D4.01",
+      "origin": "K03.03.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.03.03.D4.01:K03-S07:K03.03.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.03.03.D4.01",
+      "to": "K03-S07",
+      "origin": "K03.03.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.03:K03.03.03.D4.02:K03.03.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.03",
+      "to": "K03.03.03.D4.02",
+      "origin": "K03.03.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.04:K03.03.04.D4.01:K03.03.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.04",
+      "to": "K03.03.04.D4.01",
+      "origin": "K03.03.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.03.04.D4.01:K03-S13:K03.03.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.03.04.D4.01",
+      "to": "K03-S13",
+      "origin": "K03.03.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.04:K03.03.04.D4.02:K03.03.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.04",
+      "to": "K03.03.04.D4.02",
+      "origin": "K03.03.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.05:K03.03.05.D4.01:K03.03.05.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.05",
+      "to": "K03.03.05.D4.01",
+      "origin": "K03.03.05.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.03.05.D4.01:K03-S08:K03.03.05.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.03.05.D4.01",
+      "to": "K03-S08",
+      "origin": "K03.03.05.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.03.05:K03.03.05.D4.02:K03.03.05.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.03.05",
+      "to": "K03.03.05.D4.02",
+      "origin": "K03.03.05.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.01:K03.04.01.D4.01:K03.04.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.01",
+      "to": "K03.04.01.D4.01",
+      "origin": "K03.04.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.04.01.D4.01:K03-S02:K03.04.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.04.01.D4.01",
+      "to": "K03-S02",
+      "origin": "K03.04.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.01:K03.04.01.D4.02:K03.04.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.01",
+      "to": "K03.04.01.D4.02",
+      "origin": "K03.04.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.04.01.D4.02:K03-S04:K03.04.01.D4.02",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.04.01.D4.02",
+      "to": "K03-S04",
+      "origin": "K03.04.01.D4.02",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.01:K03.04.01.D4.03:K03.04.01.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.01",
+      "to": "K03.04.01.D4.03",
+      "origin": "K03.04.01.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.02:K03.04.02.D4.01:K03.04.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.02",
+      "to": "K03.04.02.D4.01",
+      "origin": "K03.04.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.04.02.D4.01:K03-S12:K03.04.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.04.02.D4.01",
+      "to": "K03-S12",
+      "origin": "K03.04.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.02:K03.04.02.D4.02:K03.04.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.02",
+      "to": "K03.04.02.D4.02",
+      "origin": "K03.04.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.04.02.D4.02:K03-S12:K03.04.02.D4.02",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.04.02.D4.02",
+      "to": "K03-S12",
+      "origin": "K03.04.02.D4.02",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.02:K03.04.02.D4.03:K03.04.02.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.02",
+      "to": "K03.04.02.D4.03",
+      "origin": "K03.04.02.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.03:K03.04.03.D4.01:K03.04.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.03",
+      "to": "K03.04.03.D4.01",
+      "origin": "K03.04.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.04.03.D4.01:K03-S13:K03.04.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.04.03.D4.01",
+      "to": "K03-S13",
+      "origin": "K03.04.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.03:K03.04.03.D4.02:K03.04.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.03",
+      "to": "K03.04.03.D4.02",
+      "origin": "K03.04.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.04:K03.04.04.D4.01:K03.04.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.04",
+      "to": "K03.04.04.D4.01",
+      "origin": "K03.04.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.04.04.D4.01:K03-S10:K03.04.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.04.04.D4.01",
+      "to": "K03-S10",
+      "origin": "K03.04.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.04.04:K03.04.04.D4.02:K03.04.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.04.04",
+      "to": "K03.04.04.D4.02",
+      "origin": "K03.04.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.01:K03.05.01.D4.01:K03.05.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.01",
+      "to": "K03.05.01.D4.01",
+      "origin": "K03.05.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.05.01.D4.01:K03-S11:K03.05.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.05.01.D4.01",
+      "to": "K03-S11",
+      "origin": "K03.05.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.01:K03.05.01.D4.02:K03.05.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.01",
+      "to": "K03.05.01.D4.02",
+      "origin": "K03.05.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.02:K03.05.02.D4.01:K03.05.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.02",
+      "to": "K03.05.02.D4.01",
+      "origin": "K03.05.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.05.02.D4.01:K03-S10:K03.05.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.05.02.D4.01",
+      "to": "K03-S10",
+      "origin": "K03.05.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.02:K03.05.02.D4.02:K03.05.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.02",
+      "to": "K03.05.02.D4.02",
+      "origin": "K03.05.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.03:K03.05.03.D4.01:K03.05.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.03",
+      "to": "K03.05.03.D4.01",
+      "origin": "K03.05.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.05.03.D4.01:K03-S10:K03.05.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.05.03.D4.01",
+      "to": "K03-S10",
+      "origin": "K03.05.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.03:K03.05.03.D4.02:K03.05.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.03",
+      "to": "K03.05.03.D4.02",
+      "origin": "K03.05.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.05.03.D4.02:K03-S11:K03.05.03.D4.02",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.05.03.D4.02",
+      "to": "K03-S11",
+      "origin": "K03.05.03.D4.02",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.03:K03.05.03.D4.03:K03.05.03.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.03",
+      "to": "K03.05.03.D4.03",
+      "origin": "K03.05.03.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.04:K03.05.04.D4.01:K03.05.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.04",
+      "to": "K03.05.04.D4.01",
+      "origin": "K03.05.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.05.04.D4.01:K03-S11:K03.05.04.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.05.04.D4.01",
+      "to": "K03-S11",
+      "origin": "K03.05.04.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.05.04:K03.05.04.D4.02:K03.05.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.05.04",
+      "to": "K03.05.04.D4.02",
+      "origin": "K03.05.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.01:K03.06.01.D4.01:K03.06.01.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.01",
+      "to": "K03.06.01.D4.01",
+      "origin": "K03.06.01.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.06.01.D4.01:K03-S09:K03.06.01.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.06.01.D4.01",
+      "to": "K03-S09",
+      "origin": "K03.06.01.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.01:K03.06.01.D4.02:K03.06.01.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.01",
+      "to": "K03.06.01.D4.02",
+      "origin": "K03.06.01.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.06.01.D4.02:K03-S09:K03.06.01.D4.02",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.06.01.D4.02",
+      "to": "K03-S09",
+      "origin": "K03.06.01.D4.02",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.01:K03.06.01.D4.03:K03.06.01.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.01",
+      "to": "K03.06.01.D4.03",
+      "origin": "K03.06.01.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.02:K03.06.02.D4.01:K03.06.02.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.02",
+      "to": "K03.06.02.D4.01",
+      "origin": "K03.06.02.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.06.02.D4.01:K03-S09:K03.06.02.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.06.02.D4.01",
+      "to": "K03-S09",
+      "origin": "K03.06.02.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.02:K03.06.02.D4.02:K03.06.02.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.02",
+      "to": "K03.06.02.D4.02",
+      "origin": "K03.06.02.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.03:K03.06.03.D4.01:K03.06.03.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.03",
+      "to": "K03.06.03.D4.01",
+      "origin": "K03.06.03.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.06.03.D4.01:K03-S09:K03.06.03.D4.01",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.06.03.D4.01",
+      "to": "K03-S09",
+      "origin": "K03.06.03.D4.01",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.03:K03.06.03.D4.02:K03.06.03.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.03",
+      "to": "K03.06.03.D4.02",
+      "origin": "K03.06.03.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "CITES_RECORDED_SOURCE:K03.06.03.D4.02:K03-S09:K03.06.03.D4.02",
+      "type": "CITES_RECORDED_SOURCE",
+      "from": "K03.06.03.D4.02",
+      "to": "K03-S09",
+      "origin": "K03.06.03.D4.02",
+      "status": "RECORDED_CITATION_NOT_SUPPORT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.03:K03.06.03.D4.03:K03.06.03.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.03",
+      "to": "K03.06.03.D4.03",
+      "origin": "K03.06.03.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.04:K03.06.04.D4.01:K03.06.04.D4.01",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.04",
+      "to": "K03.06.04.D4.01",
+      "origin": "K03.06.04.D4.01",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.04:K03.06.04.D4.02:K03.06.04.D4.02",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.04",
+      "to": "K03.06.04.D4.02",
+      "origin": "K03.06.04.D4.02",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "id": "HAS_CLAIM:K03.06.04:K03.06.04.D4.03:K03.06.04.D4.03",
+      "type": "HAS_CLAIM",
+      "from": "K03.06.04",
+      "to": "K03.06.04.D4.03",
+      "origin": "K03.06.04.D4.03",
+      "status": "STRUCTURAL_ONLY",
+      "qualification": "NOT_RUN"
+    }
+  ],
+  "anchors": [
+    {
+      "id": "K03.LINK.01",
+      "from": "K03.02.02.D4.01",
+      "to": "K02.01.03.D4.01",
+      "statement": "原型与模式识别模型区分",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.02",
+      "from": "K03.04.01.D4.01",
+      "to": "K02.05.02.D4.01",
+      "statement": "组织结构不等于理解",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.03",
+      "from": "K03.05.01.D4.01",
+      "to": "K01.04.01.D4.01",
+      "statement": "已有解释促进或妨碍学习",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.04",
+      "from": "K03.05.03.D4.02",
+      "to": "K01.01.01.D4.02",
+      "statement": "即时表现与持久变化分离",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.05",
+      "from": "K03.04.02.D4.02",
+      "to": "K01.05.02.D4.01",
+      "statement": "竞争解释与可区分预测",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.06",
+      "from": "K03.06.01.D4.01",
+      "to": "K10.02.01",
+      "statement": "知识组件与状态模型边界",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.07",
+      "from": "K03.06.04.D4.01",
+      "to": "QD4-04",
+      "statement": "先修候选原细粒度引用",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.08",
+      "from": "K03.03.04.D4.02",
+      "to": "K17.03.02",
+      "statement": "因果识别主责",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.09",
+      "from": "K03.06.02.D4.02",
+      "to": "H06.06.03",
+      "statement": "任务与能力证据",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    },
+    {
+      "id": "K03.LINK.10",
+      "from": "K03.06.03.D4.01",
+      "to": "K04.06.01",
+      "statement": "组件组合与综合技能",
+      "status": "RESEARCH_ANCHOR_ONLY",
+      "qualification": "NOT_RUN",
+      "transitive": false,
+      "reversible": false,
+      "semantic_status": "RESEARCH_ANCHOR_ONLY",
+      "target_resolution": "DEFER_GLOBAL"
+    }
+  ],
+  "issues": []
+}

@@ -21,3 +21,7 @@
 - D013（用户要求）建立实施总控Issue与Task DAG，先完成任务拆分再实施。Builder采用SQLite分库作为实施基线（G04最终冻结），保留既有RDF staging，分专业模块深化、动态模板、生命周期组合与实际贯通并行推进，累计独立审核；#6统筹，保留#3/#4/#5。详见 [Task DAG](../implementation/task-dag.md)。
 
 - D013 R2（Builder修正候选）依据独立R1 #6 comment 7189271304 的5 P1/3 P2，新增IF01/HS00/V00，细化候选与资格收据、失效传播、依赖、SQLite生成和发布、CQ覆盖、冻结后验证及调度；待有限复审，不视为问题关闭。
+
+- D014（用户明确）不得直接生成SQLite文件；先产出可人工阅读、维护、审核且支持SQLite导入的文本知识源文件。Builder采用UTF-8 Markdown专业说明、JSON结构化记录、JSONL大批量记录；文本唯一事实源，SQLite为可选派生导入目标，正式交付文本/schema/导入工具/证据而非SQLite二进制。HSK转换先写文本，不等待导入器完成；后续默认内存SQLite验证，不持久生成数据库文件。物理数据库测试若未获授权保持HOLD。详见 [文本合同](../design/text-knowledge-package.md)。本条在#6正式记录，草案待合入，不改R3待审HEAD。
+
+- D015（用户要求）继续推进前优先补齐已完成工作与未文档化成果；以 [建设事实与缺口](../implementation/documentation-baseline.md) 维护文档入口及可追溯证据。Builder 在R3待审范围内执行SRC01非破坏可读归档，保留旧图全部语义及源，新增可读归档证据而非正式知识资格；不改变D014文本优先或扩大专业范围。

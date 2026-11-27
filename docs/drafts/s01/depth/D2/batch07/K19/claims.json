@@ -1,0 +1,86 @@
+{
+  "owner": "K19",
+  "base": "0d28ad2fa0febe195b442c40f2203e52b87a05fa",
+  "prior_claim_blob": "c5122eaac758a950e64820bd5b38a42eadb53f90",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "K19.04.03.D4.03",
+      "owner": "K19",
+      "d3_id": "K19.04.03",
+      "requirement_id": "K19.04.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "部署后的风险管理应纳入用户反馈、申诉、覆盖、事故响应与恢复；评分纠错需追踪受影响记录。",
+      "conditions": [
+        "Manage 4.1；后半项目化。"
+      ],
+      "negative_boundary": "不能用一次复核自动证明所有历史输出。",
+      "source_refs": [
+        "K19-B07-RMF"
+      ],
+      "source_locator": "Manage 4.1, line 278",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K19.04.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "某评分版本漏判一类答案",
+        "expected": "限定影响范围后重评",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K19.04.05.D4.03",
+      "owner": "K19",
+      "d3_id": "K19.04.05",
+      "requirement_id": "K19.04.05.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "申诉及覆盖机制应纳入部署后的监测方案；高风险学习决策的授权主体与模型建议需区分。",
+      "conditions": [
+        "通用自愿风险框架；具体权限为项目政策。"
+      ],
+      "negative_boundary": "预测不等于授权。",
+      "source_refs": [
+        "K19-B07-RMF"
+      ],
+      "source_locator": "Manage 4.1, line 278",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K19.04.05.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "模型建议取消课程资格",
+        "expected": "转有权人复核，不自动执行",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "K19.05.02.D4.03",
+      "owner": "K19",
+      "d3_id": "K19.05.02",
+      "requirement_id": "K19.05.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "应保留AI使用后的反馈和人工覆盖路径，教育者及学习者可按职责提出纠错。",
+      "conditions": [
+        "Manage 4.1部分支持；具体教育责任另证。"
+      ],
+      "negative_boundary": "不能转移教学专业责任给模型。",
+      "source_refs": [
+        "K19-B07-RMF"
+      ],
+      "source_locator": "Manage 4.1, line 278",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "K19.05.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "教师发现评分依据不符量规",
+        "expected": "保留原证据、提出复核",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

@@ -1,0 +1,800 @@
+{
+  "schema_version": "draft-unified-2",
+  "package_id": "learn-kg.draft.unified.flow",
+  "version": "0.0.2",
+  "status": "INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "flow:claim:guard",
+      "kind": "Claim",
+      "owner": "P06",
+      "status": "DRAFT",
+      "topic": "P06",
+      "claim_type": "ENGINEERING_POLICY",
+      "statement": "有限书面辨义活动只记录独立作答；提示、缺失、错任务、未授权和超预算不得晋升完成或掌握。",
+      "conditions": [
+        "试点工程规则；两道固定书面题",
+        "每题最多2次独立作答"
+      ],
+      "limitations": [
+        "不声称教学效果、听辨能力、长期保持或真实授权",
+        "错误只触发提示或停止，不诊断错误原因"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "stable_id": "flow:task:buy",
+      "kind": "TaskSpec",
+      "owner": "H06",
+      "status": "DRAFT",
+      "topic": "H06.04.02",
+      "construct": "WRITTEN_CONTEXT_WORD_CHOICE",
+      "prompt": "我付钱，从店员那里得到一本书。我__书。",
+      "accepted_answers": [
+        "买"
+      ],
+      "sense_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:sense:buy",
+        "kind": "Sense"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "feedback": "看清楚是谁付钱并取得书。",
+      "modality": "TEXT",
+      "independence": "NO_EXTERNAL_HELP",
+      "scoring": "EXACT_MATCH"
+    },
+    {
+      "stable_id": "flow:task:sell",
+      "kind": "TaskSpec",
+      "owner": "H06",
+      "status": "DRAFT",
+      "topic": "H06.04.02",
+      "construct": "WRITTEN_CONTEXT_WORD_CHOICE",
+      "prompt": "店员收钱，把一本书交给顾客。店员__书。",
+      "accepted_answers": [
+        "卖"
+      ],
+      "sense_ref": {
+        "package_id": "learn-kg.draft.unified.chinese",
+        "version": "0.0.2",
+        "stable_id": "zh:sense:sell",
+        "kind": "Sense"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "feedback": "看清楚是谁收钱并交出书。",
+      "modality": "TEXT",
+      "independence": "NO_EXTERNAL_HELP",
+      "scoring": "EXACT_MATCH"
+    },
+    {
+      "stable_id": "flow:template:contrast",
+      "kind": "FlowSpec",
+      "owner": "P04",
+      "status": "DRAFT",
+      "topic": "P04",
+      "entry": "buy",
+      "steps": [
+        {
+          "id": "buy",
+          "task_ref": {
+            "package_id": "learn-kg.draft.unified.flow",
+            "version": "0.0.2",
+            "stable_id": "flow:task:buy",
+            "kind": "TaskSpec"
+          },
+          "max_attempts": 2,
+          "transitions": [
+            {
+              "outcome": "CORRECT",
+              "target": "sell"
+            },
+            {
+              "outcome": "INCORRECT_RETRY",
+              "target": "buy"
+            },
+            {
+              "outcome": "INCORRECT_EXHAUSTED",
+              "target": "failed"
+            },
+            {
+              "outcome": "UNKNOWN",
+              "target": "unknown"
+            },
+            {
+              "outcome": "STOP",
+              "target": "stopped"
+            }
+          ]
+        },
+        {
+          "id": "sell",
+          "task_ref": {
+            "package_id": "learn-kg.draft.unified.flow",
+            "version": "0.0.2",
+            "stable_id": "flow:task:sell",
+            "kind": "TaskSpec"
+          },
+          "max_attempts": 2,
+          "transitions": [
+            {
+              "outcome": "CORRECT",
+              "target": "done"
+            },
+            {
+              "outcome": "INCORRECT_RETRY",
+              "target": "sell"
+            },
+            {
+              "outcome": "INCORRECT_EXHAUSTED",
+              "target": "failed"
+            },
+            {
+              "outcome": "UNKNOWN",
+              "target": "unknown"
+            },
+            {
+              "outcome": "STOP",
+              "target": "stopped"
+            }
+          ]
+        }
+      ],
+      "terminals": [
+        {
+          "id": "done",
+          "status": "ACTIVITY_COMPLETE"
+        },
+        {
+          "id": "failed",
+          "status": "RETRY_EXHAUSTED"
+        },
+        {
+          "id": "unknown",
+          "status": "UNKNOWN"
+        },
+        {
+          "id": "stopped",
+          "status": "STOPPED"
+        }
+      ],
+      "max_events": 4,
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:claim:guard",
+          "kind": "Claim"
+        }
+      ],
+      "effect": "OBSERVATION_ONLY",
+      "completion_scope": "本次两道书面任务完成，不等于掌握、听辨或迁移"
+    },
+    {
+      "stable_id": "flow:case:complete",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          },
+          {
+            "event_id": "e2",
+            "event": "ANSWER",
+            "task_id": "flow:task:sell",
+            "answer": "卖",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "ACTIVITY_COMPLETE",
+        "state": "done",
+        "processed": 2,
+        "feedback_count": 0,
+        "observations": [
+          {
+            "event_id": "e1",
+            "task_id": "flow:task:buy",
+            "result": "CORRECT"
+          },
+          {
+            "event_id": "e2",
+            "task_id": "flow:task:sell",
+            "result": "CORRECT"
+          }
+        ]
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:retry",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "卖",
+            "independent": true
+          },
+          {
+            "event_id": "e2",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          },
+          {
+            "event_id": "e3",
+            "event": "ANSWER",
+            "task_id": "flow:task:sell",
+            "answer": "卖",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "ACTIVITY_COMPLETE",
+        "state": "done",
+        "processed": 3,
+        "feedback_count": 1,
+        "observations": [
+          {
+            "event_id": "e1",
+            "task_id": "flow:task:buy",
+            "result": "INCORRECT"
+          },
+          {
+            "event_id": "e2",
+            "task_id": "flow:task:buy",
+            "result": "CORRECT"
+          },
+          {
+            "event_id": "e3",
+            "task_id": "flow:task:sell",
+            "result": "CORRECT"
+          }
+        ]
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:exhausted",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "卖",
+            "independent": true
+          },
+          {
+            "event_id": "e2",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "卖",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "RETRY_EXHAUSTED",
+        "state": "failed",
+        "processed": 2,
+        "feedback_count": 1,
+        "observations": [
+          {
+            "event_id": "e1",
+            "task_id": "flow:task:buy",
+            "result": "INCORRECT"
+          },
+          {
+            "event_id": "e2",
+            "task_id": "flow:task:buy",
+            "result": "INCORRECT"
+          }
+        ]
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:hint",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": false
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNKNOWN",
+        "state": "unknown",
+        "processed": 1,
+        "feedback_count": 0,
+        "observations": []
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:no-permission",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": false,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "REJECT_PERMISSION",
+        "state": "buy",
+        "processed": 0,
+        "feedback_count": 0,
+        "observations": []
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:exit",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "EXIT"
+          }
+        ]
+      },
+      "expected": {
+        "status": "STOPPED",
+        "state": "stopped",
+        "processed": 1,
+        "feedback_count": 0,
+        "observations": []
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:wrong-task",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:sell",
+            "answer": "卖",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "REJECT_TASK",
+        "state": "buy",
+        "processed": 0,
+        "feedback_count": 0,
+        "observations": []
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:missing",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "UNKNOWN",
+        "state": "unknown",
+        "processed": 1,
+        "feedback_count": 0,
+        "observations": []
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:replay",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          },
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          },
+          {
+            "event_id": "e2",
+            "event": "ANSWER",
+            "task_id": "flow:task:sell",
+            "answer": "卖",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "ACTIVITY_COMPLETE",
+        "state": "done",
+        "processed": 2,
+        "feedback_count": 0,
+        "observations": [
+          {
+            "event_id": "e1",
+            "task_id": "flow:task:buy",
+            "result": "CORRECT"
+          },
+          {
+            "event_id": "e2",
+            "task_id": "flow:task:sell",
+            "result": "CORRECT"
+          }
+        ]
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:conflict",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          },
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "卖",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "REJECT_EVENT_CONFLICT",
+        "state": "sell",
+        "processed": 1,
+        "feedback_count": 0,
+        "observations": [
+          {
+            "event_id": "e1",
+            "task_id": "flow:task:buy",
+            "result": "CORRECT"
+          }
+        ]
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:pending",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "INCOMPLETE",
+        "state": "sell",
+        "processed": 1,
+        "feedback_count": 0,
+        "observations": [
+          {
+            "event_id": "e1",
+            "task_id": "flow:task:buy",
+            "result": "CORRECT"
+          }
+        ]
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:case:after-terminal",
+      "kind": "ScenarioCase",
+      "owner": "P04",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.flow",
+        "version": "0.0.2",
+        "stable_id": "flow:template:contrast",
+        "kind": "FlowSpec"
+      },
+      "mode": "bounded_flow",
+      "input": {
+        "authorized": true,
+        "events": [
+          {
+            "event_id": "e1",
+            "event": "ANSWER",
+            "task_id": "flow:task:buy",
+            "answer": "买",
+            "independent": true
+          },
+          {
+            "event_id": "e2",
+            "event": "ANSWER",
+            "task_id": "flow:task:sell",
+            "answer": "卖",
+            "independent": true
+          },
+          {
+            "event_id": "e3",
+            "event": "ANSWER",
+            "task_id": "flow:task:sell",
+            "answer": "卖",
+            "independent": true
+          }
+        ]
+      },
+      "expected": {
+        "status": "REJECT_AFTER_TERMINAL",
+        "state": "done",
+        "processed": 2,
+        "feedback_count": 0,
+        "observations": [
+          {
+            "event_id": "e1",
+            "task_id": "flow:task:buy",
+            "result": "CORRECT"
+          },
+          {
+            "event_id": "e2",
+            "task_id": "flow:task:sell",
+            "result": "CORRECT"
+          }
+        ]
+      },
+      "explanation": "原创合成书面辨义活动；不是真实学习者数据。"
+    },
+    {
+      "stable_id": "flow:validation:cases",
+      "kind": "ValidationSpec",
+      "owner": "P04",
+      "status": "DRAFT",
+      "case_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:complete",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:retry",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:exhausted",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:hint",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:no-permission",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:exit",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:wrong-task",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:missing",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:replay",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:conflict",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:pending",
+          "kind": "ScenarioCase"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.flow",
+          "version": "0.0.2",
+          "stable_id": "flow:case:after-terminal",
+          "kind": "ScenarioCase"
+        }
+      ],
+      "method": "Builder-authored fixed cases; inspect actual output against expected; no professional qualification",
+      "run_status": "NOT_RUN",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

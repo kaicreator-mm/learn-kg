@@ -1,0 +1,861 @@
+{
+  "base": "ccb5b7160503268f5c26c79c34ff38df35716044",
+  "scope": "S01 D3 G02 P/F/A/E candidate composition contracts; not IF01 or formal task completion",
+  "input_identity": {
+    "required": [
+      "subject_id",
+      "knowledge_version",
+      "target_construct_id",
+      "component_id_or_explicit_unknown",
+      "task_or_activity_version",
+      "rubric_version_or_not_applicable",
+      "evidence_record_id_or_explicit_unknown",
+      "authorization_scope"
+    ],
+    "rules": [
+      "Use scoped stable IDs; separate subject/version/learner/session. UNKNOWN is not zero or false.",
+      "Observed response, assistance, score, inference, policy and authorization are distinct.",
+      "Candidate outputs are not production state changes; no cross-domain equivalence or qualification.",
+      "External E01 changes require separate human approval and evidence. No persistent SQLite."
+    ]
+  },
+  "contracts": [
+    {
+      "task_id": "P01",
+      "title": "学习模式结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K13",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K05.06.01",
+        "K06.04.04",
+        "K08.04.03",
+        "K13.04.04"
+      ],
+      "research_rule_routes": [
+        "D3-P08"
+      ],
+      "inputs": "目标、先验水平证据、可用资源、学习者选择",
+      "outputs": "候选学习模式：示范/引导练习/独立提取/同伴协作，附适用条件和退出条件",
+      "selection_and_inference": "根据目标构念、先验与支持需求选择，不以固定学习风格标签分配",
+      "fail_closed": "先验不明时先做短探查；环境不足时提供可访问替代",
+      "synthetic_design_example": "初学汉字：先示范结构，再尝试独立辨认；不据一次选择断言偏好",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P02",
+      "title": "目标与学习准备结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K07.01.01",
+        "K08.04.01",
+        "K09.01.01",
+        "K10.06.03",
+        "K11.01.04"
+      ],
+      "research_rule_routes": [
+        "D3-P08"
+      ],
+      "inputs": "学习目标、构念、时间预算、已知与未知状态",
+      "outputs": "可观察目标、成功准则、准备检查、缺口和可选路径",
+      "selection_and_inference": "目标要能通过指定任务观察；前置条件有必要性证据才设硬门槛",
+      "fail_closed": "目标不明确或先验缺失：询问或探查，不强制晋级",
+      "synthetic_design_example": "汉语口语：在给定场景提出请求；听说与书写目标分别建模",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P03",
+      "title": "学习活动单元结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K12",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K03.06.01",
+        "K04.06.01",
+        "K05.04.01",
+        "K06.02.03",
+        "K12.01.02"
+      ],
+      "research_rule_routes": [
+        "D3-P13"
+      ],
+      "inputs": "知识组件、活动目的、素材、任务构念、支持方式",
+      "outputs": "活动单元：刺激、响应方式、提示、评分、反馈及停止条件",
+      "selection_and_inference": "组件到任务和观测须显式；示范与测量活动角色分离",
+      "fail_closed": "答案歧义、无来源、未定义量规：HOLD",
+      "synthetic_design_example": "听辨声调与产出声调为不同活动；同一素材不保证同一测量",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P04",
+      "title": "学习流程结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K07",
+        "K11",
+        "K12",
+        "P01",
+        "P02",
+        "P03",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K06.03.03",
+        "K07.05.03",
+        "K11.04.02",
+        "K12.06.01"
+      ],
+      "research_rule_routes": [
+        "D3-P12",
+        "D3-P15"
+      ],
+      "inputs": "已选模式、可观察目标、活动单元、时间预算",
+      "outputs": "有界流程：准备→示范或探查→练习→独立观测→反馈→结束/计划复测",
+      "selection_and_inference": "每个转移依观察或明确事件，提示渐撤后另测；每个环有预算",
+      "fail_closed": "退出立即终止新动作；无可行路径则升级而非无限重试",
+      "synthetic_design_example": "20分钟学习：独立回忆失败后限次补救，随后可安排新题族复测",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P05",
+      "title": "练习与保持流程结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K02",
+        "K04",
+        "K05",
+        "K10",
+        "K11",
+        "P03",
+        "P04",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K02.06.03",
+        "K04.03.03",
+        "K05.02.01",
+        "K10.03.01",
+        "K11.02.04"
+      ],
+      "research_rule_routes": [
+        "D3-P05"
+      ],
+      "inputs": "目标保持期、提取记录、提示水平、可用复习时间",
+      "outputs": "有条件的复习候选、变式题族、延迟保持观测计划",
+      "selection_and_inference": "优先不确定或到期项，间隔依证据和预算调整，不把算法概率当掌握",
+      "fail_closed": "未校准则给启发式排序并标注，超预算保留未处理项",
+      "synthetic_design_example": "今日会认的词，隔日无提示新句复测；不以当日重复正确替代",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P06",
+      "title": "观测与反馈流程结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K06",
+        "K09",
+        "K10",
+        "K12",
+        "P03",
+        "P04",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K06.06.02",
+        "K09.01.04",
+        "K10.01.05",
+        "K12.03.05"
+      ],
+      "research_rule_routes": [
+        "D3-P03",
+        "D3-P04",
+        "D3-P06",
+        "D3-P09",
+        "D3-P10"
+      ],
+      "inputs": "原始响应、量规、任务版本、提示、耗时及缺失标记",
+      "outputs": "可追溯观测、错误假设、反馈建议、复测要求",
+      "selection_and_inference": "先记录响应再评分；反馈生成不得改写原始观测；歧义交人工或保留",
+      "fail_closed": "评分规则不兼容或观测缺失：不更新能力",
+      "synthetic_design_example": "把错声调标为候选错误类型，给具体对比，之后另测而非直接加分",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P07",
+      "title": "动机与激励流程结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K13",
+        "K16",
+        "K19",
+        "P02",
+        "P03",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K08.01.02",
+        "K13.04.04",
+        "K16.05.03",
+        "K19.03.02"
+      ],
+      "research_rule_routes": [
+        "D3-P06",
+        "D3-P11"
+      ],
+      "inputs": "学习者自述、目标、支持偏好、参与记录及同意",
+      "outputs": "自愿目标调整、具体过程反馈、休息/求助/结束选择",
+      "selection_and_inference": "激励以任务进展和自主选择为主，不推断心理诊断或把活跃度当学习",
+      "fail_closed": "拒绝激励或退出则不发送额外提醒；不惩罚",
+      "synthetic_design_example": "连续错误时提供可选短休息或简化练习，不扣连续打卡权益",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P08",
+      "title": "自适应调节流程结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K09.05.04",
+        "K10.06.06",
+        "K11.05.01",
+        "K16.03.01"
+      ],
+      "research_rule_routes": [
+        "D3-P07",
+        "D3-P12"
+      ],
+      "inputs": "经校验的观测、状态假设、策略候选、硬约束",
+      "outputs": "继续/补救/提问/复测/暂停之一及选择理由",
+      "selection_and_inference": "先过滤不满足硬约束的动作，再在有界预算内选择；低证据不确定性显式保留",
+      "fail_closed": "冷启动、冲突、模型漂移：回退保守策略或请求澄清",
+      "synthetic_design_example": "词义测试互相矛盾时先核题族和语境，不自动降低全局汉语等级",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P09",
+      "title": "评价与迁移流程结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K04",
+        "K07",
+        "K09",
+        "K17",
+        "P04",
+        "P06",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K04.04.02",
+        "K07.04.01",
+        "K09.02.04",
+        "K17.06.03"
+      ],
+      "research_rule_routes": [
+        "D3-P01",
+        "D3-P02",
+        "D3-P05"
+      ],
+      "inputs": "构念、量规、独立表现、延迟及新情境任务",
+      "outputs": "分别记录当下表现、保持、近迁移、远迁移与不确定性",
+      "selection_and_inference": "只在量规及任务族可比的范围内汇总；保持/迁移需要对应观测",
+      "fail_closed": "仅辅助表现、未测延迟或跨学科：UNKNOWN，不晋升",
+      "synthetic_design_example": "熟句正确不等同新交际场景会用；安排不同题族测试",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "P10",
+      "title": "连贯学习与治理结构化模板",
+      "dependencies": [
+        "G01",
+        "DB01",
+        "K08",
+        "K11",
+        "K15",
+        "K16",
+        "K17",
+        "K19",
+        "P08",
+        "P09",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K08.05.05",
+        "K11.06.03",
+        "K15.06.02",
+        "K16.04.03",
+        "K17.06.04",
+        "K19.03.04"
+      ],
+      "research_rule_routes": [
+        "D3-P07",
+        "D3-P15"
+      ],
+      "inputs": "有界会话记录、跨会话计划、同意范围、版本和冲突记录",
+      "outputs": "可恢复学习计划、解释、纠错请求、复盘及人工升级",
+      "selection_and_inference": "恢复时核对版本、学科及身份；原记录不可静默覆盖；计划与状态分离",
+      "fail_closed": "授权失效、版本冲突、退出：只保留允许的最小记录并终止",
+      "synthetic_design_example": "中断后恢复汉语学习，旧量规结果保留历史但不直接覆盖新状态",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F01",
+      "title": "目标与能力组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K09",
+        "P02",
+        "P09",
+        "H06",
+        "H07",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K03.06.01",
+        "K04.06.01",
+        "K07.01.01",
+        "K09.01.01"
+      ],
+      "research_rule_routes": [
+        "D3-P14"
+      ],
+      "inputs": "目标ID、构念ID、组件候选与量规",
+      "outputs": "GoalConstructComponent 绑定及映射理由",
+      "selection_and_inference": "一个目标可映射多个组件，不能把观测分数直接解释为全部能力",
+      "fail_closed": "组件范围或量规未知则不发布绑定",
+      "synthetic_design_example": "词汇运用目标含义项选择与搭配，不含未经测量的书写能力",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F02",
+      "title": "对象与粒度组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K03",
+        "K04",
+        "K07",
+        "K12",
+        "P03",
+        "P04",
+        "H03",
+        "IF01",
+        "H04",
+        "H05",
+        "H06",
+        "H07"
+      ],
+      "research_topic_anchors": [
+        "K03.03.01",
+        "K04.06.01",
+        "K07.03.01",
+        "K12.01.03"
+      ],
+      "research_rule_routes": [
+        "D3-P13"
+      ],
+      "inputs": "对象、组件、内容版本、粒度与任务分析",
+      "outputs": "ObjectComponent 边、粒度、必要/推荐/未知依赖",
+      "selection_and_inference": "词形、义项、构式、语音等分离；组成不等同先修",
+      "fail_closed": "无必要性证据只列推荐或UNKNOWN",
+      "synthetic_design_example": "离合词词项与构式许可分离，不能以单字粒度决定学习路径",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F03",
+      "title": "资源与表达组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K06",
+        "K12",
+        "K15",
+        "K16",
+        "K19",
+        "P03",
+        "IF01",
+        "P04"
+      ],
+      "research_topic_anchors": [
+        "K06.02.03",
+        "K12.04.03",
+        "K15.04.01",
+        "K16.04.01",
+        "K19.05.03"
+      ],
+      "research_rule_routes": [],
+      "inputs": "组件、资源、媒介、来源权利、可访问需求",
+      "outputs": "ResourceRepresentation 绑定、来源定位、替代表示与适用条件",
+      "selection_and_inference": "同一知识允许多表示；资源可靠性、权利、可访问性独立检查",
+      "fail_closed": "来源或权利未核：仅候选、不对外交付",
+      "synthetic_design_example": "同一发音目标有音频和文字说明，但文字不可替代听辨观测",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F04",
+      "title": "学习交互组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K04",
+        "K05",
+        "K06",
+        "K08",
+        "K12",
+        "K13",
+        "K15",
+        "P03",
+        "P06",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K04.03.02",
+        "K05.01.04",
+        "K06.03.01",
+        "K08.05.03",
+        "K12.03.04",
+        "K15.06.02"
+      ],
+      "research_rule_routes": [
+        "D3-P01",
+        "D3-P03",
+        "D3-P04",
+        "D3-P10"
+      ],
+      "inputs": "活动、角色、交互类型、任务版本、提示和响应",
+      "outputs": "InteractionObservation 记录及反馈候选",
+      "selection_and_inference": "响应、提示、评分、反馈分事件；辅助正确不算独立成功",
+      "fail_closed": "量规缺失、重放重复或错版本：阻断状态写入",
+      "synthetic_design_example": "提示首字后答对，保存提示事件和响应，不作为独立回忆",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F05",
+      "title": "学习者状态组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K08",
+        "K09",
+        "K10",
+        "K16",
+        "K18",
+        "P08",
+        "IF01",
+        "P10"
+      ],
+      "research_topic_anchors": [
+        "K02.06.01",
+        "K04.02.03",
+        "K09.02.03",
+        "K10.06.06",
+        "K16.05.01",
+        "K18.05.03"
+      ],
+      "research_rule_routes": [
+        "D3-P07"
+      ],
+      "inputs": "独立观测集合、组件映射、模型与量规版本",
+      "outputs": "LearnerStateCandidate：按组件维度、时间及置信边界保存",
+      "selection_and_inference": "状态是模型估计不是事实；不从个体表现推断临床诊断",
+      "fail_closed": "证据不足或跨学科/版本：UNKNOWN，不合并",
+      "synthetic_design_example": "汉语听辨表现与数学计算能力分开记录",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F06",
+      "title": "障碍与补救组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K02",
+        "K03",
+        "K04",
+        "K06",
+        "K09",
+        "K10",
+        "K11",
+        "K16",
+        "P06",
+        "P08",
+        "H06",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K03.05.01",
+        "K06.06.03",
+        "K09.05.01",
+        "K10.01.05",
+        "K11.05.02",
+        "K16.03.04"
+      ],
+      "research_rule_routes": [
+        "D3-P06",
+        "D3-P09",
+        "D3-P11"
+      ],
+      "inputs": "错误观测、可能障碍、环境限制、支持可行性",
+      "outputs": "BarrierHypothesis 与可逆补救、区分假设的探查",
+      "selection_and_inference": "同错可多因；优先区分性探查，补救必须可撤回",
+      "fail_closed": "材料歧义、测量不足或健康诊断请求：人工/UNKNOWN",
+      "synthetic_design_example": "误用量词可能是词义、搭配或题目理解；用不同探查区分",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F07",
+      "title": "环境与角色组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K06",
+        "K13",
+        "K15",
+        "K16",
+        "K19",
+        "P10",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K06.05.02",
+        "K13.04.02",
+        "K15.05.03",
+        "K16.04.02",
+        "K19.02.03"
+      ],
+      "research_rule_routes": [],
+      "inputs": "角色、设备、语言、支持条件、同意和授权",
+      "outputs": "ContextRole 合同、责任边界、替代交互和权限约束",
+      "selection_and_inference": "角色权限最小化，支持不改变构念；学习者可退出",
+      "fail_closed": "未经授权的教师/代理或不可访问材料：不执行",
+      "synthetic_design_example": "同伴可给反馈但不能改写独立观测及能力记录",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "F08",
+      "title": "迁移与实践组合契约与实例",
+      "dependencies": [
+        "DB01",
+        "K04",
+        "K06",
+        "K07",
+        "K09",
+        "K14",
+        "K17",
+        "P05",
+        "P09",
+        "H06",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K04.04.04",
+        "K07.04.04",
+        "K09.02.04",
+        "K14.05.04",
+        "K17.06.03"
+      ],
+      "research_rule_routes": [
+        "D3-P02",
+        "D3-P14"
+      ],
+      "inputs": "源情境、目标情境、技能构念、可比量规、练习历史",
+      "outputs": "TransferEvidence 候选、距离、适用边界和未测项",
+      "selection_and_inference": "定义源目标共同与变化维度，不把跨情境表现泛化为远迁移",
+      "fail_closed": "未观测目标情境或量规不可比：UNKNOWN",
+      "synthetic_design_example": "课堂购物对话迁移到不同商店任务，需实际新情境证据",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A01",
+      "title": "目标→构念→知识组件贯通组合",
+      "dependencies": [
+        "F01",
+        "F02",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K03.06.01",
+        "K07.01.01",
+        "K09.01.01"
+      ],
+      "research_rule_routes": [
+        "D3-P14"
+      ],
+      "inputs": "F01目标构念绑定、F02对象组件绑定",
+      "outputs": "目标→构念→组件路径及缺失组件清单",
+      "selection_and_inference": "沿显式映射连接，不把对象所有属性自动纳入目标",
+      "fail_closed": "映射不一致或版本不同：HOLD",
+      "synthetic_design_example": "购物请求目标可绑定请求构式和词义，书写未必是必需",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A02",
+      "title": "知识→任务→观测贯通组合",
+      "dependencies": [
+        "F02",
+        "F03",
+        "F04",
+        "IF01",
+        "H04",
+        "H05",
+        "H06"
+      ],
+      "research_topic_anchors": [
+        "K09.01.03",
+        "K12.01.02",
+        "K12.03.04"
+      ],
+      "research_rule_routes": [
+        "D3-P01",
+        "D3-P04",
+        "D3-P13"
+      ],
+      "inputs": "F02组件、F03资源、F04交互观测",
+      "outputs": "组件→任务→原始响应→评分证据路径",
+      "selection_and_inference": "任务ID、题族、量规、提示和观测必须一一追溯",
+      "fail_closed": "任务无组件绑定或量规错误：不产生状态候选",
+      "synthetic_design_example": "听辨声调选择任务，只支持听辨构念，不自动支持发音",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A03",
+      "title": "观测→诊断→状态贯通组合",
+      "dependencies": [
+        "F05",
+        "F06",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K06.06.03",
+        "K09.05.01",
+        "K10.01.04",
+        "K10.06.06"
+      ],
+      "research_rule_routes": [
+        "D3-P03",
+        "D3-P04",
+        "D3-P07",
+        "D3-P09",
+        "D3-P10"
+      ],
+      "inputs": "F05状态候选、F06障碍假设与观测",
+      "outputs": "观测→多个诊断假设→有界状态候选/UNKNOWN",
+      "selection_and_inference": "观测与解释分开，冲突保留并要求区分证据",
+      "fail_closed": "辅助、缺失或冲突观测不得触发独立掌握",
+      "synthetic_design_example": "一次词义错误不确认为词汇缺失，可探查语境和题意",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A04",
+      "title": "状态→策略→规划贯通组合",
+      "dependencies": [
+        "F05",
+        "F06",
+        "P08",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K10.06.06",
+        "K11.01.04",
+        "K11.05.01"
+      ],
+      "research_rule_routes": [
+        "D3-P08",
+        "D3-P12",
+        "D3-P15"
+      ],
+      "inputs": "F05状态、F06补救、P08策略选择、预算",
+      "outputs": "状态→可行动作→有界计划，含回退和下一观测",
+      "selection_and_inference": "硬约束先过滤；不确定时选择可逆、成本受限探查",
+      "fail_closed": "无可行策略或退出：停止并记录原因",
+      "synthetic_design_example": "不确定声调掌握时短探查，不直接排完整课程重学",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A05",
+      "title": "教学→表现→保持/迁移贯通组合",
+      "dependencies": [
+        "F01",
+        "F08",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K04.04.02",
+        "K05.06.04",
+        "K09.02.04"
+      ],
+      "research_rule_routes": [
+        "D3-P02",
+        "D3-P05",
+        "D3-P14"
+      ],
+      "inputs": "F01目标、F08迁移合同、练习与复测记录",
+      "outputs": "教学→即时表现→保持→迁移分层证据",
+      "selection_and_inference": "区分支持水平、延迟间隔、题族及情境；缺一不推断",
+      "fail_closed": "仅即时重复成功：保留保持和迁移UNKNOWN",
+      "synthetic_design_example": "学会熟练句后隔日新句无提示复测，再另测真实对话",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A06",
+      "title": "内容生成→核查→交付贯通组合",
+      "dependencies": [
+        "F03",
+        "F04",
+        "K19",
+        "IF01",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "research_topic_anchors": [
+        "K12.05.05",
+        "K15.04.01",
+        "K19.05.03"
+      ],
+      "research_rule_routes": [],
+      "inputs": "F03资源、F04交互、生成草稿、来源和权利记录",
+      "outputs": "生成→核查→候选交付包，含拒绝理由",
+      "selection_and_inference": "事实、语言可接受性、量规、来源、权利分别核查",
+      "fail_closed": "任一必需检查未通过或未知：不交付",
+      "synthetic_design_example": "自动生成汉语例句须核义项和自然度，不能仅由LLM自评",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A07",
+      "title": "环境/发展/差异→支持贯通组合",
+      "dependencies": [
+        "F05",
+        "F07",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K13.04.04",
+        "K16.04.03",
+        "K18.05.03",
+        "K19.03.02"
+      ],
+      "research_rule_routes": [],
+      "inputs": "F05状态、F07环境角色、支持需求及个体证据",
+      "outputs": "环境/发展/差异→支持候选与复测安排",
+      "selection_and_inference": "只用个体实际需求和可访问条件，不以人口属性推出能力",
+      "fail_closed": "未经同意或改变测量构念：停止或重设测量",
+      "synthetic_design_example": "设备不能播放音频时调整练习，不把缺失听辨响应记为错误",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "A08",
+      "title": "证据→模型/政策→实证评价贯通组合",
+      "dependencies": [
+        "F08",
+        "E01",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K17.02.02",
+        "K17.03.02",
+        "K17.06.03",
+        "K19.05.01"
+      ],
+      "research_rule_routes": [],
+      "inputs": "F08迁移证据、E01改进假设、版本和评价方案",
+      "outputs": "证据→模型/策略变更提案→有限评价→保留/撤回",
+      "selection_and_inference": "观察相关与因果效应分开，前置指标、比较与适用范围显式",
+      "fail_closed": "无对照或版本不可比：仅探索，不声称教育效果",
+      "synthetic_design_example": "新复习规则的历史日志只能提出假设，须按预设评价再决定推广",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    },
+    {
+      "task_id": "E01",
+      "title": "外部改进闭环",
+      "dependencies": [
+        "K09",
+        "K15",
+        "K17",
+        "K19",
+        "P10",
+        "IF01"
+      ],
+      "research_topic_anchors": [
+        "K09.02.05",
+        "K15.05.04",
+        "K17.06.01",
+        "K19.05.01"
+      ],
+      "research_rule_routes": [],
+      "inputs": "问题、原始证据、改进假设、模型/政策版本、评价设计及同意",
+      "outputs": "外部改进记录：假设→有限试验→结果→决策→回退/跟踪",
+      "selection_and_inference": "变更前登记评价条件；原数据隔离、保留负面结果、人工批准后另行发布",
+      "fail_closed": "未获同意、证据不足或效果不明确：保持现版本或有限试验",
+      "synthetic_design_example": "比较两种复习方案，预设延迟保持与退出指标；不以参与次数代替学习效果",
+      "status": "DRAFT_CONTRACT_NOT_TASK_RECEIPT",
+      "formal_receipt": "NOT_ISSUED"
+    }
+  ],
+  "validation_scope": "Design contracts only; static anchors/dependencies checked against exact base; examples not executed or independent oracle."
+}

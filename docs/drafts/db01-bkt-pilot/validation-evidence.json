@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "scope": "DRAFT_SCHEMA_AND_MATH_ONLY",
+  "tested_head": "3dcc4016c2ad33faa878b60fa2bcc84efa897c38",
+  "version_head": "05a0a759bc10051adefd3eb966f16694cb2c03fc",
+  "gateway_job": "job_01M8BZWKAD00ZT4E1BP6Q6H0BS",
+  "job_status": "succeeded",
+  "exit_code": 0,
+  "python": "3.12.3",
+  "jsonschema": "4.10.3",
+  "git_blob_verified": true,
+  "syntax_check": "PASS",
+  "blobs": {
+    "schema.json": "c538d7b1109dbd8bfe3fe2ad7727801e7b886adc",
+    "records.json": "f7d376ec246ff6108126f2be37d64b2843041568",
+    "validate.py": "c5c0ced114189cef07a9c6dc48f365da7a46c01b"
+  },
+  "sha256": {
+    "schema.json": "0886af9b894b7e77ef6c9449f094ef5cd41623543793993e9a0f4804d6be1c41",
+    "records.json": "1a71c867aeeecdbe3e83567d8874062cd842698bba968801ea69eaa88c20e3a4",
+    "validate.py": "dbb08c77bf27d804ea57cc4495248159c3faa221928ecf42803b9abd190de7bd"
+  },
+  "records": 24,
+  "cases": [
+    {
+      "id": "bkt:case:correct",
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "31/40"
+      },
+      "actual": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "31/40"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:incorrect",
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "1/13",
+        "next_prior": "11/65"
+      },
+      "actual": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "1/13",
+        "next_prior": "11/65"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:non-discriminating",
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "4/5",
+        "posterior": "2/5",
+        "next_prior": "23/50"
+      },
+      "actual": {
+        "status": "OK",
+        "prediction_correct": "4/5",
+        "posterior": "2/5",
+        "next_prior": "23/50"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:missing",
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "actual": {
+        "status": "UNKNOWN"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:hint",
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "actual": {
+        "status": "UNKNOWN"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:multi",
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "actual": {
+        "status": "UNKNOWN"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:zero-likelihood",
+      "expected": {
+        "status": "REJECT_ZERO_LIKELIHOOD"
+      },
+      "actual": {
+        "status": "REJECT_ZERO_LIKELIHOOD"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:invalid-parameter",
+      "expected": {
+        "status": "REJECT_PARAMETER"
+      },
+      "actual": {
+        "status": "REJECT_PARAMETER"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:certain-transition",
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "1"
+      },
+      "actual": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "1"
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "bkt:case:strategy-no-threshold",
+      "expected": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "31/40"
+      },
+      "actual": {
+        "status": "OK",
+        "prediction_correct": "12/25",
+        "posterior": "3/4",
+        "next_prior": "31/40"
+      },
+      "status": "PASS"
+    }
+  ],
+  "negative_tests": [
+    {
+      "id": "duplicate-id",
+      "status": "PASS",
+      "error": "ValueError"
+    },
+    {
+      "id": "unknown-field",
+      "status": "PASS",
+      "error": "ValidationError"
+    },
+    {
+      "id": "missing-target",
+      "status": "PASS",
+      "error": "ValueError"
+    },
+    {
+      "id": "wrong-kind",
+      "status": "PASS",
+      "error": "ValueError"
+    },
+    {
+      "id": "wrong-version",
+      "status": "PASS",
+      "error": "ValidationError"
+    },
+    {
+      "id": "empty-locator",
+      "status": "PASS",
+      "error": "ValueError"
+    },
+    {
+      "id": "unapproved-op",
+      "status": "PASS",
+      "error": "ValidationError"
+    },
+    {
+      "id": "accepted-claim",
+      "status": "PASS",
+      "error": "ValidationError"
+    },
+    {
+      "id": "duplicate-key",
+      "status": "PASS",
+      "error": "ValueError"
+    }
+  ],
+  "local_validation_status": "PASS",
+  "professional_qualification": "NOT_RUN",
+  "sqlite_generated": false,
+  "sqlite_import_test": "NOT_RUN",
+  "limitations": [
+    "原文仅网页抽取文本，截图失败，未获原始PDF字节与完整再发布许可",
+    "合成参数及手算预期由本建设者编写，非独立审核者",
+    "strategy-no-threshold仅重复数值oracle，不是策略决策验证",
+    "本地单包引用与固定公式试点，不覆盖所有知识类型、跨包引用、SQLite导入、真实教育效果或CQ06完整路由",
+    "首次合并传输超工具长度上限，分段传输后逐Git Blob校验成功；没有把初次失败记为通过"
+  ],
+  "task_receipt": null
+}

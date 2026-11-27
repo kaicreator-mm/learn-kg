@@ -1,0 +1,112 @@
+{
+  "owner": "H07",
+  "base": "325953f7c9d79a31417d94bba83244c5a9eccc45",
+  "prior_claim_blob": "4939a31fc992b87fb1215fcb69dc97b0f0464bfe",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H07.04.01.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.04.01",
+      "requirement_id": "H07.04.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "公告明确标准面向教学、测试和评价，并以交际任务、量化指标及语言技能描述水平；课程对齐应区分这些层次。",
+      "conditions": [
+        "公告正文，映射字段为项目操作化。"
+      ],
+      "negative_boundary": "不以成员覆盖率等同学习能力。",
+      "source_refs": [
+        "H07-B08-MOE"
+      ],
+      "source_locator": "l7–16",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.04.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "完成全部词表但口语未测",
+        "expected": "能力未知",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H07.04.04.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.04.04",
+      "requirement_id": "H07.04.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "标准为教材编写提供规范参考，教材自身的收录范围与标准范围仍需分别建立版本身份。",
+      "conditions": [
+        "公告l14及项目推论。"
+      ],
+      "negative_boundary": "不能用教材目录代替官方成员清单。",
+      "source_refs": [
+        "H07-B08-MOE"
+      ],
+      "source_locator": "l7–16",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.04.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "教材新增词语",
+        "expected": "标记教材来源而非标准成员",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H07.05.03.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.05.03",
+      "requirement_id": "H07.05.03.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "欧洲委员会要求考试提供者采用透明的关联程序；不同技能有各自内容分析网格。",
+      "conditions": [
+        "官方导读，未阅读完整手册或HSK链接实证。"
+      ],
+      "negative_boundary": "不将相同级别名称视为等值。",
+      "source_refs": [
+        "H07-B08-CEFR"
+      ],
+      "source_locator": "l128–147",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.05.03.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "HSK与CEFR数字或字母等级相似",
+        "expected": "保持UNKNOWN",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H07.05.04.D4.03",
+      "owner": "H07",
+      "d3_id": "H07.05.04",
+      "requirement_id": "H07.05.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "公告发布日期2021-03-31与标准实施日2021-07-01分别记录；公告附件访问失败时不能确认正文档字节。",
+      "conditions": [
+        "公告正文已读取，附件超时；后句证据规则。"
+      ],
+      "negative_boundary": "不以公开公告确认私有归档字节身份。",
+      "source_refs": [
+        "H07-B08-MOE"
+      ],
+      "source_locator": "l7–16",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H07.05.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "原始文件不可读但公告可读",
+        "expected": "保存公告定位，原件待核",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "owner": "K06",
+  "base": "e2c177a2c5108c1ab75ac6eda0caaeecb0586c54",
+  "scope": "SYNTHETIC_PROJECT_RULES_ONLY",
+  "execution": "ACTUAL_JS_BUILDER_EXECUTION",
+  "independent_oracle": false,
+  "limitations": "规则分支演算；不执行实际教学、授权验证、诊断、渐撤算法、效应估计或预算持久化；access_only由合成输入声明，真实便利的分类待审核。脚本已保存，实际运行本轮为JS工具中的同一函数，未独立执行Node文件。",
+  "records": [
+    {
+      "id": "K06-LOGIC-01",
+      "input": {
+        "mode": "observation",
+        "result": "correct",
+        "actor": "learner",
+        "help": "none"
+      },
+      "expected": "INDEPENDENT_CORRECT_OBSERVATION",
+      "actual": "INDEPENDENT_CORRECT_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-02",
+      "input": {
+        "mode": "observation",
+        "result": "correct",
+        "actor": "learner",
+        "help": "access_only"
+      },
+      "expected": "INDEPENDENT_CORRECT_OBSERVATION",
+      "actual": "INDEPENDENT_CORRECT_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-03",
+      "input": {
+        "mode": "observation",
+        "result": "correct",
+        "actor": "learner",
+        "help": "content_hint"
+      },
+      "expected": "ASSISTED_OBSERVATION",
+      "actual": "ASSISTED_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-04",
+      "input": {
+        "mode": "observation",
+        "result": "correct",
+        "actor": "other",
+        "help": "answer"
+      },
+      "expected": "NOT_LEARNER_EVIDENCE",
+      "actual": "NOT_LEARNER_EVIDENCE",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-05",
+      "input": {
+        "mode": "observation",
+        "result": "correct",
+        "actor": "unknown",
+        "help": "none"
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-06",
+      "input": {
+        "mode": "observation",
+        "result": "correct",
+        "actor": "learner",
+        "help": "unknown"
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-07",
+      "input": {
+        "mode": "observation",
+        "result": "incorrect",
+        "actor": "learner",
+        "help": "none"
+      },
+      "expected": "INDEPENDENT_ERROR_OBSERVATION",
+      "actual": "INDEPENDENT_ERROR_OBSERVATION",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-08",
+      "input": {
+        "mode": "observation",
+        "result": "unknown",
+        "actor": "learner",
+        "help": "none"
+      },
+      "expected": "UNKNOWN",
+      "actual": "UNKNOWN",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-09",
+      "input": {
+        "mode": "observation",
+        "result": "correct",
+        "actor": "learner",
+        "help": "partial"
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-10",
+      "input": {
+        "mode": "route",
+        "observation": "assisted_correct",
+        "budget": 2,
+        "authorized": true,
+        "cause": "unresolved"
+      },
+      "expected": "PROPOSE_LESS_HELP_PROBE",
+      "actual": "PROPOSE_LESS_HELP_PROBE",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-11",
+      "input": {
+        "mode": "route",
+        "observation": "error",
+        "budget": 2,
+        "authorized": true,
+        "cause": "unresolved"
+      },
+      "expected": "PROPOSE_DISCRIMINATING_PROBE",
+      "actual": "PROPOSE_DISCRIMINATING_PROBE",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-12",
+      "input": {
+        "mode": "route",
+        "observation": "error",
+        "budget": 2,
+        "authorized": true,
+        "cause": "distinguished"
+      },
+      "expected": "PROPOSE_TARGETED_RETEACH",
+      "actual": "PROPOSE_TARGETED_RETEACH",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-13",
+      "input": {
+        "mode": "route",
+        "observation": "independent_correct",
+        "budget": 2,
+        "authorized": true,
+        "cause": "distinguished"
+      },
+      "expected": "RECORD_OBSERVATION_NOT_MASTERY",
+      "actual": "RECORD_OBSERVATION_NOT_MASTERY",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-14",
+      "input": {
+        "mode": "route",
+        "observation": "unknown",
+        "budget": 2,
+        "authorized": true,
+        "cause": "unresolved"
+      },
+      "expected": "REQUEST_EVIDENCE",
+      "actual": "REQUEST_EVIDENCE",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-15",
+      "input": {
+        "mode": "route",
+        "observation": "error",
+        "budget": 0,
+        "authorized": true,
+        "cause": "distinguished"
+      },
+      "expected": "STOP_BUDGET",
+      "actual": "STOP_BUDGET",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-16",
+      "input": {
+        "mode": "route",
+        "observation": "error",
+        "budget": 2,
+        "authorized": false,
+        "cause": "distinguished"
+      },
+      "expected": "HOLD_AUTH",
+      "actual": "HOLD_AUTH",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-17",
+      "input": {
+        "mode": "route",
+        "observation": "error",
+        "budget": -1,
+        "authorized": true,
+        "cause": "distinguished"
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-18",
+      "input": {
+        "mode": "fidelity",
+        "planned": 5,
+        "delivered": 4,
+        "core": "preserved"
+      },
+      "expected": {
+        "dose": "4/5",
+        "core": "preserved",
+        "outcome": "NOT_INFERRED"
+      },
+      "actual": {
+        "dose": "4/5",
+        "core": "preserved",
+        "outcome": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-19",
+      "input": {
+        "mode": "fidelity",
+        "planned": 5,
+        "delivered": 5,
+        "core": "changed"
+      },
+      "expected": {
+        "dose": "5/5",
+        "core": "changed",
+        "outcome": "NOT_INFERRED"
+      },
+      "actual": {
+        "dose": "5/5",
+        "core": "changed",
+        "outcome": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-20",
+      "input": {
+        "mode": "fidelity",
+        "planned": 5,
+        "delivered": 5,
+        "core": "unknown"
+      },
+      "expected": {
+        "dose": "5/5",
+        "core": "unknown",
+        "outcome": "NOT_INFERRED"
+      },
+      "actual": {
+        "dose": "5/5",
+        "core": "unknown",
+        "outcome": "NOT_INFERRED"
+      },
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-21",
+      "input": {
+        "mode": "fidelity",
+        "planned": 0,
+        "delivered": 0,
+        "core": "preserved"
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    },
+    {
+      "id": "K06-LOGIC-22",
+      "input": {
+        "mode": "fidelity",
+        "planned": 5,
+        "delivered": 6,
+        "core": "preserved"
+      },
+      "expected": "INVALID",
+      "actual": "INVALID",
+      "pass": true
+    }
+  ],
+  "passed": 22
+}

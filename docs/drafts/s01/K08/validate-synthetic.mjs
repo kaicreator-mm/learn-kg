@@ -1,0 +1,11 @@
+// S01 synthetic checks only; node validate-synthetic.mjs
+import {readFileSync} from 'node:fs';
+function check(a){
+ if(!a||typeof a!=="object")return "INVALID";
+ if(a.mode==="calibration"){if(!Array.isArray(a.pairs)||!a.pairs.length||!a.pairs.every(x=>x&&typeof x.id==="string"&&x.id.length>0&&Number.isInteger(x.pred)&&x.pred>=0&&x.pred<=100&&Number.isInteger(x.actual)&&x.actual>=0&&x.actual<=100&&typeof x.matched==="boolean")||new Set(a.pairs.map(x=>x.id)).size!==a.pairs.length)return "INVALID";if(a.pairs.some(x=>!x.matched))return "HOLD_MISMATCH";const d=a.pairs.map(x=>x.pred-x.actual);return {n:d.length,biasNumerator:d.reduce((s,x)=>s+x,0),absoluteNumerator:d.reduce((s,x)=>s+Math.abs(x),0),denominator:d.length,unit:"percentage_points"};}
+ if(a.mode==="support"){if(!["pause","continue","help","unknown"].includes(a.choice)||!["reported","observed_only","unknown"].includes(a.evidence)||typeof a.authorized!=="boolean"||!Number.isInteger(a.budget)||a.budget<0)return "INVALID";if(a.choice==="pause")return "RESPECT_PAUSE";if(!a.authorized)return "HOLD_AUTH";if(a.budget===0)return "STOP_BUDGET";if(a.choice==="unknown")return "ASK_OPTIONAL_PREFERENCE";if(a.choice==="help")return "OFFER_HELP_NOT_MASTERY";return "CONTINUE_CANDIDATE_NO_EMOTION_INFERENCE";}
+ if(a.mode==="conflict"){if(!Array.isArray(a.options)||!a.options.length||!a.options.every(x=>x&&typeof x.id==="string"&&x.id.length>0&&Number.isInteger(x.cost)&&x.cost>=0)||new Set(a.options.map(x=>x.id)).size!==a.options.length||!Number.isInteger(a.budget)||a.budget<0||!(a.selected===null||typeof a.selected==="string"))return "INVALID";const available=a.options.filter(x=>x.cost<=a.budget).map(x=>x.id);if(a.selected===null)return {available,status:available.length?"USER_CHOICE_REQUIRED":"NO_FEASIBLE_OPTION"};if(!a.options.some(x=>x.id===a.selected))return "INVALID";return {available,status:available.includes(a.selected)?"SELECTED_CANDIDATE":"SELECTED_OVER_BUDGET"};}
+ return "INVALID";
+}
+const evidence=JSON.parse(readFileSync(new URL('./logic-evidence.json',import.meta.url),'utf8'));
+let passed=0;for(const row of evidence.records){if(JSON.stringify(check(row.input))!==JSON.stringify(row.expected))throw Error(row.id);passed++;}console.log(JSON.stringify({passed,total:evidence.records.length}));

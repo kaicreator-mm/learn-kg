@@ -1,0 +1,984 @@
+{
+  "owner": "K10",
+  "status": "S01_INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "K10.01.01.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.01.01",
+      "requirement_id": "K10.01.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "知识追踪输入是按时序的任务交互历史，输出通常预测未来表现；事件身份/版本/去重是项目数据合同",
+      "conditions": [
+        "预测时点须固定"
+      ],
+      "negative_boundary": "日志存在不等于知识状态改变",
+      "source_refs": [
+        "K10-S5"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.01.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.01.01",
+      "requirement_id": "K10.01.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "原事件ID去重或冲突隔离；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "日志存在不等于知识状态改变",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.02.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.01.02",
+      "requirement_id": "K10.01.02.RQ01",
+      "claim_type": "METHOD",
+      "statement": "知识追踪与模型追踪分工：教学提示帮助完成，而估计使用观察；提示条件必须进入观测解释",
+      "conditions": [
+        "原程序导师背景"
+      ],
+      "negative_boundary": "不能将提示正确合并为无提示正确",
+      "source_refs": [
+        "K10-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.02.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.01.02",
+      "requirement_id": "K10.01.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不当无提示正确更新；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "不能将提示正确合并为无提示正确",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.03.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.01.03",
+      "requirement_id": "K10.01.03.RQ01",
+      "claim_type": "MODEL",
+      "statement": "HLR时距为距前次练习的间隔，区别于单次作答耗时；后者受暂停等条件影响",
+      "conditions": [
+        "HLR间隔有单位；耗时解释直接来源待补"
+      ],
+      "negative_boundary": "耗时长不能唯一推断困难",
+      "source_refs": [
+        "K10-S2"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.03.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.01.03",
+      "requirement_id": "K10.01.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "记录活跃/墙钟时间与未知；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "耗时长不能唯一推断困难",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.04.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.01.04",
+      "requirement_id": "K10.01.04.RQ01",
+      "claim_type": "MODEL",
+      "statement": "BKT潜在状态为习得或未习得，观测是条件概率生成；后验不是直接观测",
+      "conditions": [
+        "单组件二状态"
+      ],
+      "negative_boundary": "估计值不等于直接观测",
+      "source_refs": [
+        "K10-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.04.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.01.04",
+      "requirement_id": "K10.01.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保留后验及观测来源；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "估计值不等于直接观测",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.05.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.01.05",
+      "requirement_id": "K10.01.05.RQ01",
+      "claim_type": "METHOD",
+      "statement": "观测条件决定证据解释；缺失或未作答不能在无模型假设时编码为错误",
+      "conditions": [
+        "缺失机制专门研究待核"
+      ],
+      "negative_boundary": "缺失不默认错误或零能力",
+      "source_refs": [
+        "K10-S8"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.01.05.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.01.05",
+      "requirement_id": "K10.01.05.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "标记缺失，拒绝自动更新；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "缺失不默认错误或零能力",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.01.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.02.01",
+      "requirement_id": "K10.02.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "BKT P(C)=p(1-S)+(1-p)G，q正确=p(1-S)/P(C)，q错误=pS/(1-P(C))；下一先验q+(1-q)T",
+      "conditions": [
+        "原模型无遗忘；零似然拒绝；沿用既有试点"
+      ],
+      "negative_boundary": "后验概率不等于已验证掌握",
+      "source_refs": [
+        "K10-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.01.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.02.01",
+      "requirement_id": "K10.02.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "正确q=.75，next=.775；不当作掌握；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "后验概率不等于已验证掌握",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.02.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.02.02",
+      "requirement_id": "K10.02.02.RQ01",
+      "claim_type": "MODEL",
+      "statement": "G=P(C|未习得)，S=P(W|已习得)，是模型条件参数而非行为意图；G+S=1无判别力",
+      "conditions": [
+        "参数在[0,1]，可识别性待核"
+      ],
+      "negative_boundary": "猜测参数不等于真实意图",
+      "source_refs": [
+        "K10-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.02.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.02.02",
+      "requirement_id": "K10.02.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不确定是滑移还是其他原因；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "猜测参数不等于真实意图",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.03.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.02.03",
+      "requirement_id": "K10.02.03.RQ01",
+      "claim_type": "MODEL",
+      "statement": "原BKT在观测后应用学习转移且没有反向遗忘转移；遗忘扩展必须另定义",
+      "conditions": [
+        "转移时序明确"
+      ],
+      "negative_boundary": "不能把模型转移率视为因果教学效果",
+      "source_refs": [
+        "K10-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.03.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.02.03",
+      "requirement_id": "K10.02.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不将T解释为因果效果；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "不能把模型转移率视为因果教学效果",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.04.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.02.04",
+      "requirement_id": "K10.02.04.RQ01",
+      "claim_type": "MODEL",
+      "statement": "PFA将多组件贡献相加于logit；与BKT独立单组件更新不是同一模型",
+      "conditions": [
+        "Eq3、组件映射须独立证据"
+      ],
+      "negative_boundary": "未证映射不强制更新所有组件",
+      "source_refs": [
+        "K10-S3"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.02.04.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.02.04",
+      "requirement_id": "K10.02.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不默认两者都掌握；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "未证映射不强制更新所有组件",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.01.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.03.01",
+      "requirement_id": "K10.03.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "HLR预测指定词汇及时间差的回忆概率p=2^(-Δ/h)，而非一般能力",
+      "conditions": [
+        "固定h、无中间练习，Δ≥0"
+      ],
+      "negative_boundary": "回忆概率不等于迁移能力",
+      "source_refs": [
+        "K10-S2"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.01.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.03.01",
+      "requirement_id": "K10.03.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "p=.25仅回忆预测；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "回忆概率不等于迁移能力",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.02.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.03.02",
+      "requirement_id": "K10.03.02.RQ01",
+      "claim_type": "MODEL",
+      "statement": "当Δ=h时p=.5；估计h=2^(θ·x)，逆解h=-Δ/log2(p)要求Δ>0且0<p<1",
+      "conditions": [
+        "同单位、有限数值"
+      ],
+      "negative_boundary": "同一半衰期不适用所有材料",
+      "source_refs": [
+        "K10-S2"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.02.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.03.02",
+      "requirement_id": "K10.03.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "h=4天，不是推荐默认值；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "同一半衰期不适用所有材料",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.03.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.03.03",
+      "requirement_id": "K10.03.03.RQ01",
+      "claim_type": "MODEL",
+      "statement": "HLR的h是半衰期；其他模型稳定性、难度是模型特定状态，不能凭名称换算",
+      "conditions": [
+        "其他复习模型专门源待核"
+      ],
+      "negative_boundary": "不同复习模型的稳定性不可直接互换",
+      "source_refs": [
+        "K10-S2"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.03.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.03.03",
+      "requirement_id": "K10.03.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保留版本及参数语义；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "不同复习模型的稳定性不可直接互换",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.04.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.03.04",
+      "requirement_id": "K10.03.04.RQ01",
+      "claim_type": "MODEL",
+      "statement": "指数衰减是HLR采用的候选形式；其他遗忘曲线需独立比较拟合及外推",
+      "conditions": [
+        "非普适记忆定律"
+      ],
+      "negative_boundary": "不假设所有遗忘呈单一曲线",
+      "source_refs": [
+        "K10-S2"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.04.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.03.04",
+      "requirement_id": "K10.03.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不强制共享h；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "不假设所有遗忘呈单一曲线",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.05.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.03.05",
+      "requirement_id": "K10.03.05.RQ01",
+      "claim_type": "METHOD",
+      "statement": "HLR以特征权重和损失拟合观察回忆率；训练损失与独立个体预测校准不同",
+      "conditions": [
+        "原Eq3；独立分割及置信区间另核"
+      ],
+      "negative_boundary": "训练拟合不证明个体校准",
+      "source_refs": [
+        "K10-S2"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.03.05.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.03.05",
+      "requirement_id": "K10.03.05.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "按未来及未见学习者任务验证；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "训练拟合不证明个体校准",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.01.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.04.01",
+      "requirement_id": "K10.04.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "PFA原Eq3 logit=Σ(β_j+γ_j s_ij+ρ_j f_ij)，概率σ(logit)，计数只用预测前历史",
+      "conditions": [
+        "KC级先前成功/失败，补偿性；原式无个人截距"
+      ],
+      "negative_boundary": "累计次数不直接证明因果",
+      "source_refs": [
+        "K10-S3"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.01.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.04.01",
+      "requirement_id": "K10.04.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "logit0，p=.5；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "累计次数不直接证明因果",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.02.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.04.02",
+      "requirement_id": "K10.04.02.RQ01",
+      "claim_type": "MODEL",
+      "statement": "DKT用RNN/LSTM对历史交互编码并输出未来响应概率；隐藏向量并非已证知识实体",
+      "conditions": [
+        "原p3 Eq1–2；预测目标固定"
+      ],
+      "negative_boundary": "隐藏向量不能直接作为知识实体",
+      "source_refs": [
+        "K10-S4"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.02.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.04.02",
+      "requirement_id": "K10.04.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不创建未经语义验证的知识点；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "隐藏向量不能直接作为知识实体",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.03.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.04.03",
+      "requirement_id": "K10.04.03.RQ01",
+      "claim_type": "MODEL",
+      "statement": "SAKT以当前查询关联过去交互预测下一响应；注意力相关性不等于因果或必要先修",
+      "conditions": [
+        "只允许可用历史"
+      ],
+      "negative_boundary": "注意力权重不是因果解释",
+      "source_refs": [
+        "K10-S5"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.03.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.04.03",
+      "requirement_id": "K10.04.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "拒绝未来信息；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "注意力权重不是因果解释",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.04.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.04.04",
+      "requirement_id": "K10.04.04.RQ01",
+      "claim_type": "METHOD",
+      "statement": "下一交互预测只允许预测时点前可用特征；时距、上下文和提示需保留身份和单位",
+      "conditions": [
+        "特征工程合同"
+      ],
+      "negative_boundary": "未来事件不得进入过去预测",
+      "source_refs": [
+        "K10-S5"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.04.04.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.04.04",
+      "requirement_id": "K10.04.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "泄漏拒绝；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "未来事件不得进入过去预测",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.01.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.05.01",
+      "requirement_id": "K10.05.01.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "技能是目标能力构念，观测与解释是独立层次；组合技能需完整任务证据",
+      "conditions": [
+        "目标条件与量尺固定"
+      ],
+      "negative_boundary": "单任务成功不等于普遍技能",
+      "source_refs": [
+        "K10-S8"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.01.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.05.01",
+      "requirement_id": "K10.05.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不推断通用技能；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "单任务成功不等于普遍技能",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.02.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.05.02",
+      "requirement_id": "K10.05.02.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "知识组件是领域解释模型的一部分，答题观测与知识推断须经证据模型",
+      "conditions": [
+        "替代解释及组件定义"
+      ],
+      "negative_boundary": "答对不直接等于理解",
+      "source_refs": [
+        "K10-S8"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.02.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.05.02",
+      "requirement_id": "K10.05.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "另测独立解释；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "答对不直接等于理解",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.03.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.05.03",
+      "requirement_id": "K10.05.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "目标由学习者或授权主体确定，模型概率不能覆盖本人目标；变更需版本",
+      "conditions": [
+        "项目策略而非实证"
+      ],
+      "negative_boundary": "目标不由模型估计擅自替代",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.03.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.05.03",
+      "requirement_id": "K10.05.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不擅改汉语学习目标；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "目标不由模型估计擅自替代",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.04.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.05.04",
+      "requirement_id": "K10.05.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "偏好记录显式选择、情境与可撤回性；不从日志推断固定学习风格",
+      "conditions": [
+        "项目规则；K16主责"
+      ],
+      "negative_boundary": "偏好不等于固定学习风格",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.04.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.05.04",
+      "requirement_id": "K10.05.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "不能永久归类视觉型；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "偏好不等于固定学习风格",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.05.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.05.05",
+      "requirement_id": "K10.05.05.RQ01",
+      "claim_type": "RESEARCH_HYPOTHESIS",
+      "statement": "多个状态可共同影响表现，但耦合结构必须明确条件、方向、可辨别证据",
+      "conditions": [
+        "缺乏直接来源，待研究"
+      ],
+      "negative_boundary": "相关状态不自动建立因果边",
+      "source_refs": [],
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.05.05.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.05.05",
+      "requirement_id": "K10.05.05.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保留竞争解释，不建因果边；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "相关状态不自动建立因果边",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.01.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.06.01",
+      "requirement_id": "K10.06.01.RQ01",
+      "claim_type": "MODEL",
+      "statement": "二元Brier=mean((p-y)^2)；可靠性图比较分箱预测均值和实际频率，Brier并非纯校准指标",
+      "conditions": [
+        "二元标签、明确样本及分箱"
+      ],
+      "negative_boundary": "准确率高不证明概率校准",
+      "source_refs": [
+        "K10-S7"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.01.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.06.01",
+      "requirement_id": "K10.06.01.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "Brier=.01，不声称完美校准；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "准确率高不证明概率校准",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.02.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.06.02",
+      "requirement_id": "K10.06.02.RQ01",
+      "claim_type": "MODEL",
+      "statement": "AUC衡量正负样本排序，平分计半；不代表概率可靠性",
+      "conditions": [
+        "pyKT摘要讨论指标评价，AUC公式另核"
+      ],
+      "negative_boundary": "AUC高不证明个体可靠性",
+      "source_refs": [
+        "K10-S6"
+      ],
+      "evidence_status": "ABSTRACT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.02.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.06.02",
+      "requirement_id": "K10.06.02.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "AUC不变仍可能失校准；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "AUC高不证明个体可靠性",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.03.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.06.03",
+      "requirement_id": "K10.06.03.RQ01",
+      "claim_type": "MODEL",
+      "statement": "BKT有首次机会前的p(L0)；冷启动可使用明确先验而不默认为零",
+      "conditions": [
+        "先验来源与适用范围另核"
+      ],
+      "negative_boundary": "无历史不能默认为零掌握",
+      "source_refs": [
+        "K10-S1"
+      ],
+      "evidence_status": "PDF_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.03.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.06.03",
+      "requirement_id": "K10.06.03.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保留先验/未知及不确定性；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "无历史不能默认为零掌握",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.04.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.06.04",
+      "requirement_id": "K10.06.04.RQ01",
+      "claim_type": "RESEARCH_HYPOTHESIS",
+      "statement": "漂移可表现为输入分布、标签关系或测量条件变化，报警不等于模型已失效",
+      "conditions": [
+        "专门漂移来源待补"
+      ],
+      "negative_boundary": "分布漂移不自动更新正式知识",
+      "source_refs": [],
+      "evidence_status": "HOLD_SOURCE_DETAIL",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.04.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.06.04",
+      "requirement_id": "K10.06.04.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "隔离版本并重新评估；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "分布漂移不自动更新正式知识",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.05.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.06.05",
+      "requirement_id": "K10.06.05.RQ01",
+      "claim_type": "METHOD",
+      "statement": "pyKT指出不正确评价设置可能引入标签泄漏并夸大结果；分割应与目标预测场景一致",
+      "conditions": [
+        "摘要级证据；用户/时间/题族隔离候选策略"
+      ],
+      "negative_boundary": "随机拆分不一定避免泄漏",
+      "source_refs": [
+        "K10-S6"
+      ],
+      "evidence_status": "ABSTRACT_LIMITED",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.05.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.06.05",
+      "requirement_id": "K10.06.05.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "按题族或时间边界重新划分；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "随机拆分不一定避免泄漏",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.06.D4.01",
+      "owner": "K10",
+      "d3_id": "K10.06.06",
+      "requirement_id": "K10.06.06.RQ01",
+      "claim_type": "FRAMEWORK",
+      "statement": "观测到构念的推断依解释模型及其局限；点预测不表达所有参数和模型不确定性",
+      "conditions": [
+        "置信区间方法另核"
+      ],
+      "negative_boundary": "不以点估计掩盖证据不足",
+      "source_refs": [
+        "K10-S8"
+      ],
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    },
+    {
+      "stable_id": "K10.06.06.D4.02",
+      "owner": "K10",
+      "d3_id": "K10.06.06",
+      "requirement_id": "K10.06.06.RQ01",
+      "claim_type": "PROJECT_RULE",
+      "statement": "保存样本范围和不确定性；证据不足保留UNKNOWN。",
+      "conditions": [
+        "候选工程规则；非实证"
+      ],
+      "negative_boundary": "不以点估计掩盖证据不足",
+      "source_refs": [],
+      "evidence_status": "PROJECT_POLICY",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

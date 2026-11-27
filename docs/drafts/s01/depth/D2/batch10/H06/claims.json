@@ -1,0 +1,112 @@
+{
+  "owner": "H06",
+  "base": "84c9e4ec24798af4589ec96e9c61d4f1f3bd9ada",
+  "prior_claim_blob": "e083e3d99464ab494044eca8f3ed70ed8c7b6673",
+  "status": "D2_ADDITIVE_NOT_QUALIFIED",
+  "records": [
+    {
+      "stable_id": "H06.01.01.D4.03",
+      "owner": "H06",
+      "d3_id": "H06.01.01",
+      "requirement_id": "H06.01.01.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "AAPPL将理解性听力与阅读分别列为测试组成部分，普通话亦在支持语言中。项目音辨任务需呈现实际声音，并另行核证最小对立。",
+      "conditions": [
+        "官方交际测试概览仅部分支持通道分离；未验证音位辨别任务。"
+      ],
+      "negative_boundary": "不能用阅读题结果代替声音辨别。",
+      "source_refs": [
+        "H06-B10-AP"
+      ],
+      "source_locator": "l284–286,299–308,316–321",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H06.01.01.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "看拼音选答案与听录音选答案",
+        "expected": "分别记录通道，不合并为音辨",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H06.04.02.D4.03",
+      "owner": "H06",
+      "d3_id": "H06.04.02",
+      "requirement_id": "H06.04.02.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "交际写作任务可要求实际目的下的文本产出，如给笔友写邮件；评价依据功能描述，而非固定字符串匹配。",
+      "conditions": [
+        "AAPPL概览支持功能任务及描述评分；开放题具体量规另证。"
+      ],
+      "negative_boundary": "不能由任意语法正确句推断任务目标完成。",
+      "source_refs": [
+        "H06-B10-AP"
+      ],
+      "source_locator": "l284–286,299–308,316–321",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H06.04.02.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "写邮件改约时间",
+        "expected": "按目标、意义及量规评价",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H06.06.04.D4.03",
+      "owner": "H06",
+      "d3_id": "H06.06.04",
+      "requirement_id": "H06.06.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "Can-Do描述强调跨情境、持续的独立表现，并用量规评价随时间变化；项目证据记录绑定任务、帮助、版本与时间。",
+      "conditions": [
+        "官方建议；具体字段是项目操作化。"
+      ],
+      "negative_boundary": "不能由一次通过或标准范围成员宣称已掌握。",
+      "source_refs": [
+        "H06-B10-C"
+      ],
+      "source_locator": "l336–349,361",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H06.06.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "一次提示后成功",
+        "expected": "保持独立表现未知",
+        "validation": "DESIGN_ONLY"
+      }
+    },
+    {
+      "stable_id": "H06.04.04.D4.03",
+      "owner": "H06",
+      "d3_id": "H06.04.04",
+      "requirement_id": "H06.04.04.RQ01",
+      "claim_type": "PROFESSIONAL_DEPTH_CANDIDATE",
+      "statement": "独立表现与经支持的产出须区分；项目修订记录分别保存初稿、反馈、本人修改及随后独立任务。",
+      "conditions": [
+        "Can-Do独立表现原则部分支持，非修订教学效果实验。"
+      ],
+      "negative_boundary": "不将外部代写视为独立能力。",
+      "source_refs": [
+        "H06-B10-C"
+      ],
+      "source_locator": "l336–349,361",
+      "evidence_status": "HTML_LOCATED_CANDIDATE",
+      "base_claim_ref": "H06.04.04.D4.01",
+      "relationship": "PARTIAL_OR_DIRECT_REFINEMENT_PENDING_REVIEW",
+      "status": "DRAFT",
+      "qualification": "NOT_RUN",
+      "example": {
+        "fixture": "本人按反馈修订后另写新文本",
+        "expected": "按帮助条件分别保存",
+        "validation": "DESIGN_ONLY"
+      }
+    }
+  ]
+}

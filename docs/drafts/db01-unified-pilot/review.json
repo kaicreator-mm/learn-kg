@@ -1,0 +1,521 @@
+{
+  "schema_version": "draft-unified-1",
+  "package_id": "learn-kg.draft.unified.review",
+  "version": "0.0.2",
+  "status": "INVESTIGATION_ONLY",
+  "records": [
+    {
+      "stable_id": "hlr:claim:policy",
+      "kind": "Claim",
+      "owner": "K11",
+      "status": "DRAFT",
+      "topic": "K11.02.02",
+      "claim_type": "ENGINEERING_POLICY",
+      "statement": "试点仅在回忆模型适用、目标阈值明确、权限有效且预算足够时建议到期复习；否则等待、澄清或拒绝。",
+      "conditions": [
+        "用户明确目标阈值",
+        "候选活动成本和预算同为分钟",
+        "允许复习且模型估计有效"
+      ],
+      "limitations": [
+        "阈值不是论文参数或最佳学习策略",
+        "不声称教学收益、不自动执行"
+      ],
+      "evidence_refs": []
+    },
+    {
+      "stable_id": "hlr:policy:review",
+      "kind": "PolicySpec",
+      "owner": "K11",
+      "status": "DRAFT",
+      "topic": "K11.02.02",
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:policy",
+          "kind": "Claim"
+        }
+      ],
+      "model_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "rules": [
+        {
+          "guard": "NOT_AUTHORIZED",
+          "action": "REJECT_PERMISSION"
+        },
+        {
+          "guard": "MISSING_OR_INVALID_INPUT",
+          "action": "UNKNOWN"
+        },
+        {
+          "guard": "NOT_APPLICABLE",
+          "action": "UNKNOWN"
+        },
+        {
+          "guard": "PROBABILITY_ABOVE_TARGET",
+          "action": "WAIT"
+        },
+        {
+          "guard": "COST_EXCEEDS_BUDGET",
+          "action": "DEFER_BUDGET"
+        },
+        {
+          "guard": "ALWAYS",
+          "action": "SUGGEST_REVIEW"
+        }
+      ],
+      "rule_order": "FIRST_MATCH",
+      "effect": "ADVICE_ONLY"
+    },
+    {
+      "stable_id": "hlr:relation:model-informs-policy",
+      "kind": "Relation",
+      "owner": "K11",
+      "status": "DRAFT",
+      "relation_type": "informs_decision",
+      "from_ref": {
+        "package_id": "learn-kg.draft.unified.hlr",
+        "version": "0.0.2",
+        "stable_id": "hlr:model:hlr",
+        "kind": "ModelSpec"
+      },
+      "to_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "claim_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:claim:policy",
+          "kind": "Claim"
+        }
+      ],
+      "conditions": [
+        "模型适用",
+        "用户目标明确",
+        "权限和预算满足"
+      ],
+      "transitive": false,
+      "reversible": false
+    },
+    {
+      "stable_id": "hlr:case:policy-due",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "explanation": "低于目标且可行"
+    },
+    {
+      "stable_id": "hlr:case:policy-equal",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.5,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "SUGGEST_REVIEW"
+      },
+      "explanation": "等于阈值按试点规则到期"
+    },
+    {
+      "stable_id": "hlr:case:policy-wait",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.75,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "WAIT"
+      },
+      "explanation": "高于阈值"
+    },
+    {
+      "stable_id": "hlr:case:policy-budget",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 3
+      },
+      "expected": {
+        "status": "DEFER_BUDGET"
+      },
+      "explanation": "预算不足"
+    },
+    {
+      "stable_id": "hlr:case:policy-permission",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": false,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "REJECT_PERMISSION"
+      },
+      "explanation": "权限优先"
+    },
+    {
+      "stable_id": "hlr:case:policy-unknown",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": null,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "无预测"
+    },
+    {
+      "stable_id": "hlr:case:policy-not-applicable",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 0.5,
+        "authorized": true,
+        "applicable": false,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "构念不适用"
+    },
+    {
+      "stable_id": "hlr:case:policy-unknown-target",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": null,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "无用户目标"
+    },
+    {
+      "stable_id": "hlr:case:policy-bad-target",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": 0.25,
+        "target": 1.1,
+        "authorized": true,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "UNKNOWN"
+      },
+      "explanation": "阈值非法"
+    },
+    {
+      "stable_id": "hlr:case:policy-denied-unknown",
+      "kind": "Case",
+      "owner": "K11",
+      "status": "DRAFT",
+      "target_ref": {
+        "package_id": "learn-kg.draft.unified.review",
+        "version": "0.0.2",
+        "stable_id": "hlr:policy:review",
+        "kind": "PolicySpec"
+      },
+      "mode": "policy",
+      "input": {
+        "p": null,
+        "target": 0.5,
+        "authorized": false,
+        "applicable": true,
+        "cost_minutes": 4,
+        "budget_minutes": 5
+      },
+      "expected": {
+        "status": "REJECT_PERMISSION"
+      },
+      "explanation": "拒绝优先于未知"
+    },
+    {
+      "stable_id": "hlr:validation:pilot",
+      "kind": "ValidationSpec",
+      "owner": "K10",
+      "status": "DRAFT",
+      "case_refs": [
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:zero",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:half",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:double",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:fraction",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:negative-time",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:zero-h",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:wrong-unit",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:underflow",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:regression",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:mismatch",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:overflow",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:inverse",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:inverse-one",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:inverse-zero",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.hlr",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:inverse-zero-time",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-due",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-equal",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-wait",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-budget",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-permission",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-unknown",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-not-applicable",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-unknown-target",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-bad-target",
+          "kind": "Case"
+        },
+        {
+          "package_id": "learn-kg.draft.unified.review",
+          "version": "0.0.2",
+          "stable_id": "hlr:case:policy-denied-unknown",
+          "kind": "Case"
+        }
+      ],
+      "method": "Builder-authored expected cases; finite expression evaluation, explicit ordered policy and structural rejection",
+      "run_status": "NOT_RUN",
+      "qualification": "NOT_RUN"
+    }
+  ]
+}

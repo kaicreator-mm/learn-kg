@@ -1,0 +1,2049 @@
+{
+  "status": "SYNTHETIC_FIXED_SAME_AUTHOR_EXPECTATIONS",
+  "limits": "Time and thresholds synthetic, not pedagogical policy. Inputs are declared evidence assertions, not authenticated data. No production changes.",
+  "scenarios": [
+    {
+      "id": "assisted_to_independent",
+      "contract_ids": [
+        "P03",
+        "P04",
+        "P06",
+        "F04",
+        "A02",
+        "A03"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "HINT",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 2,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "f",
+          "type": "FEEDBACK",
+          "time": 3,
+          "observation": "a"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "i",
+          "type": "OBSERVE",
+          "time": 4,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam2",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "j",
+          "type": "ASSESS",
+          "time": 5,
+          "observation": "i",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "ASSISTED_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "UNKNOWN_ASSISTED"
+          },
+          {
+            "code": "FEEDBACK_CANDIDATE"
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "IMMEDIATE_CANDIDATE",
+            "result": "CORRECT"
+          }
+        ],
+        "candidate_count": 1,
+        "observation_count": 2,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "delayed_new_family_cross_session",
+      "contract_ids": [
+        "P05",
+        "P09",
+        "P10",
+        "F08",
+        "A05"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 2,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "end",
+          "type": "END",
+          "time": 3
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 100,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "i",
+          "type": "OBSERVE",
+          "time": 101,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam2",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "j",
+          "type": "ASSESS",
+          "time": 102,
+          "observation": "i",
+          "phase": "RETENTION",
+          "prior": "a",
+          "min_delay": 80
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "IMMEDIATE_CANDIDATE",
+            "result": "CORRECT"
+          },
+          {
+            "code": "ENDED"
+          },
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "RETENTION_CANDIDATE",
+            "result": "CORRECT"
+          }
+        ],
+        "candidate_count": 2,
+        "observation_count": 2,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "retention_same_family",
+      "contract_ids": [
+        "P05",
+        "P09",
+        "A05"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "i",
+          "type": "OBSERVE",
+          "time": 100,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "j",
+          "type": "ASSESS",
+          "time": 101,
+          "observation": "i",
+          "phase": "RETENTION",
+          "prior": "a",
+          "min_delay": 80
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "HOLD_NOVELTY"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 2,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "retention_too_soon",
+      "contract_ids": [
+        "P05",
+        "A05"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "i",
+          "type": "OBSERVE",
+          "time": 2,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam2",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "j",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "i",
+          "phase": "RETENTION",
+          "prior": "a",
+          "min_delay": 80
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "UNKNOWN_DELAY"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 2,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "transfer_mapping",
+      "contract_ids": [
+        "P09",
+        "F08",
+        "A05"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "i",
+          "type": "OBSERVE",
+          "time": 2,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam2",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "market"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "j",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "i",
+          "phase": "TRANSFER",
+          "prior": "a",
+          "target_context_defined": true,
+          "mapping_verified": false
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "k",
+          "type": "ASSESS",
+          "time": 4,
+          "observation": "i",
+          "phase": "TRANSFER",
+          "prior": "a",
+          "target_context_defined": true,
+          "mapping_verified": true
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "HOLD_TRANSFER_MAPPING"
+          },
+          {
+            "code": "TRANSFER_CANDIDATE",
+            "result": "CORRECT"
+          }
+        ],
+        "candidate_count": 1,
+        "observation_count": 2,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "missing_ambiguity_construct",
+      "contract_ids": [
+        "P06",
+        "F06",
+        "A07"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "m",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": false,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 2,
+          "available": true,
+          "ambiguous": true,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "c",
+          "type": "OBSERVE",
+          "time": 3,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": false,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "j",
+          "type": "ASSESS",
+          "time": 4,
+          "observation": "m",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "UNKNOWN_MISSING"
+          },
+          {
+            "code": "HOLD_AMBIGUOUS"
+          },
+          {
+            "code": "HOLD_CONSTRUCT"
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 0,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "budget_and_optional_motivation",
+      "contract_ids": [
+        "P07",
+        "P08",
+        "A04"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "p",
+          "type": "PLAN",
+          "time": 1,
+          "feasible": true,
+          "cost": 7
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "q",
+          "type": "PLAN",
+          "time": 2,
+          "feasible": true,
+          "cost": 4
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "r",
+          "type": "PLAN",
+          "time": 3,
+          "feasible": null,
+          "cost": 1
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "m",
+          "type": "MOTIVATE",
+          "time": 4,
+          "opt_in": false,
+          "strategy": "OPTIONAL_REST"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "n",
+          "type": "MOTIVATE",
+          "time": 5,
+          "opt_in": true,
+          "strategy": "PUNISH_STREAK"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "o",
+          "type": "MOTIVATE",
+          "time": 6,
+          "opt_in": true,
+          "strategy": "OFFER_HELP"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "PLAN_CANDIDATE",
+            "remaining": 3
+          },
+          {
+            "code": "HOLD_BUDGET"
+          },
+          {
+            "code": "HOLD_FEASIBILITY"
+          },
+          {
+            "code": "HOLD_MOTIVATION_CONSENT"
+          },
+          {
+            "code": "HOLD_MOTIVATION_STRATEGY"
+          },
+          {
+            "code": "OPTIONAL_SUGGESTION"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 0,
+        "suggestion_count": 1,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "exit_blocks_restart_new_version",
+      "contract_ids": [
+        "P07",
+        "P10",
+        "F07"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "x",
+          "type": "EXIT",
+          "time": 1
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vB",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 2,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "p",
+          "type": "PLAN",
+          "time": 3,
+          "feasible": true,
+          "cost": 1
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "m",
+          "type": "MOTIVATE",
+          "time": 4,
+          "opt_in": true,
+          "strategy": "OFFER_HELP"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "EXITED"
+          },
+          {
+            "code": "HOLD_EXITED"
+          },
+          {
+            "code": "HOLD_EXITED"
+          },
+          {
+            "code": "HOLD_EXITED"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 0,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "replay_and_conflict",
+      "contract_ids": [
+        "P06",
+        "P10",
+        "F04"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "INCORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 2,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "DUPLICATE"
+          },
+          {
+            "code": "HOLD_EVENT_CONFLICT"
+          },
+          {
+            "code": "IMMEDIATE_CANDIDATE",
+            "result": "CORRECT"
+          }
+        ],
+        "candidate_count": 1,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "isolate_subject",
+      "contract_ids": [
+        "P10",
+        "F05",
+        "A03"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "math",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 2,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "math",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "isolate_knowledge_version",
+      "contract_ids": [
+        "P10",
+        "F05",
+        "A03"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vB",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 2,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vB",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "isolate_rubric",
+      "contract_ids": [
+        "P10",
+        "F05",
+        "A03"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r2",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 2,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r2",
+          "session": "s2",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "isolate_component",
+      "contract_ids": [
+        "P10",
+        "F05",
+        "A03"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "other",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 2,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "other",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "isolate_construct",
+      "contract_ids": [
+        "P10",
+        "F05",
+        "A03"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "production",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 2,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "production",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "isolate_learner",
+      "contract_ids": [
+        "P10",
+        "F05",
+        "A03"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L2",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "s2",
+          "type": "START",
+          "time": 2,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L2",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s2",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "auth_unknown_and_order",
+      "contract_ids": [
+        "P10",
+        "F07"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": null,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "b",
+          "type": "OBSERVE",
+          "time": 2,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "c",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "d",
+          "type": "ASSESS",
+          "time": 3,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "HOLD_AUTH"
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "HOLD_TIME_ORDER"
+          },
+          {
+            "code": "HOLD_EVIDENCE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "incorrect_preserved_no_mastery",
+      "contract_ids": [
+        "P06",
+        "P09",
+        "F05"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "INCORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "b",
+          "type": "ASSESS",
+          "time": 2,
+          "observation": "a",
+          "phase": "IMMEDIATE"
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "INCORRECT"
+          },
+          {
+            "code": "IMMEDIATE_CANDIDATE",
+            "result": "INCORRECT"
+          }
+        ],
+        "candidate_count": 1,
+        "observation_count": 1,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    },
+    {
+      "id": "baseline_assisted_rejected",
+      "contract_ids": [
+        "P05",
+        "F08",
+        "A05"
+      ],
+      "events": [
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "s",
+          "type": "START",
+          "time": 0,
+          "budget": 10
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "a",
+          "type": "OBSERVE",
+          "time": 1,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam1",
+          "result": "CORRECT",
+          "assistance": "HINT",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "b",
+          "type": "OBSERVE",
+          "time": 100,
+          "available": true,
+          "ambiguous": false,
+          "construct_preserved": true,
+          "task_version": "t1",
+          "family": "fam2",
+          "result": "CORRECT",
+          "assistance": "NONE",
+          "context": "class"
+        },
+        {
+          "learner": "SYN-L1",
+          "subject": "zh",
+          "knowledge_version": "vA",
+          "construct": "tone-discrimination",
+          "component": "tone-2-3",
+          "rubric": "r1",
+          "session": "s1",
+          "authorized": true,
+          "id": "c",
+          "type": "ASSESS",
+          "time": 101,
+          "observation": "b",
+          "phase": "RETENTION",
+          "prior": "a",
+          "min_delay": 10
+        }
+      ],
+      "expected": {
+        "steps": [
+          {
+            "code": "STARTED",
+            "remaining": 10
+          },
+          {
+            "code": "ASSISTED_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "INDEPENDENT_OBSERVATION",
+            "result": "CORRECT"
+          },
+          {
+            "code": "HOLD_BASELINE"
+          }
+        ],
+        "candidate_count": 0,
+        "observation_count": 2,
+        "suggestion_count": 0,
+        "production_writes": 0
+      }
+    }
+  ]
+}
