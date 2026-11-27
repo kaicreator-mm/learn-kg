@@ -1,0 +1,1101 @@
+[
+  {
+    "id": "TR-F01",
+    "topic": "K10.02.01",
+    "mode": "bkt",
+    "input": {
+      "p": "1/2",
+      "s": "1/5",
+      "g": "1/5",
+      "t": "1/10",
+      "correct": true,
+      "matching_observation": true,
+      "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+    },
+    "expected": {
+      "likelihood": "1/2",
+      "posterior": "4/5",
+      "next_prior": "41/50"
+    }
+  },
+  {
+    "id": "TR-F02",
+    "topic": "K10.02.01",
+    "mode": "bkt",
+    "input": {
+      "p": "1/2",
+      "s": "1/5",
+      "g": "1/5",
+      "t": "1/10",
+      "correct": false,
+      "matching_observation": true,
+      "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+    },
+    "expected": {
+      "likelihood": "1/2",
+      "posterior": "1/5",
+      "next_prior": "7/25"
+    }
+  },
+  {
+    "id": "TR-F03",
+    "topic": "K10.02.01",
+    "mode": "bkt",
+    "input": {
+      "p": "1/2",
+      "s": "1/5",
+      "g": "1/5",
+      "t": "1/10",
+      "correct": null,
+      "matching_observation": true,
+      "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F04",
+    "topic": "K10.02.01",
+    "mode": "bkt",
+    "input": {
+      "p": "1/2",
+      "s": "1/5",
+      "g": "1/5",
+      "t": "1/10",
+      "correct": true,
+      "matching_observation": false,
+      "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F05",
+    "topic": "K10.02.01",
+    "mode": "bkt",
+    "input": {
+      "p": 0,
+      "s": "1/5",
+      "g": 0,
+      "t": "1/10",
+      "correct": true,
+      "matching_observation": true,
+      "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F06",
+    "topic": "K10.02.01",
+    "mode": "bkt",
+    "input": {
+      "p": true,
+      "s": "1/5",
+      "g": "1/5",
+      "t": "1/10",
+      "correct": true,
+      "matching_observation": true,
+      "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F07",
+    "topic": "K10.02.01",
+    "mode": "bkt",
+    "input": {
+      "p": "1/2",
+      "s": "1/5",
+      "g": "1/5",
+      "t": "1/10",
+      "correct": true,
+      "matching_observation": true,
+      "transition": "UNKNOWN"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F08",
+    "topic": "K10.02.02",
+    "mode": "bkt",
+    "input": {
+      "p": "1/3",
+      "s": "3/4",
+      "g": "1/4",
+      "t": 0,
+      "correct": true,
+      "matching_observation": true,
+      "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+    },
+    "expected": {
+      "likelihood": "1/4",
+      "posterior": "1/3",
+      "next_prior": "1/3"
+    }
+  },
+  {
+    "id": "TR-F09",
+    "topic": "K10.03.01",
+    "mode": "hlr",
+    "input": {
+      "half_life": 2,
+      "lag": 4,
+      "matched_unit": true
+    },
+    "expected": 0.25
+  },
+  {
+    "id": "TR-F10",
+    "topic": "K10.03.01",
+    "mode": "hlr",
+    "input": {
+      "half_life": 2,
+      "lag": 0,
+      "matched_unit": true
+    },
+    "expected": 1.0
+  },
+  {
+    "id": "TR-F11",
+    "topic": "K10.03.01",
+    "mode": "hlr",
+    "input": {
+      "half_life": 0,
+      "lag": 4,
+      "matched_unit": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F12",
+    "topic": "K10.03.01",
+    "mode": "hlr",
+    "input": {
+      "half_life": 2,
+      "lag": -1,
+      "matched_unit": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F13",
+    "topic": "K10.03.01",
+    "mode": "hlr",
+    "input": {
+      "half_life": 2,
+      "lag": 4,
+      "matched_unit": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F14",
+    "topic": "K10.06.01",
+    "mode": "brier",
+    "input": {
+      "p": [
+        "1/4",
+        "3/4"
+      ],
+      "y": [
+        0,
+        1
+      ],
+      "same_target": true
+    },
+    "expected": "1/16"
+  },
+  {
+    "id": "TR-F15",
+    "topic": "K10.06.01",
+    "mode": "brier",
+    "input": {
+      "p": [
+        "1/4",
+        "3/4"
+      ],
+      "y": [
+        0,
+        null
+      ],
+      "same_target": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F16",
+    "topic": "K10.06.01",
+    "mode": "brier",
+    "input": {
+      "p": [
+        "1/4",
+        "3/4"
+      ],
+      "y": [
+        0,
+        1
+      ],
+      "same_target": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F17",
+    "topic": "K10.06.02",
+    "mode": "auc",
+    "input": {
+      "positive": [
+        0.8,
+        0.5
+      ],
+      "negative": [
+        0.5,
+        0.2
+      ],
+      "same_target": true
+    },
+    "expected": "7/8"
+  },
+  {
+    "id": "TR-F18",
+    "topic": "K10.06.02",
+    "mode": "auc",
+    "input": {
+      "positive": [
+        0.8
+      ],
+      "negative": [],
+      "same_target": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F19",
+    "topic": "K11.01.06",
+    "mode": "discount",
+    "input": {
+      "gamma": "1/2",
+      "rewards": [
+        2,
+        4,
+        8
+      ],
+      "same_unit": true
+    },
+    "expected": "6"
+  },
+  {
+    "id": "TR-F20",
+    "topic": "K11.01.06",
+    "mode": "discount",
+    "input": {
+      "gamma": 2,
+      "rewards": [
+        2,
+        4,
+        8
+      ],
+      "same_unit": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F21",
+    "topic": "K11.02.02",
+    "mode": "threshold",
+    "input": {
+      "half_life": 3,
+      "target": "1/4",
+      "fixed_h": true
+    },
+    "expected": 6.0
+  },
+  {
+    "id": "TR-F22",
+    "topic": "K11.02.02",
+    "mode": "threshold",
+    "input": {
+      "half_life": 3,
+      "target": 1,
+      "fixed_h": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F23",
+    "topic": "K11.02.02",
+    "mode": "threshold",
+    "input": {
+      "half_life": 3,
+      "target": "1/4",
+      "fixed_h": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F24",
+    "topic": "K11.04.03",
+    "mode": "belief",
+    "input": {
+      "belief": [
+        "1/2",
+        "1/2"
+      ],
+      "transition": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "likelihood": [
+        "4/5",
+        "1/5"
+      ]
+    },
+    "expected": [
+      "4/5",
+      "1/5"
+    ]
+  },
+  {
+    "id": "TR-F25",
+    "topic": "K11.04.03",
+    "mode": "belief",
+    "input": {
+      "belief": [
+        "1/2",
+        "1/2"
+      ],
+      "transition": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "likelihood": [
+        0,
+        0
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F26",
+    "topic": "K11.04.03",
+    "mode": "belief",
+    "input": {
+      "belief": [
+        "1/2",
+        "1/2"
+      ],
+      "transition": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "likelihood": [
+        "4/5",
+        "1/5"
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F27",
+    "topic": "K11.04.03",
+    "mode": "belief",
+    "input": {
+      "belief": [
+        0.4,
+        0.8
+      ],
+      "transition": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "likelihood": [
+        "4/5",
+        "1/5"
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F28",
+    "topic": "K11.06.01",
+    "mode": "ips",
+    "input": {
+      "rows": [
+        {
+          "pi": ".5",
+          "mu": ".25",
+          "reward": 2
+        },
+        {
+          "pi": ".5",
+          "mu": ".5",
+          "reward": 0
+        }
+      ],
+      "support_verified": true,
+      "single_step": true,
+      "same_reward": true
+    },
+    "expected": "2"
+  },
+  {
+    "id": "TR-F29",
+    "topic": "K11.06.01",
+    "mode": "ips",
+    "input": {
+      "rows": [
+        {
+          "pi": ".5",
+          "mu": ".25",
+          "reward": 2
+        },
+        {
+          "pi": ".5",
+          "mu": ".5",
+          "reward": 0
+        }
+      ],
+      "support_verified": false,
+      "single_step": true,
+      "same_reward": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F30",
+    "topic": "K11.06.01",
+    "mode": "ips",
+    "input": {
+      "rows": [
+        {
+          "pi": ".5",
+          "mu": 0,
+          "reward": 2
+        }
+      ],
+      "support_verified": true,
+      "single_step": true,
+      "same_reward": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F31",
+    "topic": "K11.03.02",
+    "mode": "coverage",
+    "input": {
+      "task": [
+        "a",
+        "b",
+        "b",
+        "c"
+      ],
+      "goal": [
+        "a",
+        "b"
+      ],
+      "covered": [
+        "a"
+      ]
+    },
+    "expected": [
+      "b"
+    ]
+  },
+  {
+    "id": "TR-F32",
+    "topic": "K11.03.02",
+    "mode": "coverage",
+    "input": {
+      "task": [
+        "a"
+      ],
+      "goal": [
+        "a"
+      ],
+      "covered": [
+        "a"
+      ]
+    },
+    "expected": []
+  },
+  {
+    "id": "TR-F33",
+    "topic": "K11.02.04",
+    "mode": "selection",
+    "input": {
+      "exit": false,
+      "authorized": true,
+      "applicable": true,
+      "budget": 8,
+      "cost": 5
+    },
+    "expected": "SUGGEST"
+  },
+  {
+    "id": "TR-F34",
+    "topic": "K11.02.04",
+    "mode": "selection",
+    "input": {
+      "exit": true,
+      "authorized": null,
+      "applicable": true,
+      "budget": 8,
+      "cost": 5
+    },
+    "expected": "STOP"
+  },
+  {
+    "id": "TR-F35",
+    "topic": "K11.02.04",
+    "mode": "selection",
+    "input": {
+      "exit": false,
+      "authorized": false,
+      "applicable": true,
+      "budget": 8,
+      "cost": 5
+    },
+    "expected": "REFUSE"
+  },
+  {
+    "id": "TR-F36",
+    "topic": "K11.02.04",
+    "mode": "selection",
+    "input": {
+      "exit": false,
+      "authorized": null,
+      "applicable": true,
+      "budget": 8,
+      "cost": 5
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F37",
+    "topic": "K11.02.04",
+    "mode": "selection",
+    "input": {
+      "exit": false,
+      "authorized": true,
+      "applicable": true,
+      "budget": 8,
+      "cost": 9
+    },
+    "expected": "DEFER"
+  },
+  {
+    "id": "TR-F38",
+    "topic": "K11.02.04",
+    "mode": "selection",
+    "input": {
+      "exit": false,
+      "authorized": true,
+      "applicable": true,
+      "budget": 8,
+      "cost": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F39",
+    "topic": "K11.02.04",
+    "mode": "selection",
+    "input": {
+      "exit": false,
+      "authorized": true,
+      "applicable": null,
+      "budget": 8,
+      "cost": 5
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F40",
+    "topic": "K11.03.03",
+    "mode": "info",
+    "input": {
+      "belief": [
+        "1/2",
+        "1/2"
+      ],
+      "likelihood": [
+        1,
+        0
+      ],
+      "static_state": true
+    },
+    "expected": 1.0
+  },
+  {
+    "id": "TR-F41",
+    "topic": "K11.03.03",
+    "mode": "info",
+    "input": {
+      "belief": [
+        "1/2",
+        "1/2"
+      ],
+      "likelihood": [
+        "1/2",
+        "1/2"
+      ],
+      "static_state": true
+    },
+    "expected": 0.0
+  },
+  {
+    "id": "TR-F42",
+    "topic": "K11.03.03",
+    "mode": "info",
+    "input": {
+      "belief": [
+        "1/2",
+        "1/2"
+      ],
+      "likelihood": [
+        1,
+        0
+      ],
+      "static_state": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F43",
+    "topic": "K12.02.01",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "A"
+      ],
+      "correct": [
+        "A"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": 1
+  },
+  {
+    "id": "TR-F44",
+    "topic": "K12.02.01",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "B"
+      ],
+      "correct": [
+        "A"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": 0
+  },
+  {
+    "id": "TR-F45",
+    "topic": "K12.02.01",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "A",
+        "B"
+      ],
+      "correct": [
+        "A"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F46",
+    "topic": "K12.02.01",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [],
+      "correct": [
+        "A"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": "MISSING"
+  },
+  {
+    "id": "TR-F47",
+    "topic": "K12.02.01",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "Z"
+      ],
+      "correct": [
+        "A"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F48",
+    "topic": "K12.02.01",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "A"
+      ],
+      "correct": [
+        "A"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": false,
+      "scoring": "EXACT_SET"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F49",
+    "topic": "K12.02.01",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "A"
+      ],
+      "correct": [
+        "A",
+        "B"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F50",
+    "topic": "K12.03.04",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "C",
+        "A"
+      ],
+      "correct": [
+        "A",
+        "C"
+      ],
+      "max_choices": 0,
+      "cardinality": "multiple",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": 1
+  },
+  {
+    "id": "TR-F51",
+    "topic": "K12.03.04",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "A"
+      ],
+      "correct": [
+        "A",
+        "C"
+      ],
+      "max_choices": 2,
+      "cardinality": "multiple",
+      "version_match": true,
+      "scoring": "EXACT_SET"
+    },
+    "expected": 0
+  },
+  {
+    "id": "TR-F52",
+    "topic": "K12.03.04",
+    "mode": "choice",
+    "input": {
+      "options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "response": [
+        "A"
+      ],
+      "correct": [
+        "A"
+      ],
+      "max_choices": 1,
+      "cardinality": "single",
+      "version_match": true,
+      "scoring": "UNKNOWN"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F53",
+    "topic": "K12.02.04",
+    "mode": "numeric_response",
+    "input": {
+      "rule": "EXACT_RATIONAL",
+      "version_match": true,
+      "response": ".5",
+      "key": "1/2"
+    },
+    "expected": 1
+  },
+  {
+    "id": "TR-F54",
+    "topic": "K12.02.04",
+    "mode": "numeric_response",
+    "input": {
+      "rule": "EXACT_RATIONAL",
+      "version_match": true,
+      "response": ".49",
+      "key": "1/2"
+    },
+    "expected": 0
+  },
+  {
+    "id": "TR-F55",
+    "topic": "K12.02.04",
+    "mode": "numeric_response",
+    "input": {
+      "rule": "EXACT_RATIONAL",
+      "version_match": true,
+      "response": null,
+      "key": "1/2"
+    },
+    "expected": "MISSING"
+  },
+  {
+    "id": "TR-F56",
+    "topic": "K12.02.04",
+    "mode": "numeric_response",
+    "input": {
+      "rule": "EXACT_RATIONAL",
+      "version_match": true,
+      "response": true,
+      "key": "1/2"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F57",
+    "topic": "K12.04.02",
+    "mode": "counterexample",
+    "input": {
+      "claim": "ALL_POSITIVE_INTEGERS_EVEN",
+      "n": 3
+    },
+    "expected": "REFUTES"
+  },
+  {
+    "id": "TR-F58",
+    "topic": "K12.04.02",
+    "mode": "counterexample",
+    "input": {
+      "claim": "ALL_POSITIVE_INTEGERS_EVEN",
+      "n": 2
+    },
+    "expected": "NO_COUNTEREXAMPLE"
+  },
+  {
+    "id": "TR-F59",
+    "topic": "K12.04.02",
+    "mode": "counterexample",
+    "input": {
+      "claim": "ALL_POSITIVE_INTEGERS_EVEN",
+      "n": -1
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F60",
+    "topic": "K12.05.01",
+    "mode": "rectangle",
+    "input": {
+      "a": 3,
+      "b": 4,
+      "unit": "CM"
+    },
+    "expected": "12"
+  },
+  {
+    "id": "TR-F61",
+    "topic": "K12.05.01",
+    "mode": "rectangle",
+    "input": {
+      "a": 0,
+      "b": 4,
+      "unit": "CM"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F62",
+    "topic": "K12.05.05",
+    "mode": "source_gate",
+    "input": {
+      "source_observed": true,
+      "claim_matches": true,
+      "rights_checked": true,
+      "human_review": true,
+      "conflict": false
+    },
+    "expected": "REVIEW_CANDIDATE"
+  },
+  {
+    "id": "TR-F63",
+    "topic": "K12.05.05",
+    "mode": "source_gate",
+    "input": {
+      "source_observed": false,
+      "claim_matches": true,
+      "rights_checked": true,
+      "human_review": true,
+      "conflict": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F64",
+    "topic": "K12.05.05",
+    "mode": "source_gate",
+    "input": {
+      "source_observed": true,
+      "claim_matches": true,
+      "rights_checked": true,
+      "human_review": true,
+      "conflict": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F65",
+    "topic": "K12.06.01",
+    "mode": "version",
+    "input": {
+      "response_version": "v1",
+      "scoring_version": "v1"
+    },
+    "expected": "HISTORICAL_SCORE_ONLY"
+  },
+  {
+    "id": "TR-F66",
+    "topic": "K12.06.01",
+    "mode": "version",
+    "input": {
+      "response_version": "v1",
+      "scoring_version": "v2"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F67",
+    "topic": "K12.05.05",
+    "mode": "source_gate",
+    "input": {
+      "source_observed": true,
+      "claim_matches": true,
+      "rights_checked": true,
+      "human_review": true,
+      "conflict": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "TR-F68",
+    "topic": "K12.06.01",
+    "mode": "version",
+    "input": {
+      "response_version": " ",
+      "scoring_version": " "
+    },
+    "expected": "HOLD"
+  }
+]

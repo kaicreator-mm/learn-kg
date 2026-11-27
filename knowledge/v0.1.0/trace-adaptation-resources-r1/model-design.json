@@ -1,0 +1,905 @@
+[
+  {
+    "topic": "K10.02.01",
+    "id": "K10.BKT.CORRECT",
+    "label": "BKT二状态条件更新",
+    "definition": "BKT二状态条件更新",
+    "parameters": [
+      {
+        "name": "p",
+        "unit": "probability",
+        "meaning": "p",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "s",
+        "unit": "probability",
+        "meaning": "s",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "g",
+        "unit": "probability",
+        "meaning": "g",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "t",
+        "unit": "probability",
+        "meaning": "t",
+        "lower": 0,
+        "upper": 1
+      }
+    ],
+    "formulas": [
+      {
+        "name": "likelihood",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "variable": "p"
+                },
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "variable": "s"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "variable": "p"
+                    }
+                  ]
+                },
+                {
+                  "variable": "g"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "posterior",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "variable": "p"
+                },
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "variable": "s"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "variable": "p"
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "s"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "p"
+                        }
+                      ]
+                    },
+                    {
+                      "variable": "g"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "next_prior",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "variable": "p"
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "s"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "op": "add",
+                  "args": [
+                    {
+                      "op": "mul",
+                      "args": [
+                        {
+                          "variable": "p"
+                        },
+                        {
+                          "op": "sub",
+                          "args": [
+                            {
+                              "constant": 1
+                            },
+                            {
+                              "variable": "s"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "op": "mul",
+                      "args": [
+                        {
+                          "op": "sub",
+                          "args": [
+                            {
+                              "constant": 1
+                            },
+                            {
+                              "variable": "p"
+                            }
+                          ]
+                        },
+                        {
+                          "variable": "g"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "op": "div",
+                      "args": [
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "variable": "p"
+                            },
+                            {
+                              "op": "sub",
+                              "args": [
+                                {
+                                  "constant": 1
+                                },
+                                {
+                                  "variable": "s"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "op": "add",
+                          "args": [
+                            {
+                              "op": "mul",
+                              "args": [
+                                {
+                                  "variable": "p"
+                                },
+                                {
+                                  "op": "sub",
+                                  "args": [
+                                    {
+                                      "constant": 1
+                                    },
+                                    {
+                                      "variable": "s"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "op": "mul",
+                              "args": [
+                                {
+                                  "op": "sub",
+                                  "args": [
+                                    {
+                                      "constant": 1
+                                    },
+                                    {
+                                      "variable": "p"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "variable": "g"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "variable": "t"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "二元无提示匹配观测，给定概率与非零证据似然",
+      "先观测后学习；无遗忘"
+    ],
+    "boundary": "仅声明的模型及合成条件；无参数拟合、经验效益、真实能力或行动权限。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K10.02.01",
+    "id": "K10.BKT.INCORRECT",
+    "label": "BKT二状态条件更新",
+    "definition": "BKT二状态条件更新",
+    "parameters": [
+      {
+        "name": "p",
+        "unit": "probability",
+        "meaning": "p",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "s",
+        "unit": "probability",
+        "meaning": "s",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "g",
+        "unit": "probability",
+        "meaning": "g",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "t",
+        "unit": "probability",
+        "meaning": "t",
+        "lower": 0,
+        "upper": 1
+      }
+    ],
+    "formulas": [
+      {
+        "name": "likelihood",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "variable": "p"
+                },
+                {
+                  "variable": "s"
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "variable": "p"
+                    }
+                  ]
+                },
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "variable": "g"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "posterior",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "variable": "p"
+                },
+                {
+                  "variable": "s"
+                }
+              ]
+            },
+            {
+              "op": "add",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "variable": "p"
+                    },
+                    {
+                      "variable": "s"
+                    }
+                  ]
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "p"
+                        }
+                      ]
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "constant": 1
+                        },
+                        {
+                          "variable": "g"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "next_prior",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "op": "div",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "variable": "p"
+                    },
+                    {
+                      "variable": "s"
+                    }
+                  ]
+                },
+                {
+                  "op": "add",
+                  "args": [
+                    {
+                      "op": "mul",
+                      "args": [
+                        {
+                          "variable": "p"
+                        },
+                        {
+                          "variable": "s"
+                        }
+                      ]
+                    },
+                    {
+                      "op": "mul",
+                      "args": [
+                        {
+                          "op": "sub",
+                          "args": [
+                            {
+                              "constant": 1
+                            },
+                            {
+                              "variable": "p"
+                            }
+                          ]
+                        },
+                        {
+                          "op": "sub",
+                          "args": [
+                            {
+                              "constant": 1
+                            },
+                            {
+                              "variable": "g"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "op": "sub",
+                  "args": [
+                    {
+                      "constant": 1
+                    },
+                    {
+                      "op": "div",
+                      "args": [
+                        {
+                          "op": "mul",
+                          "args": [
+                            {
+                              "variable": "p"
+                            },
+                            {
+                              "variable": "s"
+                            }
+                          ]
+                        },
+                        {
+                          "op": "add",
+                          "args": [
+                            {
+                              "op": "mul",
+                              "args": [
+                                {
+                                  "variable": "p"
+                                },
+                                {
+                                  "variable": "s"
+                                }
+                              ]
+                            },
+                            {
+                              "op": "mul",
+                              "args": [
+                                {
+                                  "op": "sub",
+                                  "args": [
+                                    {
+                                      "constant": 1
+                                    },
+                                    {
+                                      "variable": "p"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "op": "sub",
+                                  "args": [
+                                    {
+                                      "constant": 1
+                                    },
+                                    {
+                                      "variable": "g"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "variable": "t"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "二元无提示匹配观测，给定概率与非零证据似然",
+      "先观测后学习；无遗忘"
+    ],
+    "boundary": "仅声明的模型及合成条件；无参数拟合、经验效益、真实能力或行动权限。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K10.03.01",
+    "id": "K10.HLR.FIXED",
+    "label": "固定半衰期预测",
+    "definition": "固定半衰期预测",
+    "parameters": [
+      {
+        "name": "lag",
+        "unit": "day",
+        "meaning": "时距",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "half_life",
+        "unit": "day",
+        "meaning": "半衰期",
+        "lower": 0,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "p",
+        "expr": {
+          "op": "pow",
+          "args": [
+            {
+              "constant": 2
+            },
+            {
+              "op": "neg",
+              "args": [
+                {
+                  "op": "div",
+                  "args": [
+                    {
+                      "variable": "lag"
+                    },
+                    {
+                      "variable": "half_life"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "半衰期>0，时距≥0，同单位，固定模型"
+    ],
+    "boundary": "仅声明的模型及合成条件；无参数拟合、经验效益、真实能力或行动权限。",
+    "numeric_domain": "BINARY64"
+  },
+  {
+    "topic": "K11.01.06",
+    "id": "K11.REWARD.THREE",
+    "label": "三步折扣回报",
+    "definition": "三步折扣回报",
+    "parameters": [
+      {
+        "name": "gamma",
+        "unit": "probability",
+        "meaning": "gamma",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "r0",
+        "unit": "reward",
+        "meaning": "同量尺奖励",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "r1",
+        "unit": "reward",
+        "meaning": "同量尺奖励",
+        "lower": null,
+        "upper": null
+      },
+      {
+        "name": "r2",
+        "unit": "reward",
+        "meaning": "同量尺奖励",
+        "lower": null,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "G",
+        "expr": {
+          "op": "add",
+          "args": [
+            {
+              "variable": "r0"
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "variable": "gamma"
+                },
+                {
+                  "variable": "r1"
+                }
+              ]
+            },
+            {
+              "op": "mul",
+              "args": [
+                {
+                  "variable": "gamma"
+                },
+                {
+                  "variable": "gamma"
+                },
+                {
+                  "variable": "r2"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "固定3步，奖励同量尺"
+    ],
+    "boundary": "仅声明的模型及合成条件；无参数拟合、经验效益、真实能力或行动权限。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K10.06.01",
+    "id": "K10.BRIER.TWO",
+    "label": "两个二分结果Brier",
+    "definition": "两个二分结果Brier",
+    "parameters": [
+      {
+        "name": "p0",
+        "unit": "probability",
+        "meaning": "p0",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "p1",
+        "unit": "probability",
+        "meaning": "p1",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "y0",
+        "unit": "probability",
+        "meaning": "y0",
+        "lower": 0,
+        "upper": 1
+      },
+      {
+        "name": "y1",
+        "unit": "probability",
+        "meaning": "y1",
+        "lower": 0,
+        "upper": 1
+      }
+    ],
+    "formulas": [
+      {
+        "name": "B",
+        "expr": {
+          "op": "div",
+          "args": [
+            {
+              "op": "add",
+              "args": [
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "variable": "p0"
+                        },
+                        {
+                          "variable": "y0"
+                        }
+                      ]
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "variable": "p0"
+                        },
+                        {
+                          "variable": "y0"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "op": "mul",
+                  "args": [
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "variable": "p1"
+                        },
+                        {
+                          "variable": "y1"
+                        }
+                      ]
+                    },
+                    {
+                      "op": "sub",
+                      "args": [
+                        {
+                          "variable": "p1"
+                        },
+                        {
+                          "variable": "y1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "constant": 2
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "y0,y1只能0或1；同目标两个有效观测"
+    ],
+    "boundary": "仅声明的模型及合成条件；无参数拟合、经验效益、真实能力或行动权限。",
+    "numeric_domain": "RATIONAL"
+  },
+  {
+    "topic": "K12.05.01",
+    "id": "K12.RECT.AREA",
+    "label": "矩形题模答案",
+    "definition": "矩形题模答案",
+    "parameters": [
+      {
+        "name": "a",
+        "unit": "cm",
+        "meaning": "边长",
+        "lower": 0,
+        "upper": null
+      },
+      {
+        "name": "b",
+        "unit": "cm",
+        "meaning": "边长",
+        "lower": 0,
+        "upper": null
+      }
+    ],
+    "formulas": [
+      {
+        "name": "area",
+        "expr": {
+          "op": "mul",
+          "args": [
+            {
+              "variable": "a"
+            },
+            {
+              "variable": "b"
+            }
+          ]
+        }
+      }
+    ],
+    "applicability": [
+      "两边严格正；矩形且同cm"
+    ],
+    "boundary": "仅声明的模型及合成条件；无参数拟合、经验效益、真实能力或行动权限。",
+    "numeric_domain": "RATIONAL"
+  }
+]

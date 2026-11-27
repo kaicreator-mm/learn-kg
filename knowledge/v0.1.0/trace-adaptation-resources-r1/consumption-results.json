@@ -1,0 +1,416 @@
+{
+  "status": "BUILDER_SQL_CONSUMPTION_ONLY",
+  "case_count": 68,
+  "ast_evaluated": 8,
+  "model_guards": 12,
+  "policy_cases": 7,
+  "fixture_sha256": "35ac1ef4d9567c70c74bb332807cc4e6a6841741830e67d9dbf195f03841e768",
+  "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+  "results": [
+    {
+      "id": "TR-F01",
+      "actual": {
+        "likelihood": "1/2",
+        "posterior": "4/5",
+        "next_prior": "41/50"
+      },
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K10.BKT.CORRECT",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F02",
+      "actual": {
+        "likelihood": "1/2",
+        "posterior": "1/5",
+        "next_prior": "7/25"
+      },
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K10.BKT.INCORRECT",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F03",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F04",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F05",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F06",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F07",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F08",
+      "actual": {
+        "likelihood": "1/4",
+        "posterior": "1/3",
+        "next_prior": "1/3"
+      },
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K10.BKT.CORRECT",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F09",
+      "actual": 0.25,
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K10.HLR.FIXED",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F10",
+      "actual": 1.0,
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K10.HLR.FIXED",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F11",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F12",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F13",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F14",
+      "actual": "1/16",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K10.BRIER.TWO",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F15",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F16",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F17",
+      "actual": "7/8",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F18",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F19",
+      "actual": "6",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K11.REWARD.THREE",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F20",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F21",
+      "actual": 6.0,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F22",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F23",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F24",
+      "actual": [
+        "4/5",
+        "1/5"
+      ],
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F25",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F26",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F27",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F28",
+      "actual": "2",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F29",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F30",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F31",
+      "actual": [
+        "b"
+      ],
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F32",
+      "actual": [],
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F33",
+      "actual": "SUGGEST",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "policy_action": "SUGGEST"
+    },
+    {
+      "id": "TR-F34",
+      "actual": "STOP",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "policy_action": "STOP"
+    },
+    {
+      "id": "TR-F35",
+      "actual": "REFUSE",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "policy_action": "REFUSE"
+    },
+    {
+      "id": "TR-F36",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "policy_action": "CLARIFY"
+    },
+    {
+      "id": "TR-F37",
+      "actual": "DEFER",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "policy_action": "DEFER"
+    },
+    {
+      "id": "TR-F38",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "policy_action": "CLARIFY"
+    },
+    {
+      "id": "TR-F39",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "policy_action": "CLARIFY"
+    },
+    {
+      "id": "TR-F40",
+      "actual": 1.0,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F41",
+      "actual": 0.0,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F42",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F43",
+      "actual": 1,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F44",
+      "actual": 0,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F45",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F46",
+      "actual": "MISSING",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F47",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F48",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F49",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F50",
+      "actual": 1,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F51",
+      "actual": 0,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F52",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F53",
+      "actual": 1,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F54",
+      "actual": 0,
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F55",
+      "actual": "MISSING",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F56",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F57",
+      "actual": "REFUTES",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F58",
+      "actual": "NO_COUNTEREXAMPLE",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F59",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F60",
+      "actual": "12",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": "K12.RECT.AREA",
+      "model_result": "AST_EVALUATED"
+    },
+    {
+      "id": "TR-F61",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION",
+      "model": null,
+      "model_result": "GUARD_OR_DOMAIN_REJECT"
+    },
+    {
+      "id": "TR-F62",
+      "actual": "REVIEW_CANDIDATE",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F63",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F64",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F65",
+      "actual": "HISTORICAL_SCORE_ONLY",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F66",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F67",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "id": "TR-F68",
+      "actual": "HOLD",
+      "status": "PASS_SQL_CASE_CONSUMPTION"
+    }
+  ],
+  "limits": "Finite adapter, no generic interpreter, model fit or independent verdict."
+}

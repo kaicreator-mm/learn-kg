@@ -1,0 +1,49 @@
+[
+  {
+    "id": "K11.TR.COMP.01",
+    "topics": [
+      "K11.01.02",
+      "K11.01.04",
+      "K11.02.04",
+      "K11.05.04"
+    ],
+    "type": "ADAPTATION",
+    "rules": [
+      {
+        "field": "exit",
+        "value": true,
+        "action": "STOP",
+        "reason": "本人退出优先"
+      },
+      {
+        "field": "unauthorized",
+        "value": true,
+        "action": "REFUSE",
+        "reason": "不绕过授权"
+      },
+      {
+        "field": "feasible",
+        "value": true,
+        "action": "SUGGEST",
+        "reason": "已知匹配、授权及预算可行"
+      },
+      {
+        "field": "over_budget",
+        "value": true,
+        "action": "DEFER",
+        "reason": "超过预算"
+      }
+    ],
+    "unknown_action": "CLARIFY",
+    "boundary": "只提供候选建议；退出与授权优先，未知不执行。",
+    "ordinals": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ]
+  }
+]
