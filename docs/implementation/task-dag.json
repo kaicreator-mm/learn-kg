@@ -3494,7 +3494,15 @@
       "status": "BUILDER_CORRECTED_STRUCTURAL_CHECKS_PASS",
       "disposition": "G03 requires V01 and DB03 CANDIDATE_READY receipts; G04 independently freezes actual evidence."
     },
-    "current_task_state_note": "KR02 four independent local qualification receipts registered from #6 7218812300; P2 retained scope restriction. K01–K08 current locally qualified; SRC01 remains BLOCKED. K09/K13/K17/K18 and newly eligible tasks continue."
+    "current_task_state_note": "KR01/KR02 local qualification receipts registered; KR02 source-evidence integrity restriction active and P2 retained. K09 corrected measurement-r3 and K13/K17, K14/K18 preparation projections; no candidate promotion for these. SRC01 BLOCKED.",
+    "source_evidence_restriction": {
+      "path": "docs/implementation/source-evidence-correction/trace-disposition.json",
+      "sha256": "fe267d992a90e2535e3635744c36923b90fe2978d083ca497d3ed1171532c3f8",
+      "status": "ACTIVE_CONSUMPTION_HOLD",
+      "applies_to": "KR02 author-trace-only source-dependent assertions and prior K09 author trace claims; immutable historical decisions retained, not blanket external source qualification.",
+      "g03": "Must verify corrected indispensable source support or explicitly adjudicate affected scopes; cannot consume trace-only source support.",
+      "consumer": "Check scope-disposition before use. Only explicitly supported bounded propositions, original project rules and independently checked nonempirical finite methods in reviewed scope. No source-dependent reuse based on withdrawn trace counters."
+    }
   },
   "qualification_by_module": {
     "K01": "KR01",
