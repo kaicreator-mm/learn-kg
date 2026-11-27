@@ -1,0 +1,359 @@
+{
+  "status": "FINITE_ACTUAL_SQL_MODEL_REPRESENTATION_WITNESS",
+  "import_manifests": {
+    "learning-core": "6cd783b13b28b1eb10cfe4aa8a1e587154808e92cb9283ca8cb5e744c127f40f",
+    "evidence": "a0f42b6feed737b89ab5c8ab853513ca6a4c8c28274e3e61525ddab95f09fa07"
+  },
+  "review_receipt_sha256": "69f62b6c1ff1ff328d7936089652c1186579c2232bfe9a09ae6da375897fe57d",
+  "source_fixture_sha256": "e555d817d54e2dc1d561a94647221cd6620c67ade74182b3a25fe41c5b63769f",
+  "models": 11,
+  "results": [
+    {
+      "ordinal": 4,
+      "model_id": "K09.02.02.MODEL.01",
+      "input": {
+        "true_var": 64,
+        "error_var": 16,
+        "assumptions_met": true
+      },
+      "actual": "4/5",
+      "expected": "4/5",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 5,
+      "model_id": "K09.02.02.MODEL.01",
+      "input": {
+        "true_var": 64,
+        "error_var": 16,
+        "assumptions_met": false
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 6,
+      "model_id": "K09.03.01.MODEL.01",
+      "input": {
+        "correct": 16,
+        "incorrect": 2,
+        "missing": 2
+      },
+      "actual": {
+        "p": "8/9",
+        "missing_rate": "1/10"
+      },
+      "expected": {
+        "p": "8/9",
+        "missing_rate": "1/10"
+      },
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 7,
+      "model_id": "K09.03.01.MODEL.01",
+      "input": {
+        "correct": 0,
+        "incorrect": 0,
+        "missing": 20
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 8,
+      "model_id": "K09.03.02.MODEL.01",
+      "input": {
+        "hi": [
+          8,
+          10
+        ],
+        "lo": [
+          3,
+          10
+        ]
+      },
+      "actual": "1/2",
+      "expected": "1/2",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 9,
+      "model_id": "K09.03.02.MODEL.01",
+      "input": {
+        "hi": [
+          8,
+          0
+        ],
+        "lo": [
+          3,
+          10
+        ]
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 11,
+      "model_id": "K09.03.04.MODEL.01",
+      "input": {
+        "sd": 10,
+        "r": "21/25",
+        "matched": true
+      },
+      "actual": 4.0,
+      "expected": 4,
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 12,
+      "model_id": "K09.03.04.MODEL.01",
+      "input": {
+        "sd": 10,
+        "r": "21/25",
+        "matched": false
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 13,
+      "model_id": "K09.04.01.MODEL.01",
+      "input": {
+        "theta": 1,
+        "b": 1,
+        "a": 1,
+        "c": 0
+      },
+      "actual": 0.5,
+      "expected": 0.5,
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 16,
+      "model_id": "K09.04.02.MODEL.01",
+      "input": {
+        "theta": 0,
+        "b": 0,
+        "a": 2,
+        "c": 0.2
+      },
+      "actual": 0.6000000000000001,
+      "expected": 0.6,
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 17,
+      "model_id": "K09.04.02.MODEL.01",
+      "input": {
+        "theta": 0,
+        "b": 0,
+        "a": 0,
+        "c": 0.2
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 18,
+      "model_id": "K09.04.03.MODEL.01",
+      "input": {
+        "a": [
+          1,
+          1
+        ],
+        "theta": [
+          1,
+          -1
+        ],
+        "d": 0
+      },
+      "actual": 0.5,
+      "expected": 0.5,
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 19,
+      "model_id": "K09.04.03.MODEL.01",
+      "input": {
+        "a": [
+          1,
+          1
+        ],
+        "theta": [
+          0,
+          0
+        ],
+        "d": 0
+      },
+      "actual": 0.5,
+      "expected": 0.5,
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 20,
+      "model_id": "K09.04.04.MODEL.01",
+      "input": {
+        "a2": [
+          1,
+          3
+        ],
+        "p": [
+          "1/2",
+          "1/2"
+        ],
+        "local_independent": true
+      },
+      "actual": "1",
+      "expected": "1",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 21,
+      "model_id": "K09.04.04.MODEL.01",
+      "input": {
+        "a2": [
+          1,
+          3
+        ],
+        "p": [
+          "1/2",
+          "1/2"
+        ],
+        "local_independent": false
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 22,
+      "model_id": "K09.05.01.MODEL.01",
+      "input": {
+        "q": [
+          1,
+          1
+        ],
+        "alpha": [
+          1,
+          0
+        ],
+        "s": "1/10",
+        "g": "1/5"
+      },
+      "actual": "1/5",
+      "expected": "1/5",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 23,
+      "model_id": "K09.05.01.MODEL.01",
+      "input": {
+        "q": [
+          1,
+          1
+        ],
+        "alpha": [
+          1,
+          1
+        ],
+        "s": "1/10",
+        "g": "1/5"
+      },
+      "actual": "9/10",
+      "expected": "9/10",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 24,
+      "model_id": "K09.05.01.MODEL.01",
+      "input": {
+        "q": [
+          0,
+          0
+        ],
+        "alpha": [
+          1,
+          1
+        ],
+        "s": "1/10",
+        "g": "1/5"
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 34,
+      "model_id": "K09.07.03.MODEL.01",
+      "input": {
+        "tp": 8,
+        "fn": 2,
+        "tn": 81,
+        "fp": 9,
+        "reference_valid": true
+      },
+      "actual": {
+        "se": "4/5",
+        "sp": "9/10",
+        "ppv": "8/17"
+      },
+      "expected": {
+        "se": "4/5",
+        "sp": "9/10",
+        "ppv": "8/17"
+      },
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 35,
+      "model_id": "K09.07.03.MODEL.01",
+      "input": {
+        "tp": 8,
+        "fn": 2,
+        "tn": 81,
+        "fp": 9,
+        "reference_valid": false
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 36,
+      "model_id": "K09.07.04.MODEL.01",
+      "input": {
+        "mux": 50,
+        "sx": 10,
+        "muy": 60,
+        "sy": 20,
+        "x": 55,
+        "matched": true
+      },
+      "actual": "70",
+      "expected": "70",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    },
+    {
+      "ordinal": 37,
+      "model_id": "K09.07.04.MODEL.01",
+      "input": {
+        "mux": 50,
+        "sx": 0,
+        "muy": 60,
+        "sy": 20,
+        "x": 55,
+        "matched": true
+      },
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_MODEL_REPRESENTATION_ONLY"
+    }
+  ],
+  "limit": "New representation implementation checked against independently accepted unchanged expectations. Does not independently qualify AST implementation, calibrate/fit models or validate learner inference. Only scalar bounded formulas; applicability guards applied by explicit finite adapter, not general engine."
+}

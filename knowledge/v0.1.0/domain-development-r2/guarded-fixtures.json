@@ -1,0 +1,256 @@
+[
+  {
+    "id": "DD-G01",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": 5,
+      "constant_speed": true,
+      "units": "METER_SECOND"
+    },
+    "expected": "10"
+  },
+  {
+    "id": "DD-G02",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": -2,
+      "time": 5,
+      "constant_speed": true,
+      "units": "METER_SECOND"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G03",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": -1,
+      "constant_speed": true,
+      "units": "METER_SECOND"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G04",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": 0,
+      "constant_speed": true,
+      "units": "METER_SECOND"
+    },
+    "expected": "0"
+  },
+  {
+    "id": "DD-G05",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": true,
+      "time": 5,
+      "constant_speed": true,
+      "units": "METER_SECOND"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G06",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": "not-a-number",
+      "constant_speed": true,
+      "units": "METER_SECOND"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G07",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": 5,
+      "constant_speed": true,
+      "units": "UNKNOWN"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G08",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": 5,
+      "constant_speed": null,
+      "units": "METER_SECOND"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G09",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "1/5",
+      "safety_checked": true,
+      "unit": "MM"
+    },
+    "expected": "TASK_CRITERIA_MET_ONLY"
+  },
+  {
+    "id": "DD-G10",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "-1/10",
+      "tolerance": "1/5",
+      "safety_checked": true,
+      "unit": "MM"
+    },
+    "expected": "TASK_CRITERIA_MET_ONLY"
+  },
+  {
+    "id": "DD-G11",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "3/10",
+      "tolerance": "1/5",
+      "safety_checked": true,
+      "unit": "MM"
+    },
+    "expected": "NOT_ALL_CRITERIA_MET"
+  },
+  {
+    "id": "DD-G12",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "-1/5",
+      "safety_checked": true,
+      "unit": "MM"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G13",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": true,
+      "safety_checked": true,
+      "unit": "MM"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G14",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "NaN",
+      "tolerance": "1/5",
+      "safety_checked": true,
+      "unit": "MM"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G15",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "1/5",
+      "safety_checked": true,
+      "unit": "UNKNOWN"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G16",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "1/5",
+      "safety_checked": false,
+      "unit": "MM"
+    },
+    "expected": "NOT_ALL_CRITERIA_MET"
+  },
+  {
+    "id": "DD-G17",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "1/5",
+      "safety_checked": null,
+      "unit": "MM"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G18",
+    "topic": "K18.05.03",
+    "mode": "support",
+    "input": {
+      "function_request": "larger_text",
+      "learner_confirmed": true
+    },
+    "expected": "SUGGEST_REVERSIBLE_SUPPORT_ONLY"
+  },
+  {
+    "id": "DD-G19",
+    "topic": "K18.05.03",
+    "mode": "support",
+    "input": {
+      "function_request": "pause",
+      "learner_confirmed": false
+    },
+    "expected": "REQUEST_CONFIRMATION_OR_DEFER"
+  },
+  {
+    "id": "DD-G20",
+    "topic": "K18.05.03",
+    "mode": "support",
+    "input": {
+      "function_request": "diagnosis",
+      "learner_confirmed": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G21",
+    "topic": "K18.05.03",
+    "mode": "support",
+    "input": {
+      "function_request": "diagnosis",
+      "learner_confirmed": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-G22",
+    "topic": "K18.05.03",
+    "mode": "support",
+    "input": {
+      "function_request": null,
+      "learner_confirmed": null
+    },
+    "expected": "HOLD"
+  }
+]

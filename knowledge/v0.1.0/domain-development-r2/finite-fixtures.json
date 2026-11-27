@@ -1,0 +1,150 @@
+[
+  {
+    "id": "DD-F01",
+    "topic": "K14.02.01",
+    "mode": "estimate",
+    "input": {
+      "a": 39,
+      "b": 21,
+      "estimate": 800
+    },
+    "expected": {
+      "exact": 819,
+      "absolute_error": 19
+    }
+  },
+  {
+    "id": "DD-F02",
+    "topic": "K14.02.03",
+    "mode": "proof",
+    "input": {
+      "n": 2,
+      "domain": "INTEGER"
+    },
+    "expected": "REFUTES_DECLARED_ODD_UNIVERSAL"
+  },
+  {
+    "id": "DD-F03",
+    "topic": "K14.02.03",
+    "mode": "proof",
+    "input": {
+      "n": 2.5,
+      "domain": "INTEGER"
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-F04",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": 5,
+      "constant_speed": true
+    },
+    "expected": "10"
+  },
+  {
+    "id": "DD-F05",
+    "topic": "K14.03.03",
+    "mode": "model",
+    "input": {
+      "speed": 2,
+      "time": 5,
+      "constant_speed": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-F06",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "1/5",
+      "safety_checked": false
+    },
+    "expected": "NOT_ALL_CRITERIA_MET"
+  },
+  {
+    "id": "DD-F07",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "1/5",
+      "safety_checked": true
+    },
+    "expected": "TASK_CRITERIA_MET_ONLY"
+  },
+  {
+    "id": "DD-F08",
+    "topic": "K14.04.02",
+    "mode": "operation",
+    "input": {
+      "error": "1/10",
+      "tolerance": "1/5",
+      "safety_checked": null
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-F09",
+    "topic": "K18.01.05",
+    "mode": "change",
+    "input": {
+      "same_person": true,
+      "same_scale": true,
+      "matched_conditions": true,
+      "before": 60,
+      "after": 65
+    },
+    "expected": {
+      "observed_difference": "5",
+      "causal": "NOT_ESTABLISHED"
+    }
+  },
+  {
+    "id": "DD-F10",
+    "topic": "K18.01.05",
+    "mode": "change",
+    "input": {
+      "same_person": false,
+      "same_scale": true,
+      "matched_conditions": true,
+      "before": 60,
+      "after": 70
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "DD-F11",
+    "topic": "K18.03.04",
+    "mode": "support",
+    "input": {
+      "learner_confirmed": true,
+      "function_request": "larger_text"
+    },
+    "expected": "SUGGEST_REVERSIBLE_SUPPORT_ONLY"
+  },
+  {
+    "id": "DD-F12",
+    "topic": "K18.05.03",
+    "mode": "support",
+    "input": {
+      "learner_confirmed": false,
+      "function_request": "lower_stimulation"
+    },
+    "expected": "REQUEST_CONFIRMATION_OR_DEFER"
+  },
+  {
+    "id": "DD-F13",
+    "topic": "K18.05.03",
+    "mode": "support",
+    "input": {
+      "learner_confirmed": true,
+      "function_request": "diagnosis"
+    },
+    "expected": "HOLD"
+  }
+]

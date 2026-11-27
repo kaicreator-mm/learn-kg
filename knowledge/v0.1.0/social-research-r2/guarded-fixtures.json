@@ -1,0 +1,432 @@
+[
+  {
+    "id": "SR-G01",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "CANDIDATE_UNDER_DECLARED_ASSUMPTIONS"
+    }
+  },
+  {
+    "id": "SR-G02",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75,
+        80
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-G03",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-G04",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        true
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-G05",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        1,
+        0
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-G06",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": false,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-G07",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": false,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-G08",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": null,
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  },
+  {
+    "id": "SR-G09",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": null,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  },
+  {
+    "id": "SR-G10",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": false,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  },
+  {
+    "id": "SR-G11",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": false,
+      "stable_composition": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  },
+  {
+    "id": "SR-G12",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": null
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  },
+  {
+    "id": "SR-G13",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": null,
+      "no_other_differential_changes": true,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  },
+  {
+    "id": "SR-G14",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "periods": [
+        0,
+        1
+      ],
+      "matched_periods": true,
+      "same_measurement_scale": true,
+      "estimand": "TREATED_GROUP_POST_PERIOD_EFFECT",
+      "parallel_trends": true,
+      "no_other_differential_changes": false,
+      "no_anticipation": true,
+      "no_spillover": true,
+      "stable_measurement": true,
+      "stable_composition": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  }
+]

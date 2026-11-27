@@ -1,0 +1,386 @@
+[
+  {
+    "id": "SR-F01",
+    "topic": "K17.05.02",
+    "mode": "weighted",
+    "input": {
+      "effect": [
+        2,
+        6
+      ],
+      "se": [
+        1,
+        2
+      ],
+      "tau2": 0,
+      "same_scale": true,
+      "independent": true
+    },
+    "expected": {
+      "weights": [
+        "1",
+        "1/4"
+      ],
+      "mean": "14/5"
+    }
+  },
+  {
+    "id": "SR-F02",
+    "topic": "K17.05.02",
+    "mode": "weighted",
+    "input": {
+      "effect": [
+        2,
+        6
+      ],
+      "se": [
+        1,
+        2
+      ],
+      "tau2": 0,
+      "same_scale": false,
+      "independent": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F03",
+    "topic": "K17.05.02",
+    "mode": "weighted",
+    "input": {
+      "effect": [
+        2,
+        6
+      ],
+      "se": [
+        1,
+        2
+      ],
+      "tau2": 0,
+      "same_scale": true,
+      "independent": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F04",
+    "topic": "K17.05.02",
+    "mode": "weighted",
+    "input": {
+      "effect": [
+        2,
+        6
+      ],
+      "se": [
+        0,
+        2
+      ],
+      "tau2": 0,
+      "same_scale": true,
+      "independent": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F05",
+    "topic": "K17.05.03",
+    "mode": "weighted",
+    "input": {
+      "effect": [
+        2,
+        6
+      ],
+      "se": [
+        1,
+        2
+      ],
+      "tau2": 3,
+      "same_scale": true,
+      "independent": true
+    },
+    "expected": {
+      "weights": [
+        "1/4",
+        "1/7"
+      ],
+      "mean": "38/11"
+    }
+  },
+  {
+    "id": "SR-F06",
+    "topic": "K17.05.03",
+    "mode": "weighted",
+    "input": {
+      "effect": [
+        2,
+        6
+      ],
+      "se": [
+        1,
+        2
+      ],
+      "tau2": -1,
+      "same_scale": true,
+      "independent": true
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F07",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "parallel_trends": null,
+      "no_other_differential_changes": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "HOLD"
+    }
+  },
+  {
+    "id": "SR-F08",
+    "topic": "K17.02.03",
+    "mode": "did",
+    "input": {
+      "treatment": [
+        60,
+        75
+      ],
+      "control": [
+        65,
+        70
+      ],
+      "parallel_trends": true,
+      "no_other_differential_changes": true
+    },
+    "expected": {
+      "difference_in_differences": "10",
+      "causal": "CANDIDATE_UNDER_DECLARED_ASSUMPTIONS"
+    }
+  },
+  {
+    "id": "SR-F09",
+    "topic": "K17.03.05",
+    "mode": "ate",
+    "input": {
+      "potential_mean_diffs": [
+        2,
+        6
+      ],
+      "weights": [
+        "1/2",
+        "1/2"
+      ],
+      "synthetic_potential_means_known": true
+    },
+    "expected": "4"
+  },
+  {
+    "id": "SR-F10",
+    "topic": "K17.03.05",
+    "mode": "ate",
+    "input": {
+      "potential_mean_diffs": [
+        2,
+        null
+      ],
+      "weights": [
+        "1/2",
+        "1/2"
+      ],
+      "synthetic_potential_means_known": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F11",
+    "topic": "K17.02.01",
+    "mode": "sampling",
+    "input": {
+      "population": 100,
+      "sample": 10,
+      "responded": 10,
+      "equal_probability": true
+    },
+    "expected": {
+      "weight": "10",
+      "nonresponse": "NO_OBSERVED_NONRESPONSE"
+    }
+  },
+  {
+    "id": "SR-F12",
+    "topic": "K17.02.01",
+    "mode": "sampling",
+    "input": {
+      "population": 900,
+      "sample": 90,
+      "responded": 10,
+      "equal_probability": true
+    },
+    "expected": {
+      "weight": "10",
+      "nonresponse": "UNRESOLVED"
+    }
+  },
+  {
+    "id": "SR-F13",
+    "topic": "K17.02.01",
+    "mode": "sampling",
+    "input": {
+      "population": 900,
+      "sample": 90,
+      "responded": 90,
+      "equal_probability": false
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F14",
+    "topic": "K17.04.03",
+    "mode": "agreement",
+    "input": {
+      "agree": 18,
+      "paired": 20
+    },
+    "expected": "9/10"
+  },
+  {
+    "id": "SR-F15",
+    "topic": "K17.04.03",
+    "mode": "agreement",
+    "input": {
+      "agree": 0,
+      "paired": 0
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F16",
+    "topic": "K17.04.05",
+    "mode": "source_count",
+    "input": {
+      "source_ids": [
+        "log",
+        "log",
+        "log",
+        "blind"
+      ]
+    },
+    "expected": {
+      "reports": 4,
+      "distinct_origin_ids": 2,
+      "independence": "NOT_ESTABLISHED"
+    }
+  },
+  {
+    "id": "SR-F17",
+    "topic": "K17.04.05",
+    "mode": "source_count",
+    "input": {
+      "source_ids": [
+        "log",
+        null
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F18",
+    "topic": "K13.04.01",
+    "mode": "budget",
+    "input": {
+      "budget": 30,
+      "planned": [
+        20,
+        20
+      ]
+    },
+    "expected": {
+      "cost": 40,
+      "feasible": false,
+      "excess": 10
+    }
+  },
+  {
+    "id": "SR-F19",
+    "topic": "K13.04.01",
+    "mode": "budget",
+    "input": {
+      "budget": 30,
+      "planned": [
+        10,
+        20
+      ]
+    },
+    "expected": {
+      "cost": 30,
+      "feasible": true,
+      "excess": 0
+    }
+  },
+  {
+    "id": "SR-F20",
+    "topic": "K13.04.01",
+    "mode": "budget",
+    "input": {
+      "budget": null,
+      "planned": [
+        10,
+        20
+      ]
+    },
+    "expected": "HOLD"
+  },
+  {
+    "id": "SR-F21",
+    "topic": "K13.04.02",
+    "mode": "tech",
+    "input": {
+      "submitted": false,
+      "network_failure": true
+    },
+    "expected": "UNOBSERVED_TECHNICAL_FAILURE"
+  },
+  {
+    "id": "SR-F22",
+    "topic": "K13.04.02",
+    "mode": "tech",
+    "input": {
+      "submitted": true,
+      "independent": true,
+      "correct": true
+    },
+    "expected": "INDEPENDENT_CORRECT"
+  },
+  {
+    "id": "SR-F23",
+    "topic": "K13.04.02",
+    "mode": "tech",
+    "input": {
+      "submitted": true,
+      "independent": true,
+      "correct": false
+    },
+    "expected": "OBSERVED_INCORRECT"
+  },
+  {
+    "id": "SR-F24",
+    "topic": "K13.04.02",
+    "mode": "tech",
+    "input": {
+      "submitted": true,
+      "independent": null,
+      "correct": true
+    },
+    "expected": "HOLD"
+  }
+]
