@@ -1,0 +1,277 @@
+{
+  "status": "FINITE_SQL_CASE_AND_POLICY_CONSUMPTION_BUILDER_ONLY",
+  "fixture_sha256": "e555d817d54e2dc1d561a94647221cd6620c67ade74182b3a25fe41c5b63769f",
+  "previously_reviewed_fixtures": 38,
+  "model_cases": 22,
+  "other_cases": 16,
+  "policy_cases": 8,
+  "results": [
+    {
+      "ordinal": 0,
+      "case_id": "K09.01.04.ME.01.F0",
+      "claim_id": "K09.01.04.ME.01",
+      "actual": {
+        "score": "3/4",
+        "missing": 1
+      },
+      "expected": {
+        "score": "3/4",
+        "missing": 1
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.01",
+      "derived_flags": {
+        "scoring_inputs_valid": true
+      },
+      "policy_action": "SUGGEST",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 1,
+      "case_id": "K09.01.04.ME.01.F1",
+      "claim_id": "K09.01.04.ME.01",
+      "actual": {
+        "score": "1/2",
+        "missing": 1
+      },
+      "expected": {
+        "score": "1/2",
+        "missing": 1
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.01",
+      "derived_flags": {
+        "scoring_inputs_valid": true
+      },
+      "policy_action": "SUGGEST",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 2,
+      "case_id": "K09.01.04.ME.01.F2",
+      "claim_id": "K09.01.04.ME.01",
+      "actual": "HOLD",
+      "expected": "HOLD",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.01",
+      "derived_flags": {
+        "scoring_inputs_valid": false
+      },
+      "policy_action": "CLARIFY",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 3,
+      "case_id": "K09.02.01.ME.01.F3",
+      "claim_id": "K09.02.01.ME.01",
+      "actual": {
+        "preserves_order": true,
+        "preserves_equal_gaps": false
+      },
+      "expected": {
+        "preserves_order": true,
+        "preserves_equal_gaps": false
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "ordinal": 10,
+      "case_id": "K09.03.03.ME.01.F10",
+      "claim_id": "K09.03.03.ME.01",
+      "actual": {
+        "a": 2,
+        "b": 2,
+        "same_pattern": false
+      },
+      "expected": {
+        "a": 2,
+        "b": 2,
+        "same_pattern": false
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "ordinal": 14,
+      "case_id": "K09.04.01.ME.01.F14",
+      "claim_id": "K09.04.01.ME.01",
+      "actual": "NO_FINITE_UNCONSTRAINED_MLE",
+      "expected": "NO_FINITE_UNCONSTRAINED_MLE",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "ordinal": 15,
+      "case_id": "K09.04.01.ME.01.F15",
+      "claim_id": "K09.04.01.ME.01",
+      "actual": "NO_FINITE_UNCONSTRAINED_MLE",
+      "expected": "NO_FINITE_UNCONSTRAINED_MLE",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "ordinal": 25,
+      "case_id": "K09.05.02.ME.01.F25",
+      "claim_id": "K09.05.02.ME.01",
+      "actual": {
+        "a": [
+          0
+        ],
+        "b": [
+          0
+        ],
+        "distinguishable": false
+      },
+      "expected": {
+        "a": [
+          0
+        ],
+        "b": [
+          0
+        ],
+        "distinguishable": false
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "ordinal": 26,
+      "case_id": "K09.05.02.ME.01.F26",
+      "claim_id": "K09.05.02.ME.01",
+      "actual": {
+        "a": [
+          0,
+          1,
+          0
+        ],
+        "b": [
+          0,
+          0,
+          1
+        ],
+        "distinguishable": true
+      },
+      "expected": {
+        "a": [
+          0,
+          1,
+          0
+        ],
+        "b": [
+          0,
+          0,
+          1
+        ],
+        "distinguishable": true
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "ordinal": 27,
+      "case_id": "K09.05.03.ME.01.F27",
+      "claim_id": "K09.05.03.ME.01",
+      "actual": "C",
+      "expected": "C",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.02",
+      "derived_flags": {
+        "eligible_candidate_exists": true,
+        "no_eligible_candidate": false
+      },
+      "policy_action": "SUGGEST",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 28,
+      "case_id": "K09.05.03.ME.01.F28",
+      "claim_id": "K09.05.03.ME.01",
+      "actual": "NO_ELIGIBLE_ITEM",
+      "expected": "NO_ELIGIBLE_ITEM",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.02",
+      "derived_flags": {
+        "eligible_candidate_exists": false,
+        "no_eligible_candidate": true
+      },
+      "policy_action": "STOP",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 29,
+      "case_id": "K09.05.04.ME.01.F29",
+      "claim_id": "K09.05.04.ME.01",
+      "actual": "STOP_LIMIT_PRECISION_NOT_MET",
+      "expected": "STOP_LIMIT_PRECISION_NOT_MET",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.03",
+      "derived_flags": {
+        "limit_reached": true,
+        "precision_and_content_met": false,
+        "continue_needed": false
+      },
+      "policy_action": "STOP",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 30,
+      "case_id": "K09.05.04.ME.01.F30",
+      "claim_id": "K09.05.04.ME.01",
+      "actual": "CONTINUE_CONTENT",
+      "expected": "CONTINUE_CONTENT",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.03",
+      "derived_flags": {
+        "limit_reached": false,
+        "precision_and_content_met": false,
+        "continue_needed": true
+      },
+      "policy_action": "REQUEST_OBSERVATION",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 31,
+      "case_id": "K09.05.04.ME.01.F31",
+      "claim_id": "K09.05.04.ME.01",
+      "actual": "STOP_CRITERIA_MET",
+      "expected": "STOP_CRITERIA_MET",
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION",
+      "composition_id": "K09.ME.COMP.03",
+      "derived_flags": {
+        "limit_reached": false,
+        "precision_and_content_met": true,
+        "continue_needed": false
+      },
+      "policy_action": "STOP",
+      "missing_flags": "CLARIFY"
+    },
+    {
+      "ordinal": 32,
+      "case_id": "K09.06.02.ME.01.F32",
+      "claim_id": "K09.06.02.ME.01",
+      "actual": {
+        "po": "4/5",
+        "pe": "1/2",
+        "kappa": "3/5"
+      },
+      "expected": {
+        "po": "4/5",
+        "pe": "1/2",
+        "kappa": "3/5"
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    },
+    {
+      "ordinal": 33,
+      "case_id": "K09.06.02.ME.01.F33",
+      "claim_id": "K09.06.02.ME.01",
+      "actual": {
+        "po": "1",
+        "pe": "1",
+        "kappa": "UNDEFINED"
+      },
+      "expected": {
+        "po": "1",
+        "pe": "1",
+        "kappa": "UNDEFINED"
+      },
+      "status": "PASS_BUILDER_SQL_CASE_CONSUMPTION"
+    }
+  ],
+  "limits": "Explicit finite adapter reads actual typed records; no general scoring or CAT runtime, no model fit or independent assessment of new policy implementation."
+}
