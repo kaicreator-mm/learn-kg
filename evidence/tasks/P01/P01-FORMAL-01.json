@@ -1,0 +1,371 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-p01-candidate-build-20261127",
+  "role": "BUILDER_NON_REVIEWER",
+  "reviewer": "NOT_RUN",
+  "review_session": "NOT_RUN",
+  "branch": "version/v0.1.0",
+  "base": "ea0e06825519ba6de5f95ffedeec5a35c208d0ed",
+  "exact_head": "479853eb58c769551131a6ac6266b3083adf9cad",
+  "version": "479853eb58c769551131a6ac6266b3083adf9cad",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "P01",
+  "attempt_id": "P01-FORMAL-01",
+  "receipt_id": "TASK:P01:P01-FORMAL-01",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K05",
+      "receipt_id": "TASK:K05:K05-FORMAL-02",
+      "content_digest": "44d561458359a165d29d31603b35fa60f1b8e1311191e2faa49eaba49c78afeb",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K05/K05-FORMAL-02.json",
+          "sha256": "9191b45e42af9a1b0d37687a3579755ee72ed9ae1675652e38a3a809b657250e"
+        },
+        {
+          "path": "evidence/tasks/K05/K05-QUALIFICATION-02.json",
+          "sha256": "f56ab541e0094d772d105fe6597cf468f8744a6f3482d7e721fe6cd6962f933c"
+        }
+      ],
+      "qualification_receipt_id": "TASK:K05:K05-QUALIFICATION-02",
+      "qualification_scope": "RESTRICTED"
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        }
+      ],
+      "qualification_receipt_id": "TASK:K06:K06-QUALIFICATION-02",
+      "qualification_scope": "RESTRICTED"
+    },
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-02",
+      "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+          "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+        },
+        {
+          "path": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+          "sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97"
+        }
+      ],
+      "qualification_receipt_id": "TASK:K07:K07-QUALIFICATION-02",
+      "qualification_scope": "RESTRICTED"
+    },
+    {
+      "task_id": "K08",
+      "receipt_id": "TASK:K08:K08-FORMAL-02",
+      "content_digest": "232d438b24281923530b351968bdfb24517c09ef8f39fc152dedce98f20a5faa",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K08/K08-FORMAL-02.json",
+          "sha256": "789f7d9c18d9e200d8d6512e67ce132bd9c4191fc01f18d2197685902d7e3b69"
+        },
+        {
+          "path": "evidence/tasks/K08/K08-QUALIFICATION-02.json",
+          "sha256": "1f716e34738d2aa32dfe09add8d4dc10beaba8715c1df233627633914f038cd0"
+        }
+      ],
+      "qualification_receipt_id": "TASK:K08:K08-QUALIFICATION-02",
+      "qualification_scope": "RESTRICTED"
+    },
+    {
+      "task_id": "K13",
+      "receipt_id": "TASK:K13:K13-FORMAL-01",
+      "content_digest": "ad575d23624642747536f31d08b0be614ebe60cc613b9334eb90f52a924545f1",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K13/K13-FORMAL-01.json",
+          "sha256": "a3a7d30d7652a4d9a911557015f9d53bbb6642705feff70e60580937d37a988f"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/p01-learning-modes/README.md",
+      "sha256": "ab41343145f813bfedf256dda2bec56d0300749f566d317475c873e9f9e68c91",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/build_p01.py",
+      "sha256": "412cf7b9ad848c3e5a6076274145bf2a926f0872d59ae8c5080e6b4a10a31921",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/catalog.md",
+      "sha256": "0724ae9be5f98033a11acf36fe479ffa6b2f1d22cbdda6a30be8fe9fd6464ed6",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/check_p01.py",
+      "sha256": "4355454e86a59e67f2f0e1623ec934d22ddbbd00c8045db765361b39f2d951f2",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/coverage.json",
+      "sha256": "aad342254b64ce54f8e11ba9a0dc26a56d59f74f7f1f7db698c420f14fb55307",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/fixtures.json",
+      "sha256": "1617fa078201e7e96a90f2969c734ab469c05847b3188ff2ed8ad3edb970660d",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/input-ledger.json",
+      "sha256": "ab2d792316a19d3fcf936a1ef38e9419bb47eba8791051850ec2ec981b371201",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/mode-design.json",
+      "sha256": "2f2337026d698e818faf72f5fb67ca2af5aad3fe4588e6b95b36cd482c26f19b",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/mode-flow-bindings.json",
+      "sha256": "6f5c29576dfde8c5f1562ec18af69baf450c6a9d85009c49933d6947333f36b5",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/recovery-contract.json",
+      "sha256": "533f0ff44cf06c02a661e3cebd46ae9f80eba71fd01176505534497fb4aacaaf",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/validation-receipt.json",
+      "sha256": "998dabfef3ba2c19e1632ca2aef085489fc1f628c8adc774e612de4e649c59bc",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/p01-learning-modes/validation-results.json",
+      "sha256": "1563e540a1de20ef0962d09d5b6febebab4717c0c551d90ee6c960c0edda4025",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-p01/evidence.manifest.json",
+      "sha256": "aa88f33ce999616823bb84ac26802b65c4bd37934e3a15dbbf851a9f858a9d71",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-p01/evidence/records-00.jsonl",
+      "sha256": "de4fb1578edd3e21a8e465f3c7477b8495a09c8ac9d7766349fabbd3919945e7",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-p01/learning-process.manifest.json",
+      "sha256": "46157cc7c6add34baa42e21f3cf5776c3ffec853bc30141d8a8855defb8a867f",
+      "type": "SHARED_CANDIDATE_INPUT_OR_EVIDENCE"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-p01/records-00.jsonl",
+      "sha256": "b4aea5ee7299117f64aa560fb7e5b0bb46ee9df0494d943a487792e9e67ad867",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope": "Six learner-selected bounded learning-mode templates with explicit activity, flow, role, observation, budget, stop, pause/resume and evidence contracts; restricted to exact upstream K05-K08 qualification scopes and K13 candidate-only scope.",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "mode_count": 6,
+    "flow_count": 6,
+    "activity_count": 24,
+    "canonical_record_count": 182,
+    "d3_topic_count": 121,
+    "builder_case_count": 36,
+    "upstream_scope_ledger_sha256": "ab2d792316a19d3fcf936a1ef38e9419bb47eba8791051850ec2ec981b371201",
+    "used_claim_ids": [
+      "K05.01.01.D4.01",
+      "K05.02.01.D4.01",
+      "K05.02.04.D4.01",
+      "K05.03.01.R9.S01",
+      "K05.05.04.R9.S01",
+      "K06.01.02.D4.01",
+      "K06.04.03.R9.S01",
+      "K06.06.01.D4.01",
+      "K06.06.02.D4.01",
+      "K06.06.04.D4.01",
+      "K06.07.02.D4.01",
+      "K06.07.04.R9.S01",
+      "K07.02.04.D4.01",
+      "K07.04.01.D4.01",
+      "K07.04.03.D4.01",
+      "K07.05.02.D4.01",
+      "K08.01.01.R9.S01",
+      "K08.02.01.D4.01",
+      "K08.03.01.D4.03",
+      "K08.03.03.D4.01",
+      "K08.04.01.D4.01",
+      "K08.04.02.D4.01",
+      "K08.04.04.D4.01",
+      "K08.04.05.D4.01",
+      "K08.05.04.R9.S01",
+      "K08.06.03.R9.S01",
+      "K13.02.01.SR.S01",
+      "K13.02.02.SR.S01",
+      "K13.02.04.SR.S01"
+    ],
+    "upstream_restrictions": {
+      "K05": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K05.01.01.D4.01",
+          "K05.02.01.D4.01",
+          "K05.02.02.D4.01",
+          "K05.02.04.D4.01",
+          "K05.03.01.R9.S01",
+          "K05.05.02.R9.S01",
+          "K05.05.04.R9.S01",
+          "K05.06.01.R9.S01",
+          "K05.06.02.R9.S01",
+          "K05.06.04.D4.01"
+        ],
+        "held_claim_count": 35
+      },
+      "K06": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K06.01.02.D4.01",
+          "K06.04.03.R9.S01",
+          "K06.06.01.D4.01",
+          "K06.06.02.D4.01",
+          "K06.06.04.D4.01",
+          "K06.07.02.D4.01",
+          "K06.07.04.R9.S01"
+        ],
+        "held_claim_count": 29
+      },
+      "K07": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K07.01.02.R9.S01",
+          "K07.02.04.D4.01",
+          "K07.04.01.D4.01",
+          "K07.04.03.D4.01",
+          "K07.05.02.D4.01"
+        ],
+        "held_claim_count": 24
+      },
+      "K08": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K08.01.01.R9.S01",
+          "K08.02.01.D4.01",
+          "K08.03.01.D4.03",
+          "K08.03.03.D4.01",
+          "K08.04.01.D4.01",
+          "K08.04.02.D4.01",
+          "K08.04.04.D4.01",
+          "K08.04.05.D4.01",
+          "K08.05.04.R9.S01",
+          "K08.05.05.R9.S01",
+          "K08.06.03.R9.S01"
+        ],
+        "held_claim_count": 33
+      },
+      "K13": {
+        "scope": "CANDIDATE_ONLY_RESTRICTED",
+        "source_allowlist": [
+          "K13.02.01.SR.S01",
+          "K13.02.02.SR.S01",
+          "K13.02.04.SR.S01"
+        ],
+        "held_claim_count": 35
+      }
+    },
+    "composition": "RESTRICTED_HOLD_DEFERRED_TO_P04_F_A",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "limits": [
+      "P01 templates are candidates, not independently qualified.",
+      "K13 remains candidate-only and its source-limited claims are optional context only.",
+      "No automatic identity, ability, motivation or clinical inference.",
+      "No education effect or causal claim.",
+      "No numeric model; numeric oracle NOT_APPLICABLE.",
+      "Cross-mode composition is intentionally held for later P04/F/A."
+    ]
+  },
+  "validation": {
+    "status": "BUILDER_CANDIDATE_READY_NOT_QUALIFIED",
+    "canonical_records": 182,
+    "mode_count": 6,
+    "flow_count": 6,
+    "activity_count": 24,
+    "d3_topics": 121,
+    "finite_cases": 36,
+    "schema": "PASS",
+    "if01_typed_references": "PASS",
+    "in_memory_import": "PASS",
+    "persistent_sqlite": "NOT_CREATED",
+    "numeric_models": "NONE",
+    "independent_review": "NOT_RUN",
+    "qualification": "NOT_ISSUED",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN"
+  },
+  "issues": [
+    "Cross-mode composition intentionally HOLD and deferred to P04/F/A.",
+    "K13 is candidate-only; its three source-limited propositions are contextual inputs only, not qualified facts.",
+    "Source rights HOLD; CQ/LC NOT_RUN; no empirical learner-effect claim."
+  ],
+  "next": "Batch independent P01 review with subsequent P02/P03 process templates; PR01 remains the cumulative qualification gate.",
+  "content_digest": "a4637acc4d5ce35074ce90dd530d13a14887eaa0e81cf1017e69e7fe8cc876a6"
+}

@@ -154,3 +154,7 @@ The five receipts pin exact current direct-dependency receipts and qualification
 ## 2026-11-27 — KR03–KR05 P2 builder remediation
 
 The two P2 findings from independent review #6 comment 7221120084 now have bounded builder-side remediation in the current branch: P2-01 uses a shared versioned ModelSpec parameter-domain guard (7/7 explicit fixtures, 4/4 unit tests); P2-02 makes X01 self-contained and adds strict fail-closed cross-adapter domains (41/41 fixtures, 36 exact bindings). Both remain PENDING_INDEPENDENT_DELTA_REVIEW. P3-01 source-version/authority pinning remains OPEN. No qualification, source-rights, CQ/LC, G03 or release state is promoted. Details and hashes are recorded in docs/implementation/kr03-05-batch/p2-remediation.md and the K10/K12 validation/consumption receipts.
+
+## P01 bounded learning-mode candidate
+
+P01 six learner-selected templates, 182 process records, 24 activities, six flows, 36 builder guard cases (six common patterns across six mode identities). 121 upstream applicability rows: 29 direct / 92 indirect, not professional adequacy. Exact scope and typed references, in-memory import passed. Current P01 restricted candidate receipt binds the artifact at 479853eb58c769551131a6ac6266b3083adf9cad. No independent qualification; actual mode-specific flow execution and broader composition remain pending.
