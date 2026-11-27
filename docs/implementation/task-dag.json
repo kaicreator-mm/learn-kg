@@ -152,7 +152,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR01",
-      "current_receipt": "evidence/tasks/K01/K01-FORMAL-03.json"
+      "current_receipt": "evidence/tasks/K01/K01-FORMAL-03.json",
+      "local_qualification": "QUALIFIED_LOCAL",
+      "qualification_receipt": "evidence/tasks/K01/K01-QUALIFICATION-01.json"
     },
     {
       "id": "K02",
@@ -179,7 +181,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR01",
-      "current_receipt": "evidence/tasks/K02/K02-FORMAL-03.json"
+      "current_receipt": "evidence/tasks/K02/K02-FORMAL-03.json",
+      "local_qualification": "QUALIFIED_LOCAL",
+      "qualification_receipt": "evidence/tasks/K02/K02-QUALIFICATION-01.json"
     },
     {
       "id": "K03",
@@ -206,7 +210,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR01",
-      "current_receipt": "evidence/tasks/K03/K03-FORMAL-03.json"
+      "current_receipt": "evidence/tasks/K03/K03-FORMAL-03.json",
+      "local_qualification": "QUALIFIED_LOCAL",
+      "qualification_receipt": "evidence/tasks/K03/K03-QUALIFICATION-01.json"
     },
     {
       "id": "K04",
@@ -233,7 +239,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "KR01",
-      "current_receipt": "evidence/tasks/K04/K04-FORMAL-03.json"
+      "current_receipt": "evidence/tasks/K04/K04-FORMAL-03.json",
+      "local_qualification": "QUALIFIED_LOCAL",
+      "qualification_receipt": "evidence/tasks/K04/K04-QUALIFICATION-01.json"
     },
     {
       "id": "K05",
@@ -754,7 +762,7 @@
       "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
       "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "READY",
+      "status": "QUALIFICATION_RECEIPTS",
       "requirements": [
         {
           "task_id": "K01",
@@ -773,7 +781,8 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "QUALIFICATION_RECEIPTS"
+      "output_receipt": "QUALIFICATION_RECEIPTS",
+      "current_receipt": "evidence/tasks/KR01/KR01-FORMAL-01.json"
     },
     {
       "id": "KR02",
@@ -3474,7 +3483,7 @@
       "status": "BUILDER_CORRECTED_STRUCTURAL_CHECKS_PASS",
       "disposition": "G03 requires V01 and DB03 CANDIDATE_READY receipts; G04 independently freezes actual evidence."
     },
-    "current_task_state_note": "KR01 R2 independent #6 comment 7214381381: K01/K02/K04 ACCEPT_SCOPED, K03 residual REWORK_REQUIRED; R3 artifact fixes residual and nonblocking feature guard; K01–K04 FORMAL-03 current; old verdicts retained but current tuple qualification pending limited independent delta/rebind. No issued downstream receipts affected; SRC01 BLOCKED."
+    "current_task_state_note": "KR01 ACCEPT_SCOPED registered from independent #6 7214923937/#2 7214924825. Four local qualification receipts and aggregate current; FORMAL-03 candidate consumption unchanged. SRC01 BLOCKED; DB02 and KR02 preparation parallel draft PRs pending integration."
   },
   "qualification_by_module": {
     "K01": "KR01",

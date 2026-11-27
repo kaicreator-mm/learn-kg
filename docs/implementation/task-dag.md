@@ -125,3 +125,7 @@ KR01 original independent result REWORK_REQUIRED (comment 7213482417; 6 P1, 2 P2
 ### KR01 R3 residual candidate
 
 R2 independent comment 7214381381: K01/K02/K04 ACCEPT_SCOPED; K03 residual P1 R2-RV04-01, K02 nonblocking P2 R2-RV07-01. R3 artifact 4b35b500aaccac4787c6fb68fa950199ac34a760 preserves prior 53 checks, adds 19; exact GitHub replay clean. All four FORMAL-03 candidate receipts bind new shared version; normalized K01/K04 unchanged. Independent residual review and current tuple rebind still required, no full repeated review. Other READY tasks remain eligible under contract; no downstream issued receipt, SRC01 still BLOCKED.
+
+### KR01 closeout
+
+Independent ACCEPT_SCOPED #6 comment 7214923937 / #2 7214924825, exact HEAD 607a21b9133cdc1bbc1cd45cba5d8f7bf5b06c1b. K01–K04 local qualification receipts registered separately, current FORMAL-03 candidate consumption unchanged. KR01 QUALIFICATION_RECEIPTS (8/8 original, two residual closed, P0/P1/P2=0). Local scope only; K01 optional HOLD, rights, G03 closure, CQ/LC, release remain unapproved.

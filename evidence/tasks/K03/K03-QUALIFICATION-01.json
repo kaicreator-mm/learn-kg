@@ -1,0 +1,84 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-kr01-closeout-20261127",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "reviewer": "chatgpt-web:learn-kg-kr01-r3-independent-residual-reviewer",
+  "review_session": "learn-kg-kr01-r3-20261127",
+  "branch": "version/v0.1.0",
+  "base": "ddc9b81a199d82efc18da020439d0d6129dacfd0",
+  "exact_head": "607a21b9133cdc1bbc1cd45cba5d8f7bf5b06c1b",
+  "version": "607a21b9133cdc1bbc1cd45cba5d8f7bf5b06c1b",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-27",
+  "task_id": "K03",
+  "attempt_id": "K03-QUALIFICATION-01",
+  "receipt_id": "TASK:K03:K03-QUALIFICATION-01",
+  "input": [
+    {
+      "task_id": "K03",
+      "receipt_id": "TASK:K03:K03-FORMAL-03",
+      "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+          "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+      "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de",
+      "type": "REVIEWED_CANDIDATE_RECEIPT"
+    }
+  ],
+  "content_digest": "87380c72a3f6d5c46181b57095ddfd84a5fa93c4193a6aa53b72172823d32f0b",
+  "reviewed_content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+  "consumed_tuple": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "state": "QUALIFIED_LOCAL",
+  "receipt_type": "QUALIFIED_LOCAL",
+  "scope": "Knowledge structure and bounded constraint/representation reasoning, no generic SHACL runtime or competence qualification.",
+  "validation": {
+    "review_task_comment": 7214679275,
+    "review_result_comment": 7214923937,
+    "version_review_comment": 7214924825,
+    "tree": "62741b27bc1e66c2e77d760fd71495851cd3f886",
+    "independent_result": "ACCEPT_SCOPED",
+    "p0": 0,
+    "p1": 0,
+    "p2": 0,
+    "p3": 0
+  },
+  "issues": [
+    "Local scoped professional qualification only; historic/abstract source limits, rights HOLD, narrative NOT_RUN, foreign anchors pending, no actual learner, formal CQ/LC, G03/G04/G05 or release."
+  ],
+  "next": "G03 exact dependency closure required"
+}
