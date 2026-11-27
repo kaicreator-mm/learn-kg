@@ -1,0 +1,98 @@
+{
+  "owner": "A07",
+  "status": "EXACT_PREPARATION_BINDING_ONLY",
+  "package_id": "learning-process",
+  "version": "0.1.0-process-candidate-3",
+  "manifest_sha256": "8e53674e9a0340cc7533bddb80a7693a5936d18918424531868cbb515969b9d6",
+  "task_dependencies": [
+    "F05",
+    "F07",
+    "IF01"
+  ],
+  "inputs": [
+    {
+      "stable_id": "F05.COMPOSITION",
+      "kind": "CompositionSpec",
+      "owner": "F05",
+      "record_sha256": "3300b604c27fe1caac08449e3b82b41df6b3a5dcbd2766cd6b05c0a840e02f19"
+    },
+    {
+      "stable_id": "F05.STATE.RESPONSE",
+      "kind": "StateDimension",
+      "owner": "F05",
+      "record_sha256": "a4b6569ce436d35aafc9a1bef7ce4851e77599439b37d5c35893dac8915db97e"
+    },
+    {
+      "stable_id": "F05.STATE.SELF_REPORT",
+      "kind": "StateDimension",
+      "owner": "F05",
+      "record_sha256": "12fe10de63aa2888f63b5f740887de7fa9dcd8a268e24e7c4635266edef02940"
+    },
+    {
+      "stable_id": "F05.STATE.SCORE",
+      "kind": "StateDimension",
+      "owner": "F05",
+      "record_sha256": "8dcd071c67a243040345c19abe201e623c5bd600ec03c6c656d0952dc2c13270"
+    },
+    {
+      "stable_id": "F05.STATE.ESTIMATE",
+      "kind": "StateDimension",
+      "owner": "F05",
+      "record_sha256": "b330a9fea3bdc2d14f03bb4d917771a17936b2fee6d2e70f55bb08cf867a09e5"
+    },
+    {
+      "stable_id": "F07.COMPOSITION",
+      "kind": "CompositionSpec",
+      "owner": "F07",
+      "record_sha256": "1c67de1e6cf9d6321db878e9b25632e08569dfd47cb0aa47a91e8af292aec088"
+    },
+    {
+      "stable_id": "F07.POLICY",
+      "kind": "PolicySpec",
+      "owner": "F07",
+      "record_sha256": "037f927bb062cfd8d8f35a5ee10021795e45cea93123df31c0d9c77a780bf7a1"
+    }
+  ],
+  "inherited_claim_refs": [
+    {
+      "ref": "kind",
+      "inherited_from": "F07"
+    },
+    {
+      "ref": "owner",
+      "inherited_from": "F07"
+    },
+    {
+      "ref": "package_id",
+      "inherited_from": "F07"
+    },
+    {
+      "ref": "stable_id",
+      "inherited_from": "F07"
+    },
+    {
+      "ref": "version",
+      "inherited_from": "F07"
+    }
+  ],
+  "if01": {
+    "interface_version": "learn-kg-if01-1",
+    "contract_path": "docs/implementation/if01/interface-contract.json",
+    "contract_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+    "receipt_path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+    "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+    "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+    "required_scope_ids": [
+      "A07.RQ01",
+      "A07.RQ02",
+      "A07.RQ03",
+      "A07.RQ04"
+    ],
+    "task_dependencies": [
+      "F05",
+      "F07",
+      "IF01"
+    ]
+  },
+  "limits": "IF01 is a file/receipt contract pin, not a synthetic canonical record; no formal A07 receipt or CQ/LC qualification."
+}

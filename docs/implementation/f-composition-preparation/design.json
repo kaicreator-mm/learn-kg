@@ -133,7 +133,9 @@
         "K19.02.03.TG.01",
         "K19.03.02.TG.01",
         "K19.05.02.TG.01",
-        "K15.06.04.TG.01"
+        "K15.06.04.TG.01",
+        "K13.04.02.SR.01",
+        "K16.04.03.TG.01"
       ],
       "inputs": [
         "P10.FLOW"
@@ -206,6 +208,66 @@
         "IDENTICAL_POLICY_VERSIONS_HOLD",
         "INVALID_ANALYSIS_PLAN_HOLD",
         "POLICY_VERSION_MISMATCH_HOLD"
+      ]
+    },
+    "A07": {
+      "title": "环境/发展/差异→支持贯通组合",
+      "claims": [],
+      "inputs": [
+        "F05.STATE.RESPONSE",
+        "F05.STATE.SELF_REPORT",
+        "F05.STATE.SCORE",
+        "F05.STATE.ESTIMATE",
+        "F05.COMPOSITION",
+        "F07.COMPOSITION",
+        "F07.POLICY",
+        "F07.ENV.LOW_BANDWIDTH",
+        "F07.ENV.SHARED_DEVICE",
+        "F07.ENV.PRIVATE_DEVICE",
+        "F07.ROLE.LEARNER",
+        "F07.ROLE.FACILITATOR",
+        "F07.ROLE.REVIEWER"
+      ],
+      "records": [
+        "CompositionSpec",
+        "PolicySpec",
+        "ConditionSpec",
+        "Case",
+        "Validation"
+      ],
+      "requirements": {
+        "A07.RQ01": "区分身份、角色、权限、设备/连接环境、实际可及性和本人选择；环境能力必须绑定当前环境配置及测试摘要；环境障碍不得误判为知识缺口",
+        "A07.RQ02": "只使用任务相关观测和本人明确自述；缺失保持UNKNOWN；不按年龄、发展标签、诊断或固定学习风格推断个体；不做发展阶段判断",
+        "A07.RQ03": "支持选项必须经过任务级构念审查；改变目标构念时只能作为单独练习，不可替代原测量或合并评分",
+        "A07.RQ04": "本人明确请求事件及选择、身份与权限均需核验；退出停止；建议仅ADVICE_ONLY，不执行、不写状态"
+      },
+      "cases": [
+        "PRESERVED_CONSTRUCT_OPTIONAL_SUPPORT",
+        "CHANGED_CONSTRUCT_ASSESSMENT_DEFER",
+        "CHANGED_CONSTRUCT_PRACTICE_ONLY",
+        "MISSING_SELF_REPORT_EXPLICIT_REQUEST_OK",
+        "MISSING_SELF_REPORT_NO_REQUEST_CLARIFY",
+        "AGE_LABEL_INVARIANCE",
+        "DIAGNOSIS_LABEL_INVARIANCE",
+        "UNBOUND_ESTIMATE_HOLD",
+        "MISSING_RESPONSE_NO_DEFICIT_INFERENCE",
+        "IDENTITY_UNKNOWN_CLARIFY",
+        "FACILITATOR_CANNOT_SELECT",
+        "REVIEWER_READ_ONLY",
+        "PERMISSION_DENIED_REFUSE",
+        "ACCESS_UNAVAILABLE_DEFER",
+        "ACCESS_UNKNOWN_CLARIFY",
+        "NO_LEARNER_SELECTION_CLARIFY",
+        "USER_EXIT_STOP",
+        "CONSTRUCT_REVIEW_UNKNOWN_HOLD",
+        "CONSTRUCT_REVIEW_UNVERIFIED_HOLD",
+        "SELF_REPORT_WRONG_RESPONDENT_HOLD",
+        "SCORE_VALUE_INVARIANCE",
+        "INVALID_ASSESSMENT_FLAG_HOLD",
+        "CONSTRUCT_REVIEW_MISSING_HASH_HOLD",
+        "ENVIRONMENT_PROFILE_UNVERIFIED",
+        "ENVIRONMENT_PROFILE_MISSING_HASH",
+        "SUPPORT_REQUEST_UNVERIFIED"
       ]
     }
   },

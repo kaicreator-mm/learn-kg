@@ -701,6 +701,1132 @@
     "expected": "CLARIFY"
   },
   {
+    "owner": "A07",
+    "name": "PRESERVED_CONSTRUCT_OPTIONAL_SUPPORT",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "OPTIONAL_SUPPORT",
+      "assessment_disposition": "PRESERVED",
+      "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_PINNED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "CHANGED_CONSTRUCT_ASSESSMENT_DEFER",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "CHANGED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "PRACTICE_ONLY",
+      "assessment_disposition": "DEFER_ASSESSMENT",
+      "evidence_basis": "CONSTRUCT_CHANGED_NOT_SCORE_EQUIVALENT",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "CHANGED_CONSTRUCT_PRACTICE_ONLY",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": false,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "CHANGED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "PRACTICE_ONLY",
+      "assessment_disposition": "NOT_APPLICABLE",
+      "evidence_basis": "CONSTRUCT_CHANGED_SEPARATE_PRACTICE",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "MISSING_SELF_REPORT_EXPLICIT_REQUEST_OK",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "NOT_ADMINISTERED"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "OPTIONAL_SUPPORT",
+      "assessment_disposition": "PRESERVED",
+      "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_PINNED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "MISSING_SELF_REPORT_NO_REQUEST_CLARIFY",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "UNKNOWN",
+      "learner_selected": false,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "EXPLICIT_LEARNER_SELECTION_REQUIRED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "AGE_LABEL_INVARIANCE",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      },
+      "age_band": "OLDER_ADULT",
+      "developmental_label": "UNVERIFIED"
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "OPTIONAL_SUPPORT",
+      "assessment_disposition": "PRESERVED",
+      "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_PINNED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "DIAGNOSIS_LABEL_INVARIANCE",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      },
+      "diagnosis": "UNVERIFIED_DIAGNOSIS",
+      "group_label": "UNVERIFIED"
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "OPTIONAL_SUPPORT",
+      "assessment_disposition": "PRESERVED",
+      "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_PINNED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "UNBOUND_ESTIMATE_HOLD",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "OBSERVED_UNBOUND",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "UNBOUND_ESTIMATE_NOT_USED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "MISSING_RESPONSE_NO_DEFICIT_INFERENCE",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "OPTIONAL_SUPPORT",
+      "assessment_disposition": "PRESERVED",
+      "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_PINNED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "IDENTITY_UNKNOWN_CLARIFY",
+    "input": {
+      "exit": false,
+      "identity_verified": null,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "IDENTITY_NOT_VERIFIED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "FACILITATOR_CANNOT_SELECT",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "FACILITATOR",
+      "permission": true,
+      "support_requested_by": "FACILITATOR",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "LEARNER_SELECTION_REQUIRED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "REVIEWER_READ_ONLY",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "REVIEWER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "REFUSE",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "REVIEW_ONLY_ROLE",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "PERMISSION_DENIED_REFUSE",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": false,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "REFUSE",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "PERMISSION_DENIED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "ACCESS_UNAVAILABLE_DEFER",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": false,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "DEFER",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "ENVIRONMENT_OR_CAPABILITY_BLOCK",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "ACCESS_UNKNOWN_CLARIFY",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": null,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "ACCESSIBILITY_UNKNOWN",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "NO_LEARNER_SELECTION_CLARIFY",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": false,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "EXPLICIT_LEARNER_SELECTION_REQUIRED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "USER_EXIT_STOP",
+    "input": {
+      "exit": true,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": null,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "STOP",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "LEARNER_EXIT",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "CONSTRUCT_REVIEW_UNKNOWN_HOLD",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "UNKNOWN",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "REQUEST_OBSERVATION",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "CONSTRUCT_RELATION_UNKNOWN",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "CONSTRUCT_REVIEW_UNVERIFIED_HOLD",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": false,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "REQUEST_OBSERVATION",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_REQUIRED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "CONSTRUCT_REVIEW_MISSING_HASH_HOLD",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "not-a-sha256",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "REQUEST_OBSERVATION",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "CONSTRUCT_REVIEW_HASH_REQUIRED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "SELF_REPORT_WRONG_RESPONDENT_HOLD",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "OBSERVED",
+        "respondent": "FACILITATOR",
+        "value": "needs support"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "SELF_REPORT_NOT_LEARNER_AUTHORED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "SCORE_VALUE_INVARIANCE",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "OBSERVED",
+        "value": 0,
+        "scoring_version": "S1"
+      }
+    },
+    "expected": {
+      "action": "SUGGEST",
+      "support_scope": "OPTIONAL_SUPPORT",
+      "assessment_disposition": "PRESERVED",
+      "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_PINNED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "INVALID_ASSESSMENT_FLAG_HOLD",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": "yes",
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "ASSESSMENT_SCOPE_UNKNOWN",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "ENVIRONMENT_PROFILE_UNVERIFIED",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": false,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "REQUEST_OBSERVATION",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "ENVIRONMENT_PROFILE_NOT_VERIFIED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "ENVIRONMENT_PROFILE_MISSING_HASH",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": true,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bad",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "REQUEST_OBSERVATION",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "ENVIRONMENT_PROFILE_HASH_REQUIRED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
+    "owner": "A07",
+    "name": "SUPPORT_REQUEST_UNVERIFIED",
+    "input": {
+      "exit": false,
+      "identity_verified": true,
+      "actor_role": "LEARNER",
+      "permission": true,
+      "support_requested_by": "LEARNER",
+      "learner_selected": true,
+      "support_request_id": "REQ-001",
+      "support_request_verified": false,
+      "environment_profile_verified": true,
+      "environment_profile_id": "ENV-SHARED-DEVICE",
+      "environment_profile_version": "V1",
+      "environment_profile_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "accessible": true,
+      "capability_match": true,
+      "assessment": true,
+      "construct_review_verified": true,
+      "construct_review_id": "TASK-SUPPORT-MAP-01",
+      "construct_review_version": "V1",
+      "construct_review_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "construct_relation": "PRESERVED",
+      "estimate_status": "NOT_ESTIMATED",
+      "self_report": {
+        "status": "MISSING"
+      },
+      "response": {
+        "status": "MISSING"
+      },
+      "score": {
+        "status": "MISSING"
+      }
+    },
+    "expected": {
+      "action": "CLARIFY",
+      "support_scope": "NONE",
+      "assessment_disposition": "UNKNOWN",
+      "evidence_basis": "REQUEST_ID_NOT_VERIFIED",
+      "effect": "ADVICE_ONLY"
+    }
+  },
+  {
     "owner": "E01",
     "name": "VALID_FROZEN_PROTOCOL_CANDIDATE_ONLY",
     "input": {

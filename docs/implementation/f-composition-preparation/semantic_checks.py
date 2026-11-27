@@ -77,7 +77,47 @@ def e01(x):
  if x.get('data_kind')!='OBSERVED':return 'HOLD'
  return 'CANDIDATE_ANALYSIS_ONLY_NO_RELEASE'
 
-FUN={'F03':f03,'F04':f04,'F05':f05,'F07':f07,'E01':e01}
+
+def a07(x):
+ def d(action,scope='NONE',assessment='UNKNOWN',basis='NO_AUTOMATIC_INFERENCE'):
+  return {'action':action,'support_scope':scope,'assessment_disposition':assessment,'evidence_basis':basis,'effect':'ADVICE_ONLY'}
+ if not isinstance(x,dict):return d('CLARIFY',basis='INVALID_INPUT')
+ if x.get('exit') is True:return d('STOP',basis='LEARNER_EXIT')
+ if x.get('identity_verified') is not True:return d('CLARIFY',basis='IDENTITY_NOT_VERIFIED')
+ role=x.get('actor_role')
+ if role=='REVIEWER':return d('REFUSE',basis='REVIEW_ONLY_ROLE')
+ if role=='FACILITATOR':return d('CLARIFY',basis='LEARNER_SELECTION_REQUIRED')
+ if role!='LEARNER':return d('CLARIFY',basis='ROLE_UNKNOWN')
+ if type(x.get('permission')) is not bool:return d('CLARIFY',basis='PERMISSION_UNKNOWN')
+ if x['permission'] is False:return d('REFUSE',basis='PERMISSION_DENIED')
+ if x.get('support_requested_by')!='LEARNER' or x.get('learner_selected') is not True:return d('CLARIFY',basis='EXPLICIT_LEARNER_SELECTION_REQUIRED')
+ if x.get('support_request_verified') is not True or not isinstance(x.get('support_request_id'),str) or not x['support_request_id']:return d('CLARIFY',basis='REQUEST_ID_NOT_VERIFIED')
+ if x.get('environment_profile_verified') is not True:return d('REQUEST_OBSERVATION',basis='ENVIRONMENT_PROFILE_NOT_VERIFIED')
+ for field in ('environment_profile_id','environment_profile_version'):
+  if not isinstance(x.get(field),str) or not x[field]:return d('REQUEST_OBSERVATION',basis='ENVIRONMENT_PROFILE_PIN_REQUIRED')
+ eh=x.get('environment_profile_sha256')
+ if not isinstance(eh,str) or len(eh)!=64 or any(c not in '0123456789abcdef' for c in eh):return d('REQUEST_OBSERVATION',basis='ENVIRONMENT_PROFILE_HASH_REQUIRED')
+ if type(x.get('accessible')) is not bool or type(x.get('capability_match')) is not bool:return d('CLARIFY',basis='ACCESSIBILITY_UNKNOWN')
+ if x['accessible'] is False or x['capability_match'] is False:return d('DEFER',basis='ENVIRONMENT_OR_CAPABILITY_BLOCK')
+ if x.get('estimate_status')!='NOT_ESTIMATED':return d('CLARIFY',basis='UNBOUND_ESTIMATE_NOT_USED')
+ sr=x.get('self_report',{'status':'MISSING'})
+ if not isinstance(sr,dict) or sr.get('status') not in ('MISSING','NOT_ADMINISTERED','OBSERVED'):return d('CLARIFY',basis='SELF_REPORT_INVALID')
+ if sr.get('status')=='OBSERVED' and (sr.get('respondent')!='LEARNER' or not isinstance(sr.get('value'),str) or not sr['value']):return d('CLARIFY',basis='SELF_REPORT_NOT_LEARNER_AUTHORED')
+ for field in ('response','score'):
+  z=x.get(field,{'status':'MISSING'})
+  if not isinstance(z,dict) or z.get('status') not in ('MISSING','NOT_ADMINISTERED','INVALID','OBSERVED'):return d('CLARIFY',basis='OBSERVATION_STATUS_INVALID')
+ if type(x.get('assessment')) is not bool:return d('CLARIFY',basis='ASSESSMENT_SCOPE_UNKNOWN')
+ if x.get('construct_review_verified') is not True:return d('REQUEST_OBSERVATION',basis='TASK_LEVEL_CONSTRUCT_REVIEW_REQUIRED')
+ if not isinstance(x.get('construct_review_id'),str) or not x['construct_review_id'] or not isinstance(x.get('construct_review_version'),str) or not x['construct_review_version']:return d('REQUEST_OBSERVATION',basis='CONSTRUCT_REVIEW_PIN_REQUIRED')
+ h=x.get('construct_review_sha256')
+ if not isinstance(h,str) or len(h)!=64 or any(c not in '0123456789abcdef' for c in h):return d('REQUEST_OBSERVATION',basis='CONSTRUCT_REVIEW_HASH_REQUIRED')
+ relation=x.get('construct_relation')
+ if relation not in ('PRESERVED','CHANGED'):return d('REQUEST_OBSERVATION',basis='CONSTRUCT_RELATION_UNKNOWN')
+ if relation=='CHANGED' and x['assessment'] is True:return d('SUGGEST','PRACTICE_ONLY','DEFER_ASSESSMENT','CONSTRUCT_CHANGED_NOT_SCORE_EQUIVALENT')
+ if relation=='CHANGED':return d('SUGGEST','PRACTICE_ONLY','NOT_APPLICABLE','CONSTRUCT_CHANGED_SEPARATE_PRACTICE')
+ return d('SUGGEST','OPTIONAL_SUPPORT','PRESERVED','TASK_LEVEL_CONSTRUCT_REVIEW_PINNED')
+
+FUN={'A07':a07,'F03':f03,'F04':f04,'F05':f05,'F07':f07,'E01':e01}
 def fixtures():
  out=[]
  def a(o,name,x,y):out.append((o,name,x,y))
@@ -115,6 +155,35 @@ def fixtures():
  a('F07','ACCESS_UNAVAILABLE_DEFER',base|dict(accessible=False),'DEFER')
  a('F07','USER_EXIT_STOP',base|dict(exit=True,permission=None),'STOP')
  a('F07','NO_LEARNER_SELECTION_CLARIFY',base|dict(learner_selected=False),'CLARIFY')
+ base=dict(exit=False,identity_verified=True,actor_role='LEARNER',permission=True,support_requested_by='LEARNER',learner_selected=True,support_request_id='REQ-001',support_request_verified=True,environment_profile_verified=True,environment_profile_id='ENV-SHARED-DEVICE',environment_profile_version='V1',environment_profile_sha256='b'*64,accessible=True,capability_match=True,assessment=True,construct_review_verified=True,construct_review_id='TASK-SUPPORT-MAP-01',construct_review_version='V1',construct_review_sha256='a'*64,construct_relation='PRESERVED',estimate_status='NOT_ESTIMATED',self_report={'status':'MISSING'},response={'status':'MISSING'},score={'status':'MISSING'})
+ def dec(action,scope='NONE',assessment='UNKNOWN',basis='NO_AUTOMATIC_INFERENCE'):
+  return {'action':action,'support_scope':scope,'assessment_disposition':assessment,'evidence_basis':basis,'effect':'ADVICE_ONLY'}
+ a('A07','PRESERVED_CONSTRUCT_OPTIONAL_SUPPORT',base,dec('SUGGEST','OPTIONAL_SUPPORT','PRESERVED','TASK_LEVEL_CONSTRUCT_REVIEW_PINNED'))
+ a('A07','CHANGED_CONSTRUCT_ASSESSMENT_DEFER',base|dict(construct_relation='CHANGED'),dec('SUGGEST','PRACTICE_ONLY','DEFER_ASSESSMENT','CONSTRUCT_CHANGED_NOT_SCORE_EQUIVALENT'))
+ a('A07','CHANGED_CONSTRUCT_PRACTICE_ONLY',base|dict(assessment=False,construct_relation='CHANGED'),dec('SUGGEST','PRACTICE_ONLY','NOT_APPLICABLE','CONSTRUCT_CHANGED_SEPARATE_PRACTICE'))
+ a('A07','MISSING_SELF_REPORT_EXPLICIT_REQUEST_OK',base|dict(self_report={'status':'NOT_ADMINISTERED'}),dec('SUGGEST','OPTIONAL_SUPPORT','PRESERVED','TASK_LEVEL_CONSTRUCT_REVIEW_PINNED'))
+ a('A07','MISSING_SELF_REPORT_NO_REQUEST_CLARIFY',base|dict(support_requested_by='UNKNOWN',learner_selected=False),dec('CLARIFY',basis='EXPLICIT_LEARNER_SELECTION_REQUIRED'))
+ a('A07','AGE_LABEL_INVARIANCE',base|dict(age_band='OLDER_ADULT',developmental_label='UNVERIFIED'),dec('SUGGEST','OPTIONAL_SUPPORT','PRESERVED','TASK_LEVEL_CONSTRUCT_REVIEW_PINNED'))
+ a('A07','DIAGNOSIS_LABEL_INVARIANCE',base|dict(diagnosis='UNVERIFIED_DIAGNOSIS',group_label='UNVERIFIED'),dec('SUGGEST','OPTIONAL_SUPPORT','PRESERVED','TASK_LEVEL_CONSTRUCT_REVIEW_PINNED'))
+ a('A07','UNBOUND_ESTIMATE_HOLD',base|dict(estimate_status='OBSERVED_UNBOUND'),dec('CLARIFY',basis='UNBOUND_ESTIMATE_NOT_USED'))
+ a('A07','MISSING_RESPONSE_NO_DEFICIT_INFERENCE',base|dict(response={'status':'MISSING'}),dec('SUGGEST','OPTIONAL_SUPPORT','PRESERVED','TASK_LEVEL_CONSTRUCT_REVIEW_PINNED'))
+ a('A07','IDENTITY_UNKNOWN_CLARIFY',base|dict(identity_verified=None),dec('CLARIFY',basis='IDENTITY_NOT_VERIFIED'))
+ a('A07','FACILITATOR_CANNOT_SELECT',base|dict(actor_role='FACILITATOR',support_requested_by='FACILITATOR'),dec('CLARIFY',basis='LEARNER_SELECTION_REQUIRED'))
+ a('A07','REVIEWER_READ_ONLY',base|dict(actor_role='REVIEWER'),dec('REFUSE',basis='REVIEW_ONLY_ROLE'))
+ a('A07','PERMISSION_DENIED_REFUSE',base|dict(permission=False),dec('REFUSE',basis='PERMISSION_DENIED'))
+ a('A07','ACCESS_UNAVAILABLE_DEFER',base|dict(accessible=False),dec('DEFER',basis='ENVIRONMENT_OR_CAPABILITY_BLOCK'))
+ a('A07','ACCESS_UNKNOWN_CLARIFY',base|dict(accessible=None),dec('CLARIFY',basis='ACCESSIBILITY_UNKNOWN'))
+ a('A07','NO_LEARNER_SELECTION_CLARIFY',base|dict(learner_selected=False),dec('CLARIFY',basis='EXPLICIT_LEARNER_SELECTION_REQUIRED'))
+ a('A07','USER_EXIT_STOP',base|dict(exit=True,permission=None),dec('STOP',basis='LEARNER_EXIT'))
+ a('A07','CONSTRUCT_REVIEW_UNKNOWN_HOLD',base|dict(construct_relation='UNKNOWN'),dec('REQUEST_OBSERVATION',basis='CONSTRUCT_RELATION_UNKNOWN'))
+ a('A07','CONSTRUCT_REVIEW_UNVERIFIED_HOLD',base|dict(construct_review_verified=False),dec('REQUEST_OBSERVATION',basis='TASK_LEVEL_CONSTRUCT_REVIEW_REQUIRED'))
+ a('A07','CONSTRUCT_REVIEW_MISSING_HASH_HOLD',base|dict(construct_review_sha256='not-a-sha256'),dec('REQUEST_OBSERVATION',basis='CONSTRUCT_REVIEW_HASH_REQUIRED'))
+ a('A07','SELF_REPORT_WRONG_RESPONDENT_HOLD',base|dict(self_report={'status':'OBSERVED','respondent':'FACILITATOR','value':'needs support'}),dec('CLARIFY',basis='SELF_REPORT_NOT_LEARNER_AUTHORED'))
+ a('A07','SCORE_VALUE_INVARIANCE',base|dict(score={'status':'OBSERVED','value':0,'scoring_version':'S1'}),dec('SUGGEST','OPTIONAL_SUPPORT','PRESERVED','TASK_LEVEL_CONSTRUCT_REVIEW_PINNED'))
+ a('A07','INVALID_ASSESSMENT_FLAG_HOLD',base|dict(assessment='yes'),dec('CLARIFY',basis='ASSESSMENT_SCOPE_UNKNOWN'))
+ a('A07','ENVIRONMENT_PROFILE_UNVERIFIED',base|dict(environment_profile_verified=False),dec('REQUEST_OBSERVATION',basis='ENVIRONMENT_PROFILE_NOT_VERIFIED'))
+ a('A07','ENVIRONMENT_PROFILE_MISSING_HASH',base|dict(environment_profile_sha256='bad'),dec('REQUEST_OBSERVATION',basis='ENVIRONMENT_PROFILE_HASH_REQUIRED'))
+ a('A07','SUPPORT_REQUEST_UNVERIFIED',base|dict(support_request_verified=False),dec('CLARIFY',basis='REQUEST_ID_NOT_VERIFIED'))
  base=dict(approved=True,protocol_frozen=True,population_defined=True,outcome_defined=True,comparator_pinned=True,followup_complete=True,independent_review=True,assignment_verified=True,data_kind='OBSERVED',direct_knowledge_write=False,protocol_id='E01.PROTOCOL',protocol_version='V1',assignment_unit='LEARNER',assignment_method='RANDOMIZED',intervention_version='CANDIDATE_V1',comparator_version='CURRENT_V1',current_policy_version='CURRENT_V1',candidate_policy_version='CANDIDATE_V1',primary_outcome_id='E01.OBS.PRIMARY_OUTCOME',analysis_plan_sha256='a'*64,followup_days=28)
  a('E01','VALID_FROZEN_PROTOCOL_CANDIDATE_ONLY',base,'CANDIDATE_ANALYSIS_ONLY_NO_RELEASE')
  a('E01','APPROVAL_MISSING_HOLD',base|dict(approved=False),'HOLD')

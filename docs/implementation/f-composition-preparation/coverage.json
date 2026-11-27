@@ -1,12 +1,19 @@
 {
   "status": "PREPARATION_ONLY_NOT_REGISTERED",
   "package_version": "0.1.0-process-candidate-3",
-  "manifest_sha256": "89ea0e55ac51a7d53181044f6a3a9fa9013dd71fdb2e57663ef28b0a8d88afdd",
+  "manifest_sha256": "8e53674e9a0340cc7533bddb80a7693a5936d18918424531868cbb515969b9d6",
   "migrated_p_records": 1312,
-  "new_records": 135,
-  "new_f_cases": 40,
-  "sql_builder_cases": 40,
-  "static_cross_module_bindings": 5,
+  "new_records": 203,
+  "total_records": 1515,
+  "new_composition_cases": 66,
+  "sql_builder_cases": 66,
+  "static_cross_module_bindings": 6,
+  "A07_IF01_pin": {
+    "interface_version": "learn-kg-if01-1",
+    "contract_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+    "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+    "status": "EXACT_FILE_RECEIPT_PIN_ONLY"
+  },
   "modules": [
     {
       "owner": "F03",
@@ -159,6 +166,37 @@
           "id": "E01.RQ04",
           "scope": "证据、授权、独立复核和发布是不同阶段；无证据不声称长期收益",
           "status": "PARTIAL_RESTRICTED_CANDIDATE"
+        }
+      ],
+      "status": "PREPARATION_ONLY"
+    },
+    {
+      "owner": "A07",
+      "title": "环境/发展/差异→支持贯通组合",
+      "records": 68,
+      "builder_cases": 26,
+      "cq": "CQ13",
+      "lc": null,
+      "requirements": [
+        {
+          "id": "A07.RQ01",
+          "scope": "区分身份、角色、权限、设备/连接环境、实际可及性和本人选择；环境能力必须绑定当前环境配置及测试摘要；环境障碍不得误判为知识缺口",
+          "status": "CANDIDATE_EXEMPLIFIED"
+        },
+        {
+          "id": "A07.RQ02",
+          "scope": "只使用任务相关观测和本人明确自述；缺失保持UNKNOWN；不按年龄、发展标签、诊断或固定学习风格推断个体；不做发展阶段判断",
+          "status": "CANDIDATE_PARTIAL"
+        },
+        {
+          "id": "A07.RQ03",
+          "scope": "支持选项必须经过任务级构念审查；改变目标构念时只能作为单独练习，不可替代原测量或合并评分",
+          "status": "CANDIDATE_EXEMPLIFIED"
+        },
+        {
+          "id": "A07.RQ04",
+          "scope": "本人明确请求事件及选择、身份与权限均需核验；退出停止；建议仅ADVICE_ONLY，不执行、不写状态",
+          "status": "CANDIDATE_PARTIAL"
         }
       ],
       "status": "PREPARATION_ONLY"

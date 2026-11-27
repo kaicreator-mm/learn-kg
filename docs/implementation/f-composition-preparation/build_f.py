@@ -18,7 +18,7 @@ B=ROOT/'knowledge/v0.1.0'
 OLD=B/'learning-process-cumulative-r2'
 PKG=B/'learning-process-cumulative-r3'
 VERSION='0.1.0-process-candidate-3'
-OWNERS=['P01','P02','P03','P04','P05','P06','P07','P08','P09','P10','F03','F04','F05','F07','E01']
+OWNERS=['P01','P02','P03','P04','P05','P06','P07','P08','P09','P10','F03','F04','F05','F07','A07','E01']
 ACCEPTED_TYPES={'PROJECT_RULE','ENGINEERING_POLICY','ORIGINAL_METHOD_DERIVATION','METHOD','MATHEMATICAL_DERIVATION'}
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -189,6 +189,55 @@ def main():
  rules=[{'condition_ref':guards['EXIT'],'action':'STOP','reason':'本人退出，停止后续非授权动作','priority':0},{'condition_ref':guards['DENY'],'action':'REFUSE','reason':'权限明确为否','priority':1},{'condition_ref':guards['UNAVAILABLE'],'action':'DEFER','reason':'当前环境不可及','priority':2},{'condition_ref':guards['OFFER'],'action':'SUGGEST','reason':'仅提供本人选择的可行支持选项，不自动执行','priority':3}]
  policy=add(o,'PolicySpec',o+'.POLICY',cr,['所有环境和角色字段均需精确绑定版本及实际状态。'],'未知身份/权限不授权；建议不执行；退出优先。',policy_type='GOVERNANCE',rules=rules,unknown_action='CLARIFY',effect='ADVICE_ONLY')
  target=composition(o,cr,[local('P10.FLOW'),*envs.values(),*roles.values()],[policy],[*guards.values()],'未授权拒绝、未知澄清、退出停止；不从行为推断健康/身份或固定偏好。')
+ # A07 environment/development/difference-to-support integration
+ o='A07';claims(o,design['modules'][o]['claims'])
+ needed={'K10.01.04.TR.01','K09.01.01.ME.01','K16.01.04.TG.01','K09.02.05.ME.01','K13.04.02.SR.01','K16.04.03.TG.01','K19.03.02.TG.01','K19.02.03.TG.01'}
+ cr=[]
+ for upstream in ('F05.COMPOSITION','F07.COMPOSITION'):
+  for z in records[upstream]['claim_refs']:
+   if z['stable_id'] in needed and z not in cr:cr.append(z)
+ assert {z['stable_id'] for z in cr}==needed,({z['stable_id'] for z in cr},needed)
+ upstream_task_deps=set(tasks['F05']['depends_on'])|set(tasks['F07']['depends_on'])
+ assert all(z['owner'] in upstream_task_deps for z in cr),[(z['owner'],z['stable_id']) for z in cr if z['owner'] not in upstream_task_deps]
+ assert set(tasks['A07']['depends_on'])=={'F05','F07','IF01'}
+ owner_claims[o]=cr
+ g={}
+ g['EXIT']=cond(o,o+'.GUARD.EXIT',cr,[{'field':'exit','op':'EQ','value':True}],['本人退出优先于其他支持判断。'])
+ g['IDENTITY']=cond(o,o+'.GUARD.IDENTITY',cr,[{'field':'identity_verified','op':'EQ','value':False}],['身份未知或未核验时澄清；未知属性由unknown_action处理。'])
+ g['REVIEWER']=cond(o,o+'.GUARD.REVIEWER',cr,[{'field':'actor_role','op':'EQ','value':'REVIEWER'}],['审核者只读，不作学习者支持决策。'])
+ g['PERMISSION']=cond(o,o+'.GUARD.PERMISSION',cr,[{'field':'permission','op':'EQ','value':False}],['权限明确为否时拒绝。'])
+ g['LEARNER_SELECTION']=cond(o,o+'.GUARD.LEARNER_SELECTION',cr,[{'field':'actor_role','op':'NE','value':'LEARNER'},{'field':'support_requested_by','op':'NE','value':'LEARNER'},{'field':'learner_selected','op':'EQ','value':False}],['促进者不能代替学习者选择；缺少本人选择时澄清。'])
+ records[o+'.GUARD.LEARNER_SELECTION']['combination']='ANY'
+ g['ACCESS_UNAVAILABLE']=cond(o,o+'.GUARD.ACCESS_UNAVAILABLE',cr,[{'field':'accessible','op':'EQ','value':False},{'field':'capability_match','op':'EQ','value':False}],['当前环境不可及或能力不匹配时延后。'])
+ records[o+'.GUARD.ACCESS_UNAVAILABLE']['combination']='ANY'
+ g['REQUEST_UNVERIFIED']=cond(o,o+'.GUARD.REQUEST_UNVERIFIED',cr,[{'field':'support_request_verified','op':'EQ','value':False}],['学习者支持请求必须有可追溯的事件身份。'])
+ g['ENVIRONMENT_UNVERIFIED']=cond(o,o+'.GUARD.ENVIRONMENT_UNVERIFIED',cr,[{'field':'environment_profile_verified','op':'EQ','value':False}],['当前环境配置必须由可追溯的能力测试和版本摘要绑定。'])
+ g['ESTIMATE_UNBOUND']=cond(o,o+'.GUARD.ESTIMATE_UNBOUND',cr,[{'field':'estimate_status','op':'NE','value':'NOT_ESTIMATED'}],['当前没有已核验估计器；任何模型输出不作为支持依据。'])
+ g['CONSTRUCT_UNVERIFIED']=cond(o,o+'.GUARD.CONSTRUCT_UNVERIFIED',cr,[{'field':'construct_review_verified','op':'EQ','value':False}],['任务级构念审查缺失或未核验时请求观察/审查。'])
+ g['CONSTRUCT_UNKNOWN']=cond(o,o+'.GUARD.CONSTRUCT_UNKNOWN',cr,[{'field':'construct_relation','op':'EQ','value':'UNKNOWN'}],['构念关系未知时请求任务级观察/审查。'])
+ common=[{'field':'identity_verified','op':'EQ','value':True},{'field':'actor_role','op':'EQ','value':'LEARNER'},{'field':'permission','op':'EQ','value':True},{'field':'support_requested_by','op':'EQ','value':'LEARNER'},{'field':'learner_selected','op':'EQ','value':True},{'field':'accessible','op':'EQ','value':True},{'field':'capability_match','op':'EQ','value':True},{'field':'support_request_verified','op':'EQ','value':True},{'field':'environment_profile_verified','op':'EQ','value':True},{'field':'estimate_status','op':'EQ','value':'NOT_ESTIMATED'},{'field':'construct_review_verified','op':'EQ','value':True}]
+ g['PRESERVED']=cond(o,o+'.GUARD.PRESERVED',cr,common+[{'field':'construct_relation','op':'EQ','value':'PRESERVED'}],['全部授权/环境/本人选择前提成立，且任务级审查确认构念保持。'])
+ g['CHANGED_ASSESSMENT']=cond(o,o+'.GUARD.CHANGED_ASSESSMENT',cr,common+[{'field':'construct_relation','op':'EQ','value':'CHANGED'},{'field':'assessment','op':'EQ','value':True}],['评估构念已改变，原评估延后，另列练习，不替代或并分。'])
+ g['CHANGED_PRACTICE']=cond(o,o+'.GUARD.CHANGED_PRACTICE',cr,common+[{'field':'construct_relation','op':'EQ','value':'CHANGED'},{'field':'assessment','op':'EQ','value':False}],['仅在非评估练习中提供独立替代选项。'])
+ rules=[
+  {'condition_ref':g['EXIT'],'action':'STOP','reason':'本人退出，停止后续支持流程','priority':0},
+  {'condition_ref':g['IDENTITY'],'action':'CLARIFY','reason':'身份未知或未核验，不进入个体支持决策','priority':1},
+  {'condition_ref':g['REVIEWER'],'action':'REFUSE','reason':'审核角色只读，不执行或决定学习者支持','priority':2},
+  {'condition_ref':g['PERMISSION'],'action':'REFUSE','reason':'明确无权限时拒绝','priority':3},
+  {'condition_ref':g['LEARNER_SELECTION'],'action':'CLARIFY','reason':'需由学习者本人请求并选择，不能由促进者或系统代选','priority':4},
+  {'condition_ref':g['REQUEST_UNVERIFIED'],'action':'CLARIFY','reason':'学习者请求事件未核验，不进入个体支持建议','priority':5},
+  {'condition_ref':g['ENVIRONMENT_UNVERIFIED'],'action':'REQUEST_OBSERVATION','reason':'环境配置/能力测试未核验，先补充环境证据','priority':6},
+  {'condition_ref':g['ACCESS_UNAVAILABLE'],'action':'DEFER','reason':'可及性或能力匹配不成立时延后，不推断知识缺口','priority':7},
+  {'condition_ref':g['ESTIMATE_UNBOUND'],'action':'CLARIFY','reason':'未绑定已核验估计器，不使用模型估计','priority':8},
+  {'condition_ref':g['CONSTRUCT_UNVERIFIED'],'action':'REQUEST_OBSERVATION','reason':'任务级构念审查缺失或未核验','priority':9},
+  {'condition_ref':g['CONSTRUCT_UNKNOWN'],'action':'REQUEST_OBSERVATION','reason':'构念关系未知，需先完成任务级观察/审查','priority':10},
+  {'condition_ref':g['CHANGED_ASSESSMENT'],'action':'SUGGEST','reason':'只提供单独练习建议；原评估延后，不替代或合并评分','priority':11},
+  {'condition_ref':g['CHANGED_PRACTICE'],'action':'SUGGEST','reason':'仅在非评估练习中提供独立替代选项','priority':12},
+  {'condition_ref':g['PRESERVED'],'action':'SUGGEST','reason':'只提出可拒绝的可选支持，不自动执行','priority':13}
+ ]
+ policy=add(o,'PolicySpec',o+'.POLICY',cr,['必须同时绑定F05证据通道与F07环境/角色合同；当前支持策略只作建议。'],'不以年龄、发展标签、诊断、群体或固定学习风格推断个体；缺失自述不是无需求；缺失响应/分数不是能力不足；不使用未绑定估计器；改变构念不等价评分；不自动执行或写入状态。',policy_type='GOVERNANCE',rules=rules,unknown_action='CLARIFY',effect='ADVICE_ONLY')
+ inputs=[local('F05.COMPOSITION'),local('F05.STATE.RESPONSE'),local('F05.STATE.SELF_REPORT'),local('F05.STATE.SCORE'),local('F05.STATE.ESTIMATE'),local('F07.COMPOSITION'),local('F07.POLICY'),local('F07.ENV.LOW_BANDWIDTH'),local('F07.ENV.SHARED_DEVICE'),local('F07.ENV.PRIVATE_DEVICE'),local('F07.ROLE.LEARNER'),local('F07.ROLE.FACILITATOR'),local('F07.ROLE.REVIEWER')]
+ target=composition(o,cr,inputs,[policy],list(g.values()),'未知身份/权限/可及性/构念审查保持CLARIFY或HOLD；明确退出STOP；无权限REFUSE；不可及DEFER；改变构念只可独立练习；本人选择之前不提供个体化支持建议。')
  # E01 evaluation and change governance
  o='E01';cr=claims(o,design['modules'][o]['claims']);owner_claims[o]=cr
  sk=add(o,'SkillType',o+'.SKILL.PROTOCOL_INTEGRITY',cr,['评价协议完整性和版本化证据流程。'],'协议完整不代表干预有效。',label='PROTOCOL_INTEGRITY',performance_boundary='核协议、估计量、比较、结果、随访、审批和复核，不推断实证效果。')
@@ -210,7 +259,8 @@ def main():
  for owner,name,x,y in fixtures():
   assert owner in owner_claims
   comp=local(owner+'.COMPOSITION')
-  c,v=case(owner,name,comp,x,y,'COUNTEREXAMPLE' if y in ('HOLD','REFUSE','STOP','DEFER','CLARIFY','REJECT_CONSTRUCT_SUBSTITUTION','NOT_LEARNER_EVIDENCE','ASSISTED_NOT_INDEPENDENT','DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE','SIMULATION_ONLY_NOT_EFFECT') else 'FORWARD')
+  neg = (y.get('action') in ('REFUSE','STOP','DEFER','CLARIFY','REQUEST_OBSERVATION') if isinstance(y,dict) else y in ('HOLD','REFUSE','STOP','DEFER','CLARIFY','REJECT_CONSTRUCT_SUBSTITUTION','NOT_LEARNER_EVIDENCE','ASSISTED_NOT_INDEPENDENT','DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE','SIMULATION_ONLY_NOT_EFFECT'))
+  c,v=case(owner,name,comp,x,y,'COUNTEREXAMPLE' if neg else 'FORWARD')
   records[owner+'.COMPOSITION']['evidence_refs'].extend([c,v])
   actual=FUN[owner](x)
   assert actual==y,(owner,name,actual,y)
@@ -238,7 +288,7 @@ def main():
  write(DOC/'migration.json',{'source_version':old_manifest['version'],'target_version':VERSION,'migrated_record_count':len(migration),'records':migration,'old_shards_unchanged':True,'historical_receipts_preserved':True,'qualification_invalidation':'All prior P01-P10 candidate/qualification receipts require explicit exact tuple rebind because package manifest/version refs changed.'})
  write(DOC/'bindings.json',bindings)
  write(DOC/'fixtures.json',[{'owner':o,'name':n,'input':x,'expected':y} for o,n,x,y in fixtures()])
- write(DOC/'results.json',{'status':'BUILDER_ONLY','case_count':len(all_results),'counts':{o:sum(x['owner']==o for x in all_results) for o in ['F03','F04','F05','F07','E01']},'results':all_results,'manifest_sha256':sha(mf),'limitations':'No independent oracle, CQ/LC, empirical effects, source/rights qualification, generic runtime or authorization.'})
+ write(DOC/'results.json',{'status':'BUILDER_ONLY','case_count':len(all_results),'counts':{o:sum(x['owner']==o for x in all_results) for o in ['F03','F04','F05','F07','A07','E01']},'results':all_results,'manifest_sha256':sha(mf),'limitations':'No independent oracle, CQ/LC, empirical effects, source/rights qualification, generic runtime or authorization.'})
  # In-memory import with exact dependencies; no persistent SQLite file.
  ext=ROOT/'knowledge/v0.1.0/foundation-r3/relation-types.json'
  im=Importer(mode='research',catalog=catalog,extension=ManifestPin(ext.relative_to(ROOT).as_posix(),sha(ext)))
@@ -261,12 +311,25 @@ def main():
     q=load_record(im,cr);assert isinstance(q.get('statement'),str) and q['statement']
    replay.append({'owner':row['owner'],'case_id':row['case_id'],'sql_target':row['owner']+'.COMPOSITION','actual':actual,'status':'SQL_BUILDER_ONLY'})
   binding_results=[]
-  expected_bindings={'F03':['P03.PRODUCTION','P04.FLOW'],'F04':['P03.PRODUCTION','P06.FLOW'],'F05':['P08.FLOW','P10.FLOW'],'F07':['P10.FLOW'],'E01':['P10.FLOW']}
+  expected_bindings={'F03':['P03.PRODUCTION','P04.FLOW'],'F04':['P03.PRODUCTION','P06.FLOW'],'F05':['P08.FLOW','P10.FLOW'],'F07':['P10.FLOW'],'A07':['F05.COMPOSITION','F05.STATE.RESPONSE','F05.STATE.SELF_REPORT','F05.STATE.SCORE','F05.STATE.ESTIMATE','F07.COMPOSITION','F07.POLICY'],'E01':['P10.FLOW']}
   for owner,expected_ids in expected_bindings.items():
    comp=load_record(im,local(owner+'.COMPOSITION'));actual_ids=[x['stable_id'] for x in comp['input_refs']]
    assert all(x in actual_ids for x in expected_ids),(owner,actual_ids,expected_ids)
    for id in expected_ids:load_record(im,local(id))
    binding_results.append({'owner':owner,'expected_process_refs':expected_ids,'actual_process_refs':actual_ids,'status':'STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION'})
+  if01_contract=ROOT/'docs/implementation/if01/interface-contract.json'
+  if01_receipt=ROOT/'evidence/tasks/IF01/IF01-FORMAL-01.json'
+  if01_view=next(v for v in load(if01_contract)['view_routes'] if v['owner']=='A07')
+  assert set(if01_view['task_dependencies'])=={'F05','F07','IF01'}
+  assert set(if01_view['required_scope_ids'])=={'A07.RQ01','A07.RQ02','A07.RQ03','A07.RQ04'}
+  a07_input_records=[]
+  for id in expected_bindings['A07']:
+   z=records[id];a07_input_records.append({'stable_id':id,'kind':z['kind'],'owner':z['owner'],'record_sha256':dig(z)})
+  inherited_claims=[]
+  for z in cr:
+   origin='F05' if z in records['F05.COMPOSITION']['claim_refs'] else 'F07'
+   inherited_claims.append({'ref':z,'inherited_from':origin})
+  write(DOC/'composition-input-bindings.json',{'owner':'A07','status':'EXACT_PREPARATION_BINDING_ONLY','package_id':'learning-process','version':VERSION,'manifest_sha256':sha(mf),'task_dependencies':tasks['A07']['depends_on'],'inputs':a07_input_records,'inherited_claim_refs':inherited_claims,'if01':{'interface_version':if01_view.get('interface_version',load(if01_contract).get('interface_version')),'contract_path':'docs/implementation/if01/interface-contract.json','contract_sha256':sha(if01_contract),'receipt_path':'evidence/tasks/IF01/IF01-FORMAL-01.json','receipt_sha256':sha(if01_receipt),'content_digest':load(if01_receipt)['content_digest'],'required_scope_ids':if01_view['required_scope_ids'],'task_dependencies':if01_view['task_dependencies']},'limits':'IF01 is a file/receipt contract pin, not a synthetic canonical record; no formal A07 receipt or CQ/LC qualification.'})
   write(DOC/'import-receipt.json',receipt)
   write(DOC/'sql-results.json',{'status':'MEMORY_SQLITE_BUILDER_ONLY','cases':len(replay),'results':replay,'cross_module_bindings':binding_results,'manifest_sha256':sha(mf),'migration_count':len(migration),'record_count':len(records),'limits':'No persistent SQLite; no independent oracle or task qualification.'})
   print('PROCESS_MIGRATED',len(migration),'F_RECORDS',len(records)-len(migration),'TOTAL',len(records),'F_CASES',len(replay),'MANIFEST',sha(mf))
