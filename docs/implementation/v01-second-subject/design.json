@@ -1,0 +1,22 @@
+{
+  "status": "ORIGINAL_FINITE_RESEARCH_PREPARATION_NOT_QUALIFIED",
+  "subject": "mathematics",
+  "owner": "M01",
+  "claim": {
+    "statement": "For nonnegative integer numerators a,c and positive integer denominators b,d, a/b < c/d exactly when ad < cb; equality and greater-than follow the corresponding integer comparisons.",
+    "proof": "Multiplying a/b-c/d by the positive integer bd yields ad-cb. A positive multiplier preserves the sign; therefore the three comparisons are equivalent.",
+    "boundary": "Zero or negative denominators, noninteger inputs, Boolean values, unspecified expression, and values outside the declared finite fixture range are not processed. No learner mastery conclusion."
+  },
+  "task": {
+    "prompt": "Compare two nonnegative fractions with positive denominators: choose LESS, EQUAL or GREATER.",
+    "scoring": "Exact cross product comparison, no floating point, only integer inputs 0..100 with strictly positive denominators.",
+    "construct": "Comparing fraction magnitudes, not reading speed or general mathematical proficiency."
+  },
+  "reuse": {
+    "process": "P06.FLOW",
+    "process_version": "0.1.0-process-candidate-3",
+    "chinese_task": "H06.CONFIRM.TASK",
+    "math_task": "M01.TASK.COMPARE",
+    "boundary": "Same frozen P06 concrete observation/score/feedback routing on subject-specific keys; no generic runtime, no real lesson execution, no actual learner evidence. Synthetic output only."
+  }
+}

@@ -1,0 +1,3380 @@
+{
+  "bad_pin_probes": 2,
+  "baseline_math_role_rejected": true,
+  "domain_guard_probes": 72,
+  "independent_oracle": "NOT_RUN",
+  "invalid_math_probes": 6,
+  "math_fraction_reference_cases": 4096,
+  "math_manifest_sha256": "deb47c6920662fa30dc64d0881f9ab0af51264a37c79dea5bb994c99271bcbe4",
+  "persistent_sqlite": false,
+  "route_cases": 30,
+  "route_file_open_audit": "PYTHON_AUDIT_OPEN_EVENTS_IN_ROUTE_SCOPE_ONLY",
+  "routes": [
+    {
+      "audited_repo_file_opens": [
+        "docs/drafts/s01-scope-inventory.json",
+        "docs/drafts/s01/H01-requirements.json",
+        "docs/drafts/s01/H01/cases.json",
+        "docs/drafts/s01/H01/claims.json",
+        "docs/drafts/s01/H01/sources.json",
+        "docs/drafts/s01/H02-requirements.json",
+        "docs/drafts/s01/H02/cases.json",
+        "docs/drafts/s01/H02/claims.json",
+        "docs/drafts/s01/H02/sources.json",
+        "docs/drafts/s01/H03-requirements.json",
+        "docs/drafts/s01/H03/cases.json",
+        "docs/drafts/s01/H03/claims.json",
+        "docs/drafts/s01/H03/sources.json",
+        "docs/drafts/s01/H04-requirements.json",
+        "docs/drafts/s01/H04/cases.json",
+        "docs/drafts/s01/H04/claims.json",
+        "docs/drafts/s01/H04/sources.json",
+        "docs/drafts/s01/H05-requirements.json",
+        "docs/drafts/s01/H05/cases.json",
+        "docs/drafts/s01/H05/claims.json",
+        "docs/drafts/s01/H05/sources.json",
+        "docs/drafts/s01/H06-requirements.json",
+        "docs/drafts/s01/H06/cases.json",
+        "docs/drafts/s01/H06/claims.json",
+        "docs/drafts/s01/H06/sources.json",
+        "docs/drafts/s01/H07-requirements.json",
+        "docs/drafts/s01/H07/cases.json",
+        "docs/drafts/s01/H07/claims.json",
+        "docs/drafts/s01/H07/sources.json",
+        "docs/drafts/s01/K01-requirements.json",
+        "docs/drafts/s01/K01/arithmetic-evidence.json",
+        "docs/drafts/s01/K01/cases.json",
+        "docs/drafts/s01/K01/claims.json",
+        "docs/drafts/s01/K01/sources.json",
+        "docs/drafts/s01/K02-requirements.json",
+        "docs/drafts/s01/K02/arithmetic-evidence.json",
+        "docs/drafts/s01/K02/cases.json",
+        "docs/drafts/s01/K02/claims.json",
+        "docs/drafts/s01/K02/sources.json",
+        "docs/drafts/s01/K03-requirements.json",
+        "docs/drafts/s01/K03/cases.json",
+        "docs/drafts/s01/K03/claims.json",
+        "docs/drafts/s01/K03/logic-evidence.json",
+        "docs/drafts/s01/K03/sources.json",
+        "docs/drafts/s01/K04-requirements.json",
+        "docs/drafts/s01/K04/arithmetic-evidence.json",
+        "docs/drafts/s01/K04/cases.json",
+        "docs/drafts/s01/K04/claims.json",
+        "docs/drafts/s01/K04/sources.json",
+        "docs/drafts/s01/K05-requirements.json",
+        "docs/drafts/s01/K05/cases.json",
+        "docs/drafts/s01/K05/claims.json",
+        "docs/drafts/s01/K05/sources.json",
+        "docs/drafts/s01/K06-requirements.json",
+        "docs/drafts/s01/K06/cases.json",
+        "docs/drafts/s01/K06/claims.json",
+        "docs/drafts/s01/K06/sources.json",
+        "docs/drafts/s01/K07-requirements.json",
+        "docs/drafts/s01/K07/cases.json",
+        "docs/drafts/s01/K07/claims.json",
+        "docs/drafts/s01/K07/sources.json",
+        "docs/drafts/s01/K08-requirements.json",
+        "docs/drafts/s01/K08/cases.json",
+        "docs/drafts/s01/K08/claims.json",
+        "docs/drafts/s01/K08/sources.json",
+        "docs/drafts/s01/K09-requirements.json",
+        "docs/drafts/s01/K09/cases.json",
+        "docs/drafts/s01/K09/claims.json",
+        "docs/drafts/s01/K09/sources.json",
+        "docs/drafts/s01/K10-requirements.json",
+        "docs/drafts/s01/K10/cases.json",
+        "docs/drafts/s01/K10/claims.json",
+        "docs/drafts/s01/K10/sources.json",
+        "docs/drafts/s01/K11-requirements.json",
+        "docs/drafts/s01/K11/cases.json",
+        "docs/drafts/s01/K11/claims.json",
+        "docs/drafts/s01/K11/sources.json",
+        "docs/drafts/s01/K12-requirements.json",
+        "docs/drafts/s01/K12/cases.json",
+        "docs/drafts/s01/K12/claims.json",
+        "docs/drafts/s01/K12/sources.json",
+        "docs/drafts/s01/K13-requirements.json",
+        "docs/drafts/s01/K13/cases.json",
+        "docs/drafts/s01/K13/claims.json",
+        "docs/drafts/s01/K13/sources.json",
+        "docs/drafts/s01/K15-requirements.json",
+        "docs/drafts/s01/K15/cases.json",
+        "docs/drafts/s01/K15/claims.json",
+        "docs/drafts/s01/K15/sources.json",
+        "docs/drafts/s01/K16-requirements.json",
+        "docs/drafts/s01/K16/cases.json",
+        "docs/drafts/s01/K16/claims.json",
+        "docs/drafts/s01/K16/sources.json",
+        "docs/drafts/s01/K17-requirements.json",
+        "docs/drafts/s01/K17/cases.json",
+        "docs/drafts/s01/K17/claims.json",
+        "docs/drafts/s01/K17/sources.json",
+        "docs/drafts/s01/K19-requirements.json",
+        "docs/drafts/s01/K19/cases.json",
+        "docs/drafts/s01/K19/claims.json",
+        "docs/drafts/s01/K19/sources.json",
+        "docs/drafts/s01/depth/D2/K09/claims.json",
+        "docs/drafts/s01/depth/D2/K09/sources.json",
+        "docs/drafts/s01/depth/D2/batch02/H03/claims.json",
+        "docs/drafts/s01/depth/D2/batch02/H03/sources.json",
+        "docs/drafts/s01/depth/D2/batch02/H04/claims.json",
+        "docs/drafts/s01/depth/D2/batch02/H04/sources.json",
+        "docs/drafts/s01/depth/D2/batch02/H05/claims.json",
+        "docs/drafts/s01/depth/D2/batch02/H05/sources.json",
+        "docs/drafts/s01/depth/D2/batch02/K09/claims.json",
+        "docs/drafts/s01/depth/D2/batch02/K09/sources.json",
+        "docs/drafts/s01/depth/D2/batch03/H01/claims.json",
+        "docs/drafts/s01/depth/D2/batch03/H01/sources.json",
+        "docs/drafts/s01/depth/D2/batch03/H02/claims.json",
+        "docs/drafts/s01/depth/D2/batch03/H02/sources.json",
+        "docs/drafts/s01/depth/D2/batch03/H03/claims.json",
+        "docs/drafts/s01/depth/D2/batch03/H03/sources.json",
+        "docs/drafts/s01/depth/D2/batch03/H04/claims.json",
+        "docs/drafts/s01/depth/D2/batch03/H04/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/H05/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/H05/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/H06/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/H06/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/K05/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/K05/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/K06/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/K06/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K01/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K01/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K02/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K02/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K03/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K03/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K04/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K04/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K07/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K07/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K10/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K10/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K11/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K11/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K12/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K12/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/H07/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/H07/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/H07/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/H07/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/H07/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/H07/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/H01/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/H01/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/H06/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/H06/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/K05/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/K05/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/K06/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/K06/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/H01/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/H01/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/H02/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/H02/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/H03/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/H03/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/H04/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/H04/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/H06/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/H06/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/K05/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/K05/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/H03/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/H03/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/H04/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/H04/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch13/H01/claims.json",
+        "docs/drafts/s01/depth/D2/batch13/H01/sources.json",
+        "docs/drafts/s01/depth/D2/batch13/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch13/K19/sources.json",
+        "docs/drafts/s01/depth/D3/remediation/R2/claims.json",
+        "docs/drafts/s01/depth/D3/remediation/R2/sources.json",
+        "docs/implementation/db01/canonical.schema.json",
+        "docs/implementation/db01/mapping-contract.json",
+        "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "docs/implementation/f-composition-preparation/remediation-design.json",
+        "docs/implementation/h01-h04-batch/professional-design.json",
+        "docs/implementation/h01-h04-batch/taxonomy-index.json",
+        "docs/implementation/h05-h07-batch/professional-design.json",
+        "docs/implementation/h05-h07-batch/taxonomy-index.json",
+        "docs/implementation/if01/interface-contract.json",
+        "docs/implementation/k09-preparation/depth.json",
+        "docs/implementation/k09-preparation/finite-fixtures.json",
+        "docs/implementation/k09-preparation/finite-results.json",
+        "docs/implementation/k13-k17-preparation/depth.json",
+        "docs/implementation/k15-k16-k19-preparation/current-source-observations.json",
+        "docs/implementation/k15-k16-k19-preparation/depth.json",
+        "docs/implementation/kr03-kt-policy-resource-preparation/current-source-observations.json",
+        "docs/implementation/kr03-kt-policy-resource-preparation/depth.json",
+        "docs/implementation/p01-learning-modes/mode-design.json",
+        "docs/implementation/p02-p03/design.json",
+        "docs/implementation/process-cumulative/design.json",
+        "docs/implementation/process-cumulative/p09-remediation.json",
+        "evidence/validation/K13-K14-K17-K18-FINITE-01.json",
+        "evidence/validation/KR02-R6-K09-FINITE-01.json",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H01.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H02.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H07.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/chinese.manifest.json",
+        "knowledge/v0.1.0/chinese-cumulative-r2/evidence.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/evidence.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/K01/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-07.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/aux-source-support.json",
+        "knowledge/v0.1.0/foundation-r3/depth-additions.json",
+        "knowledge/v0.1.0/foundation-r3/duplicate-dispositions.json",
+        "knowledge/v0.1.0/foundation-r3/evidence.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/learning-core.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/new-oracles.json",
+        "knowledge/v0.1.0/foundation-r3/new-sources.json",
+        "knowledge/v0.1.0/foundation-r3/oracle-results.json",
+        "knowledge/v0.1.0/foundation-r3/relation-design.json",
+        "knowledge/v0.1.0/foundation-r3/relation-types.json",
+        "knowledge/v0.1.0/foundation-r3/source-support.json",
+        "knowledge/v0.1.0/foundation-r3/view-transformations.json",
+        "knowledge/v0.1.0/foundation/discrimination-cases.json",
+        "knowledge/v0.1.0/foundation/finite-oracles.json",
+        "knowledge/v0.1.0/foundation/oracle-results.json",
+        "knowledge/v0.1.0/foundation/source-research.json",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/A07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/E01.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P01.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P06.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P08.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P09.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-01.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-04.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-05.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-06.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-07.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-08.jsonl",
+        "knowledge/v0.1.0/measurement-r4/decision-design.json",
+        "knowledge/v0.1.0/measurement-r4/evidence.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/learning-core.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/model-design.json",
+        "knowledge/v0.1.0/measurement-r4/r4-bounded-source-claims.json",
+        "knowledge/v0.1.0/measurement-r4/source-retrieval-receipt.json",
+        "knowledge/v0.1.0/measurement-r4/source-trace.json",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-07.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/bounded-source-claims.json",
+        "knowledge/v0.1.0/practice-teaching-r10/composition-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/compositions.json",
+        "knowledge/v0.1.0/practice-teaching-r10/cross-semantic-fixtures.json",
+        "knowledge/v0.1.0/practice-teaching-r10/cross-semantic-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/current-source-observations.json",
+        "knowledge/v0.1.0/practice-teaching-r10/depth-additions.json",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/finite-oracles.json",
+        "knowledge/v0.1.0/practice-teaching-r10/learning-core.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/method-errata.json",
+        "knowledge/v0.1.0/practice-teaching-r10/oracle-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/r9-finite-fixtures.json",
+        "knowledge/v0.1.0/practice-teaching-r10/r9-finite-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/raw-composition-design.json",
+        "knowledge/v0.1.0/practice-teaching-r10/raw-composition-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/sequence-design.json",
+        "knowledge/v0.1.0/practice-teaching-r10/sequence-observations.json",
+        "knowledge/v0.1.0/practice-teaching-r10/verified-source.json",
+        "knowledge/v0.1.0/social-research-r2/K13/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-05.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-06.jsonl",
+        "knowledge/v0.1.0/social-research-r2/current-source-observations.json",
+        "knowledge/v0.1.0/social-research-r2/evidence.manifest.json",
+        "knowledge/v0.1.0/social-research-r2/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/finite-fixtures.json",
+        "knowledge/v0.1.0/social-research-r2/finite-results.json",
+        "knowledge/v0.1.0/social-research-r2/guarded-fixtures.json",
+        "knowledge/v0.1.0/social-research-r2/guarded-results.json",
+        "knowledge/v0.1.0/social-research-r2/learning-core.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-05.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-05.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/decision-design.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/finite-fixtures.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/finite-results.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-06.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/decision-design.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/finite-fixtures.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/finite-results.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/model-design.json"
+      ],
+      "cases": [
+        {
+          "actual": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "expected": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "id": "ZH.independent",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ASSISTED",
+              "score": 1,
+              "update": "REQUEST_INDEPENDENT_RETEST"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "expected": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ASSISTED",
+              "score": 1,
+              "update": "REQUEST_INDEPENDENT_RETEST"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "id": "ZH.assisted",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": true,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "7a3dae574805d95013978b10ddab2c2d529ecc100429a8ed86f71e7b353ecbca",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "MISSING",
+              "score": null,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "expected": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "MISSING",
+              "score": null,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "id": "ZH.missing",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": null,
+            "response_status": "MISSING",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "dc7a0a2211a93c5286ff16fae68925693f118644bd1d949846193de885f9f3ab",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "KEEP_COMPETING_HYPOTHESES"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "expected": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "KEEP_COMPETING_HYPOTHESES"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "id": "ZH.competing",
+          "input": {
+            "discrimination": {
+              "INSTRUCTION": true,
+              "RULE": true
+            },
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "hypotheses": [
+              "RULE",
+              "INSTRUCTION"
+            ],
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "DISCONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "34df1342117d1ec03af4db896c0cd8d62cc1d03f1888d7e38caf911cd3f4f656",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "REQUEST_DISCRIMINATING_OBSERVATION"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "expected": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "REQUEST_DISCRIMINATING_OBSERVATION"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "id": "ZH.unknown_evidence",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "hypotheses": [
+              "RULE",
+              "INSTRUCTION"
+            ],
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "DISCONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "1d3aae6175e9f2066f85c302fff538f7879e8c6832df25897003212f439ab208",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "hypothesis": "RULE",
+              "score": 0,
+              "update": "SUGGEST_TARGETED_FEEDBACK_ONLY"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "expected": {
+            "derived_key": "CONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "hypothesis": "RULE",
+              "score": 0,
+              "update": "SUGGEST_TARGETED_FEEDBACK_ONLY"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "id": "ZH.stipulated_discriminator",
+          "input": {
+            "discrimination": {
+              "INSTRUCTION": false,
+              "RULE": true
+            },
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "hypotheses": [
+              "RULE",
+              "INSTRUCTION"
+            ],
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "DISCONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "9d0c5fdd80c9fe54e2df77ff5b20c2b6d1864157c211269cc1d4da05c8903249",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "ZH.wrong_task",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "wrong"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "888590930452979db5871b805e2d54f710a16c29f2f12b8102e26694d8fe007a",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "ZH.wrong_scoring",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S2",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "937568360198aee849dd07b19fd37d32a59ebf808131e203578c184c5bcc3892",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "ZH.wrong_subject",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "0f5337ff02fec037f7524a0b866282ecbcc7d244513a34fe6c0cc3a4e67692fb",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "ZH.invalid_problem",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": null,
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "4b78ca4535c81826bb09b88a01b4a8bcf4cd36f36adc19cd988dc60593147fe2",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "ZH.invalid_response",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "unrecognized",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "4fb493fb8ced6dd3126a83095116cfe9748ea17c7d9eaa4a7ef513c93439b800",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "STOP",
+          "expected": "STOP",
+          "id": "ZH.exit",
+          "input": {
+            "exit": true,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "REFUSE",
+          "expected": "REFUSE",
+          "id": "ZH.denied",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": false,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "ZH.unknown_permission",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": null,
+            "problem": {
+              "actual_hour": 9,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 9
+            },
+            "response": "CONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "7ff8602eac95b572ea09c1e50f25a5993d2fb49db07f975469bf58409a81061e",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "DISCONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "expected": {
+            "derived_key": "DISCONFIRM",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          "id": "ZH.novel_variant",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": {
+              "actual_hour": 11,
+              "prior_proposition": true,
+              "request_function_verified": true,
+              "requested_hour": 10
+            },
+            "response": "DISCONFIRM",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "c15faf706f66f86e3be67890555fe3ec4652924c28fad17c9f97884b1abc0945",
+          "status": "AUTHOR_FINITE_ONLY"
+        }
+      ],
+      "domain": "ZH",
+      "domain_probes": [
+        {
+          "actual": "HOLD",
+          "domain": null,
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": null,
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": null,
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "UNKNOWN",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "UNKNOWN",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "UNKNOWN",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "math",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "math",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "math",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "zh",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "zh",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "zh",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": " MATH",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": " MATH",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": " MATH",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "ZH ",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "ZH ",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "ZH ",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": false,
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": false,
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": false,
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": 1,
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": 1,
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": 1,
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": [],
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": [],
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": [],
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": {},
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": {},
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": {},
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "EN",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "EN",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "EN",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        }
+      ],
+      "excluded_subject_open_count": 0,
+      "flow_sha256": "80f69b4df51d7451d955700aa9891265403e901c941efd2bd188672b6bbd12f9",
+      "opened_manifest_and_records": [
+        "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/evidence.manifest.json",
+        "knowledge/v0.1.0/social-research-r2/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/learning-core.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/evidence.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-07.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-05.jsonl",
+        "knowledge/v0.1.0/measurement-r4/learning-core.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/evidence.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-01.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-04.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-05.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-06.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-07.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-08.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/learning-core.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-07.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-06.jsonl",
+        "knowledge/v0.1.0/social-research-r2/learning-core.manifest.json",
+        "knowledge/v0.1.0/social-research-r2/K13/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-05.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-06.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-05.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-06.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P01.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P06.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P08.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P09.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/A07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/E01.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/chinese.manifest.json",
+        "knowledge/v0.1.0/chinese-cumulative-r2/evidence.manifest.json",
+        "knowledge/v0.1.0/chinese-cumulative-r2/evidence.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H01.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H02.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+        "knowledge/v0.1.0/chinese-cumulative-r2/H07.jsonl"
+      ],
+      "opened_packages": [
+        [
+          "evidence",
+          "0.1.0-p01-candidate-1"
+        ],
+        [
+          "evidence",
+          "0.1.0-practice-teaching-candidate-10"
+        ],
+        [
+          "evidence",
+          "0.1.0-social-research-candidate-2"
+        ],
+        [
+          "evidence",
+          "0.1.0-foundation-candidate-3"
+        ],
+        [
+          "learning-core",
+          "0.1.0-foundation-candidate-3"
+        ],
+        [
+          "evidence",
+          "0.1.0-measurement-candidate-4"
+        ],
+        [
+          "learning-core",
+          "0.1.0-measurement-candidate-4"
+        ],
+        [
+          "learning-core",
+          "0.1.0-practice-teaching-candidate-10"
+        ],
+        [
+          "learning-core",
+          "0.1.0-social-research-candidate-2"
+        ],
+        [
+          "evidence",
+          "0.1.0-technology-inclusion-governance-candidate-1"
+        ],
+        [
+          "learning-core",
+          "0.1.0-technology-inclusion-governance-candidate-1"
+        ],
+        [
+          "evidence",
+          "0.1.0-trace-adaptation-resources-candidate-1"
+        ],
+        [
+          "learning-core",
+          "0.1.0-trace-adaptation-resources-candidate-1"
+        ],
+        [
+          "learning-process",
+          "0.1.0-process-candidate-3"
+        ],
+        [
+          "evidence",
+          "0.1.0-chinese-cumulative-candidate-2"
+        ],
+        [
+          "chinese",
+          "0.1.0-chinese-cumulative-candidate-2"
+        ]
+      ],
+      "process": [
+        "learning-process",
+        "0.1.0-process-candidate-3"
+      ],
+      "records": 11623,
+      "root": [
+        "chinese",
+        "0.1.0-chinese-cumulative-candidate-2"
+      ],
+      "typed_refs": 27461
+    },
+    {
+      "audited_repo_file_opens": [
+        "docs/drafts/s01-scope-inventory.json",
+        "docs/drafts/s01/K01-requirements.json",
+        "docs/drafts/s01/K01/arithmetic-evidence.json",
+        "docs/drafts/s01/K01/cases.json",
+        "docs/drafts/s01/K01/claims.json",
+        "docs/drafts/s01/K01/sources.json",
+        "docs/drafts/s01/K02-requirements.json",
+        "docs/drafts/s01/K02/arithmetic-evidence.json",
+        "docs/drafts/s01/K02/cases.json",
+        "docs/drafts/s01/K02/claims.json",
+        "docs/drafts/s01/K02/sources.json",
+        "docs/drafts/s01/K03-requirements.json",
+        "docs/drafts/s01/K03/cases.json",
+        "docs/drafts/s01/K03/claims.json",
+        "docs/drafts/s01/K03/logic-evidence.json",
+        "docs/drafts/s01/K03/sources.json",
+        "docs/drafts/s01/K04-requirements.json",
+        "docs/drafts/s01/K04/arithmetic-evidence.json",
+        "docs/drafts/s01/K04/cases.json",
+        "docs/drafts/s01/K04/claims.json",
+        "docs/drafts/s01/K04/sources.json",
+        "docs/drafts/s01/K05-requirements.json",
+        "docs/drafts/s01/K05/cases.json",
+        "docs/drafts/s01/K05/claims.json",
+        "docs/drafts/s01/K05/sources.json",
+        "docs/drafts/s01/K06-requirements.json",
+        "docs/drafts/s01/K06/cases.json",
+        "docs/drafts/s01/K06/claims.json",
+        "docs/drafts/s01/K06/sources.json",
+        "docs/drafts/s01/K07-requirements.json",
+        "docs/drafts/s01/K07/cases.json",
+        "docs/drafts/s01/K07/claims.json",
+        "docs/drafts/s01/K07/sources.json",
+        "docs/drafts/s01/K08-requirements.json",
+        "docs/drafts/s01/K08/cases.json",
+        "docs/drafts/s01/K08/claims.json",
+        "docs/drafts/s01/K08/sources.json",
+        "docs/drafts/s01/K09-requirements.json",
+        "docs/drafts/s01/K09/cases.json",
+        "docs/drafts/s01/K09/claims.json",
+        "docs/drafts/s01/K09/sources.json",
+        "docs/drafts/s01/K10-requirements.json",
+        "docs/drafts/s01/K10/cases.json",
+        "docs/drafts/s01/K10/claims.json",
+        "docs/drafts/s01/K10/sources.json",
+        "docs/drafts/s01/K11-requirements.json",
+        "docs/drafts/s01/K11/cases.json",
+        "docs/drafts/s01/K11/claims.json",
+        "docs/drafts/s01/K11/sources.json",
+        "docs/drafts/s01/K12-requirements.json",
+        "docs/drafts/s01/K12/cases.json",
+        "docs/drafts/s01/K12/claims.json",
+        "docs/drafts/s01/K12/sources.json",
+        "docs/drafts/s01/K13-requirements.json",
+        "docs/drafts/s01/K13/cases.json",
+        "docs/drafts/s01/K13/claims.json",
+        "docs/drafts/s01/K13/sources.json",
+        "docs/drafts/s01/K15-requirements.json",
+        "docs/drafts/s01/K15/cases.json",
+        "docs/drafts/s01/K15/claims.json",
+        "docs/drafts/s01/K15/sources.json",
+        "docs/drafts/s01/K16-requirements.json",
+        "docs/drafts/s01/K16/cases.json",
+        "docs/drafts/s01/K16/claims.json",
+        "docs/drafts/s01/K16/sources.json",
+        "docs/drafts/s01/K17-requirements.json",
+        "docs/drafts/s01/K17/cases.json",
+        "docs/drafts/s01/K17/claims.json",
+        "docs/drafts/s01/K17/sources.json",
+        "docs/drafts/s01/K19-requirements.json",
+        "docs/drafts/s01/K19/cases.json",
+        "docs/drafts/s01/K19/claims.json",
+        "docs/drafts/s01/K19/sources.json",
+        "docs/drafts/s01/depth/D2/K09/claims.json",
+        "docs/drafts/s01/depth/D2/K09/sources.json",
+        "docs/drafts/s01/depth/D2/batch02/K09/claims.json",
+        "docs/drafts/s01/depth/D2/batch02/K09/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/K05/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/K05/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/K06/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/K06/sources.json",
+        "docs/drafts/s01/depth/D2/batch04/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch04/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K01/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K01/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K02/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K02/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K03/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K03/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K04/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K04/sources.json",
+        "docs/drafts/s01/depth/D2/batch05/K07/claims.json",
+        "docs/drafts/s01/depth/D2/batch05/K07/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K10/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K10/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K11/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K11/sources.json",
+        "docs/drafts/s01/depth/D2/batch06/K12/claims.json",
+        "docs/drafts/s01/depth/D2/batch06/K12/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch07/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch07/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch08/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch08/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch09/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch09/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/K05/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/K05/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/K06/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/K06/sources.json",
+        "docs/drafts/s01/depth/D2/batch10/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch10/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/K05/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/K05/sources.json",
+        "docs/drafts/s01/depth/D2/batch11/K08/claims.json",
+        "docs/drafts/s01/depth/D2/batch11/K08/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K13/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K13/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K15/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K15/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K16/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K16/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K17/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K17/sources.json",
+        "docs/drafts/s01/depth/D2/batch12/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch12/K19/sources.json",
+        "docs/drafts/s01/depth/D2/batch13/K19/claims.json",
+        "docs/drafts/s01/depth/D2/batch13/K19/sources.json",
+        "docs/drafts/s01/depth/D3/remediation/R2/claims.json",
+        "docs/drafts/s01/depth/D3/remediation/R2/sources.json",
+        "docs/implementation/db01/canonical.schema.json",
+        "docs/implementation/db01/mapping-contract.json",
+        "docs/implementation/f-composition-preparation/analysis-plan.json",
+        "docs/implementation/f-composition-preparation/remediation-design.json",
+        "docs/implementation/if01/interface-contract.json",
+        "docs/implementation/k09-preparation/depth.json",
+        "docs/implementation/k09-preparation/finite-fixtures.json",
+        "docs/implementation/k09-preparation/finite-results.json",
+        "docs/implementation/k13-k17-preparation/depth.json",
+        "docs/implementation/k15-k16-k19-preparation/current-source-observations.json",
+        "docs/implementation/k15-k16-k19-preparation/depth.json",
+        "docs/implementation/kr03-kt-policy-resource-preparation/current-source-observations.json",
+        "docs/implementation/kr03-kt-policy-resource-preparation/depth.json",
+        "docs/implementation/p01-learning-modes/mode-design.json",
+        "docs/implementation/p02-p03/design.json",
+        "docs/implementation/process-cumulative/design.json",
+        "docs/implementation/process-cumulative/p09-remediation.json",
+        "docs/implementation/v01-second-subject/design.json",
+        "evidence/validation/K13-K14-K17-K18-FINITE-01.json",
+        "evidence/validation/KR02-R6-K09-FINITE-01.json",
+        "knowledge/v0.1.0/foundation-r3/K01/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-07.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/aux-source-support.json",
+        "knowledge/v0.1.0/foundation-r3/depth-additions.json",
+        "knowledge/v0.1.0/foundation-r3/duplicate-dispositions.json",
+        "knowledge/v0.1.0/foundation-r3/evidence.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/learning-core.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/new-oracles.json",
+        "knowledge/v0.1.0/foundation-r3/new-sources.json",
+        "knowledge/v0.1.0/foundation-r3/oracle-results.json",
+        "knowledge/v0.1.0/foundation-r3/relation-design.json",
+        "knowledge/v0.1.0/foundation-r3/relation-types.json",
+        "knowledge/v0.1.0/foundation-r3/source-support.json",
+        "knowledge/v0.1.0/foundation-r3/view-transformations.json",
+        "knowledge/v0.1.0/foundation/discrimination-cases.json",
+        "knowledge/v0.1.0/foundation/finite-oracles.json",
+        "knowledge/v0.1.0/foundation/oracle-results.json",
+        "knowledge/v0.1.0/foundation/source-research.json",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/A07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/E01.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P01.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P06.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P08.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P09.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-01.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-04.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-05.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-06.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-07.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-08.jsonl",
+        "knowledge/v0.1.0/measurement-r4/decision-design.json",
+        "knowledge/v0.1.0/measurement-r4/evidence.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/learning-core.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/model-design.json",
+        "knowledge/v0.1.0/measurement-r4/r4-bounded-source-claims.json",
+        "knowledge/v0.1.0/measurement-r4/source-retrieval-receipt.json",
+        "knowledge/v0.1.0/measurement-r4/source-trace.json",
+        "knowledge/v0.1.0/other-subject-math-v01/M01.jsonl",
+        "knowledge/v0.1.0/other-subject-math-v01/other-subject.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-07.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/bounded-source-claims.json",
+        "knowledge/v0.1.0/practice-teaching-r10/composition-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/compositions.json",
+        "knowledge/v0.1.0/practice-teaching-r10/cross-semantic-fixtures.json",
+        "knowledge/v0.1.0/practice-teaching-r10/cross-semantic-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/current-source-observations.json",
+        "knowledge/v0.1.0/practice-teaching-r10/depth-additions.json",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/finite-oracles.json",
+        "knowledge/v0.1.0/practice-teaching-r10/learning-core.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/method-errata.json",
+        "knowledge/v0.1.0/practice-teaching-r10/oracle-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/r9-finite-fixtures.json",
+        "knowledge/v0.1.0/practice-teaching-r10/r9-finite-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/raw-composition-design.json",
+        "knowledge/v0.1.0/practice-teaching-r10/raw-composition-results.json",
+        "knowledge/v0.1.0/practice-teaching-r10/sequence-design.json",
+        "knowledge/v0.1.0/practice-teaching-r10/sequence-observations.json",
+        "knowledge/v0.1.0/practice-teaching-r10/verified-source.json",
+        "knowledge/v0.1.0/social-research-r2/K13/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-05.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-06.jsonl",
+        "knowledge/v0.1.0/social-research-r2/current-source-observations.json",
+        "knowledge/v0.1.0/social-research-r2/evidence.manifest.json",
+        "knowledge/v0.1.0/social-research-r2/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/finite-fixtures.json",
+        "knowledge/v0.1.0/social-research-r2/finite-results.json",
+        "knowledge/v0.1.0/social-research-r2/guarded-fixtures.json",
+        "knowledge/v0.1.0/social-research-r2/guarded-results.json",
+        "knowledge/v0.1.0/social-research-r2/learning-core.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-05.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-05.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/decision-design.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/finite-fixtures.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/finite-results.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-06.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/decision-design.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/finite-fixtures.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/finite-results.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/model-design.json"
+      ],
+      "cases": [
+        {
+          "actual": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "expected": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "id": "MATH.independent",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ASSISTED",
+              "score": 1,
+              "update": "REQUEST_INDEPENDENT_RETEST"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "expected": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ASSISTED",
+              "score": 1,
+              "update": "REQUEST_INDEPENDENT_RETEST"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "id": "MATH.assisted",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": true,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "090478beeed040a9c43c4f06508a2d79c4ba1fde1ee08eef9c1f706e4d49c460",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "MISSING",
+              "score": null,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "expected": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "MISSING",
+              "score": null,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "id": "MATH.missing",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": null,
+            "response_status": "MISSING",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "076b02fb43808ec815f355373ed2a5adab51413fc5b25819a80e00fcd19fbd38",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "KEEP_COMPETING_HYPOTHESES"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "expected": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "KEEP_COMPETING_HYPOTHESES"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "id": "MATH.competing",
+          "input": {
+            "discrimination": {
+              "INSTRUCTION": true,
+              "RULE": true
+            },
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "hypotheses": [
+              "RULE",
+              "INSTRUCTION"
+            ],
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "GREATER",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "91ed35ff38eff0db26b9ccacd5ddd521282a37883f68a2047c270c09f8c010c8",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "REQUEST_DISCRIMINATING_OBSERVATION"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "expected": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "score": 0,
+              "update": "REQUEST_DISCRIMINATING_OBSERVATION"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "id": "MATH.unknown_evidence",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "hypotheses": [
+              "RULE",
+              "INSTRUCTION"
+            ],
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "GREATER",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "ef9de5376b41a38c5f229bffa4bcdf7a51fc2a958cb759349ff7043eb1901a9d",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "hypothesis": "RULE",
+              "score": 0,
+              "update": "SUGGEST_TARGETED_FEEDBACK_ONLY"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "expected": {
+            "derived_key": "LESS",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "ERROR",
+              "hypothesis": "RULE",
+              "score": 0,
+              "update": "SUGGEST_TARGETED_FEEDBACK_ONLY"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "id": "MATH.stipulated_discriminator",
+          "input": {
+            "discrimination": {
+              "INSTRUCTION": false,
+              "RULE": true
+            },
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "hypotheses": [
+              "RULE",
+              "INSTRUCTION"
+            ],
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "GREATER",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "a7ae5fe674a7d374ed2cc3420dd40c1044bd25df62405adbdeb27d8f15dc3143",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "MATH.wrong_task",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "wrong"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "c9cbd5d031d99a0f6976ca428bb4fd82c59adddbdd6f5d2271dce78425227df1",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "MATH.wrong_scoring",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S2",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "b76b6875e2fe9192bca5c8064f89141abf0b10d64f6ce18bcfa8f8bd0b7f612a",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "MATH.wrong_subject",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.CONFIRM.TASK",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "a93f92e9dbc7fe3bfda5342e90e39fb22fd08da1b9d96a58ef72adb8d4ca2725",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "MATH.invalid_problem",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": null,
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "8ee77b50476a3a141043ae43953f3554718abb72c92c6393ec94d60a9b563934",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "MATH.invalid_response",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "unrecognized",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "ab4d2a6f4902ba17042eb276b8f8e444e6d0c8b8764d7fdf88275d4d4f2d94f2",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "STOP",
+          "expected": "STOP",
+          "id": "MATH.exit",
+          "input": {
+            "exit": true,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "REFUSE",
+          "expected": "REFUSE",
+          "id": "MATH.denied",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": false,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": "HOLD",
+          "expected": "HOLD",
+          "id": "MATH.unknown_permission",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": null,
+            "problem": [
+              2,
+              3,
+              3,
+              4
+            ],
+            "response": "LESS",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "f70d3f335389e793f5e9a503760c1ffba90663e90dbb1cffa15a746c62eafdca",
+          "status": "AUTHOR_FINITE_ONLY"
+        },
+        {
+          "actual": {
+            "derived_key": "GREATER",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "expected": {
+            "derived_key": "GREATER",
+            "mastery": "UNKNOWN",
+            "process": {
+              "kind": "FlowSpec",
+              "owner": "P06",
+              "package_id": "learning-process",
+              "stable_id": "P06.FLOW",
+              "version": "0.1.0-process-candidate-3"
+            },
+            "result": {
+              "category": "INDEPENDENT_TASK_ONLY",
+              "score": 1,
+              "update": "NONE"
+            },
+            "task": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            }
+          },
+          "id": "MATH.novel_variant",
+          "input": {
+            "exit": false,
+            "expected_scoring_version": "S1",
+            "hint_used": false,
+            "observed_task_version": "T1",
+            "permission": true,
+            "problem": [
+              3,
+              5,
+              2,
+              4
+            ],
+            "response": "GREATER",
+            "response_status": "OBSERVED",
+            "scoring_version": "S1",
+            "task_ref": {
+              "kind": "TaskSpec",
+              "owner": "M01",
+              "package_id": "other-subject",
+              "stable_id": "M01.TASK.COMPARE",
+              "version": "0.1.0-math-v01-candidate-1"
+            },
+            "task_version": "T1"
+          },
+          "input_sha256": "8f06a9c4afb124893448442487055856948ca361efdef8f40f29f98652ec7bed",
+          "status": "AUTHOR_FINITE_ONLY"
+        }
+      ],
+      "domain": "MATH",
+      "domain_probes": [
+        {
+          "actual": "HOLD",
+          "domain": null,
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": null,
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": null,
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "UNKNOWN",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "UNKNOWN",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "UNKNOWN",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "math",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "math",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "math",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "zh",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "zh",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "zh",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": " MATH",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": " MATH",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": " MATH",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "ZH ",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "ZH ",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "ZH ",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": false,
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": false,
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": false,
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": 1,
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": 1,
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": 1,
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": [],
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": [],
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": [],
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": {},
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": {},
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": {},
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "EN",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "EN",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "EN",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        }
+      ],
+      "excluded_subject_open_count": 0,
+      "flow_sha256": "80f69b4df51d7451d955700aa9891265403e901c941efd2bd188672b6bbd12f9",
+      "opened_manifest_and_records": [
+        "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence.manifest.json",
+        "knowledge/v0.1.0/learning-process-p01/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/evidence/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/evidence.manifest.json",
+        "knowledge/v0.1.0/social-research-r2/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/learning-core.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/evidence.manifest.json",
+        "knowledge/v0.1.0/foundation-r3/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K01/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K02/records-07.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-05.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K03/records-06.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-00.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-01.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-02.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-03.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-04.jsonl",
+        "knowledge/v0.1.0/foundation-r3/K04/records-05.jsonl",
+        "knowledge/v0.1.0/measurement-r4/learning-core.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/evidence.manifest.json",
+        "knowledge/v0.1.0/measurement-r4/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-00.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-01.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-04.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-05.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-06.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-07.jsonl",
+        "knowledge/v0.1.0/measurement-r4/K09/records-08.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/learning-core.manifest.json",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K05/records-07.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K06/records-06.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K07/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-00.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-01.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-04.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-05.jsonl",
+        "knowledge/v0.1.0/practice-teaching-r10/K08/records-06.jsonl",
+        "knowledge/v0.1.0/social-research-r2/learning-core.manifest.json",
+        "knowledge/v0.1.0/social-research-r2/K13/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K13/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-00.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-01.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-03.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-04.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-05.jsonl",
+        "knowledge/v0.1.0/social-research-r2/K17/records-06.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-05.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-00.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-01.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-04.jsonl",
+        "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/learning-core.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence.manifest.json",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/evidence/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-00.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-01.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-04.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-05.jsonl",
+        "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-06.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P01.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P06.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P08.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P09.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F03.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F04.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F05.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/F07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/A07.jsonl",
+        "knowledge/v0.1.0/learning-process-cumulative-r3/E01.jsonl",
+        "knowledge/v0.1.0/other-subject-math-v01/other-subject.manifest.json",
+        "knowledge/v0.1.0/other-subject-math-v01/M01.jsonl"
+      ],
+      "opened_packages": [
+        [
+          "evidence",
+          "0.1.0-p01-candidate-1"
+        ],
+        [
+          "evidence",
+          "0.1.0-practice-teaching-candidate-10"
+        ],
+        [
+          "evidence",
+          "0.1.0-social-research-candidate-2"
+        ],
+        [
+          "evidence",
+          "0.1.0-foundation-candidate-3"
+        ],
+        [
+          "learning-core",
+          "0.1.0-foundation-candidate-3"
+        ],
+        [
+          "evidence",
+          "0.1.0-measurement-candidate-4"
+        ],
+        [
+          "learning-core",
+          "0.1.0-measurement-candidate-4"
+        ],
+        [
+          "learning-core",
+          "0.1.0-practice-teaching-candidate-10"
+        ],
+        [
+          "learning-core",
+          "0.1.0-social-research-candidate-2"
+        ],
+        [
+          "evidence",
+          "0.1.0-technology-inclusion-governance-candidate-1"
+        ],
+        [
+          "learning-core",
+          "0.1.0-technology-inclusion-governance-candidate-1"
+        ],
+        [
+          "evidence",
+          "0.1.0-trace-adaptation-resources-candidate-1"
+        ],
+        [
+          "learning-core",
+          "0.1.0-trace-adaptation-resources-candidate-1"
+        ],
+        [
+          "learning-process",
+          "0.1.0-process-candidate-3"
+        ],
+        [
+          "other-subject",
+          "0.1.0-math-v01-candidate-1"
+        ]
+      ],
+      "process": [
+        "learning-process",
+        "0.1.0-process-candidate-3"
+      ],
+      "records": 9402,
+      "root": [
+        "other-subject",
+        "0.1.0-math-v01-candidate-1"
+      ],
+      "typed_refs": 22796
+    }
+  ],
+  "scope": "Shared P06 finite discriminator/feedback gate, stipulated diagnostic flags; no complete lifecycle or full CQ25/LC11.",
+  "shared_process_manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+  "shared_process_same_sql_payload": true,
+  "source_bindings": {
+    "H05": {
+      "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+      "qualification_receipt_sha256": "99e6850eb119c05c995e94e87e0de3409f2a026bcead316613c5d260100a1144",
+      "receipt_path": "evidence/tasks/H05/H05-FORMAL-01.json",
+      "receipt_sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+    },
+    "H06": {
+      "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+      "qualification_receipt_sha256": "daba78cedd3b5a9c24e610d7694ee84de4267c49ef78a54b6859f3c0f8348c09",
+      "receipt_path": "evidence/tasks/H06/H06-FORMAL-01.json",
+      "receipt_sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87"
+    },
+    "H07": {
+      "content_digest": "d2da238163799f54941e02e0aa10a88a6637c2798cb35d61a612a78f9212fdc6",
+      "qualification_receipt_sha256": "8d5f64298f86e6821d34de4e2df7bc444ce5d12eed64aee967f987057fe3a128",
+      "receipt_path": "evidence/tasks/H07/H07-FORMAL-01.json",
+      "receipt_sha256": "0facd37fe97f559658bd803eddde2a0cc40934ac2538aeabce246c3a4ca25c5f"
+    },
+    "P06": {
+      "content_digest": "12a5152f08914ce28046fdbfadf3770daff65cccebf92dfb810781aba091ee7c",
+      "qualification_receipt_sha256": "4ecda73130e6055ee857c2f6998ae04f9961a92d7cae79a659adde53391e6988",
+      "receipt_path": "evidence/tasks/P06/P06-FORMAL-02.json",
+      "receipt_sha256": "ed995d2e47ca7c8b309914a4184d9f32fcf468c5862e10532463bd7ba8211196"
+    },
+    "V00": {
+      "content_digest": "90cd75ab087b2f4b11e98c292d0ea7b77d63fa39f9ae788d6771530b5580d443",
+      "receipt_path": "evidence/tasks/V00/V00-FORMAL-01.json",
+      "receipt_sha256": "4108d101c7303605d150cef2b080b1e86cea73b571dba6e058c07f146b14c43b"
+    }
+  },
+  "status": "V01_PREPARATION_ONLY_NOT_LC11_ACCEPTANCE"
+}
