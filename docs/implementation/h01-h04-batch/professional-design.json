@@ -1,0 +1,1102 @@
+{
+  "status": "RESTRICTED_PROFESSIONAL_CANDIDATE_NOT_FULL_DEPTH",
+  "sources": [
+    {
+      "owner": "H01",
+      "id": "H01-R1-EDUHK",
+      "title": "EdUHK Mandarin Phonology",
+      "url": "https://corpus.eduhk.hk/mandarin_pronunciation/?page_id=33",
+      "locator": "Syllable, §3.2 a,b",
+      "limits": "Secondary teaching explanation; no audio or figure revalidation; third-tone pair only.",
+      "access": "TEXT_RECHECKED_20261128"
+    },
+    {
+      "owner": "H01",
+      "id": "H01-R1-LMU",
+      "title": "LMU Mandarin phonetics demos",
+      "url": "https://www.phonetik.uni-muenchen.de/studium/skripten/languagedemos/Demos/mandarin.html",
+      "locator": "Tone in Mandarin, lines 4–7",
+      "limits": "Relative symbolic pitch, no raw audio measurement.",
+      "access": "TEXT_RECHECKED_20261128"
+    },
+    {
+      "owner": "H02",
+      "id": "H02-R1-UAX38",
+      "title": "Unicode UAX #38 revision 41",
+      "url": "https://www.unicode.org/reports/tr38/tr38-41.html",
+      "locator": "§3.7.1 and property kMandarin/kTotalStrokes",
+      "limits": "Versioned informative data; not universal glyph, official HSK or reading authority.",
+      "access": "TEXT_RECHECKED_20261128"
+    },
+    {
+      "owner": "H02",
+      "id": "H02-R1-U17",
+      "title": "Unicode 17.0 Core Specification Chapter 18",
+      "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-18/",
+      "locator": "§18.1 Han, unification and abstract shape",
+      "limits": "Encoding vs glyph; actual normative handwriting not established.",
+      "access": "TEXT_RECHECKED_20261128"
+    },
+    {
+      "owner": "H03",
+      "id": "H03-R1-UDTOK",
+      "title": "UD Chinese Tokenization v2",
+      "url": "https://universaldependencies.org/zh/tokenization.html",
+      "locator": "UD Chinese, UD Chinese-HK, lines 9–22",
+      "limits": "Treebank-specific annotation, not universal lexical identity.",
+      "access": "TEXT_RECHECKED_20261128"
+    },
+    {
+      "owner": "H03",
+      "id": "H03-R1-UD",
+      "title": "UD for Chinese v2",
+      "url": "https://universaldependencies.org/zh/index.html",
+      "locator": "Morphology and Compounds, lines 18–48, 79–83",
+      "limits": "Annotation scheme, not universal linguistic theory.",
+      "access": "TEXT_RECHECKED_20261128"
+    },
+    {
+      "owner": "H04",
+      "id": "H04-R1-UD",
+      "title": "UD for Chinese v2",
+      "url": "https://universaldependencies.org/zh/index.html",
+      "locator": "Morphology and Syntax, lines 45–73",
+      "limits": "Annotation scheme; role supplied independently, not automatic parse.",
+      "access": "TEXT_RECHECKED_20261128"
+    },
+    {
+      "owner": "H04",
+      "id": "H04-R1-CASE",
+      "title": "UD Mandarin case relation v2",
+      "url": "https://universaldependencies.org/zh/dep/case.html",
+      "locator": "Case marking, lines 7–12",
+      "limits": "Specified function required; not grammaticality or surface matching.",
+      "access": "TEXT_RECHECKED_20261128"
+    }
+  ],
+  "claims": [
+    {
+      "id": "H01.04.01.R1.C01",
+      "owner": "H01",
+      "topic": "H01.04.01",
+      "rule": "tone_pair",
+      "source": "H01-R1-EDUHK",
+      "locator": "§3.2 a, lines 64–74",
+      "statement": "同一语流域内相邻两个三声音节的常见变调使首个音节表层读作近似二声；须区分本调与表层调。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不得由表层二声反推本调；三音节以上、边界及实际音高另核。"
+    },
+    {
+      "id": "H01.04.02.R1.C01",
+      "owner": "H01",
+      "topic": "H01.04.02",
+      "rule": "bu_tone",
+      "source": "H01-R1-EDUHK",
+      "locator": "§3.2 b, lines 81–85",
+      "statement": "普通否定“不”在四声前常读二声，在一、二、三声前读四声；中间轻声结构须另分。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不适用于所有不字、结果补语或缺语境表层形式。"
+    },
+    {
+      "id": "H01.02.01.R1.C01",
+      "owner": "H01",
+      "topic": "H01.02.01",
+      "rule": "initial_spelling",
+      "source": "H01-R1-EDUHK",
+      "locator": "Syllable, lines 9–15",
+      "statement": "普通话拼音声母中 zh、ch、sh 等二字母写法在声母槽内各表示一个声母，而非两个相邻辅音。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "拼音拼写单位不等同实际音素串；不得对任意字母序列自动切分。"
+    },
+    {
+      "id": "H01.03.02.R1.C01",
+      "owner": "H01",
+      "topic": "H01.03.02",
+      "rule": "tone_value",
+      "source": "H01-R1-LMU",
+      "locator": "Tone in Mandarin, lines 4–7",
+      "statement": "五度标记以相对音高层级描述轮廓；它是简化转写，不是说话人实际基频的 Hz 值。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不能将相对层级换算成绝对Hz或直接以轮廓决定词汇调类。"
+    },
+    {
+      "id": "H02.01.01.R1.C01",
+      "owner": "H02",
+      "topic": "H02.01.01",
+      "rule": "glyph_identity",
+      "source": "H02-R1-U17",
+      "locator": "§18.1 Han / abstract shape",
+      "statement": "Unicode 标识抽象编码字符，显示字形由字形选择与规范影响；码点一致仅能建立编码标识一致。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不因视觉相似合并码点，也不凭同码点推断相同书写规范、读音或义项。"
+    },
+    {
+      "id": "H02.01.02.R1.C01",
+      "owner": "H02",
+      "topic": "H02.01.02",
+      "rule": "variant_context",
+      "source": "H02-R1-UAX38",
+      "locator": "§3.7.1 contextual conversion",
+      "statement": "简转繁的一对多映射需要语义环境；以脏为例，内脏语义和肮脏语义的繁体候选不同。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "例子仅限该来源所述映射；不能推断所有词可逆或官方字形。"
+    },
+    {
+      "id": "H02.02.01.R1.C01",
+      "owner": "H02",
+      "topic": "H02.02.01",
+      "rule": "stroke_source",
+      "source": "H02-R1-UAX38",
+      "locator": "property kTotalStrokes / kAlternateTotalStrokes",
+      "statement": "Unihan 笔画数属性属于特定计数约定；地区字形差异可另有笔画数记录。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不能把部件编码、笔形编号或码点当笔画数；未绑定字形规范不能用于评价。"
+    },
+    {
+      "id": "H02.03.01.R1.C01",
+      "owner": "H02",
+      "topic": "H02.03.01",
+      "rule": "mandarin_property",
+      "source": "H02-R1-UAX38",
+      "locator": "property kMandarin",
+      "statement": "kMandarin 是信息性读音属性，存储记录的普通话读音值；不同读音来源/字词环境需要分开绑定。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不由字形推断读音，不把属性列表当完整词语义项或实际发音。"
+    },
+    {
+      "id": "H03.01.01.R1.C01",
+      "owner": "H03",
+      "topic": "H03.01.01",
+      "rule": "segmentation",
+      "source": "H03-R1-UDTOK",
+      "locator": "UD Chinese-HK, lines 20–22",
+      "statement": "同一结果复合或可能补语在不同标注规范中可以有不同 token 边界：UD Chinese-HK 分开，Penn Chinese 视条件而定。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "token 不等于词典词条；不可把分词标准泛化为唯一词身份。"
+    },
+    {
+      "id": "H03.03.01.R1.C01",
+      "owner": "H03",
+      "topic": "H03.03.01",
+      "rule": "pos_context",
+      "source": "H03-R1-UD",
+      "locator": "Morphology, lines 30–41",
+      "statement": "在 UD 汉语标注中，情态用法的助动词位于动词前且不带直接宾语或后接体标记；有些形式也可作实义动词。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "词形本身不能确定词类或义项，只有给定用法证据才路由候选。"
+    },
+    {
+      "id": "H03.02.04.R1.C01",
+      "owner": "H03",
+      "topic": "H03.02.04",
+      "rule": "affix_token",
+      "source": "H03-R1-UDTOK",
+      "locator": "UD Chinese, lines 9–11",
+      "statement": "特定 UD Chinese treebank 将某些前后缀单独作 token，并以 case:pref 或 case:suff 联系词干。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "这是该语料的标注选择；不由该标签推断全部词缀可自由成词。"
+    },
+    {
+      "id": "H03.02.01.R1.C01",
+      "owner": "H03",
+      "topic": "H03.02.01",
+      "rule": "compound_annotation",
+      "source": "H03-R1-UD",
+      "locator": "Compounds, lines 79–83",
+      "statement": "UD 汉语对名词-名词复合的常见标注以 compound 区分所有关系的 nmod；需先有结构分析证据。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不把所有相邻名词判成复合或保证固定语义、词典身份。"
+    },
+    {
+      "id": "H04.04.01.R1.C01",
+      "owner": "H04",
+      "topic": "H04.04.01",
+      "rule": "aspect",
+      "source": "H04-R1-UD",
+      "locator": "Morphology, lines 45–48",
+      "statement": "UD 汉语将动后了、过、着分别作完成体、经历体、持续体标记的候选分析；语境与句末用法需分开。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "体不等同绝对时制，句末了不应仅凭字形判为动后体。"
+    },
+    {
+      "id": "H04.03.01.R1.C01",
+      "owner": "H04",
+      "topic": "H04.03.01",
+      "rule": "ba_passive",
+      "source": "H04-R1-CASE",
+      "locator": "Case marking, lines 7–12",
+      "statement": "在明确把字句处置标记和带施事的长被动构式中，UD 汉语 case 可标记把和引入施事的被。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "短被动或未辨构式不能套用此规则；标注不等于句子可接受性。"
+    },
+    {
+      "id": "H04.05.01.R1.C01",
+      "owner": "H04",
+      "topic": "H04.05.01",
+      "rule": "de_marker",
+      "source": "H04-R1-CASE",
+      "locator": "Case marking, lines 9–11",
+      "statement": "UD 汉语对领属的的使用 case，对部分关系化的的使用 mark:rel；区别依语法功能。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不按单一字形自动标注所有的。"
+    },
+    {
+      "id": "H04.01.02.R1.C01",
+      "owner": "H04",
+      "topic": "H04.01.02",
+      "rule": "argument_role",
+      "source": "H04-R1-UD",
+      "locator": "Syntax, core arguments lines 61–71",
+      "statement": "UD 区分名词主语、核心宾语和介词引入的斜格宾语，标签由已分析的句法角色而非词类本身决定。",
+      "conditions": [
+        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+      ],
+      "negative": "不把名词一律当主语/宾语，未分析句子或论元角色保持HOLD。"
+    }
+  ],
+  "cases": [
+    {
+      "id": "H01.04.01.R1.C01.CASE.1",
+      "claim": "H01.04.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "unit": "TONE_CATEGORY",
+        "same_domain": true,
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "citation_tones": [
+          3,
+          3
+        ]
+      },
+      "expected": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "H01.04.01.R1.C01.CASE.2",
+      "claim": "H01.04.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "unit": "TONE_CATEGORY",
+        "same_domain": true,
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "citation_tones": [
+          2,
+          3
+        ],
+        "surface_only": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.04.01.R1.C01.CASE.3",
+      "claim": "H01.04.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "unit": "TONE_CATEGORY",
+        "same_domain": true,
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "citation_tones": [
+          3,
+          4
+        ]
+      },
+      "expected": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "H01.04.01.R1.C01.CASE.4",
+      "claim": "H01.04.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "unit": "TONE_CATEGORY",
+        "same_domain": false,
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "citation_tones": [
+          3,
+          3
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.04.02.R1.C01.CASE.1",
+      "claim": "H01.04.02.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "form": "不",
+        "context": "ORDINARY_NEGATION_BEFORE_TONED_SYLLABLE",
+        "following_tone": 4
+      },
+      "expected": 2
+    },
+    {
+      "id": "H01.04.02.R1.C01.CASE.2",
+      "claim": "H01.04.02.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "form": "不",
+        "context": "ORDINARY_NEGATION_BEFORE_TONED_SYLLABLE",
+        "following_tone": null
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.04.02.R1.C01.CASE.3",
+      "claim": "H01.04.02.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "form": "不",
+        "context": "ORDINARY_NEGATION_BEFORE_TONED_SYLLABLE",
+        "following_tone": 2
+      },
+      "expected": 4
+    },
+    {
+      "id": "H01.04.02.R1.C01.CASE.4",
+      "claim": "H01.04.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "form": "不",
+        "context": "RESULTATIVE",
+        "following_tone": 4
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.02.01.R1.C01.CASE.1",
+      "claim": "H01.02.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "representation": "PINYIN_INITIAL_FIELD",
+        "query": "INITIAL_COUNT",
+        "known_initial": "zh"
+      },
+      "expected": 1
+    },
+    {
+      "id": "H01.02.01.R1.C01.CASE.2",
+      "claim": "H01.02.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "representation": "UNSEGMENTED_WORD",
+        "query": "INITIAL_COUNT",
+        "known_initial": "z"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.02.01.R1.C01.CASE.3",
+      "claim": "H01.02.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "representation": "PINYIN_INITIAL_FIELD",
+        "query": "INITIAL_COUNT",
+        "known_initial": "ch"
+      },
+      "expected": 1
+    },
+    {
+      "id": "H01.02.01.R1.C01.CASE.4",
+      "claim": "H01.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "representation": "PINYIN_INITIAL_FIELD",
+        "query": "INITIAL_COUNT",
+        "known_initial": "sn"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.03.02.R1.C01.CASE.1",
+      "claim": "H01.03.02.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "representation": "CHAO_RELATIVE_FIVE_POINT",
+        "query": "DIRECTION",
+        "contour": [
+          3,
+          5
+        ]
+      },
+      "expected": "RISING"
+    },
+    {
+      "id": "H01.03.02.R1.C01.CASE.2",
+      "claim": "H01.03.02.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "representation": "CHAO_RELATIVE_FIVE_POINT",
+        "query": "ABSOLUTE_HZ",
+        "contour": [
+          3,
+          5
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.03.02.R1.C01.CASE.3",
+      "claim": "H01.03.02.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "representation": "CHAO_RELATIVE_FIVE_POINT",
+        "query": "DIRECTION",
+        "contour": [
+          5,
+          1
+        ]
+      },
+      "expected": "FALLING"
+    },
+    {
+      "id": "H01.03.02.R1.C01.CASE.4",
+      "claim": "H01.03.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "representation": "CHAO_RELATIVE_FIVE_POINT",
+        "query": "DIRECTION",
+        "contour": [
+          2,
+          1,
+          4
+        ]
+      },
+      "expected": "NON_MONOTONIC"
+    },
+    {
+      "id": "H02.01.01.R1.C01.CASE.1",
+      "claim": "H02.01.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "query": "ENCODED_SCALAR_EQUALITY",
+        "a": "一",
+        "b": "一"
+      },
+      "expected": "SAME_CODEPOINT"
+    },
+    {
+      "id": "H02.01.01.R1.C01.CASE.2",
+      "claim": "H02.01.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "query": "ENCODED_SCALAR_EQUALITY",
+        "a": "土",
+        "b": "士"
+      },
+      "expected": "DISTINCT_CODEPOINT"
+    },
+    {
+      "id": "H02.01.01.R1.C01.CASE.3",
+      "claim": "H02.01.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "query": "HANDWRITING_EQUIVALENCE",
+        "a": "日",
+        "b": "日"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.01.01.R1.C01.CASE.4",
+      "claim": "H02.01.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "ENCODED_SCALAR_EQUALITY",
+        "a": "一日",
+        "b": "一"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.01.02.R1.C01.CASE.1",
+      "claim": "H02.01.02.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "source": "脏",
+        "direction": "SC_TO_TC",
+        "sense": "VISCERA"
+      },
+      "expected": "臟"
+    },
+    {
+      "id": "H02.01.02.R1.C01.CASE.2",
+      "claim": "H02.01.02.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "source": "脏",
+        "direction": "SC_TO_TC",
+        "sense": "UNKNOWN"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.01.02.R1.C01.CASE.3",
+      "claim": "H02.01.02.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "source": "脏",
+        "direction": "SC_TO_TC",
+        "sense": "DIRTY"
+      },
+      "expected": "髒"
+    },
+    {
+      "id": "H02.01.02.R1.C01.CASE.4",
+      "claim": "H02.01.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "source": "脏",
+        "direction": "TC_TO_SC",
+        "sense": "VISCERA"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.1",
+      "claim": "H02.02.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 4
+      },
+      "expected": 4
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.2",
+      "claim": "H02.02.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": false,
+        "property": "kTotalStrokes",
+        "count": 4
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.3",
+      "claim": "H02.02.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 7
+      },
+      "expected": 7
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.4",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kRSUnicode",
+        "count": 4
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.1",
+      "claim": "H02.03.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "xíng",
+          "háng"
+        ]
+      },
+      "expected": [
+        "xíng",
+        "háng"
+      ]
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.2",
+      "claim": "H02.03.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "property": "kMandarin",
+        "query": "CHOOSE_WORD_READING",
+        "version": "UAX38_41",
+        "values": [
+          "xíng",
+          "háng"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.3",
+      "claim": "H02.03.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "mǎ"
+        ]
+      },
+      "expected": [
+        "mǎ"
+      ]
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.4",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": []
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.01.01.R1.C01.CASE.1",
+      "claim": "H03.01.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "construction": "RESULTATIVE",
+        "treebank": "UD_CHINESE_HK"
+      },
+      "expected": "SEPARATE_TOKENS"
+    },
+    {
+      "id": "H03.01.01.R1.C01.CASE.2",
+      "claim": "H03.01.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "construction": "RESULTATIVE",
+        "treebank": "UNKNOWN"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.01.01.R1.C01.CASE.3",
+      "claim": "H03.01.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "construction": "POTENTIAL",
+        "treebank": "PENN_CHINESE"
+      },
+      "expected": "CONDITION_DEPENDENT"
+    },
+    {
+      "id": "H03.01.01.R1.C01.CASE.4",
+      "claim": "H03.01.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "construction": "UNKNOWN",
+        "treebank": "UD_CHINESE_HK"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.03.01.R1.C01.CASE.1",
+      "claim": "H03.03.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_ROLE",
+        "word": "能",
+        "preverbal_modal": true,
+        "direct_object": false,
+        "aspect_after": false
+      },
+      "expected": "AUX_CANDIDATE"
+    },
+    {
+      "id": "H03.03.01.R1.C01.CASE.2",
+      "claim": "H03.03.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_ROLE",
+        "word": "能",
+        "preverbal_modal": null,
+        "direct_object": null
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.03.01.R1.C01.CASE.3",
+      "claim": "H03.03.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_ROLE",
+        "word": "能",
+        "preverbal_modal": false,
+        "direct_object": true
+      },
+      "expected": "NOT_MODAL_AUX_RULE"
+    },
+    {
+      "id": "H03.03.01.R1.C01.CASE.4",
+      "claim": "H03.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_ROLE",
+        "word": "能",
+        "preverbal_modal": true,
+        "direct_object": false,
+        "aspect_after": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.02.04.R1.C01.CASE.1",
+      "claim": "H03.02.04.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "treebank": "UD_CHINESE",
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "kind": "PREFIX"
+      },
+      "expected": "case:pref"
+    },
+    {
+      "id": "H03.02.04.R1.C01.CASE.2",
+      "claim": "H03.02.04.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "treebank": "UD_CHINESE",
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "kind": null
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.02.04.R1.C01.CASE.3",
+      "claim": "H03.02.04.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "treebank": "UD_CHINESE",
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "kind": "SUFFIX"
+      },
+      "expected": "case:suff"
+    },
+    {
+      "id": "H03.02.04.R1.C01.CASE.4",
+      "claim": "H03.02.04.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "treebank": "UD_CHINESE_HK",
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "kind": "PREFIX"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.02.01.R1.C01.CASE.1",
+      "claim": "H03.02.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": true,
+        "possessive": false
+      },
+      "expected": "compound"
+    },
+    {
+      "id": "H03.02.01.R1.C01.CASE.2",
+      "claim": "H03.02.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": true,
+        "possessive": null
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H03.02.01.R1.C01.CASE.3",
+      "claim": "H03.02.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": true,
+        "possessive": true
+      },
+      "expected": "nmod"
+    },
+    {
+      "id": "H03.02.01.R1.C01.CASE.4",
+      "claim": "H03.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": false,
+        "possessive": false
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.04.01.R1.C01.CASE.1",
+      "claim": "H04.04.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ASPECT_ANNOTATION",
+        "postverbal": true,
+        "sentence_final_only": false,
+        "marker": "了"
+      },
+      "expected": "PERFECTIVE"
+    },
+    {
+      "id": "H04.04.01.R1.C01.CASE.2",
+      "claim": "H04.04.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ASPECT_ANNOTATION",
+        "postverbal": true,
+        "sentence_final_only": true,
+        "marker": "了"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.04.01.R1.C01.CASE.3",
+      "claim": "H04.04.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ASPECT_ANNOTATION",
+        "postverbal": true,
+        "sentence_final_only": false,
+        "marker": "过"
+      },
+      "expected": "EXPERIENTIAL"
+    },
+    {
+      "id": "H04.04.01.R1.C01.CASE.4",
+      "claim": "H04.04.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "ASPECT_ANNOTATION",
+        "postverbal": false,
+        "sentence_final_only": false,
+        "marker": "着"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.03.01.R1.C01.CASE.1",
+      "claim": "H04.03.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "CASE_ANNOTATION",
+        "verified_construction": true,
+        "marker": "把",
+        "role": "VALENCE_MARKER"
+      },
+      "expected": "case"
+    },
+    {
+      "id": "H04.03.01.R1.C01.CASE.2",
+      "claim": "H04.03.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "CASE_ANNOTATION",
+        "verified_construction": true,
+        "marker": "被",
+        "role": "LONG_PASSIVE_AGENT_MARKER",
+        "agent_expressed": false
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.03.01.R1.C01.CASE.3",
+      "claim": "H04.03.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "CASE_ANNOTATION",
+        "verified_construction": true,
+        "marker": "被",
+        "role": "LONG_PASSIVE_AGENT_MARKER",
+        "agent_expressed": true
+      },
+      "expected": "case"
+    },
+    {
+      "id": "H04.03.01.R1.C01.CASE.4",
+      "claim": "H04.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "CASE_ANNOTATION",
+        "verified_construction": true,
+        "marker": "把",
+        "role": "UNKNOWN"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.05.01.R1.C01.CASE.1",
+      "claim": "H04.05.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "PARTICLE_ANNOTATION",
+        "marker": "的",
+        "function": "GENITIVE"
+      },
+      "expected": "case"
+    },
+    {
+      "id": "H04.05.01.R1.C01.CASE.2",
+      "claim": "H04.05.01.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "PARTICLE_ANNOTATION",
+        "marker": "的",
+        "function": "UNKNOWN"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.05.01.R1.C01.CASE.3",
+      "claim": "H04.05.01.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "PARTICLE_ANNOTATION",
+        "marker": "的",
+        "function": "RELATIVIZER"
+      },
+      "expected": "mark:rel"
+    },
+    {
+      "id": "H04.05.01.R1.C01.CASE.4",
+      "claim": "H04.05.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "PARTICLE_ANNOTATION",
+        "marker": "得",
+        "function": "GENITIVE"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.1",
+      "claim": "H04.01.02.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "NOMINAL_SUBJECT",
+        "preposition": false
+      },
+      "expected": "nsubj"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.2",
+      "claim": "H04.01.02.R1.C01",
+      "view": "REVERSE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": null,
+        "preposition": false
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.3",
+      "claim": "H04.01.02.R1.C01",
+      "view": "INTERVENTION",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBJECT",
+        "preposition": true
+      },
+      "expected": "obl:arg"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.4",
+      "claim": "H04.01.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "CORE_OBJECT",
+        "preposition": true
+      },
+      "expected": "HOLD"
+    }
+  ]
+}

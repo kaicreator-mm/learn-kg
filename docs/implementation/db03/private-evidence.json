@@ -1,0 +1,38 @@
+{
+  "adapter_manifest_sha256": "0c8f69deaae06766f685eec40ed14978a2db06451821ca4d1bc2e26dee60aff2",
+  "canonical_counts": {
+    "Locator": 94,
+    "Source": 3,
+    "SourceMembership": 15288,
+    "Standard": 1,
+    "StandardBand": 11
+  },
+  "canonical_records": 15397,
+  "deferred_records": 3920,
+  "foreign_key_violations": 0,
+  "hsk01_receipt_sha256": "29f77e003495611b0d6b96bbe89fc66e865c1f2b36dae5f853920213e4cecd36",
+  "job": "job_01M8HBKHN200S2MK3H9A0CTX0P",
+  "membership_query_plan": [
+    "SEARCH record_sourcemembership USING INDEX membership_section (section=? AND ordinal=?)"
+  ],
+  "membership_sections": {
+    "LEXICAL_SOURCE_RECORD": 11000,
+    "书写字": 1200,
+    "认读字": 3088
+  },
+  "persistent_sqlite": false,
+  "physical_cross_db_crash": "HOLD_NOT_TESTED",
+  "prior_attempt": "REJECTED_OWNER_SCOPE_REMEDIATED_NOT_ACCEPTED",
+  "private_scope": "NO_PUBLICATION_NO_GENERAL_IMPORTER",
+  "qualification": "NOT_RUN",
+  "query_only": true,
+  "roundtrip": 15397,
+  "stage_manifest_sha256": "33bb0a4254af6c40ff19bcd8cdc0aa045a844bcb6afa82ac18e4438575a8c668",
+  "status": "PRIVATE_RESTRICTED_CANONICAL_HOLD_IMPORT",
+  "tests": {
+    "db03": "8/8",
+    "existing_regression": "37/37",
+    "job": "job_01M8HBPB7A00TQWBECJNHWH5M5"
+  },
+  "typed_refs": 45972
+}

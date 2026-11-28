@@ -1,0 +1,1168 @@
+{
+  "import_result": {
+    "opened_manifest_and_records": [
+      "knowledge/v0.1.0/chinese-h01-h04-r1/chinese.manifest.json",
+      "knowledge/v0.1.0/chinese-h01-h04-r1/evidence.manifest.json",
+      "knowledge/v0.1.0/chinese-h01-h04-r1/evidence.jsonl",
+      "knowledge/v0.1.0/chinese-h01-h04-r1/H01.jsonl",
+      "knowledge/v0.1.0/chinese-h01-h04-r1/H02.jsonl",
+      "knowledge/v0.1.0/chinese-h01-h04-r1/H03.jsonl",
+      "knowledge/v0.1.0/chinese-h01-h04-r1/H04.jsonl"
+    ],
+    "packages": [
+      {
+        "counts": {
+          "Source": 71
+        },
+        "package": [
+          "evidence",
+          "0.1.0-chinese-h01-h04-candidate-1"
+        ],
+        "records": 71,
+        "typed_refs": 0
+      },
+      {
+        "counts": {
+          "Case": 472,
+          "Claim": 310,
+          "Locator": 163,
+          "Requirement": 102,
+          "Topic": 129,
+          "Validation": 16
+        },
+        "package": [
+          "chinese",
+          "0.1.0-chinese-h01-h04-candidate-1"
+        ],
+        "records": 1192,
+        "typed_refs": 2563
+      }
+    ],
+    "persistent_sqlite": false,
+    "release_authority": "NOT_IMPLEMENTED_FAIL_CLOSED",
+    "status": "CANDIDATE_RESEARCH_ONLY"
+  },
+  "manifest_sha256": "afb7505954733fa3bf44634a8406825d98227a9f9be744f84d82a8109d1b3d37",
+  "persistent_sqlite": false,
+  "stats": {
+    "H01": {
+      "candidate_claims": 4,
+      "executed_cases": 16,
+      "held_claims": 58,
+      "held_only_topics": 16,
+      "records": 241,
+      "restricted_candidate_topics": 4,
+      "topics": 20
+    },
+    "H02": {
+      "candidate_claims": 4,
+      "executed_cases": 16,
+      "held_claims": 59,
+      "held_only_topics": 17,
+      "records": 250,
+      "restricted_candidate_topics": 4,
+      "topics": 21
+    },
+    "H03": {
+      "candidate_claims": 4,
+      "executed_cases": 16,
+      "held_claims": 78,
+      "held_only_topics": 22,
+      "records": 302,
+      "restricted_candidate_topics": 4,
+      "topics": 26
+    },
+    "H04": {
+      "candidate_claims": 4,
+      "executed_cases": 16,
+      "held_claims": 99,
+      "held_only_topics": 31,
+      "records": 399,
+      "restricted_candidate_topics": 4,
+      "topics": 35
+    }
+  },
+  "status": "BUILDER_FINITE_REPLAY_ONLY",
+  "tests": [
+    {
+      "actual": [
+        2,
+        3
+      ],
+      "claim": "H01.04.01.R1.C01",
+      "expected": [
+        2,
+        3
+      ],
+      "id": "H01.04.01.R1.C01.CASE.1",
+      "input": {
+        "citation_tones": [
+          3,
+          3
+        ],
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "same_domain": true,
+        "unit": "TONE_CATEGORY"
+      },
+      "owner": "H01",
+      "rule": "tone_pair",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.04.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.04.01.R1.C01.CASE.2",
+      "input": {
+        "citation_tones": [
+          2,
+          3
+        ],
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "same_domain": true,
+        "surface_only": true,
+        "unit": "TONE_CATEGORY"
+      },
+      "owner": "H01",
+      "rule": "tone_pair",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": [
+        3,
+        4
+      ],
+      "claim": "H01.04.01.R1.C01",
+      "expected": [
+        3,
+        4
+      ],
+      "id": "H01.04.01.R1.C01.CASE.3",
+      "input": {
+        "citation_tones": [
+          3,
+          4
+        ],
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "same_domain": true,
+        "unit": "TONE_CATEGORY"
+      },
+      "owner": "H01",
+      "rule": "tone_pair",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.04.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.04.01.R1.C01.CASE.4",
+      "input": {
+        "citation_tones": [
+          3,
+          3
+        ],
+        "rule_scope": "THIRD_TONE_PAIR_ONLY",
+        "same_domain": false,
+        "unit": "TONE_CATEGORY"
+      },
+      "owner": "H01",
+      "rule": "tone_pair",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": 2,
+      "claim": "H01.04.02.R1.C01",
+      "expected": 2,
+      "id": "H01.04.02.R1.C01.CASE.1",
+      "input": {
+        "context": "ORDINARY_NEGATION_BEFORE_TONED_SYLLABLE",
+        "following_tone": 4,
+        "form": "不"
+      },
+      "owner": "H01",
+      "rule": "bu_tone",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.04.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.04.02.R1.C01.CASE.2",
+      "input": {
+        "context": "ORDINARY_NEGATION_BEFORE_TONED_SYLLABLE",
+        "following_tone": null,
+        "form": "不"
+      },
+      "owner": "H01",
+      "rule": "bu_tone",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": 4,
+      "claim": "H01.04.02.R1.C01",
+      "expected": 4,
+      "id": "H01.04.02.R1.C01.CASE.3",
+      "input": {
+        "context": "ORDINARY_NEGATION_BEFORE_TONED_SYLLABLE",
+        "following_tone": 2,
+        "form": "不"
+      },
+      "owner": "H01",
+      "rule": "bu_tone",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.04.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.04.02.R1.C01.CASE.4",
+      "input": {
+        "context": "RESULTATIVE",
+        "following_tone": 4,
+        "form": "不"
+      },
+      "owner": "H01",
+      "rule": "bu_tone",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": 1,
+      "claim": "H01.02.01.R1.C01",
+      "expected": 1,
+      "id": "H01.02.01.R1.C01.CASE.1",
+      "input": {
+        "known_initial": "zh",
+        "query": "INITIAL_COUNT",
+        "representation": "PINYIN_INITIAL_FIELD"
+      },
+      "owner": "H01",
+      "rule": "initial_spelling",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.02.01.R1.C01.CASE.2",
+      "input": {
+        "known_initial": "z",
+        "query": "INITIAL_COUNT",
+        "representation": "UNSEGMENTED_WORD"
+      },
+      "owner": "H01",
+      "rule": "initial_spelling",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": 1,
+      "claim": "H01.02.01.R1.C01",
+      "expected": 1,
+      "id": "H01.02.01.R1.C01.CASE.3",
+      "input": {
+        "known_initial": "ch",
+        "query": "INITIAL_COUNT",
+        "representation": "PINYIN_INITIAL_FIELD"
+      },
+      "owner": "H01",
+      "rule": "initial_spelling",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.02.01.R1.C01.CASE.4",
+      "input": {
+        "known_initial": "sn",
+        "query": "INITIAL_COUNT",
+        "representation": "PINYIN_INITIAL_FIELD"
+      },
+      "owner": "H01",
+      "rule": "initial_spelling",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "RISING",
+      "claim": "H01.03.02.R1.C01",
+      "expected": "RISING",
+      "id": "H01.03.02.R1.C01.CASE.1",
+      "input": {
+        "contour": [
+          3,
+          5
+        ],
+        "query": "DIRECTION",
+        "representation": "CHAO_RELATIVE_FIVE_POINT"
+      },
+      "owner": "H01",
+      "rule": "tone_value",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.03.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.03.02.R1.C01.CASE.2",
+      "input": {
+        "contour": [
+          3,
+          5
+        ],
+        "query": "ABSOLUTE_HZ",
+        "representation": "CHAO_RELATIVE_FIVE_POINT"
+      },
+      "owner": "H01",
+      "rule": "tone_value",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "FALLING",
+      "claim": "H01.03.02.R1.C01",
+      "expected": "FALLING",
+      "id": "H01.03.02.R1.C01.CASE.3",
+      "input": {
+        "contour": [
+          5,
+          1
+        ],
+        "query": "DIRECTION",
+        "representation": "CHAO_RELATIVE_FIVE_POINT"
+      },
+      "owner": "H01",
+      "rule": "tone_value",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "NON_MONOTONIC",
+      "claim": "H01.03.02.R1.C01",
+      "expected": "NON_MONOTONIC",
+      "id": "H01.03.02.R1.C01.CASE.4",
+      "input": {
+        "contour": [
+          2,
+          1,
+          4
+        ],
+        "query": "DIRECTION",
+        "representation": "CHAO_RELATIVE_FIVE_POINT"
+      },
+      "owner": "H01",
+      "rule": "tone_value",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "SAME_CODEPOINT",
+      "claim": "H02.01.01.R1.C01",
+      "expected": "SAME_CODEPOINT",
+      "id": "H02.01.01.R1.C01.CASE.1",
+      "input": {
+        "a": "一",
+        "b": "一",
+        "query": "ENCODED_SCALAR_EQUALITY"
+      },
+      "owner": "H02",
+      "rule": "glyph_identity",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "DISTINCT_CODEPOINT",
+      "claim": "H02.01.01.R1.C01",
+      "expected": "DISTINCT_CODEPOINT",
+      "id": "H02.01.01.R1.C01.CASE.2",
+      "input": {
+        "a": "土",
+        "b": "士",
+        "query": "ENCODED_SCALAR_EQUALITY"
+      },
+      "owner": "H02",
+      "rule": "glyph_identity",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.01.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.01.01.R1.C01.CASE.3",
+      "input": {
+        "a": "日",
+        "b": "日",
+        "query": "HANDWRITING_EQUIVALENCE"
+      },
+      "owner": "H02",
+      "rule": "glyph_identity",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.01.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.01.01.R1.C01.CASE.4",
+      "input": {
+        "a": "一日",
+        "b": "一",
+        "query": "ENCODED_SCALAR_EQUALITY"
+      },
+      "owner": "H02",
+      "rule": "glyph_identity",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "臟",
+      "claim": "H02.01.02.R1.C01",
+      "expected": "臟",
+      "id": "H02.01.02.R1.C01.CASE.1",
+      "input": {
+        "direction": "SC_TO_TC",
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "sense": "VISCERA",
+        "source": "脏"
+      },
+      "owner": "H02",
+      "rule": "variant_context",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.01.02.R1.C01.CASE.2",
+      "input": {
+        "direction": "SC_TO_TC",
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "sense": "UNKNOWN",
+        "source": "脏"
+      },
+      "owner": "H02",
+      "rule": "variant_context",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "髒",
+      "claim": "H02.01.02.R1.C01",
+      "expected": "髒",
+      "id": "H02.01.02.R1.C01.CASE.3",
+      "input": {
+        "direction": "SC_TO_TC",
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "sense": "DIRTY",
+        "source": "脏"
+      },
+      "owner": "H02",
+      "rule": "variant_context",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.01.02.R1.C01.CASE.4",
+      "input": {
+        "direction": "TC_TO_SC",
+        "mapping_version": "UAX38_41_EXAMPLE_CONTEXT",
+        "sense": "VISCERA",
+        "source": "脏"
+      },
+      "owner": "H02",
+      "rule": "variant_context",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": 4,
+      "claim": "H02.02.01.R1.C01",
+      "expected": 4,
+      "id": "H02.02.01.R1.C01.CASE.1",
+      "input": {
+        "count": 4,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.2",
+      "input": {
+        "count": 4,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": false
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": 7,
+      "claim": "H02.02.01.R1.C01",
+      "expected": 7,
+      "id": "H02.02.01.R1.C01.CASE.3",
+      "input": {
+        "count": 7,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.4",
+      "input": {
+        "count": 4,
+        "property": "kRSUnicode",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": [
+        "xíng",
+        "háng"
+      ],
+      "claim": "H02.03.01.R1.C01",
+      "expected": [
+        "xíng",
+        "háng"
+      ],
+      "id": "H02.03.01.R1.C01.CASE.1",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "xíng",
+          "háng"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.2",
+      "input": {
+        "property": "kMandarin",
+        "query": "CHOOSE_WORD_READING",
+        "values": [
+          "xíng",
+          "háng"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": [
+        "mǎ"
+      ],
+      "claim": "H02.03.01.R1.C01",
+      "expected": [
+        "mǎ"
+      ],
+      "id": "H02.03.01.R1.C01.CASE.3",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "mǎ"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.4",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "SEPARATE_TOKENS",
+      "claim": "H03.01.01.R1.C01",
+      "expected": "SEPARATE_TOKENS",
+      "id": "H03.01.01.R1.C01.CASE.1",
+      "input": {
+        "construction": "RESULTATIVE",
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "treebank": "UD_CHINESE_HK"
+      },
+      "owner": "H03",
+      "rule": "segmentation",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.01.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.01.01.R1.C01.CASE.2",
+      "input": {
+        "construction": "RESULTATIVE",
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "treebank": "UNKNOWN"
+      },
+      "owner": "H03",
+      "rule": "segmentation",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "CONDITION_DEPENDENT",
+      "claim": "H03.01.01.R1.C01",
+      "expected": "CONDITION_DEPENDENT",
+      "id": "H03.01.01.R1.C01.CASE.3",
+      "input": {
+        "construction": "POTENTIAL",
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "treebank": "PENN_CHINESE"
+      },
+      "owner": "H03",
+      "rule": "segmentation",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.01.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.01.01.R1.C01.CASE.4",
+      "input": {
+        "construction": "UNKNOWN",
+        "query": "TOKEN_BOUNDARY_POLICY",
+        "treebank": "UD_CHINESE_HK"
+      },
+      "owner": "H03",
+      "rule": "segmentation",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "AUX_CANDIDATE",
+      "claim": "H03.03.01.R1.C01",
+      "expected": "AUX_CANDIDATE",
+      "id": "H03.03.01.R1.C01.CASE.1",
+      "input": {
+        "aspect_after": false,
+        "direct_object": false,
+        "framework": "UD_ZH_V2",
+        "preverbal_modal": true,
+        "query": "ANNOTATION_ROLE",
+        "word": "能"
+      },
+      "owner": "H03",
+      "rule": "pos_context",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.03.01.R1.C01.CASE.2",
+      "input": {
+        "direct_object": null,
+        "framework": "UD_ZH_V2",
+        "preverbal_modal": null,
+        "query": "ANNOTATION_ROLE",
+        "word": "能"
+      },
+      "owner": "H03",
+      "rule": "pos_context",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "NOT_MODAL_AUX_RULE",
+      "claim": "H03.03.01.R1.C01",
+      "expected": "NOT_MODAL_AUX_RULE",
+      "id": "H03.03.01.R1.C01.CASE.3",
+      "input": {
+        "direct_object": true,
+        "framework": "UD_ZH_V2",
+        "preverbal_modal": false,
+        "query": "ANNOTATION_ROLE",
+        "word": "能"
+      },
+      "owner": "H03",
+      "rule": "pos_context",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.03.01.R1.C01.CASE.4",
+      "input": {
+        "aspect_after": true,
+        "direct_object": false,
+        "framework": "UD_ZH_V2",
+        "preverbal_modal": true,
+        "query": "ANNOTATION_ROLE",
+        "word": "能"
+      },
+      "owner": "H03",
+      "rule": "pos_context",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "case:pref",
+      "claim": "H03.02.04.R1.C01",
+      "expected": "case:pref",
+      "id": "H03.02.04.R1.C01.CASE.1",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "kind": "PREFIX",
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "treebank": "UD_CHINESE"
+      },
+      "owner": "H03",
+      "rule": "affix_token",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.02.04.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.02.04.R1.C01.CASE.2",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "kind": null,
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "treebank": "UD_CHINESE"
+      },
+      "owner": "H03",
+      "rule": "affix_token",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "case:suff",
+      "claim": "H03.02.04.R1.C01",
+      "expected": "case:suff",
+      "id": "H03.02.04.R1.C01.CASE.3",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "kind": "SUFFIX",
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "treebank": "UD_CHINESE"
+      },
+      "owner": "H03",
+      "rule": "affix_token",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.02.04.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.02.04.R1.C01.CASE.4",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "kind": "PREFIX",
+        "query": "RECORDED_AFFIX_RELATION",
+        "separate_token": true,
+        "treebank": "UD_CHINESE_HK"
+      },
+      "owner": "H03",
+      "rule": "affix_token",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "compound",
+      "claim": "H03.02.01.R1.C01",
+      "expected": "compound",
+      "id": "H03.02.01.R1.C01.CASE.1",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "possessive": false,
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": true
+      },
+      "owner": "H03",
+      "rule": "compound_annotation",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.02.01.R1.C01.CASE.2",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "possessive": null,
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": true
+      },
+      "owner": "H03",
+      "rule": "compound_annotation",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "nmod",
+      "claim": "H03.02.01.R1.C01",
+      "expected": "nmod",
+      "id": "H03.02.01.R1.C01.CASE.3",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "possessive": true,
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": true
+      },
+      "owner": "H03",
+      "rule": "compound_annotation",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H03.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H03.02.01.R1.C01.CASE.4",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "possessive": false,
+        "query": "ANNOTATION_CANDIDATE",
+        "verified_noun_noun": false
+      },
+      "owner": "H03",
+      "rule": "compound_annotation",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "PERFECTIVE",
+      "claim": "H04.04.01.R1.C01",
+      "expected": "PERFECTIVE",
+      "id": "H04.04.01.R1.C01.CASE.1",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "marker": "了",
+        "postverbal": true,
+        "query": "ASPECT_ANNOTATION",
+        "sentence_final_only": false
+      },
+      "owner": "H04",
+      "rule": "aspect",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.04.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.04.01.R1.C01.CASE.2",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "marker": "了",
+        "postverbal": true,
+        "query": "ASPECT_ANNOTATION",
+        "sentence_final_only": true
+      },
+      "owner": "H04",
+      "rule": "aspect",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "EXPERIENTIAL",
+      "claim": "H04.04.01.R1.C01",
+      "expected": "EXPERIENTIAL",
+      "id": "H04.04.01.R1.C01.CASE.3",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "marker": "过",
+        "postverbal": true,
+        "query": "ASPECT_ANNOTATION",
+        "sentence_final_only": false
+      },
+      "owner": "H04",
+      "rule": "aspect",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.04.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.04.01.R1.C01.CASE.4",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "marker": "着",
+        "postverbal": false,
+        "query": "ASPECT_ANNOTATION",
+        "sentence_final_only": false
+      },
+      "owner": "H04",
+      "rule": "aspect",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "case",
+      "claim": "H04.03.01.R1.C01",
+      "expected": "case",
+      "id": "H04.03.01.R1.C01.CASE.1",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "marker": "把",
+        "query": "CASE_ANNOTATION",
+        "role": "VALENCE_MARKER",
+        "verified_construction": true
+      },
+      "owner": "H04",
+      "rule": "ba_passive",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.03.01.R1.C01.CASE.2",
+      "input": {
+        "agent_expressed": false,
+        "framework": "UD_ZH_V2",
+        "marker": "被",
+        "query": "CASE_ANNOTATION",
+        "role": "LONG_PASSIVE_AGENT_MARKER",
+        "verified_construction": true
+      },
+      "owner": "H04",
+      "rule": "ba_passive",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "case",
+      "claim": "H04.03.01.R1.C01",
+      "expected": "case",
+      "id": "H04.03.01.R1.C01.CASE.3",
+      "input": {
+        "agent_expressed": true,
+        "framework": "UD_ZH_V2",
+        "marker": "被",
+        "query": "CASE_ANNOTATION",
+        "role": "LONG_PASSIVE_AGENT_MARKER",
+        "verified_construction": true
+      },
+      "owner": "H04",
+      "rule": "ba_passive",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.03.01.R1.C01.CASE.4",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "marker": "把",
+        "query": "CASE_ANNOTATION",
+        "role": "UNKNOWN",
+        "verified_construction": true
+      },
+      "owner": "H04",
+      "rule": "ba_passive",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "case",
+      "claim": "H04.05.01.R1.C01",
+      "expected": "case",
+      "id": "H04.05.01.R1.C01.CASE.1",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "function": "GENITIVE",
+        "marker": "的",
+        "query": "PARTICLE_ANNOTATION"
+      },
+      "owner": "H04",
+      "rule": "de_marker",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.05.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.05.01.R1.C01.CASE.2",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "function": "UNKNOWN",
+        "marker": "的",
+        "query": "PARTICLE_ANNOTATION"
+      },
+      "owner": "H04",
+      "rule": "de_marker",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "mark:rel",
+      "claim": "H04.05.01.R1.C01",
+      "expected": "mark:rel",
+      "id": "H04.05.01.R1.C01.CASE.3",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "function": "RELATIVIZER",
+        "marker": "的",
+        "query": "PARTICLE_ANNOTATION"
+      },
+      "owner": "H04",
+      "rule": "de_marker",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.05.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.05.01.R1.C01.CASE.4",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "function": "GENITIVE",
+        "marker": "得",
+        "query": "PARTICLE_ANNOTATION"
+      },
+      "owner": "H04",
+      "rule": "de_marker",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "nsubj",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "nsubj",
+      "id": "H04.01.02.R1.C01.CASE.1",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": false,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "NOMINAL_SUBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.01.02.R1.C01.CASE.2",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": false,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": null
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "obl:arg",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "obl:arg",
+      "id": "H04.01.02.R1.C01.CASE.3",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": true,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.01.02.R1.C01.CASE.4",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": true,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "CORE_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    }
+  ]
+}
