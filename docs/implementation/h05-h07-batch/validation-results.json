@@ -1,0 +1,1250 @@
+{
+  "import_result": {
+    "opened_manifest_and_records": [
+      "knowledge/v0.1.0/chinese-cumulative-r2/chinese.manifest.json",
+      "knowledge/v0.1.0/chinese-cumulative-r2/evidence.manifest.json",
+      "knowledge/v0.1.0/chinese-cumulative-r2/evidence.jsonl",
+      "knowledge/v0.1.0/chinese-cumulative-r2/H01.jsonl",
+      "knowledge/v0.1.0/chinese-cumulative-r2/H02.jsonl",
+      "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+      "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+      "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+      "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+      "knowledge/v0.1.0/chinese-cumulative-r2/H07.jsonl"
+    ],
+    "packages": [
+      {
+        "counts": {
+          "Source": 120
+        },
+        "package": [
+          "evidence",
+          "0.1.0-chinese-cumulative-candidate-2"
+        ],
+        "records": 120,
+        "typed_refs": 0
+      },
+      {
+        "counts": {
+          "Case": 851,
+          "Claim": 515,
+          "Competency": 1,
+          "Element": 2,
+          "LearningObject": 5,
+          "Locator": 281,
+          "ObservationSpec": 5,
+          "Requirement": 173,
+          "SkillType": 5,
+          "Standard": 2,
+          "StandardBand": 3,
+          "TaskSpec": 5,
+          "Topic": 219,
+          "Validation": 32
+        },
+        "package": [
+          "chinese",
+          "0.1.0-chinese-cumulative-candidate-2"
+        ],
+        "records": 2099,
+        "typed_refs": 4637
+      }
+    ],
+    "persistent_sqlite": false,
+    "release_authority": "NOT_IMPLEMENTED_FAIL_CLOSED",
+    "status": "CANDIDATE_RESEARCH_ONLY"
+  },
+  "inherited_cases_replayed": 95,
+  "manifest_sha256": "a5318e19b94c1f67d2247e7ec280f263241d9588e4d198fd5f8965f0e7340eb2",
+  "persistent_sqlite": false,
+  "stats": {
+    "H05": {
+      "candidate_claims": 4,
+      "executed_cases": 16,
+      "held_claims": 64,
+      "held_only_topics": 21,
+      "records": 278,
+      "restricted_candidate_topics": 4,
+      "topics": 25
+    },
+    "H06": {
+      "candidate_claims": 5,
+      "executed_cases": 20,
+      "held_claims": 75,
+      "held_only_topics": 21,
+      "records": 340,
+      "restricted_candidate_topics": 5,
+      "topics": 26
+    },
+    "H07": {
+      "candidate_claims": 7,
+      "executed_cases": 28,
+      "held_claims": 50,
+      "held_only_topics": 13,
+      "records": 258,
+      "restricted_candidate_topics": 7,
+      "topics": 20
+    }
+  },
+  "status": "BUILDER_FINITE_REPLAY_ONLY",
+  "tests": [
+    {
+      "actual": "CONFIRMATION_SEQUENCE",
+      "claim": "H05.01.01.R2.C01",
+      "expected": "CONFIRMATION_SEQUENCE",
+      "id": "H05.01.01.R2.C01.CASE.1",
+      "input": {
+        "form": "TAG",
+        "framework": "RFC_2024",
+        "prior_proposition": true,
+        "response": "CONFIRM",
+        "verified_confirmation_request": true
+      },
+      "owner": "H05",
+      "rule": "confirm",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H05.01.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H05.01.01.R2.C01.CASE.2",
+      "input": {
+        "form": "TAG",
+        "framework": "RFC_2024",
+        "prior_proposition": true,
+        "response": null,
+        "verified_confirmation_request": true
+      },
+      "owner": "H05",
+      "rule": "confirm",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "DISCONFIRMATION_SEQUENCE",
+      "claim": "H05.01.01.R2.C01",
+      "expected": "DISCONFIRMATION_SEQUENCE",
+      "id": "H05.01.01.R2.C01.CASE.3",
+      "input": {
+        "form": "DECLARATIVE",
+        "framework": "RFC_2024",
+        "prior_proposition": true,
+        "response": "DISCONFIRM",
+        "verified_confirmation_request": true
+      },
+      "owner": "H05",
+      "rule": "confirm",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H05.01.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H05.01.01.R2.C01.CASE.4",
+      "input": {
+        "form": "TAG",
+        "framework": "RFC_2024",
+        "prior_proposition": false,
+        "response": "CONFIRM",
+        "verified_confirmation_request": true
+      },
+      "owner": "H05",
+      "rule": "confirm",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "PERSONAL",
+      "claim": "H05.04.01.R2.C01",
+      "expected": "PERSONAL",
+      "id": "H05.04.01.R2.C01.CASE.1",
+      "input": {
+        "context_explicit": true,
+        "framework": "CEFR",
+        "purpose": "FAMILY"
+      },
+      "owner": "H05",
+      "rule": "domain",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H05.04.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H05.04.01.R2.C01.CASE.2",
+      "input": {
+        "context_explicit": false,
+        "framework": "CEFR",
+        "purpose": "FAMILY"
+      },
+      "owner": "H05",
+      "rule": "domain",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "PUBLIC",
+      "claim": "H05.04.01.R2.C01",
+      "expected": "PUBLIC",
+      "id": "H05.04.01.R2.C01.CASE.3",
+      "input": {
+        "context_explicit": true,
+        "framework": "CEFR",
+        "purpose": "PUBLIC_SERVICE"
+      },
+      "owner": "H05",
+      "rule": "domain",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H05.04.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H05.04.01.R2.C01.CASE.4",
+      "input": {
+        "context_explicit": true,
+        "framework": "CEFR",
+        "purpose": "UNKNOWN"
+      },
+      "owner": "H05",
+      "rule": "domain",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": {
+        "context": "课堂",
+        "goal": "询问课程时间",
+        "language_activity": "INTERACTION",
+        "roles": "学生与教师"
+      },
+      "claim": "H05.04.02.R2.C01",
+      "expected": {
+        "context": "课堂",
+        "goal": "询问课程时间",
+        "language_activity": "INTERACTION",
+        "roles": "学生与教师"
+      },
+      "id": "H05.04.02.R2.C01.CASE.1",
+      "input": {
+        "context": "课堂",
+        "framework": "CEFR",
+        "goal": "询问课程时间",
+        "language_activity": "INTERACTION",
+        "query": "TASK_SPEC",
+        "roles": "学生与教师"
+      },
+      "owner": "H05",
+      "rule": "pragmatic_context",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H05.04.02.R2.C01",
+      "expected": "HOLD",
+      "id": "H05.04.02.R2.C01.CASE.2",
+      "input": {
+        "context": "课堂",
+        "framework": "CEFR",
+        "goal": "询问课程时间",
+        "language_activity": "INTERACTION",
+        "query": "TASK_SPEC",
+        "roles": null
+      },
+      "owner": "H05",
+      "rule": "pragmatic_context",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": {
+        "context": "课堂",
+        "goal": "转述课程安排",
+        "language_activity": "MEDIATION",
+        "roles": "学生与教师"
+      },
+      "claim": "H05.04.02.R2.C01",
+      "expected": {
+        "context": "课堂",
+        "goal": "转述课程安排",
+        "language_activity": "MEDIATION",
+        "roles": "学生与教师"
+      },
+      "id": "H05.04.02.R2.C01.CASE.3",
+      "input": {
+        "context": "课堂",
+        "framework": "CEFR",
+        "goal": "转述课程安排",
+        "language_activity": "MEDIATION",
+        "query": "TASK_SPEC",
+        "roles": "学生与教师"
+      },
+      "owner": "H05",
+      "rule": "pragmatic_context",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H05.04.02.R2.C01",
+      "expected": "HOLD",
+      "id": "H05.04.02.R2.C01.CASE.4",
+      "input": {
+        "context": "课堂",
+        "framework": "CEFR",
+        "goal": "询问课程时间",
+        "language_activity": "UNKNOWN",
+        "query": "TASK_SPEC",
+        "roles": "学生与教师"
+      },
+      "owner": "H05",
+      "rule": "pragmatic_context",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "REPAIR_OBSERVED_IN_FIXTURE",
+      "claim": "H05.05.04.R2.C01",
+      "expected": "REPAIR_OBSERVED_IN_FIXTURE",
+      "id": "H05.05.04.R2.C01.CASE.1",
+      "input": {
+        "clarification": true,
+        "confirmed_understanding": true,
+        "framework": "CEFR",
+        "observed_trouble": true,
+        "query": "REPAIR_EVIDENCE"
+      },
+      "owner": "H05",
+      "rule": "repair",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "REQUEST_CONFIRMATION",
+      "claim": "H05.05.04.R2.C01",
+      "expected": "REQUEST_CONFIRMATION",
+      "id": "H05.05.04.R2.C01.CASE.2",
+      "input": {
+        "clarification": true,
+        "framework": "CEFR",
+        "observed_trouble": true,
+        "query": "REPAIR_EVIDENCE"
+      },
+      "owner": "H05",
+      "rule": "repair",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "REQUEST_CONFIRMATION",
+      "claim": "H05.05.04.R2.C01",
+      "expected": "REQUEST_CONFIRMATION",
+      "id": "H05.05.04.R2.C01.CASE.3",
+      "input": {
+        "clarification": true,
+        "confirmed_understanding": false,
+        "framework": "CEFR",
+        "observed_trouble": true,
+        "query": "REPAIR_EVIDENCE"
+      },
+      "owner": "H05",
+      "rule": "repair",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H05.05.04.R2.C01",
+      "expected": "HOLD",
+      "id": "H05.05.04.R2.C01.CASE.4",
+      "input": {
+        "clarification": true,
+        "confirmed_understanding": true,
+        "framework": "CEFR",
+        "observed_trouble": false,
+        "query": "REPAIR_EVIDENCE"
+      },
+      "owner": "H05",
+      "rule": "repair",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "INTERACTION",
+      "claim": "H06.02.04.R2.C01",
+      "expected": "INTERACTION",
+      "id": "H06.02.04.R2.C01.CASE.1",
+      "input": {
+        "framework": "CEFR",
+        "task": "RECIPROCAL_EXCHANGE",
+        "task_evidence": true
+      },
+      "owner": "H06",
+      "rule": "activity",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.02.04.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.02.04.R2.C01.CASE.2",
+      "input": {
+        "framework": "CEFR",
+        "task": "RECIPROCAL_EXCHANGE",
+        "task_evidence": false
+      },
+      "owner": "H06",
+      "rule": "activity",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "PRODUCTION",
+      "claim": "H06.02.04.R2.C01",
+      "expected": "PRODUCTION",
+      "id": "H06.02.04.R2.C01.CASE.3",
+      "input": {
+        "framework": "CEFR",
+        "task": "SPEAK_MONOLOGUE",
+        "task_evidence": true
+      },
+      "owner": "H06",
+      "rule": "activity",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.02.04.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.02.04.R2.C01.CASE.4",
+      "input": {
+        "framework": "CEFR",
+        "task": "UNKNOWN",
+        "task_evidence": true
+      },
+      "owner": "H06",
+      "rule": "activity",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "MEDIATION_CANDIDATE",
+      "claim": "H06.05.01.R2.C01",
+      "expected": "MEDIATION_CANDIDATE",
+      "id": "H06.05.01.R2.C01.CASE.1",
+      "input": {
+        "framework": "CEFR",
+        "language_relation": "SAME_LANGUAGE",
+        "meaning_access_goal": true,
+        "query": "MEDIATION_TASK",
+        "recipient_and_purpose_explicit": true
+      },
+      "owner": "H06",
+      "rule": "mediation",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.05.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.05.01.R2.C01.CASE.2",
+      "input": {
+        "framework": "CEFR",
+        "language_relation": "CROSS_LANGUAGE",
+        "meaning_access_goal": true,
+        "query": "MEDIATION_TASK",
+        "recipient_and_purpose_explicit": false
+      },
+      "owner": "H06",
+      "rule": "mediation",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "MEDIATION_CANDIDATE",
+      "claim": "H06.05.01.R2.C01",
+      "expected": "MEDIATION_CANDIDATE",
+      "id": "H06.05.01.R2.C01.CASE.3",
+      "input": {
+        "framework": "CEFR",
+        "language_relation": "CROSS_LANGUAGE",
+        "meaning_access_goal": true,
+        "query": "MEDIATION_TASK",
+        "recipient_and_purpose_explicit": true
+      },
+      "owner": "H06",
+      "rule": "mediation",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.05.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.05.01.R2.C01.CASE.4",
+      "input": {
+        "framework": "CEFR",
+        "language_relation": "SAME_LANGUAGE",
+        "meaning_access_goal": false,
+        "query": "MEDIATION_TASK",
+        "recipient_and_purpose_explicit": true
+      },
+      "owner": "H06",
+      "rule": "mediation",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": {
+        "accuracy": "可理解",
+        "context_content": "问路",
+        "functions_tasks": "描述路线",
+        "text_type": "短句"
+      },
+      "claim": "H06.06.03.R2.C01",
+      "expected": {
+        "accuracy": "可理解",
+        "context_content": "问路",
+        "functions_tasks": "描述路线",
+        "text_type": "短句"
+      },
+      "id": "H06.06.03.R2.C01.CASE.1",
+      "input": {
+        "accuracy": "可理解",
+        "context_content": "问路",
+        "framework": "ACTFL_2024",
+        "functions_tasks": "描述路线",
+        "query": "DESCRIPTION_DIMENSIONS",
+        "skill": "SPEAKING",
+        "text_type": "短句"
+      },
+      "owner": "H06",
+      "rule": "fact",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.06.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.06.03.R2.C01.CASE.2",
+      "input": {
+        "accuracy": null,
+        "context_content": "问路",
+        "framework": "ACTFL_2024",
+        "functions_tasks": "描述路线",
+        "query": "DESCRIPTION_DIMENSIONS",
+        "skill": "SPEAKING",
+        "text_type": "短句"
+      },
+      "owner": "H06",
+      "rule": "fact",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": {
+        "accuracy": "可理解",
+        "context_content": "问路",
+        "functions_tasks": "描述路线",
+        "text_type": "连续句"
+      },
+      "claim": "H06.06.03.R2.C01",
+      "expected": {
+        "accuracy": "可理解",
+        "context_content": "问路",
+        "functions_tasks": "描述路线",
+        "text_type": "连续句"
+      },
+      "id": "H06.06.03.R2.C01.CASE.3",
+      "input": {
+        "accuracy": "可理解",
+        "context_content": "问路",
+        "framework": "ACTFL_2024",
+        "functions_tasks": "描述路线",
+        "query": "DESCRIPTION_DIMENSIONS",
+        "skill": "SPEAKING",
+        "text_type": "连续句"
+      },
+      "owner": "H06",
+      "rule": "fact",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.06.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.06.03.R2.C01.CASE.4",
+      "input": {
+        "accuracy": "可理解",
+        "context_content": "问路",
+        "framework": "ACTFL_2024",
+        "functions_tasks": "描述路线",
+        "query": "DESCRIPTION_DIMENSIONS",
+        "skill": "TRANSLATION",
+        "text_type": "短句"
+      },
+      "owner": "H06",
+      "rule": "fact",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "INSUFFICIENT_SINGLE_CONTEXT_OR_OCCASION",
+      "claim": "H06.06.04.R2.C01",
+      "expected": "INSUFFICIENT_SINGLE_CONTEXT_OR_OCCASION",
+      "id": "H06.06.04.R2.C01.CASE.1",
+      "input": {
+        "distinct_occasions": 2,
+        "distinct_situations": 1,
+        "framework": "ACTFL_CAN_DO",
+        "independent": true,
+        "query": "EVIDENCE_SUFFICIENCY_SCREEN"
+      },
+      "owner": "H06",
+      "rule": "can_do",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.06.04.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.06.04.R2.C01.CASE.2",
+      "input": {
+        "distinct_occasions": 2,
+        "distinct_situations": 2,
+        "framework": "ACTFL_CAN_DO",
+        "independent": false,
+        "query": "EVIDENCE_SUFFICIENCY_SCREEN"
+      },
+      "owner": "H06",
+      "rule": "can_do",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "MULTIPLE_CONTEXT_EVIDENCE_REVIEW_REQUIRED",
+      "claim": "H06.06.04.R2.C01",
+      "expected": "MULTIPLE_CONTEXT_EVIDENCE_REVIEW_REQUIRED",
+      "id": "H06.06.04.R2.C01.CASE.3",
+      "input": {
+        "distinct_occasions": 2,
+        "distinct_situations": 2,
+        "framework": "ACTFL_CAN_DO",
+        "independent": true,
+        "query": "EVIDENCE_SUFFICIENCY_SCREEN"
+      },
+      "owner": "H06",
+      "rule": "can_do",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "INSUFFICIENT_SINGLE_CONTEXT_OR_OCCASION",
+      "claim": "H06.06.04.R2.C01",
+      "expected": "INSUFFICIENT_SINGLE_CONTEXT_OR_OCCASION",
+      "id": "H06.06.04.R2.C01.CASE.4",
+      "input": {
+        "distinct_occasions": 1,
+        "distinct_situations": 2,
+        "framework": "ACTFL_CAN_DO",
+        "independent": true,
+        "query": "EVIDENCE_SUFFICIENCY_SCREEN"
+      },
+      "owner": "H06",
+      "rule": "can_do",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "MODALITY_MATCH_ONLY",
+      "claim": "H06.01.02.R2.C01",
+      "expected": "MODALITY_MATCH_ONLY",
+      "id": "H06.01.02.R2.C01.CASE.1",
+      "input": {
+        "artifact": "AUDIO",
+        "framework": "ACTFL_2024",
+        "observed_operation": "MEANING_RESPONSE",
+        "query": "MODALITY_EVIDENCE",
+        "skill": "LISTENING"
+      },
+      "owner": "H06",
+      "rule": "task_modality",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.01.02.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.01.02.R2.C01.CASE.2",
+      "input": {
+        "artifact": "TEXT",
+        "framework": "ACTFL_2024",
+        "observed_operation": "MEANING_RESPONSE",
+        "query": "MODALITY_EVIDENCE",
+        "skill": "LISTENING"
+      },
+      "owner": "H06",
+      "rule": "task_modality",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "MODALITY_MATCH_ONLY",
+      "claim": "H06.01.02.R2.C01",
+      "expected": "MODALITY_MATCH_ONLY",
+      "id": "H06.01.02.R2.C01.CASE.3",
+      "input": {
+        "artifact": "TEXT",
+        "framework": "ACTFL_2024",
+        "observed_operation": "MEANING_RESPONSE",
+        "query": "MODALITY_EVIDENCE",
+        "skill": "READING"
+      },
+      "owner": "H06",
+      "rule": "task_modality",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H06.01.02.R2.C01",
+      "expected": "HOLD",
+      "id": "H06.01.02.R2.C01.CASE.4",
+      "input": {
+        "artifact": "AUDIO",
+        "framework": "ACTFL_2024",
+        "observed_operation": "PRODUCTION",
+        "query": "MODALITY_EVIDENCE",
+        "skill": "LISTENING"
+      },
+      "owner": "H06",
+      "rule": "task_modality",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "EDUCATION_LANGUAGE_STANDARD",
+      "claim": "H07.01.01.R2.C01",
+      "expected": "EDUCATION_LANGUAGE_STANDARD",
+      "id": "H07.01.01.R2.C01.CASE.1",
+      "input": {
+        "query": "DOCUMENT_KIND",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.01.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.01.01.R2.C01.CASE.2",
+      "input": {
+        "query": "DOCUMENT_KIND",
+        "source": "MOE_2021_03_31",
+        "standard": "HSK_3.0"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "2021-07-01",
+      "claim": "H07.01.01.R2.C01",
+      "expected": "2021-07-01",
+      "id": "H07.01.01.R2.C01.CASE.3",
+      "input": {
+        "query": "EFFECTIVE_DATE",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.01.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.01.01.R2.C01.CASE.4",
+      "input": {
+        "query": "EXAM_LAUNCH",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": [
+        3,
+        9
+      ],
+      "claim": "H07.02.01.R2.C01",
+      "expected": [
+        3,
+        9
+      ],
+      "id": "H07.02.01.R2.C01.CASE.1",
+      "input": {
+        "query": "LEVEL_STRUCTURE",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.02.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.02.01.R2.C01.CASE.2",
+      "input": {
+        "query": "LEVEL_STRUCTURE",
+        "source": "MOE_2021_03_31",
+        "standard": "HSK_2.0"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": [
+        "言语交际能力",
+        "话题任务内容",
+        "语言量化指标"
+      ],
+      "claim": "H07.02.01.R2.C01",
+      "expected": [
+        "言语交际能力",
+        "话题任务内容",
+        "语言量化指标"
+      ],
+      "id": "H07.02.01.R2.C01.CASE.3",
+      "input": {
+        "query": "ASSESSMENT_DIMENSIONS",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.02.01.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.02.01.R2.C01.CASE.4",
+      "input": {
+        "query": "LEARNER_LEVEL",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": [
+        "听",
+        "说",
+        "读",
+        "写",
+        "译"
+      ],
+      "claim": "H07.02.02.R2.C01",
+      "expected": [
+        "听",
+        "说",
+        "读",
+        "写",
+        "译"
+      ],
+      "id": "H07.02.02.R2.C01.CASE.1",
+      "input": {
+        "query": "SKILL_DIMENSIONS",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.02.02.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.02.02.R2.C01.CASE.2",
+      "input": {
+        "query": "SKILL_DIMENSIONS",
+        "source": "UNKNOWN",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": [
+        "音节",
+        "汉字",
+        "词汇",
+        "语法"
+      ],
+      "claim": "H07.02.02.R2.C01",
+      "expected": [
+        "音节",
+        "汉字",
+        "词汇",
+        "语法"
+      ],
+      "id": "H07.02.02.R2.C01.CASE.3",
+      "input": {
+        "query": "ELEMENT_DIMENSIONS",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.02.02.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.02.02.R2.C01.CASE.4",
+      "input": {
+        "query": "SKILL_FROM_WORD_COUNT",
+        "source": "MOE_2021_03_31",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_identity",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": {
+        "announced_date": "2026-12-13",
+        "status": "ANNOUNCED_NOT_ACTUAL_OCCURRENCE"
+      },
+      "claim": "H07.01.04.R2.C01",
+      "expected": {
+        "announced_date": "2026-12-13",
+        "status": "ANNOUNCED_NOT_ACTUAL_OCCURRENCE"
+      },
+      "id": "H07.01.04.R2.C01.CASE.1",
+      "input": {
+        "edition": "HSK_3.0",
+        "query": "ANNOUNCED_LAUNCH",
+        "source": "CTI_51336724"
+      },
+      "owner": "H07",
+      "rule": "exam_launch",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.01.04.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.01.04.R2.C01.CASE.2",
+      "input": {
+        "edition": "HSK_3.0",
+        "query": "ACTUAL_OCCURRED",
+        "source": "CTI_51336724"
+      },
+      "owner": "H07",
+      "rule": "exam_launch",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.01.04.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.01.04.R2.C01.CASE.3",
+      "input": {
+        "edition": "HSK_2.0",
+        "query": "ANNOUNCED_LAUNCH",
+        "source": "CTI_51336724"
+      },
+      "owner": "H07",
+      "rule": "exam_launch",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.01.04.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.01.04.R2.C01.CASE.4",
+      "input": {
+        "edition": "HSK_3.0",
+        "query": "ANNOUNCED_LAUNCH",
+        "source": "UNKNOWN"
+      },
+      "owner": "H07",
+      "rule": "exam_launch",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "LINK_EVIDENCE_REVIEW_REQUIRED",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "LINK_EVIDENCE_REVIEW_REQUIRED",
+      "id": "H07.05.03.R2.C01.CASE.1",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "CEFR",
+        "target_version": "2020"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "UNKNOWN_HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "UNKNOWN_HOLD",
+      "id": "H07.05.03.R2.C01.CASE.2",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": true,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "CEFR",
+        "target_version": "2020"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "UNKNOWN_HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "UNKNOWN_HOLD",
+      "id": "H07.05.03.R2.C01.CASE.3",
+      "input": {
+        "empirical_link_evidence": false,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "CEFR",
+        "target_version": "2020"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.4",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": null,
+        "target_standard": "CEFR",
+        "target_version": "2020"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "RECORDED_MEMBERSHIP_ONLY",
+      "claim": "H07.03.03.R2.C01",
+      "expected": "RECORDED_MEMBERSHIP_ONLY",
+      "id": "H07.03.03.R2.C01.CASE.1",
+      "input": {
+        "exact_source_ref": true,
+        "framework": "HSK01_RESTRICTED",
+        "kind": "LEXICAL",
+        "query": "RECORDED_SOURCE_MEMBERSHIP",
+        "semantic_qualification": false
+      },
+      "owner": "H07",
+      "rule": "membership",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.03.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.03.03.R2.C01.CASE.2",
+      "input": {
+        "exact_source_ref": false,
+        "framework": "HSK01_RESTRICTED",
+        "kind": "LEXICAL",
+        "query": "RECORDED_SOURCE_MEMBERSHIP",
+        "semantic_qualification": false
+      },
+      "owner": "H07",
+      "rule": "membership",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": "RECORDED_MEMBERSHIP_ONLY",
+      "claim": "H07.03.03.R2.C01",
+      "expected": "RECORDED_MEMBERSHIP_ONLY",
+      "id": "H07.03.03.R2.C01.CASE.3",
+      "input": {
+        "exact_source_ref": true,
+        "framework": "HSK01_RESTRICTED",
+        "kind": "CHARACTER_READ",
+        "query": "RECORDED_SOURCE_MEMBERSHIP",
+        "semantic_qualification": false
+      },
+      "owner": "H07",
+      "rule": "membership",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.03.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.03.03.R2.C01.CASE.4",
+      "input": {
+        "exact_source_ref": true,
+        "framework": "HSK01_RESTRICTED",
+        "kind": "LEXICAL",
+        "query": "RECORDED_SOURCE_MEMBERSHIP",
+        "semantic_qualification": true
+      },
+      "owner": "H07",
+      "rule": "membership",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": {
+        "characters": 3000,
+        "grammar_points": 572,
+        "lexical_items": 11092,
+        "syllables": 1110
+      },
+      "claim": "H07.04.03.R2.C01",
+      "expected": {
+        "characters": 3000,
+        "grammar_points": 572,
+        "lexical_items": 11092,
+        "syllables": 1110
+      },
+      "id": "H07.04.03.R2.C01.CASE.1",
+      "input": {
+        "query": "REPORTED_TOTALS",
+        "source": "MOE_2021_04_02",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_totals",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.04.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.04.03.R2.C01.CASE.2",
+      "input": {
+        "query": "COVERAGE_FROM_COUNTS",
+        "source": "MOE_2021_04_02",
+        "source_counts_equal": true,
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_totals",
+      "status": "PASS",
+      "view": "REVERSE"
+    },
+    {
+      "actual": {
+        "中等": 3,
+        "初等": 3,
+        "高等": 3
+      },
+      "claim": "H07.04.03.R2.C01",
+      "expected": {
+        "中等": 3,
+        "初等": 3,
+        "高等": 3
+      },
+      "id": "H07.04.03.R2.C01.CASE.3",
+      "input": {
+        "query": "GROUP_STRUCTURE",
+        "source": "MOE_2021_04_02",
+        "standard": "GF0025-2021"
+      },
+      "owner": "H07",
+      "rule": "gf_totals",
+      "status": "PASS",
+      "view": "INTERVENTION"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.04.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.04.03.R2.C01.CASE.4",
+      "input": {
+        "query": "COVERAGE_FROM_COUNTS",
+        "source": "MOE_2021_04_02",
+        "source_counts_equal": false,
+        "standard": "HSK_3.0"
+      },
+      "owner": "H07",
+      "rule": "gf_totals",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    }
+  ]
+}
