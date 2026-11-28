@@ -1,0 +1,2004 @@
+{
+  "assembly_sha256": "4c1dc0367d27126c538928878d523ff356f527a96f2a80c702ea2b4371e6503c",
+  "case_count": 40,
+  "cases": [
+    {
+      "actual": {
+        "likelihood": "12/25",
+        "next_prior": "13/16",
+        "posterior": "3/4"
+      },
+      "claim_bindings": {
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Joint correct masses 36/100 and 12/100. Normalize to 3/4; one-quarter of residual unlearned mass transitions.",
+      "expected": {
+        "likelihood": "12/25",
+        "next_prior": "13/16",
+        "posterior": "3/4"
+      },
+      "id": "CQ06.BKT.C",
+      "input": {
+        "construct_match": true,
+        "correct": true,
+        "g": 0.2,
+        "independent": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": 0.4,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "797d40f6671679354d11a262ce12fdc95961090a7651550182b448dd19dbf44a",
+      "mode": "bkt",
+      "model_bindings": {
+        "K10.BKT.CORRECT": {
+          "numeric_domain": "RATIONAL",
+          "record_sha256": "d7f3e3efb04af7b6ec09286a1685060b17bc3a6866fa399b075cefa97d38b183",
+          "values": {
+            "g": 0.2,
+            "p": 0.4,
+            "s": 0.1,
+            "t": 0.25
+          }
+        }
+      }
+    },
+    {
+      "actual": {
+        "likelihood": "13/25",
+        "next_prior": "4/13",
+        "posterior": "1/13"
+      },
+      "claim_bindings": {
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Joint incorrect masses 4/100 and 48/100; posterior 1/13, then 1/13 + 12/13 * 1/4.",
+      "expected": {
+        "likelihood": "13/25",
+        "next_prior": "4/13",
+        "posterior": "1/13"
+      },
+      "id": "CQ06.BKT.I",
+      "input": {
+        "construct_match": true,
+        "correct": false,
+        "g": 0.2,
+        "independent": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": 0.4,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "7ea015dc074d43fe62055e998da0ef05612dc2d13a216c65db2a5b0642befcbf",
+      "mode": "bkt",
+      "model_bindings": {
+        "K10.BKT.INCORRECT": {
+          "numeric_domain": "RATIONAL",
+          "record_sha256": "995b57246c8bc5e519da82dbadb3759a3097ddbf5c021eb3ee6ed681d78f47db",
+          "values": {
+            "g": 0.2,
+            "p": 0.4,
+            "s": 0.1,
+            "t": 0.25
+          }
+        }
+      }
+    },
+    {
+      "actual": {
+        "p": 0.125
+      },
+      "claim_bindings": {
+        "K10.03.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "1352c147bca0556a6cb8e94f657870f5fc3750f32a3852755545cc70eb0cb646",
+          "statement": "在固定h、同单位且Δ≥0的指数候选模型中计算项目回忆概率。"
+        }
+      },
+      "derivation": "Three elapsed half-lives: 1/2 * 1/2 * 1/2.",
+      "expected": {
+        "p": 0.125
+      },
+      "id": "CQ06.HLR",
+      "input": {
+        "fixed_model": true,
+        "half_life": 4,
+        "lag": 12,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "unit": "day"
+      },
+      "input_sha256": "ba1dd8f46e652daf3941f9d8882b3266ce8e975fa48674f31a69d7e7616d0cc9",
+      "mode": "hlr",
+      "model_bindings": {
+        "K10.HLR.FIXED": {
+          "numeric_domain": "BINARY64",
+          "record_sha256": "67bd5c3130960bb15207168ec4274c7d84d7a015d8a8e87fbd09da9658c164d5",
+          "values": {
+            "half_life": 4,
+            "lag": 12
+          }
+        }
+      }
+    },
+    {
+      "actual": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "reliability": "9/16",
+        "sem_squared": "7"
+      },
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K09.02.02.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "3faec5d75a0dd9a1831fe0e17e85b75e1e7de5f5d86881fb779cbd682133648f",
+          "statement": "CTT真分数依重复程序定义；在误差零均值且与真分数不相关等条件下，观测方差分解用于信度。"
+        },
+        "K09.02.03.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "024c5bea183e9ac08d29eaebbf73be01faf602304ee664d25ff3f6ffa5da9486",
+          "statement": "随机误差与系统误差区别；重复测量高度一致仍可存在构念无关偏移，不能单用信度证明效度。"
+        },
+        "K09.02.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "049bd430c7bcb89b1bdc3e4b121bc8cf6ebd30b895a8a88e0a1a3227e9bf1b99",
+          "statement": "验证指定分数解释及决策用途，分别检查构念覆盖、构念无关因素、适用人群与后果。"
+        },
+        "K09.03.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "1135c1a8f5880774d01c5703182a55aa7b261b991d00a059505831c51f780364",
+          "statement": "CTT平均SEM=SD√(1−r)要求SD与信度同总体同量尺；条件SEM可随分数改变。"
+        },
+        "K16.05.02.TG.01": {
+          "owner_receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+          "qualification_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+          "record_sha256": "b6cdd0e0862efde56412922dece2e37ea4ca2990bcebff5db909d5d65d443877",
+          "statement": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。"
+        },
+        "K19.01.03.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "265210bb025291aa8d6cf24d096ccb551746d1001ec4a160c12e2a727017f59f",
+          "statement": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。"
+        }
+      },
+      "derivation": "Total variance 16, true variance 9; SEM squared 16*(7/16)=7. Means 7/2 and 3/2; difference 2, not causal or fairness evidence.",
+      "expected": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "reliability": "9/16",
+        "sem_squared": "7"
+      },
+      "id": "CQ09.CTT",
+      "input": {
+        "construct": "FRACTION_MAGNITUDE",
+        "error_uncorrelated": true,
+        "error_var": 7,
+        "group_comparability": "UNKNOWN",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "same_population": true,
+        "same_scale": true,
+        "sd": 4,
+        "true_var": 9,
+        "zero_mean_error": true
+      },
+      "input_sha256": "7717b79ea0d887985c88f4414a14acb123aaa2b608ce658a177acc5e65428067",
+      "mode": "ctt",
+      "model_bindings": {
+        "K09.02.02.MODEL.01": {
+          "numeric_domain": "RATIONAL",
+          "record_sha256": "50753732faea82465550236bd095db1be627aef6fa26688d52da6068123ce172",
+          "values": {
+            "error_var": 7,
+            "true_var": 9
+          }
+        },
+        "K09.03.04.MODEL.01": {
+          "numeric_domain": "BINARY64",
+          "record_sha256": "67092c5ce2babef0f54551e54582d85603e7b1678bdf94b1eeb62a4c0d6c0865",
+          "values": {
+            "r": "9/16",
+            "sd": 4
+          }
+        }
+      }
+    },
+    {
+      "actual": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "UNSUPPORTED",
+        "reliability": "UNKNOWN",
+        "sem_squared": "UNKNOWN"
+      },
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K09.02.03.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "024c5bea183e9ac08d29eaebbf73be01faf602304ee664d25ff3f6ffa5da9486",
+          "statement": "随机误差与系统误差区别；重复测量高度一致仍可存在构念无关偏移，不能单用信度证明效度。"
+        },
+        "K09.02.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "049bd430c7bcb89b1bdc3e4b121bc8cf6ebd30b895a8a88e0a1a3227e9bf1b99",
+          "statement": "验证指定分数解释及决策用途，分别检查构念覆盖、构念无关因素、适用人群与后果。"
+        },
+        "K16.05.02.TG.01": {
+          "owner_receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+          "qualification_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+          "record_sha256": "b6cdd0e0862efde56412922dece2e37ea4ca2990bcebff5db909d5d65d443877",
+          "statement": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。"
+        },
+        "K19.01.03.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "265210bb025291aa8d6cf24d096ccb551746d1001ec4a160c12e2a727017f59f",
+          "statement": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。"
+        }
+      },
+      "derivation": "Group difference alone supplies neither variance decomposition nor construct validity.",
+      "expected": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "UNSUPPORTED",
+        "reliability": "UNKNOWN",
+        "sem_squared": "UNKNOWN"
+      },
+      "id": "CQ09.GROUP_ONLY",
+      "input": {
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "input_sha256": "3b5bac07cf6324160765bf166f831e4552e078b2f7b8eea0719e89245eaf3ad9",
+      "mode": "ctt",
+      "model_bindings": {}
+    },
+    {
+      "actual": {
+        "causal": "UNKNOWN",
+        "crude_difference": "-12/25",
+        "standardized_association": "0",
+        "stratum_differences": [
+          "0",
+          "0"
+        ],
+        "transport": "UNKNOWN"
+      },
+      "claim_bindings": {
+        "K17.03.02.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "8eaadc3ba4b2b108f80a9aa1c02f621e7dd42711eec89967a95845d2438fa01d",
+          "statement": "按事前因果图检查共同原因、碰撞变量及中介；目标为总效应时不自动控制中介。"
+        },
+        "K17.06.03.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "d46651a79cd3f9e2e0a646b37d28962e96bd3d0674b3b891dc9fe22f44e259e5",
+          "statement": "目标总体及效应修饰变量匹配后再评估外推。"
+        },
+        "K19.05.01.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "903ab10394314d517a9ac65f2306d98a0de392fff4a4040b389857c87e13423b",
+          "statement": "研究伦理审查分开自主、风险收益、公平选择及具体制度。"
+        }
+      },
+      "derivation": "Crude treated 26/100 versus control 74/100. High both 4/5, low both 1/5. Equal-weight within-stratum contrasts zero; adjustment does not establish exchangeability.",
+      "expected": {
+        "causal": "UNKNOWN",
+        "crude_difference": "-12/25",
+        "standardized_association": "0",
+        "stratum_differences": [
+          "0",
+          "0"
+        ],
+        "transport": "UNKNOWN"
+      },
+      "id": "CQ10.CONFOUND",
+      "input": {
+        "confounder": "PRIOR_SKILL",
+        "design": "OBSERVATIONAL",
+        "measured_before_exposure": true,
+        "strata": [
+          {
+            "control": [
+              72,
+              90
+            ],
+            "id": "HIGH",
+            "treated": [
+              8,
+              10
+            ]
+          },
+          {
+            "control": [
+              2,
+              10
+            ],
+            "id": "LOW",
+            "treated": [
+              18,
+              90
+            ]
+          }
+        ],
+        "target_match": false,
+        "target_strata_weights": [
+          0.5,
+          0.5
+        ],
+        "unmeasured_confounding": "UNKNOWN"
+      },
+      "input_sha256": "d16ea7aac1223f635518cb06ecd4034768c34b59cfebd34b5911b35c6b43d4f3",
+      "mode": "research",
+      "model_bindings": {}
+    },
+    {
+      "actual": {
+        "causal": "UNKNOWN",
+        "transport": "UNKNOWN"
+      },
+      "claim_bindings": {
+        "K17.03.02.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "8eaadc3ba4b2b108f80a9aa1c02f621e7dd42711eec89967a95845d2438fa01d",
+          "statement": "按事前因果图检查共同原因、碰撞变量及中介；目标为总效应时不自动控制中介。"
+        },
+        "K17.06.03.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "d46651a79cd3f9e2e0a646b37d28962e96bd3d0674b3b891dc9fe22f44e259e5",
+          "statement": "目标总体及效应修饰变量匹配后再评估外推。"
+        },
+        "K19.05.01.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "903ab10394314d517a9ac65f2306d98a0de392fff4a4040b389857c87e13423b",
+          "statement": "研究伦理审查分开自主、风险收益、公平选择及具体制度。"
+        }
+      },
+      "derivation": "Correlation lacks design, treatment contrast and target population.",
+      "expected": {
+        "causal": "UNKNOWN",
+        "transport": "UNKNOWN"
+      },
+      "id": "CQ10.CORRELATION_ONLY",
+      "input": {
+        "design": "CORRELATION_ONLY",
+        "r": 0.8
+      },
+      "input_sha256": "19edb9678b64fb6a33fd84d4045f3dfe46779ee93a0a47773729dc30409e3bc0",
+      "mode": "research",
+      "model_bindings": {}
+    },
+    {
+      "actual": {
+        "alternatives": {
+          "A": "ELIGIBLE",
+          "B": "OVER_BUDGET",
+          "C": "UNKNOWN_CONDITION",
+          "D": "GOAL_MISMATCH"
+        },
+        "cost": 2,
+        "decision": "REVIEW_PLAN_ONLY",
+        "remaining": 2,
+        "selected": "A",
+        "state_version": "S1"
+      },
+      "claim_bindings": {
+        "K11.01.03.R2.09": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "db75f8a649ac52d55071878d2969ed9ab8c1ea3dc55dc869d188e69996984007",
+          "statement": "在有限动作集先过滤硬约束，再比较明确目标的可行项；若目标包括保持与时间，必须说明量纲、权重或Pareto比较。"
+        },
+        "K11.02.04.TR.01": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "cd0994e5ba83260abefce28546a6d1d058020216b8a7e4edd525c6d1b03c53e9",
+          "statement": "预算检查包括预估全部动作成本、剩余时间及退出。"
+        },
+        "K11.05.04.TR.01": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "8e118893636c9b27a5f916a066697ff27f639ae593deb0cb3cc90d2c543f1d7f",
+          "statement": "退出、预算耗尽及未知风险触发停止；升级为人工选项而非授权。"
+        }
+      },
+      "derivation": "Filter by explicit target, resource and authority then budget; only A eligible, 4-2=2.",
+      "expected": {
+        "alternatives": {
+          "A": "ELIGIBLE",
+          "B": "OVER_BUDGET",
+          "C": "UNKNOWN_CONDITION",
+          "D": "GOAL_MISMATCH"
+        },
+        "cost": 2,
+        "decision": "REVIEW_PLAN_ONLY",
+        "remaining": 2,
+        "selected": "A",
+        "state_version": "S1"
+      },
+      "id": "CQ07.CHOICE",
+      "input": {
+        "budget": 4,
+        "estimate_status": "BOUNDED",
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "learner_selection": "A",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": true,
+        "state_version": "S1"
+      },
+      "input_sha256": "511290b78614835cbda04e3902b63a153bff29bcb0d0d954f167da47f48dbbd4",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": {
+        "assistance": "ASSISTED",
+        "elapsed": 12,
+        "estimate": "NOT_ESTIMATED",
+        "mastery": "UNKNOWN",
+        "response": "CONFIRM",
+        "score": 1,
+        "self_report": "unsure"
+      },
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Correct response with hint is assisted; self-report is independent channel and not a latent estimate.",
+      "expected": {
+        "assistance": "ASSISTED",
+        "elapsed": 12,
+        "estimate": "NOT_ESTIMATED",
+        "mastery": "UNKNOWN",
+        "response": "CONFIRM",
+        "score": 1,
+        "self_report": "unsure"
+      },
+      "id": "CQ05.CHANNELS",
+      "input": {
+        "elapsed": 12,
+        "estimate_requested": true,
+        "hint_used": true,
+        "key": "CONFIRM",
+        "response": "CONFIRM",
+        "self_report": "unsure"
+      },
+      "input_sha256": "187ab171792cf484d12962f265e2e6f94bc40d44fca5c5d1986940fb48fa1809",
+      "mode": "channels",
+      "model_bindings": {}
+    },
+    {
+      "actual": {
+        "assistance": "UNKNOWN",
+        "elapsed": null,
+        "estimate": "NOT_ESTIMATED",
+        "mastery": "UNKNOWN",
+        "response": null,
+        "score": null,
+        "self_report": null
+      },
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Missing is not zero and not a diagnosis.",
+      "expected": {
+        "assistance": "UNKNOWN",
+        "elapsed": null,
+        "estimate": "NOT_ESTIMATED",
+        "mastery": "UNKNOWN",
+        "response": null,
+        "score": null,
+        "self_report": null
+      },
+      "id": "CQ19.MISSING",
+      "input": {
+        "elapsed": null,
+        "estimate_requested": true,
+        "hint_used": false,
+        "key": "CONFIRM",
+        "response": null,
+        "self_report": null
+      },
+      "input_sha256": "62674f17fc32d3f540d75fd766cb77301e9e3155d5bb94033ceb76d3c1457feb",
+      "mode": "channels",
+      "model_bindings": {}
+    },
+    {
+      "actual": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "reliability": "1",
+        "sem_squared": "0"
+      },
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K09.02.02.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "3faec5d75a0dd9a1831fe0e17e85b75e1e7de5f5d86881fb779cbd682133648f",
+          "statement": "CTT真分数依重复程序定义；在误差零均值且与真分数不相关等条件下，观测方差分解用于信度。"
+        },
+        "K09.02.03.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "024c5bea183e9ac08d29eaebbf73be01faf602304ee664d25ff3f6ffa5da9486",
+          "statement": "随机误差与系统误差区别；重复测量高度一致仍可存在构念无关偏移，不能单用信度证明效度。"
+        },
+        "K09.02.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "049bd430c7bcb89b1bdc3e4b121bc8cf6ebd30b895a8a88e0a1a3227e9bf1b99",
+          "statement": "验证指定分数解释及决策用途，分别检查构念覆盖、构念无关因素、适用人群与后果。"
+        },
+        "K09.03.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "1135c1a8f5880774d01c5703182a55aa7b261b991d00a059505831c51f780364",
+          "statement": "CTT平均SEM=SD√(1−r)要求SD与信度同总体同量尺；条件SEM可随分数改变。"
+        },
+        "K16.05.02.TG.01": {
+          "owner_receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+          "qualification_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+          "record_sha256": "b6cdd0e0862efde56412922dece2e37ea4ca2990bcebff5db909d5d65d443877",
+          "statement": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。"
+        },
+        "K19.01.03.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "265210bb025291aa8d6cf24d096ccb551746d1001ec4a160c12e2a727017f59f",
+          "statement": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。"
+        }
+      },
+      "derivation": "Zero error variance gives conditional reliability 1 and SEM 0; no empirical proof of validity.",
+      "expected": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "reliability": "1",
+        "sem_squared": "0"
+      },
+      "id": "CQ09.ZERO_ERROR",
+      "input": {
+        "construct": "FRACTION_MAGNITUDE",
+        "error_uncorrelated": true,
+        "error_var": 0,
+        "group_comparability": "UNKNOWN",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "same_population": true,
+        "same_scale": true,
+        "sd": 4,
+        "true_var": 16,
+        "zero_mean_error": true
+      },
+      "input_sha256": "ddb3eb3a0844f94ffa7b98037107f1567c5d4bae475f34b8db541bd39b3fca48",
+      "mode": "ctt",
+      "model_bindings": {
+        "K09.02.02.MODEL.01": {
+          "numeric_domain": "RATIONAL",
+          "record_sha256": "50753732faea82465550236bd095db1be627aef6fa26688d52da6068123ce172",
+          "values": {
+            "error_var": 0,
+            "true_var": 16
+          }
+        },
+        "K09.03.04.MODEL.01": {
+          "numeric_domain": "BINARY64",
+          "record_sha256": "67092c5ce2babef0f54551e54582d85603e7b1678bdf94b1eeb62a4c0d6c0865",
+          "values": {
+            "r": "1",
+            "sd": 4
+          }
+        }
+      }
+    },
+    {
+      "actual": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "reliability": "0",
+        "sem_squared": "16"
+      },
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K09.02.02.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "3faec5d75a0dd9a1831fe0e17e85b75e1e7de5f5d86881fb779cbd682133648f",
+          "statement": "CTT真分数依重复程序定义；在误差零均值且与真分数不相关等条件下，观测方差分解用于信度。"
+        },
+        "K09.02.03.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "024c5bea183e9ac08d29eaebbf73be01faf602304ee664d25ff3f6ffa5da9486",
+          "statement": "随机误差与系统误差区别；重复测量高度一致仍可存在构念无关偏移，不能单用信度证明效度。"
+        },
+        "K09.02.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "049bd430c7bcb89b1bdc3e4b121bc8cf6ebd30b895a8a88e0a1a3227e9bf1b99",
+          "statement": "验证指定分数解释及决策用途，分别检查构念覆盖、构念无关因素、适用人群与后果。"
+        },
+        "K09.03.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "1135c1a8f5880774d01c5703182a55aa7b261b991d00a059505831c51f780364",
+          "statement": "CTT平均SEM=SD√(1−r)要求SD与信度同总体同量尺；条件SEM可随分数改变。"
+        },
+        "K16.05.02.TG.01": {
+          "owner_receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+          "qualification_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+          "record_sha256": "b6cdd0e0862efde56412922dece2e37ea4ca2990bcebff5db909d5d65d443877",
+          "statement": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。"
+        },
+        "K19.01.03.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "265210bb025291aa8d6cf24d096ccb551746d1001ec4a160c12e2a727017f59f",
+          "statement": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。"
+        }
+      },
+      "derivation": "Zero true variance gives conditional reliability 0; SEM equals the SD.",
+      "expected": {
+        "ability": "UNKNOWN",
+        "bias": "UNKNOWN",
+        "group_difference": "2",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "reliability": "0",
+        "sem_squared": "16"
+      },
+      "id": "CQ09.ZERO_TRUE",
+      "input": {
+        "construct": "FRACTION_MAGNITUDE",
+        "error_uncorrelated": true,
+        "error_var": 16,
+        "group_comparability": "UNKNOWN",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "same_population": true,
+        "same_scale": true,
+        "sd": 4,
+        "true_var": 0,
+        "zero_mean_error": true
+      },
+      "input_sha256": "c1fe69cc35a98e86d39b6ddfaa2714c6d88c15da25dd7fdbab4f58e8a554cc60",
+      "mode": "ctt",
+      "model_bindings": {
+        "K09.02.02.MODEL.01": {
+          "numeric_domain": "RATIONAL",
+          "record_sha256": "50753732faea82465550236bd095db1be627aef6fa26688d52da6068123ce172",
+          "values": {
+            "error_var": 16,
+            "true_var": 0
+          }
+        },
+        "K09.03.04.MODEL.01": {
+          "numeric_domain": "BINARY64",
+          "record_sha256": "67092c5ce2babef0f54551e54582d85603e7b1678bdf94b1eeb62a4c0d6c0865",
+          "values": {
+            "r": "0",
+            "sd": 4
+          }
+        }
+      }
+    },
+    {
+      "actual": {
+        "p": 1.0
+      },
+      "claim_bindings": {
+        "K10.03.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "1352c147bca0556a6cb8e94f657870f5fc3750f32a3852755545cc70eb0cb646",
+          "statement": "在固定h、同单位且Δ≥0的指数候选模型中计算项目回忆概率。"
+        }
+      },
+      "derivation": "Zero elapsed half-lives: 2^0 = 1 under model assumptions, not observed proficiency.",
+      "expected": {
+        "p": 1.0
+      },
+      "id": "CQ06.HLR.ZERO_LAG",
+      "input": {
+        "fixed_model": true,
+        "half_life": 4,
+        "lag": 0,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "unit": "day"
+      },
+      "input_sha256": "674ad11aaaf122d6c890635131613d0005469fba2dd0ab987b4bbb95534ebd1b",
+      "mode": "hlr",
+      "model_bindings": {
+        "K10.HLR.FIXED": {
+          "numeric_domain": "BINARY64",
+          "record_sha256": "67bd5c3130960bb15207168ec4274c7d84d7a015d8a8e87fbd09da9658c164d5",
+          "values": {
+            "half_life": 4,
+            "lag": 0
+          }
+        }
+      }
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: assisted",
+      "expected": "HOLD",
+      "id": "CQ06.BKT.C.assisted",
+      "input": {
+        "construct_match": true,
+        "correct": true,
+        "g": 0.2,
+        "independent": false,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": 0.4,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "9fbd1223dc66842e59f8d3519fe8a1dd618055acd28e9ee13fe0442c12b5c2b2",
+      "mode": "bkt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: missing_match",
+      "expected": "HOLD",
+      "id": "CQ06.BKT.C.missing_match",
+      "input": {
+        "construct_match": null,
+        "correct": true,
+        "g": 0.2,
+        "independent": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": 0.4,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "2faefb654b9864911c748cf5b6f05c3a33d8d8772a8456e38d15dad108d877bb",
+      "mode": "bkt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Explicit negative contract: bool",
+      "expected": "HOLD",
+      "id": "CQ06.BKT.C.bool",
+      "input": {
+        "construct_match": true,
+        "correct": true,
+        "g": 0.2,
+        "independent": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": true,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "a0f0b719c51b26023bb5371d0af15251a012c31eebb9393574f7e6da740f875b",
+      "mode": "bkt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Explicit negative contract: out_of_range",
+      "expected": "HOLD",
+      "id": "CQ06.BKT.C.out_of_range",
+      "input": {
+        "construct_match": true,
+        "correct": true,
+        "g": 1.1,
+        "independent": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": 0.4,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "d32f3e9877d11021b8ee078102c38cf4770c99509583e24ed90b7338dc88f0fb",
+      "mode": "bkt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Explicit negative contract: zero_likelihood",
+      "expected": "HOLD",
+      "id": "CQ06.BKT.C.zero_likelihood",
+      "input": {
+        "construct_match": true,
+        "correct": true,
+        "g": 0,
+        "independent": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": 0,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "6205f137ded818cdd7f80a863fcb07a8bde85545943d8b3e6bca1d297385dbe4",
+      "mode": "bkt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: wrong_model",
+      "expected": "HOLD",
+      "id": "CQ06.BKT.C.wrong_model",
+      "input": {
+        "construct_match": true,
+        "correct": true,
+        "g": 0.2,
+        "independent": true,
+        "model_version": "OLD",
+        "p": 0.4,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "input_sha256": "39c6cb9456af465653175cda6ca6971cd78d029687cd9447786faab03bcd430d",
+      "mode": "bkt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: wrong_transition",
+      "expected": "HOLD",
+      "id": "CQ06.BKT.C.wrong_transition",
+      "input": {
+        "construct_match": true,
+        "correct": true,
+        "g": 0.2,
+        "independent": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "p": 0.4,
+        "s": 0.1,
+        "t": 0.25,
+        "transition": "FORGETTING"
+      },
+      "input_sha256": "2cb634e1e1751a7528636e4093937a3866fcab243b098252289be44bf0db10be",
+      "mode": "bkt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K10.03.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "1352c147bca0556a6cb8e94f657870f5fc3750f32a3852755545cc70eb0cb646",
+          "statement": "在固定h、同单位且Δ≥0的指数候选模型中计算项目回忆概率。"
+        }
+      },
+      "derivation": "Explicit negative contract: zero_h",
+      "expected": "HOLD",
+      "id": "CQ06.HLR.zero_h",
+      "input": {
+        "fixed_model": true,
+        "half_life": 0,
+        "lag": 12,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "unit": "day"
+      },
+      "input_sha256": "6561c608de30412257bbe21164c9e6bf1d2c19fd8521005452e76611e8a47f82",
+      "mode": "hlr",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K10.03.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "1352c147bca0556a6cb8e94f657870f5fc3750f32a3852755545cc70eb0cb646",
+          "statement": "在固定h、同单位且Δ≥0的指数候选模型中计算项目回忆概率。"
+        }
+      },
+      "derivation": "Explicit negative contract: negative_lag",
+      "expected": "HOLD",
+      "id": "CQ06.HLR.negative_lag",
+      "input": {
+        "fixed_model": true,
+        "half_life": 4,
+        "lag": -1,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "unit": "day"
+      },
+      "input_sha256": "cdec4b6f54d4dab9daa9924abfd96a60375a96186254360861d34cf544c991bb",
+      "mode": "hlr",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: wrong_unit",
+      "expected": "HOLD",
+      "id": "CQ06.HLR.wrong_unit",
+      "input": {
+        "fixed_model": true,
+        "half_life": 4,
+        "lag": 12,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "unit": "hour"
+      },
+      "input_sha256": "ca22c40c58908d33821c8ef52077f4d80f0bd06fcfa6cd698c417ca9beada13c",
+      "mode": "hlr",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: not_fixed",
+      "expected": "HOLD",
+      "id": "CQ06.HLR.not_fixed",
+      "input": {
+        "fixed_model": false,
+        "half_life": 4,
+        "lag": 12,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "unit": "day"
+      },
+      "input_sha256": "4be3e9287c7485e4da5a0924b57da2665b2a1bc265cf370945adb4dd76053df7",
+      "mode": "hlr",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K09.02.03.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "024c5bea183e9ac08d29eaebbf73be01faf602304ee664d25ff3f6ffa5da9486",
+          "statement": "随机误差与系统误差区别；重复测量高度一致仍可存在构念无关偏移，不能单用信度证明效度。"
+        },
+        "K09.02.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "049bd430c7bcb89b1bdc3e4b121bc8cf6ebd30b895a8a88e0a1a3227e9bf1b99",
+          "statement": "验证指定分数解释及决策用途，分别检查构念覆盖、构念无关因素、适用人群与后果。"
+        },
+        "K16.05.02.TG.01": {
+          "owner_receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+          "qualification_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+          "record_sha256": "b6cdd0e0862efde56412922dece2e37ea4ca2990bcebff5db909d5d65d443877",
+          "statement": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。"
+        },
+        "K19.01.03.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "265210bb025291aa8d6cf24d096ccb551746d1001ec4a160c12e2a727017f59f",
+          "statement": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。"
+        }
+      },
+      "derivation": "Explicit negative contract: bad_variance",
+      "expected": "HOLD",
+      "id": "CQ09.CTT.bad_variance",
+      "input": {
+        "construct": "FRACTION_MAGNITUDE",
+        "error_uncorrelated": true,
+        "error_var": -1,
+        "group_comparability": "UNKNOWN",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "same_population": true,
+        "same_scale": true,
+        "sd": 4,
+        "true_var": 9,
+        "zero_mean_error": true
+      },
+      "input_sha256": "c1896793ca504134d9719c1a6cca526a62e2a21ed199c8bb7482f9dc71aa9cbf",
+      "mode": "ctt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K09.02.03.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "024c5bea183e9ac08d29eaebbf73be01faf602304ee664d25ff3f6ffa5da9486",
+          "statement": "随机误差与系统误差区别；重复测量高度一致仍可存在构念无关偏移，不能单用信度证明效度。"
+        },
+        "K09.02.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "049bd430c7bcb89b1bdc3e4b121bc8cf6ebd30b895a8a88e0a1a3227e9bf1b99",
+          "statement": "验证指定分数解释及决策用途，分别检查构念覆盖、构念无关因素、适用人群与后果。"
+        },
+        "K16.05.02.TG.01": {
+          "owner_receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+          "qualification_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+          "record_sha256": "b6cdd0e0862efde56412922dece2e37ea4ca2990bcebff5db909d5d65d443877",
+          "statement": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。"
+        },
+        "K19.01.03.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "265210bb025291aa8d6cf24d096ccb551746d1001ec4a160c12e2a727017f59f",
+          "statement": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。"
+        }
+      },
+      "derivation": "Explicit negative contract: wrong_sd",
+      "expected": "HOLD",
+      "id": "CQ09.CTT.wrong_sd",
+      "input": {
+        "construct": "FRACTION_MAGNITUDE",
+        "error_uncorrelated": true,
+        "error_var": 7,
+        "group_comparability": "UNKNOWN",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "same_population": true,
+        "same_scale": true,
+        "sd": 3,
+        "true_var": 9,
+        "zero_mean_error": true
+      },
+      "input_sha256": "30170961ef4c0b85b6a17abedd9c4d2041862662751aaefa5ca4ee198ceaee85",
+      "mode": "ctt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K09.02.03.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "024c5bea183e9ac08d29eaebbf73be01faf602304ee664d25ff3f6ffa5da9486",
+          "statement": "随机误差与系统误差区别；重复测量高度一致仍可存在构念无关偏移，不能单用信度证明效度。"
+        },
+        "K09.02.04.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "049bd430c7bcb89b1bdc3e4b121bc8cf6ebd30b895a8a88e0a1a3227e9bf1b99",
+          "statement": "验证指定分数解释及决策用途，分别检查构念覆盖、构念无关因素、适用人群与后果。"
+        },
+        "K16.05.02.TG.01": {
+          "owner_receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+          "qualification_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+          "record_sha256": "b6cdd0e0862efde56412922dece2e37ea4ca2990bcebff5db909d5d65d443877",
+          "statement": "群体差异先核样本构成、目标、条件、测量可比性和不确定性。"
+        },
+        "K19.01.03.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "265210bb025291aa8d6cf24d096ccb551746d1001ec4a160c12e2a727017f59f",
+          "statement": "公平评价核实际语言/文化情境及目标构念，禁止身份代替个体证据。"
+        }
+      },
+      "derivation": "Explicit negative contract: zero_total",
+      "expected": "HOLD",
+      "id": "CQ09.CTT.zero_total",
+      "input": {
+        "construct": "FRACTION_MAGNITUDE",
+        "error_uncorrelated": true,
+        "error_var": 0,
+        "group_comparability": "UNKNOWN",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "same_population": true,
+        "same_scale": true,
+        "sd": 0,
+        "true_var": 0,
+        "zero_mean_error": true
+      },
+      "input_sha256": "60dd620257f7d46158b97cdecea5d8513c156c78e52a79687c1c117522ac0a2c",
+      "mode": "ctt",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K17.03.02.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "8eaadc3ba4b2b108f80a9aa1c02f621e7dd42711eec89967a95845d2438fa01d",
+          "statement": "按事前因果图检查共同原因、碰撞变量及中介；目标为总效应时不自动控制中介。"
+        },
+        "K17.06.03.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "d46651a79cd3f9e2e0a646b37d28962e96bd3d0674b3b891dc9fe22f44e259e5",
+          "statement": "目标总体及效应修饰变量匹配后再评估外推。"
+        },
+        "K19.05.01.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "903ab10394314d517a9ac65f2306d98a0de392fff4a4040b389857c87e13423b",
+          "statement": "研究伦理审查分开自主、风险收益、公平选择及具体制度。"
+        }
+      },
+      "derivation": "Explicit negative contract: no_preexposure",
+      "expected": "HOLD",
+      "id": "CQ10.CONFOUND.no_preexposure",
+      "input": {
+        "confounder": "PRIOR_SKILL",
+        "design": "OBSERVATIONAL",
+        "measured_before_exposure": false,
+        "strata": [
+          {
+            "control": [
+              72,
+              90
+            ],
+            "id": "HIGH",
+            "treated": [
+              8,
+              10
+            ]
+          },
+          {
+            "control": [
+              2,
+              10
+            ],
+            "id": "LOW",
+            "treated": [
+              18,
+              90
+            ]
+          }
+        ],
+        "target_match": false,
+        "target_strata_weights": [
+          0.5,
+          0.5
+        ],
+        "unmeasured_confounding": "UNKNOWN"
+      },
+      "input_sha256": "d09f8964b774deed4e6995addd47ad6d161bf0e8aeabd3927571819fa39af06f",
+      "mode": "research",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K17.03.02.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "8eaadc3ba4b2b108f80a9aa1c02f621e7dd42711eec89967a95845d2438fa01d",
+          "statement": "按事前因果图检查共同原因、碰撞变量及中介；目标为总效应时不自动控制中介。"
+        },
+        "K17.06.03.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "d46651a79cd3f9e2e0a646b37d28962e96bd3d0674b3b891dc9fe22f44e259e5",
+          "statement": "目标总体及效应修饰变量匹配后再评估外推。"
+        },
+        "K19.05.01.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "903ab10394314d517a9ac65f2306d98a0de392fff4a4040b389857c87e13423b",
+          "statement": "研究伦理审查分开自主、风险收益、公平选择及具体制度。"
+        }
+      },
+      "derivation": "Explicit negative contract: invalid_weight",
+      "expected": "HOLD",
+      "id": "CQ10.CONFOUND.invalid_weight",
+      "input": {
+        "confounder": "PRIOR_SKILL",
+        "design": "OBSERVATIONAL",
+        "measured_before_exposure": true,
+        "strata": [
+          {
+            "control": [
+              72,
+              90
+            ],
+            "id": "HIGH",
+            "treated": [
+              8,
+              10
+            ]
+          },
+          {
+            "control": [
+              2,
+              10
+            ],
+            "id": "LOW",
+            "treated": [
+              18,
+              90
+            ]
+          }
+        ],
+        "target_match": false,
+        "target_strata_weights": [
+          1,
+          1
+        ],
+        "unmeasured_confounding": "UNKNOWN"
+      },
+      "input_sha256": "7863278169e6fba1effd7f97a37bbe4e03e3d5895308db3b2b11fbcd20b4da01",
+      "mode": "research",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K17.03.02.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "8eaadc3ba4b2b108f80a9aa1c02f621e7dd42711eec89967a95845d2438fa01d",
+          "statement": "按事前因果图检查共同原因、碰撞变量及中介；目标为总效应时不自动控制中介。"
+        },
+        "K17.06.03.SR.01": {
+          "owner_receipt_sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0",
+          "qualification_sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447",
+          "record_sha256": "d46651a79cd3f9e2e0a646b37d28962e96bd3d0674b3b891dc9fe22f44e259e5",
+          "statement": "目标总体及效应修饰变量匹配后再评估外推。"
+        },
+        "K19.05.01.TG.01": {
+          "owner_receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+          "qualification_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+          "record_sha256": "903ab10394314d517a9ac65f2306d98a0de392fff4a4040b389857c87e13423b",
+          "statement": "研究伦理审查分开自主、风险收益、公平选择及具体制度。"
+        }
+      },
+      "derivation": "Explicit negative contract: duplicate_strata",
+      "expected": "HOLD",
+      "id": "CQ10.CONFOUND.duplicate_strata",
+      "input": {
+        "confounder": "PRIOR_SKILL",
+        "design": "OBSERVATIONAL",
+        "measured_before_exposure": true,
+        "strata": [
+          {
+            "control": [
+              72,
+              90
+            ],
+            "id": "HIGH",
+            "treated": [
+              8,
+              10
+            ]
+          },
+          {
+            "control": [
+              72,
+              90
+            ],
+            "id": "HIGH",
+            "treated": [
+              8,
+              10
+            ]
+          }
+        ],
+        "target_match": false,
+        "target_strata_weights": [
+          0.5,
+          0.5
+        ],
+        "unmeasured_confounding": "UNKNOWN"
+      },
+      "input_sha256": "1bbf55ca5ded876445d190b5753204393e3596fd03169b9acf9ff1f52b01f6d4",
+      "mode": "research",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K11.01.03.R2.09": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "db75f8a649ac52d55071878d2969ed9ab8c1ea3dc55dc869d188e69996984007",
+          "statement": "在有限动作集先过滤硬约束，再比较明确目标的可行项；若目标包括保持与时间，必须说明量纲、权重或Pareto比较。"
+        },
+        "K11.02.04.TR.01": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "cd0994e5ba83260abefce28546a6d1d058020216b8a7e4edd525c6d1b03c53e9",
+          "statement": "预算检查包括预估全部动作成本、剩余时间及退出。"
+        },
+        "K11.05.04.TR.01": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "8e118893636c9b27a5f916a066697ff27f639ae593deb0cb3cc90d2c543f1d7f",
+          "statement": "退出、预算耗尽及未知风险触发停止；升级为人工选项而非授权。"
+        }
+      },
+      "derivation": "Explicit negative contract: overbudget",
+      "expected": "HOLD",
+      "id": "CQ07.CHOICE.overbudget",
+      "input": {
+        "budget": 1,
+        "estimate_status": "BOUNDED",
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "learner_selection": "A",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": true,
+        "state_version": "S1"
+      },
+      "input_sha256": "01f5a206f3b38a1954ee8e0d36332fbacff91392387916d3192aeee9b65c3dd9",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: unknown_goal",
+      "expected": "HOLD",
+      "id": "CQ07.CHOICE.unknown_goal",
+      "input": {
+        "budget": 4,
+        "estimate_status": "BOUNDED",
+        "exit": false,
+        "goal": null,
+        "learner_selection": "A",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": true,
+        "state_version": "S1"
+      },
+      "input_sha256": "cffa64362b4eaab3c19ffc2067899c32a8897a5670b0383a86d5a09af27f4171",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K11.01.03.R2.09": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "db75f8a649ac52d55071878d2969ed9ab8c1ea3dc55dc869d188e69996984007",
+          "statement": "在有限动作集先过滤硬约束，再比较明确目标的可行项；若目标包括保持与时间，必须说明量纲、权重或Pareto比较。"
+        },
+        "K11.02.04.TR.01": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "cd0994e5ba83260abefce28546a6d1d058020216b8a7e4edd525c6d1b03c53e9",
+          "statement": "预算检查包括预估全部动作成本、剩余时间及退出。"
+        },
+        "K11.05.04.TR.01": {
+          "owner_receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+          "qualification_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+          "record_sha256": "8e118893636c9b27a5f916a066697ff27f639ae593deb0cb3cc90d2c543f1d7f",
+          "statement": "退出、预算耗尽及未知风险触发停止；升级为人工选项而非授权。"
+        }
+      },
+      "derivation": "Explicit negative contract: wrong_choice",
+      "expected": "HOLD",
+      "id": "CQ07.CHOICE.wrong_choice",
+      "input": {
+        "budget": 4,
+        "estimate_status": "BOUNDED",
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "learner_selection": "B",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": true,
+        "state_version": "S1"
+      },
+      "input_sha256": "4529b081649b4e3832e3da28168c80c9678ce7040479b9ba8a60347c01a55eca",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: unknown_state",
+      "expected": "HOLD",
+      "id": "CQ07.CHOICE.unknown_state",
+      "input": {
+        "budget": 4,
+        "estimate_status": "BOUNDED",
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "learner_selection": "A",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": true,
+        "state_version": null
+      },
+      "input_sha256": "ae7f35be9d0142e6def2bfd4bb9ea327df981ef852f7000c425971811f338049",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: unknown_estimate",
+      "expected": "HOLD",
+      "id": "CQ07.CHOICE.unknown_estimate",
+      "input": {
+        "budget": 4,
+        "estimate_status": "UNKNOWN",
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "learner_selection": "A",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": true,
+        "state_version": "S1"
+      },
+      "input_sha256": "dcc73f89ae8c992fa6e288b6a1e91502d17eee87646cbf377ac00f7f022fd0a9",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": "STOP",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: exit",
+      "expected": "STOP",
+      "id": "CQ07.CHOICE.exit",
+      "input": {
+        "budget": 4,
+        "estimate_status": "BOUNDED",
+        "exit": true,
+        "goal": "CONFIRMATION",
+        "learner_selection": "A",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": true,
+        "state_version": "S1"
+      },
+      "input_sha256": "dbeebd893b8cfaf1065d60187c5bd61ed76bb1f5ce612426457d12d14a13e167",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": "REFUSE",
+      "claim_bindings": {},
+      "derivation": "Explicit negative contract: denied",
+      "expected": "REFUSE",
+      "id": "CQ07.CHOICE.denied",
+      "input": {
+        "budget": 4,
+        "estimate_status": "BOUNDED",
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "learner_selection": "A",
+        "options": [
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 2,
+            "goal": "CONFIRMATION",
+            "id": "A"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 5,
+            "goal": "CONFIRMATION",
+            "id": "B"
+          },
+          {
+            "accessible": null,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "CONFIRMATION",
+            "id": "C"
+          },
+          {
+            "accessible": true,
+            "authorized": true,
+            "construct_preserved": true,
+            "cost": 1,
+            "goal": "OTHER",
+            "id": "D"
+          }
+        ],
+        "permission": false,
+        "state_version": "S1"
+      },
+      "input_sha256": "3f1d796c2b7f73915e3a3dd77d31f0e45d377b0640e5a16e310ccae110729c2f",
+      "mode": "plan",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Explicit negative contract: invalid_elapsed",
+      "expected": "HOLD",
+      "id": "CQ05.CHANNELS.invalid_elapsed",
+      "input": {
+        "elapsed": -1,
+        "estimate_requested": true,
+        "hint_used": true,
+        "key": "CONFIRM",
+        "response": "CONFIRM",
+        "self_report": "unsure"
+      },
+      "input_sha256": "4695cc7199643727ca37aebe99edef923b876a8d9bcfd220891c1335083908b8",
+      "mode": "channels",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Explicit negative contract: wrong_hint",
+      "expected": "HOLD",
+      "id": "CQ05.CHANNELS.wrong_hint",
+      "input": {
+        "elapsed": 12,
+        "estimate_requested": true,
+        "hint_used": 1,
+        "key": "CONFIRM",
+        "response": "CONFIRM",
+        "self_report": "unsure"
+      },
+      "input_sha256": "b6a4e21ed76984b759af6b3a9a71c93a5949afe42e84866e6c8910a952e7f9c4",
+      "mode": "channels",
+      "model_bindings": {}
+    },
+    {
+      "actual": "HOLD",
+      "claim_bindings": {
+        "K09.01.01.ME.01": {
+          "owner_receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+          "qualification_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+          "record_sha256": "b7f1242c5c8e323f7febd06877883884be19875fa7bf044a037fdae7f5d1f92e",
+          "statement": "先确定欲推断能力、使用范围与必要表现维度；区分构念、任务、可观察响应和竞争解释。"
+        },
+        "K10.02.01.TR.01": {
+          "owner_receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+          "qualification_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+          "record_sha256": "01bb4bc67cd3f1e6584d47569864f11c23161e64f7be498180ae5c14876773c7",
+          "statement": "在给定二状态、无遗忘、独立发射模型中先Bayes后学习转移。"
+        }
+      },
+      "derivation": "Explicit negative contract: invalid_answer",
+      "expected": "HOLD",
+      "id": "CQ05.CHANNELS.invalid_answer",
+      "input": {
+        "elapsed": 12,
+        "estimate_requested": true,
+        "hint_used": true,
+        "key": "CONFIRM",
+        "response": "OTHER",
+        "self_report": "unsure"
+      },
+      "input_sha256": "f69d4626db1e90264067a369f26cab5d5624b01de2c256a7b9022d098c3a75f4",
+      "mode": "channels",
+      "model_bindings": {}
+    }
+  ],
+  "fixture_sha256": "8403196f3c5ad303e80c208f3866f7811ea0656e781d6074ec78977b75e17bc2",
+  "packages": 18,
+  "persistent_sqlite": false,
+  "records": 12568,
+  "registered_head": "996356965743f70480b4bd827f15ca035f22e1c1",
+  "status": "AUTHOR_EXECUTED_FINITE_WITNESS_NOT_FULL_CQ_OR_INDEPENDENT_ORACLE",
+  "typed_refs": 29902
+}

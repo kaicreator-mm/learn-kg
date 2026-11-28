@@ -1,0 +1,372 @@
+{
+  "status": "AUTHOR_ORACLE_PROPOSAL_NOT_INDEPENDENT",
+  "cases": [
+    {
+      "id": "CQ06.BKT.C",
+      "mode": "bkt",
+      "input": {
+        "p": 0.4,
+        "s": 0.1,
+        "g": 0.2,
+        "t": 0.25,
+        "correct": true,
+        "independent": true,
+        "construct_match": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "expected": {
+        "likelihood": "12/25",
+        "posterior": "3/4",
+        "next_prior": "13/16"
+      },
+      "derivation": "Joint correct masses 36/100 and 12/100. Normalize to 3/4; one-quarter of residual unlearned mass transitions."
+    },
+    {
+      "id": "CQ06.BKT.I",
+      "mode": "bkt",
+      "input": {
+        "p": 0.4,
+        "s": 0.1,
+        "g": 0.2,
+        "t": 0.25,
+        "correct": false,
+        "independent": true,
+        "construct_match": true,
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "transition": "NO_FORGETTING_AFTER_OBSERVATION"
+      },
+      "expected": {
+        "likelihood": "13/25",
+        "posterior": "1/13",
+        "next_prior": "4/13"
+      },
+      "derivation": "Joint incorrect masses 4/100 and 48/100; posterior 1/13, then 1/13 + 12/13 * 1/4."
+    },
+    {
+      "id": "CQ06.HLR",
+      "mode": "hlr",
+      "input": {
+        "half_life": 4,
+        "lag": 12,
+        "unit": "day",
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "fixed_model": true
+      },
+      "expected": {
+        "p": 0.125
+      },
+      "derivation": "Three elapsed half-lives: 1/2 * 1/2 * 1/2."
+    },
+    {
+      "id": "CQ09.CTT",
+      "mode": "ctt",
+      "input": {
+        "true_var": 9,
+        "error_var": 7,
+        "sd": 4,
+        "same_population": true,
+        "same_scale": true,
+        "error_uncorrelated": true,
+        "zero_mean_error": true,
+        "construct": "FRACTION_MAGNITUDE",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "group_comparability": "UNKNOWN"
+      },
+      "expected": {
+        "reliability": "9/16",
+        "sem_squared": "7",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "group_difference": "2",
+        "bias": "UNKNOWN",
+        "ability": "UNKNOWN"
+      },
+      "derivation": "Total variance 16, true variance 9; SEM squared 16*(7/16)=7. Means 7/2 and 3/2; difference 2, not causal or fairness evidence."
+    },
+    {
+      "id": "CQ09.GROUP_ONLY",
+      "mode": "ctt",
+      "input": {
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "expected": {
+        "reliability": "UNKNOWN",
+        "sem_squared": "UNKNOWN",
+        "interpretation": "UNSUPPORTED",
+        "group_difference": "2",
+        "bias": "UNKNOWN",
+        "ability": "UNKNOWN"
+      },
+      "derivation": "Group difference alone supplies neither variance decomposition nor construct validity."
+    },
+    {
+      "id": "CQ10.CONFOUND",
+      "mode": "research",
+      "input": {
+        "design": "OBSERVATIONAL",
+        "strata": [
+          {
+            "id": "HIGH",
+            "treated": [
+              8,
+              10
+            ],
+            "control": [
+              72,
+              90
+            ]
+          },
+          {
+            "id": "LOW",
+            "treated": [
+              18,
+              90
+            ],
+            "control": [
+              2,
+              10
+            ]
+          }
+        ],
+        "target_strata_weights": [
+          0.5,
+          0.5
+        ],
+        "confounder": "PRIOR_SKILL",
+        "measured_before_exposure": true,
+        "unmeasured_confounding": "UNKNOWN",
+        "target_match": false
+      },
+      "expected": {
+        "crude_difference": "-12/25",
+        "stratum_differences": [
+          "0",
+          "0"
+        ],
+        "standardized_association": "0",
+        "causal": "UNKNOWN",
+        "transport": "UNKNOWN"
+      },
+      "derivation": "Crude treated 26/100 versus control 74/100. High both 4/5, low both 1/5. Equal-weight within-stratum contrasts zero; adjustment does not establish exchangeability."
+    },
+    {
+      "id": "CQ10.CORRELATION_ONLY",
+      "mode": "research",
+      "input": {
+        "design": "CORRELATION_ONLY",
+        "r": 0.8
+      },
+      "expected": {
+        "causal": "UNKNOWN",
+        "transport": "UNKNOWN"
+      },
+      "derivation": "Correlation lacks design, treatment contrast and target population."
+    },
+    {
+      "id": "CQ07.CHOICE",
+      "mode": "plan",
+      "input": {
+        "exit": false,
+        "permission": true,
+        "goal": "CONFIRMATION",
+        "budget": 4,
+        "state_version": "S1",
+        "options": [
+          {
+            "id": "A",
+            "goal": "CONFIRMATION",
+            "cost": 2,
+            "construct_preserved": true,
+            "accessible": true,
+            "authorized": true
+          },
+          {
+            "id": "B",
+            "goal": "CONFIRMATION",
+            "cost": 5,
+            "construct_preserved": true,
+            "accessible": true,
+            "authorized": true
+          },
+          {
+            "id": "C",
+            "goal": "CONFIRMATION",
+            "cost": 1,
+            "construct_preserved": true,
+            "accessible": null,
+            "authorized": true
+          },
+          {
+            "id": "D",
+            "goal": "OTHER",
+            "cost": 1,
+            "construct_preserved": true,
+            "accessible": true,
+            "authorized": true
+          }
+        ],
+        "learner_selection": "A",
+        "estimate_status": "BOUNDED"
+      },
+      "expected": {
+        "decision": "REVIEW_PLAN_ONLY",
+        "selected": "A",
+        "cost": 2,
+        "remaining": 2,
+        "alternatives": {
+          "A": "ELIGIBLE",
+          "B": "OVER_BUDGET",
+          "C": "UNKNOWN_CONDITION",
+          "D": "GOAL_MISMATCH"
+        },
+        "state_version": "S1"
+      },
+      "derivation": "Filter by explicit target, resource and authority then budget; only A eligible, 4-2=2."
+    },
+    {
+      "id": "CQ05.CHANNELS",
+      "mode": "channels",
+      "input": {
+        "response": "CONFIRM",
+        "key": "CONFIRM",
+        "hint_used": true,
+        "elapsed": 12,
+        "self_report": "unsure",
+        "estimate_requested": true
+      },
+      "expected": {
+        "response": "CONFIRM",
+        "score": 1,
+        "assistance": "ASSISTED",
+        "elapsed": 12,
+        "self_report": "unsure",
+        "estimate": "NOT_ESTIMATED",
+        "mastery": "UNKNOWN"
+      },
+      "derivation": "Correct response with hint is assisted; self-report is independent channel and not a latent estimate."
+    },
+    {
+      "id": "CQ19.MISSING",
+      "mode": "channels",
+      "input": {
+        "response": null,
+        "key": "CONFIRM",
+        "hint_used": false,
+        "elapsed": null,
+        "self_report": null,
+        "estimate_requested": true
+      },
+      "expected": {
+        "response": null,
+        "score": null,
+        "assistance": "UNKNOWN",
+        "elapsed": null,
+        "self_report": null,
+        "estimate": "NOT_ESTIMATED",
+        "mastery": "UNKNOWN"
+      },
+      "derivation": "Missing is not zero and not a diagnosis."
+    },
+    {
+      "id": "CQ09.ZERO_ERROR",
+      "mode": "ctt",
+      "input": {
+        "true_var": 16,
+        "error_var": 0,
+        "sd": 4,
+        "same_population": true,
+        "same_scale": true,
+        "error_uncorrelated": true,
+        "zero_mean_error": true,
+        "construct": "FRACTION_MAGNITUDE",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "group_comparability": "UNKNOWN"
+      },
+      "expected": {
+        "reliability": "1",
+        "sem_squared": "0",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "group_difference": "2",
+        "bias": "UNKNOWN",
+        "ability": "UNKNOWN"
+      },
+      "derivation": "Zero error variance gives conditional reliability 1 and SEM 0; no empirical proof of validity."
+    },
+    {
+      "id": "CQ09.ZERO_TRUE",
+      "mode": "ctt",
+      "input": {
+        "true_var": 0,
+        "error_var": 16,
+        "sd": 4,
+        "same_population": true,
+        "same_scale": true,
+        "error_uncorrelated": true,
+        "zero_mean_error": true,
+        "construct": "FRACTION_MAGNITUDE",
+        "group_scores": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "group_comparability": "UNKNOWN"
+      },
+      "expected": {
+        "reliability": "0",
+        "sem_squared": "16",
+        "interpretation": "CTT_CONDITIONAL_ONLY",
+        "group_difference": "2",
+        "bias": "UNKNOWN",
+        "ability": "UNKNOWN"
+      },
+      "derivation": "Zero true variance gives conditional reliability 0; SEM equals the SD."
+    },
+    {
+      "id": "CQ06.HLR.ZERO_LAG",
+      "mode": "hlr",
+      "input": {
+        "half_life": 4,
+        "lag": 0,
+        "unit": "day",
+        "model_version": "0.1.0-trace-adaptation-resources-candidate-1",
+        "fixed_model": true
+      },
+      "expected": {
+        "p": 1.0
+      },
+      "derivation": "Zero elapsed half-lives: 2^0 = 1 under model assumptions, not observed proficiency."
+    }
+  ]
+}
