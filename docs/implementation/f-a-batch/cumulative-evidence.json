@@ -3,8 +3,8 @@
   "chinese_manifest_sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
   "closure": {
     "packages": 18,
-    "records": 12508,
-    "typed_refs": 29722
+    "records": 12568,
+    "typed_refs": 29902
   },
   "embedded_event_rebinds": [
     {
@@ -138,8 +138,8 @@
     "UNCHANGED": 220
   },
   "migration_records": 1725,
-  "new_FA_cases": 77,
-  "new_manifest_sha256": "7f572c3e6c0717d5572e5509dd862aa4060be8687f4e4f96665e0b33b54de10c",
+  "new_FA_cases": 107,
+  "new_manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
   "old_manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
   "package_counts": [
     {
@@ -296,13 +296,13 @@
       "typed_refs": 0
     },
     {
-      "manifest_sha256": "7f572c3e6c0717d5572e5509dd862aa4060be8687f4e4f96665e0b33b54de10c",
+      "manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
       "package": [
         "learning-process",
         "0.1.0-process-candidate-4"
       ],
-      "records": 1913,
-      "typed_refs": 7207
+      "records": 1973,
+      "typed_refs": 7387
     }
   ],
   "persistent_sqlite": false,
@@ -310,7 +310,9 @@
     "after_replace": true,
     "bad_extension_rejected": true,
     "before_replace": true,
+    "dangling_symlink_read_and_cas_rejected": true,
     "old_live_reader": true,
+    "ordinary_symlink_read_and_cas_rejected": true,
     "physical_power_loss": "HOLD",
     "rollback": true,
     "stale_cas_rejected": true

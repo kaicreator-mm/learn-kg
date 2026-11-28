@@ -99,7 +99,20 @@ def main():
    pins=[[*k,v.path,v.sha256] for k,v in sorted(catalog.items())]
    a=dict(mode='CANDIDATE_RESEARCH_ONLY',select=list(oldkey),catalog=pins,extension=[extension.path,extension.sha256]);b=dict(mode='CANDIDATE_RESEARCH_ONLY',select=list(pkey),catalog=pins,extension=[extension.path,extension.sha256])
    with tempfile.TemporaryDirectory(prefix='learn-fa-pointer-') as td:
-    p=Path(td);switch(p,ROOT,a,None)
+    p=Path(td)
+    # Both existing-target and dangling symlinks must fail even under expected=None.
+    pointer=p/'candidate-current.json'
+    for target in ('missing-target','existing-target'):
+     if target=='existing-target':(p/target).write_text('sentinel')
+     pointer.symlink_to(target)
+     for operation in (lambda:read_pointer(p),lambda:switch(p,ROOT,a,None)):
+      try:operation();raise AssertionError('SYMLINK_ACCEPTED')
+      except Reject as e:assert 'POINTER_SYMLINK' in str(e)
+     assert pointer.is_symlink() and pointer.readlink()==Path(target)
+     assert not (p/'missing-target').exists()
+     if target=='existing-target':assert (p/target).read_text()=='sentinel'
+     pointer.unlink()
+    switch(p,ROOT,a,None)
     for phase,code,want in [('before_replace',71,a),('after_replace',72,b)]:
      child=multiprocessing.get_context('fork').Process(target=switch,args=(p,ROOT,b,a),kwargs={'_crash':phase});child.start();child.join(90)
      if child.is_alive():child.terminate();child.join();raise RuntimeError('POINTER_TIMEOUT')
@@ -117,7 +130,7 @@ def main():
   finally:oi.close()
  finally:im.close()
  totals=dict(packages=len(counts),records=sum(x['records'] for x in counts),typed_refs=sum(x['typed_refs'] for x in counts))
- report=dict(status='CUMULATIVE_AUTHOR_REBIND_NOT_QUALIFICATION',old_manifest_sha256=sha(old/'learning-process.manifest.json'),new_manifest_sha256=sha(new/'learning-process.manifest.json'),chinese_manifest_sha256=sha(h/'chinese.manifest.json'),migration_records=len(o),migration_counts=mig['counts'],closure=totals,package_counts=counts,prior_F_E_A07_cases=len(replayed),prior_case_results=replayed,embedded_event_rebinds=changed,new_FA_cases=len(cases),H_cases=len(hcases),pointer_recovery=dict(before_replace=True,after_replace=True,old_live_reader=True,rollback=True,bad_extension_rejected=True,stale_cas_rejected=True,physical_power_loss='HOLD'),private_adapter='EXACT_PRIOR_SCOPE_ONLY',persistent_sqlite=False)
+ report=dict(status='CUMULATIVE_AUTHOR_REBIND_NOT_QUALIFICATION',old_manifest_sha256=sha(old/'learning-process.manifest.json'),new_manifest_sha256=sha(new/'learning-process.manifest.json'),chinese_manifest_sha256=sha(h/'chinese.manifest.json'),migration_records=len(o),migration_counts=mig['counts'],closure=totals,package_counts=counts,prior_F_E_A07_cases=len(replayed),prior_case_results=replayed,embedded_event_rebinds=changed,new_FA_cases=len(cases),H_cases=len(hcases),pointer_recovery=dict(before_replace=True,after_replace=True,old_live_reader=True,rollback=True,bad_extension_rejected=True,stale_cas_rejected=True,dangling_symlink_read_and_cas_rejected=True,ordinary_symlink_read_and_cas_rejected=True,physical_power_loss='HOLD'),private_adapter='EXACT_PRIOR_SCOPE_ONLY',persistent_sqlite=False)
  write(HERE/'cumulative-evidence.json',report)
  print('CUMULATIVE',totals,'F_E_A07',len(replayed),'event_rebinds',len(changed),'H',len(hcases),'new',len(cases))
 if __name__=='__main__':main()

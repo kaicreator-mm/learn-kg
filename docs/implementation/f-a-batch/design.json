@@ -2966,6 +2966,1723 @@
         }
       },
       "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.8",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": null,
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.9",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.10",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": " ",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.11",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": " CASE-2",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.12",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "CASE-2 ",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.13",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "\t\n",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.14",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "　",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.15",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "CASE-1",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.16",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": true,
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.17",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.8",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": null,
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.9",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.10",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": " ",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.11",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": " CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.12",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2 ",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.13",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "\t\n",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.14",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "　",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.15",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-1",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.16",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": true,
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.17",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.8",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": null,
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.9",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.10",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": " ",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.11",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": " CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.12",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2 ",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.13",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "\t\n",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.14",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "　",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.15",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-1",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.16",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": true,
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.17",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
     }
   ]
 }

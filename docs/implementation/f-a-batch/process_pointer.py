@@ -7,9 +7,9 @@ from tools.knowledge_import.importer import Importer, ManifestPin, Reject, canon
 
 def read_pointer(directory):
     p = pathlib.Path(directory)/"candidate-current.json"
+    need(not p.is_symlink(), "POINTER_SYMLINK")
     if not p.exists():
         return None
-    need(not p.is_symlink(), "POINTER_SYMLINK")
     x = parse(p.read_bytes())
     need(isinstance(x,dict) and set(x)=={"mode","select","catalog","extension"} and x["mode"]=="CANDIDATE_RESEARCH_ONLY", "POINTER_SCOPE")
     return x

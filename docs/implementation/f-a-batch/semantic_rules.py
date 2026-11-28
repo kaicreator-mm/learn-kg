@@ -38,7 +38,7 @@ def evaluate(owner,x):
    for e in rows:
     if not isinstance(e,dict) or e.get('phase') not in out or e['phase'] in seen:return 'HOLD'
     p=e['phase'];seen.add(p)
-    if not isinstance(e.get('task_instance'),str) or not e['task_instance'] or not goodint(e.get('time')) or e.get('template')!='H06.CONFIRM.TASK':return 'HOLD'
+    if not isinstance(e.get('task_instance'),str) or not e['task_instance'] or e['task_instance']!=e['task_instance'].strip() or not goodint(e.get('time')) or e.get('template')!='H06.CONFIRM.TASK':return 'HOLD'
     if e.get('outcome') not in ('CORRECT','INCORRECT') or not yes(e,'independent','construct_match','conditions_verified'):return 'HOLD'
     if p=='NOVEL' and e.get('structural_novelty_verified') is not True:return 'HOLD'
     times[p]=e['time'];out[p]=e['outcome']
