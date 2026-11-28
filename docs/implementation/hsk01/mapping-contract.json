@@ -1,0 +1,20 @@
+{
+  "schema_version":"learn-kg-hsk01-private-mapping-1",
+  "status":"PRIVATE_STAGING_TO_DB01_MAPPING_ONLY",
+  "authority":"Original UTF-8 RDF-derived term objects in raw_rdf; candidate fields are derived indexes, not replacement facts.",
+  "identity":{"raw_key":["graph","stable_id","kind"],"candidate_id":"HSK01.<explicit record_kind>.<first32 SHA256 canonical JSON array [graph,stable_id,kind]>","normalized_knowledge_id":"null until H module independently establishes identity","bare_subject_resolution":"Accepted archive has globally unique subjects; any ambiguity rejected, not guessed."},
+  "mapping":{
+    "SourceRecord":{"db01_kind":"Source","fields":{"identifier":"raw_rdf.stable_id","recorded_rights":"rights_scope.rights","access":"PRIVATE_ONLY","qualification":"HOLD"},"unresolved":["authoritative title","bibliographic identity","rights"]},
+    "SyllabusVersion":{"db01_kind":"Standard","fields":{"edition":"raw releaseLabel","effective_date":null},"unresolved":["official identity","effective date","equivalence"]},
+    "LevelBand":{"db01_kind":"StandardBand","fields":{"raw_band":"raw label","standard_ref":"typed_links.version"},"unresolved":["official level membership semantics"]},
+    "LexicalRecord":{"db01_kind":"SourceMembership","fields":{"source_ref":"typed_links.source","band_ref":"typed_links.levelBand","standard_ref":"same band version","ordinal":"source_locator.ordinal_candidate","printed_page":"source_locator.printed_page_numeric_candidate","raw_fields":"raw_rdf.properties","semantic_refs":[]},"unresolved":["Lexeme identity","reading/part-of-speech splitting","sense","collocation","semantic membership"]},
+    "CharacterMembership":{"db01_kind":"SourceMembership","fields":{"source_ref":"typed_links.source","band_ref":"typed_links.levelBand","standard_ref":"same band version","ordinal":"source_locator.ordinal_candidate","printed_page":"source_locator.printed_page_numeric_candidate","raw_fields":"raw_rdf.properties","semantic_refs":[]},"unresolved":["qualified character membership","reading/write skill semantics"]},
+    "HanCharacter":{"db01_kind":"HanCharacter","fields":{"character":"glyph_pointer","codepoint":"candidate.codepoint"},"unresolved":["claim_refs","script classification","reading","components"]},
+    "SourceBlock":{"db01_kind":"Locator","fields":{"source_ref":"typed_links.source","location":"source_locator printed label and source_entity_id","attribution":"RECORDED_NOT_REVERIFIED"},"unresolved":["PDF page index","visual layout","grammar/task/topic segmentation and semantic relations"]},
+    "AbilityRecord":{"db01_kind":"Competency","fields":{"source":"typed_links.source","raw_text":"raw_text_pointer"},"unresolved":["claim_refs","dimensions","evidence_refs","official capability mapping"]},
+    "TaxonomyTopic":{"db01_kind":"Topic","fields":{"label":"label_pointer","depth":"depth_candidate","parent_ref":"typed_links.parent or null"},"unresolved":["semantic or pedagogical relation; scopeTopic is source scope only"]}
+  },
+  "private_sql_mapping":{"registry":["graph","id","kind","candidate_id"],"edges":["origin_graph","origin_id","origin_kind","predicate","target_graph","target_id","target_kind"],"foreign_keys":"Exact graph/id/kind endpoints; no inference from surface strings.","storage":":memory: only"},
+  "canonical_db01_boundary":"No DB01 manifest, general importer registration or canonical semantic object is produced here. Mapping fields are recipes for H01-H07/DB03. Do not fabricate mandatory claims/evidence to make a canonical shape pass.",
+  "rights":"PRIVATE_ONLY; no publication or redistribution; original PDF identity, visual layout, official authority HOLD"
+}

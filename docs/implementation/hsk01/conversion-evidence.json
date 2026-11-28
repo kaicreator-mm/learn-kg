@@ -1,0 +1,219 @@
+{
+  "archive_manifest_sha256": "7652d0b48b65179d56bcee96ebdcaa1f578d040e0fbcddbeff8da1ced26c70a2",
+  "artifact_pins": {
+    "README.md": "e0b1a1648f9efd67f1b1ebfa63d0f1b6ee95ae1245dff72cf543dfe736083d80",
+    "build_hsk01.py": "6041920267dceab3436653511621b993d2a316a1e939f8953e84c6b9ea6e962e",
+    "mapping-contract.json": "75000f0e6618625ba7b325707b319244549674776d3750a592d41d3b5a8d830e",
+    "stage.schema.json": "08326cb8ab5e73c7c42b13a2f0f04a5c10ea41f58ce4aed802d85e6948f56f27",
+    "test_hsk01.py": "d4ad6e16fec5a4544cfb0584bd9e96e1b429ece0a63c989fb8e533eae3432872"
+  },
+  "author_tests": {
+    "passed": 14,
+    "status": "PASS",
+    "total": 14
+  },
+  "character_membership_mode_counts": {
+    "书写字": 1200,
+    "认读字": 3088
+  },
+  "counts": {
+    "AbilityRecord": 9,
+    "CharacterMembership": 4288,
+    "HanCharacter": 3088,
+    "LevelBand": 11,
+    "LexicalRecord": 11000,
+    "SourceBlock": 94,
+    "SourceRecord": 3,
+    "SyllabusVersion": 1,
+    "TaxonomyTopic": 823
+  },
+  "db01_mapping": "DECLARED_STAGING_TO_CANONICAL_KIND_AND_HOLD_BOUNDARY; NO_GENERAL_IMPORTER_OR_DB01_PACKAGE_REGISTRATION",
+  "db01_schema_sha256": "909a5c5e2bac142eddd9375d584b7ad07c716dc03b475a5f2942ce77354cc4cd",
+  "deterministic_replay": {
+    "byte_identical": 10,
+    "files": 10,
+    "status": "PASS"
+  },
+  "distinct_raw_level_labels": 28,
+  "execution_jobs": {
+    "initial": "job_01M8H7ERQ000V6KPP9RK2GKG15",
+    "tests_and_replay": "job_01M8H7HT8M00VP2QX8JCW2F62H"
+  },
+  "historical_pdf_identity": "HOLD",
+  "hs00_interface_sha256": "b5f3bb57cbe863224c0de07ffcc1e6dd5e0825bcaf91b18bf8b0c83b4fa6c34c",
+  "hs00_receipt_sha256": "0f0fcba62a5349c1c65286edbdcbb9ff45a449ac799e54a63a661f2cee665580",
+  "if01_interface_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+  "input_tuple": [
+    {
+      "content_digest": "8b5eaf476a1ff0cb61c3bcb79957ff5b01cad4bf2bfaf161b6cc3620ab8cfc96",
+      "receipt_id": "TASK:SRC01:SRC01-FORMAL-02",
+      "receipt_path": "evidence/tasks/SRC01/SRC01-FORMAL-02.json",
+      "receipt_sha256": "06022ab7502cb4e78249a5b8cc181e024b64106b518ea79a46b9ab41a8e3e188",
+      "task_id": "SRC01",
+      "version": "94004f85fb768f611930f87ffaf203d7d9827595"
+    },
+    {
+      "content_digest": "15e34adc14bcb943448521ad7c38f1e72c3916d12caacaa8a6aace60413921d0",
+      "receipt_id": "TASK:HS00:HS00-FORMAL-01",
+      "receipt_path": "evidence/tasks/HS00/HS00-FORMAL-01.json",
+      "receipt_sha256": "0f0fcba62a5349c1c65286edbdcbb9ff45a449ac799e54a63a661f2cee665580",
+      "task_id": "HS00",
+      "version": "32928027e18a2afa9764d3024af26045dcd502bb"
+    },
+    {
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "receipt_path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+      "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+      "task_id": "IF01",
+      "version": "04263009493a994501520be08364b32329c93179"
+    }
+  ],
+  "parenthetical_lexical_records": 102,
+  "persistent_sqlite": false,
+  "private_directory_permissions": "0o700",
+  "private_manifest_sha256": "33bb0a4254af6c40ff19bcd8cdc0aa045a844bcb6afa82ac18e4438575a8c668",
+  "private_output_locator": "HSK01_PRIVATE_CANDIDATE_R1; authorized server private data namespace; location provided to reviewer through controlled server execution, not Git",
+  "private_outputs": {
+    "AbilityRecord.candidate.jsonl": {
+      "bytes": 34013,
+      "reconstructed_archive_sha256": "91a701a06752ed6b157d7473d71a56a3f211fecd93b647153db6e25ec967551b",
+      "rows": 9,
+      "sha256": "9c22fe19631f2cc0eadbb35a6b013e7342b39df55c4f70a7c6833c67b8eceabf"
+    },
+    "CharacterMembership.candidate.jsonl": {
+      "bytes": 23013275,
+      "reconstructed_archive_sha256": "382ed91a8e2d15d32eaa0aa8320cf1863f59b72c315c0c62aa460e20984e6156",
+      "rows": 4288,
+      "sha256": "02aabb7b302a6c66291386dbac56817d422e5cf387bb5d1664bd65563c204f35"
+    },
+    "HanCharacter.candidate.jsonl": {
+      "bytes": 5390541,
+      "reconstructed_archive_sha256": "e1b4682db9a4070474c88730fd8edadcafde18acd7e3fb152d549689d4b44ef0",
+      "rows": 3088,
+      "sha256": "06af0ec638f37090ae40fec72899502d0b8dd857b7ce140cee2f25e9b2dee516"
+    },
+    "LevelBand.candidate.jsonl": {
+      "bytes": 25456,
+      "reconstructed_archive_sha256": "5f20c7ab50e0ef4e65455b2598962d895077cd6b967557cd283f8e4b40206602",
+      "rows": 11,
+      "sha256": "1dd4502865da463987e0215cbd2dea18f1f43b06c6caef4aa1efdc1ac767ee33"
+    },
+    "LexicalRecord.candidate.jsonl": {
+      "bytes": 67888274,
+      "reconstructed_archive_sha256": "836fa1a0c49f78da8e06389a91fe0292beb1633282b088c4556b0b72659c81a9",
+      "rows": 11000,
+      "sha256": "217b66025e95c0f8916df67f182359e9d401d2a87725a879f4f141b50d15820c"
+    },
+    "SourceBlock.candidate.jsonl": {
+      "bytes": 621838,
+      "reconstructed_archive_sha256": "d082666135f73b0a23555d495603758fde68fdfead1835c06b808a8435086108",
+      "rows": 94,
+      "sha256": "413389812e7ee5dcc83c716361f9e6411137f599dad13938a391c3de199ec29a"
+    },
+    "SourceRecord.candidate.jsonl": {
+      "bytes": 6285,
+      "reconstructed_archive_sha256": "9fa5d3a9c3b9579a4993eb5d8307059440703f79d2e7653392737bc17b67fdc3",
+      "rows": 3,
+      "sha256": "f07f4280a96f4619174f3e6facd7e83c9cf7943b02f45ddcf933cca61c87add5"
+    },
+    "SyllabusVersion.candidate.jsonl": {
+      "bytes": 2108,
+      "reconstructed_archive_sha256": "767a9e725a832aa71893c2c59c8a46a3a7401938608f56d61c3c4299e704f430",
+      "rows": 1,
+      "sha256": "c15dbfc2acf3cc575fc9bfb045fcc811d985d50a7e2afcf4f89a4c1bf5c437c4"
+    },
+    "TaxonomyTopic.candidate.jsonl": {
+      "bytes": 2524501,
+      "reconstructed_archive_sha256": "ccc97c63fcc83a61abe013357d2b7ec13ff19cc180ba43f729592e9e688bae9e",
+      "rows": 823,
+      "sha256": "697b152807a8108d4372e408f1c263f4b1552f194c0757deaea7934266e17a50"
+    }
+  },
+  "professional_qualification": "NOT_RUN",
+  "publication": "NOT_AUTHORIZED",
+  "raw_predicate_count": 140391,
+  "readback_archive_files": 9,
+  "repository_contains_raw_corpus": false,
+  "rights_scope": {
+    "historical_pdf_byte_identity": "HOLD_NO_HISTORICAL_RAW_DIGEST",
+    "publication": "NOT_AUTHORIZED",
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION",
+    "visibility": "PRIVATE_ONLY",
+    "visual_layout": "HOLD_LAYOUT_REVIEW_PENDING"
+  },
+  "roundtrip_archive_files": 9,
+  "schema_version": "learn-kg-hsk01-private-stage-1",
+  "source_block_kind_counts": {
+    "Grammar": 21,
+    "Task": 53,
+    "Topic": 20
+  },
+  "source_entity_count": 19317,
+  "source_file_pins": {
+    "AbilityRecord.jsonl": {
+      "bytes": 7472,
+      "rows": 9,
+      "sha256": "91a701a06752ed6b157d7473d71a56a3f211fecd93b647153db6e25ec967551b"
+    },
+    "CharacterMembership.jsonl": {
+      "bytes": 4966898,
+      "rows": 4288,
+      "sha256": "382ed91a8e2d15d32eaa0aa8320cf1863f59b72c315c0c62aa460e20984e6156"
+    },
+    "HanCharacter.jsonl": {
+      "bytes": 985072,
+      "rows": 3088,
+      "sha256": "e1b4682db9a4070474c88730fd8edadcafde18acd7e3fb152d549689d4b44ef0"
+    },
+    "LevelBand.jsonl": {
+      "bytes": 4463,
+      "rows": 11,
+      "sha256": "5f20c7ab50e0ef4e65455b2598962d895077cd6b967557cd283f8e4b40206602"
+    },
+    "LexicalRecord.jsonl": {
+      "bytes": 14956767,
+      "rows": 11000,
+      "sha256": "836fa1a0c49f78da8e06389a91fe0292beb1633282b088c4556b0b72659c81a9"
+    },
+    "SourceBlock.jsonl": {
+      "bytes": 254252,
+      "rows": 94,
+      "sha256": "d082666135f73b0a23555d495603758fde68fdfead1835c06b808a8435086108"
+    },
+    "SourceRecord.jsonl": {
+      "bytes": 1644,
+      "rows": 3,
+      "sha256": "9fa5d3a9c3b9579a4993eb5d8307059440703f79d2e7653392737bc17b67fdc3"
+    },
+    "SyllabusVersion.jsonl": {
+      "bytes": 494,
+      "rows": 1,
+      "sha256": "767a9e725a832aa71893c2c59c8a46a3a7401938608f56d61c3c4299e704f430"
+    },
+    "TaxonomyTopic.jsonl": {
+      "bytes": 587325,
+      "rows": 823,
+      "sha256": "ccc97c63fcc83a61abe013357d2b7ec13ff19cc180ba43f729592e9e688bae9e"
+    }
+  },
+  "source_quad_count": 159708,
+  "sql": {
+    "edge_counts": {
+      "character": 4288,
+      "levelBand": 15391,
+      "parent": 797,
+      "scopeTopic": 15391,
+      "source": 15391,
+      "version": 11
+    },
+    "foreign_key_violations": 0,
+    "mode": "MEMORY_PRIVATE_STAGING_ONLY",
+    "registry": 19317,
+    "typed_edges": 51269
+  },
+  "standard_authority": "UNKNOWN_HOLD",
+  "status": "PRIVATE_CANDIDATE_CONVERSION_ONLY",
+  "unknown_predicates_preserved": 0,
+  "visual_layout": "HOLD"
+}
