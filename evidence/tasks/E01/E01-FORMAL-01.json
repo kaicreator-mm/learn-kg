@@ -1,0 +1,546 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "E01",
+  "attempt_id": "E01-FORMAL-01",
+  "receipt_id": "TASK:E01:E01-FORMAL-01",
+  "input": [
+    {
+      "task_id": "K09",
+      "receipt_id": "TASK:K09:K09-FORMAL-01",
+      "content_digest": "bccf41be1b552c203974a374997d8aff4814b9a1ded7bab9d9adc9399ea25862",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K09/K09-FORMAL-01.json",
+          "sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85"
+        },
+        {
+          "path": "evidence/tasks/K09/K09-QUALIFICATION-01.json",
+          "sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340"
+        },
+        {
+          "path": "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+          "sha256": "c9010b42d6d8cc77c697e22fce48a4c0c40356287b218ba099cd4e033cb9ed90",
+          "stable_id": "K09.02.05.ME.01",
+          "record_sha256": "6733461089668c4a679da6c396afa03c75b1ed5a7e24b65e7bc2e3ffdb91b7f7",
+          "kind": "Claim",
+          "package_version": "0.1.0-measurement-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "K15",
+      "receipt_id": "TASK:K15:K15-FORMAL-01",
+      "content_digest": "62f3ba123ff2b8b29b3bdd59736b36408aabbbf75bd732a78ab1ce7b0a25fed6",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K15/K15-FORMAL-01.json",
+          "sha256": "d2498fa5b6e509805ba1d4a3d9a56b2077bcc39c78d0f1810b63ef108599cc45"
+        },
+        {
+          "path": "evidence/tasks/K15/K15-QUALIFICATION-01.json",
+          "sha256": "1d61eb0cb86363760a4d151ba80731706b5fab4cf353961d93e5cb21cb49291e"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+          "sha256": "88fc8b1dac66cb5d9f2ed48265396cc4f16b89f3c0d98f507549dd4154d39c7c",
+          "stable_id": "K15.06.04.TG.01",
+          "record_sha256": "6f731f1ed2b8e1573de84329e15ddb5bf91679a835be0a6c972094eaa549fcc4",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "K17",
+      "receipt_id": "TASK:K17:K17-FORMAL-01",
+      "content_digest": "28a750df57293d2ef2576b571118bb2dedcfeaf7f1005942b02eb4ba6b991d8f",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K17/K17-FORMAL-01.json",
+          "sha256": "360c1e3b36615c05af6f488d69247a93ba44fe90a47a8085c93faa535f1b65a0"
+        },
+        {
+          "path": "evidence/tasks/K17/K17-QUALIFICATION-01.json",
+          "sha256": "ef5a90da64eb5bf7b5d16be048a4245e2824ceac646581f123fc07cde060a447"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+          "sha256": "ea0f7bac8c2165f40b7378d3707e0f4b01462c812aa1b060f1a4f12d5bd2e291",
+          "stable_id": "K17.01.02.SR.01",
+          "record_sha256": "212fafc224cc3a6e88950d57ace9efaaf9a374ed8511588bbb01f5cfb421c728",
+          "kind": "Claim",
+          "package_version": "0.1.0-social-research-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+          "sha256": "ea0f7bac8c2165f40b7378d3707e0f4b01462c812aa1b060f1a4f12d5bd2e291",
+          "stable_id": "K17.01.03.SR.01",
+          "record_sha256": "044b6524b0fd0636d299411472758d13c01e3f8827c66aaf3583a482c322d2cf",
+          "kind": "Claim",
+          "package_version": "0.1.0-social-research-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K17/records-02.jsonl",
+          "sha256": "ea0f7bac8c2165f40b7378d3707e0f4b01462c812aa1b060f1a4f12d5bd2e291",
+          "stable_id": "K17.02.02.SR.01",
+          "record_sha256": "7d9a2b9f7012e37dbb0b42681946640d3c6bc955363466493954890274aa7331",
+          "kind": "Claim",
+          "package_version": "0.1.0-social-research-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K17/records-04.jsonl",
+          "sha256": "b5831e705d8041edab30f8e676846a6e975183a0d1b7aefc9f82292ee5bed73f",
+          "stable_id": "K17.06.01.SR.01",
+          "record_sha256": "aed62ec7c6c771ec68c68c227ef48c7779bd45da790e015063cb9a4167ce8377",
+          "kind": "Claim",
+          "package_version": "0.1.0-social-research-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        },
+        {
+          "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+          "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.03.04.TG.01",
+          "record_sha256": "adb14c107fc3a4811ef58fb6b5064f28bc3daf5e4f9498a39997801f2e45c6c3",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "P10",
+      "receipt_id": "TASK:P10:P10-FORMAL-02",
+      "content_digest": "4950f4ea8f31282fd7e53f1ad0b8ec70fcd217e3aebf55c87455ea59df11170e",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P10/P10-FORMAL-02.json",
+          "sha256": "074e613a9a740913afa1aa6654c62cb35e7cf5c90133894f70d69c153b7ae075"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+          "sha256": "a891c920ef95c1dce15e796a6fb0e5c06e4dd7df9734c153c145867a5559bad7"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+          "sha256": "a891c920ef95c1dce15e796a6fb0e5c06e4dd7df9734c153c145867a5559bad7",
+          "stable_id": "P10.FLOW",
+          "record_sha256": "cba1216bf374100f42d464451fe11219d687fd940ec79961cb32ebc7cd6b730b",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+      "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/E01.jsonl",
+      "sha256": "fa0f4f53afdbd4582583d83153c04c21b795f181e7d67aae4cb7aef4255ddba3",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/migration.json",
+      "sha256": "502d7452f15670874f3283c5e483b2830086f529a62698bcae678fe896352072",
+      "type": "EXACT_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/sql-results.json",
+      "sha256": "d5c799073569ee3c3ddd401db81529ddee7f2306c901bfe3d595ae8cec35cc5b",
+      "type": "SQL_BUILDER_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/coverage.json",
+      "sha256": "f1cf8db97b26a8de76596cd54641514294b8e5ede0d53bf609e6fc26454a3937",
+      "type": "RESTRICTED_SCOPE_LEDGER"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/build_f.py",
+      "sha256": "ad3cd5189d59231ee7aa3c1fc8ab472b7a2262765519305c26509c3197e798b6",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/semantic_checks.py",
+      "sha256": "63cf12ae1d3d8e4ef00e741e0eb8fa9c1acaa81d3e51bad82d484727769b8b5d",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/bindings.json",
+      "sha256": "4615e9b559595fe49c3dca4cc1f062b29ce49e5527fd0d5063cb1b0912ba4bd4",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/composition-input-bindings.json",
+      "sha256": "87d6f728b897b347f147afdf8b5c9517d0b7ec074a33f3cad3ba34b99b3f5b09",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/remediation-design.json",
+      "sha256": "04d24e8620b9410d21c07de27209be02fa5a2c0e9a26ecbd9e5f38a8f3dee2c9",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/analysis-plan.json",
+      "sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+      "type": "FROZEN_PLAN"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_records": 54,
+    "case_count": 20,
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "reviewed_scope": "Trusted approval/review resolver NOT_BOUND; no real observed-data or causal results.",
+    "reviewed_artifact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "reviewed_artifact_tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "record_digests": [
+      {
+        "stable_id": "E01.SKILL.PROTOCOL_INTEGRITY",
+        "kind": "SkillType",
+        "sha256": "9cdc3395ae2f85b5f85578b36783989c74e65346177c4c764660ebc7ab591223"
+      },
+      {
+        "stable_id": "E01.GOAL",
+        "kind": "Goal",
+        "sha256": "fcdd420a2eb2cf05f66ea23ae66bf9b9c8f75baeacd09e76549d39ab90c3f281"
+      },
+      {
+        "stable_id": "E01.OBS.PRIMARY_OUTCOME",
+        "kind": "ObservationSpec",
+        "sha256": "c9a8ac032ba2fe87f73014a0ea481ebb300b4820238a305194f956e2345662bd"
+      },
+      {
+        "stable_id": "E01.OBS.SAFETY",
+        "kind": "ObservationSpec",
+        "sha256": "52b70b710fbf3f19c3bf84a7e6e1ee73605a1e4eaf69e7948a12c1934b4d64b9"
+      },
+      {
+        "stable_id": "E01.GUARD.DIRECT_WRITE",
+        "kind": "ConditionSpec",
+        "sha256": "e2c2bbf238efae0b98ba7d586314e70b43e551bfa3a05c76b9c0846068e82010"
+      },
+      {
+        "stable_id": "E01.GUARD.APPROVED",
+        "kind": "ConditionSpec",
+        "sha256": "c1546cf15ead02a061b5507a1a800b7be24ed11c4ea209dbfa17c7a6d2c473a0"
+      },
+      {
+        "stable_id": "E01.GUARD.REVIEWED",
+        "kind": "ConditionSpec",
+        "sha256": "9ea2c593c05a0381566509eff5a9e0d6bcca03654c3f5e5475abf944e103ed72"
+      },
+      {
+        "stable_id": "E01.GUARD.CURRENT_VERSION",
+        "kind": "ConditionSpec",
+        "sha256": "f11b2381934a24e0000fe363d1a5c25381d5a7dd2d6b9022b611f1f228d1430f"
+      },
+      {
+        "stable_id": "E01.GUARD.CANDIDATE_VERSION",
+        "kind": "ConditionSpec",
+        "sha256": "eaf8ef2bf12ecbdc2c9fa7b07f8688294db03622a545d6053095305304f9d881"
+      },
+      {
+        "stable_id": "E01.GUARD.RESOLVER_UNBOUND",
+        "kind": "ConditionSpec",
+        "sha256": "da21664793ce66cd689828d1989e9cc27368768a447d0a8b1d1e321e925c6541"
+      },
+      {
+        "stable_id": "E01.POLICY.CURRENT",
+        "kind": "PolicySpec",
+        "sha256": "96b4ad7abd49584af8af1800b084136f3512c7ae5be7cf33dc512db1faaba403"
+      },
+      {
+        "stable_id": "E01.POLICY.CANDIDATE",
+        "kind": "PolicySpec",
+        "sha256": "3e8502494819e809a20ee5908689fb93d07ea0b8f9b4d28e9fa7e37d5d5dba25"
+      },
+      {
+        "stable_id": "E01.PROTOCOL",
+        "kind": "EvaluationProtocol",
+        "sha256": "341475b99f96baa76ff29096ded293ca248e4c06b37319ef6aaa5f62d1878468"
+      },
+      {
+        "stable_id": "E01.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "b55e6c32426273638b95240a8d3c0798e0bfe500e105a59ab0c177141dc5f431"
+      },
+      {
+        "stable_id": "E01.PINNED_PROTOCOL_AWAITING_APPROVAL_AND_REVIEW_HOLD",
+        "kind": "Case",
+        "sha256": "c7ba7d5ae5a9fb4a5fb59811a1a0815ce16a2c60dbeb855cd85ac446314a6bdf"
+      },
+      {
+        "stable_id": "E01.PINNED_PROTOCOL_AWAITING_APPROVAL_AND_REVIEW_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "8c0e32605f8e04ab76cfd6213c8e48eeb0b8ff93ac27660e71c856436fce8c29"
+      },
+      {
+        "stable_id": "E01.APPROVAL_MISSING_HOLD",
+        "kind": "Case",
+        "sha256": "afd1bf2c50458591540db7000043a8f05df358251057473bc846b5177b54c1d2"
+      },
+      {
+        "stable_id": "E01.APPROVAL_MISSING_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "78b6bd9d34dc66740e25f09598c0635b11ef4856677389fa6b0b585e517f0f78"
+      },
+      {
+        "stable_id": "E01.COMPARATOR_MISSING_HOLD",
+        "kind": "Case",
+        "sha256": "3758fb48b3334c94ab8aa571c2d5acf99356b4eb42956c4d3622a594851dc8f5"
+      },
+      {
+        "stable_id": "E01.COMPARATOR_MISSING_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "9e58d5e1305170b830129c75df5f3951740beabde1fc6154fbbeedb3a5186ed9"
+      },
+      {
+        "stable_id": "E01.SIMULATION_NOT_EFFECT",
+        "kind": "Case",
+        "sha256": "ec0433ead0b172dabd0e6e34684f69af3b601dca582808118e82a79ffa9e19ba"
+      },
+      {
+        "stable_id": "E01.SIMULATION_NOT_EFFECT.VAL",
+        "kind": "Validation",
+        "sha256": "8de6b0d6dd719a8bac293544fbb89a21b5e2264f581745d9be073ac3141d7ae8"
+      },
+      {
+        "stable_id": "E01.ASSIGNMENT_UNVERIFIED_DESCRIPTIVE_ONLY",
+        "kind": "Case",
+        "sha256": "2ad53a3c97be6bf27b3749b9c6aeb8a303978c53003ce17a34318a0d0b00beaa"
+      },
+      {
+        "stable_id": "E01.ASSIGNMENT_UNVERIFIED_DESCRIPTIVE_ONLY.VAL",
+        "kind": "Validation",
+        "sha256": "2fe53a483927ca3048d406c4715b5774fb5da3642b29af168e134bdad613b369"
+      },
+      {
+        "stable_id": "E01.DIRECT_KNOWLEDGE_WRITE_REFUSE",
+        "kind": "Case",
+        "sha256": "76a94c82816f9af203b772bb6d5ffe5f472b43b930ea02b87d004110a9acc3fc"
+      },
+      {
+        "stable_id": "E01.DIRECT_KNOWLEDGE_WRITE_REFUSE.VAL",
+        "kind": "Validation",
+        "sha256": "6fd74515c581ed7f6ad2d01af64d2a1682099b0ab576893b2c93c891bcfb173e"
+      },
+      {
+        "stable_id": "E01.DIRECT_KNOWLEDGE_WRITE_UNKNOWN_HOLD",
+        "kind": "Case",
+        "sha256": "47442d7b97ba02cda61d0ad9800bc5d7a148e278629bdb0e45e6b1cb56cbeeb2"
+      },
+      {
+        "stable_id": "E01.DIRECT_KNOWLEDGE_WRITE_UNKNOWN_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "90154865b1fd313fadc35c91c906f4d867962affa2d2e7a005c3f790eed29700"
+      },
+      {
+        "stable_id": "E01.FOLLOWUP_MISSING_HOLD",
+        "kind": "Case",
+        "sha256": "9495549e9fbdaf5000115b6e3e250af4ea67ec2cf19754beef689921962ac440"
+      },
+      {
+        "stable_id": "E01.FOLLOWUP_MISSING_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "21d2d755cc6f1c993a8cb7623daa05b6d6d45ad42649a5a4dba3cb6d4ddc53f5"
+      },
+      {
+        "stable_id": "E01.IDENTICAL_POLICY_VERSIONS_HOLD",
+        "kind": "Case",
+        "sha256": "c8ea7838a9ad186ea4147417825a3004636a46d0871bf8971662abb8c1034e24"
+      },
+      {
+        "stable_id": "E01.IDENTICAL_POLICY_VERSIONS_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "9d0abaf1e4a24d84fe8222036cd9dabd378a00c8da790c1c287171ffe487c28f"
+      },
+      {
+        "stable_id": "E01.INVALID_ANALYSIS_PLAN_HOLD",
+        "kind": "Case",
+        "sha256": "4facdba59e2516df7dd80164e19f02f60db4b9a5a2ef0cfce51afce1ffdcde73"
+      },
+      {
+        "stable_id": "E01.INVALID_ANALYSIS_PLAN_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "884e790b274a782196f1530091af603ffe77b7451c530d7f8d92c0b99d3dffb1"
+      },
+      {
+        "stable_id": "E01.POLICY_VERSION_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "a909d3e887e6913620bac095f61ff60fdd23deabbc3b89a2d05e86a209ab67b7"
+      },
+      {
+        "stable_id": "E01.POLICY_VERSION_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "5243e9ca1afdac4c12be6ee48b242f5dff61b2799c71d52052174ec2064a68db"
+      },
+      {
+        "stable_id": "E01.ASSIGNMENT_UNIT_METHOD_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "2793372b14740cac0e35019b9b09fa89b8ae9396064ee99d44d974b4c935913d"
+      },
+      {
+        "stable_id": "E01.ASSIGNMENT_UNIT_METHOD_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "62f13a6c212e381161a9d7a0e67d2346f07c738e34895fe11c366c53495a301c"
+      },
+      {
+        "stable_id": "E01.LEGACY_BOOLEAN_APPROVAL_NOT_EVIDENCE_HOLD",
+        "kind": "Case",
+        "sha256": "dba06923fbbe7d8f8ff4252e931e06a8ca45c6393b936397561c21bcb8e305c9"
+      },
+      {
+        "stable_id": "E01.LEGACY_BOOLEAN_APPROVAL_NOT_EVIDENCE_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "a44eb4807bdfc7ee0bfe0fa9f6df33f8f5e1e26e401a30577a615e2b8efaaccb"
+      },
+      {
+        "stable_id": "E01.UNRESOLVED_TYPED_APPROVAL_AND_REVIEW_HOLD",
+        "kind": "Case",
+        "sha256": "2862e4a018e99b9b15c08bcb66d1cce2b03d3f5135f582ca6daf49f905bd7b6d"
+      },
+      {
+        "stable_id": "E01.UNRESOLVED_TYPED_APPROVAL_AND_REVIEW_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "ce0cb3e8bd0a56218c79bc234fb13be08bbcf7594f7a107fdc8a196fd47e3cf1"
+      },
+      {
+        "stable_id": "E01.DUPLICATE_APPROVAL_REVIEW_IDENTITY_HOLD",
+        "kind": "Case",
+        "sha256": "e7e239a90f161f51b4aff183d24861a31e074df0905b80fde6c9bda3312630c9"
+      },
+      {
+        "stable_id": "E01.DUPLICATE_APPROVAL_REVIEW_IDENTITY_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "3cdca87752633dd726b854dcce9bcc5f81fe89da0f552cee0e726246f5ee4b2b"
+      },
+      {
+        "stable_id": "E01.EXPIRED_APPROVAL_REVIEW_HOLD",
+        "kind": "Case",
+        "sha256": "861c84088e3cb116e4e5ae259049e6dec3f60be14a86ee02d5511a9d775835ac"
+      },
+      {
+        "stable_id": "E01.EXPIRED_APPROVAL_REVIEW_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "af17c972ce12b14b6345129078c378259211ad77684bd8224fc804f7e4bc7c8c"
+      },
+      {
+        "stable_id": "E01.EVIDENCE_PATH_TRAVERSAL_HOLD",
+        "kind": "Case",
+        "sha256": "57cb5c7a0fd146d6cd0fbcafcd6c99c3de67b124e000261e78fe20b420dba810"
+      },
+      {
+        "stable_id": "E01.EVIDENCE_PATH_TRAVERSAL_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "898dcb4cd318edae15f1186e2c719adfcb646e98b1f6065dc3f4d41382d05a5f"
+      },
+      {
+        "stable_id": "E01.EVIDENCE_ARTIFACT_HASH_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "77face80c92fd39f8aff7dc31e5684abf464fe538d0d21e0c136ad48c6d8a229"
+      },
+      {
+        "stable_id": "E01.EVIDENCE_ARTIFACT_HASH_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "dc694ad5512163c5ad8dc1553990402be677691abad50e6b96ccffa7ad520f2c"
+      },
+      {
+        "stable_id": "E01.ANALYSIS_PLAN_REF_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "b7a82f508bcdc4fcc7cba3d20b67b43c9539d064d1a0de248dee0ed07b97bac9"
+      },
+      {
+        "stable_id": "E01.ANALYSIS_PLAN_REF_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "31da4fd70af1556273e0867e3df96f67fbb585230a82a8ea3792424c3b64a504"
+      },
+      {
+        "stable_id": "E01.ANALYSIS_PLAN_SUMMARY_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "ccc370935ed502bc263af3fd5df8f0d79337e486ce8e5ef78ab1265fcaefc232"
+      },
+      {
+        "stable_id": "E01.ANALYSIS_PLAN_SUMMARY_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "276f10312263a1ca6f4241b6fc81769d03b82d46d92eac1a55bb046f206e75b6"
+      }
+    ]
+  },
+  "validation": {
+    "independent_review": {
+      "issue": 30,
+      "comment_id": 7239835702,
+      "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+      "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+      "independent_result": "ACCEPT_SCOPED",
+      "findings": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    "builder_cases": 20,
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY",
+    "qualification_registered": false
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "content_digest": "9505a9ee3dfa1ece0bb8a9978e9ae56a38bce37db955e33d1b2f73e90de0691b"
+}

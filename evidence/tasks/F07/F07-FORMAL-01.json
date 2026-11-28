@@ -1,0 +1,557 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "F07",
+  "attempt_id": "F07-FORMAL-01",
+  "receipt_id": "TASK:F07:F07-FORMAL-01",
+  "input": [
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        }
+      ]
+    },
+    {
+      "task_id": "K13",
+      "receipt_id": "TASK:K13:K13-FORMAL-01",
+      "content_digest": "ad575d23624642747536f31d08b0be614ebe60cc613b9334eb90f52a924545f1",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K13/K13-FORMAL-01.json",
+          "sha256": "a3a7d30d7652a4d9a911557015f9d53bbb6642705feff70e60580937d37a988f"
+        },
+        {
+          "path": "evidence/tasks/K13/K13-QUALIFICATION-01.json",
+          "sha256": "12b8e2628f4ff6232d5147c3dd77828e2f34b7323a9a734c44644a70f04171cf"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+          "sha256": "ca8ad4d87b5baa86caa7d88d53364b1a401968110fecffbf5056e1b3c48ee579",
+          "stable_id": "K13.04.02.SR.01",
+          "record_sha256": "c2a998b98805da9c77984ee5eb3060b92b84aff55207d3390b85224f17d2fbec",
+          "kind": "Claim",
+          "package_version": "0.1.0-social-research-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "K15",
+      "receipt_id": "TASK:K15:K15-FORMAL-01",
+      "content_digest": "62f3ba123ff2b8b29b3bdd59736b36408aabbbf75bd732a78ab1ce7b0a25fed6",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K15/K15-FORMAL-01.json",
+          "sha256": "d2498fa5b6e509805ba1d4a3d9a56b2077bcc39c78d0f1810b63ef108599cc45"
+        },
+        {
+          "path": "evidence/tasks/K15/K15-QUALIFICATION-01.json",
+          "sha256": "1d61eb0cb86363760a4d151ba80731706b5fab4cf353961d93e5cb21cb49291e"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K15/records-03.jsonl",
+          "sha256": "88fc8b1dac66cb5d9f2ed48265396cc4f16b89f3c0d98f507549dd4154d39c7c",
+          "stable_id": "K15.06.04.TG.01",
+          "record_sha256": "6f731f1ed2b8e1573de84329e15ddb5bf91679a835be0a6c972094eaa549fcc4",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "K16",
+      "receipt_id": "TASK:K16:K16-FORMAL-01",
+      "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+          "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+        },
+        {
+          "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+          "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+          "sha256": "14104bc985f64edd03af68579c271601663fdf5f75c40376dedde51d020a4498",
+          "stable_id": "K16.02.04.TG.01",
+          "record_sha256": "60cc762b8ed62ad3ade83acabf1addb2dbab0e03742a75b50a3c02ac196d57bc",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.03.02.TG.01",
+          "record_sha256": "20193894f3d23a02138cd577d5cd2b5324825ec85e0da232314c5fa329932c6a",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.04.03.TG.01",
+          "record_sha256": "78ba1b14a37393a376aeb9faf0672701a4dffce13b74ad0272cbec141eca21f7",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        },
+        {
+          "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+          "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.02.03.TG.01",
+          "record_sha256": "d35997a797b019fdd12c45f14d90d55f7aed137eec3a42d6bd33fb72d3b31d3d",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.03.02.TG.01",
+          "record_sha256": "454be5f099da8aacec9ff0e38c3619bfcc077a499a0e7ca3c2334119082829c5",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+          "sha256": "4393fbe808eec1d435494c91d1f047ca1c168e81761f7073e480a5acfa83bd85",
+          "stable_id": "K19.05.02.TG.01",
+          "record_sha256": "0b18e8e7e0cb0b586573212f3d66f86723c5be07c9026a17e2a5ba6ff091c790",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "P10",
+      "receipt_id": "TASK:P10:P10-FORMAL-02",
+      "content_digest": "4950f4ea8f31282fd7e53f1ad0b8ec70fcd217e3aebf55c87455ea59df11170e",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P10/P10-FORMAL-02.json",
+          "sha256": "074e613a9a740913afa1aa6654c62cb35e7cf5c90133894f70d69c153b7ae075"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+          "sha256": "a891c920ef95c1dce15e796a6fb0e5c06e4dd7df9734c153c145867a5559bad7"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P10.jsonl",
+          "sha256": "a891c920ef95c1dce15e796a6fb0e5c06e4dd7df9734c153c145867a5559bad7",
+          "stable_id": "P10.FLOW",
+          "record_sha256": "cba1216bf374100f42d464451fe11219d687fd940ec79961cb32ebc7cd6b730b",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+      "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/F07.jsonl",
+      "sha256": "648103d5db21f7071f5f843e77e03de48563853c265319fa69abef557790e495",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/migration.json",
+      "sha256": "502d7452f15670874f3283c5e483b2830086f529a62698bcae678fe896352072",
+      "type": "EXACT_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/sql-results.json",
+      "sha256": "d5c799073569ee3c3ddd401db81529ddee7f2306c901bfe3d595ae8cec35cc5b",
+      "type": "SQL_BUILDER_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/coverage.json",
+      "sha256": "f1cf8db97b26a8de76596cd54641514294b8e5ede0d53bf609e6fc26454a3937",
+      "type": "RESTRICTED_SCOPE_LEDGER"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/build_f.py",
+      "sha256": "ad3cd5189d59231ee7aa3c1fc8ab472b7a2262765519305c26509c3197e798b6",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/semantic_checks.py",
+      "sha256": "63cf12ae1d3d8e4ef00e741e0eb8fa9c1acaa81d3e51bad82d484727769b8b5d",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/bindings.json",
+      "sha256": "4615e9b559595fe49c3dca4cc1f062b29ce49e5527fd0d5063cb1b0912ba4bd4",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/composition-input-bindings.json",
+      "sha256": "87d6f728b897b347f147afdf8b5c9517d0b7ec074a33f3cad3ba34b99b3f5b09",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/remediation-design.json",
+      "sha256": "04d24e8620b9410d21c07de27209be02fa5a2c0e9a26ecbd9e5f38a8f3dee2c9",
+      "type": "EXACT_VALIDATION_INPUT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_records": 50,
+    "case_count": 17,
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "reviewed_scope": "Trusted learner/facilitator resolver NOT_BOUND; no SUGGEST.",
+    "reviewed_artifact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "reviewed_artifact_tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "record_digests": [
+      {
+        "stable_id": "F07.ENV.LOW_BANDWIDTH",
+        "kind": "Environment",
+        "sha256": "9405bbca520027c10104f5e88adea2370b9a39f13d843d1d860b9f1b906d9a03"
+      },
+      {
+        "stable_id": "F07.ENV.SHARED_DEVICE",
+        "kind": "Environment",
+        "sha256": "53c2e7f21ecafef1201b3eab51cd14d7367d15d5298c74069911c7783a4144e6"
+      },
+      {
+        "stable_id": "F07.ENV.PRIVATE_DEVICE",
+        "kind": "Environment",
+        "sha256": "1b5b7026a40e7aa7b24307ed06e59512d5c6d96efa0f9828c2c009f682b23acf"
+      },
+      {
+        "stable_id": "F07.ROLE.LEARNER",
+        "kind": "Role",
+        "sha256": "7e348f0a5a2746150a0e99c585bcdc3c7b0430715171b38a1c0cc6d8d65576c1"
+      },
+      {
+        "stable_id": "F07.ROLE.FACILITATOR",
+        "kind": "Role",
+        "sha256": "c9146e39bdfb4359b465659ed8b88d6d99a56204ba8acc017ce57024a7d6873e"
+      },
+      {
+        "stable_id": "F07.ROLE.REVIEWER",
+        "kind": "Role",
+        "sha256": "ad0ec9f8f774e5b2f1fbcd832fcbabd6ed6f83f4c69e0239dec9d10c2ec29083"
+      },
+      {
+        "stable_id": "F07.GUARD.EXIT",
+        "kind": "ConditionSpec",
+        "sha256": "cfc393dd1e4e21bbc77a3f7bd5d299bb1bb4182526e87695f949a295f15423e0"
+      },
+      {
+        "stable_id": "F07.GUARD.EXIT_UNKNOWN",
+        "kind": "ConditionSpec",
+        "sha256": "d3404bff0bdd8bb13348dffb8893043758008e1069102cb39a862896cd7d8a93"
+      },
+      {
+        "stable_id": "F07.GUARD.DENY",
+        "kind": "ConditionSpec",
+        "sha256": "fb7b9f0070ff0592f2c6632be9bb1752abbfaba81330feef15f5a18cfb79ef4c"
+      },
+      {
+        "stable_id": "F07.GUARD.REVIEWER",
+        "kind": "ConditionSpec",
+        "sha256": "c1a147e889699a7bbdeec43b5ebcbd77f55ab88ddac1b6ff04efdbfc491d647c"
+      },
+      {
+        "stable_id": "F07.GUARD.UNAVAILABLE",
+        "kind": "ConditionSpec",
+        "sha256": "171f6373187b3843b2c3a5ec0abffec6ed7077597f6b703d76ada1ec914ec279"
+      },
+      {
+        "stable_id": "F07.GUARD.OFFER_LEARNER",
+        "kind": "ConditionSpec",
+        "sha256": "8e263187c6295716a78fe71f81f4bb05a12a3729435751d9bdea6e39327cc768"
+      },
+      {
+        "stable_id": "F07.GUARD.LEARNER_AUTH_UNBOUND",
+        "kind": "ConditionSpec",
+        "sha256": "ee6b3651ec2bcf2097c53e063c3a502e288ff8e0d5cd3c13d96d3aa719b56446"
+      },
+      {
+        "stable_id": "F07.GUARD.FACILITATOR_UNBOUND",
+        "kind": "ConditionSpec",
+        "sha256": "f93268029c67c1629ee22d6742d3fdc36eff674e0a4d4350a956177f9f0e9a7f"
+      },
+      {
+        "stable_id": "F07.POLICY",
+        "kind": "PolicySpec",
+        "sha256": "6e3f112d527004e0fcd023b379661acaa2bd6c5c32cbf6b11a440fb91631bbac"
+      },
+      {
+        "stable_id": "F07.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "1431f5996f40ee5737b7d71e3e3437bf26d0470014905c1f6c44ed8ef758f13b"
+      },
+      {
+        "stable_id": "F07.LEARNER_SELF_SESSION_RESOLVER_UNBOUND_HOLD",
+        "kind": "Case",
+        "sha256": "6ac2b6530b1771ea242a711d870cceab525e2667fe9d9ffba735ee58bc008375"
+      },
+      {
+        "stable_id": "F07.LEARNER_SELF_SESSION_RESOLVER_UNBOUND_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "1972cb9a5aee6009f4febd2118a38eec60ae18c26a81e7699e3efc78ccde57d2"
+      },
+      {
+        "stable_id": "F07.ROLE_PERMISSION_DENIED",
+        "kind": "Case",
+        "sha256": "296d846588a3de727c58755b62cb57af355a5b0cc87a13bd384a618069701f74"
+      },
+      {
+        "stable_id": "F07.ROLE_PERMISSION_DENIED.VAL",
+        "kind": "Validation",
+        "sha256": "29285facd578ea38ca3fcb1618bc638f6501f295907f055a7f837644d9c57ba7"
+      },
+      {
+        "stable_id": "F07.IDENTITY_UNKNOWN_CLARIFY",
+        "kind": "Case",
+        "sha256": "fa1e62079fc3d737d9aefc41cecf84fda353286a9a0e5ce0c2f837aab780704b"
+      },
+      {
+        "stable_id": "F07.IDENTITY_UNKNOWN_CLARIFY.VAL",
+        "kind": "Validation",
+        "sha256": "457aeb0b370d8de8c580d96a36eb74b6ff860856c11403edfcf5bd1fd6755ded"
+      },
+      {
+        "stable_id": "F07.ACCESS_UNAVAILABLE_DEFER",
+        "kind": "Case",
+        "sha256": "0949099451d65fb470a3be67de0b55f74f063921f5f166712778ae7fbaefb42b"
+      },
+      {
+        "stable_id": "F07.ACCESS_UNAVAILABLE_DEFER.VAL",
+        "kind": "Validation",
+        "sha256": "bdb7207e6a8ce0191ee0089714945e4923a93c447b920d9ba875a74073dc6667"
+      },
+      {
+        "stable_id": "F07.USER_EXIT_STOP",
+        "kind": "Case",
+        "sha256": "0c0a4f09c4ba0eb57a47623b8355849ffcf445b374795acdd8992db812cf92d5"
+      },
+      {
+        "stable_id": "F07.USER_EXIT_STOP.VAL",
+        "kind": "Validation",
+        "sha256": "f064f00d5b2a8ac87abe943073842d4dc11f8fb87730328b9de949ec32cf2a59"
+      },
+      {
+        "stable_id": "F07.NO_LEARNER_SELECTION_CLARIFY",
+        "kind": "Case",
+        "sha256": "03afe63673a53c49503b062a46e112a521895477c558d244aebfca8a179c7678"
+      },
+      {
+        "stable_id": "F07.NO_LEARNER_SELECTION_CLARIFY.VAL",
+        "kind": "Validation",
+        "sha256": "dfa529af5967ba4bcee6b726ceb650d6aa5e4d36809ce0f8291c64f7201de570"
+      },
+      {
+        "stable_id": "F07.REVIEWER_READ_ONLY_REFUSE",
+        "kind": "Case",
+        "sha256": "5b413614083e80448dc20f17bc2a127d80966b52036516bba851178004fd4f38"
+      },
+      {
+        "stable_id": "F07.REVIEWER_READ_ONLY_REFUSE.VAL",
+        "kind": "Validation",
+        "sha256": "89f09f2a1c90bb9b0ca74f37490e0e7da6736afcb118468478cb0b66c596d232"
+      },
+      {
+        "stable_id": "F07.EXIT_UNKNOWN_CLARIFY",
+        "kind": "Case",
+        "sha256": "b34403e01b1e60a50934b9a4b16ad72d9c8ad6d8c39f44fd709c84a6030565c6"
+      },
+      {
+        "stable_id": "F07.EXIT_UNKNOWN_CLARIFY.VAL",
+        "kind": "Validation",
+        "sha256": "6683b87397b8a05f6cb16b9de02ed3c3e5057ff5f1482ff7730093fe8dd6d180"
+      },
+      {
+        "stable_id": "F07.FACILITATOR_ASSIGNED_SCOPE_OPTION",
+        "kind": "Case",
+        "sha256": "b4c47a7153374e2845a9f3ae16189d12bcb3d80e4494f67c9fa5d5bc575308aa"
+      },
+      {
+        "stable_id": "F07.FACILITATOR_ASSIGNED_SCOPE_OPTION.VAL",
+        "kind": "Validation",
+        "sha256": "b57fd06fff00cc4e841a51bb32da67f2fc2ed9d429797670927af05de0dd8e81"
+      },
+      {
+        "stable_id": "F07.FACILITATOR_SCOPE_MISMATCH_REFUSE",
+        "kind": "Case",
+        "sha256": "a1bccf9723e0273a7d711f0873e88ceef32d11d3b686e964573c7e6844532047"
+      },
+      {
+        "stable_id": "F07.FACILITATOR_SCOPE_MISMATCH_REFUSE.VAL",
+        "kind": "Validation",
+        "sha256": "957db94955adc62b7700be1658a5731db744eecd339720649f4c3ebe9ffcf3e9"
+      },
+      {
+        "stable_id": "F07.EXPIRED_FACILITATOR_AUTHORITY_REFUSE",
+        "kind": "Case",
+        "sha256": "43f5c382e06b1db4c37d4d4c847f334dbe1e7f03a89131bc3ff57d9785b9c038"
+      },
+      {
+        "stable_id": "F07.EXPIRED_FACILITATOR_AUTHORITY_REFUSE.VAL",
+        "kind": "Validation",
+        "sha256": "50ea75ab5400134d2eccaa8336c0c2588a20f1d4ff6c0e9fd5275120afc9c985"
+      },
+      {
+        "stable_id": "F07.AUTHORITY_HASH_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "7cdcc04566f5f2102d51b7a24254ea91440a9244213f2006ef11242c1bfb10a6"
+      },
+      {
+        "stable_id": "F07.AUTHORITY_HASH_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "4e2bfa953c52a738ca0c53813ac90fbf6e2eccf6d43bc26f85cc08d6b3891c6d"
+      },
+      {
+        "stable_id": "F07.SESSION_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "ae0950a674047bf5bb2e5f3af11e657149e718f6aa63b75438b5d500230b8b82"
+      },
+      {
+        "stable_id": "F07.SESSION_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "c2bdd7b1c9cee3399d7a67d999b8d7d28467ede728a62059433fdf010bae5a38"
+      },
+      {
+        "stable_id": "F07.GENERIC_PERMISSION_BOOLEAN_NOT_AUTHORITY_CLARIFY",
+        "kind": "Case",
+        "sha256": "5b4135e2ab539c15555c73fee6f5ef61e6f720d8610c044463132485dc95f8ab"
+      },
+      {
+        "stable_id": "F07.GENERIC_PERMISSION_BOOLEAN_NOT_AUTHORITY_CLARIFY.VAL",
+        "kind": "Validation",
+        "sha256": "3588a95df42b15114db66a78fadb4a295bdc7c59b0cf01dc9b152b0201f47816"
+      },
+      {
+        "stable_id": "F07.ENVIRONMENT_PROFILE_HASH_TAMPER_HOLD",
+        "kind": "Case",
+        "sha256": "6435b7d8adcc8a74a6a9f9847780e6d42234bbbce43954798486de4de7945491"
+      },
+      {
+        "stable_id": "F07.ENVIRONMENT_PROFILE_HASH_TAMPER_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "47c9cbc54e97765d99ac7e848874fd99d1e4d00555bb5686e0471bc1e9a7e00f"
+      },
+      {
+        "stable_id": "F07.STALE_ENVIRONMENT_PROFILE_HOLD",
+        "kind": "Case",
+        "sha256": "0cbfadb504d48d5f06735d786c99fab0c9ce4fa8b1c3d163a624ee9e2a272943"
+      },
+      {
+        "stable_id": "F07.STALE_ENVIRONMENT_PROFILE_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "f4931487504fc5d7305ea9c34dc1baa321fbd980c8221066733f71fa067f5071"
+      },
+      {
+        "stable_id": "F07.ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "4686dc8887da635ebea9fe5f12a7a14b1d317299727e4af48c0e590ae2ec26f1"
+      },
+      {
+        "stable_id": "F07.ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "4c693279ee899b330103728d2953b9ab83f63353f759d3d595f43dc78853352e"
+      }
+    ]
+  },
+  "validation": {
+    "independent_review": {
+      "issue": 30,
+      "comment_id": 7239835702,
+      "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+      "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+      "independent_result": "ACCEPT_SCOPED",
+      "findings": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    "builder_cases": 17,
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY",
+    "qualification_registered": false
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "content_digest": "74a141d36c0775d41fe620204cb46d19823139daa6e19e45ff1844fc31bff48b"
+}

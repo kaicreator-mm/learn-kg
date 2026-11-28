@@ -1,0 +1,544 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "F03",
+  "attempt_id": "F03-FORMAL-01",
+  "receipt_id": "TASK:F03:F03-FORMAL-01",
+  "input": [
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        }
+      ]
+    },
+    {
+      "task_id": "K12",
+      "receipt_id": "TASK:K12:K12-FORMAL-01",
+      "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K12/K12-FORMAL-01.json",
+          "sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2"
+        },
+        {
+          "path": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+          "sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.01.03.TR.01",
+          "record_sha256": "99153cd993ef252b7a70414c4c19225550c9ab4d24b0f3f48fa6a3a0560d3f8d",
+          "kind": "Claim",
+          "package_version": "0.1.0-trace-adaptation-resources-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.01.04.TR.01",
+          "record_sha256": "66ebb3a54ffa11940065769e3e389823d256bf0307e1655f0a8ed1071fb82954",
+          "kind": "Claim",
+          "package_version": "0.1.0-trace-adaptation-resources-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+          "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+          "stable_id": "K12.04.03.TR.01",
+          "record_sha256": "1509d505dc29d3b3d13883a4e987f5bac0b4c9a6866bdb16c9c87ea8d9e99a4b",
+          "kind": "Claim",
+          "package_version": "0.1.0-trace-adaptation-resources-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "K15",
+      "receipt_id": "TASK:K15:K15-FORMAL-01",
+      "content_digest": "62f3ba123ff2b8b29b3bdd59736b36408aabbbf75bd732a78ab1ce7b0a25fed6",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K15/K15-FORMAL-01.json",
+          "sha256": "d2498fa5b6e509805ba1d4a3d9a56b2077bcc39c78d0f1810b63ef108599cc45"
+        },
+        {
+          "path": "evidence/tasks/K15/K15-QUALIFICATION-01.json",
+          "sha256": "1d61eb0cb86363760a4d151ba80731706b5fab4cf353961d93e5cb21cb49291e"
+        }
+      ]
+    },
+    {
+      "task_id": "K16",
+      "receipt_id": "TASK:K16:K16-FORMAL-01",
+      "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+          "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+        },
+        {
+          "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+          "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.03.02.TG.01",
+          "record_sha256": "20193894f3d23a02138cd577d5cd2b5324825ec85e0da232314c5fa329932c6a",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.04.03.TG.01",
+          "record_sha256": "78ba1b14a37393a376aeb9faf0672701a4dffce13b74ad0272cbec141eca21f7",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        },
+        {
+          "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+          "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+          "sha256": "4393fbe808eec1d435494c91d1f047ca1c168e81761f7073e480a5acfa83bd85",
+          "stable_id": "K19.05.03.TG.01",
+          "record_sha256": "acee8e799b7aab22dc1d0d7b05488f8a45490f17eb72e8b5a7f4667328e9e2bf",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-03",
+      "content_digest": "d3c1862f40b7cd81f468c81b6960d5e1df21f1ae0d3f5585ea33ec02b84d95b9",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-03.json",
+          "sha256": "98b13eb9fcb499a425b8f4abac3830b61510707e62d953c0e4001372d7d4df3e"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+          "stable_id": "P03.PRODUCTION",
+          "record_sha256": "6d5b42d7d39d8626c8eece426350d33ff366f8456bdb3b035edef23286becb52",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    },
+    {
+      "task_id": "P04",
+      "receipt_id": "TASK:P04:P04-FORMAL-02",
+      "content_digest": "c1f96b3d5b89f926dcbb40740c84634f33fec45180a1b149a6a410b049223694",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P04/P04-FORMAL-02.json",
+          "sha256": "9c27d1e96d2dd3db2b59a366bd558249c7394955bdf85579b879107064e0909e"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+          "sha256": "2ac414a9a6b1bc4d32d4e75e05b77700afd7ec03c846bdade98ab7ef53eb39d3"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+          "sha256": "2ac414a9a6b1bc4d32d4e75e05b77700afd7ec03c846bdade98ab7ef53eb39d3",
+          "stable_id": "P04.FLOW",
+          "record_sha256": "acbfea33e30def2ce00b9b5997398cb4c0a2b59dab981b16e42150a14295b11a",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+      "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/F03.jsonl",
+      "sha256": "c07ec57ad3c3912fe4ce0d0bc3fae802e89a212048d99fb722d4555bdba4de61",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/migration.json",
+      "sha256": "502d7452f15670874f3283c5e483b2830086f529a62698bcae678fe896352072",
+      "type": "EXACT_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/sql-results.json",
+      "sha256": "d5c799073569ee3c3ddd401db81529ddee7f2306c901bfe3d595ae8cec35cc5b",
+      "type": "SQL_BUILDER_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/coverage.json",
+      "sha256": "f1cf8db97b26a8de76596cd54641514294b8e5ede0d53bf609e6fc26454a3937",
+      "type": "RESTRICTED_SCOPE_LEDGER"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/build_f.py",
+      "sha256": "ad3cd5189d59231ee7aa3c1fc8ab472b7a2262765519305c26509c3197e798b6",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/semantic_checks.py",
+      "sha256": "63cf12ae1d3d8e4ef00e741e0eb8fa9c1acaa81d3e51bad82d484727769b8b5d",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/bindings.json",
+      "sha256": "4615e9b559595fe49c3dca4cc1f062b29ce49e5527fd0d5063cb1b0912ba4bd4",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/composition-input-bindings.json",
+      "sha256": "87d6f728b897b347f147afdf8b5c9517d0b7ec074a33f3cad3ba34b99b3f5b09",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/remediation-design.json",
+      "sha256": "04d24e8620b9410d21c07de27209be02fa5a2c0e9a26ecbd9e5f38a8f3dee2c9",
+      "type": "EXACT_VALIDATION_INPUT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_records": 45,
+    "case_count": 15,
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "reviewed_scope": "Finite resource/accessibility binding; no actual media accessibility certification.",
+    "reviewed_artifact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "reviewed_artifact_tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "record_digests": [
+      {
+        "stable_id": "F03.MOD.TEXT",
+        "kind": "Modality",
+        "sha256": "29f1c75b7e6454c57a49cf6053ea51cb919ddbd139bfe66546b0e747f19e34c3"
+      },
+      {
+        "stable_id": "F03.MOD.AUDIO",
+        "kind": "Modality",
+        "sha256": "802b47315ef3e59b4d1afc3bce72e6bcccb1d42db73b959b524be84eb80e5844"
+      },
+      {
+        "stable_id": "F03.MOD.VISUAL",
+        "kind": "Modality",
+        "sha256": "8848b9e85db517efeb6bf9bafb998f0e2eb6c0089ecf4505a416c91aa119a519"
+      },
+      {
+        "stable_id": "F03.RES.TEXT",
+        "kind": "Resource",
+        "sha256": "0b6fec3a5d66c448d5b64108277c32e5309942d0fbc8940ddda25688d919c566"
+      },
+      {
+        "stable_id": "F03.RES.AUDIO",
+        "kind": "Resource",
+        "sha256": "fdf253c2cbbb2dbba923b2adfb4fce48473f3c8053dd7b6f05aa5a175c4680da"
+      },
+      {
+        "stable_id": "F03.RES.UNVERIFIED",
+        "kind": "Resource",
+        "sha256": "78f9da8c22e67ae2acab296b315d38ec290c80f32b8a319e2222ba892131a16d"
+      },
+      {
+        "stable_id": "F03.RES.VISUAL",
+        "kind": "Resource",
+        "sha256": "af9feea0c35c4afbdc4bd69da999a4231fd986d476807f05fff32cf52ee87214"
+      },
+      {
+        "stable_id": "F03.GUARD.AUDIO",
+        "kind": "ConditionSpec",
+        "sha256": "e1b36a2761c6b2aa91be76389badead9ba617450dfbcc42574491b81e415994a"
+      },
+      {
+        "stable_id": "F03.GUARD.TEXT_READING",
+        "kind": "ConditionSpec",
+        "sha256": "48295cd13a572f9172655b356029a6678e5bf3b43f3f4c0a37dbc4b33ef875a6"
+      },
+      {
+        "stable_id": "F03.GUARD.TEXT",
+        "kind": "ConditionSpec",
+        "sha256": "5781f9f8cb415c611f6308cafb753287b536e7ef932a8d19a9cdc92f18673a70"
+      },
+      {
+        "stable_id": "F03.GUARD.VISUAL_ACCESSIBILITY",
+        "kind": "ConditionSpec",
+        "sha256": "df1edbead8d5082070d286030e4f3ff9ebbdffcf951a3ec4d5964ec9290ed5d9"
+      },
+      {
+        "stable_id": "F03.GUARD.VISUAL",
+        "kind": "ConditionSpec",
+        "sha256": "509ab97844b6136cbf17597f91db50aa580347cc4e32a19428cbfb166cce1a40"
+      },
+      {
+        "stable_id": "F03.GUARD.RIGHTS",
+        "kind": "ConditionSpec",
+        "sha256": "fdb36c2177f1c9f68280a396b7a90763ba9e211a250326369b5c5f6909b470bb"
+      },
+      {
+        "stable_id": "F03.GUARD.ACCESS",
+        "kind": "ConditionSpec",
+        "sha256": "13f0c8112645bae8a3afd1073172d1ebab3b348b90e99c12362969e1c1132421"
+      },
+      {
+        "stable_id": "F03.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "44ba71277eda01dd0e48ffbdfd8ae46ec5b6442a3a7ac15ebcf3ca2f696914ea"
+      },
+      {
+        "stable_id": "F03.AUDIO_LISTENING_SYNTHETIC",
+        "kind": "Case",
+        "sha256": "dc0a8c26e074378f3834af1a4677e21655b1a2055186b674f63a37c481f7bc8e"
+      },
+      {
+        "stable_id": "F03.AUDIO_LISTENING_SYNTHETIC.VAL",
+        "kind": "Validation",
+        "sha256": "1775a74dbe760042c63fb524f96a39c9ddc0c1f8e25f2a2bdf71b249caf60b44"
+      },
+      {
+        "stable_id": "F03.TEXT_READING_SYNTHETIC",
+        "kind": "Case",
+        "sha256": "8c09ea8399ad9254236fc523b183e880e1cea2b75204ff2358533abafaa980fa"
+      },
+      {
+        "stable_id": "F03.TEXT_READING_SYNTHETIC.VAL",
+        "kind": "Validation",
+        "sha256": "fbac8b03d823d470e8a5125af204c986e171b8635a24aff5111f240abb9784b3"
+      },
+      {
+        "stable_id": "F03.TEXT_FOR_LISTENING_REJECT",
+        "kind": "Case",
+        "sha256": "fc79a618ec71f5668054929b0214409f32e321aed33a61ad67dcb6e4a94b5e0a"
+      },
+      {
+        "stable_id": "F03.TEXT_FOR_LISTENING_REJECT.VAL",
+        "kind": "Validation",
+        "sha256": "54fb1b9f6b9ba491d4aa9fe1a617955092ab18d5ee0f18c650fcdedbe8f81f7b"
+      },
+      {
+        "stable_id": "F03.RIGHTS_UNKNOWN_HOLD",
+        "kind": "Case",
+        "sha256": "add32d0df5ee70c43d44f80982bb0cf69b25a8f7ecea874d084f7f9b1f9a76c5"
+      },
+      {
+        "stable_id": "F03.RIGHTS_UNKNOWN_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "29e9380be47cac39e60b0a80ca0495fe251035cca641471023116e8c1a782c0d"
+      },
+      {
+        "stable_id": "F03.ACCESS_UNAVAILABLE_HOLD",
+        "kind": "Case",
+        "sha256": "90f642e60f8ba37b10636055f6229ea14985dee535c825d3c962b93121b23553"
+      },
+      {
+        "stable_id": "F03.ACCESS_UNAVAILABLE_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "1f29ef6a4cf2ae1f02599defe967e37473167e31bf053a17e9d17728dc5abf93"
+      },
+      {
+        "stable_id": "F03.PRIVATE_TO_PUBLIC_REFUSE",
+        "kind": "Case",
+        "sha256": "4c4b256fa6b2cb9d77832feb6e8067189d73a71c87de17124f3d657fc39951ed"
+      },
+      {
+        "stable_id": "F03.PRIVATE_TO_PUBLIC_REFUSE.VAL",
+        "kind": "Validation",
+        "sha256": "612aafadd1f25099d5d57cf8f196664c92616f5bc968b56f2528bec33056a589"
+      },
+      {
+        "stable_id": "F03.VISUAL_RECOGNITION_SYNTHETIC",
+        "kind": "Case",
+        "sha256": "53d69740f78a971ee7c3362c904f676d7266b8290e01691141be8715efea6b3f"
+      },
+      {
+        "stable_id": "F03.VISUAL_RECOGNITION_SYNTHETIC.VAL",
+        "kind": "Validation",
+        "sha256": "6bef066b7f11a216c1ef119a32c21766ff6af69294ed60fb7beeee6e69bfd2bf"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_UNKNOWN_HOLD",
+        "kind": "Case",
+        "sha256": "0fb3140d4c6695457c690f93555866c66810df1d55ad35bb60a67cac2db3f881"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_UNKNOWN_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "38a216f1decbd581ed787f2aa9b6ac266ee58b5bb6410fd5caeaedaab8868cc5"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_RESOURCE_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "62859d7a23d2207d60ece4d84db92b2921e600996eb0ca5034fe87241bc605e1"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_RESOURCE_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "92f89bb7b181ac99b54dfc95580728fb769ee2c088e37b5167203027bcd429d3"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_DIGEST_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "3fac46ce0c32fdf6133647ea9d9492c10bcf003c45373a928964c1fa93222676"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_DIGEST_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "0a93ad8c6ba75bbf18a0f0d5e2873ab5882ef5ec056ffc4218090555e0d09cb1"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_SCOPE_MISMATCH_HOLD",
+        "kind": "Case",
+        "sha256": "48d6e3b546f26754ca3106312f483c61296a4b52bf78dac80ce1bef531f4d75d"
+      },
+      {
+        "stable_id": "F03.VISUAL_ACCESSIBILITY_SCOPE_MISMATCH_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "e9d8f6c7db886a0206b35615bdb70dfd22336e35ec07bbd7a26fe93da864a8c7"
+      },
+      {
+        "stable_id": "F03.UNSUPPORTED_VIDEO_MODALITY_HOLD",
+        "kind": "Case",
+        "sha256": "c33762bdf8cac77889267b0fe516e1ad7a89d8e24edc0de108c0ad2b6e20f863"
+      },
+      {
+        "stable_id": "F03.UNSUPPORTED_VIDEO_MODALITY_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "74cb10a4f3c89d5b139db2ef0e0e62e0284ed93400bd9e5b7df2aab781fc5b55"
+      },
+      {
+        "stable_id": "F03.MISSING_MODALITY_HOLD",
+        "kind": "Case",
+        "sha256": "efc8fd21e94ef978afa13c934937b0ec6588946bf1a58e7f03246425026c0181"
+      },
+      {
+        "stable_id": "F03.MISSING_MODALITY_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "ad119fc39ecd97184e30c19189bb701dd843a96cf277112d5a5699d5dc7905cf"
+      },
+      {
+        "stable_id": "F03.UNSUPPORTED_CONSTRUCT_HOLD",
+        "kind": "Case",
+        "sha256": "a3d2ed86664ce454ce3dc4290605950b5667e0887210ac79cb7e509c785aef14"
+      },
+      {
+        "stable_id": "F03.UNSUPPORTED_CONSTRUCT_HOLD.VAL",
+        "kind": "Validation",
+        "sha256": "afb77beb9a61d8f876576214b49fa8ba3838c416fa969947851def0843ff9625"
+      },
+      {
+        "stable_id": "F03.AUDIO_FOR_READING_REJECT",
+        "kind": "Case",
+        "sha256": "f098ae103c00a3ea645ebf9837eca5012cb102cb695da2d1c2432f7af038badb"
+      },
+      {
+        "stable_id": "F03.AUDIO_FOR_READING_REJECT.VAL",
+        "kind": "Validation",
+        "sha256": "1c220e0e68f1a4b9b445f458ae5c08ae12e2bcd946bbd07d64acc2b9a66bd563"
+      }
+    ]
+  },
+  "validation": {
+    "independent_review": {
+      "issue": 30,
+      "comment_id": 7239835702,
+      "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+      "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+      "independent_result": "ACCEPT_SCOPED",
+      "findings": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    "builder_cases": 15,
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY",
+    "qualification_registered": false
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "content_digest": "82a4666981587bb3aff5d86eb20e8f4ef6b53ecb03faedeb7b044ba91da3a40f"
+}

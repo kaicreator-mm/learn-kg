@@ -1,0 +1,115 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "PR02",
+  "attempt_id": "PR02-FORMAL-01",
+  "receipt_id": "TASK:PR02:PR02-FORMAL-01",
+  "input": [
+    {
+      "task_id": "P07",
+      "receipt_id": "TASK:P07:P07-FORMAL-02",
+      "content_digest": "f6ac338e921be546caeadefccb8cdbe8aa8e94ba19d24b0a06735652b2ecc77d",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P07/P07-FORMAL-02.json",
+          "sha256": "cc597158184574c2f24224f7aa9327669769b88c1658392afe8e60823c7874bf"
+        }
+      ]
+    },
+    {
+      "task_id": "P08",
+      "receipt_id": "TASK:P08:P08-FORMAL-02",
+      "content_digest": "7b3bd0c646d18db8f4fe3b9b4e6b9805ba8a681821618ca34e97a3b6fa95ea95",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P08/P08-FORMAL-02.json",
+          "sha256": "16ac3e16240793aa17bf5314714b352e6b2ff16b7d6ac2caf836fa850b3c272e"
+        }
+      ]
+    },
+    {
+      "task_id": "P09",
+      "receipt_id": "TASK:P09:P09-FORMAL-02",
+      "content_digest": "72656e20814dcd53c8bb6d1d4b72bd27f5a7b535706ddd8712b725233851543f",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P09/P09-FORMAL-02.json",
+          "sha256": "6715dae230b9567eef424c8e254591057948da4c5f223040f2d8ce827d1620ac"
+        }
+      ]
+    },
+    {
+      "task_id": "P10",
+      "receipt_id": "TASK:P10:P10-FORMAL-02",
+      "content_digest": "4950f4ea8f31282fd7e53f1ad0b8ec70fcd217e3aebf55c87455ea59df11170e",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P10/P10-FORMAL-02.json",
+          "sha256": "074e613a9a740913afa1aa6654c62cb35e7cf5c90133894f70d69c153b7ae075"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/P07/P07-QUALIFICATION-01.json",
+      "sha256": "38894f4232935b1fc6c91c9b237dc8454ca3ed4404713991308893be250d109d",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/P08/P08-QUALIFICATION-01.json",
+      "sha256": "59a2e1bf8619dd707e298a43b13d7a42cd81ab00dc5208864a3c46e9817d63d1",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/P09/P09-QUALIFICATION-01.json",
+      "sha256": "6c71d5809d0ba870fd7baad34541ec74185adaca813af136e3df47e3f73746da",
+      "type": "QUALIFIED_LOCAL"
+    },
+    {
+      "path": "evidence/tasks/P10/P10-QUALIFICATION-01.json",
+      "sha256": "471adc8aea3aae08f8d1e0544f128514ccfe68da62e3fcd8aaff56806a20f5f6",
+      "type": "QUALIFIED_LOCAL"
+    }
+  ],
+  "state": "QUALIFICATION_RECEIPTS",
+  "receipt_type": "QUALIFICATION_RECEIPTS",
+  "scope_restriction": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "limits": "Per-module restricted review; no complete professional coverage or release."
+  },
+  "validation": {
+    "issue": 30,
+    "comment_id": 7239835702,
+    "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+    "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "reviewer": "chatgpt-web:independent-review-issue-30-comment-7239835702",
+  "content_digest": "2af7697b939e649aaded8e679b99243f99b3d787ee976d4322b26f807fff9686"
+}

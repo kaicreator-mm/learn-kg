@@ -1,0 +1,332 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P03",
+  "attempt_id": "P03-QUALIFICATION-01",
+  "receipt_id": "TASK:P03:P03-QUALIFICATION-01",
+  "input": [
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-03",
+      "content_digest": "d3c1862f40b7cd81f468c81b6960d5e1df21f1ae0d3f5585ea33ec02b84d95b9",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-03.json",
+          "sha256": "98b13eb9fcb499a425b8f4abac3830b61510707e62d953c0e4001372d7d4df3e"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "evidence/tasks/P03/P03-FORMAL-03.json",
+      "sha256": "98b13eb9fcb499a425b8f4abac3830b61510707e62d953c0e4001372d7d4df3e",
+      "type": "REVIEWED_CANDIDATE_RECEIPT"
+    }
+  ],
+  "state": "QUALIFIED_LOCAL",
+  "receipt_type": "QUALIFIED_LOCAL",
+  "scope_restriction": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "package_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_shard_sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+    "limits": "Activity/evidence-class routing only; no real learner observations.",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN"
+  },
+  "validation": {
+    "issue": 30,
+    "comment_id": 7239835702,
+    "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+    "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "reviewer": "chatgpt-web:independent-review-issue-30-comment-7239835702",
+  "reviewed_content_digest": "d3c1862f40b7cd81f468c81b6960d5e1df21f1ae0d3f5585ea33ec02b84d95b9",
+  "consumed_tuple": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K03",
+      "receipt_id": "TASK:K03:K03-FORMAL-03",
+      "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+          "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+        },
+        {
+          "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+          "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+        },
+        {
+          "path": "knowledge/v0.1.0/foundation-r3/K03/records-04.jsonl",
+          "sha256": "07e86ad0eeb6ea2c608661d43f50d3f2e21b9d84433e2d08f7a365433b8d46ca",
+          "stable_id": "K03.06.02.D4.02",
+          "record_sha256": "efb31cc2048a4a065333f9e21b25b8b45eb75bedbc151d1afaba015f57294cde"
+        },
+        {
+          "path": "knowledge/v0.1.0/foundation-r3/K03/records-03.jsonl",
+          "sha256": "39d8a418762ffd614188b877ed5b470355dbe698fd3ac80e1fd7c59e04c7b8f2",
+          "stable_id": "K03.02.04.D4.02",
+          "record_sha256": "db51eb0157ae8c111e539186e2eb2dbb27053e3b84348026268c556eead1b58d"
+        },
+        {
+          "path": "knowledge/v0.1.0/foundation-r3/K03/records-03.jsonl",
+          "sha256": "39d8a418762ffd614188b877ed5b470355dbe698fd3ac80e1fd7c59e04c7b8f2",
+          "stable_id": "K03.04.03.D4.02",
+          "record_sha256": "6f8ed12a33d77333f65ef009db49f0885ffb8efe5908175d63113a0542b96531"
+        }
+      ]
+    },
+    {
+      "task_id": "K04",
+      "receipt_id": "TASK:K04:K04-FORMAL-03",
+      "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+          "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+        },
+        {
+          "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+          "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+        },
+        {
+          "path": "knowledge/v0.1.0/foundation-r3/K04/records-02.jsonl",
+          "sha256": "457747e3c126e6eedfc65ebd4bc4891bd3e84358636efdf4cdda68ce472607b6",
+          "stable_id": "K04.02.01.D4.02",
+          "record_sha256": "e2ace036186eeda3be8b3933db6c372b81b04bda5d8419b93606265b91df1fda"
+        },
+        {
+          "path": "knowledge/v0.1.0/foundation-r3/K04/records-03.jsonl",
+          "sha256": "6dfcf2be7be4f0316a8eeb191971b471e870c1942011f3961348f870fc8d8c31",
+          "stable_id": "K04.06.01.D4.02",
+          "record_sha256": "f9ded6a95bfbe93877b9f7535b1f972c1e75ddae05e30ee45d9d259456d9d506"
+        },
+        {
+          "path": "knowledge/v0.1.0/foundation-r3/K04/records-02.jsonl",
+          "sha256": "457747e3c126e6eedfc65ebd4bc4891bd3e84358636efdf4cdda68ce472607b6",
+          "stable_id": "K04.01.04.D4.02",
+          "record_sha256": "01e606300165507d1ceb0cf601ea0a4c678916c0da3502fd1fd4da1ccca466c1"
+        }
+      ]
+    },
+    {
+      "task_id": "K05",
+      "receipt_id": "TASK:K05:K05-FORMAL-02",
+      "content_digest": "44d561458359a165d29d31603b35fa60f1b8e1311191e2faa49eaba49c78afeb",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K05/K05-FORMAL-02.json",
+          "sha256": "9191b45e42af9a1b0d37687a3579755ee72ed9ae1675652e38a3a809b657250e"
+        },
+        {
+          "path": "evidence/tasks/K05/K05-QUALIFICATION-02.json",
+          "sha256": "f56ab541e0094d772d105fe6597cf468f8744a6f3482d7e721fe6cd6962f933c"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+          "sha256": "764783df00425e4ed054f3c4b336c5afc6245f90368ebcb4f9807c7b756078fd",
+          "stable_id": "K05.03.02.PT.01",
+          "record_sha256": "e6fac10ef0a3c08f90a578557ee8c0228d1106186bee28909fad85e31bad87f8"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+          "sha256": "764783df00425e4ed054f3c4b336c5afc6245f90368ebcb4f9807c7b756078fd",
+          "stable_id": "K05.01.02.PT.01",
+          "record_sha256": "88d42456783f30dccd085bded9bbfcd441317ada45797a8b81e2b9fede40e339"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+          "sha256": "764783df00425e4ed054f3c4b336c5afc6245f90368ebcb4f9807c7b756078fd",
+          "stable_id": "K05.01.03.PT.01",
+          "record_sha256": "cb6888cecf4bad820ea792874b233b0621a53ae7ba3f52de35f0cca0ad5401d3"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K05/records-03.jsonl",
+          "sha256": "764783df00425e4ed054f3c4b336c5afc6245f90368ebcb4f9807c7b756078fd",
+          "stable_id": "K05.04.01.PT.01",
+          "record_sha256": "0d3bcc75b88ce64e9c829d0bfa9032079b2df1d7fa29d6cf6e6c925391d05f67"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+          "sha256": "1f7b2e82923ef1cf15c0bd9aeb5bd9747086e2360db45c7b4de0e5279a6b3e60",
+          "stable_id": "K06.02.01.PT.01",
+          "record_sha256": "b9a491f41270c19b01fbf7f3bc796f2a7fb75142c00c1105e9c763969655db36"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+          "sha256": "1f7b2e82923ef1cf15c0bd9aeb5bd9747086e2360db45c7b4de0e5279a6b3e60",
+          "stable_id": "K06.02.02.PT.01",
+          "record_sha256": "6927783a21145520b9aedf0f8b229e13f3fdb55f534e3f8eae882f7699471155"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+          "sha256": "1f7b2e82923ef1cf15c0bd9aeb5bd9747086e2360db45c7b4de0e5279a6b3e60",
+          "stable_id": "K06.03.01.PT.01",
+          "record_sha256": "c85f34e28ad146951e6a895926acf61ee8d1415c17364e746252c7807b45896b"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.04.02.PT.01",
+          "record_sha256": "820d3f78b7a2ec3ce6715c7df5e36f248c316d2f0a63520ccd6f757ced1ea858"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-02.jsonl",
+          "sha256": "1f7b2e82923ef1cf15c0bd9aeb5bd9747086e2360db45c7b4de0e5279a6b3e60",
+          "stable_id": "K06.02.04.PT.01",
+          "record_sha256": "31831681b9baac458b058569be952ea7c4d4580b8c8a40646d5ac53f7a1f925f"
+        }
+      ]
+    },
+    {
+      "task_id": "K12",
+      "receipt_id": "TASK:K12:K12-FORMAL-01",
+      "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K12/K12-FORMAL-01.json",
+          "sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.01.01.TR.01",
+          "record_sha256": "da8fe08546b88159e4dcf873dd0306632183499322ccbd9f66e473e31847a580"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+          "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+          "stable_id": "K12.04.01.TR.01",
+          "record_sha256": "2faa390b55e4667067485e63bea01271e5305f3d2fc9e6d4100e615dae68a1bb"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.03.01.TR.01",
+          "record_sha256": "e077a5d3ebb1b1ed0faaf04fc23a871cef06011209defe94e588c853e2e9e96a"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.02.02.TR.01",
+          "record_sha256": "641093d8ce967a30aa37a9873798a9238c9cce61902cb5034150892bacd293b9"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.02.05.TR.01",
+          "record_sha256": "61e578a525f845ce53e71d9e2102046d653343be5849ea96028f471bc2fa1c0c"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.02.03.TR.01",
+          "record_sha256": "ae7368b5e776c1569a8517f2ad7908831bf9e3f2231b91c582adbe432550c9d9"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.02.04.TR.01",
+          "record_sha256": "6667c581a52691ecb2f6dc764a01a968c0389a44d063fe432cfb2d9ddb012780"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+          "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+          "stable_id": "K12.04.05.TR.01",
+          "record_sha256": "9df61cd541f5c70a5fc80eb05980aa7f7a93c631a73f942e9bb6a9f4ece5dbcc"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+          "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+          "stable_id": "K12.06.01.TR.01",
+          "record_sha256": "c98b19e20b28784cc1f0b2d6bf6d3089dbf00d9557adce18e1b50cfa2f639363"
+        },
+        {
+          "path": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+          "sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "content_digest": "3f13a908f9145b188cb262ea3dfd940d82051c0b864663a531639593dedd7b35"
+}

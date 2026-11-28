@@ -1402,8 +1402,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR01",
-      "current_receipt": "evidence/tasks/P01/P01-FORMAL-02.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P01/P01-FORMAL-03.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P01/P01-QUALIFICATION-01.json"
     },
     {
       "id": "P02",
@@ -1460,8 +1461,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR01",
-      "current_receipt": "evidence/tasks/P02/P02-FORMAL-02.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P02/P02-FORMAL-03.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P02/P02-QUALIFICATION-01.json"
     },
     {
       "id": "P03",
@@ -1518,8 +1520,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR01",
-      "current_receipt": "evidence/tasks/P03/P03-FORMAL-02.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P03/P03-FORMAL-03.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P03/P03-QUALIFICATION-01.json"
     },
     {
       "id": "P04",
@@ -1586,8 +1589,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR01",
-      "current_receipt": "evidence/tasks/P04/P04-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P04/P04-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P04/P04-QUALIFICATION-01.json"
     },
     {
       "id": "P05",
@@ -1654,8 +1658,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR01",
-      "current_receipt": "evidence/tasks/P05/P05-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P05/P05-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P05/P05-QUALIFICATION-01.json"
     },
     {
       "id": "P06",
@@ -1717,8 +1722,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR01",
-      "current_receipt": "evidence/tasks/P06/P06-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P06/P06-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P06/P06-QUALIFICATION-01.json"
     },
     {
       "id": "P07",
@@ -1780,8 +1786,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR02",
-      "current_receipt": "evidence/tasks/P07/P07-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P07/P07-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P07/P07-QUALIFICATION-01.json"
     },
     {
       "id": "P08",
@@ -1853,8 +1860,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR02",
-      "current_receipt": "evidence/tasks/P08/P08-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P08/P08-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P08/P08-QUALIFICATION-01.json"
     },
     {
       "id": "P09",
@@ -1916,8 +1924,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR02",
-      "current_receipt": "evidence/tasks/P09/P09-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P09/P09-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P09/P09-QUALIFICATION-01.json"
     },
     {
       "id": "P10",
@@ -1989,8 +1998,9 @@
       ],
       "output_receipt": "CANDIDATE_READY",
       "qualification_gate": "PR02",
-      "current_receipt": "evidence/tasks/P10/P10-FORMAL-01.json",
-      "qualification_scope": "RESTRICTED"
+      "current_receipt": "evidence/tasks/P10/P10-FORMAL-02.json",
+      "qualification_scope": "RESTRICTED",
+      "qualification_receipt": "evidence/tasks/P10/P10-QUALIFICATION-01.json"
     },
     {
       "id": "PR01",
@@ -2008,7 +2018,7 @@
       "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
       "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "READY",
+      "status": "QUALIFICATION_RECEIPTS",
       "requirements": [
         {
           "task_id": "P01",
@@ -2035,7 +2045,8 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "QUALIFICATION_RECEIPTS"
+      "output_receipt": "QUALIFICATION_RECEIPTS",
+      "current_receipt": "evidence/tasks/PR01/PR01-FORMAL-01.json"
     },
     {
       "id": "PR02",
@@ -2051,7 +2062,7 @@
       "deliverable": "批次内每模块独立资格收据（内容hash/消费tuple/证据/裁决），不是整批自动资格",
       "acceptance": "逐模块exact SHA与内容身份，P0/P1关闭、P2明确处置；可审候选依赖但仅局部资格，G03验闭包；输入变化使受影响资格/消费/验证收据STALE，须重新绑定及有限复核",
       "kind": "review",
-      "status": "READY",
+      "status": "QUALIFICATION_RECEIPTS",
       "requirements": [
         {
           "task_id": "P07",
@@ -2070,7 +2081,8 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "QUALIFICATION_RECEIPTS"
+      "output_receipt": "QUALIFICATION_RECEIPTS",
+      "current_receipt": "evidence/tasks/PR02/PR02-FORMAL-01.json"
     },
     {
       "id": "F01",
@@ -2236,7 +2248,7 @@
       "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "DB01",
@@ -2275,7 +2287,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/F03/F03-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "F04",
@@ -2298,7 +2312,7 @@
       "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "DB01",
@@ -2345,7 +2359,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/F04/F04-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "F05",
@@ -2369,7 +2385,7 @@
       "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "DB01",
@@ -2420,7 +2436,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/F05/F05-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "F06",
@@ -2520,7 +2538,7 @@
       "deliverable": "F覆盖索引、唯一主责引用、跨域绑定、具体输入/输出和正负例；canonical输入、逐项CQ/LC证据及消费版本；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "不复制K/H/P知识；对应CQ及LC验收；可追溯且有拒绝/未知语义；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "DB01",
@@ -2555,7 +2573,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/F07/F07-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "F08",
@@ -2643,7 +2663,7 @@
       "deliverable": "评价协议、版本、候选修订、审核与发布/回退契约；canonical输入、逐项CQ/LC证据及消费版本；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "个体观测不直接写正式库；证据/权限/版本隔离；实验效果不虚报；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "K09",
@@ -2670,7 +2690,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/E01/E01-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "A01",
@@ -2910,7 +2932,7 @@
       "deliverable": "绑定输入、专业规则、可判定输出、替代方案、失败案例、证据链；canonical输入、逐项CQ/LC证据及消费版本；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "真正跨域推导/决策而非仅链接；与CQ/LC一致，按需路由；通过owner/type/version/条件校验，竞争/未知/拒绝及独立预期；不得以链接覆盖代替执行；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "F05",
@@ -2925,7 +2947,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/A07/A07-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "A08",
@@ -3627,5 +3651,5 @@
     "validation": "static schema and semantic validation first; later importer tests use in-memory SQLite by default; physical SQLite tests only in separately authorized scope, report untested obligations explicitly",
     "release": "approved readable source package + schemas + importer + validation reports and manifest; no .sqlite/.db binary files"
   },
-  "current_task_state_note": "SRC01 ACCEPT_SCOPED / PRESERVATION_VERIFIED for restricted private preservation only; historical PDF byte identity, rights/publication and visual layout remain HOLD. HS00 is READY; HSK01 remains PLANNED pending HS00 candidate acceptance. P01-P10 cumulative process remains REWORK_REQUIRED due P09 identity/time remediation; F/E/A07 candidate delta reviews pending."
+  "current_task_state_note": "P01-P10 exact candidate-3 rebind and PR01/PR02 restricted qualifications registered from #30 comment 7239835702; F03/F04/F05/F07/E01/A07 candidate receipts registered, G03/CQ/LC/rights/release not granted. HS00 unchanged."
 }

@@ -1,0 +1,641 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P07",
+  "attempt_id": "P07-FORMAL-02",
+  "receipt_id": "TASK:P07:P07-FORMAL-02",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K08",
+      "receipt_id": "TASK:K08:K08-FORMAL-02",
+      "content_digest": "232d438b24281923530b351968bdfb24517c09ef8f39fc152dedce98f20a5faa",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K08/K08-FORMAL-02.json",
+          "sha256": "789f7d9c18d9e200d8d6512e67ce132bd9c4191fc01f18d2197685902d7e3b69"
+        },
+        {
+          "path": "evidence/tasks/K08/K08-QUALIFICATION-02.json",
+          "sha256": "1f716e34738d2aa32dfe09add8d4dc10beaba8715c1df233627633914f038cd0"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+          "sha256": "ff0a31aa5faa8a2afbac3c4252f45e4cf40e76514b8ba933286cfba4b50ed744",
+          "stable_id": "K08.02.03.D4.02",
+          "record_sha256": "ae6e2fb53ca3326bc6b17bc8f99894602c5ac9402ff40f2ebc3cc282f7838d26"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-02.jsonl",
+          "sha256": "ff0a31aa5faa8a2afbac3c4252f45e4cf40e76514b8ba933286cfba4b50ed744",
+          "stable_id": "K08.02.05.D4.02",
+          "record_sha256": "7f6d05db47bd3ff9133f5ea466c977884077314c34a2d6aa9201878e2e3bc1e6"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.04.04.D4.02",
+          "record_sha256": "7d55e453c4e238d411aa62edc3e7a1ce0cd4da31f18711b39d7f7f6030eab0dd"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.05.04.PT.01",
+          "record_sha256": "2e8964f92f9f31ccbe585b225d0b20f65499cb295fedd31bdcf9e5f48936a7c3"
+        }
+      ]
+    },
+    {
+      "task_id": "K13",
+      "receipt_id": "TASK:K13:K13-FORMAL-01",
+      "content_digest": "ad575d23624642747536f31d08b0be614ebe60cc613b9334eb90f52a924545f1",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K13/K13-FORMAL-01.json",
+          "sha256": "a3a7d30d7652a4d9a911557015f9d53bbb6642705feff70e60580937d37a988f"
+        },
+        {
+          "path": "evidence/tasks/K13/K13-QUALIFICATION-01.json",
+          "sha256": "12b8e2628f4ff6232d5147c3dd77828e2f34b7323a9a734c44644a70f04171cf"
+        },
+        {
+          "path": "knowledge/v0.1.0/social-research-r2/K13/records-02.jsonl",
+          "sha256": "ca8ad4d87b5baa86caa7d88d53364b1a401968110fecffbf5056e1b3c48ee579",
+          "stable_id": "K13.04.04.SR.01",
+          "record_sha256": "d3ccbf7e8a526bace2f4839b2322811cf3d5a8dc7c3d986522f79b02ce8478a7"
+        }
+      ]
+    },
+    {
+      "task_id": "K16",
+      "receipt_id": "TASK:K16:K16-FORMAL-01",
+      "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+          "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+        },
+        {
+          "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+          "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.03.02.TG.01",
+          "record_sha256": "20193894f3d23a02138cd577d5cd2b5324825ec85e0da232314c5fa329932c6a"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-02.jsonl",
+          "sha256": "e7331a5eaff0f5b97f348b97cc44ca6faafbb17c5eb191531b114dfa48c55583",
+          "stable_id": "K16.05.03.TG.01",
+          "record_sha256": "863f67b11de8c924eef90ff2ba996a4e6c36fff35d78e56ac51506faa0e7121d"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        },
+        {
+          "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+          "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.03.02.TG.01",
+          "record_sha256": "454be5f099da8aacec9ff0e38c3619bfcc077a499a0e7ca3c2334119082829c5"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.02.01.TG.01",
+          "record_sha256": "ab0fcac89136c5978b6d830dcce26b0e3bf2f2f972a9d1355b9eacf4b6f75cd3"
+        }
+      ]
+    },
+    {
+      "task_id": "P02",
+      "receipt_id": "TASK:P02:P02-FORMAL-03",
+      "content_digest": "ca2bbb27b9f0d0646636c8c11bcc39643af2449f51fa85214e581f2ede7631ad",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P02/P02-FORMAL-03.json",
+          "sha256": "b738232f049464586f15e54fde876968c6744bc81b98587a0f552a7cd3565893"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+          "sha256": "ed7d043443df2b732a63e1afc9ecd74305c3e51158b2e62000436208e52810b2"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+          "sha256": "ed7d043443df2b732a63e1afc9ecd74305c3e51158b2e62000436208e52810b2",
+          "stable_id": "P02.GOAL",
+          "record_sha256": "3c9552193adbbd5daf2f95878b665f98f79280a61eb754af5ac09466a05a96bf",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+          "sha256": "ed7d043443df2b732a63e1afc9ecd74305c3e51158b2e62000436208e52810b2",
+          "stable_id": "P02.PLAN",
+          "record_sha256": "5d453b30ca4d59dfe18daee8702aca16f544939c9e2090b90303a59276271042",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-03",
+      "content_digest": "d3c1862f40b7cd81f468c81b6960d5e1df21f1ae0d3f5585ea33ec02b84d95b9",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-03.json",
+          "sha256": "98b13eb9fcb499a425b8f4abac3830b61510707e62d953c0e4001372d7d4df3e"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+          "stable_id": "P03.REFLECTION",
+          "record_sha256": "85a32594d73735f48f77b2f4acc590d738178a7e581f4dca790a03689d69c20b",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+      "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P07.jsonl",
+      "sha256": "c7eefde84bcf71d29b731384d514ccf7c23d96c659b2340788d4278d44b58bc5",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/migration.json",
+      "sha256": "502d7452f15670874f3283c5e483b2830086f529a62698bcae678fe896352072",
+      "type": "EXACT_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/p-rebind-regression.json",
+      "sha256": "f60fe6bd52cfc1c1672fdb25414ea75954d0393cfaa281f2a192da8a2af0c8f6",
+      "type": "SQL_BUILDER_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/coverage.json",
+      "sha256": "f1cf8db97b26a8de76596cd54641514294b8e5ede0d53bf609e6fc26454a3937",
+      "type": "RESTRICTED_SCOPE_LEDGER"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/build.py",
+      "sha256": "d4b4d52f20a1d2caa826ea0fd341bb85b66a4a483b4e77ac31c00f1272e56d0f",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/semantic_checks.py",
+      "sha256": "a3644c39b28a24446d99f8ee38b6a67eff3041f338e1e9218bfc4d09ced16e99",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/fixtures.json",
+      "sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/replay_p_rebind.py",
+      "sha256": "204130cd649909bfdeb9000b0dc6c74c4f674670380616bc96b2cfe1eb3b6bbd",
+      "type": "EXACT_VALIDATION_INPUT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_records": 51,
+    "case_count": 21,
+    "used_claim_ids": [
+      "K08.02.03.D4.02",
+      "K08.02.05.D4.02",
+      "K08.04.04.D4.02",
+      "K08.05.04.PT.01",
+      "K13.04.04.SR.01",
+      "K16.03.02.TG.01",
+      "K16.05.03.TG.01",
+      "K19.02.01.TG.01",
+      "K19.03.02.TG.01"
+    ],
+    "process_dependency_ids": {
+      "P02": [
+        "P02.GOAL",
+        "P02.PLAN"
+      ],
+      "P03": [
+        "P03.REFLECTION"
+      ]
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "coverage": [
+      {
+        "id": "P07.RQ01",
+        "scope": "本人认可目标、可拒绝的挑战调整",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "真实个体动机测量与挑战校准",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P07.RQ02",
+        "scope": "同目标、评分版本、支持及单位的任务观察变化",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "一般量尺和真实进步推断",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P07.RQ03",
+        "scope": "支持和自述分离，不代答、不贴标签",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "真实关系支持有效性及自述解释",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P07.RQ04",
+        "scope": "退出、拒绝、暂停及显式恢复优先",
+        "target": "P07.POLICY",
+        "composition": "P07.COMPOSITION",
+        "candidate_case_group": "P07",
+        "remaining": "真实跨调用恢复及数据治理",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      }
+    ],
+    "concrete_cases": 0,
+    "reviewed_scope": "Voluntary ADVICE_ONLY, canonical route and precedence; no motivation measurement.",
+    "reviewed_artifact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "reviewed_artifact_tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "record_digests": [
+      {
+        "stable_id": "P07.GUARD.EXIT",
+        "kind": "ConditionSpec",
+        "sha256": "2445077fb38eb391eabbd3f5d1440547ade00bd6eece80ebb505723df0138c68"
+      },
+      {
+        "stable_id": "P07.GUARD.DECLINE",
+        "kind": "ConditionSpec",
+        "sha256": "a774f92488a7b333768756b0463d92ff1d64e63ae4a2a137b8036c7bba6f75d2"
+      },
+      {
+        "stable_id": "P07.GUARD.PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "682437ce75fb6ea3dea185facfcddb116fbb53f960a2290802dea72fa9d9aa7f"
+      },
+      {
+        "stable_id": "P07.GUARD.ADJUST_CHALLENGE",
+        "kind": "ConditionSpec",
+        "sha256": "1a8db5f631c0a23c8405fdb5272289ef4d4b8da872b625ed2a6d3cdec69ed97f"
+      },
+      {
+        "stable_id": "P07.GUARD.REFLECT",
+        "kind": "ConditionSpec",
+        "sha256": "f8373e69f305ba9919574f3a8dc23a4f9dd4ccc55aa2e8c33ea596f35ac252f9"
+      },
+      {
+        "stable_id": "P07.GUARD.REQUEST_SUPPORT",
+        "kind": "ConditionSpec",
+        "sha256": "211582f2a802915e153fba6a42a56dbc4a484b3fe371ee04757d7402967a654f"
+      },
+      {
+        "stable_id": "P07.GUARD.REST",
+        "kind": "ConditionSpec",
+        "sha256": "1d814c4f8a083af67d125fc83a03cf76786b6ac4dd2f3701ee72d5b4c24b8f54"
+      },
+      {
+        "stable_id": "P07.POLICY",
+        "kind": "PolicySpec",
+        "sha256": "cc5800a0b83bbd13666f0782d817d0983ec76b4cb2f7e92c9a85635718c1050e"
+      },
+      {
+        "stable_id": "P07.C001",
+        "kind": "Case",
+        "sha256": "4ddd4bd72fb96c3f3c4f58f9aa70b3f13f7ff3e2be15dd2f2f26b14de1f4e4c1"
+      },
+      {
+        "stable_id": "P07.C001.VAL",
+        "kind": "Validation",
+        "sha256": "b11b3209abf3bace73daf0483626df2eebea1370288f9e2d42da80179b640ace"
+      },
+      {
+        "stable_id": "P07.C002",
+        "kind": "Case",
+        "sha256": "32fd030db26d36baeb0fd1c428205e77b30f598c6e1b88181f6ac4a6820ee432"
+      },
+      {
+        "stable_id": "P07.C002.VAL",
+        "kind": "Validation",
+        "sha256": "c7ac34091c7d82e5f4a6250b795a4e329bed6d1bb720b1ea935e6ab141fdcbfd"
+      },
+      {
+        "stable_id": "P07.C003",
+        "kind": "Case",
+        "sha256": "df91afc66ee5a3b7e41684ca42573f25a4a0958ec17f75a6ec189e3105e1f476"
+      },
+      {
+        "stable_id": "P07.C003.VAL",
+        "kind": "Validation",
+        "sha256": "da54aec59aa6e552d475570d0c4436929375739d18b69c4c6449f6626a6c9e6e"
+      },
+      {
+        "stable_id": "P07.C004",
+        "kind": "Case",
+        "sha256": "6b0cc0cb7baa4c4d554e2a03914fc01e5c4d644c6c13336dd830c8bd667aa8ef"
+      },
+      {
+        "stable_id": "P07.C004.VAL",
+        "kind": "Validation",
+        "sha256": "d3ade8a5086f86cb3207586797c01b2c813c1dc5e93473eb03945a5270af7e98"
+      },
+      {
+        "stable_id": "P07.C005",
+        "kind": "Case",
+        "sha256": "8fed3c9b41f887ab75c466407d4c4dd17c34f0d8ecbb667cfa38904bf83c2ed4"
+      },
+      {
+        "stable_id": "P07.C005.VAL",
+        "kind": "Validation",
+        "sha256": "083bf0e6a62ba5a4eb0ef5c473e2dd1b019842bd77a9e9b75451ed680f3683d9"
+      },
+      {
+        "stable_id": "P07.C006",
+        "kind": "Case",
+        "sha256": "4202ce5e1e541df10bf9cef0d18ccbe8ad5adb966af4e075556c2257019d82cf"
+      },
+      {
+        "stable_id": "P07.C006.VAL",
+        "kind": "Validation",
+        "sha256": "3a48957e3da7372a15f08ddc07467b6154535ffe62ec3f265132f435d13e63b3"
+      },
+      {
+        "stable_id": "P07.C007",
+        "kind": "Case",
+        "sha256": "cd915cfe67d4ca7ced1229d98fee45a7663457036826f7149264ac284fd62452"
+      },
+      {
+        "stable_id": "P07.C007.VAL",
+        "kind": "Validation",
+        "sha256": "d629a72a2c3abcad383f352214d17ca9cdf1e0dd17d408ea0988b55002605f9a"
+      },
+      {
+        "stable_id": "P07.C008",
+        "kind": "Case",
+        "sha256": "597e7fbac6c8502ef4ffa1a2281f1dad10297e379c9c41f8f8b64e4ac335aeb2"
+      },
+      {
+        "stable_id": "P07.C008.VAL",
+        "kind": "Validation",
+        "sha256": "42dec38b7d9cb8261156968a51594a2ad3f229a3c9b2296edc4a9198297aef4d"
+      },
+      {
+        "stable_id": "P07.C009",
+        "kind": "Case",
+        "sha256": "8bf7eaf5c6aec9c763b208a9a71c3bc95419d23456b6aa7af1e70e12dad019c8"
+      },
+      {
+        "stable_id": "P07.C009.VAL",
+        "kind": "Validation",
+        "sha256": "01832eb5ba1b2dfebd19887a8397695f050d7a38987ebad1594613f577381aa2"
+      },
+      {
+        "stable_id": "P07.C010",
+        "kind": "Case",
+        "sha256": "9c3b95dbe012fe7e8dd91de58cf6ea162ef6be35d3c7c1d104050a337d31be0e"
+      },
+      {
+        "stable_id": "P07.C010.VAL",
+        "kind": "Validation",
+        "sha256": "abc3537fd70e386eb323bbcc68a4850055c0ae9cc9f14826c2c4074155fa6efb"
+      },
+      {
+        "stable_id": "P07.C011",
+        "kind": "Case",
+        "sha256": "e0319f0083497a593cbb85531066a9c2034f02eccba2533121609838953d784f"
+      },
+      {
+        "stable_id": "P07.C011.VAL",
+        "kind": "Validation",
+        "sha256": "fa7f283609c9c9d81ea5c22a0a03319e489d3d154a4601efc96b66c686597c9f"
+      },
+      {
+        "stable_id": "P07.C012",
+        "kind": "Case",
+        "sha256": "5cc22eb7afdb67daa4bbf9037a5eb2b5729c184e86763c9e2000351ab02c06b2"
+      },
+      {
+        "stable_id": "P07.C012.VAL",
+        "kind": "Validation",
+        "sha256": "d691dfca58c7747b35fb22c2942747c377380ab548d18d4ff0ed4c3e023d79e5"
+      },
+      {
+        "stable_id": "P07.C013",
+        "kind": "Case",
+        "sha256": "09db73d69aa910609a8874e7802488b051473050ca4f7a32669fa76669a2ef5b"
+      },
+      {
+        "stable_id": "P07.C013.VAL",
+        "kind": "Validation",
+        "sha256": "a742c9ae2bf861a71dcf170b04ba3658196000b46711bc1640d7a24870862dcd"
+      },
+      {
+        "stable_id": "P07.C014",
+        "kind": "Case",
+        "sha256": "ae97dcc039201f01ec98f535d00ba25452e7a7a8694ec6d394866644b358becb"
+      },
+      {
+        "stable_id": "P07.C014.VAL",
+        "kind": "Validation",
+        "sha256": "262929d842c340098761f27b71da5d5270c38d159af1de777d683777953fda55"
+      },
+      {
+        "stable_id": "P07.C015",
+        "kind": "Case",
+        "sha256": "420f2c4200858fc44175f54ab5182ea7088187089c7493c1306010d2ef3b6143"
+      },
+      {
+        "stable_id": "P07.C015.VAL",
+        "kind": "Validation",
+        "sha256": "1ecb878cdd44e36d85775aed332a4cc276e8a43014c680c9a1560c214083c852"
+      },
+      {
+        "stable_id": "P07.C016",
+        "kind": "Case",
+        "sha256": "c4faf3a20302c05daa68b649cfab6cdf79390309e93c1ffc0e6dfc287480776e"
+      },
+      {
+        "stable_id": "P07.C016.VAL",
+        "kind": "Validation",
+        "sha256": "d3b1552bce89fd80370e154e1cc468aaf28d1305df597ad4fc716852ffc6dc6c"
+      },
+      {
+        "stable_id": "P07.C017",
+        "kind": "Case",
+        "sha256": "b339a3c4f7698501f1e9659c1e06ebda5004eece1049ad04f36571bee883dcaa"
+      },
+      {
+        "stable_id": "P07.C017.VAL",
+        "kind": "Validation",
+        "sha256": "d7aa4889de13f2a0d1285d0f986a9d1b4236f820ddb55145ceaafd9887b99ac5"
+      },
+      {
+        "stable_id": "P07.C018",
+        "kind": "Case",
+        "sha256": "038826db926b4d0142350222c26df8df45eab6ed1c48e1f2d427e3623ddefdf8"
+      },
+      {
+        "stable_id": "P07.C018.VAL",
+        "kind": "Validation",
+        "sha256": "c019c562b4911046c3e8860910653cbc053797f826aebb904b070e46e5dab495"
+      },
+      {
+        "stable_id": "P07.C019",
+        "kind": "Case",
+        "sha256": "dd520e980b896d4329ef226c2bdfa68b0f9e14ff1d45c992b22d3a1c4b3c9d6a"
+      },
+      {
+        "stable_id": "P07.C019.VAL",
+        "kind": "Validation",
+        "sha256": "f2cb6542d0acf22bac11be14510b113e3fc5c36cc61323aff3a37aa0bbddf750"
+      },
+      {
+        "stable_id": "P07.C020",
+        "kind": "Case",
+        "sha256": "cd902669a1b30e8d0cd62f5363e1d3c0b81cd1d779e8e3c926087501d0b988b6"
+      },
+      {
+        "stable_id": "P07.C020.VAL",
+        "kind": "Validation",
+        "sha256": "4ecefee49fe7e98e312c13b5a4102aee25afe105139e2aefce7c033abcb6aab3"
+      },
+      {
+        "stable_id": "P07.C021",
+        "kind": "Case",
+        "sha256": "ae8021d22519ccc430793487b8997d04196fbca7db369082d16dfd8503309424"
+      },
+      {
+        "stable_id": "P07.C021.VAL",
+        "kind": "Validation",
+        "sha256": "c10dbc7c98d2431cf1859266bfdc7195113e3382708a4b7f176287b42a9a7b99"
+      },
+      {
+        "stable_id": "P07.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "287494e0f0296fed04f6a0b284b34e7e413637ec07ab18ce082332eaaea8ad9f"
+      }
+    ],
+    "supersedes": "TASK:P07:P07-FORMAL-01",
+    "migration_only": true
+  },
+  "validation": {
+    "independent_review": {
+      "issue": 30,
+      "comment_id": 7239835702,
+      "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+      "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+      "independent_result": "ACCEPT_SCOPED",
+      "findings": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    "builder_cases": 21,
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY",
+    "qualification_registered": false
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "content_digest": "f6ac338e921be546caeadefccb8cdbe8aa8e94ba19d24b0a06735652b2ecc77d"
+}

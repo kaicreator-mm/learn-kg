@@ -1,0 +1,1121 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P06",
+  "attempt_id": "P06-FORMAL-02",
+  "receipt_id": "TASK:P06:P06-FORMAL-02",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.06.01.PT.01",
+          "record_sha256": "898fa51777c5ee969c0d891f4b8beddb00469840966dc5d6f12ab646e2f1273b"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.06.03.PT.01",
+          "record_sha256": "aacb5872b5c4d65589cc08414140322f0c30b583ac6f63e86a03aade503f9b5b"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.06.04.PT.01",
+          "record_sha256": "20418c4e82b6da7855d23fd3cb135a1dd00d4376f058161d3c34e71c0a93c7bd"
+        }
+      ]
+    },
+    {
+      "task_id": "K09",
+      "receipt_id": "TASK:K09:K09-FORMAL-01",
+      "content_digest": "bccf41be1b552c203974a374997d8aff4814b9a1ded7bab9d9adc9399ea25862",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K09/K09-FORMAL-01.json",
+          "sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85"
+        },
+        {
+          "path": "evidence/tasks/K09/K09-QUALIFICATION-01.json",
+          "sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340"
+        },
+        {
+          "path": "knowledge/v0.1.0/measurement-r4/K09/records-03.jsonl",
+          "sha256": "c9010b42d6d8cc77c697e22fce48a4c0c40356287b218ba099cd4e033cb9ed90",
+          "stable_id": "K09.01.04.ME.01",
+          "record_sha256": "32760ba48419325c82c58b7372368a4103ad56ecc880a86d6fa64e56cf0843ab"
+        }
+      ]
+    },
+    {
+      "task_id": "K10",
+      "receipt_id": "TASK:K10:K10-FORMAL-01",
+      "content_digest": "36ac3110d5a361eedcd47a31f513726e16938f4d7b625ca42b18cfb7574f71f2",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K10/K10-FORMAL-01.json",
+          "sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243"
+        },
+        {
+          "path": "evidence/tasks/K10/K10-QUALIFICATION-01.json",
+          "sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+          "sha256": "d7ea8a8d5c695edee3b655f815ea6bda9b77607a5daeb0105155ab65ef0c8fe2",
+          "stable_id": "K10.01.02.TR.01",
+          "record_sha256": "c68038d61e8fad247a5e0cfc65385c80e103645121236af313b875e2a67a3de9"
+        }
+      ]
+    },
+    {
+      "task_id": "K12",
+      "receipt_id": "TASK:K12:K12-FORMAL-01",
+      "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K12/K12-FORMAL-01.json",
+          "sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2"
+        },
+        {
+          "path": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+          "sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+          "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+          "stable_id": "K12.03.03.TR.01",
+          "record_sha256": "44ce23660be3e6867d70a08ac8977e7c44765daca8774e0cf445a2025f6abcbf"
+        }
+      ]
+    },
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-03",
+      "content_digest": "d3c1862f40b7cd81f468c81b6960d5e1df21f1ae0d3f5585ea33ec02b84d95b9",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-03.json",
+          "sha256": "98b13eb9fcb499a425b8f4abac3830b61510707e62d953c0e4001372d7d4df3e"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+          "stable_id": "P03.EXPLANATION",
+          "record_sha256": "816eb17cc00abdab250952d2f3401a6e16fff15ab8d1c5330f9a885166d4eee3",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "P04",
+      "receipt_id": "TASK:P04:P04-FORMAL-02",
+      "content_digest": "c1f96b3d5b89f926dcbb40740c84634f33fec45180a1b149a6a410b049223694",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P04/P04-FORMAL-02.json",
+          "sha256": "9c27d1e96d2dd3db2b59a366bd558249c7394955bdf85579b879107064e0909e"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+          "sha256": "2ac414a9a6b1bc4d32d4e75e05b77700afd7ec03c846bdade98ab7ef53eb39d3"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+          "sha256": "2ac414a9a6b1bc4d32d4e75e05b77700afd7ec03c846bdade98ab7ef53eb39d3",
+          "stable_id": "P04.FLOW",
+          "record_sha256": "acbfea33e30def2ce00b9b5997398cb4c0a2b59dab981b16e42150a14295b11a",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+      "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P06.jsonl",
+      "sha256": "b96e35c7905d8819107f13a2ed3027a9cadcbade19f876c3bfe216481263d928",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/migration.json",
+      "sha256": "502d7452f15670874f3283c5e483b2830086f529a62698bcae678fe896352072",
+      "type": "EXACT_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/p-rebind-regression.json",
+      "sha256": "f60fe6bd52cfc1c1672fdb25414ea75954d0393cfaa281f2a192da8a2af0c8f6",
+      "type": "SQL_BUILDER_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/coverage.json",
+      "sha256": "f1cf8db97b26a8de76596cd54641514294b8e5ede0d53bf609e6fc26454a3937",
+      "type": "RESTRICTED_SCOPE_LEDGER"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/build.py",
+      "sha256": "d4b4d52f20a1d2caa826ea0fd341bb85b66a4a483b4e77ac31c00f1272e56d0f",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/semantic_checks.py",
+      "sha256": "a3644c39b28a24446d99f8ee38b6a67eff3041f338e1e9218bfc4d09ced16e99",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/fixtures.json",
+      "sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/replay_p_rebind.py",
+      "sha256": "204130cd649909bfdeb9000b0dc6c74c4f674670380616bc96b2cfe1eb3b6bbd",
+      "type": "EXACT_VALIDATION_INPUT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_records": 153,
+    "case_count": 58,
+    "used_claim_ids": [
+      "K06.06.01.PT.01",
+      "K06.06.03.PT.01",
+      "K06.06.04.PT.01",
+      "K09.01.04.ME.01",
+      "K10.01.02.TR.01",
+      "K12.03.03.TR.01"
+    ],
+    "process_dependency_ids": {
+      "P04": [
+        "P04.FLOW"
+      ],
+      "P03": [
+        "P03.EXPLANATION"
+      ]
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "coverage": [
+      {
+        "id": "P06.RQ01",
+        "scope": "原始事件、版本、分母、缺答无效与错误分开",
+        "target": "P06.FLOW",
+        "composition": "P06.COMPOSITION",
+        "candidate_case_group": "P06",
+        "remaining": "一般评分量规、真实评分信效度",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P06.RQ02",
+        "scope": "现象与竞争原因、区分证据分开",
+        "target": "P06.FLOW",
+        "composition": "P06.COMPOSITION",
+        "candidate_case_group": "P06",
+        "remaining": "现实原因诊断与复杂竞争解释",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P06.RQ03",
+        "scope": "提示和纠错有界，保留原响应",
+        "target": "P06.FLOW",
+        "composition": "P06.COMPOSITION",
+        "candidate_case_group": "P06",
+        "remaining": "动态反馈内容及现实适用性",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P06.RQ04",
+        "scope": "新变式独立复测；不据此推断因果效果",
+        "target": "P06.FLOW",
+        "composition": "P06.COMPOSITION",
+        "candidate_case_group": "P06",
+        "remaining": "因果反馈效果与长期复测",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      }
+    ],
+    "concrete_cases": 12,
+    "reviewed_scope": "Synthetic scoring/feedback; no causal diagnosis or general rubric.",
+    "reviewed_artifact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "reviewed_artifact_tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "record_digests": [
+      {
+        "stable_id": "P06.ACT.OBSERVE.SKILL",
+        "kind": "SkillType",
+        "sha256": "562b0914b875d39c7f836c78cb17775f1a9f3826ddc02cce88e8c3b5fdf433ad"
+      },
+      {
+        "stable_id": "P06.ACT.OBSERVE.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "7391dd1e0d22866eca1c3044ff34c62b37c34faeb7c9d179ff3d41687f22b3ca"
+      },
+      {
+        "stable_id": "P06.ACT.OBSERVE.GOAL",
+        "kind": "Goal",
+        "sha256": "f5661c70f17887432a4920ca50b7dd739acda46ddbe554a4e376cd762ad71934"
+      },
+      {
+        "stable_id": "P06.ACT.OBSERVE.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "1c76823433a52a310caf5ee75dea4a077ddcb599fcbb9234566920d7463c8add"
+      },
+      {
+        "stable_id": "P06.ACT.OBSERVE.ROLE",
+        "kind": "Role",
+        "sha256": "fbe896c14aa9b542ed8684e320e8aa0774ba5b6245775bdafb066f230181a220"
+      },
+      {
+        "stable_id": "P06.ACT.OBSERVE",
+        "kind": "Activity",
+        "sha256": "ef8ca2acfe0a2e585a6a5f8a3a4fb628b4598671e5616024eace4ab9c46931bb"
+      },
+      {
+        "stable_id": "P06.GUARD.OBSERVE",
+        "kind": "ConditionSpec",
+        "sha256": "610cf9a2ed95f81e1993be4246ba6b90798e3ac47d8bc2d8b25ed1cc51ad9550"
+      },
+      {
+        "stable_id": "P06.ACT.SCORE.SKILL",
+        "kind": "SkillType",
+        "sha256": "0953ca7f4d106073732ae689d604459ad77719dd02853fb06b4249b9ca31e320"
+      },
+      {
+        "stable_id": "P06.ACT.SCORE.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "9be7cd7c3cea531fdcadff746b98e0f85514d2ea153240c7b03bc68e8f9e0c4b"
+      },
+      {
+        "stable_id": "P06.ACT.SCORE.GOAL",
+        "kind": "Goal",
+        "sha256": "3c6a57e0b3613a2c210293afa4fc37e2613f69c100d39e738808d56179ca479e"
+      },
+      {
+        "stable_id": "P06.ACT.SCORE.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "b66f2f886151c22bf903512464afe8d0d35c430b95824690022af9bd3a84acd7"
+      },
+      {
+        "stable_id": "P06.ACT.SCORE.ROLE",
+        "kind": "Role",
+        "sha256": "72c40081d7fe1c7367d7ec52c7bc550f0e8d553fe59674ec97887c7875e57bd0"
+      },
+      {
+        "stable_id": "P06.ACT.SCORE",
+        "kind": "Activity",
+        "sha256": "eb4b5b930003a38b4df83ee65e8d24d9c87c03e2247aa97a37ca2a683037d827"
+      },
+      {
+        "stable_id": "P06.GUARD.SCORE",
+        "kind": "ConditionSpec",
+        "sha256": "7c106de4072b1fe5edf6eee536a59aa7b990830468229946c6b20fec5a434fe3"
+      },
+      {
+        "stable_id": "P06.ACT.DISCRIMINATE.SKILL",
+        "kind": "SkillType",
+        "sha256": "09e4d78417c7797b52770998556585ae3e2b093479c88d64601be4f4c3e369d0"
+      },
+      {
+        "stable_id": "P06.ACT.DISCRIMINATE.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "df6a06a9e9519a76590c33e897ce116b28ec87868e114c813e55a933d01ed78d"
+      },
+      {
+        "stable_id": "P06.ACT.DISCRIMINATE.GOAL",
+        "kind": "Goal",
+        "sha256": "63a1c1826d9e9999772746471a5752e1825391f1adcdd5bc9324122e5ec62c23"
+      },
+      {
+        "stable_id": "P06.ACT.DISCRIMINATE.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "5bd883f901b7dee2e9f4649bde029cf88797c41599224f35351c57205cc04b46"
+      },
+      {
+        "stable_id": "P06.ACT.DISCRIMINATE.ROLE",
+        "kind": "Role",
+        "sha256": "31e033ab104bcd01bd0f5e26dea8103df74424ed73796a243cfab02f5483cf61"
+      },
+      {
+        "stable_id": "P06.ACT.DISCRIMINATE",
+        "kind": "Activity",
+        "sha256": "006ce4fbad7e486fc0855b7e7c2f54591d94c780e2ea63e855c1a274aea8d764"
+      },
+      {
+        "stable_id": "P06.GUARD.DISCRIMINATE",
+        "kind": "ConditionSpec",
+        "sha256": "c943017762e01ff2299cbedd6eadeacde9b4c96ef8ac1409e251c220896a2827"
+      },
+      {
+        "stable_id": "P06.ACT.FEEDBACK.SKILL",
+        "kind": "SkillType",
+        "sha256": "3f384cb847a56df45d0d5a2c3c963623b76bdf0e7732be72a3c745a6db1930ce"
+      },
+      {
+        "stable_id": "P06.ACT.FEEDBACK.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "b985b6238c5c1ca9475302cbaa4ff4e41cbe435ff8aef01765b006e31d00c42f"
+      },
+      {
+        "stable_id": "P06.ACT.FEEDBACK.GOAL",
+        "kind": "Goal",
+        "sha256": "ed41eec3a25ab1a5e5961b7f61773e1fd9156b80edf674325939f887a05b0d96"
+      },
+      {
+        "stable_id": "P06.ACT.FEEDBACK.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "d873b6b823b61da2c717d92939e5658f1e8048ea757b72e40cbae0739601c8eb"
+      },
+      {
+        "stable_id": "P06.ACT.FEEDBACK.ROLE",
+        "kind": "Role",
+        "sha256": "5aa005dc2ce0c0d1f0ec3f1d61e6353a382ed8eab6c90821b6acc069c1478280"
+      },
+      {
+        "stable_id": "P06.ACT.FEEDBACK",
+        "kind": "Activity",
+        "sha256": "8a24f12bd76eed6ed41f965e4ade3bb8fd419c127ea6386cdf95a036df5e582e"
+      },
+      {
+        "stable_id": "P06.GUARD.FEEDBACK",
+        "kind": "ConditionSpec",
+        "sha256": "44296f2138e8be5839a7ec0b8898080cb9c5e77dec965b9a56b13b45b713b307"
+      },
+      {
+        "stable_id": "P06.ACT.RETEST.SKILL",
+        "kind": "SkillType",
+        "sha256": "77cd6d73ccedca5dde9e789196c14e49545e7cba7b30fa2c951c1651b13f1d98"
+      },
+      {
+        "stable_id": "P06.ACT.RETEST.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "cf7e675465cda0a3e5ec313dd0f4ec510721e2a3e0d256048e2e4f235c8c87f1"
+      },
+      {
+        "stable_id": "P06.ACT.RETEST.GOAL",
+        "kind": "Goal",
+        "sha256": "122942bd9cd5a1d06cacd8dabcfdcbf47f96ec21271946bf6469703b5e72c53c"
+      },
+      {
+        "stable_id": "P06.ACT.RETEST.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "f51e3d2bc4323f899f0023f703b20053c371cfa692487d75323f6cffc2f951c6"
+      },
+      {
+        "stable_id": "P06.ACT.RETEST.ROLE",
+        "kind": "Role",
+        "sha256": "ed1de2ff04fd4cdd94d879261aa80c3b1dab6494adeb862ed9f286e913f50b1a"
+      },
+      {
+        "stable_id": "P06.ACT.RETEST",
+        "kind": "Activity",
+        "sha256": "5d608985aca60eab226e37eef9043d546861e706e7a56e355ace6002c946405b"
+      },
+      {
+        "stable_id": "P06.GUARD.RETEST",
+        "kind": "ConditionSpec",
+        "sha256": "8ab5376d4dd88b39fae6dcca59fbd7edf2b21f2c1163d6805ff0fa6ea6464f9b"
+      },
+      {
+        "stable_id": "P06.FLOW",
+        "kind": "FlowSpec",
+        "sha256": "33d7f06c830d85aef7e6a775ee8e76bac345318780994f897e4514be1cf11e13"
+      },
+      {
+        "stable_id": "P06.C001",
+        "kind": "Case",
+        "sha256": "0edb30fc790f8add42d71474008e63d94b6b52da090e3e6e1a77333981a77a79"
+      },
+      {
+        "stable_id": "P06.C001.VAL",
+        "kind": "Validation",
+        "sha256": "859d594a5698c5d161b903ec283c702e5481d46a036bcc02c500145aaa8f76ed"
+      },
+      {
+        "stable_id": "P06.C002",
+        "kind": "Case",
+        "sha256": "5ff8f08d5e713f62586075917dab2c108ff86597930aa60e31337970f7cc0843"
+      },
+      {
+        "stable_id": "P06.C002.VAL",
+        "kind": "Validation",
+        "sha256": "18726c8c8535cd1982ffa0c23c5076221d279f9398a52f56b56d53679dd4f2f3"
+      },
+      {
+        "stable_id": "P06.C003",
+        "kind": "Case",
+        "sha256": "b6569909bc25ff165129404af469e6057f543181919822d255db8b1b464bdba5"
+      },
+      {
+        "stable_id": "P06.C003.VAL",
+        "kind": "Validation",
+        "sha256": "4253ef269a86eba8d9a47003deaec05097d839dbea9b336c40412a5fb1fdbcdc"
+      },
+      {
+        "stable_id": "P06.C004",
+        "kind": "Case",
+        "sha256": "855a3c5df5e95a7f302c1396ce82e0cc5c86d8e07b62ae4499b148c6de01d990"
+      },
+      {
+        "stable_id": "P06.C004.VAL",
+        "kind": "Validation",
+        "sha256": "9d2422f59a46acdc893cb5a8817f37a0642817539e82604108b19da73f13e41b"
+      },
+      {
+        "stable_id": "P06.C005",
+        "kind": "Case",
+        "sha256": "cdceecb5d81babee057741a4b61db13e007d63db9b29af0d9ff60876f01ac9aa"
+      },
+      {
+        "stable_id": "P06.C005.VAL",
+        "kind": "Validation",
+        "sha256": "e2f765de1bcc5e8217751e6721854b3eb7ca6e6ed06c3c6e9622bbe9f35be9b8"
+      },
+      {
+        "stable_id": "P06.C006",
+        "kind": "Case",
+        "sha256": "a04f34a522b1bb7c92ab2807c326581fbed8f3b2b82c880108111e1638901b95"
+      },
+      {
+        "stable_id": "P06.C006.VAL",
+        "kind": "Validation",
+        "sha256": "81d00be3f868c875b4a82de68702017867b547d4a61edd49ed528166a759f005"
+      },
+      {
+        "stable_id": "P06.C007",
+        "kind": "Case",
+        "sha256": "b4b732afc58003c16df04e60440b6709328dd28a6b0170e52e7c099926daeeea"
+      },
+      {
+        "stable_id": "P06.C007.VAL",
+        "kind": "Validation",
+        "sha256": "579b00a96e7567baf4c3b44449f49a74882c63e59eae25fa6625645fb9976f75"
+      },
+      {
+        "stable_id": "P06.C008",
+        "kind": "Case",
+        "sha256": "27acb460c46e168900a018b99397ff59a07bbc18095788da1682e5333caa61b4"
+      },
+      {
+        "stable_id": "P06.C008.VAL",
+        "kind": "Validation",
+        "sha256": "901b309fa49d74c8ffc40372a266231bc7492e01d1fb48bb101b4aacb77a8d1a"
+      },
+      {
+        "stable_id": "P06.C009",
+        "kind": "Case",
+        "sha256": "8a6984c07cf3b480fcdb58e51c206a4d9fbca6ee5508794119b20e51c007c942"
+      },
+      {
+        "stable_id": "P06.C009.VAL",
+        "kind": "Validation",
+        "sha256": "2afb589a4f3a4c78ee47a56eb42872659d99aba1c361b4dbcb45e5a74c28bf1d"
+      },
+      {
+        "stable_id": "P06.C010",
+        "kind": "Case",
+        "sha256": "4c90ed189b5a173c7fcd74dc6417ec920f7f34da9e604c187388eaeaa3de62d1"
+      },
+      {
+        "stable_id": "P06.C010.VAL",
+        "kind": "Validation",
+        "sha256": "43671792e80f51768aef4177ab4d62ddd41ec62eeb6a22fbe46562319c99a0bb"
+      },
+      {
+        "stable_id": "P06.C011",
+        "kind": "Case",
+        "sha256": "d570bcd0f66b6266ee9e045a8d774b61abaa6fe2a6a092383a056cdb899dd8c6"
+      },
+      {
+        "stable_id": "P06.C011.VAL",
+        "kind": "Validation",
+        "sha256": "9ff153243eb01857990aef61e1e6b8e8c2b5f87f9a40884b0c015f0be3ed5fcc"
+      },
+      {
+        "stable_id": "P06.C012",
+        "kind": "Case",
+        "sha256": "84390e296e7f40a3072ba8cb7d06e648c272cdc63058a2e91b4a4fac21a9c6df"
+      },
+      {
+        "stable_id": "P06.C012.VAL",
+        "kind": "Validation",
+        "sha256": "7a20857c529ce6292a712a7f0b4dfdfc0f8bb3b4e01391dcf27a0b0740c3f31d"
+      },
+      {
+        "stable_id": "P06.C013",
+        "kind": "Case",
+        "sha256": "1be8b4aa04caafc63682dec9b50a2e699c93422b7355eb8416b2aee6d6a22f65"
+      },
+      {
+        "stable_id": "P06.C013.VAL",
+        "kind": "Validation",
+        "sha256": "98473b346cae2c45aa424508e3af5ce0286a536558e1d8f715ba5b822408b860"
+      },
+      {
+        "stable_id": "P06.C014",
+        "kind": "Case",
+        "sha256": "d24b529f27da9a83dff194bbdc4813a66f680bc45769f08244175079359d30d4"
+      },
+      {
+        "stable_id": "P06.C014.VAL",
+        "kind": "Validation",
+        "sha256": "c4dfad9a3a65e92b1660a55ff3bf32183b1152e261307f68003be35abf171d9d"
+      },
+      {
+        "stable_id": "P06.C015",
+        "kind": "Case",
+        "sha256": "18fa901d9518019b5fe1fd48cce0905a1f31493fc302d3016268a365aacd4e6b"
+      },
+      {
+        "stable_id": "P06.C015.VAL",
+        "kind": "Validation",
+        "sha256": "43cf941c3f76f0084bff2036d6743eb8564686dc04e35a4f9ccb03a9220d6135"
+      },
+      {
+        "stable_id": "P06.C016",
+        "kind": "Case",
+        "sha256": "528443f48236a6dd0906cb6cfd28c80a233af28241c26341477d6141eeffa65f"
+      },
+      {
+        "stable_id": "P06.C016.VAL",
+        "kind": "Validation",
+        "sha256": "97c256f2e01964cff26801056debb5c3a4e2e5af50f6f6eab4d6e5539a14c585"
+      },
+      {
+        "stable_id": "P06.C017",
+        "kind": "Case",
+        "sha256": "73fb7104e9cf6a9325310fc45ee78ee0302a919d12b31bdd4f6a51074caf8520"
+      },
+      {
+        "stable_id": "P06.C017.VAL",
+        "kind": "Validation",
+        "sha256": "fb411dee0cafca6bdf43abc38a899e110fc185e026578bef4aefd2cc473a6f1f"
+      },
+      {
+        "stable_id": "P06.C018",
+        "kind": "Case",
+        "sha256": "649b005fca7f0ec2904b234093859a23ab39f637dbc07b32fe474190c2c1ea6b"
+      },
+      {
+        "stable_id": "P06.C018.VAL",
+        "kind": "Validation",
+        "sha256": "142ecfed96b7e3d1ddc525b427519022a5ca8bb02f8cd801afcd552008c21518"
+      },
+      {
+        "stable_id": "P06.C019",
+        "kind": "Case",
+        "sha256": "f7787c05643b0d9b8205753c65b8e0c9f1ae276af1b7dae961411b156eee6eb1"
+      },
+      {
+        "stable_id": "P06.C019.VAL",
+        "kind": "Validation",
+        "sha256": "85eb34c1da52f59bc00e06d90092d29d6495b82a03953caf1eae95eb765ddb56"
+      },
+      {
+        "stable_id": "P06.C020",
+        "kind": "Case",
+        "sha256": "c8bd57ce2eb5d49eadb176f7555aeefd91d948007968756bdd8bb4bc7c1bc12e"
+      },
+      {
+        "stable_id": "P06.C020.VAL",
+        "kind": "Validation",
+        "sha256": "6660885dd0a451d84bc67b47b68c1b4bcd82be1f1667cfa2621b60bb3045ab4e"
+      },
+      {
+        "stable_id": "P06.C021",
+        "kind": "Case",
+        "sha256": "be1bb2f4fe654cd66dc873776418233c61c4ba39750b1247656dbcb173eb61e4"
+      },
+      {
+        "stable_id": "P06.C021.VAL",
+        "kind": "Validation",
+        "sha256": "4db2f843893da4441ec94a822b6cdbac68a0b7cffbf75d54abda813a22b47c8b"
+      },
+      {
+        "stable_id": "P06.C022",
+        "kind": "Case",
+        "sha256": "fbc2fbb0e53cdaf1a4e38078ecdc6feaabf0d05e36d919c7d63a6829dbe696a1"
+      },
+      {
+        "stable_id": "P06.C022.VAL",
+        "kind": "Validation",
+        "sha256": "5ef2ba30c8dfa87b76be79cdea5a01dc6670168cfa9d5187a441f42395552136"
+      },
+      {
+        "stable_id": "P06.C023",
+        "kind": "Case",
+        "sha256": "86da236685b07ed0ff119419101810cbdcc73dbe84c50e982c569e1d18f47d02"
+      },
+      {
+        "stable_id": "P06.C023.VAL",
+        "kind": "Validation",
+        "sha256": "5e6f1ddf0bb009a753b5ba12ce99e85198687481fee6f43b17fcfb62633c222f"
+      },
+      {
+        "stable_id": "P06.C024",
+        "kind": "Case",
+        "sha256": "3e4306d3cbb14e515f150d287136ca07e4b6e293f27f17c6a23cc9d2693052b5"
+      },
+      {
+        "stable_id": "P06.C024.VAL",
+        "kind": "Validation",
+        "sha256": "9a99a45d6d5e87a8c6d4e59f6843f6f1538e193d51ddf52a697a2b4c4397a415"
+      },
+      {
+        "stable_id": "P06.C025",
+        "kind": "Case",
+        "sha256": "3493173a21eefe5f85ea22bcdf80f0291a1947e41a7a14a5a1597cf4c821637e"
+      },
+      {
+        "stable_id": "P06.C025.VAL",
+        "kind": "Validation",
+        "sha256": "8956efad721aa9d6f6ec6608b11362093a04692455d9293ecef1ade2cc33195f"
+      },
+      {
+        "stable_id": "P06.C026",
+        "kind": "Case",
+        "sha256": "4a22969f210df60cb8291cc954c532d7f31cb82940bbd1d2ae956c796e9be23d"
+      },
+      {
+        "stable_id": "P06.C026.VAL",
+        "kind": "Validation",
+        "sha256": "3d78cf2e5c714b2f71e6e33eb120957881adf8123d492b8924163a45b9a869a1"
+      },
+      {
+        "stable_id": "P06.C027",
+        "kind": "Case",
+        "sha256": "5c6aa21755ada667cc530fc50bc3914527790e7b8653cfda046f09903f5a5aa1"
+      },
+      {
+        "stable_id": "P06.C027.VAL",
+        "kind": "Validation",
+        "sha256": "2e93116c8b92b499414581d72896ea9f1f1a11999243a1ba48e20b473a5f84cd"
+      },
+      {
+        "stable_id": "P06.C028",
+        "kind": "Case",
+        "sha256": "96ef6d159dace8850c4a11bfec683289f33244a4d6e0870d90b027a6b7f6173f"
+      },
+      {
+        "stable_id": "P06.C028.VAL",
+        "kind": "Validation",
+        "sha256": "1d00ff3c108cd44ae81695956023729f37b97f7b0707fa2b7a34184420c1c179"
+      },
+      {
+        "stable_id": "P06.C029",
+        "kind": "Case",
+        "sha256": "23bb907734b647faf1496d3c9acf74de025525eeddec3f329c8dce9879e52dbc"
+      },
+      {
+        "stable_id": "P06.C029.VAL",
+        "kind": "Validation",
+        "sha256": "ef0296fe2c3fe1d53a748abfb1d09eb1fa175a7a0da1304b917aa55395cee465"
+      },
+      {
+        "stable_id": "P06.C030",
+        "kind": "Case",
+        "sha256": "eba21777129b5d15ca06c179a604a1baef64d32c28a202b481d60086cfe98b9f"
+      },
+      {
+        "stable_id": "P06.C030.VAL",
+        "kind": "Validation",
+        "sha256": "b92c72aa58351553476fd4c3bf9d09af1290dbed3aafc1d3cb80e2d0e10a80f2"
+      },
+      {
+        "stable_id": "P06.C031",
+        "kind": "Case",
+        "sha256": "a8f813c4ea54235205c37d11dc66615339a1834e40af54ad9c889150e2a6c8ae"
+      },
+      {
+        "stable_id": "P06.C031.VAL",
+        "kind": "Validation",
+        "sha256": "160fcbd13d345dca2c465cf92a3c81536ddf79d0a5fdf36e4c836e9932d035b3"
+      },
+      {
+        "stable_id": "P06.C032",
+        "kind": "Case",
+        "sha256": "ee60880e47dd36fe9882c989321c93aa08c238f366d753e958555a19c42a5359"
+      },
+      {
+        "stable_id": "P06.C032.VAL",
+        "kind": "Validation",
+        "sha256": "50980c6b43ad7f33595ec122e5e8f82848c19eeccbeea32fbd77a3059308e086"
+      },
+      {
+        "stable_id": "P06.C033",
+        "kind": "Case",
+        "sha256": "eb7a7361f764fccf55f64ca11d68d0253c1dee99ecaffc8c9e0d7d7fe5e95d5b"
+      },
+      {
+        "stable_id": "P06.C033.VAL",
+        "kind": "Validation",
+        "sha256": "37a7e17eaa21dfaf23ffdce717032bf0819607dea0e36fbb0f5b713ec1b3f319"
+      },
+      {
+        "stable_id": "P06.C034",
+        "kind": "Case",
+        "sha256": "5747756788675d03f4cb1ca30ec402845a300d7b8776fb4eb487f0c2c5fd28c9"
+      },
+      {
+        "stable_id": "P06.C034.VAL",
+        "kind": "Validation",
+        "sha256": "4eb4a4245b76724c165d3c8c2ed4d754d91d758673c93cd4882d1deb0fd6b009"
+      },
+      {
+        "stable_id": "P06.C035",
+        "kind": "Case",
+        "sha256": "c0db14c2790ec0d9f67d8fb86f81b1f0b5e5a7185e07d8b408e7ad53d922b254"
+      },
+      {
+        "stable_id": "P06.C035.VAL",
+        "kind": "Validation",
+        "sha256": "5cd59a6dce25cac0b87bb60f3247ace8fd234370bc36b6b8b4237d85b06feb03"
+      },
+      {
+        "stable_id": "P06.C036",
+        "kind": "Case",
+        "sha256": "6c291510c2f49dd1a54d47595ae40196addd38bbc3bce818bf220cf9d95e8ed1"
+      },
+      {
+        "stable_id": "P06.C036.VAL",
+        "kind": "Validation",
+        "sha256": "efc0c97a3e8de1e9e34d4df25de3025dd4cc2b61f47dafcc2461a7ab764782a9"
+      },
+      {
+        "stable_id": "P06.C037",
+        "kind": "Case",
+        "sha256": "4f2b6408c8817397e8365e1d8b3eeda804e760901edd4dc3eaab37252d0b0b57"
+      },
+      {
+        "stable_id": "P06.C037.VAL",
+        "kind": "Validation",
+        "sha256": "247c015824b4a28800003426f018dec62f3a408e562576fd305d73014226d651"
+      },
+      {
+        "stable_id": "P06.C038",
+        "kind": "Case",
+        "sha256": "22b514ac4c21a437ce584dbe1c807732e3d066e8b6f6ea3e13f7f29ee53084bb"
+      },
+      {
+        "stable_id": "P06.C038.VAL",
+        "kind": "Validation",
+        "sha256": "c102c9bbd2b788cca21b04f7b19004858558981ccec880cf5378a918d293766f"
+      },
+      {
+        "stable_id": "P06.C039",
+        "kind": "Case",
+        "sha256": "64895d7ea8d2ce0a8b6db1403fa10447e079b2e479cd0012a5ba85e45573ca14"
+      },
+      {
+        "stable_id": "P06.C039.VAL",
+        "kind": "Validation",
+        "sha256": "79a5b3c8232a1f5b65703b0eacd4519a6bb2ab35407c82e900f8fce949c3b275"
+      },
+      {
+        "stable_id": "P06.C040",
+        "kind": "Case",
+        "sha256": "ba644c4c039fcb79e19db86a2242f074f8cae2a6d2a266fc3e623db5bcebb798"
+      },
+      {
+        "stable_id": "P06.C040.VAL",
+        "kind": "Validation",
+        "sha256": "6eb30c779cb534d46736f3a2201326533e542d25e7234083c249c9c2ab0f7c35"
+      },
+      {
+        "stable_id": "P06.C041",
+        "kind": "Case",
+        "sha256": "868c8eda20d10a6babd28721695bb3308a3a3aa573281d8e2b79845685629270"
+      },
+      {
+        "stable_id": "P06.C041.VAL",
+        "kind": "Validation",
+        "sha256": "2e41503f6b7e95df5d14b53dba6a1e6fad4ceec730258a3149a35e76f9a1f4ec"
+      },
+      {
+        "stable_id": "P06.C042",
+        "kind": "Case",
+        "sha256": "8305b9d1f226c0b7c689083005ac5ce637bd0bbf036f257c434b4eea7f28ff5a"
+      },
+      {
+        "stable_id": "P06.C042.VAL",
+        "kind": "Validation",
+        "sha256": "a49afe64df37008cba96bc4235915a617a4c61d090353aa7eae833761b982872"
+      },
+      {
+        "stable_id": "P06.C043",
+        "kind": "Case",
+        "sha256": "49711d548353fe7835933d595041855dd59688005dd29f40153c230bc141aa05"
+      },
+      {
+        "stable_id": "P06.C043.VAL",
+        "kind": "Validation",
+        "sha256": "14a7ba4b9ad3231ff54403dbadf8a7c064a44f2d28d0d77a6d098c2dcb38071e"
+      },
+      {
+        "stable_id": "P06.C044",
+        "kind": "Case",
+        "sha256": "658d92235fdd3caaf58466a3238141623b6935bee3bca584af41c55ebad79f90"
+      },
+      {
+        "stable_id": "P06.C044.VAL",
+        "kind": "Validation",
+        "sha256": "11dc89ef249203d1d6be0d5a6f4ce7245c77f5d23426438f4f95e182a615707a"
+      },
+      {
+        "stable_id": "P06.C045",
+        "kind": "Case",
+        "sha256": "f90379a52a8875a867fb118e05981fc2ca7e596911841731e361da2de029e25d"
+      },
+      {
+        "stable_id": "P06.C045.VAL",
+        "kind": "Validation",
+        "sha256": "5d4e150f2d0760f64985b78661e15ef01f3e0db94aa12c14a35b7bcc00cb05ab"
+      },
+      {
+        "stable_id": "P06.C046",
+        "kind": "Case",
+        "sha256": "a81258cc8352af801da3697cb5e91e96ac953e85eb76d6d664ef257b54dd7dfc"
+      },
+      {
+        "stable_id": "P06.C046.VAL",
+        "kind": "Validation",
+        "sha256": "3db5f3de7c4f8f7050b9bbbb46a27ef7864654a53d3a63376aa47c5f34e086f7"
+      },
+      {
+        "stable_id": "P06.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "0cb9e1b0003d417d2ee3c0e7bd3016dc0a1773f61c319bec3800eac0d618b4a0"
+      },
+      {
+        "stable_id": "P06.C047",
+        "kind": "Case",
+        "sha256": "b771b8f9741323c10ed308add5094e5781233500ce8bca1ace5fa0a623139f66"
+      },
+      {
+        "stable_id": "P06.C047.VAL",
+        "kind": "Validation",
+        "sha256": "8b2f2aa2401b3e2fb940d5cdd13359f43857c0c08c229ad5ea2f0736587c8544"
+      },
+      {
+        "stable_id": "P06.C048",
+        "kind": "Case",
+        "sha256": "85ffad6ee868adaf0d517dabf5918693c97bee1e41d808d70f04203c021cb70c"
+      },
+      {
+        "stable_id": "P06.C048.VAL",
+        "kind": "Validation",
+        "sha256": "ed864c2d7a1347ce52c79bf3c101bac2a9727f90fcd4768f6118cb31645c6517"
+      },
+      {
+        "stable_id": "P06.C049",
+        "kind": "Case",
+        "sha256": "dfcb6c9744340079290e5c52e09ed0e3a57559c6e01c1bb2cc816c2496e42fa5"
+      },
+      {
+        "stable_id": "P06.C049.VAL",
+        "kind": "Validation",
+        "sha256": "75b24fbd4be5b97439b02fb487682c9a6b2e78d1d038995a4d40628d0ed832fa"
+      },
+      {
+        "stable_id": "P06.C050",
+        "kind": "Case",
+        "sha256": "4139c226910182ec6fca84596b18f7f6e20dd9e89e5e3f5ea11f386d79d9be16"
+      },
+      {
+        "stable_id": "P06.C050.VAL",
+        "kind": "Validation",
+        "sha256": "1c7be72b89f7c967327ba7de3513d7b333ce85713dac2a0c0f12cc18b7ed8b80"
+      },
+      {
+        "stable_id": "P06.C051",
+        "kind": "Case",
+        "sha256": "29933ab9a543f9469b7de33baf564710aebc7e214056aa0ebfc4101ca4e44a6a"
+      },
+      {
+        "stable_id": "P06.C051.VAL",
+        "kind": "Validation",
+        "sha256": "561dfe883a760db09d68e7a38d0a47995edac5ccc9b841c00e6d714c4b31a85a"
+      },
+      {
+        "stable_id": "P06.C052",
+        "kind": "Case",
+        "sha256": "e51123b17dde7fed987e4dd285a38e5820199af1aed3890330837e6a86320e28"
+      },
+      {
+        "stable_id": "P06.C052.VAL",
+        "kind": "Validation",
+        "sha256": "c13c93043c1f1110d5dafe97642face25fbbb19d409bceee5e5be69294480dcf"
+      },
+      {
+        "stable_id": "P06.C053",
+        "kind": "Case",
+        "sha256": "ada7a955c7e475e218fa02c51422962f0ed75560544e9d1a7e40a63b51363c15"
+      },
+      {
+        "stable_id": "P06.C053.VAL",
+        "kind": "Validation",
+        "sha256": "9e31ca9a1c8886976a640f454111661344827abfab080588693f3db15a6fc14d"
+      },
+      {
+        "stable_id": "P06.C054",
+        "kind": "Case",
+        "sha256": "989d0450f8999f33ace36d96de0a6b948ffbfc7b774d6709a5a23c6428473643"
+      },
+      {
+        "stable_id": "P06.C054.VAL",
+        "kind": "Validation",
+        "sha256": "1e0e78102c6d291811c81fe62e313bde7b7553b59617a37dea72254594c71533"
+      },
+      {
+        "stable_id": "P06.C055",
+        "kind": "Case",
+        "sha256": "5aee398998d3a55eb61604a7b487c52e571eb7004bf137ba8c3ead135fa4855b"
+      },
+      {
+        "stable_id": "P06.C055.VAL",
+        "kind": "Validation",
+        "sha256": "4a3f0a5ede782dd558c00a956b43fd02fc74f14638a907cfb8de1f0e89fd56f9"
+      },
+      {
+        "stable_id": "P06.C056",
+        "kind": "Case",
+        "sha256": "b4bca86030a67c13c0ac90c9754540f740fb966f0adae97fad2dd71e8bd66617"
+      },
+      {
+        "stable_id": "P06.C056.VAL",
+        "kind": "Validation",
+        "sha256": "9f7ee395af357791ae2f5d64f049b9bd28a145d311650547f603d7597e476e0d"
+      },
+      {
+        "stable_id": "P06.C057",
+        "kind": "Case",
+        "sha256": "839792866db70644f3eae081529e5b0d4b6ab8407a9648143eff3f076a64dea0"
+      },
+      {
+        "stable_id": "P06.C057.VAL",
+        "kind": "Validation",
+        "sha256": "c2417f97571bed7b49e9453ca743927cb1511a599616aa5c504cc651d19f667d"
+      },
+      {
+        "stable_id": "P06.C058",
+        "kind": "Case",
+        "sha256": "20f40c067dbcc19669150305ffe5e6c8667607c93f00e3cb933c1124e5b253f8"
+      },
+      {
+        "stable_id": "P06.C058.VAL",
+        "kind": "Validation",
+        "sha256": "1eac7fbd28facdd92f5763ec7693ddec850105edab8b564bc9a1ff3b733a75fb"
+      }
+    ],
+    "supersedes": "TASK:P06:P06-FORMAL-01",
+    "migration_only": true
+  },
+  "validation": {
+    "independent_review": {
+      "issue": 30,
+      "comment_id": 7239835702,
+      "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+      "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+      "independent_result": "ACCEPT_SCOPED",
+      "findings": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    "builder_cases": 58,
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY",
+    "qualification_registered": false
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "content_digest": "12a5152f08914ce28046fdbfadf3770daff65cccebf92dfb810781aba091ee7c"
+}

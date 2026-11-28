@@ -1,0 +1,633 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P02",
+  "attempt_id": "P02-FORMAL-03",
+  "receipt_id": "TASK:P02:P02-FORMAL-03",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-02",
+      "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+          "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+        },
+        {
+          "path": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+          "sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+          "sha256": "e531381a3fdbd3f0059dba1cfec2a0c1fff689862acee024d5bef4d0b67885c9",
+          "stable_id": "K07.01.01.PT.01",
+          "record_sha256": "e9fc367acc556bde3b17e26022029dbf0554dfe31b7ed5f50ee53145860c32fc"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+          "sha256": "e531381a3fdbd3f0059dba1cfec2a0c1fff689862acee024d5bef4d0b67885c9",
+          "stable_id": "K07.03.01.PT.01",
+          "record_sha256": "71dbc4e5590b88848a740e7ee44fde4dbc26760b3138415a480d414181c569a4"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K07/records-03.jsonl",
+          "sha256": "726045ead75d0101387eb02e9dcbf770c7dfa7516f3d9d8c839b9526bf2c3b18",
+          "stable_id": "K07.05.02.PT.01",
+          "record_sha256": "788e14314bd6d6482e5be3ad4c2aad3d7e3f58663575684836078c994069e840"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K07/records-03.jsonl",
+          "sha256": "726045ead75d0101387eb02e9dcbf770c7dfa7516f3d9d8c839b9526bf2c3b18",
+          "stable_id": "K07.05.01.PT.01",
+          "record_sha256": "55a3194218ab0ff49e274d6cbccc125c84bfe3287d1e88bcbbf204df8a2488df"
+        }
+      ]
+    },
+    {
+      "task_id": "K08",
+      "receipt_id": "TASK:K08:K08-FORMAL-02",
+      "content_digest": "232d438b24281923530b351968bdfb24517c09ef8f39fc152dedce98f20a5faa",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K08/K08-FORMAL-02.json",
+          "sha256": "789f7d9c18d9e200d8d6512e67ce132bd9c4191fc01f18d2197685902d7e3b69"
+        },
+        {
+          "path": "evidence/tasks/K08/K08-QUALIFICATION-02.json",
+          "sha256": "1f716e34738d2aa32dfe09add8d4dc10beaba8715c1df233627633914f038cd0"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.04.01.PT.01",
+          "record_sha256": "65ecb37959e233c63e065bb5015c4d14ad7d4b01f4b8b79354461169e19b2fa4"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K08/records-03.jsonl",
+          "sha256": "91ced90c0a193b30dc4f557a18f801e327576229f79cbf13292468a61f2bf993",
+          "stable_id": "K08.04.02.PT.01",
+          "record_sha256": "4295611151049943b42f3fcb54b007db7526e7821f32fc949b5faf3adbec18ef"
+        }
+      ]
+    },
+    {
+      "task_id": "K09",
+      "receipt_id": "TASK:K09:K09-FORMAL-01",
+      "content_digest": "bccf41be1b552c203974a374997d8aff4814b9a1ded7bab9d9adc9399ea25862",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K09/K09-FORMAL-01.json",
+          "sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85"
+        },
+        {
+          "path": "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+          "sha256": "ef62d586dbffa43013775ba4951213971037871508be266605cc52f049c4de23",
+          "stable_id": "K09.01.01.ME.01",
+          "record_sha256": "07e27f1fd5de12c3dfbaa059e6f0c82f1f0454da973770d5ca93b8c2c7f9249b"
+        },
+        {
+          "path": "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+          "sha256": "ef62d586dbffa43013775ba4951213971037871508be266605cc52f049c4de23",
+          "stable_id": "K09.01.03.ME.01",
+          "record_sha256": "e4439babe1aac3783b2ba8853c23b58d2f05f518fbebbebb6f2b65d95be62cd2"
+        },
+        {
+          "path": "evidence/tasks/K09/K09-QUALIFICATION-01.json",
+          "sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340"
+        }
+      ]
+    },
+    {
+      "task_id": "K10",
+      "receipt_id": "TASK:K10:K10-FORMAL-01",
+      "content_digest": "36ac3110d5a361eedcd47a31f513726e16938f4d7b625ca42b18cfb7574f71f2",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K10/K10-FORMAL-01.json",
+          "sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K10/records-02.jsonl",
+          "sha256": "d7ea8a8d5c695edee3b655f815ea6bda9b77607a5daeb0105155ab65ef0c8fe2",
+          "stable_id": "K10.01.05.TR.01",
+          "record_sha256": "3f2405f6247e2938f1fda67d56dd31fd71cd3217efde16c86c582f888d7fffc1"
+        },
+        {
+          "path": "evidence/tasks/K10/K10-QUALIFICATION-01.json",
+          "sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b"
+        }
+      ]
+    },
+    {
+      "task_id": "K11",
+      "receipt_id": "TASK:K11:K11-FORMAL-01",
+      "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K11/K11-FORMAL-01.json",
+          "sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+          "sha256": "90141981b482f24549dff8b77f3bac0fd09bea023625dcb828cd2294843addd7",
+          "stable_id": "K11.01.04.TR.01",
+          "record_sha256": "64601f1a0c02e93abdf91f0b22e0a4cf419043361eb53b5043a986926010bde0"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-02.jsonl",
+          "sha256": "90141981b482f24549dff8b77f3bac0fd09bea023625dcb828cd2294843addd7",
+          "stable_id": "K11.01.03.TR.01",
+          "record_sha256": "5769a5a907ba2956fc287b0be63d20b83cd633764bf1de2571ec67aa4c01b2b1"
+        },
+        {
+          "path": "evidence/tasks/K11/K11-QUALIFICATION-01.json",
+          "sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+      "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+      "sha256": "ed7d043443df2b732a63e1afc9ecd74305c3e51158b2e62000436208e52810b2",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/migration.json",
+      "sha256": "502d7452f15670874f3283c5e483b2830086f529a62698bcae678fe896352072",
+      "type": "EXACT_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/p-rebind-regression.json",
+      "sha256": "f60fe6bd52cfc1c1672fdb25414ea75954d0393cfaa281f2a192da8a2af0c8f6",
+      "type": "SQL_BUILDER_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/coverage.json",
+      "sha256": "f1cf8db97b26a8de76596cd54641514294b8e5ede0d53bf609e6fc26454a3937",
+      "type": "RESTRICTED_SCOPE_LEDGER"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/build.py",
+      "sha256": "d4b4d52f20a1d2caa826ea0fd341bb85b66a4a483b4e77ac31c00f1272e56d0f",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/semantic_checks.py",
+      "sha256": "a3644c39b28a24446d99f8ee38b6a67eff3041f338e1e9218bfc4d09ced16e99",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/fixtures.json",
+      "sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/replay_p_rebind.py",
+      "sha256": "204130cd649909bfdeb9000b0dc6c74c4f674670380616bc96b2cfe1eb3b6bbd",
+      "type": "EXACT_VALIDATION_INPUT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "used_claim_ids": [
+      "K07.01.01.PT.01",
+      "K07.03.01.PT.01",
+      "K07.05.01.PT.01",
+      "K07.05.02.PT.01",
+      "K08.04.01.PT.01",
+      "K08.04.02.PT.01",
+      "K09.01.01.ME.01",
+      "K09.01.03.ME.01",
+      "K10.01.05.TR.01",
+      "K11.01.03.TR.01",
+      "K11.01.04.TR.01"
+    ],
+    "source_policy": "Only upstream allowed project rules/original methods; no empirical effect, actual learner diagnosis or source promotion.",
+    "canonical_records": 65,
+    "case_count": 17,
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "limits": "Actual resource instances, real scoring, real learner-state inference, complete composition and recovery remain pending.",
+    "cumulative_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_records": 65,
+    "process_dependency_ids": {},
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "supersedes": "TASK:P02:P02-FORMAL-02",
+    "migration_only": true,
+    "reviewed_scope": "Bounded preparation; no real execution.",
+    "reviewed_artifact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "reviewed_artifact_tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "record_digests": [
+      {
+        "stable_id": "P02.GOAL.SKILL",
+        "kind": "SkillType",
+        "sha256": "ad2c7d35fe14806d96a44abe9142b163c4201167fa0f056a0e54e2ded906189e"
+      },
+      {
+        "stable_id": "P02.GOAL.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "30d621ee089cf98200345098c6419daf8d9c3a69f6b5ebf8a39b8adf49d33ae0"
+      },
+      {
+        "stable_id": "P02.GOAL.GOAL",
+        "kind": "Goal",
+        "sha256": "5a99fa795d61650a7f43b26a83a54c8c18c78ccfb9c1a5761e22d608167c9718"
+      },
+      {
+        "stable_id": "P02.GOAL.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "e60fbf10aafbf45f73fd6a8bc9f6862dfd0b85a66ca3b8bb46d6d776f8658838"
+      },
+      {
+        "stable_id": "P02.GOAL.ROLE",
+        "kind": "Role",
+        "sha256": "8d11bbc6426377227c68586af5fde1cb42d9bb52918b7889dcdd8fc4bdeb38dd"
+      },
+      {
+        "stable_id": "P02.GOAL",
+        "kind": "Activity",
+        "sha256": "3c9552193adbbd5daf2f95878b665f98f79280a61eb754af5ac09466a05a96bf"
+      },
+      {
+        "stable_id": "P02.GOAL.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "b3bd7dbca77b660c027982787437e2b3a29007136460563aeb00832a821520f5"
+      },
+      {
+        "stable_id": "P02.BASELINE.SKILL",
+        "kind": "SkillType",
+        "sha256": "19a4befa81f325acb238a68a3d01d3f4997788b97825f295e84b205fb223ee9d"
+      },
+      {
+        "stable_id": "P02.BASELINE.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "094db64ef8b9e169b2a799048ea49fcfbb841ccfa2cc55b332dfc37331d516dc"
+      },
+      {
+        "stable_id": "P02.BASELINE.GOAL",
+        "kind": "Goal",
+        "sha256": "39b72afa6a0c0fd7af39dcfd5538bbd5a092e53735ea1cb26126932fd50472d7"
+      },
+      {
+        "stable_id": "P02.BASELINE.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "80de185a330c501b2af4c28c8b406e413d457c3f1b1e034b0d4d6023107d3f81"
+      },
+      {
+        "stable_id": "P02.BASELINE.ROLE",
+        "kind": "Role",
+        "sha256": "36fb83a6281e3e66b1d705664165cab15b18f43f212b054e3295b52d9a1b2f2a"
+      },
+      {
+        "stable_id": "P02.BASELINE",
+        "kind": "Activity",
+        "sha256": "3c1710d3bdc716cd0c3b0c4068b2a41fe5612dce8469ef4597e9713c9b350f72"
+      },
+      {
+        "stable_id": "P02.BASELINE.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "3b4b6fdfa97dcdd0874469d2ff7b2dc2723a3ff3a0602c58add687beb552e6f8"
+      },
+      {
+        "stable_id": "P02.BASELINE.UNKNOWN",
+        "kind": "ConditionSpec",
+        "sha256": "68ac741b745b07191d73adf349a086cf06a81e8fbb82cbf948aa32d595ceaa63"
+      },
+      {
+        "stable_id": "P02.RESOURCE.SKILL",
+        "kind": "SkillType",
+        "sha256": "ef310cf5c5e9b86f2e67aabe31c10a7256f0fe79aa7111549519457db97d81cc"
+      },
+      {
+        "stable_id": "P02.RESOURCE.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "fc7403a166cb2c5c90801cd0b06e14dae5ed9fdd9013ca65ccb0d1a2e28e885f"
+      },
+      {
+        "stable_id": "P02.RESOURCE.GOAL",
+        "kind": "Goal",
+        "sha256": "b2526932be65ea3deab1d719d3be0e8aae086da34f9e845232379f181c312842"
+      },
+      {
+        "stable_id": "P02.RESOURCE.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "ce7969d3b44102e9c24a9cae700a4c70651b943980c75496d813567c404f55cc"
+      },
+      {
+        "stable_id": "P02.RESOURCE.ROLE",
+        "kind": "Role",
+        "sha256": "ac17dd20c76ba1c191921cb6074289d604a7a5c25817b99e5836ab89ff085c92"
+      },
+      {
+        "stable_id": "P02.RESOURCE",
+        "kind": "Activity",
+        "sha256": "8c122aaa8a65e586416ad77ef98ac3c243fdd43e8708876aa838c63ee6de8c46"
+      },
+      {
+        "stable_id": "P02.RESOURCE.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "e8866b58d9b82d9a129d9f92bc831ec76f52716d6b09a01570f89ae2db3dbac9"
+      },
+      {
+        "stable_id": "P02.RESOURCE.INSUFFICIENT",
+        "kind": "ConditionSpec",
+        "sha256": "011481cabfcb2539c2f0388049c2cf2fe3e8a3eb09b25f559f3563ae0f0581e6"
+      },
+      {
+        "stable_id": "P02.PLAN.SKILL",
+        "kind": "SkillType",
+        "sha256": "fa687ff3a0a711fd5a099646472e969f8b81a908e834b4faf69a6ea2edb604ef"
+      },
+      {
+        "stable_id": "P02.PLAN.OBS",
+        "kind": "ObservationSpec",
+        "sha256": "02f9ee48e5ac17800a0ec50293a4d707f6ebe14dbbbc3d89ceb33016e3f2fb36"
+      },
+      {
+        "stable_id": "P02.PLAN.GOAL",
+        "kind": "Goal",
+        "sha256": "e849502ac404c6692386f3b8494cce543740582b4f7a63aa818a5b155e4e1bcc"
+      },
+      {
+        "stable_id": "P02.PLAN.OBJECT",
+        "kind": "LearningObject",
+        "sha256": "3032b60cb6a5dbd17dc1341a016c566053ede7cc23ec3f4cdf8c6c2f89a218eb"
+      },
+      {
+        "stable_id": "P02.PLAN.ROLE",
+        "kind": "Role",
+        "sha256": "2a990d84cbacc264aa86bb61da9549bbd0171182985b188df3babd21776ed4bf"
+      },
+      {
+        "stable_id": "P02.PLAN",
+        "kind": "Activity",
+        "sha256": "5d453b30ca4d59dfe18daee8702aca16f544939c9e2090b90303a59276271042"
+      },
+      {
+        "stable_id": "P02.PLAN.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "0c9f093b3ce3e7ceb327dfa048f24e70b4aa3fb07a9b7a69c94505bb8e8115dd"
+      },
+      {
+        "stable_id": "P02.PREPARATION",
+        "kind": "FlowSpec",
+        "sha256": "cc28aa16c2d175aa64e824af4a4ae00827d94efd5c5640f13a21f88be13c9bee"
+      },
+      {
+        "stable_id": "P02.F01",
+        "kind": "Case",
+        "sha256": "3c09ff8012bc3130c8400b88343218b41c6a6acf6cb656128ab4cf5d7b513b45"
+      },
+      {
+        "stable_id": "P02.F01.VAL",
+        "kind": "Validation",
+        "sha256": "18e824a085ff77ffeca1dea06dc316d449a3857ad3858cb918cea1faf27ee2dd"
+      },
+      {
+        "stable_id": "P02.F02",
+        "kind": "Case",
+        "sha256": "61fe1367b0d84b6d90d6b3183e45c8b31c748e1742a5f9a6d0f0fa24c881e56e"
+      },
+      {
+        "stable_id": "P02.F02.VAL",
+        "kind": "Validation",
+        "sha256": "843c70eb29bfff0d2920627d7f7f7bea0fc82aa1651667ae25acc873491bd397"
+      },
+      {
+        "stable_id": "P02.F03",
+        "kind": "Case",
+        "sha256": "cd722d46214814ac2219149ead3a2f780fa7d86ab89279fa47345e72a28912a1"
+      },
+      {
+        "stable_id": "P02.F03.VAL",
+        "kind": "Validation",
+        "sha256": "917ac09152765eafe315158c3a8ee44f264be9540f6376101b5a4f587d70aaa0"
+      },
+      {
+        "stable_id": "P02.F04",
+        "kind": "Case",
+        "sha256": "ee5f0e58bfc0fb3de84c735776cb7c9d52269e508ee00830557c09a5e2ce3bb7"
+      },
+      {
+        "stable_id": "P02.F04.VAL",
+        "kind": "Validation",
+        "sha256": "bdf13999a8b8409a6024fd49a9bb42427d5eeca5655775b1c76c3fcdb9dfc4ff"
+      },
+      {
+        "stable_id": "P02.F05",
+        "kind": "Case",
+        "sha256": "89bcf13459dd9b327c1e79f0b6a47d6d0a8845bae20adc2c28c218e9685bc353"
+      },
+      {
+        "stable_id": "P02.F05.VAL",
+        "kind": "Validation",
+        "sha256": "78c38721cac294756dbadf89584b3f6baad49fd1f2430b1e0f911f6c649b87c1"
+      },
+      {
+        "stable_id": "P02.F06",
+        "kind": "Case",
+        "sha256": "7cc88c7ce31355beb43d683071e19d86f04de81d833c590950d3c4cca141cd89"
+      },
+      {
+        "stable_id": "P02.F06.VAL",
+        "kind": "Validation",
+        "sha256": "2fdc4c8eed3c8190874c016afc6660dd1e0701297639a7236c66db283899d2e8"
+      },
+      {
+        "stable_id": "P02.F07",
+        "kind": "Case",
+        "sha256": "2b2df74b9bdd82f03ba9432c04a13f7d8dee1c8a27934c223a431bd653b8f2c8"
+      },
+      {
+        "stable_id": "P02.F07.VAL",
+        "kind": "Validation",
+        "sha256": "76e53a44ed572b42390285414ae69fbd27400497fac113cf4314714c2f4f8e61"
+      },
+      {
+        "stable_id": "P02.F08",
+        "kind": "Case",
+        "sha256": "196dcb7cb50e500421ea4889ce856faf0ffce4a3013af3592b9313b8e0973c1d"
+      },
+      {
+        "stable_id": "P02.F08.VAL",
+        "kind": "Validation",
+        "sha256": "c798ff957a8bc433dbcd4d223f66deda7c38eec341264a88ebaeb3250145a756"
+      },
+      {
+        "stable_id": "P02.F09",
+        "kind": "Case",
+        "sha256": "22efa8ce047a1f877a59ccb55447d4b5838771ff76fb54067462f31b47a4887d"
+      },
+      {
+        "stable_id": "P02.F09.VAL",
+        "kind": "Validation",
+        "sha256": "58643b49b04cb881714b943e6f741e3e2ff390de4264dc6dc4919fbe1f2a5ac7"
+      },
+      {
+        "stable_id": "P02.F10",
+        "kind": "Case",
+        "sha256": "e19743cd94624e151a6648387904caf9730bb822fd193b48215c03db721e4f41"
+      },
+      {
+        "stable_id": "P02.F10.VAL",
+        "kind": "Validation",
+        "sha256": "0135cabe0cc0f4ef550cf442fc2ad0fca21151c1e86adb849d978c6bc18d51a0"
+      },
+      {
+        "stable_id": "P02.F11",
+        "kind": "Case",
+        "sha256": "6347c0621860d22b4c524888662bad77d20a36ddbd0cc4d0039a7349b9dad432"
+      },
+      {
+        "stable_id": "P02.F11.VAL",
+        "kind": "Validation",
+        "sha256": "578d850a0e2c321248d8ae33ebfd7e7d3ae797e5883f19f4e401c774498fb204"
+      },
+      {
+        "stable_id": "P02.F12",
+        "kind": "Case",
+        "sha256": "ce8d3f88955fe410c68b31d431556f9d4836b0ec932db6188bf7412b188b38d3"
+      },
+      {
+        "stable_id": "P02.F12.VAL",
+        "kind": "Validation",
+        "sha256": "23ba88d5e0b637b7d704d5ab5abeacb457cdc1e6ad0ff827872526cfb970dc4f"
+      },
+      {
+        "stable_id": "P02.F13",
+        "kind": "Case",
+        "sha256": "c21263d3feeba48e7471838665a75805a92ec96f3f9fe36971864ba34a82b86e"
+      },
+      {
+        "stable_id": "P02.F13.VAL",
+        "kind": "Validation",
+        "sha256": "51a2e2ea3b9ec116d5a351612c2510461d4887502dadee62ce124c0e90131201"
+      },
+      {
+        "stable_id": "P02.F14",
+        "kind": "Case",
+        "sha256": "228d988f79e2802423652b2d25e2e6c49a409822da6b2e8eed725902d5a1cd3d"
+      },
+      {
+        "stable_id": "P02.F14.VAL",
+        "kind": "Validation",
+        "sha256": "373af7efb12757aa8edccce24ea766e177a21277f77555b1c41cf2fbeb016020"
+      },
+      {
+        "stable_id": "P02.F15",
+        "kind": "Case",
+        "sha256": "2983420ca4101aa563731757cf350a1718f61a18cd783da7841452fa8d1f4b4a"
+      },
+      {
+        "stable_id": "P02.F15.VAL",
+        "kind": "Validation",
+        "sha256": "55876eaa16df8f4856a985b6721378820f718fe8e75b74ea774c6ea172906dae"
+      },
+      {
+        "stable_id": "P02.F16",
+        "kind": "Case",
+        "sha256": "317370f8ee4c28329a1651e651823a760c84c64a882df371a9309ca073285920"
+      },
+      {
+        "stable_id": "P02.F16.VAL",
+        "kind": "Validation",
+        "sha256": "51cb34e1e017e98f16b442f95450fd5cc862a318ebe0bc5ff2c37a9626ab38cc"
+      },
+      {
+        "stable_id": "P02.F17",
+        "kind": "Case",
+        "sha256": "ba76563d4cfde231a8e1bf62cafde7bbd63092fafe4616667680f955a9f3d3da"
+      },
+      {
+        "stable_id": "P02.F17.VAL",
+        "kind": "Validation",
+        "sha256": "d743beed550bb0c120c8dbf80e205a086dc72b33a24ba58eb14ae2291eb5100b"
+      }
+    ]
+  },
+  "validation": {
+    "independent_review": {
+      "issue": 30,
+      "comment_id": 7239835702,
+      "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+      "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+      "independent_result": "ACCEPT_SCOPED",
+      "findings": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    "builder_cases": 17,
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY",
+    "qualification_registered": false
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "content_digest": "ca2bbb27b9f0d0646636c8c11bcc39643af2449f51fa85214e581f2ede7631ad"
+}

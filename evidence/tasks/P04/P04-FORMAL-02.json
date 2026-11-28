@@ -1,0 +1,749 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate3-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "exact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+  "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "P04",
+  "attempt_id": "P04-FORMAL-02",
+  "receipt_id": "TASK:P04:P04-FORMAL-02",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.03.03.PT.01",
+          "record_sha256": "015b4eff6aa1d5403c53d2adec03954b30779b1fc08a93cb9e4083bdcd31f60c"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K06/records-03.jsonl",
+          "sha256": "5c5b5430bdbdd43c06eb9bcc7031ee0e16aacfa8c31721d89bf469d40542fb5b",
+          "stable_id": "K06.03.02.PT.01",
+          "record_sha256": "7d2fea8c0c92dcfe92faaa4ddde72eb4a696909462d5c0d124d5f2885a85ddc2"
+        }
+      ]
+    },
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-02",
+      "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+          "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+        },
+        {
+          "path": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+          "sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97"
+        },
+        {
+          "path": "knowledge/v0.1.0/practice-teaching-r10/K07/records-02.jsonl",
+          "sha256": "e531381a3fdbd3f0059dba1cfec2a0c1fff689862acee024d5bef4d0b67885c9",
+          "stable_id": "K07.03.03.PT.01",
+          "record_sha256": "d1b101e5873324ca0ee139c639c8d056ab717415817a6b51b4c822d187c4ae32"
+        }
+      ]
+    },
+    {
+      "task_id": "K11",
+      "receipt_id": "TASK:K11:K11-FORMAL-01",
+      "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K11/K11-FORMAL-01.json",
+          "sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123"
+        },
+        {
+          "path": "evidence/tasks/K11/K11-QUALIFICATION-01.json",
+          "sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+          "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+          "stable_id": "K11.04.02.TR.01",
+          "record_sha256": "5dbcce9aff50887c345f137679205c26989e37ea57400a2a4fd9db4590409909"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+          "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+          "stable_id": "K11.05.04.TR.01",
+          "record_sha256": "28eda3ff418d82cfcca511019eea56cb298d50b1ab5101912421d8f1825be7d0"
+        }
+      ]
+    },
+    {
+      "task_id": "K12",
+      "receipt_id": "TASK:K12:K12-FORMAL-01",
+      "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K12/K12-FORMAL-01.json",
+          "sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2"
+        },
+        {
+          "path": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+          "sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-03.jsonl",
+          "sha256": "1fb719afa3deb0802d2c7ded90040a977f6b60df717d097f7365faff5c8572da",
+          "stable_id": "K12.05.02.TR.01",
+          "record_sha256": "f8afef79d20ab1773a25c6321e37d3c45167c2f92e49d701b853ef8dac1fd868"
+        }
+      ]
+    },
+    {
+      "task_id": "P01",
+      "receipt_id": "TASK:P01:P01-FORMAL-03",
+      "content_digest": "1f92024dea57d5d53db676ef8edd91e3705e7955d6eef31861082743767fbd3c",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P01/P01-FORMAL-03.json",
+          "sha256": "969fdb1be723a3f9c8e413856ee91c75292461725f922d8c2cbcfa49076a1284"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P01.jsonl",
+          "sha256": "51df9b6ef2514d9f30333a1bdde60efa17cb21ad63aff474c5007534a63b622c"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P01.jsonl",
+          "sha256": "51df9b6ef2514d9f30333a1bdde60efa17cb21ad63aff474c5007534a63b622c",
+          "stable_id": "FLOW_GUIDED_CONCEPT_PRACTICE",
+          "record_sha256": "1c29709b4705cd8d5a7de962311dd40fc29d63625617fb701645e6f0fb7414bb",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "P02",
+      "receipt_id": "TASK:P02:P02-FORMAL-03",
+      "content_digest": "ca2bbb27b9f0d0646636c8c11bcc39643af2449f51fa85214e581f2ede7631ad",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P02/P02-FORMAL-03.json",
+          "sha256": "b738232f049464586f15e54fde876968c6744bc81b98587a0f552a7cd3565893"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+          "sha256": "ed7d043443df2b732a63e1afc9ecd74305c3e51158b2e62000436208e52810b2"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P02.jsonl",
+          "sha256": "ed7d043443df2b732a63e1afc9ecd74305c3e51158b2e62000436208e52810b2",
+          "stable_id": "P02.PREPARATION",
+          "record_sha256": "cc28aa16c2d175aa64e824af4a4ae00827d94efd5c5640f13a21f88be13c9bee",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-03",
+      "content_digest": "d3c1862f40b7cd81f468c81b6960d5e1df21f1ae0d3f5585ea33ec02b84d95b9",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-03.json",
+          "sha256": "98b13eb9fcb499a425b8f4abac3830b61510707e62d953c0e4001372d7d4df3e"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+          "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+          "stable_id": "P03.EXPLANATION",
+          "record_sha256": "816eb17cc00abdab250952d2f3401a6e16fff15ab8d1c5330f9a885166d4eee3",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+          "stable_id": "P03.PROBLEM_SOLVING",
+          "record_sha256": "85898a41cc05830ed6526d83f073d027ce996ec6c6365ecdde24817ea1e47d66",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+          "stable_id": "P03.PRODUCTION",
+          "record_sha256": "6d5b42d7d39d8626c8eece426350d33ff366f8456bdb3b035edef23286becb52",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P03.jsonl",
+          "sha256": "3b6c8ad62b3fbeb4fed95110f842e19003fe1c2f8c16670a8b0c57b53f22f731",
+          "stable_id": "P03.REFLECTION",
+          "record_sha256": "85a32594d73735f48f77b2f4acc590d738178a7e581f4dca790a03689d69c20b",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-3"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/learning-process.manifest.json",
+      "sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r3/P04.jsonl",
+      "sha256": "2ac414a9a6b1bc4d32d4e75e05b77700afd7ec03c846bdade98ab7ef53eb39d3",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/migration.json",
+      "sha256": "502d7452f15670874f3283c5e483b2830086f529a62698bcae678fe896352072",
+      "type": "EXACT_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/p-rebind-regression.json",
+      "sha256": "f60fe6bd52cfc1c1672fdb25414ea75954d0393cfaa281f2a192da8a2af0c8f6",
+      "type": "SQL_BUILDER_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/coverage.json",
+      "sha256": "f1cf8db97b26a8de76596cd54641514294b8e5ede0d53bf609e6fc26454a3937",
+      "type": "RESTRICTED_SCOPE_LEDGER"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/build.py",
+      "sha256": "d4b4d52f20a1d2caa826ea0fd341bb85b66a4a483b4e77ac31c00f1272e56d0f",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/semantic_checks.py",
+      "sha256": "a3644c39b28a24446d99f8ee38b6a67eff3041f338e1e9218bfc4d09ced16e99",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/process-cumulative/fixtures.json",
+      "sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa",
+      "type": "EXACT_VALIDATION_INPUT"
+    },
+    {
+      "path": "docs/implementation/f-composition-preparation/replay_p_rebind.py",
+      "sha256": "204130cd649909bfdeb9000b0dc6c74c4f674670380616bc96b2cfe1eb3b6bbd",
+      "type": "EXACT_VALIDATION_INPUT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "cumulative_version": "0.1.0-process-candidate-3",
+    "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+    "module_records": 67,
+    "case_count": 27,
+    "used_claim_ids": [
+      "K06.03.02.PT.01",
+      "K06.03.03.PT.01",
+      "K07.03.03.PT.01",
+      "K11.04.02.TR.01",
+      "K11.05.04.TR.01",
+      "K12.05.02.TR.01"
+    ],
+    "process_dependency_ids": {
+      "P03": [
+        "P03.EXPLANATION",
+        "P03.PROBLEM_SOLVING",
+        "P03.PRODUCTION",
+        "P03.REFLECTION"
+      ],
+      "P01": [
+        "FLOW_GUIDED_CONCEPT_PRACTICE"
+      ],
+      "P02": [
+        "P02.PREPARATION"
+      ]
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "coverage": [
+      {
+        "id": "P04.RQ01",
+        "scope": "受限顺序与有条件替代，组合表现另测",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "通用流程结构静态正确性与任意分支/插入",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P04.RQ02",
+        "scope": "逻辑 ALL 汇合与子流程返回；无并发执行承诺",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "真实并行及子流程输入输出/错误传播",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P04.RQ03",
+        "scope": "一次补救重试、独立复测及条件化渐撤",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "实际教学效果与跨次支架观测",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      },
+      {
+        "id": "P04.RQ04",
+        "scope": "冻结同单位预算、检查点、去重、退出、未知拒绝",
+        "target": "P04.FLOW",
+        "composition": "P04.COMPOSITION",
+        "candidate_case_group": "P04",
+        "remaining": "跨调用持久检查点和真实事务",
+        "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+      }
+    ],
+    "concrete_cases": 0,
+    "reviewed_scope": "Finite join/alternative/retry/pause/budget; no actual concurrency or child-flow execution.",
+    "reviewed_artifact_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+    "reviewed_artifact_tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+    "record_digests": [
+      {
+        "stable_id": "P04.GUARD.MEMBER",
+        "kind": "ConditionSpec",
+        "sha256": "18a4789603c61589e2568fa478c7f7c1abdc708584bed62ff6064da541fbb577"
+      },
+      {
+        "stable_id": "P04.GUARD.START",
+        "kind": "ConditionSpec",
+        "sha256": "1f8599f8cd67e5500a16e56a02a83082ef7f1c07e071e727e7799b5af9a99ac6"
+      },
+      {
+        "stable_id": "P04.GUARD.SUBFLOW.COMPLETE",
+        "kind": "ConditionSpec",
+        "sha256": "bd284db47fa8d3b919fcb7c4895d58f40d3d60a4f19d1941ea84a6f655f606f3"
+      },
+      {
+        "stable_id": "P04.GUARD.SUBFLOW.PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "a77b3a1a0adfd21f4a4f29644d4b338f9a95a2176ea3a69ac17ece6f5cbe452d"
+      },
+      {
+        "stable_id": "P04.GUARD.SUBFLOW.HOLD",
+        "kind": "ConditionSpec",
+        "sha256": "5fa22f2aa14dc167dcebe3303d4748f4e86fceb54074d0cf501c7f8a7ba28ad2"
+      },
+      {
+        "stable_id": "P04.GUARD.SUBFLOW.FAILED",
+        "kind": "ConditionSpec",
+        "sha256": "c86fe5c7860d72a504b26b0d97750518feb522b848ba3f559c8f49d499a7c031"
+      },
+      {
+        "stable_id": "P04.GUARD.PASS",
+        "kind": "ConditionSpec",
+        "sha256": "c48ecc17406492977eecf9df9e8648ec9802ea223a410531644be640894d5529"
+      },
+      {
+        "stable_id": "P04.GUARD.FAIL",
+        "kind": "ConditionSpec",
+        "sha256": "ed2d137526c28441b8bcf783de34e7cafa514e2a0c7bb2f90d42891e1e195a5b"
+      },
+      {
+        "stable_id": "P04.GUARD.RETRY",
+        "kind": "ConditionSpec",
+        "sha256": "d6699a116fc84332f5eabe5c27fb92072cd5b06bea66087b1f16a66ff3185844"
+      },
+      {
+        "stable_id": "P04.GUARD.FADE",
+        "kind": "ConditionSpec",
+        "sha256": "c4a0ac47e639923c9fa0dbcd7b1e00c24b2677936dfda73819705ba1f1b0ecc7"
+      },
+      {
+        "stable_id": "P04.GUARD.ALTERNATIVE",
+        "kind": "ConditionSpec",
+        "sha256": "bc96760043f4098b9dda1e8bcf6fb497b51d58499b0c8438a2c96363a73124be"
+      },
+      {
+        "stable_id": "P04.FLOW",
+        "kind": "FlowSpec",
+        "sha256": "acbfea33e30def2ce00b9b5997398cb4c0a2b59dab981b16e42150a14295b11a"
+      },
+      {
+        "stable_id": "P04.C001",
+        "kind": "Case",
+        "sha256": "a6eb0f83dbcb302d878cc3e98f1b3fba2d39d655af2e271e9e7b0adf94fc649a"
+      },
+      {
+        "stable_id": "P04.C001.VAL",
+        "kind": "Validation",
+        "sha256": "43763ed1ab04ce149342a4a6643df23d015da8ba5c61945774f700a1b860115e"
+      },
+      {
+        "stable_id": "P04.C002",
+        "kind": "Case",
+        "sha256": "75cb3d63932f7800d894c4979b81e7cf9781f87a959ff0884150f2ef59010f22"
+      },
+      {
+        "stable_id": "P04.C002.VAL",
+        "kind": "Validation",
+        "sha256": "51ca6c5be0637b6c87d8a8b3260a15cc92ce900c271b55538fdec9fdc765f4ac"
+      },
+      {
+        "stable_id": "P04.C003",
+        "kind": "Case",
+        "sha256": "ab6b1e1df037252c2975ded5245b185080a8b3170b710664deb32e59fd49380d"
+      },
+      {
+        "stable_id": "P04.C003.VAL",
+        "kind": "Validation",
+        "sha256": "6cd295332ce810f832e42724cb42516a3f11abd56412537a03290e570aeb2228"
+      },
+      {
+        "stable_id": "P04.C004",
+        "kind": "Case",
+        "sha256": "94a2c86fab829aab031b3e493d8cb7fd6b02f8f36e05054db3c1295f9161b446"
+      },
+      {
+        "stable_id": "P04.C004.VAL",
+        "kind": "Validation",
+        "sha256": "507a65865808c36fbde6a464db815b7e92396f0b4de4e8bb9876320c3e2c6cc2"
+      },
+      {
+        "stable_id": "P04.C005",
+        "kind": "Case",
+        "sha256": "74ed2d9c2d3aad11591a495b0445d72ec8907428be9fb7be544aa3e0da7def06"
+      },
+      {
+        "stable_id": "P04.C005.VAL",
+        "kind": "Validation",
+        "sha256": "00cdf782d5d8560ef2a10f1a591a272b8e486690b3825aae64608ee5c86bad02"
+      },
+      {
+        "stable_id": "P04.C006",
+        "kind": "Case",
+        "sha256": "074f235136573261f86537ce504b75288d872bbe4ee60f4f0d60ad0c848ff8ed"
+      },
+      {
+        "stable_id": "P04.C006.VAL",
+        "kind": "Validation",
+        "sha256": "6f84964fa0799eac78d3400bf620c96c7548b05a2decbd7a91195c3c2b51cb75"
+      },
+      {
+        "stable_id": "P04.C007",
+        "kind": "Case",
+        "sha256": "f3f49fc54f9bf495f271d532cf6fa03d0db6d6ab611869448af26471df625fe1"
+      },
+      {
+        "stable_id": "P04.C007.VAL",
+        "kind": "Validation",
+        "sha256": "eb8333aeb50643cfebbb6adadee829f057322909cc46c4d1c9cedf5a5aded6b8"
+      },
+      {
+        "stable_id": "P04.C008",
+        "kind": "Case",
+        "sha256": "0b2b20e86e19b0bcfd8420a392e2b12cb1f3957a2cc79564223e03ad32c2ab39"
+      },
+      {
+        "stable_id": "P04.C008.VAL",
+        "kind": "Validation",
+        "sha256": "96f49937784ee5bd831ceb792c93bc95df0e00fa20685758adb1cc0d1ad608a5"
+      },
+      {
+        "stable_id": "P04.C009",
+        "kind": "Case",
+        "sha256": "397a003d42e38d9ac6a25d82184deeba58425ecf65ad94e7c3615d5585407e73"
+      },
+      {
+        "stable_id": "P04.C009.VAL",
+        "kind": "Validation",
+        "sha256": "53c0d642ce18178dccc1b86d3071d2091308df7aee5d6e49929da20986c808bb"
+      },
+      {
+        "stable_id": "P04.C010",
+        "kind": "Case",
+        "sha256": "d34f83e3d4f830fabd05df111250d1b7949fd391c56f03d037ba6a60de57a9bc"
+      },
+      {
+        "stable_id": "P04.C010.VAL",
+        "kind": "Validation",
+        "sha256": "d5df9fa3ed145af73cb6c965b1e2ca9df05b94f690bf6c5710b21a0f0d43c60d"
+      },
+      {
+        "stable_id": "P04.C011",
+        "kind": "Case",
+        "sha256": "7906cbfb91b0c5f155a870f327849adea7eb329f11df806d78f013fb39b06761"
+      },
+      {
+        "stable_id": "P04.C011.VAL",
+        "kind": "Validation",
+        "sha256": "63e9cdc5715b632ff9c465ad3e0b05af4b9c0679fbd1b6de367b37360d24cf51"
+      },
+      {
+        "stable_id": "P04.C012",
+        "kind": "Case",
+        "sha256": "2bd5cc5db04e5288493a5c2f9cf8a6598b1be40e6a5b1712ff238a32953b1311"
+      },
+      {
+        "stable_id": "P04.C012.VAL",
+        "kind": "Validation",
+        "sha256": "6ddeb000ab6436b7e49b38bf919fb9b666de02ef4566073c69ed4abbb483ee45"
+      },
+      {
+        "stable_id": "P04.C013",
+        "kind": "Case",
+        "sha256": "a1fdba93da6f3e255d499dab844e045d39a7b47eee1eb015069eb7a805704c39"
+      },
+      {
+        "stable_id": "P04.C013.VAL",
+        "kind": "Validation",
+        "sha256": "1e263623279bf7432c1428a4ff9a082b0c0aeb389c0dbbdddc1c79cf78b6d6cd"
+      },
+      {
+        "stable_id": "P04.C014",
+        "kind": "Case",
+        "sha256": "b82c841d505aff2156759d3570e2127fb2d4b149ce8eed42b79121cee05f9b38"
+      },
+      {
+        "stable_id": "P04.C014.VAL",
+        "kind": "Validation",
+        "sha256": "e84552379a85786d1db4ee3b7e816a132035f6bb22ebf8973c9b045ed3d30835"
+      },
+      {
+        "stable_id": "P04.C015",
+        "kind": "Case",
+        "sha256": "bca79277d75b1592869df26fdff6b5834db5117ab7f6324551621d472922fc4e"
+      },
+      {
+        "stable_id": "P04.C015.VAL",
+        "kind": "Validation",
+        "sha256": "fefc64e58338546fba3015dad833c1269769d98a28494726afc5a950da320e04"
+      },
+      {
+        "stable_id": "P04.C016",
+        "kind": "Case",
+        "sha256": "a43bf537b619635fe552c816e35010487aa2f867ba4e3a59863277cba2a3bc96"
+      },
+      {
+        "stable_id": "P04.C016.VAL",
+        "kind": "Validation",
+        "sha256": "fbdb21d154336c4971e630706505c9e30d6a13ded3d3ccb585cfd3bff5f7f647"
+      },
+      {
+        "stable_id": "P04.C017",
+        "kind": "Case",
+        "sha256": "eefc55d40d6506b3596df38009c92ff577330fdb0ade970cd531fcfeea574394"
+      },
+      {
+        "stable_id": "P04.C017.VAL",
+        "kind": "Validation",
+        "sha256": "d36e4e564a8c45cc83b74289f71d9d581cee1a04b6a0c2ad4b95ec33b54eef53"
+      },
+      {
+        "stable_id": "P04.C018",
+        "kind": "Case",
+        "sha256": "9d0a17079bb6747e124837880e340f5af72da0174da7ee5820b280b26bdc28e8"
+      },
+      {
+        "stable_id": "P04.C018.VAL",
+        "kind": "Validation",
+        "sha256": "2657c0208314b3e3936b126116a2940c2555161bd39de001c7ff60ce26870848"
+      },
+      {
+        "stable_id": "P04.C019",
+        "kind": "Case",
+        "sha256": "0bc25c884998c909624b82988a05da1e14e246f75ca4bc0744cd0e8d9265c6d1"
+      },
+      {
+        "stable_id": "P04.C019.VAL",
+        "kind": "Validation",
+        "sha256": "0109e2e7a435039f2e7ad80969ea5ded1997d44ff9f29fb7f42ebeef5c527dd4"
+      },
+      {
+        "stable_id": "P04.C020",
+        "kind": "Case",
+        "sha256": "a2e55fbf224295a7f5e39bf43fba5b1fb04d8afcb123484d15ff8482a20e9b14"
+      },
+      {
+        "stable_id": "P04.C020.VAL",
+        "kind": "Validation",
+        "sha256": "2803cf2e528389fd4afb28a91e52234cf1fa8c7a7a25f2275950560f4dee48ef"
+      },
+      {
+        "stable_id": "P04.C021",
+        "kind": "Case",
+        "sha256": "ba9be5d29f746017125808f4b81ac9533ff9fc4a5d280c6261d31dc6325c3219"
+      },
+      {
+        "stable_id": "P04.C021.VAL",
+        "kind": "Validation",
+        "sha256": "d9c9bb807fb75f85b2f0eac08c488054322db84f496aa974e9f63399433a593c"
+      },
+      {
+        "stable_id": "P04.C022",
+        "kind": "Case",
+        "sha256": "0abaf664f2bdb2848779490840598d6c15ac8ac0d6762948e8edad382a0bf2fa"
+      },
+      {
+        "stable_id": "P04.C022.VAL",
+        "kind": "Validation",
+        "sha256": "bdf4b956d04d35c47a4dadcbdaf4222d58262613b0d72e728599fcc9c28de5bc"
+      },
+      {
+        "stable_id": "P04.C023",
+        "kind": "Case",
+        "sha256": "cdb4686470a6abed0c6931a887130731408261f932040fef2c090efa348c391c"
+      },
+      {
+        "stable_id": "P04.C023.VAL",
+        "kind": "Validation",
+        "sha256": "bdd2172f4cabe2a811d3601fe03d51b3c7c77fc49b38f9b4fda9f5d2161b8119"
+      },
+      {
+        "stable_id": "P04.C024",
+        "kind": "Case",
+        "sha256": "ecf505c31c22d3a82ddf6d1a495b1719a215c91f90828ef77c8dd73dbaec100c"
+      },
+      {
+        "stable_id": "P04.C024.VAL",
+        "kind": "Validation",
+        "sha256": "3136417400af416197f4029c8b584ef66dda3e412a25ab73cf4d995f07f7357c"
+      },
+      {
+        "stable_id": "P04.C025",
+        "kind": "Case",
+        "sha256": "3ed1f244c89b31c5344deff95c4c738e9374343352090d2574ab1f968445f782"
+      },
+      {
+        "stable_id": "P04.C025.VAL",
+        "kind": "Validation",
+        "sha256": "16e2b4b6517deadf2fda0234265936f4171e865448bfd98776e92bf393a3f6cc"
+      },
+      {
+        "stable_id": "P04.C026",
+        "kind": "Case",
+        "sha256": "3d03b4d2610abcd24ebc79a0b6799eafbc1cdb77bf78b63109cd1e84adb187cb"
+      },
+      {
+        "stable_id": "P04.C026.VAL",
+        "kind": "Validation",
+        "sha256": "043add17933858eb2140f9de1631901b39fb9fcceb49fff6f56e37a676496a65"
+      },
+      {
+        "stable_id": "P04.C027",
+        "kind": "Case",
+        "sha256": "fae849789b3141055c70c78a3fdfd4ea5046df4ee23e8e3c58694823fe4f9f89"
+      },
+      {
+        "stable_id": "P04.C027.VAL",
+        "kind": "Validation",
+        "sha256": "103247fa25ddedcda827c7b49e527460b7ebf2863a6360806adf0955228a1ed7"
+      },
+      {
+        "stable_id": "P04.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "9441facc1fd7edb4e24217598f4ede0499de5868c6fed95c6255aa3c53815378"
+      }
+    ],
+    "supersedes": "TASK:P04:P04-FORMAL-01",
+    "migration_only": true
+  },
+  "validation": {
+    "independent_review": {
+      "issue": 30,
+      "comment_id": 7239835702,
+      "body_sha256": "4cd4810d72df230411ba9671ec3f06bff9694a01459c16dcc8782aafef7593ef",
+      "reviewed_head": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "tree": "cc457c5b5d72269a14834322631c3ad585f8ebb5",
+      "independent_result": "ACCEPT_SCOPED",
+      "findings": {
+        "P0": 0,
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      }
+    },
+    "builder_cases": 27,
+    "import_mode": "MEMORY_SQLITE_RESEARCH_ONLY",
+    "qualification_registered": false
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; G03/G04/G05 and release not accepted."
+  ],
+  "next": "Exact dependency closure and G03 only after remaining tasks; no release.",
+  "content_digest": "c1f96b3d5b89f926dcbb40740c84634f33fec45180a1b149a6a410b049223694"
+}
