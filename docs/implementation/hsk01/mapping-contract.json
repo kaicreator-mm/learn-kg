@@ -1,20 +1,838 @@
 {
-  "schema_version":"learn-kg-hsk01-private-mapping-1",
-  "status":"PRIVATE_STAGING_TO_DB01_MAPPING_ONLY",
-  "authority":"Original UTF-8 RDF-derived term objects in raw_rdf; candidate fields are derived indexes, not replacement facts.",
-  "identity":{"raw_key":["graph","stable_id","kind"],"candidate_id":"HSK01.<explicit record_kind>.<first32 SHA256 canonical JSON array [graph,stable_id,kind]>","normalized_knowledge_id":"null until H module independently establishes identity","bare_subject_resolution":"Accepted archive has globally unique subjects; any ambiguity rejected, not guessed."},
-  "mapping":{
-    "SourceRecord":{"db01_kind":"Source","fields":{"identifier":"raw_rdf.stable_id","recorded_rights":"rights_scope.rights","access":"PRIVATE_ONLY","qualification":"HOLD"},"unresolved":["authoritative title","bibliographic identity","rights"]},
-    "SyllabusVersion":{"db01_kind":"Standard","fields":{"edition":"raw releaseLabel","effective_date":null},"unresolved":["official identity","effective date","equivalence"]},
-    "LevelBand":{"db01_kind":"StandardBand","fields":{"raw_band":"raw label","standard_ref":"typed_links.version"},"unresolved":["official level membership semantics"]},
-    "LexicalRecord":{"db01_kind":"SourceMembership","fields":{"source_ref":"typed_links.source","band_ref":"typed_links.levelBand","standard_ref":"same band version","ordinal":"source_locator.ordinal_candidate","printed_page":"source_locator.printed_page_numeric_candidate","raw_fields":"raw_rdf.properties","semantic_refs":[]},"unresolved":["Lexeme identity","reading/part-of-speech splitting","sense","collocation","semantic membership"]},
-    "CharacterMembership":{"db01_kind":"SourceMembership","fields":{"source_ref":"typed_links.source","band_ref":"typed_links.levelBand","standard_ref":"same band version","ordinal":"source_locator.ordinal_candidate","printed_page":"source_locator.printed_page_numeric_candidate","raw_fields":"raw_rdf.properties","semantic_refs":[]},"unresolved":["qualified character membership","reading/write skill semantics"]},
-    "HanCharacter":{"db01_kind":"HanCharacter","fields":{"character":"glyph_pointer","codepoint":"candidate.codepoint"},"unresolved":["claim_refs","script classification","reading","components"]},
-    "SourceBlock":{"db01_kind":"Locator","fields":{"source_ref":"typed_links.source","location":"source_locator printed label and source_entity_id","attribution":"RECORDED_NOT_REVERIFIED"},"unresolved":["PDF page index","visual layout","grammar/task/topic segmentation and semantic relations"]},
-    "AbilityRecord":{"db01_kind":"Competency","fields":{"source":"typed_links.source","raw_text":"raw_text_pointer"},"unresolved":["claim_refs","dimensions","evidence_refs","official capability mapping"]},
-    "TaxonomyTopic":{"db01_kind":"Topic","fields":{"label":"label_pointer","depth":"depth_candidate","parent_ref":"typed_links.parent or null"},"unresolved":["semantic or pedagogical relation; scopeTopic is source scope only"]}
+  "schema_version": "learn-kg-hsk01-private-mapping-2",
+  "status": "PRIVATE_STAGING_TO_DB01_MAPPING_ONLY",
+  "authority": "Original UTF-8 RDF term objects in raw_rdf remain authoritative for recorded source content. Mapped values are private shape-tested views; no canonical record emitted.",
+  "identity": {
+    "raw_key": [
+      "graph",
+      "stable_id",
+      "kind"
+    ],
+    "candidate_id": "HSK01.<explicit record_kind>.<first32 SHA256 canonical JSON array [graph,stable_id,kind]>",
+    "normalized_knowledge_id": "null until responsible H module independently establishes identity",
+    "bare_subject_resolution": "Fixed archive has globally unique subjects; ambiguity rejected."
   },
-  "private_sql_mapping":{"registry":["graph","id","kind","candidate_id"],"edges":["origin_graph","origin_id","origin_kind","predicate","target_graph","target_id","target_kind"],"foreign_keys":"Exact graph/id/kind endpoints; no inference from surface strings.","storage":":memory: only"},
-  "canonical_db01_boundary":"No DB01 manifest, general importer registration or canonical semantic object is produced here. Mapping fields are recipes for H01-H07/DB03. Do not fabricate mandatory claims/evidence to make a canonical shape pass.",
-  "rights":"PRIVATE_ONLY; no publication or redistribution; original PDF identity, visual layout, official authority HOLD"
+  "field_states": {
+    "MAPPED_VALUE": "Bounded value recipe; validate against target property schema; if not representable hold whole field, no invented substitution.",
+    "HOLD_TARGET_FIELD": "No target value emitted until stated obligation is satisfied.",
+    "CONDITIONAL_HOLD_TARGET_FIELD": "Only explicit recorded root null is mapped; non-root held. All required target fields must be resolved before any canonical emission."
+  },
+  "canonical_ref_binding": {
+    "status": "DEFERRED_DB03_OR_H_MODULE",
+    "stage_ref": [
+      "graph",
+      "source_entity_id",
+      "source_rdf_kind"
+    ],
+    "canonical_ref": [
+      "package_id",
+      "version",
+      "stable_id",
+      "kind",
+      "owner"
+    ],
+    "rule": "Resolve exact stage triple against an authorized, pinned source-to-canonical mapping and target package manifest; check target kind, owner, direct dependency, version, stable_id, target digest, IF01 endpoint rules, rights and scope. For standard_ref follow exact levelBand then version; never cast stage refs or fabricate missing refs. Absent, multiple, wrong kind or unqualified-for-use target -> HOLD."
+  },
+  "canonical_provenance_binding": {
+    "status": "DEFERRED_DB03_PRIVATE_ADAPTER",
+    "required": [
+      "source_path",
+      "source_sha256",
+      "json_pointer",
+      "source_status"
+    ],
+    "rule": "Use a private adapter that exposes a pinned JSON document (e.g. deterministic array of complete source rows in authorized private root), verifies whole-document SHA256, exact source line SHA and row identity, and resolves JSON pointer to the exact row. Relative path confined to authorized private root; source_status PRIVATE_PRESERVATION_CANDIDATE. Do not invent file/path, use row hash as document hash, apply JSON pointer directly to JSONL, or expose private data in Git/general importer. Until actual document and resolver exist HOLD provenance."
+  },
+  "raw_field_projection": {
+    "status": "BOUNDED_LITERAL_VALUE_VIEW_ONLY",
+    "rule": "For allowlisted literal predicates resolve exact raw terms by unique short name in original predicate index. Each must be one literal with exact non-whitespace string value and valid DB01 name. Emit array of {name,value} sorted by name; preserve value verbatim without trim/normalization. Missing, duplicate short names, multiple terms, IRI instead of literal, blank or invalid term -> HOLD entire field. Do not coerce to null or partial array. IRI links, datatype, language, unknown fields and full arrays stay authoritative in raw_rdf; projected array never substitutes for source evidence."
+  },
+  "mapping": {
+    "SourceRecord": {
+      "db01_kind": "Source",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "title": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Authoritative title not established."
+        },
+        "identifier": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/raw_rdf/stable_id"
+        },
+        "access": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "PRIVATE_ONLY"
+        },
+        "rights": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "qualification": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "bibliography": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Bibliographic identity not established."
+        },
+        "recorded_locator": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": null
+        },
+        "recorded_rights": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/rights_scope/rights"
+        }
+      },
+      "staging_only_inputs": [
+        "raw_rdf.properties.textSha256",
+        "HS00 source pin",
+        "rights_scope"
+      ],
+      "semantic_holds": [
+        "historical PDF identity",
+        "authoritative bibliographic identity",
+        "rights"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "SyllabusVersion": {
+      "db01_kind": "Standard",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Standard"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "edition": {
+          "state": "MAPPED_VALUE",
+          "op": "RAW_SINGLE_LITERAL_VALUE",
+          "predicate": "releaseLabel"
+        },
+        "standard_name": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Official standard identity/name UNKNOWN_HOLD."
+        },
+        "source_refs": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "No explicit qualified standard-to-source set; H07 must establish exact Source refs, not infer from other records."
+        },
+        "effective_date": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": null
+        }
+      },
+      "staging_only_inputs": [
+        "raw releaseLabel",
+        "HS00 standard identity"
+      ],
+      "semantic_holds": [
+        "official identity",
+        "effective date",
+        "equivalence"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "LevelBand": {
+      "db01_kind": "StandardBand",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "StandardBand"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "standard_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "version",
+            "target_kind": "Standard",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "raw_band": {
+          "state": "MAPPED_VALUE",
+          "op": "RAW_SINGLE_LITERAL_VALUE",
+          "predicate": "label"
+        },
+        "band_scope": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Recorded source label only; official membership semantics UNKNOWN_HOLD."
+        }
+      },
+      "staging_only_inputs": [
+        "candidate.level_label",
+        "HS00 pinned archive evidence"
+      ],
+      "semantic_holds": [
+        "official level membership semantics"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "LexicalRecord": {
+      "db01_kind": "SourceMembership",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "SourceMembership"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "source_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "source",
+            "target_kind": "Source",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "band_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "levelBand",
+            "target_kind": "StandardBand",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "standard_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "levelBand -> version",
+            "target_kind": "Standard",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "section": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "LEXICAL_SOURCE_RECORD"
+        },
+        "ordinal": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/candidate/source_locator/ordinal_candidate"
+        },
+        "printed_page": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/candidate/source_locator/printed_page_numeric_candidate"
+        },
+        "raw_fields": {
+          "state": "MAPPED_VALUE",
+          "op": "BOUNDED_RAW_LITERAL_FIELDS",
+          "predicates": [
+            "headwordRaw",
+            "levelRaw",
+            "ordinal",
+            "printedPage",
+            "readingPosRaw",
+            "status"
+          ],
+          "on_unrepresentable": "HOLD_ENTIRE_FIELD_NO_PARTIAL_OUTPUT",
+          "raw_authority": "raw_rdf.properties retains complete IRI, term value, datatype, language, arrays; this is a non-authoritative literal-value-only view. Links stay in typed_links; all unknown predicates remain raw only."
+        },
+        "mapping_status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "semantic_refs": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": []
+        }
+      },
+      "staging_only_inputs": [
+        "headwordRaw",
+        "readingPosRaw",
+        "candidate.level_label",
+        "candidate.scope_topic_semantics",
+        "typed_links.scopeTopic"
+      ],
+      "semantic_holds": [
+        "Lexeme identity",
+        "reading/part-of-speech splitting",
+        "sense",
+        "collocation",
+        "semantic membership"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "CharacterMembership": {
+      "db01_kind": "SourceMembership",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "SourceMembership"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "source_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "source",
+            "target_kind": "Source",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "band_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "levelBand",
+            "target_kind": "StandardBand",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "standard_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "levelBand -> version",
+            "target_kind": "Standard",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "section": {
+          "state": "MAPPED_VALUE",
+          "op": "RAW_SINGLE_LITERAL_VALUE",
+          "predicate": "mode"
+        },
+        "ordinal": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/candidate/source_locator/ordinal_candidate"
+        },
+        "printed_page": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/candidate/source_locator/printed_page_numeric_candidate"
+        },
+        "raw_fields": {
+          "state": "MAPPED_VALUE",
+          "op": "BOUNDED_RAW_LITERAL_FIELDS",
+          "predicates": [
+            "mode",
+            "ordinal",
+            "printedPage",
+            "status"
+          ],
+          "on_unrepresentable": "HOLD_ENTIRE_FIELD_NO_PARTIAL_OUTPUT",
+          "raw_authority": "raw_rdf.properties retains complete IRI, term value, datatype, language, arrays; this is a non-authoritative literal-value-only view. Links stay in typed_links; all unknown predicates remain raw only."
+        },
+        "mapping_status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "semantic_refs": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": []
+        }
+      },
+      "staging_only_inputs": [
+        "typed_links.character",
+        "mode raw",
+        "typed_links.scopeTopic"
+      ],
+      "semantic_holds": [
+        "qualified character membership",
+        "reading/write skill semantics"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "HanCharacter": {
+      "db01_kind": "HanCharacter",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HanCharacter"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "character": {
+          "state": "MAPPED_VALUE",
+          "op": "DEREFERENCE_RAW_LITERAL_POINTER",
+          "pointer": "/candidate/glyph_pointer"
+        },
+        "codepoint": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/candidate/codepoint"
+        },
+        "script": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Script classification not established by glyph alone."
+        },
+        "claim_refs": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "H02 must establish actual claims and exact refs."
+        }
+      },
+      "staging_only_inputs": [
+        "raw glyph",
+        "source entity identity"
+      ],
+      "semantic_holds": [
+        "reading",
+        "components",
+        "script classification"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "SourceBlock": {
+      "db01_kind": "Locator",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Locator"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "source_ref": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires actual downstream canonical typed target in authorized private package; no stage ID cast.",
+          "resolution": {
+            "stage_link": "source",
+            "target_kind": "Source",
+            "contract": "canonical_ref_binding"
+          }
+        },
+        "location": {
+          "state": "MAPPED_VALUE",
+          "op": "RECORDED_PRINTED_LABEL_AND_ENTITY",
+          "pointer": "/candidate/source_locator"
+        },
+        "attribution": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "RECORDED_NOT_REVERIFIED"
+        },
+        "verification": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Recorded source block and text digest preserved; historical PDF identity, page index, visual layout and semantics not reverified."
+        }
+      },
+      "staging_only_inputs": [
+        "rawText",
+        "blockKind",
+        "scopeTopic",
+        "HS00 exact source block evidence"
+      ],
+      "semantic_holds": [
+        "PDF page index",
+        "visual layout",
+        "grammar/task/topic segmentation and semantic relations"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "AbilityRecord": {
+      "db01_kind": "Competency",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Competency"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "claim_refs": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "H06/H07 must establish actual competency claims."
+        },
+        "dimensions": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Competency dimensions not established from source rawText alone."
+        },
+        "evidence_refs": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "No canonical assessment evidence established."
+        }
+      },
+      "staging_only_inputs": [
+        "typed_links.source",
+        "candidate.raw_text_pointer",
+        "raw_rdf.properties.rawText",
+        "typed_links.levelBand",
+        "typed_links.scopeTopic"
+      ],
+      "semantic_holds": [
+        "official capability mapping",
+        "claim_refs",
+        "dimensions",
+        "evidence_refs"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    },
+    "TaxonomyTopic": {
+      "db01_kind": "Topic",
+      "target_fields": {
+        "kind": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Topic"
+        },
+        "stable_id": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Canonical stable identity must be assigned and collision-checked by responsible H/EVIDENCE module; never reuse source IRI or staging candidate ID as semantic identity."
+        },
+        "owner": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Assign from actual responsible H/EVIDENCE owner and authorized package owner set; no inferred owner from source graph."
+        },
+        "status": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "HOLD"
+        },
+        "conditions": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": [
+            "PRIVATE_CANDIDATE_REFERENCE_ONLY",
+            "NO_SOURCE_AUTHORITY_OR_RIGHTS_PROMOTION"
+          ]
+        },
+        "negative_boundary": {
+          "state": "MAPPED_VALUE",
+          "op": "LITERAL",
+          "value": "Source staging records do not establish professional semantics, official level, mastery, or publication permission."
+        },
+        "provenance": {
+          "state": "HOLD_TARGET_FIELD",
+          "reason": "Requires authorized private adapter and verified canonical provenance object; source JSONL line pin alone is not a canonical JSON document pointer.",
+          "resolution": {
+            "contract": "canonical_provenance_binding"
+          }
+        },
+        "label": {
+          "state": "MAPPED_VALUE",
+          "op": "DEREFERENCE_RAW_LITERAL_POINTER",
+          "pointer": "/candidate/label_pointer"
+        },
+        "depth": {
+          "state": "MAPPED_VALUE",
+          "op": "CANDIDATE_VALUE",
+          "pointer": "/candidate/depth_candidate"
+        },
+        "parent_ref": {
+          "state": "CONDITIONAL_HOLD_TARGET_FIELD",
+          "op": "NULL_IF_RECORDED_ROOT_ELSE_HOLD",
+          "stage_link": "parent",
+          "resolution": {
+            "target_kind": "Topic",
+            "contract": "canonical_ref_binding"
+          },
+          "reason": "Non-root parent needs exact canonical target ref; raw taxonomy is not a pedagogical relation."
+        }
+      },
+      "staging_only_inputs": [
+        "candidate.category_relation",
+        "typed_links.parent"
+      ],
+      "semantic_holds": [
+        "semantic or pedagogical relationship",
+        "taxonomy ownership"
+      ],
+      "emission": "NOT_AUTHORIZED_NO_CANONICAL_RECORD"
+    }
+  },
+  "private_sql_mapping": {
+    "registry": [
+      "graph",
+      "id",
+      "kind",
+      "candidate_id"
+    ],
+    "edges": [
+      "origin_graph",
+      "origin_id",
+      "origin_kind",
+      "predicate",
+      "target_graph",
+      "target_id",
+      "target_kind"
+    ],
+    "foreign_keys": "Exact graph/id/kind endpoints; no inference from surface strings.",
+    "storage": ":memory: only"
+  },
+  "canonical_db01_boundary": "No canonical record, package manifest, qualification, general importer registration or DB03 acceptance. Every required target field explicitly mapped or held; do not fabricate claims/evidence. Only property-level candidate shapes validated here.",
+  "rights": "PRIVATE_ONLY; no publication or redistribution; original PDF identity, visual layout, official authority HOLD"
 }

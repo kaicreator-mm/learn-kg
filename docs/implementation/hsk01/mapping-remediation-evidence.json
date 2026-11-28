@@ -1,0 +1,147 @@
+{
+  "changed_or_new_artifact_pins": {
+    "README.md": "c04e5362fd1c3bea1f612e307a856cabcafdbb4343410e16faef161366659a7e",
+    "mapping-contract.json": "b4a04441d7c665b49a708366e96fc7a64ebdaa9ecffa0fe3e2e22ed3291ac97a",
+    "test_mapping.py": "36929ff88bb3e16979c0ba0fd64876014f4b4bdbb15369cc5261f4cac835d4a7",
+    "verify_mapping.py": "53755a83f45226b855baea4dab15dbe94facfd803b8538a671f31d7d9b00eefe"
+  },
+  "current_mapping_sha256": "b4a04441d7c665b49a708366e96fc7a64ebdaa9ecffa0fe3e2e22ed3291ac97a",
+  "limitations": [
+    "Property-level value shape tests only; canonical identity, owner, refs, provenance and professional claims/evidence remain held.",
+    "Private staged corpus not changed; previous independently accepted full conversion remains applicable to exact same private manifest.",
+    "No HSK01 candidate receipt, DAG advancement, H-module dispatch, DB03 acceptance, qualification or rights promotion."
+  ],
+  "previous_conversion_evidence_sha256": "d92bf336aa308d8deef38e4c0e6eae43ec9cd1f694a3193b74735bc365c4b35b",
+  "previous_mapping_sha256": "75000f0e6618625ba7b325707b319244549674776d3750a592d41d3b5a8d830e",
+  "previous_review": {
+    "accepted_component": "PRIVATE_TEXT_CONVERSION",
+    "comment_id": 7240499098,
+    "finding": "P2-01_FIELD_MAPPING",
+    "issue": 32,
+    "result": "REWORK_REQUIRED"
+  },
+  "review_base": "fd69612bfea47ce483136eb38bfc433c33d976a6",
+  "schema_and_interface": {
+    "db01": "909a5c5e2bac142eddd9375d584b7ad07c716dc03b475a5f2942ce77354cc4cd",
+    "if01": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131"
+  },
+  "schema_version": "learn-kg-hsk01-mapping-remediation-evidence-1",
+  "source_kind_field_counts": {
+    "AbilityRecord": 10,
+    "CharacterMembership": 16,
+    "HanCharacter": 11,
+    "LevelBand": 10,
+    "LexicalRecord": 16,
+    "SourceBlock": 11,
+    "SourceRecord": 15,
+    "SyllabusVersion": 11,
+    "TaxonomyTopic": 10
+  },
+  "status": "AUTHOR_FINITE_FIELD_MAPPING_REMEDIATION_ONLY",
+  "unchanged_conversion_artifacts": {
+    "build_hsk01.py": "6041920267dceab3436653511621b993d2a316a1e939f8953e84c6b9ea6e962e",
+    "conversion-evidence.json": "d92bf336aa308d8deef38e4c0e6eae43ec9cd1f694a3193b74735bc365c4b35b",
+    "stage.schema.json": "08326cb8ab5e73c7c42b13a2f0f04a5c10ea41f58ce4aed802d85e6948f56f27",
+    "test_hsk01.py": "d4ad6e16fec5a4544cfb0584bd9e96e1b429ece0a63c989fb8e533eae3432872"
+  },
+  "validation": {
+    "actual_private_property_views": {
+      "canonical_records_emitted": 0,
+      "db01_schema_sha256": "909a5c5e2bac142eddd9375d584b7ad07c716dc03b475a5f2942ce77354cc4cd",
+      "held_fields_by_source_kind": {
+        "AbilityRecord": {
+          "claim_refs": 9,
+          "dimensions": 9,
+          "evidence_refs": 9,
+          "owner": 9,
+          "provenance": 9,
+          "stable_id": 9
+        },
+        "CharacterMembership": {
+          "band_ref": 4288,
+          "owner": 4288,
+          "provenance": 4288,
+          "source_ref": 4288,
+          "stable_id": 4288,
+          "standard_ref": 4288
+        },
+        "HanCharacter": {
+          "claim_refs": 3088,
+          "owner": 3088,
+          "provenance": 3088,
+          "script": 3088,
+          "stable_id": 3088
+        },
+        "LevelBand": {
+          "owner": 11,
+          "provenance": 11,
+          "stable_id": 11,
+          "standard_ref": 11
+        },
+        "LexicalRecord": {
+          "band_ref": 11000,
+          "owner": 11000,
+          "provenance": 11000,
+          "source_ref": 11000,
+          "stable_id": 11000,
+          "standard_ref": 11000
+        },
+        "SourceBlock": {
+          "owner": 94,
+          "provenance": 94,
+          "source_ref": 94,
+          "stable_id": 94
+        },
+        "SourceRecord": {
+          "bibliography": 3,
+          "owner": 3,
+          "provenance": 3,
+          "stable_id": 3,
+          "title": 3
+        },
+        "SyllabusVersion": {
+          "owner": 1,
+          "provenance": 1,
+          "source_refs": 1,
+          "stable_id": 1,
+          "standard_name": 1
+        },
+        "TaxonomyTopic": {
+          "owner": 823,
+          "parent_ref": 797,
+          "provenance": 823,
+          "stable_id": 823
+        }
+      },
+      "manifest_sha256": "33bb0a4254af6c40ff19bcd8cdc0aa045a844bcb6afa82ac18e4438575a8c668",
+      "projected_property_counts": {
+        "HOLD_TARGET_FIELD": 110928,
+        "MAPPED_VALUE": 177168
+      },
+      "raw_field_array_rows": {
+        "CharacterMembership": 4288,
+        "LexicalRecord": 11000
+      },
+      "recorded_taxonomy_root_nulls": 26,
+      "records": 19317,
+      "records_by_kind": {
+        "AbilityRecord": 9,
+        "CharacterMembership": 4288,
+        "HanCharacter": 3088,
+        "LevelBand": 11,
+        "LexicalRecord": 11000,
+        "SourceBlock": 94,
+        "SourceRecord": 3,
+        "SyllabusVersion": 1,
+        "TaxonomyTopic": 823
+      }
+    },
+    "canonical_emission": "NOT_AUTHORIZED",
+    "gateway_job": "job_01M8H8JYF900E6HQ1PHRZPX37B",
+    "new_mapping_tests": "20/20",
+    "old_conversion_tests": "14/14",
+    "persistent_sqlite": false,
+    "private_candidate_manifest_unchanged": true,
+    "source_kind_coverage": "9/9"
+  }
+}

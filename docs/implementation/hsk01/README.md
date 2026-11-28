@@ -31,3 +31,11 @@ build_hsk01.py 消费外部可信的 HS00 收据 SHA256，核验收据工件、H
 测试：python3 docs/implementation/hsk01/test_hsk01.py
 
 conversion-evidence.json 仅含数量、摘要、权限和回放证据；原始及派生语料不进入 Git，原始路径/Drive ID 不写入仓库。独立复核可在授权服务器私有目录重建新输出并校验安全摘要。无需将私有语料下载到其他对话。当前数据不能公开、不得据此声称 H01–H07 已完成、专业资格、真实学习效果、CQ/LC、DB03、G03/G04/G05 或发布已通过。
+
+## R2 — #32 P2-01 字段映射整改
+
+仅修复字段映射合同和新增 property-level 验证，R1 全量转换器、stage schema、原 14 个测试、conversion-evidence.json、实际 9 个私有候选 JSONL 与 manifest 均保持原样。R1 evidence 内 mapping/README SHA 为历史快照，R2 使用 mapping-remediation-evidence.json 绑定当前增量（不会回写历史 evidence）。
+
+mapping-contract.json v2 按 9 种源类型逐项列出 DB01 目标 schema 的全部字段（包含 common kind/stable_id/owner/status/conditions/negative_boundary/provenance）。MAPPED_VALUE 只表示可检查的候选字段值，不能拼装成完整 canonical record。HOLD_TARGET_FIELD 不输出目标值，包含未建立的真实语义、精确 typed ref、规范化 ID/owner 及私有来源文档 provenance。分类根节点仅在 source depth=1 且无 parent 时映射 null；非根父节点需下游精确 ref 绑定。Competency 的 rawText/source 是 staging 输入，不是目标字段。Source 权利明确 HOLD、access PRIVATE_ONLY，官方标准身份仍 UNKNOWN_HOLD。所有 SourceMembership 的 raw_fields 仅允许列出的单一非空字面量，输出 schema 所需的 {name,value} 数组，原值不裁切；完整 IRI、datatype、language、term 数组和未知字段仍保存在 raw_rdf。无法表达则 hold 整个字段，不用空值掩盖；违反 source-row 基本合同（缺失必需字段、重复短谓词、错误 RDF term 等）先拒绝该行，不能产出字段视图。字段验证器只消费已固定审核候选，不提供任意外部输入安全边界。
+
+新增验证：python3 -m unittest -v test_mapping.MappingTests（在本目录执行）；python3 verify_mapping.py --private-stage "$HSK01_PRIVATE_OUTPUT" --manifest-sha256 "$TRUSTED_PRIVATE_MANIFEST_SHA256"。程序先核对 manifest 和九个输出 hash，再逐条检查目标字段 schema，只输出汇总，零 canonical record、零 package 注册、零持久 SQLite。typed ref 解析与实际 private adapter provenance 仍待 H 模块/DB03。不可将属性形状通过等同 DB01 全记录、真实专业知识或导入资格。
