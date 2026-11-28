@@ -1,0 +1,1126 @@
+{
+  "H_cases": 169,
+  "chinese_manifest_sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
+  "closure": {
+    "packages": 18,
+    "records": 12508,
+    "typed_refs": 29722
+  },
+  "embedded_event_rebinds": [
+    {
+      "id": "F04.UNASSISTED_INDEPENDENT",
+      "old_input_sha256": "e58e7ca942b82b46a2bf155140be6f05e1759f22468fb86851133ad31ed37f27",
+      "rebound_input_sha256": "49e04f9382afab02ee382969f3a2a85943508648dabce662eba0350c7336e2a5"
+    },
+    {
+      "id": "F04.HINTED_NOT_INDEPENDENT",
+      "old_input_sha256": "b97bb61c137b555c12f44f9b633a384246214e5a469588a9a5065a6d8d1fdaec",
+      "rebound_input_sha256": "636100f83f8461ed2f125af4e284ddd6738938ccf99ac63828bfeb4705303fca"
+    },
+    {
+      "id": "F04.IDENTICAL_DUPLICATE_HINT_IDEMPOTENT",
+      "old_input_sha256": "3c06eb94d9bba8c6f4dfbae908eeeaeb23ce05f6de310ce8c349624a2f8500a6",
+      "rebound_input_sha256": "413bd9de700729d1b6d2d1e5988ffb14be42330d09419d83fae1f42c4bc5d9bc"
+    },
+    {
+      "id": "F04.EVENT_AND_STORAGE_TIMES_SEPARATE",
+      "old_input_sha256": "dfade186f8ba6244bd2f39f7b32b0b278b3b011c14caa69bfd787709136ac636",
+      "rebound_input_sha256": "737f4a49c347e56d94eb409e57aed1c5209c10c8aa365a73bdecebfcf08e7251"
+    },
+    {
+      "id": "F04.GENERATED_ANSWER_NOT_EVIDENCE",
+      "old_input_sha256": "a27dbe695bd7ab54bb977a7ee9669dabd5a20767744347e6ee2fd138ba995c39",
+      "rebound_input_sha256": "3a1278f6453fba4733b25417fe76ce89b6b96af2fc6a62ff08ca6e3736253998"
+    },
+    {
+      "id": "F04.MISSING_INITIAL_UNKNOWN",
+      "old_input_sha256": "b25db929bccf75c98de1541baa627d858bf9874915e700a836542a3e4966fd02",
+      "rebound_input_sha256": "c20e3b95721bbb44ba14f5e5b6e557713aa57a2c491afc981782a11c1fa7eaba"
+    },
+    {
+      "id": "F04.ROLE_DENIED_HOLD",
+      "old_input_sha256": "c45be267b4697f2be3864bbf7b64f1c9bc77f8d0e58df50f0d6cb5a2f954eb48",
+      "rebound_input_sha256": "3c78b2f0572af8bb0290fc7e52191296aee44b4ba7ea4e72dc633c0ae42edaf2"
+    },
+    {
+      "id": "F04.VERSION_MISMATCH_HOLD",
+      "old_input_sha256": "f97a5e55a5d3faf8d0f01daa7d4569046116037053d8245422e1dbbd249dae26",
+      "rebound_input_sha256": "c53e75a87ecba47dfba3000642062bae2452ff840a2e12033818e141c85bc730"
+    },
+    {
+      "id": "F04.CONFLICTING_DUPLICATE_HINT_HOLD",
+      "old_input_sha256": "f92ac1057fb006a208d7e22d473929dbf3f798ddc39cec52c8fdeaef7b45cf85",
+      "rebound_input_sha256": "a51fd29441ce6acc83a1889ac8daa2fa8f53e90f4c9f41a0023733d5262d3335"
+    },
+    {
+      "id": "F04.GENERATED_ANSWER_UNKNOWN",
+      "old_input_sha256": "ca25c2e26761e2982f212bdf7ac956f04e45d4111441e4bb29cde068c376d033",
+      "rebound_input_sha256": "669d4af6e215d14f96344d3e89882400c662fe4646d8c82fd3866dff5a40803a"
+    },
+    {
+      "id": "F04.MISSING_RETEST_UNKNOWN",
+      "old_input_sha256": "1ff11dd54c606a0a2bfbf5dc8b2922b4442d73b931d1d194cba6d833f9607673",
+      "rebound_input_sha256": "ce2d00ade0c880a6e4ead4482047bfa06ed248760b4ee3749bcb6244ae7d83da"
+    },
+    {
+      "id": "F04.SAME_VARIANT_REPLAY_HOLD",
+      "old_input_sha256": "25f928ec72040c9c487364a67c0fca33328d0c5dfab922540dc37067507d3bac",
+      "rebound_input_sha256": "8b79f40f1787e26244f122acdb70ffc89642beb9911dab8e7f2c28407e4fee72"
+    },
+    {
+      "id": "F04.RETEST_VERSION_MISMATCH_HOLD",
+      "old_input_sha256": "3fe2052496563ccab33e04786a7add0d8c45d3fbef568e0ac0a6e77fb74e7ebf",
+      "rebound_input_sha256": "58353760983ef76aea16885a2f006e1167308aa31132aa4318ba6a3fadc4fb83"
+    },
+    {
+      "id": "F04.ASSISTED_RETEST_NOT_INDEPENDENT",
+      "old_input_sha256": "bf3de1457751b12cc481b434c10193d73670eec47d62ddd6a6b2bb80821f6fdb",
+      "rebound_input_sha256": "4264d74700bbf818a2fae639c415687a22ed3aa8bae66705d621f58f337565e7"
+    },
+    {
+      "id": "F04.RETEST_CONSTRUCT_MISMATCH_HOLD",
+      "old_input_sha256": "ecc64bff5f6fc3fea87df2cb33220dcd27ef77ca43c557e81d6ec9b24489a455",
+      "rebound_input_sha256": "e9d2c60ed87523ce1f96e35722c118a5ba10fc59682c754f5c5e63062480c651"
+    },
+    {
+      "id": "F04.RETEST_SCORING_BINDING_MISMATCH_HOLD",
+      "old_input_sha256": "897755c380dbd2ee2a45f68d3d6140b2c0ac80a074ef021103c6f5d56f18beb9",
+      "rebound_input_sha256": "b66bcbe9601e16a335decfe0fa95ded5e1587fb0d521dfc990efc4b5b9820180"
+    },
+    {
+      "id": "F04.RETEST_EVENT_HASH_MISMATCH_HOLD",
+      "old_input_sha256": "be0c622a7b0d8ed0ffde3f750084520fb61c3f4189dc8cecb844f77d0d9d7e1f",
+      "rebound_input_sha256": "0799479a9345382c09ceafaf3a90cc779a130cfe5c4b6bc1b36e02e9b8b6fc38"
+    },
+    {
+      "id": "F04.HINTED_THEN_INDEPENDENT_RETEST",
+      "old_input_sha256": "24639c1c76b43f5572ee23ef2ec7a91c71a4bfc8e8468cd5ac50a231cd8875b7",
+      "rebound_input_sha256": "dce1821c1f0fe224b1322a69e582e7e48752f2a9f1302effd9ed114a08e1ccab"
+    },
+    {
+      "id": "F04.EMPTY_TASK_VERSION_TOP_AND_EVENTS_HOLD",
+      "old_input_sha256": "dfb5f43f1cf589ba2acdd05e394e1af9c0117d066ec6de4a1808137294d26f79",
+      "rebound_input_sha256": "3dbba30a849a57e58b8ca8621f79779cc9a20652aa5b1d764da37a2184ccf32c"
+    },
+    {
+      "id": "F04.EMPTY_SCORING_VERSION_TOP_AND_EVENTS_HOLD",
+      "old_input_sha256": "2312f6d2b6f41daaedc2e4a72d66a1dcee83d8e1e74edc9aff607006ee53969a",
+      "rebound_input_sha256": "c68cac199d3664d940d05382280dff9811b20ed6cc99ddedaa34b89553284acc"
+    },
+    {
+      "id": "F04.EMPTY_RETEST_TASK_VERSION_HOLD",
+      "old_input_sha256": "522482e1088429a3235e6f128d7f7345e781e7f24e97f7ccfed5255db797a94c",
+      "rebound_input_sha256": "bf0d5fa376fdf3bff29ac9f9b61db7dd0fc89e65c6287ebdcc383758de6318fc"
+    },
+    {
+      "id": "F04.EMPTY_RETEST_SCORING_VERSION_HOLD",
+      "old_input_sha256": "e64bffc6e59b2babd36428eca7724107021e9f15c3b265ca9bdfce9a55fcf4db",
+      "rebound_input_sha256": "2606002423b619a6a03681b4c850067e3979255ac05d98a7de3c17846182edfa"
+    },
+    {
+      "id": "F04.UNKNOWN_CLOCK_DOMAIN_HOLD",
+      "old_input_sha256": "1df058ad270b97503fa780a55ac70d5b6bec284b0791d491a0d108ed554030d8",
+      "rebound_input_sha256": "614ccefca99c3e252ac32d769fcab07dae038c9bb1476179a135832d2337296b"
+    },
+    {
+      "id": "F04.CLOCK_SKEW_EXCEEDED_HOLD",
+      "old_input_sha256": "fea9e64e5a7c3f655999fd7c38d563ff7f2d5ef0e2126ec4ba1a5cf051355771",
+      "rebound_input_sha256": "80573e6236281afe3d3e5e36abc62d4d99096b222606fb0c96277f4276a20aae"
+    },
+    {
+      "id": "F04.RECORDED_AT_ORDER_INVALID_HOLD",
+      "old_input_sha256": "86f9a0b8ceb4ca38dffbb7a7e9e5a28ccf883aed97e0c5dc070465ca4a5b61dd",
+      "rebound_input_sha256": "073aade87c09808d576628c8c8e6a71a070435a94642b5f2daacf11997ddf3c4"
+    }
+  ],
+  "migration_counts": {
+    "TYPED_REF_VERSION_ONLY": 1505,
+    "UNCHANGED": 220
+  },
+  "migration_records": 1725,
+  "new_FA_cases": 77,
+  "new_manifest_sha256": "7f572c3e6c0717d5572e5509dd862aa4060be8687f4e4f96665e0b33b54de10c",
+  "old_manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+  "package_counts": [
+    {
+      "manifest_sha256": "2e35f5431088b47cbd02f43c30e7f3519e777f22b78e33d1e5d27672f3319355",
+      "package": [
+        "evidence",
+        "0.1.0-foundation-candidate-3"
+      ],
+      "records": 78,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "17f3bf2e25f6d70f53d90beed651d752843541e350824bd3c53f360dc67740d5",
+      "package": [
+        "learning-core",
+        "0.1.0-foundation-candidate-3"
+      ],
+      "records": 1585,
+      "typed_refs": 3899
+    },
+    {
+      "manifest_sha256": "33f1873edf37544619c43f27ced6ddad6f681dec5d43de927e28519d7af8ee47",
+      "package": [
+        "evidence",
+        "0.1.0-practice-teaching-candidate-10"
+      ],
+      "records": 85,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "ff49288d22822ab53c79b2827a03e8435c5e9a50f39200eccd878a761f1e41e0",
+      "package": [
+        "learning-core",
+        "0.1.0-practice-teaching-candidate-10"
+      ],
+      "records": 1841,
+      "typed_refs": 4121
+    },
+    {
+      "manifest_sha256": "a0f42b6feed737b89ab5c8ab853513ca6a4c8c28274e3e61525ddab95f09fa07",
+      "package": [
+        "evidence",
+        "0.1.0-measurement-candidate-4"
+      ],
+      "records": 26,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "6cd783b13b28b1eb10cfe4aa8a1e587154808e92cb9283ca8cb5e744c127f40f",
+      "package": [
+        "learning-core",
+        "0.1.0-measurement-candidate-4"
+      ],
+      "records": 653,
+      "typed_refs": 1426
+    },
+    {
+      "manifest_sha256": "ca13a399dba0a759bd520d4b58b7df675cfd02e32984db24962064d86a4c3626",
+      "package": [
+        "evidence",
+        "0.1.0-trace-adaptation-resources-candidate-1"
+      ],
+      "records": 38,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "3c77b6a960a939d05b7deeed36c513ab450866e265583e07bf51345051d59a85",
+      "package": [
+        "learning-core",
+        "0.1.0-trace-adaptation-resources-candidate-1"
+      ],
+      "records": 1323,
+      "typed_refs": 2838
+    },
+    {
+      "manifest_sha256": "89ffe46c7a22a2dd598afc02f7272d405c24710003d070fc72fe3af152c25cb6",
+      "package": [
+        "evidence",
+        "0.1.0-social-research-candidate-2"
+      ],
+      "records": 32,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "9a572b5108fdbb1b1117486ea9cc6f9d302e700d5c51b501353c952666ad9fb7",
+      "package": [
+        "learning-core",
+        "0.1.0-social-research-candidate-2"
+      ],
+      "records": 815,
+      "typed_refs": 1699
+    },
+    {
+      "manifest_sha256": "277d5c897103f5bde84ef3831b774d2bbd345d1c781c126b3cc612822bfcee9c",
+      "package": [
+        "evidence",
+        "0.1.0-domain-development-candidate-2"
+      ],
+      "records": 25,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "6f9b35f0bd6fc971186105c7378750e55d249682d8685a355602fca073a23402",
+      "package": [
+        "learning-core",
+        "0.1.0-domain-development-candidate-2"
+      ],
+      "records": 672,
+      "typed_refs": 1408
+    },
+    {
+      "manifest_sha256": "0285a7a420013ff4e18ce2afdc675d5f38c631c13dc35d5154fc8f0090feac6a",
+      "package": [
+        "evidence",
+        "0.1.0-technology-inclusion-governance-candidate-1"
+      ],
+      "records": 45,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "2413a1992c61a4825f2a651773c04b0b368d78f0177bbc57fbe87051c04204d0",
+      "package": [
+        "learning-core",
+        "0.1.0-technology-inclusion-governance-candidate-1"
+      ],
+      "records": 1147,
+      "typed_refs": 2447
+    },
+    {
+      "manifest_sha256": "c78438055fa78dc7e417d7b424cfca24194a9f019fe64c0f2e780409048504d5",
+      "package": [
+        "evidence",
+        "0.1.0-chinese-cumulative-candidate-2"
+      ],
+      "records": 120,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
+      "package": [
+        "chinese",
+        "0.1.0-chinese-cumulative-candidate-2"
+      ],
+      "records": 2109,
+      "typed_refs": 4677
+    },
+    {
+      "manifest_sha256": "aa88f33ce999616823bb84ac26802b65c4bd37934e3a15dbbf851a9f858a9d71",
+      "package": [
+        "evidence",
+        "0.1.0-p01-candidate-1"
+      ],
+      "records": 1,
+      "typed_refs": 0
+    },
+    {
+      "manifest_sha256": "7f572c3e6c0717d5572e5509dd862aa4060be8687f4e4f96665e0b33b54de10c",
+      "package": [
+        "learning-process",
+        "0.1.0-process-candidate-4"
+      ],
+      "records": 1913,
+      "typed_refs": 7207
+    }
+  ],
+  "persistent_sqlite": false,
+  "pointer_recovery": {
+    "after_replace": true,
+    "bad_extension_rejected": true,
+    "before_replace": true,
+    "old_live_reader": true,
+    "physical_power_loss": "HOLD",
+    "rollback": true,
+    "stale_cas_rejected": true
+  },
+  "prior_F_E_A07_cases": 121,
+  "prior_case_results": [
+    {
+      "actual": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "id": "F03.AUDIO_LISTENING_SYNTHETIC"
+    },
+    {
+      "actual": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "id": "F03.TEXT_READING_SYNTHETIC"
+    },
+    {
+      "actual": "REJECT_CONSTRUCT_SUBSTITUTION",
+      "id": "F03.TEXT_FOR_LISTENING_REJECT"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.RIGHTS_UNKNOWN_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.ACCESS_UNAVAILABLE_HOLD"
+    },
+    {
+      "actual": "REFUSE_PUBLICATION",
+      "id": "F03.PRIVATE_TO_PUBLIC_REFUSE"
+    },
+    {
+      "actual": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "id": "F03.VISUAL_RECOGNITION_SYNTHETIC"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.VISUAL_ACCESSIBILITY_UNKNOWN_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.VISUAL_ACCESSIBILITY_RESOURCE_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.VISUAL_ACCESSIBILITY_DIGEST_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.VISUAL_ACCESSIBILITY_SCOPE_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.UNSUPPORTED_VIDEO_MODALITY_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.MISSING_MODALITY_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F03.UNSUPPORTED_CONSTRUCT_HOLD"
+    },
+    {
+      "actual": "REJECT_CONSTRUCT_SUBSTITUTION",
+      "id": "F03.AUDIO_FOR_READING_REJECT"
+    },
+    {
+      "actual": "INDEPENDENT_RETEST_OBSERVATION",
+      "id": "F04.UNASSISTED_INDEPENDENT"
+    },
+    {
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "id": "F04.HINTED_NOT_INDEPENDENT"
+    },
+    {
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "id": "F04.IDENTICAL_DUPLICATE_HINT_IDEMPOTENT"
+    },
+    {
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "id": "F04.EVENT_AND_STORAGE_TIMES_SEPARATE"
+    },
+    {
+      "actual": "NOT_LEARNER_EVIDENCE",
+      "id": "F04.GENERATED_ANSWER_NOT_EVIDENCE"
+    },
+    {
+      "actual": "UNKNOWN",
+      "id": "F04.MISSING_INITIAL_UNKNOWN"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.ROLE_DENIED_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.VERSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.CONFLICTING_DUPLICATE_HINT_HOLD"
+    },
+    {
+      "actual": "UNKNOWN",
+      "id": "F04.GENERATED_ANSWER_UNKNOWN"
+    },
+    {
+      "actual": "UNKNOWN",
+      "id": "F04.MISSING_RETEST_UNKNOWN"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.SAME_VARIANT_REPLAY_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.RETEST_VERSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "id": "F04.ASSISTED_RETEST_NOT_INDEPENDENT"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.RETEST_CONSTRUCT_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.RETEST_SCORING_BINDING_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.RETEST_EVENT_HASH_MISMATCH_HOLD"
+    },
+    {
+      "actual": "INDEPENDENT_RETEST_OBSERVATION",
+      "id": "F04.HINTED_THEN_INDEPENDENT_RETEST"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.EMPTY_TASK_VERSION_TOP_AND_EVENTS_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.EMPTY_SCORING_VERSION_TOP_AND_EVENTS_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.EMPTY_RETEST_TASK_VERSION_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.EMPTY_RETEST_SCORING_VERSION_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.UNKNOWN_CLOCK_DOMAIN_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.CLOCK_SKEW_EXCEEDED_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F04.RECORDED_AT_ORDER_INVALID_HOLD"
+    },
+    {
+      "actual": {
+        "channels": {
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          },
+          "response": {
+            "status": "OBSERVED",
+            "task_version": "T1",
+            "value": "response"
+          },
+          "score": {
+            "denominator": 4,
+            "scoring_version": "S1",
+            "status": "SCORED",
+            "value": 0.75
+          },
+          "self_report": {
+            "reason": "MISSING",
+            "status": "UNKNOWN"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "id": "F05.SEPARATE_CHANNELS"
+    },
+    {
+      "actual": {
+        "channels": {
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          },
+          "response": {
+            "status": "OBSERVED",
+            "task_version": "T1",
+            "value": "response"
+          },
+          "score": {
+            "denominator": 4,
+            "scoring_version": "S1",
+            "status": "SCORED",
+            "value": 0.75
+          },
+          "self_report": {
+            "reason": "NOT_ADMINISTERED",
+            "status": "UNKNOWN"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "id": "F05.MISSING_SELF_REPORT_UNKNOWN"
+    },
+    {
+      "actual": {
+        "channels": {
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          },
+          "response": {
+            "status": "OBSERVED",
+            "task_version": "T1",
+            "value": "response"
+          },
+          "score": {
+            "reason": "MISSING",
+            "status": "UNKNOWN"
+          },
+          "self_report": {
+            "reason": "MISSING",
+            "status": "UNKNOWN"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "id": "F05.MISSING_SCORE_UNKNOWN"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F05.UNPINNED_MODEL_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F05.SCORING_VERSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F05.EXPECTED_SCORING_VERSION_REBOUND_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F05.SCORING_VERSION_EXPECTATION_MISSING_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F05.SCORING_VERSION_EMPTY_HOLD"
+    },
+    {
+      "actual": {
+        "channels": {
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          },
+          "response": {
+            "reason": "MISSING",
+            "status": "UNKNOWN"
+          },
+          "score": {
+            "denominator": 4,
+            "scoring_version": "S1",
+            "status": "SCORED",
+            "value": 0.75
+          },
+          "self_report": {
+            "reason": "MISSING",
+            "status": "UNKNOWN"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "id": "F05.RESPONSE_MISSING_UNKNOWN"
+    },
+    {
+      "actual": {
+        "channels": {
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          },
+          "response": {
+            "reason": "INVALID",
+            "status": "UNKNOWN"
+          },
+          "score": {
+            "denominator": 4,
+            "scoring_version": "S1",
+            "status": "SCORED",
+            "value": 0.75
+          },
+          "self_report": {
+            "reason": "MISSING",
+            "status": "UNKNOWN"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "id": "F05.RESPONSE_INVALID_UNKNOWN"
+    },
+    {
+      "actual": {
+        "channels": {
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          },
+          "response": {
+            "reason": "NOT_ADMINISTERED",
+            "status": "UNKNOWN"
+          },
+          "score": {
+            "denominator": 4,
+            "scoring_version": "S1",
+            "status": "SCORED",
+            "value": 0.75
+          },
+          "self_report": {
+            "reason": "MISSING",
+            "status": "UNKNOWN"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "id": "F05.RESPONSE_NOT_ADMINISTERED_UNKNOWN"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F05.MODEL_OUTPUT_UNBOUND_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F07.LEARNER_SELF_SESSION_RESOLVER_UNBOUND_HOLD"
+    },
+    {
+      "actual": "REFUSE",
+      "id": "F07.ROLE_PERMISSION_DENIED"
+    },
+    {
+      "actual": "CLARIFY",
+      "id": "F07.IDENTITY_UNKNOWN_CLARIFY"
+    },
+    {
+      "actual": "DEFER",
+      "id": "F07.ACCESS_UNAVAILABLE_DEFER"
+    },
+    {
+      "actual": "STOP",
+      "id": "F07.USER_EXIT_STOP"
+    },
+    {
+      "actual": "CLARIFY",
+      "id": "F07.NO_LEARNER_SELECTION_CLARIFY"
+    },
+    {
+      "actual": "REFUSE",
+      "id": "F07.REVIEWER_READ_ONLY_REFUSE"
+    },
+    {
+      "actual": "CLARIFY",
+      "id": "F07.EXIT_UNKNOWN_CLARIFY"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F07.FACILITATOR_ASSIGNED_SCOPE_OPTION"
+    },
+    {
+      "actual": "REFUSE",
+      "id": "F07.FACILITATOR_SCOPE_MISMATCH_REFUSE"
+    },
+    {
+      "actual": "REFUSE",
+      "id": "F07.EXPIRED_FACILITATOR_AUTHORITY_REFUSE"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F07.AUTHORITY_HASH_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F07.SESSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": "CLARIFY",
+      "id": "F07.GENERIC_PERMISSION_BOOLEAN_NOT_AUTHORITY_CLARIFY"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F07.ENVIRONMENT_PROFILE_HASH_TAMPER_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F07.STALE_ENVIRONMENT_PROFILE_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "F07.ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.PRESERVED_CONSTRUCT_OPTIONAL_SUPPORT"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.CHANGED_CONSTRUCT_ASSESSMENT_DEFER"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.CHANGED_CONSTRUCT_PRACTICE_ONLY"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.MISSING_SELF_REPORT_EXPLICIT_REQUEST_OK"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "support_scope": "NONE"
+      },
+      "id": "A07.MISSING_SELF_REPORT_NO_REQUEST_CLARIFY"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.AGE_LABEL_INVARIANCE"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.DIAGNOSIS_LABEL_INVARIANCE"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "UNBOUND_ESTIMATE_NOT_USED",
+        "support_scope": "NONE"
+      },
+      "id": "A07.UNBOUND_ESTIMATE_HOLD"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.MISSING_RESPONSE_NO_DEFICIT_INFERENCE"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "support_scope": "NONE"
+      },
+      "id": "A07.IDENTITY_UNKNOWN_CLARIFY"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "support_scope": "NONE"
+      },
+      "id": "A07.FACILITATOR_CANNOT_SELECT"
+    },
+    {
+      "actual": {
+        "action": "REFUSE",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "REVIEW_ONLY_ROLE",
+        "support_scope": "NONE"
+      },
+      "id": "A07.REVIEWER_READ_ONLY"
+    },
+    {
+      "actual": {
+        "action": "REFUSE",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_AUTHORITY_REFUSED",
+        "support_scope": "NONE"
+      },
+      "id": "A07.PERMISSION_DENIED_REFUSE"
+    },
+    {
+      "actual": {
+        "action": "DEFER",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "ENVIRONMENT_OR_CAPABILITY_BLOCK",
+        "support_scope": "NONE"
+      },
+      "id": "A07.ACCESS_UNAVAILABLE_DEFER"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "support_scope": "NONE"
+      },
+      "id": "A07.ACCESS_UNKNOWN_CLARIFY"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "support_scope": "NONE"
+      },
+      "id": "A07.NO_LEARNER_SELECTION_CLARIFY"
+    },
+    {
+      "actual": {
+        "action": "STOP",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "LEARNER_EXIT",
+        "support_scope": "NONE"
+      },
+      "id": "A07.USER_EXIT_STOP"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "EXIT_STATE_UNKNOWN",
+        "support_scope": "NONE"
+      },
+      "id": "A07.EXIT_MISSING_CLARIFY"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "EXIT_STATE_UNKNOWN",
+        "support_scope": "NONE"
+      },
+      "id": "A07.EXIT_NULL_CLARIFY"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "CONSTRUCT_RELATION_UNKNOWN",
+        "support_scope": "NONE"
+      },
+      "id": "A07.CONSTRUCT_REVIEW_UNKNOWN_HOLD"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_REQUIRED",
+        "support_scope": "NONE"
+      },
+      "id": "A07.CONSTRUCT_REVIEW_UNVERIFIED_HOLD"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "CONSTRUCT_REVIEW_DIGEST_INVALID",
+        "support_scope": "NONE"
+      },
+      "id": "A07.CONSTRUCT_REVIEW_MISSING_HASH_HOLD"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "CONSTRUCT_REVIEW_IDENTITY_MISMATCH",
+        "support_scope": "NONE"
+      },
+      "id": "A07.CONSTRUCT_REVIEW_TASK_VERSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "SELF_REPORT_NOT_LEARNER_AUTHORED",
+        "support_scope": "NONE"
+      },
+      "id": "A07.SELF_REPORT_WRONG_RESPONDENT_HOLD"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.SCORE_VALUE_INVARIANCE"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "ASSESSMENT_SCOPE_UNKNOWN",
+        "support_scope": "NONE"
+      },
+      "id": "A07.INVALID_ASSESSMENT_FLAG_HOLD"
+    },
+    {
+      "actual": {
+        "action": "CLARIFY",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "support_scope": "NONE"
+      },
+      "id": "A07.ENVIRONMENT_PROFILE_UNVERIFIED"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.ENVIRONMENT_PROFILE_MISSING_HASH"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.SUPPORT_REQUEST_UNVERIFIED"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TYPED_EVIDENCE_REQUIRED",
+        "support_scope": "NONE"
+      },
+      "id": "A07.F07_INPUT_MISSING_REQUEST_OBSERVATION"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "assessment_disposition": "UNKNOWN",
+        "effect": "ADVICE_ONLY",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "support_scope": "NONE"
+      },
+      "id": "A07.STALE_ENVIRONMENT_PROFILE_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.PINNED_PROTOCOL_AWAITING_APPROVAL_AND_REVIEW_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.APPROVAL_MISSING_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.COMPARATOR_MISSING_HOLD"
+    },
+    {
+      "actual": "SIMULATION_ONLY_NOT_EFFECT",
+      "id": "E01.SIMULATION_NOT_EFFECT"
+    },
+    {
+      "actual": "DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE",
+      "id": "E01.ASSIGNMENT_UNVERIFIED_DESCRIPTIVE_ONLY"
+    },
+    {
+      "actual": "REFUSE",
+      "id": "E01.DIRECT_KNOWLEDGE_WRITE_REFUSE"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.DIRECT_KNOWLEDGE_WRITE_UNKNOWN_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.FOLLOWUP_MISSING_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.IDENTICAL_POLICY_VERSIONS_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.INVALID_ANALYSIS_PLAN_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.POLICY_VERSION_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.ASSIGNMENT_UNIT_METHOD_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.LEGACY_BOOLEAN_APPROVAL_NOT_EVIDENCE_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.UNRESOLVED_TYPED_APPROVAL_AND_REVIEW_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.DUPLICATE_APPROVAL_REVIEW_IDENTITY_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.EXPIRED_APPROVAL_REVIEW_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.EVIDENCE_PATH_TRAVERSAL_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.EVIDENCE_ARTIFACT_HASH_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.ANALYSIS_PLAN_REF_MISMATCH_HOLD"
+    },
+    {
+      "actual": "HOLD",
+      "id": "E01.ANALYSIS_PLAN_SUMMARY_MISMATCH_HOLD"
+    }
+  ],
+  "private_adapter": "EXACT_PRIOR_SCOPE_ONLY",
+  "status": "CUMULATIVE_AUTHOR_REBIND_NOT_QUALIFICATION"
+}

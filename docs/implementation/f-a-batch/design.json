@@ -1,0 +1,2971 @@
+{
+  "status": "RESTRICTED_PREPARATION_ONLY",
+  "modules": {
+    "F01": {
+      "claims": [
+        "K09.01.01.ME.01",
+        "H06.06.03.R2.C01",
+        "H07.02.02.R2.C01"
+      ],
+      "inputs": [
+        "P02.PREPARATION",
+        "P09.FLOW",
+        "H06.CONFIRM.COMPETENCY",
+        "H06.CONFIRM.TASK",
+        "H06.CONFIRM.OBS",
+        "H07.GF0025.2021",
+        "H06.TASK.LISTENING",
+        "H06.TASK.LISTENING.SKILL",
+        "H06.TASK.LISTENING.OBJECT",
+        "H06.TASK.LISTENING.OBS",
+        "H06.TASK.READING",
+        "H06.TASK.READING.SKILL",
+        "H06.TASK.READING.OBJECT",
+        "H06.TASK.READING.OBS",
+        "H06.TASK.SPEAKING",
+        "H06.TASK.SPEAKING.SKILL",
+        "H06.TASK.SPEAKING.OBJECT",
+        "H06.TASK.SPEAKING.OBS",
+        "H06.TASK.WRITING",
+        "H06.TASK.WRITING.SKILL",
+        "H06.TASK.WRITING.OBJECT",
+        "H06.TASK.WRITING.OBS",
+        "H06.CONFIRM.SKILL",
+        "H06.CONFIRM.OBJECT"
+      ],
+      "description": "目标、构念、任务证据与标准元素分离；不推出等级、先修或掌握。"
+    },
+    "F02": {
+      "claims": [
+        "K12.01.03.TR.01",
+        "H03.01.01.R1.C01",
+        "H04.01.02.R1.C01",
+        "H05.01.01.R2.C01",
+        "H06.01.02.R2.C01",
+        "H07.03.03.R2.C01"
+      ],
+      "inputs": [
+        "P03.PRODUCTION",
+        "P04.FLOW",
+        "H05.RFC.SEQUENCE",
+        "H06.CONFIRM.OBJECT",
+        "H06.TASK.LISTENING.OBJECT",
+        "H06.TASK.READING.OBJECT",
+        "H06.TASK.SPEAKING.OBJECT",
+        "H06.TASK.WRITING.OBJECT",
+        "H06.TASK.LISTENING",
+        "H06.TASK.LISTENING.SKILL",
+        "H06.TASK.LISTENING.OBS",
+        "H06.TASK.READING",
+        "H06.TASK.READING.SKILL",
+        "H06.TASK.READING.OBS",
+        "H06.TASK.SPEAKING",
+        "H06.TASK.SPEAKING.SKILL",
+        "H06.TASK.SPEAKING.OBS",
+        "H06.TASK.WRITING",
+        "H06.TASK.WRITING.SKILL",
+        "H06.TASK.WRITING.OBS",
+        "H06.CONFIRM.TASK",
+        "H06.CONFIRM.SKILL",
+        "H06.CONFIRM.OBS"
+      ],
+      "description": "任务对象及粒度以实际构念、词语/构式条件和来源成员关系分开，不将源行当知识粒度或先修。"
+    },
+    "F06": {
+      "claims": [
+        "K09.01.03.ME.01",
+        "K11.05.02.TR.01",
+        "K16.02.04.TG.01",
+        "H06.06.04.R2.C01"
+      ],
+      "inputs": [
+        "P06.FLOW",
+        "P08.FLOW",
+        "H06.CONFIRM.TASK",
+        "H06.CONFIRM.OBS",
+        "H06.CONFIRM.SKILL"
+      ],
+      "description": "确认交际任务失败的竞争解释、补测、受限补救复核；无自动诊断。"
+    },
+    "F08": {
+      "claims": [
+        "K09.01.03.ME.01",
+        "K14.05.04.DD.01",
+        "K17.06.03.SR.01",
+        "H06.06.04.R2.C01"
+      ],
+      "inputs": [
+        "P05.FLOW",
+        "P09.FLOW",
+        "H06.CONFIRM.TASK",
+        "H06.CONFIRM.OBS"
+      ],
+      "description": "实际独立即时/延迟/新任务证据分开，保留未知。"
+    },
+    "A01": {
+      "claims": [],
+      "inputs": [
+        "F01.COMPOSITION",
+        "F02.COMPOSITION"
+      ],
+      "description": "目标和对象两条有限决策必须同一任务与构念。"
+    },
+    "A02": {
+      "claims": [
+        "H06.01.02.R2.C01",
+        "H04.01.02.R1.C01",
+        "H05.01.01.R2.C01"
+      ],
+      "inputs": [
+        "F02.COMPOSITION",
+        "F03.COMPOSITION",
+        "F04.COMPOSITION",
+        "H06.TASK.LISTENING",
+        "H06.TASK.LISTENING.OBS"
+      ],
+      "description": "对象、通道和独立观测链，拒绝文字替代听力。"
+    },
+    "A03": {
+      "claims": [],
+      "inputs": [
+        "F05.COMPOSITION",
+        "F05.STATE.RESPONSE",
+        "F05.STATE.ESTIMATE",
+        "F06.COMPOSITION"
+      ],
+      "description": "观察与竞争解释及状态估计分开，只有证据复核，无掌握晋升。"
+    },
+    "A04": {
+      "claims": [],
+      "inputs": [
+        "F05.COMPOSITION",
+        "F06.COMPOSITION",
+        "P08.FLOW"
+      ],
+      "description": "支持差距后仅按目标、条件、资源、整数时间成本预算生成待复核规划。"
+    },
+    "A05": {
+      "claims": [],
+      "inputs": [
+        "F01.COMPOSITION",
+        "F08.COMPOSITION"
+      ],
+      "description": "目标相同才合并即时/保持/迁移有限观察，不推断稳定能力。"
+    },
+    "A06": {
+      "claims": [
+        "K19.05.03.TG.01",
+        "K19.02.03.TG.01",
+        "H03.01.01.R1.C01",
+        "H04.01.02.R1.C01",
+        "H05.01.01.R2.C01"
+      ],
+      "inputs": [
+        "F03.COMPOSITION",
+        "F04.COMPOSITION",
+        "H05.RFC.SEQUENCE"
+      ],
+      "description": "原创确认模板经事实、范围、权利、独立复核证据筛选；生成不冒充学习者，拒绝公开。"
+    },
+    "A08": {
+      "claims": [],
+      "inputs": [
+        "F08.COMPOSITION",
+        "E01.COMPOSITION",
+        "E01.PROTOCOL"
+      ],
+      "description": "保持/迁移观察仅进入候选研究协议审查，模拟不等于效果，真实分析始终HOLD。"
+    }
+  },
+  "cases": [
+    {
+      "owner": "F01",
+      "id": "F01.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "target_explicit": true,
+        "conditions_verified": true
+      },
+      "expected": {
+        "task": "H06.CONFIRM.TASK",
+        "goal": "CONFIRMATION",
+        "level": "UNKNOWN",
+        "mastery": "UNKNOWN",
+        "necessary_prerequisites": []
+      }
+    },
+    {
+      "owner": "F01",
+      "id": "F01.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": "HSK3",
+        "task": "H06.CONFIRM.TASK",
+        "target_explicit": true,
+        "conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F01",
+      "id": "F01.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "task": "H06.TASK.LISTENING",
+        "target_explicit": true,
+        "conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F01",
+      "id": "F01.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "target_explicit": false,
+        "conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F01",
+      "id": "F01.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "goal": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "target_explicit": true,
+        "conditions_verified": true
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "F01",
+      "id": "F01.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "target_explicit": true,
+        "conditions_verified": true
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "F01",
+      "id": "F01.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "goal": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "target_explicit": true,
+        "conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F02",
+      "id": "F02.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "skill": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "object_identity_verified": true,
+        "target_match": true,
+        "basis": "ACTUAL_TASK_OBJECT"
+      },
+      "expected": {
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "granularity": "TASK_OBJECT_ONLY",
+        "necessary_prerequisites": [],
+        "mastery": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "F02",
+      "id": "F02.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "skill": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "object_identity_verified": true,
+        "target_match": true,
+        "basis": "LEVEL_LABEL"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F02",
+      "id": "F02.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "skill": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.TASK.READING.OBJECT",
+        "object_identity_verified": true,
+        "target_match": true,
+        "basis": "ACTUAL_TASK_OBJECT"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F02",
+      "id": "F02.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "skill": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "object_identity_verified": true,
+        "target_match": false,
+        "basis": "ACTUAL_TASK_OBJECT"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F02",
+      "id": "F02.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "skill": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "object_identity_verified": true,
+        "target_match": true,
+        "basis": "ACTUAL_TASK_OBJECT"
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "F02",
+      "id": "F02.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "skill": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "object_identity_verified": true,
+        "target_match": true,
+        "basis": "ACTUAL_TASK_OBJECT"
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "F02",
+      "id": "F02.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "skill": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "object_identity_verified": true,
+        "target_match": true,
+        "basis": "ACTUAL_TASK_OBJECT"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F06",
+      "id": "F06.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "task": "H06.CONFIRM.TASK",
+        "observation": "INCORRECT",
+        "independent": true,
+        "same_construct": true,
+        "conditions_verified": true,
+        "competing_explanations_checked": true,
+        "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+      },
+      "expected": {
+        "hypotheses": [
+          "PROPOSITION_UNDERSTANDING",
+          "RESPONSE_FORM",
+          "TASK_INSTRUCTION"
+        ],
+        "decision": "REMEDIATION_REVIEW_REQUIRED",
+        "target": "PROPOSITION_UNDERSTANDING",
+        "mastery": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "F06",
+      "id": "F06.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "task": "H06.CONFIRM.TASK",
+        "observation": "INCORRECT",
+        "independent": false,
+        "same_construct": true,
+        "conditions_verified": true,
+        "competing_explanations_checked": true,
+        "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+      },
+      "expected": {
+        "hypotheses": [
+          "PROPOSITION_UNDERSTANDING",
+          "RESPONSE_FORM",
+          "TASK_INSTRUCTION"
+        ],
+        "decision": "REQUEST_OBSERVATION",
+        "mastery": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "F06",
+      "id": "F06.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "task": "H06.CONFIRM.TASK",
+        "observation": "INCORRECT",
+        "independent": true,
+        "same_construct": true,
+        "conditions_verified": true,
+        "competing_explanations_checked": true,
+        "distinguished_gap": null
+      },
+      "expected": {
+        "hypotheses": [
+          "PROPOSITION_UNDERSTANDING",
+          "RESPONSE_FORM",
+          "TASK_INSTRUCTION"
+        ],
+        "decision": "REQUEST_OBSERVATION",
+        "mastery": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "F06",
+      "id": "F06.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "task": "H06.CONFIRM.TASK",
+        "observation": "INCORRECT",
+        "independent": true,
+        "same_construct": true,
+        "conditions_verified": true,
+        "competing_explanations_checked": false,
+        "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+      },
+      "expected": {
+        "hypotheses": [
+          "PROPOSITION_UNDERSTANDING",
+          "RESPONSE_FORM",
+          "TASK_INSTRUCTION"
+        ],
+        "decision": "REQUEST_OBSERVATION",
+        "mastery": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "F06",
+      "id": "F06.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "task": "H06.CONFIRM.TASK",
+        "observation": "INCORRECT",
+        "independent": true,
+        "same_construct": true,
+        "conditions_verified": true,
+        "competing_explanations_checked": true,
+        "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "F06",
+      "id": "F06.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "task": "H06.CONFIRM.TASK",
+        "observation": "INCORRECT",
+        "independent": true,
+        "same_construct": true,
+        "conditions_verified": true,
+        "competing_explanations_checked": true,
+        "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "F06",
+      "id": "F06.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "task": "H06.CONFIRM.TASK",
+        "observation": "INCORRECT",
+        "independent": true,
+        "same_construct": true,
+        "conditions_verified": true,
+        "competing_explanations_checked": true,
+        "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "CASE-2",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": {
+        "observations": {
+          "IMMEDIATE": "CORRECT",
+          "DELAYED": "CORRECT",
+          "NOVEL": "CORRECT"
+        },
+        "mastery": "UNKNOWN",
+        "general_transfer": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          }
+        ]
+      },
+      "expected": {
+        "observations": {
+          "IMMEDIATE": "CORRECT",
+          "DELAYED": "UNKNOWN",
+          "NOVEL": "UNKNOWN"
+        },
+        "mastery": "UNKNOWN",
+        "general_transfer": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "CASE-2",
+            "time": 50,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "CASE-2",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "CASE-2",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "F08",
+      "id": "F08.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "events": [
+          {
+            "phase": "IMMEDIATE",
+            "task_instance": "CASE-1",
+            "time": 100,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "DELAYED",
+            "task_instance": "CASE-2",
+            "time": 200,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": false
+          },
+          {
+            "phase": "NOVEL",
+            "task_instance": "CASE-3",
+            "time": 300,
+            "template": "H06.CONFIRM.TASK",
+            "outcome": "CORRECT",
+            "independent": true,
+            "construct_match": true,
+            "conditions_verified": true,
+            "structural_novelty_verified": true
+          }
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A01",
+      "id": "A01.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "object": "H06.CONFIRM.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        }
+      },
+      "expected": {
+        "goal": "CONFIRMATION",
+        "task": "H06.CONFIRM.TASK",
+        "object": "H06.CONFIRM.OBJECT",
+        "necessary_prerequisites": [],
+        "level": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "A01",
+      "id": "A01.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "object": "H06.CONFIRM.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "LEVEL_LABEL"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A01",
+      "id": "A01.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "READING",
+          "task": "H06.TASK.READING",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "object": "H06.CONFIRM.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A01",
+      "id": "A01.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": false,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "object": "H06.CONFIRM.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A01",
+      "id": "A01.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "object": "H06.CONFIRM.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        }
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "A01",
+      "id": "A01.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "object": "H06.CONFIRM.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        }
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A01",
+      "id": "A01.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "object": "H06.CONFIRM.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A02",
+      "id": "A02.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "LISTENING",
+          "task": "H06.TASK.LISTENING",
+          "object": "H06.TASK.LISTENING.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        },
+        "artifact": "AUDIO",
+        "resource_accessible": true,
+        "resource_rights_verified": true,
+        "response_is_learner": true,
+        "independent": true,
+        "task_version_verified": true,
+        "resource_gate": {
+          "permission": true,
+          "rights": "PUBLIC_AUTHORIZED",
+          "accessible": true,
+          "publication": false,
+          "modality": "AUDIO",
+          "required_construct": "LISTENING"
+        }
+      },
+      "expected": {
+        "task": "H06.TASK.LISTENING",
+        "observation": "H06.TASK.LISTENING.OBS",
+        "effect": "REVIEW_OBSERVATION_ONLY"
+      }
+    },
+    {
+      "owner": "A02",
+      "id": "A02.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "LISTENING",
+          "task": "H06.TASK.LISTENING",
+          "object": "H06.TASK.LISTENING.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        },
+        "artifact": "TEXT",
+        "resource_accessible": true,
+        "resource_rights_verified": true,
+        "response_is_learner": true,
+        "independent": true,
+        "task_version_verified": true,
+        "resource_gate": {
+          "permission": true,
+          "rights": "PUBLIC_AUTHORIZED",
+          "accessible": true,
+          "publication": false,
+          "modality": "TEXT",
+          "required_construct": "LISTENING"
+        }
+      },
+      "expected": "REJECT_CONSTRUCT_SUBSTITUTION"
+    },
+    {
+      "owner": "A02",
+      "id": "A02.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "LISTENING",
+          "task": "H06.TASK.LISTENING",
+          "object": "H06.TASK.LISTENING.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        },
+        "artifact": "AUDIO",
+        "resource_accessible": true,
+        "resource_rights_verified": true,
+        "response_is_learner": true,
+        "independent": false,
+        "task_version_verified": true,
+        "resource_gate": {
+          "permission": true,
+          "rights": "PUBLIC_AUTHORIZED",
+          "accessible": true,
+          "publication": false,
+          "modality": "AUDIO",
+          "required_construct": "LISTENING"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A02",
+      "id": "A02.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "LISTENING",
+          "task": "H06.TASK.LISTENING",
+          "object": "H06.TASK.LISTENING.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        },
+        "artifact": "AUDIO",
+        "resource_accessible": true,
+        "resource_rights_verified": true,
+        "response_is_learner": false,
+        "independent": true,
+        "task_version_verified": true,
+        "resource_gate": {
+          "permission": true,
+          "rights": "PUBLIC_AUTHORIZED",
+          "accessible": true,
+          "publication": false,
+          "modality": "AUDIO",
+          "required_construct": "LISTENING"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A02",
+      "id": "A02.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "LISTENING",
+          "task": "H06.TASK.LISTENING",
+          "object": "H06.TASK.LISTENING.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        },
+        "artifact": "AUDIO",
+        "resource_accessible": true,
+        "resource_rights_verified": true,
+        "response_is_learner": true,
+        "independent": true,
+        "task_version_verified": true,
+        "resource_gate": {
+          "permission": true,
+          "rights": "PUBLIC_AUTHORIZED",
+          "accessible": true,
+          "publication": false,
+          "modality": "AUDIO",
+          "required_construct": "LISTENING"
+        }
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "A02",
+      "id": "A02.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "LISTENING",
+          "task": "H06.TASK.LISTENING",
+          "object": "H06.TASK.LISTENING.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        },
+        "artifact": "AUDIO",
+        "resource_accessible": true,
+        "resource_rights_verified": true,
+        "response_is_learner": true,
+        "independent": true,
+        "task_version_verified": true,
+        "resource_gate": {
+          "permission": true,
+          "rights": "PUBLIC_AUTHORIZED",
+          "accessible": true,
+          "publication": false,
+          "modality": "AUDIO",
+          "required_construct": "LISTENING"
+        }
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A02",
+      "id": "A02.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "object": {
+          "permission": true,
+          "exit": false,
+          "skill": "LISTENING",
+          "task": "H06.TASK.LISTENING",
+          "object": "H06.TASK.LISTENING.OBJECT",
+          "object_identity_verified": true,
+          "target_match": true,
+          "basis": "ACTUAL_TASK_OBJECT"
+        },
+        "artifact": "AUDIO",
+        "resource_accessible": true,
+        "resource_rights_verified": true,
+        "response_is_learner": true,
+        "independent": true,
+        "task_version_verified": true,
+        "resource_gate": {
+          "permission": true,
+          "rights": "PUBLIC_AUTHORIZED",
+          "accessible": true,
+          "publication": false,
+          "modality": "AUDIO",
+          "required_construct": "LISTENING"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A03",
+      "id": "A03.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "observation_channel": "RESPONSE",
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": {
+        "state": "UNKNOWN",
+        "diagnosis": {
+          "hypotheses": [
+            "PROPOSITION_UNDERSTANDING",
+            "RESPONSE_FORM",
+            "TASK_INSTRUCTION"
+          ],
+          "decision": "REMEDIATION_REVIEW_REQUIRED",
+          "target": "PROPOSITION_UNDERSTANDING",
+          "mastery": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "owner": "A03",
+      "id": "A03.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "observation_channel": "SCORE",
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": {
+        "state": "UNKNOWN",
+        "decision": "REQUEST_OBSERVATION"
+      }
+    },
+    {
+      "owner": "A03",
+      "id": "A03.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": false,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "observation_channel": "RESPONSE",
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": {
+        "state": "UNKNOWN",
+        "diagnosis": {
+          "hypotheses": [
+            "PROPOSITION_UNDERSTANDING",
+            "RESPONSE_FORM",
+            "TASK_INSTRUCTION"
+          ],
+          "decision": "REQUEST_OBSERVATION",
+          "mastery": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "owner": "A03",
+      "id": "A03.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "observation_channel": "UNKNOWN",
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A03",
+      "id": "A03.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "observation_channel": "RESPONSE",
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "A03",
+      "id": "A03.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "observation_channel": "RESPONSE",
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A03",
+      "id": "A03.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "observation_channel": "RESPONSE",
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A04",
+      "id": "A04.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "budget": 7,
+        "choices": [
+          {
+            "id": "CHECK_PROPOSITION",
+            "cost": 5,
+            "conditions_verified": true,
+            "resources_verified": true
+          },
+          {
+            "id": "CHECK_FORM",
+            "cost": 2,
+            "conditions_verified": true,
+            "resources_verified": true
+          }
+        ],
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": {
+        "candidate": "CHECK_PROPOSITION",
+        "cost": 5,
+        "remaining": 2,
+        "effect": "PLAN_REVIEW_ONLY"
+      }
+    },
+    {
+      "owner": "A04",
+      "id": "A04.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "budget": 4,
+        "choices": [
+          {
+            "id": "CHECK_PROPOSITION",
+            "cost": 5,
+            "conditions_verified": true,
+            "resources_verified": true
+          },
+          {
+            "id": "CHECK_FORM",
+            "cost": 2,
+            "conditions_verified": true,
+            "resources_verified": true
+          }
+        ],
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "DEFER"
+    },
+    {
+      "owner": "A04",
+      "id": "A04.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "budget": true,
+        "choices": [
+          {
+            "id": "CHECK_PROPOSITION",
+            "cost": 5,
+            "conditions_verified": true,
+            "resources_verified": true
+          },
+          {
+            "id": "CHECK_FORM",
+            "cost": 2,
+            "conditions_verified": true,
+            "resources_verified": true
+          }
+        ],
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A04",
+      "id": "A04.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": false,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "budget": 7,
+        "choices": [
+          {
+            "id": "CHECK_PROPOSITION",
+            "cost": 5,
+            "conditions_verified": true,
+            "resources_verified": true
+          },
+          {
+            "id": "CHECK_FORM",
+            "cost": 2,
+            "conditions_verified": true,
+            "resources_verified": true
+          }
+        ],
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A04",
+      "id": "A04.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "budget": 7,
+        "choices": [
+          {
+            "id": "CHECK_PROPOSITION",
+            "cost": 5,
+            "conditions_verified": true,
+            "resources_verified": true
+          },
+          {
+            "id": "CHECK_FORM",
+            "cost": 2,
+            "conditions_verified": true,
+            "resources_verified": true
+          }
+        ],
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "A04",
+      "id": "A04.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "budget": 7,
+        "choices": [
+          {
+            "id": "CHECK_PROPOSITION",
+            "cost": 5,
+            "conditions_verified": true,
+            "resources_verified": true
+          },
+          {
+            "id": "CHECK_FORM",
+            "cost": 2,
+            "conditions_verified": true,
+            "resources_verified": true
+          }
+        ],
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A04",
+      "id": "A04.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "diagnosis": {
+          "permission": true,
+          "exit": false,
+          "task": "H06.CONFIRM.TASK",
+          "observation": "INCORRECT",
+          "independent": true,
+          "same_construct": true,
+          "conditions_verified": true,
+          "competing_explanations_checked": true,
+          "distinguished_gap": "PROPOSITION_UNDERSTANDING"
+        },
+        "budget": 7,
+        "choices": [
+          {
+            "id": "CHECK_PROPOSITION",
+            "cost": 5,
+            "conditions_verified": true,
+            "resources_verified": true
+          },
+          {
+            "id": "CHECK_FORM",
+            "cost": 2,
+            "conditions_verified": true,
+            "resources_verified": true
+          }
+        ],
+        "state_channels": {
+          "expected_scoring_version": "S1",
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "MISSING"
+          },
+          "score": {
+            "status": "OBSERVED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_RUN"
+          }
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": {
+        "task": "H06.CONFIRM.TASK",
+        "observations": {
+          "IMMEDIATE": "CORRECT",
+          "DELAYED": "CORRECT",
+          "NOVEL": "CORRECT"
+        },
+        "mastery": "UNKNOWN",
+        "general_transfer": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            }
+          ]
+        }
+      },
+      "expected": {
+        "task": "H06.CONFIRM.TASK",
+        "observations": {
+          "IMMEDIATE": "CORRECT",
+          "DELAYED": "UNKNOWN",
+          "NOVEL": "UNKNOWN"
+        },
+        "mastery": "UNKNOWN",
+        "general_transfer": "UNKNOWN"
+      }
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "READING",
+          "task": "H06.TASK.READING",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A05",
+      "id": "A05.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "goal": {
+          "permission": true,
+          "exit": false,
+          "goal": "CONFIRMATION",
+          "task": "H06.CONFIRM.TASK",
+          "target_explicit": true,
+          "conditions_verified": true
+        },
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A06",
+      "id": "A06.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "publication": false,
+        "generated_as_learner_response": false,
+        "content_kind": "ORIGINAL_CONFIRMATION_TEMPLATE",
+        "source_scope_verified": true,
+        "facts_checked": true,
+        "conditions_checked": true,
+        "independent_content_review": true,
+        "resource_rights_verified": true
+      },
+      "expected": "PRIVATE_DRAFT_REVIEW_ONLY"
+    },
+    {
+      "owner": "A06",
+      "id": "A06.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "publication": true,
+        "generated_as_learner_response": false,
+        "content_kind": "ORIGINAL_CONFIRMATION_TEMPLATE",
+        "source_scope_verified": true,
+        "facts_checked": true,
+        "conditions_checked": true,
+        "independent_content_review": true,
+        "resource_rights_verified": true
+      },
+      "expected": "REFUSE_PUBLICATION"
+    },
+    {
+      "owner": "A06",
+      "id": "A06.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "publication": false,
+        "generated_as_learner_response": true,
+        "content_kind": "ORIGINAL_CONFIRMATION_TEMPLATE",
+        "source_scope_verified": true,
+        "facts_checked": true,
+        "conditions_checked": true,
+        "independent_content_review": true,
+        "resource_rights_verified": true
+      },
+      "expected": "NOT_LEARNER_EVIDENCE"
+    },
+    {
+      "owner": "A06",
+      "id": "A06.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "publication": false,
+        "generated_as_learner_response": false,
+        "content_kind": "ORIGINAL_CONFIRMATION_TEMPLATE",
+        "source_scope_verified": true,
+        "facts_checked": true,
+        "conditions_checked": true,
+        "independent_content_review": false,
+        "resource_rights_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A06",
+      "id": "A06.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "publication": false,
+        "generated_as_learner_response": false,
+        "content_kind": "ORIGINAL_CONFIRMATION_TEMPLATE",
+        "source_scope_verified": true,
+        "facts_checked": true,
+        "conditions_checked": true,
+        "independent_content_review": true,
+        "resource_rights_verified": true
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "A06",
+      "id": "A06.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "publication": false,
+        "generated_as_learner_response": false,
+        "content_kind": "ORIGINAL_CONFIRMATION_TEMPLATE",
+        "source_scope_verified": true,
+        "facts_checked": true,
+        "conditions_checked": true,
+        "independent_content_review": true,
+        "resource_rights_verified": true
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A06",
+      "id": "A06.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "publication": false,
+        "generated_as_learner_response": false,
+        "content_kind": "ORIGINAL_CONFIRMATION_TEMPLATE",
+        "source_scope_verified": true,
+        "facts_checked": true,
+        "conditions_checked": true,
+        "independent_content_review": true,
+        "resource_rights_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.1",
+      "view": "FORWARD",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "SIMULATION_ONLY_NOT_EFFECT"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.2",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "REAL",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "OBSERVED"
+        }
+      },
+      "expected": "HOLD_NO_TRUSTED_APPROVAL_OR_REAL_DATA"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.3",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": true,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": true,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.4",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.5",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": true,
+        "exit": true,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "STOP"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.6",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": false,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "REFUSE"
+    },
+    {
+      "owner": "A08",
+      "id": "A08.R4.CASE.7",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "permission": null,
+        "exit": false,
+        "retention": {
+          "permission": true,
+          "exit": false,
+          "events": [
+            {
+              "phase": "IMMEDIATE",
+              "task_instance": "CASE-1",
+              "time": 100,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "DELAYED",
+              "task_instance": "CASE-2",
+              "time": 200,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": false
+            },
+            {
+              "phase": "NOVEL",
+              "task_instance": "CASE-3",
+              "time": 300,
+              "template": "H06.CONFIRM.TASK",
+              "outcome": "CORRECT",
+              "independent": true,
+              "construct_match": true,
+              "conditions_verified": true,
+              "structural_novelty_verified": true
+            }
+          ]
+        },
+        "direct_knowledge_write": false,
+        "data_kind": "SYNTHETIC",
+        "protocol_gate": {
+          "evaluation_time": 100,
+          "direct_knowledge_write": false,
+          "analysis_plan_ref": "docs/implementation/f-composition-preparation/analysis-plan.json",
+          "analysis_plan_sha256": "6e8c9ffc838244c551236c6b3c32406d5e4b17a98abf93d7001e27dae85ceef0",
+          "analysis_plan_version": "V2",
+          "analysis_plan_summary": "预先定义学习者层随机分配、候选与当前策略版本、主要结果、28日随访、ITT estimand、缺失数据与安全事件分开报告；在真实批准和独立复核证据缺失时不执行效果分析。",
+          "protocol_id": "E01.PROTOCOL",
+          "protocol_version": "V2",
+          "population_id": "LEARN_KG_SYNTHETIC_CANDIDATE_SCOPE_V2",
+          "assignment_unit": "LEARNER",
+          "assignment_method": "RANDOMIZED",
+          "intervention_version": "CANDIDATE_V1",
+          "comparator_version": "CURRENT_V1",
+          "primary_outcome_id": "E01.OBS.PRIMARY_OUTCOME",
+          "followup_days": 28,
+          "assignment_verified": true,
+          "data_kind": "SIMULATED"
+        }
+      },
+      "expected": "HOLD"
+    }
+  ]
+}
