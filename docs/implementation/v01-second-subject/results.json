@@ -1,6 +1,7 @@
 {
   "bad_pin_probes": 2,
   "baseline_math_role_rejected": true,
+  "domain_guard_probes": 72,
   "independent_oracle": "NOT_RUN",
   "invalid_math_probes": 6,
   "math_fraction_reference_cases": 4096,
@@ -1263,6 +1264,224 @@
         }
       ],
       "domain": "ZH",
+      "domain_probes": [
+        {
+          "actual": "HOLD",
+          "domain": null,
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": null,
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": null,
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "UNKNOWN",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "UNKNOWN",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "UNKNOWN",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "math",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "math",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "math",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "zh",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "zh",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "zh",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": " MATH",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": " MATH",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": " MATH",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "ZH ",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "ZH ",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "ZH ",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": false,
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": false,
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": false,
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": 1,
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": 1,
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": 1,
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": [],
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": [],
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": [],
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": {},
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": {},
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": {},
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "EN",
+          "expected": "HOLD",
+          "input_sha256": "b65ca22957e6306201cc6cb4b4d2e01deb2bf96884f372d6d226565e885f77c7"
+        },
+        {
+          "actual": "STOP",
+          "domain": "EN",
+          "expected": "STOP",
+          "input_sha256": "12ad1e1945df95cfd59bb8d9f464c64ecfa4ba7226f8872c3d001fbd6bc9352b"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "EN",
+          "expected": "REFUSE",
+          "input_sha256": "69a1b591648f7202b0b02f588be323c3390bdf4064edad96cc0bbadebcbbbe0a"
+        }
+      ],
       "excluded_subject_open_count": 0,
       "flow_sha256": "80f69b4df51d7451d955700aa9891265403e901c941efd2bd188672b6bbd12f9",
       "opened_manifest_and_records": [
@@ -2675,6 +2894,224 @@
         }
       ],
       "domain": "MATH",
+      "domain_probes": [
+        {
+          "actual": "HOLD",
+          "domain": null,
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": null,
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": null,
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "UNKNOWN",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "UNKNOWN",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "UNKNOWN",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "math",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "math",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "math",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "zh",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "zh",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "zh",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": " MATH",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": " MATH",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": " MATH",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "ZH ",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "ZH ",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "ZH ",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": false,
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": false,
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": false,
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": 1,
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": 1,
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": 1,
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": [],
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": [],
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": [],
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": {},
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": {},
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": {},
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        },
+        {
+          "actual": "HOLD",
+          "domain": "EN",
+          "expected": "HOLD",
+          "input_sha256": "8f345b049c5eda10c74bcd13d85a6aea8b66a3a91a1ababb0fe579652346c7be"
+        },
+        {
+          "actual": "STOP",
+          "domain": "EN",
+          "expected": "STOP",
+          "input_sha256": "a6cf5a6b1a5b2b89b2f85ad43fb6c95c1bfe99fda212eef331267d686d6df1df"
+        },
+        {
+          "actual": "REFUSE",
+          "domain": "EN",
+          "expected": "REFUSE",
+          "input_sha256": "9e3aee74b5d9ae1a7d68daabf9cdbb5a36b02f7cf6be9fab075896cdd5a6ef56"
+        }
+      ],
       "excluded_subject_open_count": 0,
       "flow_sha256": "80f69b4df51d7451d955700aa9891265403e901c941efd2bd188672b6bbd12f9",
       "opened_manifest_and_records": [

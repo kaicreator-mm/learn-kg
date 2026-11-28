@@ -30,6 +30,7 @@ def subject_eval(im,domain,x):
  if x.get('exit') is True:return 'STOP'
  if x.get('permission') is False:return 'REFUSE'
  if x.get('exit') is not False or x.get('permission') is not True:return 'HOLD'
+ if type(domain) is not str or domain not in ('ZH','MATH'):return 'HOLD'
  key=H if domain=='ZH' else MATH_KEY
  owner='H06' if domain=='ZH' else 'M01'
  taskid='H06.CONFIRM.TASK' if domain=='ZH' else 'M01.TASK.COMPARE'
@@ -131,8 +132,14 @@ def main():
    for id,x,expect in tests:
     y=subject_eval(im,domain,x);assert y==expect,(domain,id,y,expect)
     cases.append(dict(id=domain+'.'+id,input=x,input_sha256=dig(x),expected=expect,actual=y,status='AUTHOR_FINITE_ONLY'))
+   # Exact domain guard probes run while the legitimate subject SQL is loaded.
+   domain_probes=[]
+   for bad in (None,'UNKNOWN','math','zh',' MATH','ZH ','',False,1,[],{},'EN'):
+    for input_,expect in ((base,'HOLD'),(dict(base,exit=True),'STOP'),(dict(base,permission=False),'REFUSE')):
+     actual=subject_eval(im,bad,input_);assert actual==expect,(domain,bad,actual,expect)
+     domain_probes.append(dict(domain=bad,input_sha256=dig(input_),expected=expect,actual=actual))
    flow=load_record(im,ref(P,'P06','FlowSpec','P06.FLOW'))
-   routes.append(dict(domain=domain,root=list(key),process=list(P),flow_sha256=dig(flow),opened_manifest_and_records=im.opened,opened_packages=[list(k) for k in im.connections],excluded_subject_open_count=len(tracker['excluded']),audited_repo_file_opens=sorted(tracker['files']),records=sum(len(z[3]) for z in im.packages.values()),typed_refs=sum(len(z) for z in links.values()),cases=cases))
+   routes.append(dict(domain=domain,root=list(key),process=list(P),flow_sha256=dig(flow),opened_manifest_and_records=im.opened,opened_packages=[list(k) for k in im.connections],excluded_subject_open_count=len(tracker['excluded']),audited_repo_file_opens=sorted(tracker['files']),records=sum(len(z[3]) for z in im.packages.values()),typed_refs=sum(len(z) for z in links.values()),cases=cases,domain_probes=domain_probes))
   finally:
    im.close();tracker['active']=None
  assert routes[0]['flow_sha256']==routes[1]['flow_sha256']
@@ -143,7 +150,7 @@ def main():
    try:im.run(MATH_KEY);raise AssertionError('BAD_PIN_ACCEPTED')
    except Reject as e:assert 'SUBJECT_MANIFEST_PIN' in str(e)
   finally:im.close()
- report=dict(status='V01_PREPARATION_ONLY_NOT_LC11_ACCEPTANCE',math_manifest_sha256=MATH_PIN,source_bindings=bindings,math_fraction_reference_cases=n,invalid_math_probes=6,baseline_math_role_rejected=True,bad_pin_probes=2,shared_process_manifest_sha256=catalog[P].sha256,shared_process_same_sql_payload=True,route_file_open_audit='PYTHON_AUDIT_OPEN_EVENTS_IN_ROUTE_SCOPE_ONLY',route_cases=sum(len(r['cases']) for r in routes),routes=routes,persistent_sqlite=False,independent_oracle='NOT_RUN',scope='Shared P06 finite discriminator/feedback gate, stipulated diagnostic flags; no complete lifecycle or full CQ25/LC11.')
+ report=dict(status='V01_PREPARATION_ONLY_NOT_LC11_ACCEPTANCE',math_manifest_sha256=MATH_PIN,source_bindings=bindings,math_fraction_reference_cases=n,invalid_math_probes=6,baseline_math_role_rejected=True,bad_pin_probes=2,shared_process_manifest_sha256=catalog[P].sha256,shared_process_same_sql_payload=True,route_file_open_audit='PYTHON_AUDIT_OPEN_EVENTS_IN_ROUTE_SCOPE_ONLY',route_cases=sum(len(r['cases']) for r in routes),domain_guard_probes=sum(len(r['domain_probes']) for r in routes),routes=routes,persistent_sqlite=False,independent_oracle='NOT_RUN',scope='Shared P06 finite discriminator/feedback gate, stipulated diagnostic flags; no complete lifecycle or full CQ25/LC11.')
  (HERE/'results.json').write_text(json.dumps(report,ensure_ascii=False,sort_keys=True,indent=2)+'\n')
  print('TWO_SUBJECTS',[(r['domain'],len(r['cases']),len(r['opened_packages']),r['records'],r['typed_refs'],r['excluded_subject_open_count']) for r in routes],'MATH_REFERENCE',n)
 if __name__=='__main__':main()
