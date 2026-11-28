@@ -1,0 +1,454 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "h-cumulative-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "30bdcf62b74f2214ffba5f5ed57b884e40f97c6f",
+  "exact_head": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+  "tree": "a410a5065046bd7545a4f215cc1f38884d69680f",
+  "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "H05",
+  "attempt_id": "H05-QUALIFICATION-01",
+  "receipt_id": "TASK:H05:H05-QUALIFICATION-01",
+  "input": [
+    {
+      "task_id": "H05",
+      "receipt_id": "TASK:H05:H05-FORMAL-01",
+      "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+          "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/h05-h07-batch/qualification-review-input.json",
+      "sha256": "98877878b2e28cd537823937ee86da679786dd341ca510b396ecae98d79dc23c",
+      "type": "REVIEWED_CANDIDATE_AND_QUALIFICATION_INPUT"
+    },
+    {
+      "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+      "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567",
+      "type": "REVIEWED_CANDIDATE_AND_QUALIFICATION_INPUT"
+    }
+  ],
+  "content_digest": "e2dcc46a1365151aa9e7c46ab22ad7bc1fa584a34958dfa8e84a8cd4d3745116",
+  "state": "QUALIFIED_LOCAL",
+  "receipt_type": "QUALIFIED_LOCAL",
+  "validation": {
+    "independent_review_issue": 37,
+    "review_comment": 7242680427,
+    "review_body_sha256": "1aa7242c2f3ce10177bc22d98d1d3637eea412dedf20051dac467aa568fbad41",
+    "independent_result": "ACCEPT_SCOPED",
+    "previous_reviews": [
+      7241717101,
+      7241836416,
+      7242162864
+    ],
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "actual_SQL_cases": 169
+  },
+  "issues": [
+    "Restricted reviewed scope only; full professional depth and final release excluded."
+  ],
+  "next": "G03 closure and outstanding depth obligations",
+  "reviewed_content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+  "consumed_tuple": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "HSK01",
+      "receipt_id": "TASK:HSK01:HSK01-FORMAL-01",
+      "content_digest": "d923444cf252b951510481b712d3055a4ed421fe00111c1151616bea3000d029",
+      "version": "f23bc2caf540d0a7b9e8537f80f6295d8c4f068c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/HSK01/HSK01-FORMAL-01.json",
+          "sha256": "29f77e003495611b0d6b96bbe89fc66e865c1f2b36dae5f853920213e4cecd36"
+        }
+      ]
+    },
+    {
+      "task_id": "HS00",
+      "receipt_id": "TASK:HS00:HS00-FORMAL-01",
+      "content_digest": "15e34adc14bcb943448521ad7c38f1e72c3916d12caacaa8a6aace60413921d0",
+      "version": "32928027e18a2afa9764d3024af26045dcd502bb",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/HS00/HS00-FORMAL-01.json",
+          "sha256": "0f0fcba62a5349c1c65286edbdcbb9ff45a449ac799e54a63a661f2cee665580"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    },
+    {
+      "task_id": "H03",
+      "receipt_id": "TASK:H03:H03-FORMAL-02",
+      "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H03/H03-FORMAL-02.json",
+          "sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c"
+        }
+      ]
+    },
+    {
+      "task_id": "H04",
+      "receipt_id": "TASK:H04:H04-FORMAL-02",
+      "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H04/H04-FORMAL-02.json",
+          "sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "claim_ids": [
+      "H05.01.01.R2.C01",
+      "H05.04.01.R2.C01",
+      "H05.04.02.R2.C01",
+      "H05.05.04.R2.C01"
+    ],
+    "exact_claim_evidence": [
+      {
+        "cases": [
+          {
+            "record_sha256": "865a174e2a1077748d5b945a0f2b8989e924ede03dfb389916b897bbfcf33b3c",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.01.01.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "b4c2f310d41d109f25aea94f6f87d65b14cf12535030071057e27bf39b50563d",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.01.01.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "2e251ec884746d41a9b7a8e57196ef7d20ce21eec25db5281d3c80d50d1070fd",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.01.01.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "29ccd5d8f6f5b47bc917969003d41e661f50705e3df6ef900c8fa316c5ad2d8d",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.01.01.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "限研究中的确认请求形式；必须已有独立核定的请求功能、前序命题及应答类型；不由表层形式或应答自行推定。"
+        ],
+        "id": "H05.01.01.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "e7800eab32557c4a3292502e6b53f73f564be2b5fb7f5159a354e802b742733d",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.01.01.R2.C01.LOC.H05-R2-RFC",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "表层形式不独立证明请求意图；本规则只记录给定合成序列。",
+        "record_sha256": "b27b3df85e107f57e2a73fd0c4ba607590816e49877c8826a7f8442a45a972ed",
+        "validations": [
+          {
+            "record_sha256": "c83177d7dad1d28ec27ad54786b378fc80fd17bb836fb91d1c0b838a35102713",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.01.01.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      },
+      {
+        "cases": [
+          {
+            "record_sha256": "c90388f2bef6451637232b0398cd0716a00752c2b259474015619c8809c7ba2a",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.01.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "2db4e82b4fddcfe03029ef7b88a17225bee5a02940656f166283323fdfe6f949",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.01.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "8946fc6d7ce91c7ceb598ae16ded8acd59921c2018f09f3a8e74a96a209b797b",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.01.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "6fcd02b09465ce3206952bad2f154d295fe9d7cff120eec1e29855bb224bfd4b",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.01.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H05.04.01.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "22a3238b980c948ae2dc6d5a4abe9e904ff0d1aef50435c6329b8ad9524c64dd",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.01.R2.C01.LOC.H05-R2-CEFR",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "这里的目的字段为有限合成示例，不是自动判定真实场景。",
+        "record_sha256": "024663e619f2588109a36eb4b7376a06ba8d4e1fe0f3d1a2f48dcc4520d4ec69",
+        "validations": [
+          {
+            "record_sha256": "34a0534bb8cd0c276f12b9938708f95a001af88a55388a8b7ed99548ed3f2d18",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.01.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      },
+      {
+        "cases": [
+          {
+            "record_sha256": "3042f7611d0906adfbe426a247e531a68463d8e377e1264da3cb3b537135db7d",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.02.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "ee05d948ddf6152d7ce9ff09b20da52506d84014ac8b4c99f9f64ec0c0a2aee5",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.02.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "5369653f2fdc58a5a1ef65079bb0c8f6701134728b21cbf1cd607d353dd7d92a",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.02.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "d7fb59b3bbf13d284c1f61fe09d50f06c7557c19198d0178561f17d279413364",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.02.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H05.04.02.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "8cad28979292f491b21cf30b76620ee7292dabe8c66e1e3ee0ab95136080c4d6",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.02.R2.C01.LOC.H05-R2-SCHEME",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "项目任务模板不等同于CEFR等级或学习效果。",
+        "record_sha256": "36cd3479f5dbefdb083d1763d04274707deddc2f829988c73bd05bb1b6f82730",
+        "validations": [
+          {
+            "record_sha256": "da068d460c238384ce925c8d3b2811b5e1d3e7881d08a3ff80325c4cbfbe1991",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.04.02.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      },
+      {
+        "cases": [
+          {
+            "record_sha256": "f79987f4db875cce80aec6503eb2a5d84d71c91c65e43702c205b81548b17c7e",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.05.04.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "2310d2f9ff4012699fd1f26c000564386b58259dc10f3ffcbbd872faf258cd4d",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.05.04.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "cce9112081b6c2c7b808b5f552fb6fefef551a07d1618194338ed2e50109ce73",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.05.04.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "7d946b3261d8afbfac6bdbbcde3fd25af1837fd8d599a9d3a79d1581854e65cc",
+            "ref": {
+              "kind": "Case",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.05.04.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H05.05.04.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "196a6751a4aadb7350497afba4cbb0aa82edc515d8d32d11e82dc4a034ac0ab6",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.05.04.R2.C01.LOC.H05-R2-MED",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "项目观察规则不以单次澄清或重复等同成功理解或技能。",
+        "record_sha256": "6b887adb1a84d9060a325f4e09cb76a98060c9133119cb24b4290ef05373d8b0",
+        "validations": [
+          {
+            "record_sha256": "23e599796a90c98902a48a7db43dcfd7e4f7f70f7cfbbba2e668122ba0d87708",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H05",
+              "package_id": "chinese",
+              "stable_id": "H05.05.04.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      }
+    ],
+    "owner_record_set_sha256": "f74ec86127e5c60719239272bdc071c308cb0545a2183366ec30eab63b28b00e",
+    "manifest_sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
+    "evidence_manifest_sha256": "c78438055fa78dc7e417d7b424cfca24194a9f019fe64c0f2e780409048504d5",
+    "finite_cases": 16,
+    "hold_only_topics": 21,
+    "held_claims": 64,
+    "full_professional_depth": "NOT_ESTABLISHED"
+  }
+}

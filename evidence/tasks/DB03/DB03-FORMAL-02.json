@@ -1,0 +1,370 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "h-cumulative-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "30bdcf62b74f2214ffba5f5ed57b884e40f97c6f",
+  "exact_head": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+  "tree": "a410a5065046bd7545a4f215cc1f38884d69680f",
+  "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "DB03",
+  "attempt_id": "DB03-FORMAL-02",
+  "receipt_id": "TASK:DB03:DB03-FORMAL-02",
+  "input": [
+    {
+      "task_id": "DB02",
+      "receipt_id": "TASK:DB02:DB02-FORMAL-01",
+      "content_digest": "cea96c131b002f2c4908bd18111665eca0abad2259b2d30963020502a9ea673f",
+      "version": "2a644511c1373a8ccd17155d8dfac52ebfd6ce8e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB02/DB02-FORMAL-01.json",
+          "sha256": "352aa43f6e4039c92aba0c80235ef92325bd2bc3ac1419805bc09c5ec0a76130"
+        }
+      ]
+    },
+    {
+      "task_id": "HSK01",
+      "receipt_id": "TASK:HSK01:HSK01-FORMAL-01",
+      "content_digest": "d923444cf252b951510481b712d3055a4ed421fe00111c1151616bea3000d029",
+      "version": "f23bc2caf540d0a7b9e8537f80f6295d8c4f068c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/HSK01/HSK01-FORMAL-01.json",
+          "sha256": "29f77e003495611b0d6b96bbe89fc66e865c1f2b36dae5f853920213e4cecd36"
+        }
+      ]
+    },
+    {
+      "task_id": "P04",
+      "receipt_id": "TASK:P04:P04-FORMAL-02",
+      "content_digest": "c1f96b3d5b89f926dcbb40740c84634f33fec45180a1b149a6a410b049223694",
+      "version": "1510e686cba5aaabcd376c718322da6239e8604c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P04/P04-FORMAL-02.json",
+          "sha256": "9c27d1e96d2dd3db2b59a366bd558249c7394955bdf85579b879107064e0909e"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/db03/README.md",
+      "sha256": "5866bc50dea7b90755113edce9bf07b99873b15544e1da00ec3406dc68142971",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/db03/private-evidence.json",
+      "sha256": "fca9eab3a7a932cfcd3ad62fcef39575730263c531ec37f8987cdcd034641b3c",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/db03/private_adapter.py",
+      "sha256": "c15ef032ec54e91d0116603f9e4fe263a060c7ca2fed1379f3e120833086125e",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/db03/public-evidence.json",
+      "sha256": "abf28a1c70067bd25583b379ef1d9acb31b2292e43f92ea4cb8a60b86120c43e",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/db03/public_views.py",
+      "sha256": "2ba21d396249456f569d82c54f6cecc05c551980bfc8965e8934b0f18a4ad164",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/db03/test_db03.py",
+      "sha256": "f77a656825790dfb477d65304cd6c5e407156b9724bd0f3321db7e69248c5982",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-h01-h04-r1/chinese.manifest.json",
+      "sha256": "9df9fac440aaee6c97b2e5c58699af48f0b9e937dc58fceef2228d1b99621380",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-h01-h04-r1/evidence.manifest.json",
+      "sha256": "6c02adcee10e65e44433d32d5bcc5ae2b69e41745f39f12284a31a4123da6857",
+      "type": "REVIEWED_RESTRICTED_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/README.md",
+      "sha256": "5089a19c876e729f23c93727878d30c9e4588597d27d2cf42749e898ae007572",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/build_subject.py",
+      "sha256": "18fe608d96a28b5d043275460ba4bf28074f81e32ca76ce37812c8ba08d29fde",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/coverage.json",
+      "sha256": "3afc6db992463ca8e52cf7d1b8352761807023f15c1643958b23337712ceaa2a",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/cumulative-evidence.json",
+      "sha256": "ce30ec3b958d8d46794886cbd1f050f3e187e3691875ecdcf609f38dfb33a120",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/delta-invariance.json",
+      "sha256": "a473313a2870a1fe3a7d03ff1dde09f7bb60cfbed7700dfcea00fe4c0d1ae848",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/migration.json",
+      "sha256": "615ec25950cb1d5415725735292a6ca7952bb5eb87a00aef65329b2665a1c58d",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/private-evidence.json",
+      "sha256": "1ff76f053daf223d1213d8547e2f5812bf951489afd33378fe77edbf81e8bc1a",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/private_index.py",
+      "sha256": "4c0fb17105f71ad714a64ab6ea63c94c3328050beb4006b69b23a667123c722e",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/professional-design.json",
+      "sha256": "d019011761da84a5a84d1b5383540534925bdf2c8a4d3c4468d9699795c0c95f",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/qualification-review-input.json",
+      "sha256": "98877878b2e28cd537823937ee86da679786dd341ca510b396ecae98d79dc23c",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/semantic_rules.py",
+      "sha256": "6c523836d2c6ce65ba9a11f1710334c70f6703807010dd86056b6b0059ab42cc",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/taxonomy-index.json",
+      "sha256": "b15dc17c67bd6a0943e6fe8743ee9a42a6a04b4cef470864dc3b4add0c133ba6",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/test_batch.py",
+      "sha256": "5e461541fc9008ab025fd4be661568441016373f6d614b6815303ae6b171ccfa",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/validation-results.json",
+      "sha256": "a5131f03ceb1887ee2be91664de63b89b834538f3c184632697bfa5879703c6d",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/h05-h07-batch/verify_batch.py",
+      "sha256": "3b3456213ce40c957c53e219fc443be77b3ab893cd94593062d723f2ff4b37f6",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "evidence/tasks/DB03/DB03-FORMAL-01.json",
+      "sha256": "df8c4d35f795258d53f4580e975b2d3ec3b66c2f382769aa4cae2c5f97ff98cf",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/H01.jsonl",
+      "sha256": "833e9cc0ea72fde8784cf9f490eab66e0197328b1c0139f8b19c3a4b5638528e",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/H02.jsonl",
+      "sha256": "8fcc4ef000edb4c785d1ff18b2046333bb61422520c799beccee0a764368e058",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+      "sha256": "0c5a7de1b1e5ce8267cd311ce075a87157127b12c61eb773a71805c8ea24687b",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+      "sha256": "ca55f5b74882ca5b2d861680b44d9f87fa726acdee4ecb23002bfb1522a6092e",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+      "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+      "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/H07.jsonl",
+      "sha256": "7e74acf6151020c5ad83a88be88e5c734db0a5c210a9444153085043223fac14",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/chinese.manifest.json",
+      "sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/evidence.jsonl",
+      "sha256": "094d06225febfd76f485a872e82973e9c24b0ef37b8e41bf3e1956d93853a57d",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    },
+    {
+      "path": "knowledge/v0.1.0/chinese-cumulative-r2/evidence.manifest.json",
+      "sha256": "c78438055fa78dc7e417d7b424cfca24194a9f019fe64c0f2e780409048504d5",
+      "type": "REVIEWED_CUMULATIVE_REBIND_ARTIFACT"
+    }
+  ],
+  "content_digest": "862fd74f064aae5ed9e298b554f5da5841f01a6325182af17dd163f4d4988e0c",
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "validation": {
+    "independent_review_issue": 37,
+    "review_comment": 7242680427,
+    "review_body_sha256": "1aa7242c2f3ce10177bc22d98d1d3637eea412dedf20051dac467aa568fbad41",
+    "independent_result": "ACCEPT_SCOPED",
+    "previous_reviews": [
+      7241717101,
+      7241836416,
+      7242162864
+    ],
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "actual_SQL_cases": 169
+  },
+  "issues": [
+    "Restricted reviewed scope only; full professional depth and final release excluded."
+  ],
+  "next": "G03 closure and outstanding depth obligations",
+  "scope_restriction": {
+    "status": "RESTRICTED_TECHNICAL_CANDIDATE_ONLY",
+    "public_replay_scope": "REGISTERED_CURRENT_ROOTS_PLUS_H_PREPARATION_ONLY",
+    "public_records": 12320,
+    "public_typed_refs": 28869,
+    "public_root_tuple": "Exact reviewed cumulative Chinese root, all seven registered owner sets, single root only",
+    "private_manifest_sha256": "0c8f69deaae06766f685eec40ed14978a2db06451821ca4d1bc2e26dee60aff2",
+    "private_canonical_hold_records": 15397,
+    "private_typed_refs": 45972,
+    "private_deferred": 3920,
+    "full_db03": "NOT_ESTABLISHED",
+    "future_views": "HOLD",
+    "physical_cross_db_crash": "HOLD",
+    "private_activation": "NOT_RUN",
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION",
+    "authority": "UNKNOWN_HOLD",
+    "historical_pdf_identity": "HOLD",
+    "visual_layout": "HOLD",
+    "manifest_sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
+    "evidence_manifest_sha256": "c78438055fa78dc7e417d7b424cfca24194a9f019fe64c0f2e780409048504d5",
+    "h_registered_receipts": [
+      {
+        "task_id": "H01",
+        "receipt_id": "TASK:H01:H01-FORMAL-02",
+        "content_digest": "84924efa5f7c38471b82b146506085530194dd49bf39561c2e8bb1a9e06f04ae",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H01/H01-FORMAL-02.json",
+            "sha256": "dd3f6d4a6c7f86b7e8f3e881fbd022c622efd9a1d206a005b0c988b3e54c407e"
+          }
+        ]
+      },
+      {
+        "task_id": "H02",
+        "receipt_id": "TASK:H02:H02-FORMAL-02",
+        "content_digest": "0d1a4affb423d51dd25f03a2768ff2f6c2f9a16877389f6b3ba2089018b9d31b",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H02/H02-FORMAL-02.json",
+            "sha256": "b894c69254488117715d557c9e64fa5d7e983c75e7729a716074a8f70322032b"
+          }
+        ]
+      },
+      {
+        "task_id": "H03",
+        "receipt_id": "TASK:H03:H03-FORMAL-02",
+        "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H03/H03-FORMAL-02.json",
+            "sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c"
+          }
+        ]
+      },
+      {
+        "task_id": "H04",
+        "receipt_id": "TASK:H04:H04-FORMAL-02",
+        "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H04/H04-FORMAL-02.json",
+            "sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3"
+          }
+        ]
+      },
+      {
+        "task_id": "H05",
+        "receipt_id": "TASK:H05:H05-FORMAL-01",
+        "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+            "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+          }
+        ]
+      },
+      {
+        "task_id": "H06",
+        "receipt_id": "TASK:H06:H06-FORMAL-01",
+        "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H06/H06-FORMAL-01.json",
+            "sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87"
+          }
+        ]
+      },
+      {
+        "task_id": "H07",
+        "receipt_id": "TASK:H07:H07-FORMAL-01",
+        "content_digest": "d2da238163799f54941e02e0aa10a88a6637c2798cb35d61a612a78f9212fdc6",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H07/H07-FORMAL-01.json",
+            "sha256": "0facd37fe97f559658bd803eddde2a0cc40934ac2538aeabce246c3a4ca25c5f"
+          }
+        ]
+      }
+    ],
+    "private_adapter_inherited": true
+  },
+  "previous_receipt": "evidence/tasks/DB03/DB03-FORMAL-01.json"
+}

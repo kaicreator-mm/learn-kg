@@ -1,0 +1,553 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "h-cumulative-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "30bdcf62b74f2214ffba5f5ed57b884e40f97c6f",
+  "exact_head": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+  "tree": "a410a5065046bd7545a4f215cc1f38884d69680f",
+  "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "H06",
+  "attempt_id": "H06-QUALIFICATION-01",
+  "receipt_id": "TASK:H06:H06-QUALIFICATION-01",
+  "input": [
+    {
+      "task_id": "H06",
+      "receipt_id": "TASK:H06:H06-FORMAL-01",
+      "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H06/H06-FORMAL-01.json",
+          "sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/h05-h07-batch/qualification-review-input.json",
+      "sha256": "98877878b2e28cd537823937ee86da679786dd341ca510b396ecae98d79dc23c",
+      "type": "REVIEWED_CANDIDATE_AND_QUALIFICATION_INPUT"
+    },
+    {
+      "path": "evidence/tasks/H06/H06-FORMAL-01.json",
+      "sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87",
+      "type": "REVIEWED_CANDIDATE_AND_QUALIFICATION_INPUT"
+    }
+  ],
+  "content_digest": "d131f92ff5d0e80464eb8977406fb113ae49bb5e7c58f271992c0eeb823d8582",
+  "state": "QUALIFIED_LOCAL",
+  "receipt_type": "QUALIFIED_LOCAL",
+  "validation": {
+    "independent_review_issue": 37,
+    "review_comment": 7242680427,
+    "review_body_sha256": "1aa7242c2f3ce10177bc22d98d1d3637eea412dedf20051dac467aa568fbad41",
+    "independent_result": "ACCEPT_SCOPED",
+    "previous_reviews": [
+      7241717101,
+      7241836416,
+      7242162864
+    ],
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "actual_SQL_cases": 169
+  },
+  "issues": [
+    "Restricted reviewed scope only; full professional depth and final release excluded."
+  ],
+  "next": "G03 closure and outstanding depth obligations",
+  "reviewed_content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+  "consumed_tuple": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "HSK01",
+      "receipt_id": "TASK:HSK01:HSK01-FORMAL-01",
+      "content_digest": "d923444cf252b951510481b712d3055a4ed421fe00111c1151616bea3000d029",
+      "version": "f23bc2caf540d0a7b9e8537f80f6295d8c4f068c",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/HSK01/HSK01-FORMAL-01.json",
+          "sha256": "29f77e003495611b0d6b96bbe89fc66e865c1f2b36dae5f853920213e4cecd36"
+        }
+      ]
+    },
+    {
+      "task_id": "H01",
+      "receipt_id": "TASK:H01:H01-FORMAL-02",
+      "content_digest": "84924efa5f7c38471b82b146506085530194dd49bf39561c2e8bb1a9e06f04ae",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H01/H01-FORMAL-02.json",
+          "sha256": "dd3f6d4a6c7f86b7e8f3e881fbd022c622efd9a1d206a005b0c988b3e54c407e"
+        }
+      ]
+    },
+    {
+      "task_id": "H02",
+      "receipt_id": "TASK:H02:H02-FORMAL-02",
+      "content_digest": "0d1a4affb423d51dd25f03a2768ff2f6c2f9a16877389f6b3ba2089018b9d31b",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H02/H02-FORMAL-02.json",
+          "sha256": "b894c69254488117715d557c9e64fa5d7e983c75e7729a716074a8f70322032b"
+        }
+      ]
+    },
+    {
+      "task_id": "H03",
+      "receipt_id": "TASK:H03:H03-FORMAL-02",
+      "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H03/H03-FORMAL-02.json",
+          "sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c"
+        }
+      ]
+    },
+    {
+      "task_id": "H04",
+      "receipt_id": "TASK:H04:H04-FORMAL-02",
+      "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H04/H04-FORMAL-02.json",
+          "sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3"
+        }
+      ]
+    },
+    {
+      "task_id": "H05",
+      "receipt_id": "TASK:H05:H05-FORMAL-01",
+      "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+          "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "status": "QUALIFIED_LOCAL_RESTRICTED",
+    "claim_ids": [
+      "H06.02.04.R2.C01",
+      "H06.05.01.R2.C01",
+      "H06.06.03.R2.C01",
+      "H06.06.04.R2.C01",
+      "H06.01.02.R2.C01"
+    ],
+    "exact_claim_evidence": [
+      {
+        "cases": [
+          {
+            "record_sha256": "6fea664a703c24caf8297a4836bcdcd6cfa26d374a5e7f4cc87267eaf356cf17",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.02.04.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "84fd0006a8961b353c83ce1fd149a2b9329aa7b0002d600abaf48502296f3eff",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.02.04.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "5901f8a88cef82e2e846c4dd883d807db817a31a35c55631d1e3fe9cfd3adafd",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.02.04.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "3a0c3a374d162bc276aaf7141e74b09de8547b4b70299a6610b27ffb4cab5b57",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.02.04.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H06.02.04.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "8d13073b935edbb69031185d9087d2100b71035613f7c4b766603c1369dd6494",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.02.04.R2.C01.LOC.H06-R2-CEFR",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "模式识别只基于给定任务证据，不推出熟练度。",
+        "record_sha256": "be4cda7084919efd6bed27bfdf8fd32763ba3c9c18c07396ab625308594e7a6a",
+        "validations": [
+          {
+            "record_sha256": "c3ce2d20398dc65feec7b3c33405c0aeb936ff175f630d2f993fd642c262e41d",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.02.04.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      },
+      {
+        "cases": [
+          {
+            "record_sha256": "f9620d6521e02579923e8ad9a628d62be00e8324e397b481a07eeede06216651",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.05.01.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "ef615ca389703b9e6d6a289e64e3e8adb907891c48806a551845a370121c4fe5",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.05.01.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "215ccb358785ad0467de31083189742042e43048a0d54927e97657b9e7e39bcb",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.05.01.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "c1eb354e94f33c37c8f7d63563c6b94dd5a13981f8c4c578fe69a500e2afe6c9",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.05.01.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H06.05.01.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "5825b441971385ed87fee93b344e68721a8645eac9e5af501127306dcc08cbe5",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.05.01.R2.C01.LOC.H06-R2-MED",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "不是所有翻译或复述都证明中介技能；需明确对象及目的。",
+        "record_sha256": "27f56969016b8eacd025c440b48c9164221244fd02720df16b9de01cb193dbea",
+        "validations": [
+          {
+            "record_sha256": "83098030c6edf12337cde74cca61cd94771d2f1cec89f29ae17fc3e8041fd0dc",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.05.01.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      },
+      {
+        "cases": [
+          {
+            "record_sha256": "8a172e91d865a006c42354764561bcde4733f18e77a222419aa83175e5a9b0d2",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.03.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "0934570e4c6672427b3748dc4d1678a2f3e720e3ebaa1aa8ee7879af90e0287d",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.03.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "6b4a0c52ea7cf3d6161caf4da05523f134081cef03a6aeea4e987266e3e5a763",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.03.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "7b7ba0a5bd2f08aa26221deb49aeb958f038bc3e20bc9c6206dd03f92ad8aba5",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.03.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H06.06.03.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "fabda52395d21607e8c7376eb598e5768e5c5aa884a87df13cdf31748feba7b2",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.03.R2.C01.LOC.H06-R2-ACTFL",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "此处仅为描述维度记录，不是评分标准、等级推导或认证。",
+        "record_sha256": "5c081145c954a16996a71735a4304ea5d8e75859e7bbc5559c3f202722ad1cca",
+        "validations": [
+          {
+            "record_sha256": "ba45cb5ab9235c9073199a21c91c7a9c39e911f5819af83b5fc3f3871f18c45f",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.03.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      },
+      {
+        "cases": [
+          {
+            "record_sha256": "39de2660c680519511f171ea7ccbffd87d0a5c4da963b8660b74b8e9b84edf8d",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.04.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "d46aca0f97dcc45a3f09c57cd84af898f10fd0c39b9effc6c71bfd0fe13e54be",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.04.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "347ec62f10e3b55e639131e6d98104efcdc4e226c0ffbead2a71af253c539409",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.04.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "b83498a9ac01ca4f50e962ec62986a52d8cbdef63724c4bd9898eeefa518f337",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.04.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H06.06.04.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "ca839ce2e15e92abfebb957ded7b6ede61c215a0bef1ac571a2206d0abe902e4",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.04.R2.C01.LOC.H06-R2-CANDO",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "多情境多时点只触发证据复核，绝不自动判定水平。",
+        "record_sha256": "d7f4eb439943f92873416edf8cb7b23a110b4df11461803e31fbda0fe2ca4bb9",
+        "validations": [
+          {
+            "record_sha256": "5e2ee766ca4c0d5e16b05a7c2e32f1d1658844d93fdb411267083726636fdbd9",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.06.04.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      },
+      {
+        "cases": [
+          {
+            "record_sha256": "a050520c4617fbfad4ada99d85c690428458ba4222381a558404b898947ae1a4",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.01.02.R2.C01.CASE.1",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "2bcec5d1ff414659b25deabb277b4404173fabbe2fd7c8914a93566d32727c25",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.01.02.R2.C01.CASE.2",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "137b2d01739b4c1342f25b286ccf9d0232f2b2b0689e2d156a0ab498d347c5b5",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.01.02.R2.C01.CASE.3",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          },
+          {
+            "record_sha256": "1a7f130bdb221c099f22549dde211813951c30c3f52e441ef88982df68ce942d",
+            "ref": {
+              "kind": "Case",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.01.02.R2.C01.CASE.4",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "conditions": [
+          "仅限明示框架、版本及合成输入条件；缺失或不匹配保持HOLD。"
+        ],
+        "id": "H06.01.02.R2.C01",
+        "locators": [
+          {
+            "record_sha256": "49e86c367fb9bb8d0ffb6051bfd0ac4598ff190cf9e097a9d3f16663f33e4d71",
+            "ref": {
+              "kind": "Locator",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.01.02.R2.C01.LOC.H06-R2-ACTFL",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ],
+        "negative_boundary": "项目通道匹配仅用于候选证据筛选，不构成效度或真实表现结论。",
+        "record_sha256": "6c4b4ac21bdc71052c940063a3c0b8d3dffa14d62a89920ed7a7ad45acc23d57",
+        "validations": [
+          {
+            "record_sha256": "e20a863d6612b10a834399f665248e7e4f8992981461307a21f2fa2120bf9ad1",
+            "ref": {
+              "kind": "Validation",
+              "owner": "H06",
+              "package_id": "chinese",
+              "stable_id": "H06.01.02.R2.C01.VALIDATION",
+              "version": "0.1.0-chinese-cumulative-candidate-2"
+            }
+          }
+        ]
+      }
+    ],
+    "owner_record_set_sha256": "fccd6ab37b67f839f2644b510e9adc53b791a0757bf5aa896b9173b4e3f90a80",
+    "manifest_sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
+    "evidence_manifest_sha256": "c78438055fa78dc7e417d7b424cfca24194a9f019fe64c0f2e780409048504d5",
+    "finite_cases": 20,
+    "hold_only_topics": 21,
+    "held_claims": 75,
+    "full_professional_depth": "NOT_ESTABLISHED"
+  }
+}
