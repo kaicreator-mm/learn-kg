@@ -23,7 +23,7 @@
       },
       {
         "counts": {
-          "Case": 472,
+          "Case": 503,
           "Claim": 310,
           "Locator": 163,
           "Requirement": 102,
@@ -34,32 +34,32 @@
           "chinese",
           "0.1.0-chinese-h01-h04-candidate-1"
         ],
-        "records": 1192,
-        "typed_refs": 2563
+        "records": 1223,
+        "typed_refs": 2687
       }
     ],
     "persistent_sqlite": false,
     "release_authority": "NOT_IMPLEMENTED_FAIL_CLOSED",
     "status": "CANDIDATE_RESEARCH_ONLY"
   },
-  "manifest_sha256": "afb7505954733fa3bf44634a8406825d98227a9f9be744f84d82a8109d1b3d37",
+  "manifest_sha256": "9df9fac440aaee6c97b2e5c58699af48f0b9e937dc58fceef2228d1b99621380",
   "persistent_sqlite": false,
   "stats": {
     "H01": {
       "candidate_claims": 4,
-      "executed_cases": 16,
+      "executed_cases": 19,
       "held_claims": 58,
       "held_only_topics": 16,
-      "records": 241,
+      "records": 244,
       "restricted_candidate_topics": 4,
       "topics": 20
     },
     "H02": {
       "candidate_claims": 4,
-      "executed_cases": 16,
+      "executed_cases": 37,
       "held_claims": 59,
       "held_only_topics": 17,
-      "records": 250,
+      "records": 271,
       "restricted_candidate_topics": 4,
       "topics": 21
     },
@@ -74,10 +74,10 @@
     },
     "H04": {
       "candidate_claims": 4,
-      "executed_cases": 16,
+      "executed_cases": 23,
       "held_claims": 99,
       "held_only_topics": 31,
-      "records": 399,
+      "records": 406,
       "restricted_candidate_topics": 4,
       "topics": 35
     }
@@ -166,6 +166,62 @@
         ],
         "rule_scope": "THIRD_TONE_PAIR_ONLY",
         "same_domain": false,
+        "unit": "TONE_CATEGORY"
+      },
+      "owner": "H01",
+      "rule": "tone_pair",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.04.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.04.01.R1.C01.CASE.5",
+      "input": {
+        "citation_tones": [
+          3,
+          3
+        ],
+        "rule_scope": "UNSUPPORTED",
+        "same_domain": true,
+        "unit": "TONE_CATEGORY"
+      },
+      "owner": "H01",
+      "rule": "tone_pair",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.04.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.04.01.R1.C01.CASE.6",
+      "input": {
+        "citation_tones": [
+          3,
+          3
+        ],
+        "same_domain": true,
+        "unit": "TONE_CATEGORY"
+      },
+      "owner": "H01",
+      "rule": "tone_pair",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H01.04.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H01.04.01.R1.C01.CASE.7",
+      "input": {
+        "citation_tones": [
+          3,
+          4
+        ],
+        "rule_scope": "UNSUPPORTED",
+        "same_domain": true,
         "unit": "TONE_CATEGORY"
       },
       "owner": "H01",
@@ -499,7 +555,8 @@
         "count": 4,
         "property": "kTotalStrokes",
         "query": "RECORDED_STROKE_COUNT",
-        "same_glyph_standard": true
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
       },
       "owner": "H02",
       "rule": "stroke_source",
@@ -515,7 +572,8 @@
         "count": 4,
         "property": "kTotalStrokes",
         "query": "RECORDED_STROKE_COUNT",
-        "same_glyph_standard": false
+        "same_glyph_standard": false,
+        "version": "UAX38_41"
       },
       "owner": "H02",
       "rule": "stroke_source",
@@ -531,7 +589,8 @@
         "count": 7,
         "property": "kTotalStrokes",
         "query": "RECORDED_STROKE_COUNT",
-        "same_glyph_standard": true
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
       },
       "owner": "H02",
       "rule": "stroke_source",
@@ -547,6 +606,40 @@
         "count": 4,
         "property": "kRSUnicode",
         "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.5",
+      "input": {
+        "count": 4,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_40"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.6",
+      "input": {
+        "count": 4,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
         "same_glyph_standard": true
       },
       "owner": "H02",
@@ -555,22 +648,141 @@
       "view": "COUNTEREXAMPLE"
     },
     {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.7",
+      "input": {
+        "count": 0,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.8",
+      "input": {
+        "count": -1,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.9",
+      "input": {
+        "count": 1000,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.10",
+      "input": {
+        "count": true,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.11",
+      "input": {
+        "count": 1.5,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.02.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.02.01.R1.C01.CASE.12",
+      "input": {
+        "count": "4",
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": 999,
+      "claim": "H02.02.01.R1.C01",
+      "expected": 999,
+      "id": "H02.02.01.R1.C01.CASE.13",
+      "input": {
+        "count": 999,
+        "property": "kTotalStrokes",
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "stroke_source",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
       "actual": [
-        "xíng",
-        "háng"
+        "wéi",
+        "wèi"
       ],
       "claim": "H02.03.01.R1.C01",
       "expected": [
-        "xíng",
-        "háng"
+        "wéi",
+        "wèi"
       ],
       "id": "H02.03.01.R1.C01.CASE.1",
       "input": {
         "property": "kMandarin",
         "query": "RECORDED_READING_PROPERTY",
         "values": [
-          "xíng",
-          "háng"
+          "wéi",
+          "wèi"
         ],
         "version": "UAX38_41"
       },
@@ -588,8 +800,8 @@
         "property": "kMandarin",
         "query": "CHOOSE_WORD_READING",
         "values": [
-          "xíng",
-          "háng"
+          "wéi",
+          "wèi"
         ],
         "version": "UAX38_41"
       },
@@ -635,6 +847,232 @@
       "rule": "mandarin_property",
       "status": "PASS",
       "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.5",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "wéi",
+          "wèi"
+        ],
+        "version": "UAX38_40"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.6",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "wéi",
+          "wèi"
+        ]
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.7",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "123",
+          " ",
+          "xyz"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.8",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "123"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.9",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          " "
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.10",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "a",
+          "b",
+          "c"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.11",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "Mǎ"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.12",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "ma3"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.13",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "́"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.14",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "mǎ",
+          null
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H02.03.01.R1.C01",
+      "expected": "HOLD",
+      "id": "H02.03.01.R1.C01.CASE.15",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "mǎ\n"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": [
+        "lüè"
+      ],
+      "claim": "H02.03.01.R1.C01",
+      "expected": [
+        "lüè"
+      ],
+      "id": "H02.03.01.R1.C01.CASE.16",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "lüè"
+        ],
+        "version": "UAX38_41"
+      },
+      "owner": "H02",
+      "rule": "mandarin_property",
+      "status": "PASS",
+      "view": "FORWARD"
     },
     {
       "actual": "SEPARATE_TOKENS",
@@ -1141,7 +1579,7 @@
         "framework": "UD_ZH_V2",
         "preposition": true,
         "query": "DEPENDENCY_ROLE",
-        "verified_role": "PREPOSITIONAL_OBJECT"
+        "verified_role": "PREPOSITIONAL_OBLIQUE_ARGUMENT"
       },
       "owner": "H04",
       "rule": "argument_role",
@@ -1158,6 +1596,118 @@
         "preposition": true,
         "query": "DEPENDENCY_ROLE",
         "verified_role": "CORE_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "obj",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "obj",
+      "id": "H04.01.02.R1.C01.CASE.5",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": false,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "DIRECT_CORE_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "iobj",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "iobj",
+      "id": "H04.01.02.R1.C01.CASE.6",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": false,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "INDIRECT_CORE_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.01.02.R1.C01.CASE.7",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": false,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "CORE_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.01.02.R1.C01.CASE.8",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": true,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.01.02.R1.C01.CASE.9",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": true,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBLIQUE_ADJUNCT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.01.02.R1.C01.CASE.10",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": true,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "DIRECT_CORE_OBJECT"
+      },
+      "owner": "H04",
+      "rule": "argument_role",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H04.01.02.R1.C01",
+      "expected": "HOLD",
+      "id": "H04.01.02.R1.C01.CASE.11",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "preposition": false,
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBLIQUE_ARGUMENT"
       },
       "owner": "H04",
       "rule": "argument_role",

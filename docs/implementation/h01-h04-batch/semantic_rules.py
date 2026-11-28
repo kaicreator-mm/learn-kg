@@ -1,11 +1,13 @@
 """Finite source-bound symbolic examples, not speech recognition or general grammar parser."""
+import re, unicodedata
+
 def _evaluate(rule,x):
  if not isinstance(x,dict):return 'HOLD'
  if rule=='tone_pair':
-  if x.get('unit')!='TONE_CATEGORY' or x.get('same_domain') is not True or x.get('surface_only') is True:return 'HOLD'
+  if x.get('unit')!='TONE_CATEGORY' or x.get('same_domain') is not True or x.get('surface_only') is True or x.get('rule_scope')!='THIRD_TONE_PAIR_ONLY':return 'HOLD'
   t=x.get('citation_tones')
   if not isinstance(t,list) or len(t)!=2 or any(type(v)is not int or v not in range(1,5) for v in t):return 'HOLD'
-  return [2,3] if t==[3,3] else t if x.get('rule_scope')=='THIRD_TONE_PAIR_ONLY' else 'HOLD'
+  return [2,3] if t==[3,3] else t
  if rule=='bu_tone':
   if x.get('form')!='不' or x.get('context')!='ORDINARY_NEGATION_BEFORE_TONED_SYLLABLE':return 'HOLD'
   t=x.get('following_tone')
@@ -26,10 +28,16 @@ def _evaluate(rule,x):
   if x.get('mapping_version')!='UAX38_41_EXAMPLE_CONTEXT' or x.get('source')!='脏' or x.get('direction')!='SC_TO_TC':return 'HOLD'
   return {'VISCERA':'臟','DIRTY':'髒'}.get(x.get('sense'),'HOLD')
  if rule=='stroke_source':
-  if x.get('query')!='RECORDED_STROKE_COUNT' or x.get('same_glyph_standard') is not True or x.get('property')!='kTotalStrokes' or type(x.get('count'))is not int or x['count']<1:return 'HOLD'
+  if x.get('query')!='RECORDED_STROKE_COUNT' or x.get('same_glyph_standard') is not True or x.get('property')!='kTotalStrokes' or x.get('version')!='UAX38_41' or type(x.get('count'))is not int or not 1<=x['count']<=999:return 'HOLD'
   return x['count']
  if rule=='mandarin_property':
-  if x.get('property')!='kMandarin' or x.get('query')!='RECORDED_READING_PROPERTY' or x.get('version')!='UAX38_41' or not isinstance(x.get('values'),list) or not x['values'] or any(not isinstance(v,str) or not v for v in x['values']):return 'HOLD'
+  if x.get('property')!='kMandarin' or x.get('query')!='RECORDED_READING_PROPERTY' or x.get('version')!='UAX38_41' or not isinstance(x.get('values'),list) or len(x['values']) not in (1,2):return 'HOLD'
+  # Exact UAX38 property syntax on NFD; additionally reject mark-only strings.
+  # Syntax acceptance is not phonotactic validation or a database lookup.
+  for v in x['values']:
+   if not isinstance(v,str):return 'HOLD'
+   nfd=unicodedata.normalize('NFD',v)
+   if not re.fullmatch(r'[a-z\u0300-\u0302\u0304\u0308\u030c]+',nfd) or not re.search(r'[a-z]',nfd):return 'HOLD'
   return x['values']
  if rule=='segmentation':
   if x.get('construction') not in ('RESULTATIVE','POTENTIAL'):return 'HOLD'
@@ -63,8 +71,9 @@ def _evaluate(rule,x):
  if rule=='argument_role':
   if x.get('framework')!='UD_ZH_V2' or x.get('query')!='DEPENDENCY_ROLE':return 'HOLD'
   if x.get('verified_role')=='NOMINAL_SUBJECT' and x.get('preposition') is False:return 'nsubj'
-  if x.get('verified_role')=='CORE_OBJECT' and x.get('preposition') is False:return 'obj'
-  if x.get('verified_role')=='PREPOSITIONAL_OBJECT' and x.get('preposition') is True:return 'obl:arg'
+  if x.get('verified_role')=='DIRECT_CORE_OBJECT' and x.get('preposition') is False:return 'obj'
+  if x.get('verified_role')=='INDIRECT_CORE_OBJECT' and x.get('preposition') is False:return 'iobj'
+  if x.get('verified_role')=='PREPOSITIONAL_OBLIQUE_ARGUMENT' and x.get('preposition') is True:return 'obl:arg'
   return 'HOLD'
  return 'HOLD'
 

@@ -4,9 +4,9 @@ from semantic_rules import evaluate
 from private_subject_index import split_reading_pos,latin_surface
 HERE=Path(__file__).resolve().parent
 class Tests(unittest.TestCase):
- def test_01_all_64_finite_rules(self):
+ def test_01_all_finite_rules(self):
   d=json.loads((HERE/'professional-design.json').read_text());c={z['id']:z for z in d['claims']}
-  self.assertEqual(len(d['cases']),64)
+  self.assertEqual(len(d['cases']),95)
   for z in d['cases']:
    self.assertEqual(evaluate(c[z['claim']]['rule'],z['input']),z['expected'],z['id'])
  def test_02_missing_all_rules(self):

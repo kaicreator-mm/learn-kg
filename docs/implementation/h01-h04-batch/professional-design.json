@@ -24,8 +24,8 @@
       "id": "H02-R1-UAX38",
       "title": "Unicode UAX #38 revision 41",
       "url": "https://www.unicode.org/reports/tr38/tr38-41.html",
-      "locator": "§3.7.1 and property kMandarin/kTotalStrokes",
-      "limits": "Versioned informative data; not universal glyph, official HSK or reading authority.",
+      "locator": "Revision 41 property definitions kMandarin/kTotalStrokes, §3.7.1; current official report https://unicode.org/reports/tr38/; no byte-pinned fixed-URL retrieval",
+      "limits": "Informative property syntax on NFD; one/two customary pinyin values in locale preference order; IRG stroke convention; no actual character lookup or official HSK identity. Fixed revision URL full retrieval limitation retained.",
       "access": "TEXT_RECHECKED_20261128"
     },
     {
@@ -84,7 +84,7 @@
       "locator": "§3.2 a, lines 64–74",
       "statement": "同一语流域内相邻两个三声音节的常见变调使首个音节表层读作近似二声；须区分本调与表层调。",
       "conditions": [
-        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+        "明确 THIRD_TONE_PAIR_ONLY、同一语流域、本调类别、恰好两个音节；未知或不支持的范围返回 HOLD。"
       ],
       "negative": "不得由表层二声反推本调；三音节以上、边界及实际音高另核。"
     },
@@ -160,11 +160,11 @@
       "rule": "stroke_source",
       "source": "H02-R1-UAX38",
       "locator": "property kTotalStrokes / kAlternateTotalStrokes",
-      "statement": "Unihan 笔画数属性属于特定计数约定；地区字形差异可另有笔画数记录。",
+      "statement": "Unihan kTotalStrokes 按 IRG 笔画计数约定记录；本有限视图仅校验 UAX38 rev41 属性版本及 1–999 的整数表示范围，不核查真实字项。",
       "conditions": [
-        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+        "指定 UAX38_41、kTotalStrokes、同一字形规范、已给定合成整数值；缺一返回 HOLD。"
       ],
-      "negative": "不能把部件编码、笔形编号或码点当笔画数；未绑定字形规范不能用于评价。"
+      "negative": "表示范围不等于实际汉字可能笔画数；不推断具体字的笔画数、规范字形或学习评价。"
     },
     {
       "id": "H02.03.01.R1.C01",
@@ -173,11 +173,11 @@
       "rule": "mandarin_property",
       "source": "H02-R1-UAX38",
       "locator": "property kMandarin",
-      "statement": "kMandarin 是信息性读音属性，存储记录的普通话读音值；不同读音来源/字词环境需要分开绑定。",
+      "statement": "kMandarin 是面向排序和转写的信息性常用拼音属性；一个值适用于 CN/TW，两值按 CN（zh-Hans）、TW（zh-Hant）偏好顺序记录，并非完整多音字读音表。",
       "conditions": [
-        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+        "指定 UAX38_41 与 kMandarin，给定一或两个合成字符串；按 NFD 属性字符语法验证并保留原串及顺序，不查询字项。"
       ],
-      "negative": "不由字形推断读音，不把属性列表当完整词语义项或实际发音。"
+      "negative": "语法形状通过不等于合法音节、真实 Unihan 条目、语境读音、多音字或义项证明；两个值仅是地区偏好顺序。"
     },
     {
       "id": "H03.01.01.R1.C01",
@@ -277,11 +277,11 @@
       "rule": "argument_role",
       "source": "H04-R1-UD",
       "locator": "Syntax, core arguments lines 61–71",
-      "statement": "UD 区分名词主语、核心宾语和介词引入的斜格宾语，标签由已分析的句法角色而非词类本身决定。",
+      "statement": "UD 汉语区分名词主语、核心直接宾语 obj、核心间接宾语 iobj 与介词引入的斜格论元 obl:arg；仅在角色已独立明确时路由标签。",
       "conditions": [
-        "只适用于明确给出的分析框架、证据及输入条件；未核实条件返回HOLD。"
+        "指定 UD_ZH_V2；明确角色及介词存在布尔条件；未分型核心宾语、仅知介词宾语或斜格附加语保持 HOLD。"
       ],
-      "negative": "不把名词一律当主语/宾语，未分析句子或论元角色保持HOLD。"
+      "negative": "不从词类、介词或表层词序自动解析句法；不将附加语当论元，不将通用核心宾语直接标 obj。"
     }
   ],
   "cases": [
@@ -597,7 +597,8 @@
         "query": "RECORDED_STROKE_COUNT",
         "same_glyph_standard": true,
         "property": "kTotalStrokes",
-        "count": 4
+        "count": 4,
+        "version": "UAX38_41"
       },
       "expected": 4
     },
@@ -609,7 +610,8 @@
         "query": "RECORDED_STROKE_COUNT",
         "same_glyph_standard": false,
         "property": "kTotalStrokes",
-        "count": 4
+        "count": 4,
+        "version": "UAX38_41"
       },
       "expected": "HOLD"
     },
@@ -621,7 +623,8 @@
         "query": "RECORDED_STROKE_COUNT",
         "same_glyph_standard": true,
         "property": "kTotalStrokes",
-        "count": 7
+        "count": 7,
+        "version": "UAX38_41"
       },
       "expected": 7
     },
@@ -633,7 +636,8 @@
         "query": "RECORDED_STROKE_COUNT",
         "same_glyph_standard": true,
         "property": "kRSUnicode",
-        "count": 4
+        "count": 4,
+        "version": "UAX38_41"
       },
       "expected": "HOLD"
     },
@@ -646,13 +650,13 @@
         "query": "RECORDED_READING_PROPERTY",
         "version": "UAX38_41",
         "values": [
-          "xíng",
-          "háng"
+          "wéi",
+          "wèi"
         ]
       },
       "expected": [
-        "xíng",
-        "háng"
+        "wéi",
+        "wèi"
       ]
     },
     {
@@ -664,8 +668,8 @@
         "query": "CHOOSE_WORD_READING",
         "version": "UAX38_41",
         "values": [
-          "xíng",
-          "háng"
+          "wéi",
+          "wèi"
         ]
       },
       "expected": "HOLD"
@@ -1081,7 +1085,7 @@
       "input": {
         "framework": "UD_ZH_V2",
         "query": "DEPENDENCY_ROLE",
-        "verified_role": "PREPOSITIONAL_OBJECT",
+        "verified_role": "PREPOSITIONAL_OBLIQUE_ARGUMENT",
         "preposition": true
       },
       "expected": "obl:arg"
@@ -1095,6 +1099,426 @@
         "query": "DEPENDENCY_ROLE",
         "verified_role": "CORE_OBJECT",
         "preposition": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.04.01.R1.C01.CASE.5",
+      "claim": "H01.04.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "unit": "TONE_CATEGORY",
+        "same_domain": true,
+        "rule_scope": "UNSUPPORTED",
+        "citation_tones": [
+          3,
+          3
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.04.01.R1.C01.CASE.6",
+      "claim": "H01.04.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "unit": "TONE_CATEGORY",
+        "same_domain": true,
+        "citation_tones": [
+          3,
+          3
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H01.04.01.R1.C01.CASE.7",
+      "claim": "H01.04.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "unit": "TONE_CATEGORY",
+        "same_domain": true,
+        "rule_scope": "UNSUPPORTED",
+        "citation_tones": [
+          3,
+          4
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.5",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 4,
+        "version": "UAX38_40"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.6",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 4
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.7",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 0,
+        "version": "UAX38_41"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.8",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": -1,
+        "version": "UAX38_41"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.9",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 1000,
+        "version": "UAX38_41"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.10",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": true,
+        "version": "UAX38_41"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.11",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 1.5,
+        "version": "UAX38_41"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.12",
+      "claim": "H02.02.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": "4",
+        "version": "UAX38_41"
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.02.01.R1.C01.CASE.13",
+      "claim": "H02.02.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "query": "RECORDED_STROKE_COUNT",
+        "same_glyph_standard": true,
+        "property": "kTotalStrokes",
+        "count": 999,
+        "version": "UAX38_41"
+      },
+      "expected": 999
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.5",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_40",
+        "values": [
+          "wéi",
+          "wèi"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.6",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "values": [
+          "wéi",
+          "wèi"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.7",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "123",
+          " ",
+          "xyz"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.8",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "123"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.9",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          " "
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.10",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.11",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "Mǎ"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.12",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "ma3"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.13",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "́"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.14",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "mǎ",
+          null
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.15",
+      "claim": "H02.03.01.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "mǎ\n"
+        ]
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H02.03.01.R1.C01.CASE.16",
+      "claim": "H02.03.01.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "property": "kMandarin",
+        "query": "RECORDED_READING_PROPERTY",
+        "version": "UAX38_41",
+        "values": [
+          "lüè"
+        ]
+      },
+      "expected": [
+        "lüè"
+      ]
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.5",
+      "claim": "H04.01.02.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "DIRECT_CORE_OBJECT",
+        "preposition": false
+      },
+      "expected": "obj"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.6",
+      "claim": "H04.01.02.R1.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "INDIRECT_CORE_OBJECT",
+        "preposition": false
+      },
+      "expected": "iobj"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.7",
+      "claim": "H04.01.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "CORE_OBJECT",
+        "preposition": false
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.8",
+      "claim": "H04.01.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBJECT",
+        "preposition": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.9",
+      "claim": "H04.01.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBLIQUE_ADJUNCT",
+        "preposition": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.10",
+      "claim": "H04.01.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "DIRECT_CORE_OBJECT",
+        "preposition": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H04.01.02.R1.C01.CASE.11",
+      "claim": "H04.01.02.R1.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "UD_ZH_V2",
+        "query": "DEPENDENCY_ROLE",
+        "verified_role": "PREPOSITIONAL_OBLIQUE_ARGUMENT",
+        "preposition": false
       },
       "expected": "HOLD"
     }
