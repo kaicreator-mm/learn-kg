@@ -1,14 +1,14 @@
 {
-  "output_label": "LEARN_KG_V010_HS00_HSK_STANDARD_AND_SOURCE_RECORD_INTERFACE_IMPLEMENTATION",
+  "output_label": "LEARN_KG_V010_HS00_PINNED_EVIDENCE_AND_ALIAS_REMEDIATION",
   "task_issue": 22,
   "status": "CANDIDATE_PREPARATION_ONLY",
-  "base_head": "4a8cd2b6aef68d5a574842325ef9fddaa0559c16",
-  "branch": "version/v0.1.0",
+  "base_head": "5680c4a50e1f0f2b5654e5606778b089f1ae7c34",
+  "branch": "prep/hs00-interface-remediation",
   "validation": {
     "hs00_json_schema": "PASS",
     "finite_tests": {
-      "passed": 22,
-      "total": 22,
+      "passed": 31,
+      "total": 31,
       "status": "PASS"
     },
     "deterministic_replay": {
@@ -35,6 +35,18 @@
       "rdf_archive_v100_isolated_restore": "17/17",
       "sourceblock_exact_replay": "94/94",
       "canonical_connector_text_exact_match": "3/3"
+    },
+    "semantic_delta": {
+      "status": "AUTHOR_TESTS_ONLY",
+      "original_positive": 11,
+      "original_negative": 13,
+      "finding_issue": 24,
+      "finding_comment": 7239215513
+    },
+    "residual_delta": {
+      "finding_issue": 29,
+      "finding_comment": 7239816437,
+      "status": "AUTHOR_TESTS_ONLY"
     }
   },
   "inventory": {
@@ -118,19 +130,19 @@
   "artifacts": {
     "schema.json": {
       "path": "docs/implementation/hs00/schema.json",
-      "sha256": "3811bd00a06303fc77b97d3f5970fc8de612f42255483542b79afd5afcf2c6d8"
+      "sha256": "4e271cf564882f32e17b3694524bb9fc40cf67a0762b1a33271a210a1d1b9f1f"
     },
     "interface-contract.json": {
       "path": "docs/implementation/hs00/interface-contract.json",
-      "sha256": "4c0811ceb9f8e7a9b3f6334c88f25443731543facaf698e77086c4a8084e2509"
+      "sha256": "b5f3bb57cbe863224c0de07ffcc1e6dd5e0825bcaf91b18bf8b0c83b4fa6c34c"
     },
     "source-mapping.json": {
       "path": "docs/implementation/hs00/source-mapping.json",
-      "sha256": "4db352324511060714fae5f1a3db6017573d0d522a9e67df7c6456477730d547"
+      "sha256": "407d940fab7d6c98021b87e81d16924be382e4902e0c6d1910e5fa90ffcb12a9"
     },
     "db01-projections.json": {
       "path": "docs/implementation/hs00/db01-projections.json",
-      "sha256": "2e24f2e67ce3ed58b803affb57aae8b19bac61b91bef2b2a366d899af9693aca"
+      "sha256": "3dafd63201a06d9ef1d7c5f10b2d99e22a6e712e5f64c16091dd00d1c559a3ac"
     },
     "fixtures.json": {
       "path": "docs/implementation/hs00/fixtures.json",
@@ -138,23 +150,27 @@
     },
     "README.md": {
       "path": "docs/implementation/hs00/README.md",
-      "sha256": "40cfdfa5521301218de014bfd086b7e411f6320831e2254f510c7b1b3f6430f1"
+      "sha256": "cb74008a7eb5ca33de43e5d997994958acc68200de287a2de7af5a8c53fc96f9"
     },
     "build_hs00.py": {
       "path": "docs/implementation/hs00/build_hs00.py",
-      "sha256": "7db5d89bbc7fd4c803a42dbf039b31bab1c3842ff8df52c0617752dbfb0cf761"
+      "sha256": "0954d8e0f378695e3bb5fc215cf5fc15e2eceb0ba7402c5cd612de4beaa69c9d"
     },
     "build_hs00_contract.py": {
       "path": "docs/implementation/hs00/build_hs00_contract.py",
-      "sha256": "af82e6cea215a0456ede84c165eac96eee8605587b56575ae3cc44dfef7901d2"
+      "sha256": "4a7721f75778bb8bb2261e54ff51bf8f8ebacd0e469748186e0bba676f0b23e6"
     },
     "test_hs00.py": {
       "path": "docs/implementation/hs00/test_hs00.py",
-      "sha256": "83f1605e5ab76c52c9215d830e49c5a8beeb392acfb34fd1c9934384469de733"
+      "sha256": "745ebda80e1343688bd1e8f7ab5077f1bbee33405448aa0e84d1c5e850be873f"
     },
     "verify_hs00.py": {
       "path": "docs/implementation/hs00/verify_hs00.py",
       "sha256": "6ba851a904715cf9d25cfc1f082fd579666d0c25640faca869bc4628ce0bd0ec"
+    },
+    "hs00_semantic.py": {
+      "path": "docs/implementation/hs00/hs00_semantic.py",
+      "sha256": "8f875ef742d7b4060c3ac2de34052b121641b6345918e90cdf1560fb807a3a9b"
     }
   },
   "safety_boundaries": {

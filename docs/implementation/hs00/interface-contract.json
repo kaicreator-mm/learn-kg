@@ -5,11 +5,11 @@
   "owner": "HS00",
   "schema": {
     "path": "docs/implementation/hs00/schema.json",
-    "sha256": "3811bd00a06303fc77b97d3f5970fc8de612f42255483542b79afd5afcf2c6d8"
+    "sha256": "4e271cf564882f32e17b3694524bb9fc40cf67a0762b1a33271a210a1d1b9f1f"
   },
   "source_mapping": {
     "path": "docs/implementation/hs00/source-mapping.json",
-    "sha256": "4db352324511060714fae5f1a3db6017573d0d522a9e67df7c6456477730d547"
+    "sha256": "407d940fab7d6c98021b87e81d16924be382e4902e0c6d1910e5fa90ffcb12a9"
   },
   "fixtures": {
     "path": "docs/implementation/hs00/fixtures.json",
@@ -19,7 +19,7 @@
   },
   "db01_projection": {
     "path": "docs/implementation/hs00/db01-projections.json",
-    "sha256": "2e24f2e67ce3ed58b803affb57aae8b19bac61b91bef2b2a366d899af9693aca",
+    "sha256": "3dafd63201a06d9ef1d7c5f10b2d99e22a6e712e5f64c16091dd00d1c559a3ac",
     "actual_records": 109,
     "synthetic_records": 1
   },
@@ -93,9 +93,24 @@
     "parse_status_required": true,
     "source_locator_required_or_explicit_null": true,
     "raw_field_sha256_required": true,
-    "unknown_unparsed_fields": "raw value retained and queryable; normalized value null; parse_status NOT_ATTEMPTED/UNPARSED/AMBIGUOUS/HOLD"
+    "unknown_unparsed_fields": "raw value retained and queryable; normalized value null; parse_status NOT_ATTEMPTED/UNPARSED/AMBIGUOUS/ERROR/HOLD"
+  },
+  "semantic_validation": {
+    "entrypoint": "hs00_semantic.py:HS00Validator.from_pinned_files",
+    "validator_sha256": "8f875ef742d7b4060c3ac2de34052b121641b6345918e90cdf1560fb807a3a9b",
+    "record_api": "validate(record, expected_kind)",
+    "required": true,
+    "mapping_binding": "caller must supply independently pinned interface-contract SHA256; schema and source mapping bytes checked against it; validate against pinned source and block index",
+    "raw_field_digest_encoding": "UTF-8 exact string bytes; other JSON values sorted-key compact UTF-8 JSON, ensure_ascii=false, allow_nan=false; null means captured null, not hidden archive digest",
+    "level_band_digest_encoding": "canonical sorted-key compact UTF-8 JSON of exact raw_label_term (RDF literal); raw label must equal term.value",
+    "level_observation_digest_encoding": "UTF-8 exact raw label bytes",
+    "unresolved_band": "HOLD_UNPARSED retains raw string and RDF term; null members and merged identity; no DB01 StandardBand projection",
+    "evidence_origin": "PINNED_ARCHIVE requires full equality to pinned band/observation. UNBOUND_CAPTURE has null source band/line digest or null count and empty source refs; synthetic stable ID derived from exact RDF term. It is not archive evidence or a DB01 projection.",
+    "runtime_trust": "Exact deployed validator/parser code and independently supplied contract digest trusted; public mapping/schema/index access returns defensive copies; not a Python sandbox.",
+    "synthetic_locator": "synthetic page values may differ from archive; source/block IDs and digest linkage still exact; not source evidence"
   },
   "hsk01_consumption_contract": [
+    "Mandatory schema plus HS00 semantic validator using trusted pinned contract digest; schema alone is insufficient.",
     "Consume source_record_id, provider identity status, raw PDF/text/block digests and preservation_scope as immutable source provenance.",
     "Do not infer official standard identity from source alias, filename, graph namespace or release label; UNKNOWN/HOLD must propagate.",
     "Preserve every raw level label and punctuation before producing any normalized member-level candidate.",
