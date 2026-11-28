@@ -113,7 +113,7 @@
       "deliverable": "私有UTF-8 JSONL/JSON原始记录及语义候选文本、RDF/源逐字段映射、差异账本与导入映射",
       "acceptance": "11000词汇/4288成员/3088字/94源块/9能力/823分类逐类对账；102括号级别、合并级、页序号/原始字段、来源身份和scopeTopic语义；可阅读且可解析、未知保留、权利不明保持私有；不生成SQLite文件",
       "kind": "implementation",
-      "status": "READY",
+      "status": "CANDIDATE_READY",
       "requirements": [
         {
           "task_id": "SRC01",
@@ -128,7 +128,9 @@
           "receipt": "CANDIDATE_READY"
         }
       ],
-      "output_receipt": "CANDIDATE_READY"
+      "output_receipt": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/HSK01/HSK01-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED_PRIVATE"
     },
     {
       "id": "K01",
@@ -988,7 +990,7 @@
       "deliverable": "声母/韵母/声调、拼音、语音规则及听辨任务；不由字形推断读音；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "G01",
@@ -1020,7 +1022,7 @@
       "deliverable": "认读/书写等级、字符身份、构形/部件、字音及证据；不猜造部件；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "G01",
@@ -1056,7 +1058,7 @@
       "deliverable": "11000词汇源记录保留，拼音/词性/义项按证据拆分，词义及搭配候选；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "G01",
@@ -1092,7 +1094,7 @@
       "deliverable": "语法源块→可核证构式与条件、正反例；不可靠分列保持HOLD；canonical结构化输入、D3/D4覆盖账本、精确消费引用与独立资格收据待审；可人工阅读/审阅的UTF-8权威文本（Markdown解释与结构化JSON/JSONL记录，不重复事实）",
       "acceptance": "完整D2–D4范围账本、来源定位/资格、原文可追溯、未解析保留；正负例与语义校验；逐D3状态/理由、源定位/命题/条件/反例/案例/验证链，四视角按适用性；数值模型独立oracle，未知HOLD；仅CANDIDATE_READY，不等同独立资格或发布；结构化记录可直接校验及映射导入，不以数据库文件作为交付",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "G01",
@@ -3120,7 +3122,7 @@
       "deliverable": "全视图结构化文本包校验/清单、声明式流程验证器、可选SQLite导入器及映射、文本激活/恢复工具",
       "acceptance": "校验所有文本/typed引用/权利/版本及独立schema；实际内存导入及语义对账、正负例、按需路由、类型关联计数；无默认SQLite文件或数据库发布包；文本包中断/回退、未实测物理跨库义务HOLD",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "DB02",
@@ -3653,5 +3655,5 @@
     "validation": "static schema and semantic validation first; later importer tests use in-memory SQLite by default; physical SQLite tests only in separately authorized scope, report untested obligations explicitly",
     "release": "approved readable source package + schemas + importer + validation reports and manifest; no .sqlite/.db binary files"
   },
-  "current_task_state_note": "HS00 candidate registered from #31 comment 7240310807; HSK01 READY for private text conversion only; source authority/rights/layout/history HOLD retained."
+  "current_task_state_note": "HSK01 registered from #33 cumulative restricted acceptance; H01-H04 and DB03 READY. Private rights and semantic HOLDs retained."
 }

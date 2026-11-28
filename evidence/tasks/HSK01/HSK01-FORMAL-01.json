@@ -1,0 +1,193 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "hsk01-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "e7f3c7c4fd582c71ad074e8c546853305d19a713",
+  "exact_head": "f23bc2caf540d0a7b9e8537f80f6295d8c4f068c",
+  "tree": "746e40949a296fd3e44e7f9aa4ff06967d55493d",
+  "version": "f23bc2caf540d0a7b9e8537f80f6295d8c4f068c",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "HSK01",
+  "attempt_id": "HSK01-FORMAL-01",
+  "receipt_id": "TASK:HSK01:HSK01-FORMAL-01",
+  "input": [
+    {
+      "task_id": "SRC01",
+      "receipt_id": "TASK:SRC01:SRC01-FORMAL-02",
+      "content_digest": "8b5eaf476a1ff0cb61c3bcb79957ff5b01cad4bf2bfaf161b6cc3620ab8cfc96",
+      "version": "94004f85fb768f611930f87ffaf203d7d9827595",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/SRC01/SRC01-FORMAL-02.json",
+          "sha256": "06022ab7502cb4e78249a5b8cc181e024b64106b518ea79a46b9ab41a8e3e188"
+        }
+      ]
+    },
+    {
+      "task_id": "HS00",
+      "receipt_id": "TASK:HS00:HS00-FORMAL-01",
+      "content_digest": "15e34adc14bcb943448521ad7c38f1e72c3916d12caacaa8a6aace60413921d0",
+      "version": "32928027e18a2afa9764d3024af26045dcd502bb",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/HS00/HS00-FORMAL-01.json",
+          "sha256": "0f0fcba62a5349c1c65286edbdcbb9ff45a449ac799e54a63a661f2cee665580"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/hsk01/README.md",
+      "sha256": "c04e5362fd1c3bea1f612e307a856cabcafdbb4343410e16faef161366659a7e",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/build_hsk01.py",
+      "sha256": "6041920267dceab3436653511621b993d2a316a1e939f8953e84c6b9ea6e962e",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/conversion-evidence.json",
+      "sha256": "d92bf336aa308d8deef38e4c0e6eae43ec9cd1f694a3193b74735bc365c4b35b",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/mapping-contract.json",
+      "sha256": "b4a04441d7c665b49a708366e96fc7a64ebdaa9ecffa0fe3e2e22ed3291ac97a",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/mapping-remediation-evidence.json",
+      "sha256": "c3eab1e65b8037aca34b4e2822238794ebf8ec19cf12ee2acdf51cb4e8d24dd4",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/stage.schema.json",
+      "sha256": "08326cb8ab5e73c7c42b13a2f0f04a5c10ea41f58ce4aed802d85e6948f56f27",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/test_hsk01.py",
+      "sha256": "d4ad6e16fec5a4544cfb0584bd9e96e1b429ece0a63c989fb8e533eae3432872",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/test_mapping.py",
+      "sha256": "36929ff88bb3e16979c0ba0fd64876014f4b4bdbb15369cc5261f4cac835d4a7",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hsk01/verify_mapping.py",
+      "sha256": "53755a83f45226b855baea4dab15dbe94facfd803b8538a671f31d7d9b00eefe",
+      "type": "PRIVATE_CONVERSION_SAFE_ARTIFACT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_PRIVATE_CANDIDATE_SCOPE",
+    "private_manifest_sha256": "33bb0a4254af6c40ff19bcd8cdc0aa045a844bcb6afa82ac18e4438575a8c668",
+    "private_outputs": {
+      "AbilityRecord.candidate.jsonl": {
+        "bytes": 34013,
+        "reconstructed_archive_sha256": "91a701a06752ed6b157d7473d71a56a3f211fecd93b647153db6e25ec967551b",
+        "rows": 9,
+        "sha256": "9c22fe19631f2cc0eadbb35a6b013e7342b39df55c4f70a7c6833c67b8eceabf"
+      },
+      "CharacterMembership.candidate.jsonl": {
+        "bytes": 23013275,
+        "reconstructed_archive_sha256": "382ed91a8e2d15d32eaa0aa8320cf1863f59b72c315c0c62aa460e20984e6156",
+        "rows": 4288,
+        "sha256": "02aabb7b302a6c66291386dbac56817d422e5cf387bb5d1664bd65563c204f35"
+      },
+      "HanCharacter.candidate.jsonl": {
+        "bytes": 5390541,
+        "reconstructed_archive_sha256": "e1b4682db9a4070474c88730fd8edadcafde18acd7e3fb152d549689d4b44ef0",
+        "rows": 3088,
+        "sha256": "06af0ec638f37090ae40fec72899502d0b8dd857b7ce140cee2f25e9b2dee516"
+      },
+      "LevelBand.candidate.jsonl": {
+        "bytes": 25456,
+        "reconstructed_archive_sha256": "5f20c7ab50e0ef4e65455b2598962d895077cd6b967557cd283f8e4b40206602",
+        "rows": 11,
+        "sha256": "1dd4502865da463987e0215cbd2dea18f1f43b06c6caef4aa1efdc1ac767ee33"
+      },
+      "LexicalRecord.candidate.jsonl": {
+        "bytes": 67888274,
+        "reconstructed_archive_sha256": "836fa1a0c49f78da8e06389a91fe0292beb1633282b088c4556b0b72659c81a9",
+        "rows": 11000,
+        "sha256": "217b66025e95c0f8916df67f182359e9d401d2a87725a879f4f141b50d15820c"
+      },
+      "SourceBlock.candidate.jsonl": {
+        "bytes": 621838,
+        "reconstructed_archive_sha256": "d082666135f73b0a23555d495603758fde68fdfead1835c06b808a8435086108",
+        "rows": 94,
+        "sha256": "413389812e7ee5dcc83c716361f9e6411137f599dad13938a391c3de199ec29a"
+      },
+      "SourceRecord.candidate.jsonl": {
+        "bytes": 6285,
+        "reconstructed_archive_sha256": "9fa5d3a9c3b9579a4993eb5d8307059440703f79d2e7653392737bc17b67fdc3",
+        "rows": 3,
+        "sha256": "f07f4280a96f4619174f3e6facd7e83c9cf7943b02f45ddcf933cca61c87add5"
+      },
+      "SyllabusVersion.candidate.jsonl": {
+        "bytes": 2108,
+        "reconstructed_archive_sha256": "767a9e725a832aa71893c2c59c8a46a3a7401938608f56d61c3c4299e704f430",
+        "rows": 1,
+        "sha256": "c15dbfc2acf3cc575fc9bfb045fcc811d985d50a7e2afcf4f89a4c1bf5c437c4"
+      },
+      "TaxonomyTopic.candidate.jsonl": {
+        "bytes": 2524501,
+        "reconstructed_archive_sha256": "ccc97c63fcc83a61abe013357d2b7ec13ff19cc180ba43f729592e9e688bae9e",
+        "rows": 823,
+        "sha256": "697b152807a8108d4372e408f1c263f4b1552f194c0757deaea7934266e17a50"
+      }
+    },
+    "mapping_sha256": "b4a04441d7c665b49a708366e96fc7a64ebdaa9ecffa0fe3e2e22ed3291ac97a",
+    "conversion_evidence_sha256": "d92bf336aa308d8deef38e4c0e6eae43ec9cd1f694a3193b74735bc365c4b35b",
+    "delta_evidence_sha256": "c3eab1e65b8037aca34b4e2822238794ebf8ec19cf12ee2acdf51cb4e8d24dd4",
+    "rights": "HOLD_NO_PUBLICATION_OR_REDISTRIBUTION",
+    "authority": "UNKNOWN_HOLD",
+    "historical_pdf_identity": "HOLD",
+    "visual_layout": "HOLD",
+    "professional_qualification": "NOT_RUN",
+    "db03": "NOT_RUN"
+  },
+  "validation": {
+    "independent_review_issue": 33,
+    "review_comment": 7241073773,
+    "review_body_sha256": "1dbfecc5d15c53f832e4bc3751067ed7af317c04c53f8ae1cddc6142a21c34aa",
+    "independent_result": "ACCEPT_SCOPED",
+    "inherited_conversion_review_comment": 7240499098,
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "records": 19317,
+    "typed_edges": 51269,
+    "mapped_properties": 177168,
+    "held_properties": 110928,
+    "independent_delta_probes": "76/76"
+  },
+  "issues": [
+    "Private candidate references only; canonical DB03 import, professional qualification and rights not granted."
+  ],
+  "next": "H01-H04 and DB03 candidate development; batched independent review",
+  "content_digest": "d923444cf252b951510481b712d3055a4ed421fe00111c1151616bea3000d029"
+}
