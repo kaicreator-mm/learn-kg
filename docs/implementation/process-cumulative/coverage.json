@@ -472,46 +472,55 @@
     },
     {
       "owner": "P09",
-      "records": 132,
-      "finite_cases": 51,
-      "concrete_cases": 8,
+      "records": 221,
+      "finite_cases": 93,
+      "concrete_cases": 38,
       "status": "RESTRICTED_BUILDER_CANDIDATE_ONLY",
       "requirements": [
         {
           "id": "P09.RQ01",
-          "scope": "即时及延迟观测分离",
+          "scope": "即时、延迟与陌生任务迁移观察必须携带同一typed LEARNER_SUBJECT identity对象；subject_id与identity_version精确相等",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "真实延迟测量及复杂量规",
+          "remaining": "协议级身份相等不是真实身份认证；可信身份提供者和真实主体认证未接入",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
         },
         {
           "id": "P09.RQ02",
-          "scope": "陌生任务、综合任务及目标维度明确",
+          "scope": "三个observed_at使用UTC_EPOCH_SECONDS/SECOND；recorded_at单独记录，使用独立时基/单位并只验证自身追加顺序",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "真实迁移任务难度与因果外推",
+          "remaining": "真实clock source真实性、准确度、跨设备同步和时间证明未验证",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
         },
         {
           "id": "P09.RQ03",
-          "scope": "独立性、评分及实际条件绑定",
+          "scope": "延迟间隔由delayed.observed_at减immediate.observed_at计算且至少86400秒；novel严格晚于delayed；caller delay_positive/minimum_delay_seconds不作为证据",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "真实独立表现、测量效度",
+          "remaining": "真实延迟保持、迁移效度、个体间隔适配及因果效果未验证；86400秒仅为本候选协议边界",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
         },
         {
           "id": "P09.RQ04",
-          "scope": "各阶段结果保存，失败不抹除；目标修订非自动",
+          "scope": "即时、延迟、迁移与summary分开保存；缺失/冲突/失败保持HOLD；不由同题族或短时正确推断迁移/掌握",
           "target": "P09.FLOW",
           "composition": "P09.COMPOSITION",
           "candidate_case_group": "P09",
-          "remaining": "目标调整和阶段总结实际效果",
+          "remaining": "真实学习者任务执行、跨会话持久化和阶段总结效果未验证",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+        },
+        {
+          "id": "P09.RQ05",
+          "scope": "PolicySpec不得独立消费caller computed_*或summary booleans；当前canonical contract不支持不可伪造FlowSpec completion binding，移除SUGGEST，仅同版本精确P09.FLOW同输入内部求值COMPLETE后允许REQUEST_OBSERVATION",
+          "target": "P09.POLICY",
+          "composition": "P09.COMPOSITION",
+          "candidate_case_group": "P09_POLICY_GATE",
+          "remaining": "未来如需恢复SUGGEST，须先有DB01/IF01支持的精确FlowSpec identity/version、flow instance、input digest与COMPLETE结果绑定合同，并重新独立审核",
+          "state": "PARTIAL_RESTRICTED_FAIL_CLOSED"
         }
       ],
       "case_ids": [
@@ -565,8 +574,52 @@
         "P09.C048",
         "P09.C049",
         "P09.C050",
-        "P09.C051"
-      ]
+        "P09.C051",
+        "P09.C052",
+        "P09.C053",
+        "P09.C054",
+        "P09.C055",
+        "P09.C056",
+        "P09.C057",
+        "P09.C058",
+        "P09.C059",
+        "P09.C060",
+        "P09.C061",
+        "P09.C062",
+        "P09.C063",
+        "P09.C064",
+        "P09.C065",
+        "P09.C066",
+        "P09.C067",
+        "P09.C068",
+        "P09.C069",
+        "P09.C070",
+        "P09.C071",
+        "P09.C072",
+        "P09.C073",
+        "P09.C074",
+        "P09.C075",
+        "P09.C076",
+        "P09.C077",
+        "P09.C078",
+        "P09.C079",
+        "P09.C080",
+        "P09.C081",
+        "P09.C082",
+        "P09.C083",
+        "P09.C084",
+        "P09.C085",
+        "P09.C086",
+        "P09.C087",
+        "P09.C088",
+        "P09.C089",
+        "P09.C090",
+        "P09.C091",
+        "P09.C092",
+        "P09.C093"
+      ],
+      "independent_delta_review": "PENDING",
+      "policy_gate_cases": 12
     },
     {
       "owner": "P10",
@@ -669,5 +722,123 @@
   "rights": "HOLD",
   "cq": "NOT_RUN",
   "lc": "NOT_RUN",
-  "independent_qualification": "NOT_RUN"
+  "independent_qualification": "NOT_RUN",
+  "p09_remediation": {
+    "status": "IMPLEMENTED_PREPARATION_ONLY",
+    "task_issue": 25,
+    "base_head": "9ee04704f4b388aa8ead129574c3f616c3c551a5",
+    "manifest_sha256": "70ac569a201d2984b86f191131ff0fd9ae38593e199323d59af836b69222a7db",
+    "contract_path": "docs/implementation/process-cumulative/p09-remediation.json",
+    "contract_sha256": "43da419ef95fdb9436bac428fcc8b48a7d65abf4e8ef63a36b566935ae0f3f92",
+    "p09_records": 221,
+    "p09_cases": 93,
+    "p09_concrete_identity_time_cases": 38,
+    "semantic_boundary_tests": {
+      "passed": 8,
+      "total": 8
+    },
+    "independent_reference_oracle_cases": {
+      "passed": 38,
+      "total": 38
+    },
+    "preserved_canonical_modules": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "P05",
+      "P06",
+      "P07",
+      "P08",
+      "P10"
+    ],
+    "changed_canonical_modules": [
+      "P09"
+    ],
+    "identity_authentication": "NOT_PROVIDED_PROTOCOL_BINDING_ONLY",
+    "clock_source_authentication": "NOT_PROVIDED",
+    "real_retention_or_transfer_effect": "NOT_VALIDATED",
+    "independent_delta_review": "PENDING",
+    "qualification": "NOT_GRANTED",
+    "artifact_hashes": {
+      "p09_jsonl_sha256": "4c598cbf66c86cf081e29649b834995a0a68388db88131e658552c5a9bb0a4a1",
+      "manifest_sha256": "70ac569a201d2984b86f191131ff0fd9ae38593e199323d59af836b69222a7db",
+      "contract_sha256": "d8014d1262c995b7f97f30855f9a7f8dc750d0765a093fc37a6f5a94db6a4b44",
+      "fixtures_sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa",
+      "results_sha256": "63bec5140a66861c4808e76f7b53135a55b0275aadc85aae3af6f4905c77a327",
+      "import_receipt_sha256": "e606598e155a3c80724031f375167500628306fd533ebd18ead4f8a8ce9f4d3e",
+      "migration_sha256": "5d2b3286d45d5cf89c04b35cec4c157b723915bc34bf4880c3c36e30c58946e7",
+      "bindings_sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391",
+      "policy_gate_tests_sha256": "839ad917a10607b55a32bc4ccea861af71429b04756004b6332af37a333ef0f1",
+      "p09_policy_gate_fixtures_sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa"
+    },
+    "validation": {
+      "semantic_boundary_tests": {
+        "passed": 8,
+        "total": 8
+      },
+      "independent_reference_oracle": {
+        "passed": 38,
+        "total": 38
+      },
+      "knowledge_importer_tests": {
+        "passed": 37,
+        "total": 37
+      },
+      "if01": {
+        "status": "IF01_FINITE_INTERFACE_CANDIDATE_VALIDATION",
+        "contract_sha256": "2fe5d0e90f83ac81848dbbc43151a844ac15b62a2f7eff87559a7c18ad376131",
+        "fixtures_sha256": "26985636445b22837342a690d8c26fc63385c883fa5f310cb751472668285c9c",
+        "shared_objects": 20,
+        "all_reference_field_paths": 90,
+        "schema_kind_count": 39,
+        "views": 27,
+        "view_requirements": 108,
+        "positive_records": 40,
+        "typed_refs": 107,
+        "negative_rejected": 17
+      },
+      "deterministic_replay": {
+        "status": "VERIFIED_ISOLATED_WORKTREE_EXACT_REPLAY",
+        "artifact_count": 5,
+        "artifact_paths": [
+          "knowledge/v0.1.0/learning-process-cumulative-r2/P09.jsonl",
+          "knowledge/v0.1.0/learning-process-cumulative-r2/learning-process.manifest.json",
+          "docs/implementation/process-cumulative/fixtures.json",
+          "docs/implementation/process-cumulative/results.json",
+          "docs/implementation/process-cumulative/import-receipt.json"
+        ],
+        "method": "Build in a detached worktree at the exact implementation commit; compare all five SHA256 values before and after replay."
+      },
+      "p09_remediation_invariants": "PASS",
+      "preserved_p01_p08_p10_byte_identity": "PASS",
+      "git_diff_check": "PASS",
+      "policy_gate_tests": {
+        "passed": 18,
+        "total": 18
+      }
+    },
+    "package_records": 1401,
+    "builder_cases": 360,
+    "p09_policy_gate_cases": 12,
+    "policy_gate_status": "SUGGEST_DISABLED_UNTIL_SUPPORTED_NONFORGEABLE_FLOW_COMPLETION_BINDING",
+    "policy_gate_tests": {
+      "passed": 18,
+      "total": 18
+    },
+    "policy_identity_boundary_delta": {
+      "review_base": "c94228990766795fcb5955e1ad9bfceb38afeea7",
+      "finding_issue": 26,
+      "finding_comment": 7235816275,
+      "status": "IMPLEMENTED_PREPARATION_ONLY",
+      "generic_entry": "EXACT_P07_POLICY_TYPED_REFERENCE_ONLY_CANONICAL_SQL_LOAD",
+      "p09_entry": "UNCHANGED_P09_POLICY_WRAPPER_NO_SUGGEST",
+      "builder_cases": 360,
+      "importer_tests": 37,
+      "policy_gate_tests": 18,
+      "identity_time_tests": 8,
+      "independent_review": "PENDING",
+      "scope": "No canonical record/manifest/fixture/result or Task DAG change; no general runtime, rights or qualification."
+    }
+  }
 }

@@ -7,9 +7,20 @@
 - P06：评分版本与观测有效性、缺答/无效/未施测、辅助与独立表现、竞争解释及针对性建议、独立变式复测。具体合成二元评分例不代替一般量规/实际原因诊断。
 - P07：只提供可拒绝的激励选项，退出/拒绝/暂停优先；匹配目标、评分版本、支持和单位的合成整数观测才描述变化。不诊断动机，不声称真实学习效果。
 - P08：估计与不确定性、有限目标/预算/可及性/构念/权限筛选、本人选择及结果记录；具体候选集不自动执行，无可行或未知时澄清/延期。
-- P09：即时、延迟、陌生任务的具体时间、版本、目标、身份及独立性分离；失败同样保存。不由相同题族或短时正确推断迁移和持久掌握。
+- P09：即时、延迟、陌生任务迁移三条观察必须携带相同typed LEARNER_SUBJECT identity对象（稳定subject_id及identity_version）；三个event time固定为UTC epoch seconds/SECOND。recorded_at独立记录，只在recording clock stream内检查顺序，不与observed_at跨时钟比较。延迟由时间戳相减计算，至少86,400秒，novel严格晚于delayed；86,400秒仅是本候选协议边界，不是普遍或最优间隔。身份相等仅为协议绑定，不是真实身份认证；时钟来源准确度未验证；不声称真实延迟保持、迁移或掌握效果。
+- P09 policy-to-flow gate：现有DB01 PolicySpec/CompositionSpec与IF01 typed refs无法表达绑定精确FlowSpec身份/版本、flow instance、input digest和COMPLETE结果的不可伪造依赖。因此移除P09 PolicySpec的SUGGEST规则；只保留ADVICE_ONLY REQUEST_OBSERVATION。专用wrapper从SQL重新加载同版本的精确P09.FLOW，并对同一input对象内部求值；不接受caller flow_result/flow_ref/flow_instance_id/input_digest。HOLD/STOP/PAUSE/FAILED/缺失/未知/错配均不进入REQUEST_OBSERVATION路径。未来若要恢复SUGGEST，必须先扩展受支持的canonical composition contract并重新独立审核。
+- P09 policy-to-flow生成产物在独立detached worktree重放，P09.jsonl、manifest、fixtures、results、import receipt五项SHA256全部一致（5/5）；这只证明确定性重放，不代表独立审核或资格。
+- P09当前共93项有限案例，其中38项身份/时间正反例、12项policy-to-flow gate案例；8项原身份/时间边界测试和16项新policy gate测试通过，38/38独立参考计算对照通过。知识导入器37/37，IF01有限接口验证通过；所有结果均为受限合成协议验证，不是学习效果资格。
 - P10：跨日计划与用户选择、精确版本及检查点、稳定事件 ID、冲突拒绝、预算、显式退出。具体检查点合成回放不构成真实持久性/事务性、认证或后台授权。
 
-design.json、coverage.json 逐原始需求保留受限范围和未完成事项；canonical JSONL/manifest 是可读交付，实际内存 SQLite 导入，不生成持久数据库。build.py 从当前知识候选与资格绑定生成；semantic_checks.py 提供具体合成数值/条件案例；inherited.py 在新 SQL 快照回放旧作者用例。Case 中结构化期望用 canonical JSON 字符串存储，Validation 的结果摘要计算对应 JSON 值。所有结果仅 BUILDER；143 个旧用例是迁移回归，不是新增独立 oracle。318 项新快照用例包括此前 42 个准备例的重放；不能把该42项另行加总。通用执行器、现实干预效果、完整专业深度、源/权利清理、CQ/LC 与 G03/G04/G05 均未通过。
+本次 P09 整改只改变 P09.jsonl canonical shard；P01–P08、P10 canonical JSONL 与原始 design.json 均按 BASE_HEAD 字节级保留。P09 新记录 provenance 指向独立 p09-remediation.json，避免因共享设计文件修改而重写其他模块。
 
-原 P01–P03 的额外专业限制和覆盖缺口继承，不因版本迁移而消失。P04–P10 中的布尔字段是明确提供的合成事实而非已实现的现实分类器；具体案例仍限各自专用方法。P04 支持逻辑汇合，不承诺通用并发、跨进程执行或实际调用下级 FlowSpec。P10 检查点摘要来自可信调用者的明确 pin，摘要本身不是身份认证。
+design.json、p09-remediation.json、coverage.json 逐原始需求保留受限范围和未完成事项；canonical JSONL/manifest 是可读交付，实际内存 SQLite 导入，不生成持久数据库。build.py 从当前知识候选与资格绑定生成；semantic_checks.py 提供具体合成数值/条件案例；inherited.py 在新 SQL 快照回放旧作者用例。Case 中结构化期望用 canonical JSON 字符串存储，Validation 的结果摘要计算对应 JSON 值。当前 SQL builder replay 共360项；143项旧 P01–P03 用例是迁移回归，不是新增独立 oracle。新增加的12项P09 policy gate案例单独标记为P09_POLICY_GATE，不与P09 FlowSpec案例混淆。所有结果仅 BUILDER；通用执行器、现实干预效果、完整专业深度、源/权利清理、CQ/LC 与 G03/G04/G05 均未通过。
+
+原 P01–P03 的额外专业限制和覆盖缺口继承，不因版本迁移而消失。P04–P10 中的布尔字段是明确提供的合成事实而非已实现的现实分类器；具体案例仍限各自专用方法。P04 支持逻辑汇合，不承诺通用并发、跨进程执行或实际调用下级 FlowSpec。P09 的 PolicySpec 不再有 SUGGEST 路由；只有内部精确 FlowSpec 同输入求值 COMPLETE 后才允许 REQUEST_OBSERVATION（ADVICE_ONLY），不推断保持、迁移、掌握或因果效果。P10 检查点摘要来自可信调用者的明确 pin，摘要本身不是身份认证。
+
+当前状态：PREPARATION_ONLY；P09-only independent delta review PENDING；不写资格收据、不更新 Task DAG 注册、不创建 PR、不合并。
+
+### P09 residual policy identity boundary (#26)
+
+通用 policy_eval 仅接受当前 P07.POLICY 完整类型引用，从已校验的只读 SQL 导入读取规范对象；拒绝调用者提供的规则对象、P09 类型引用、缺失或外域条件引用和早期 SUGGEST。P07 保留原有有限激励建议语义，P09 专用 wrapper 与全部 canonical 记录不变。18 项 policy-gate 单元测试（含 2 个新测试方法及多个对抗子例），8 项身份时间测试、37 项 importer 测试、360 个 SQL builder cases 通过；不构成独立审核或资格。
