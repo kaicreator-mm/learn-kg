@@ -101,8 +101,8 @@ def parse_level_label(raw: str) -> tuple[str, list[int] | None]:
     return "PARSED_CANDIDATE", sorted(members)
 
 
-def merged_identity(raw: str) -> str:
-    digest = sha256((STANDARD_ID + "\0" + raw).encode("utf-8"))
+def merged_identity(raw: str, standard_id: str = STANDARD_ID) -> str:
+    digest = sha256((standard_id + "\0" + raw).encode("utf-8"))
     return "HS00.LEVELSET." + digest[:24]
 
 
@@ -296,8 +296,6 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
     for record, line in band_rows:
         raw_label = literal_value(record, "label")
         parse_status, members = parse_level_label(raw_label)
-        if parse_status != "PARSED_CANDIDATE" or members is None:
-            raise ValueError(f"unparsed source LevelBand label: {raw_label!r}")
         level_bands.append({
             "kind": "HSKLevelBand",
             "stable_id": "HS00.BAND." + sha256(raw_label.encode("utf-8"))[:20],
@@ -305,8 +303,9 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
             "source_standard_id": iri_value(record, "version"),
             "raw_level_label": raw_label,
             "raw_field_sha256": term_digest(one_term(record, "label")),
+            "raw_label_term": one_term(record, "label"),
             "normalized_member_levels": members,
-            "merged_level_identity": merged_identity(raw_label),
+            "merged_level_identity": merged_identity(raw_label, iri_value(record, "version")) if members is not None else None,
             "parser_name": PARSER_NAME,
             "parser_version": PARSER_VERSION,
             "parse_status": parse_status,
@@ -433,6 +432,9 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         {"record_kind": "CATEGORY", "source_rdf_kind": "TaxonomyTopic", "source_record_id": None, "normalized_knowledge_id": first_id(taxonomy_rows)},
         {"record_kind": "CHARACTER_MEMBERSHIP", "source_rdf_kind": "CharacterMembership", "source_record_id": iri_value(character_rows[0][0], "source"), "normalized_knowledge_id": first_id(character_rows)}
     ]
+
+    for example in record_kind_examples:
+        example["rights_scope"] = RIGHTS_SCOPE.copy()
 
     archive_evidence = {
         "source_manifest_sha256": sha256((export_root / "manifest.json").read_bytes()),

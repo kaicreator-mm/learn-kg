@@ -1,14 +1,14 @@
 {
-  "output_label": "LEARN_KG_V010_HS00_HSK_STANDARD_AND_SOURCE_RECORD_INTERFACE_IMPLEMENTATION",
+  "output_label": "LEARN_KG_V010_HS00_INTERFACE_SEMANTIC_VALIDATION_REMEDIATION",
   "task_issue": 22,
   "status": "CANDIDATE_PREPARATION_ONLY",
-  "base_head": "4a8cd2b6aef68d5a574842325ef9fddaa0559c16",
-  "branch": "version/v0.1.0",
+  "base_head": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "branch": "prep/hs00-interface-remediation",
   "validation": {
     "hs00_json_schema": "PASS",
     "finite_tests": {
-      "passed": 22,
-      "total": 22,
+      "passed": 28,
+      "total": 28,
       "status": "PASS"
     },
     "deterministic_replay": {
@@ -35,6 +35,13 @@
       "rdf_archive_v100_isolated_restore": "17/17",
       "sourceblock_exact_replay": "94/94",
       "canonical_connector_text_exact_match": "3/3"
+    },
+    "semantic_delta": {
+      "status": "AUTHOR_TESTS_ONLY",
+      "original_positive": 11,
+      "original_negative": 13,
+      "finding_issue": 24,
+      "finding_comment": 7239215513
     }
   },
   "inventory": {
@@ -118,19 +125,19 @@
   "artifacts": {
     "schema.json": {
       "path": "docs/implementation/hs00/schema.json",
-      "sha256": "3811bd00a06303fc77b97d3f5970fc8de612f42255483542b79afd5afcf2c6d8"
+      "sha256": "2cf5d236c24aa53b9fb2f2935373048ed06d8e5108783c604be673a1769fcafe"
     },
     "interface-contract.json": {
       "path": "docs/implementation/hs00/interface-contract.json",
-      "sha256": "4c0811ceb9f8e7a9b3f6334c88f25443731543facaf698e77086c4a8084e2509"
+      "sha256": "7667fdac9847b245e38d318dcf2afe5d1d957d79605ec68f90362a645ddba556"
     },
     "source-mapping.json": {
       "path": "docs/implementation/hs00/source-mapping.json",
-      "sha256": "4db352324511060714fae5f1a3db6017573d0d522a9e67df7c6456477730d547"
+      "sha256": "4b4c4a837fb7dd39cacf233b5368a31e55175a464accae176b53e9642ec4f596"
     },
     "db01-projections.json": {
       "path": "docs/implementation/hs00/db01-projections.json",
-      "sha256": "2e24f2e67ce3ed58b803affb57aae8b19bac61b91bef2b2a366d899af9693aca"
+      "sha256": "6a7c79a630e0acd6aa88657e353c4a50bb17473f827b75444c8472683b80c3f8"
     },
     "fixtures.json": {
       "path": "docs/implementation/hs00/fixtures.json",
@@ -138,23 +145,27 @@
     },
     "README.md": {
       "path": "docs/implementation/hs00/README.md",
-      "sha256": "40cfdfa5521301218de014bfd086b7e411f6320831e2254f510c7b1b3f6430f1"
+      "sha256": "80ebfe4974aa15c485f571cc7f4450ec86d56b0e95ffab098d4ee6088c944fa7"
     },
     "build_hs00.py": {
       "path": "docs/implementation/hs00/build_hs00.py",
-      "sha256": "7db5d89bbc7fd4c803a42dbf039b31bab1c3842ff8df52c0617752dbfb0cf761"
+      "sha256": "242b777939572f72c0d70ba1ec673c11de6fdd6041bd308928cfc4160e765071"
     },
     "build_hs00_contract.py": {
       "path": "docs/implementation/hs00/build_hs00_contract.py",
-      "sha256": "af82e6cea215a0456ede84c165eac96eee8605587b56575ae3cc44dfef7901d2"
+      "sha256": "d05e57a3e19c673c20ce307833409e359f163953c905273992ee71fa2c458bc6"
     },
     "test_hs00.py": {
       "path": "docs/implementation/hs00/test_hs00.py",
-      "sha256": "83f1605e5ab76c52c9215d830e49c5a8beeb392acfb34fd1c9934384469de733"
+      "sha256": "40c9ccf2b9522a8acead6c95288027843c583dc0af3a77b3607bce3619fe84e3"
     },
     "verify_hs00.py": {
       "path": "docs/implementation/hs00/verify_hs00.py",
       "sha256": "6ba851a904715cf9d25cfc1f082fd579666d0c25640faca869bc4628ce0bd0ec"
+    },
+    "hs00_semantic.py": {
+      "path": "docs/implementation/hs00/hs00_semantic.py",
+      "sha256": "1f886f1ef054c9d567d30129b516befa2adab2f79448b612af6e377c8d654ddb"
     }
   },
   "safety_boundaries": {

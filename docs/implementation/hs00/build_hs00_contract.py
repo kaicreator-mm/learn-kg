@@ -173,7 +173,7 @@ def make_schema() -> dict[str, Any]:
             "type": "object", "additionalProperties": False,
             "required": [
                 "kind", "stable_id", "source_band_id", "source_standard_id",
-                "raw_level_label", "raw_field_sha256", "normalized_member_levels",
+                "raw_level_label", "raw_field_sha256", "raw_label_term", "normalized_member_levels",
                 "merged_level_identity", "parser_name", "parser_version",
                 "parse_status", "semantics_status", "source_record_line_sha256",
                 "rights_scope"
@@ -181,14 +181,12 @@ def make_schema() -> dict[str, Any]:
             "properties": {
                 "kind": {"const": "HSKLevelBand"}, "stable_id": nonempty(),
                 "source_band_id": nonempty(), "source_standard_id": nonempty(),
-                "raw_level_label": nonempty(), "raw_field_sha256": digest,
-                "normalized_member_levels": {
-                    "type": "array", "minItems": 1, "uniqueItems": True,
-                    "items": {"type": "integer", "minimum": 1, "maximum": 9}
-                },
-                "merged_level_identity": nonempty(),
+                "raw_level_label": {"type": "string"}, "raw_field_sha256": digest,
+                "raw_label_term": {"type": "object", "additionalProperties": False, "required": ["kind", "value", "datatype", "language"], "properties": {"kind": {"const": "literal"}, "value": {"type": "string"}, "datatype": nullable_string(), "language": nullable_string()}},
+                "normalized_member_levels": {"oneOf": [{"type": "array", "minItems": 1, "uniqueItems": True, "items": {"type": "integer", "minimum": 1, "maximum": 9}}, {"type": "null"}]},
+                "merged_level_identity": {"oneOf": [nonempty(), {"type": "null"}]},
                 "parser_name": nonempty(), "parser_version": nonempty(),
-                "parse_status": {"const": "PARSED_CANDIDATE"},
+                "parse_status": {"enum": ["PARSED_CANDIDATE", "HOLD_UNPARSED"]},
                 "semantics_status": {"const": "UNKNOWN_HOLD"},
                 "source_record_line_sha256": digest,
                 "rights_scope": {"$ref": "#/$defs/rightsScope"}
@@ -204,7 +202,7 @@ def make_schema() -> dict[str, Any]:
             ],
             "properties": {
                 "kind": {"const": "HSKLevelLabelObservation"},
-                "raw_level_label": nonempty(),
+                "raw_level_label": {"type": "string"},
                 "occurrence_count": {"type": "integer", "minimum": 1},
                 "source_record_refs": {"type": "array", "minItems": 1, "uniqueItems": True, "items": nonempty()},
                 "raw_field_sha256": digest,
@@ -330,6 +328,12 @@ def make_schema() -> dict[str, Any]:
             }
         }
     }
+    for name in ("HSKLevelBand", "HSKLevelLabelObservation"):
+        defs[name]["allOf"] = [{"if": {"properties": {"parse_status": {"const": "HOLD_UNPARSED"}}},
+            "then": {"properties": {"normalized_member_levels": {"type": "null"}, "merged_level_identity": {"type": "null"}}},
+            "else": {"properties": {"normalized_member_levels": {"type": "array"}, "merged_level_identity": {"type": "string"}}}}]
+    defs["HSKRawFieldCapture"]["allOf"] = [{"if": {"properties": {"parse_status": {"not": {"const": "PARSED_CANDIDATE"}}}},
+        "then": {"properties": {"normalized_value": {"type": "null"}}}}]
     return {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": "urn:learn-kg:hs00:source-mapping-schema:1",
@@ -389,13 +393,14 @@ def make_schema() -> dict[str, Any]:
                 "type": "array", "minItems": 6,
                 "items": {
                     "type": "object", "additionalProperties": False,
-                    "required": ["record_kind", "source_rdf_kind", "source_record_id", "normalized_knowledge_id"],
+                    "required": ["record_kind", "source_rdf_kind", "source_record_id", "normalized_knowledge_id", "rights_scope"],
                     "properties": {
                         "record_kind": {"enum": ["VOCABULARY_ITEM", "CHARACTER_ITEM", "SOURCE_BLOCK", "CAPABILITY", "CATEGORY", "CHARACTER_MEMBERSHIP"]},
                         "source_rdf_kind": nonempty(),
                         "source_record_id": {"oneOf": [nonempty(), {"type": "null"}]},
                         "normalized_knowledge_id": nonempty(),
-                        "membership_record_id": {"oneOf": [nonempty(), {"type": "null"}]}
+                        "membership_record_id": {"oneOf": [nonempty(), {"type": "null"}]},
+                        "rights_scope": {"$ref": "#/$defs/rightsScope"}
                     }
                 }
             },
@@ -556,6 +561,8 @@ def make_db01_projections(mapping: dict[str, Any]) -> dict[str, Any]:
         "effective_date": None
     })
     for index, band in enumerate(mapping["level_bands"]):
+        if band["parse_status"] != "PARSED_CANDIDATE":
+            continue  # lossless HOLD stays in source mapping, not a DB01 projection
         records.append({
             "kind": "StandardBand",
             "stable_id": band["stable_id"],
@@ -741,9 +748,22 @@ def main() -> None:
             "parse_status_required": True,
             "source_locator_required_or_explicit_null": True,
             "raw_field_sha256_required": True,
-            "unknown_unparsed_fields": "raw value retained and queryable; normalized value null; parse_status NOT_ATTEMPTED/UNPARSED/AMBIGUOUS/HOLD"
+            "unknown_unparsed_fields": "raw value retained and queryable; normalized value null; parse_status NOT_ATTEMPTED/UNPARSED/AMBIGUOUS/ERROR/HOLD"
+        },
+        "semantic_validation": {
+            "entrypoint": "hs00_semantic.py:HS00Validator.from_pinned_files",
+            "validator_sha256": sha((HERE / "hs00_semantic.py").read_bytes()),
+            "record_api": "validate(record, expected_kind)",
+            "required": True,
+            "mapping_binding": "caller must supply independently pinned interface-contract SHA256; schema and source mapping bytes checked against it; validate against pinned source and block index",
+            "raw_field_digest_encoding": "UTF-8 exact string bytes; other JSON values sorted-key compact UTF-8 JSON, ensure_ascii=false, allow_nan=false; null means captured null, not hidden archive digest",
+            "level_band_digest_encoding": "canonical sorted-key compact UTF-8 JSON of exact raw_label_term (RDF literal); raw label must equal term.value",
+            "level_observation_digest_encoding": "UTF-8 exact raw label bytes",
+            "unresolved_band": "HOLD_UNPARSED retains raw string and RDF term; null members and merged identity; no DB01 StandardBand projection",
+            "synthetic_locator": "synthetic page values may differ from archive; source/block IDs and digest linkage still exact; not source evidence"
         },
         "hsk01_consumption_contract": [
+            "Mandatory schema plus HS00 semantic validator using trusted pinned contract digest; schema alone is insufficient.",
             "Consume source_record_id, provider identity status, raw PDF/text/block digests and preservation_scope as immutable source provenance.",
             "Do not infer official standard identity from source alias, filename, graph namespace or release label; UNKNOWN/HOLD must propagate.",
             "Preserve every raw level label and punctuation before producing any normalized member-level candidate.",

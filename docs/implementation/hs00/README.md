@@ -63,7 +63,7 @@ SourceBlock 当前记录的 printedPage 是 RDF xsd:integer 值，记录范围�
 
 DB01 与 IF01 现有 schema/contract 未修改。所有 109 条 DB01 投影及 1 条合成 SourceMembership 形状示例通过当前 DB01 canonical schema；5 个 typed-ref 示例通过 DB01 ref schema。候选 package ID/version 只是结构示例，未创建 package manifest，也未注册到 IF01。合成 SourceMembership 不属于 HSK01 转换结果。
 
-当前验证结果：HS00 Schema 通过；22/22 有限测试通过；5 个生成产物连续重放的 SHA256 全部一致；git diff --check 通过。以上是候选接口验证，不是独立资格。
+当前验证结果：HS00 Schema 通过；28/28 有限测试通过；5 个生成产物连续重放的 SHA256 全部一致；git diff --check 通过。以上是候选接口验证，不是独立资格。
 
 ## 运行与验证
 
@@ -76,3 +76,7 @@ DB01 与 IF01 现有 schema/contract 未修改。所有 109 条 DB01 投影及 1
 ## 明确未完成
 
 HSK01 全量词汇/汉字/能力/分类转换、来源专业内容复核、H07 最终标准映射、CQ/LC、语义资格、历史 PDF 身份证明、版权确认、视觉版式审核、公开发布、SQLite 文件生成、Task DAG 完成登记、资格收据、PR 和合并均不属于本阶段。不得把当前候选接口描述为已完成 HSK 知识库。
+
+### #24 增量整改
+
+HSK01 消费须调用 hs00_semantic.HS00Validator.from_pinned_files(directory, expected_contract_sha256)，其中摘要来自外部受信的精确审核元组，而非待验证输入；validate(record, expected_kind) 成功才允许候选消费。Schema 仅形状校验。来源定位绑定精确 source/block/hash；实际 RDF locator 不允许从 printed label 推断 PDF 页。合成 locator 不构成真实来源。所有未解析/空白原始标签完整保留，成员与 merged identity 为空，未解析 band 不投影 DB01；RDF 原始 term 摘要与 raw UTF-8 字符串摘要区别保存。所有六个独立 record-kind 示例显式附带限制。原始 24 fixtures 不删，新增全对象变异、未知值及 pin 验证。
