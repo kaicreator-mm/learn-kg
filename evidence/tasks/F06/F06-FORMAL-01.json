@@ -1,0 +1,1015 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate4-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "7f6ee33736842461b1501134915a4ff0c7233d84",
+  "exact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+  "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "F06",
+  "attempt_id": "F06-FORMAL-01",
+  "receipt_id": "TASK:F06:F06-FORMAL-01",
+  "input": [
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K02",
+      "receipt_id": "TASK:K02:K02-FORMAL-03",
+      "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K02/K02-FORMAL-03.json",
+          "sha256": "5c6f1a7b0c5b271495370ce6cdc63ec595dcad6137f6b3a16ac90e3eece92713"
+        },
+        {
+          "path": "evidence/tasks/K02/K02-QUALIFICATION-01.json",
+          "sha256": "90b250a76d43dd836682428e682b69673cf4f63f54f27fc019f77ba549793da8"
+        }
+      ]
+    },
+    {
+      "task_id": "K03",
+      "receipt_id": "TASK:K03:K03-FORMAL-03",
+      "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+          "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+        },
+        {
+          "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+          "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+        }
+      ]
+    },
+    {
+      "task_id": "K04",
+      "receipt_id": "TASK:K04:K04-FORMAL-03",
+      "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+          "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+        },
+        {
+          "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+          "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        }
+      ]
+    },
+    {
+      "task_id": "K09",
+      "receipt_id": "TASK:K09:K09-FORMAL-01",
+      "content_digest": "bccf41be1b552c203974a374997d8aff4814b9a1ded7bab9d9adc9399ea25862",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K09/K09-FORMAL-01.json",
+          "sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85"
+        },
+        {
+          "path": "evidence/tasks/K09/K09-QUALIFICATION-01.json",
+          "sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340"
+        },
+        {
+          "path": "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+          "sha256": "ef62d586dbffa43013775ba4951213971037871508be266605cc52f049c4de23",
+          "stable_id": "K09.01.03.ME.01",
+          "record_sha256": "e4439babe1aac3783b2ba8853c23b58d2f05f518fbebbebb6f2b65d95be62cd2",
+          "kind": "Claim",
+          "package_version": "0.1.0-measurement-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "K10",
+      "receipt_id": "TASK:K10:K10-FORMAL-01",
+      "content_digest": "36ac3110d5a361eedcd47a31f513726e16938f4d7b625ca42b18cfb7574f71f2",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K10/K10-FORMAL-01.json",
+          "sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243"
+        },
+        {
+          "path": "evidence/tasks/K10/K10-QUALIFICATION-01.json",
+          "sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b"
+        }
+      ]
+    },
+    {
+      "task_id": "K11",
+      "receipt_id": "TASK:K11:K11-FORMAL-01",
+      "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K11/K11-FORMAL-01.json",
+          "sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123"
+        },
+        {
+          "path": "evidence/tasks/K11/K11-QUALIFICATION-01.json",
+          "sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+          "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+          "stable_id": "K11.05.02.TR.01",
+          "record_sha256": "7537bea3f55ff31be172212d30c49859a152906d4492d30be3d2dd54494e67e5",
+          "kind": "Claim",
+          "package_version": "0.1.0-trace-adaptation-resources-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "K16",
+      "receipt_id": "TASK:K16:K16-FORMAL-01",
+      "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+          "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+        },
+        {
+          "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+          "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+          "sha256": "14104bc985f64edd03af68579c271601663fdf5f75c40376dedde51d020a4498",
+          "stable_id": "K16.02.04.TG.01",
+          "record_sha256": "60cc762b8ed62ad3ade83acabf1addb2dbab0e03742a75b50a3c02ac196d57bc",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "P06",
+      "receipt_id": "TASK:P06:P06-FORMAL-03",
+      "content_digest": "fa9d0d53d106864b17fccb55b89216540fc5dd1599efdc4ba314a9b02b12b11e",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P06/P06-FORMAL-03.json",
+          "sha256": "0993dfb440fc9c753ee5919908d53e08a4c7b285d8726b82791184bc4f05dc5e"
+        },
+        {
+          "path": "evidence/tasks/P06/P06-QUALIFICATION-02.json",
+          "sha256": "3ff30427dfc9567eefea85aa2effa4f053bf88bda2cbacfeeed79a3ade55b0dd"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P06.jsonl",
+          "sha256": "3a96bef07579303e25d1e20c9f7f47d231a6559d5c31fad910cd8855c7e1ce70",
+          "stable_id": "P06.FLOW",
+          "record_sha256": "f09fc6ca0c6dc624955616830c0db62054b67b35149f31e99e2a8c2521b9de08",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "P08",
+      "receipt_id": "TASK:P08:P08-FORMAL-03",
+      "content_digest": "776737428a1bbdca8bccf5c09c208eee70c1cedebb33962ea06002d0880bb5d7",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P08/P08-FORMAL-03.json",
+          "sha256": "8d11f93fe222ec51aedc510092c1d8c208f12007083dbea10e07f08b81fe362b"
+        },
+        {
+          "path": "evidence/tasks/P08/P08-QUALIFICATION-02.json",
+          "sha256": "0cc63e69c2f1f05ef64aa5c324ef16e0dcc64dc6fd643fdda51e03e424fa5171"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P08.jsonl",
+          "sha256": "17c686f7a9edcbce32b9e127a55ef54f750ff7583ea742c89d51aa30d67fcef9",
+          "stable_id": "P08.FLOW",
+          "record_sha256": "c22efb3c0d31bfdf299ef7928012e5203d007a8ae75ad5ce569041ff54a5daad",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "H06",
+      "receipt_id": "TASK:H06:H06-FORMAL-01",
+      "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H06/H06-FORMAL-01.json",
+          "sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87"
+        },
+        {
+          "path": "evidence/tasks/H06/H06-QUALIFICATION-01.json",
+          "sha256": "daba78cedd3b5a9c24e610d7694ee84de4267c49ef78a54b6859f3c0f8348c09"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.06.04.R2.C01",
+          "record_sha256": "d7f4eb439943f92873416edf8cb7b23a110b4df11461803e31fbda0fe2ca4bb9",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.CONFIRM.OBS",
+          "record_sha256": "2efe3d25bdaa40b42018868657bcafff6af0e6aa570082034406197843031681",
+          "kind": "ObservationSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.CONFIRM.SKILL",
+          "record_sha256": "57d65c6b05b4485c2af2d1163e66c7b2aab8bfc6d9c8536eeb89df5a4605c641",
+          "kind": "SkillType",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.CONFIRM.TASK",
+          "record_sha256": "20cecfd561c68d22ba455004538761f4221597058968927c44a0e21eadfd2d43",
+          "kind": "TaskSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/learning-process.manifest.json",
+      "sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F06.jsonl",
+      "sha256": "eebb7f85d4c7226c5fc10208d065a721c884b9f70050bcdddb177c5ac3c6e364",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/README.md",
+      "sha256": "0ca09013814eb9a801cf8377ec0812c68ff7db217b69bd7d21f45eb13675da48",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/bindings.json",
+      "sha256": "7227b2a15ae0cfab9c2266b1524241600a31db81d7beca9a4aef76b825839192",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/build_batch.py",
+      "sha256": "2cd7183dc0eaf8264d03080f7d0cc2f562bdca62cbaf3c6496838d206f1c6f2a",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/coverage.json",
+      "sha256": "101825f26aba47ad6beb4e17b0237f836108271a4b93b5c4370bb45a3ec66a95",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cq-lc-preparation.json",
+      "sha256": "ba48b45274d256b83f104f3503d25ef964df181020b71b4adf38bbbe27f8942b",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cumulative-evidence.json",
+      "sha256": "3f26198d17d208e1e2f159277fb92ea4dce894f798aa2ce95e9a465bae814ced",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/delta-invariance.json",
+      "sha256": "83bcad41d79d4e1caf06cbf4ae382cfa8d9f666185d36fb578352ae02da2183e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/design.json",
+      "sha256": "244201c72eee9e2554ce1b5426a28d7dbf4eafd31e29dc10e167a01aae62c781",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/migration.json",
+      "sha256": "56fea8b617caf98c70f087791775b71f9c1bc8768868cecde683d5cc8760afeb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/p-rebind-regression.json",
+      "sha256": "1d0db3d853e51d7d5a3c5c2f84dd877439c532003151b4420950c325c11f03aa",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/policy_entry.py",
+      "sha256": "39d6917f76074a7e41eab1a9df9d45cf53652f432ee67fd57fcbf3df25e4b3ef",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/process_pointer.py",
+      "sha256": "c7ed100f33ffa45c499b55e33a8c5c5014de08d5c19f8191b8135b37934435cb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/replay_p.py",
+      "sha256": "d7f88b1810c6886dcbc11e1256bb1f6e16faf984be4a54b9100d1a02dc8ca7a7",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/results.json",
+      "sha256": "69e8e394f1a2fd1ef304e13811dca18fc38c6ab08ff18b130d6f16e2b36b5f68",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/semantic_rules.py",
+      "sha256": "08ff220ac9de0d2cbbcb899e75527a0a3bdf050555af423017ef825b113de90e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_batch.py",
+      "sha256": "26adacfc85777b53035a424ea60ef0a79a1655ac7f76e5281b1b576f0fc9c9cd",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_delta.py",
+      "sha256": "abee8f44d3ec51a4d2a1b6abc93e7a79d090bc4f86e8c4cb5cb5c255368e6438",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_FINITE_COMPOSITION_CANDIDATE",
+    "reviewed_scope": {
+      "actual_cases": [
+        "F06.R4.CASE.1",
+        "F06.R4.CASE.2",
+        "F06.R4.CASE.3",
+        "F06.R4.CASE.4",
+        "F06.R4.CASE.5",
+        "F06.R4.CASE.6",
+        "F06.R4.CASE.7"
+      ],
+      "claim_ids": [
+        "K09.01.03.ME.01",
+        "K11.05.02.TR.01",
+        "K16.02.04.TG.01",
+        "H06.06.04.R2.C01"
+      ],
+      "full_scope": "HOLD_UNTIL_INDEPENDENT_COMPLETE_COVERAGE",
+      "inputs": [
+        "P06.FLOW",
+        "P08.FLOW",
+        "H06.CONFIRM.TASK",
+        "H06.CONFIRM.OBS",
+        "H06.CONFIRM.SKILL"
+      ],
+      "professional_topic_refs": [
+        "K02.06.02",
+        "K03.05.01",
+        "K04.03.04",
+        "K06.06.03",
+        "K09.01.03",
+        "K10.02.04",
+        "K11.05.02",
+        "K16.02.04",
+        "H01.03.01",
+        "H03.03.03"
+      ],
+      "required_scope_ids": [
+        "F06.RQ01",
+        "F06.RQ02",
+        "F06.RQ03",
+        "F06.RQ04"
+      ],
+      "scope": "确认交际任务失败的竞争解释、补测、受限补救复核；无自动诊断。",
+      "status": "PARTIAL_FINITE_PREPARATION_FULL_CQ_LC_NOT_RUN"
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "cumulative_version": "0.1.0-process-candidate-4",
+    "manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+    "module_records": 18,
+    "module_shard_sha256": "eebb7f85d4c7226c5fc10208d065a721c884b9f70050bcdddb177c5ac3c6e364",
+    "owner_record_set_sha256": "093f26d847a16654e40da6de6dee1e0352b97cac0cb0e5de4379e3b241486f4e",
+    "record_digests": [
+      {
+        "stable_id": "F06.R4.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "711a3650cb7d55225ff4f24dbe19272caecfe3c0c8224829d694adae617e99c3"
+      },
+      {
+        "stable_id": "F06.R4.STATE",
+        "kind": "StateDimension",
+        "sha256": "d521ab11fd166db7afb60e76b44585e99b1838e1349ad35316ccc65c5bb8e28e"
+      },
+      {
+        "stable_id": "F06.R4.POLICY",
+        "kind": "PolicySpec",
+        "sha256": "772875dbca3917dba3d432d592cabca511426c0b12c4d6aa0fb7a5d94a17e93d"
+      },
+      {
+        "stable_id": "F06.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "9e3a85c517c40ae08317152537502526b84b13691022817b0a4d6a7bcea9df34"
+      },
+      {
+        "stable_id": "F06.R4.CASE.1",
+        "kind": "Case",
+        "sha256": "7e1ac20a8547bd1649fc86048b9c9c3527cc1cc9a96d9539a2793f78d3c17c4e"
+      },
+      {
+        "stable_id": "F06.R4.CASE.1.VAL",
+        "kind": "Validation",
+        "sha256": "a93b99f48a39f10436b8b9decc39142c272100fd8dd54c7aa416ba2bbad0454e"
+      },
+      {
+        "stable_id": "F06.R4.CASE.2",
+        "kind": "Case",
+        "sha256": "d5f8ea581cb6dd7db3b5e59f1a7bed21134c4e110f91b60fe4e4951a4e59aead"
+      },
+      {
+        "stable_id": "F06.R4.CASE.2.VAL",
+        "kind": "Validation",
+        "sha256": "72227c3b7f23236178d0ee991ad91d74e0638bbe639d5ac354dce1b245160713"
+      },
+      {
+        "stable_id": "F06.R4.CASE.3",
+        "kind": "Case",
+        "sha256": "f881a27d51dffdd44c5763afb3950ce9259063ca1460079170f69870fb80e3ec"
+      },
+      {
+        "stable_id": "F06.R4.CASE.3.VAL",
+        "kind": "Validation",
+        "sha256": "bb04dad5fccd8caf60b1857bc90bda34291b6226e3303e38a37a97141182997d"
+      },
+      {
+        "stable_id": "F06.R4.CASE.4",
+        "kind": "Case",
+        "sha256": "663a4fbd6422792b97d150eb0e3698d0e0bc16eb75f5cad5a3771e58023dea3f"
+      },
+      {
+        "stable_id": "F06.R4.CASE.4.VAL",
+        "kind": "Validation",
+        "sha256": "07712c19a6dd5ab29250a05702bf55dda57f5453c8bf897a34b900e3ed6f7ef4"
+      },
+      {
+        "stable_id": "F06.R4.CASE.5",
+        "kind": "Case",
+        "sha256": "cb121eae329606cae7a0f59caa5b9433fc064d2f7d6475d18fd5c76a3ccbaaa0"
+      },
+      {
+        "stable_id": "F06.R4.CASE.5.VAL",
+        "kind": "Validation",
+        "sha256": "5cf157563d048abea07499de154d2503145edf299634af6fda64c9eee9ac70ca"
+      },
+      {
+        "stable_id": "F06.R4.CASE.6",
+        "kind": "Case",
+        "sha256": "846181c37e17eb2d5c3b4f77e534c97cbd770d498fcc439e07ec21802c578a45"
+      },
+      {
+        "stable_id": "F06.R4.CASE.6.VAL",
+        "kind": "Validation",
+        "sha256": "a96d2db6095cee030a4262d97f95c220719509d8c6f8113f651989dd30a71103"
+      },
+      {
+        "stable_id": "F06.R4.CASE.7",
+        "kind": "Case",
+        "sha256": "7a2643de56316d9be6ace9706859444882418399f8c450c57df0334fa3f2c3c1"
+      },
+      {
+        "stable_id": "F06.R4.CASE.7.VAL",
+        "kind": "Validation",
+        "sha256": "20e4f364cf2fbeda7157e54ab79167ad3af4000a3f89c2ead8d83f338a941e93"
+      }
+    ],
+    "reviewed_artifact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "reviewed_artifact_tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "case_count": 7,
+    "full_scope": "HOLD_FULL_CQ_LC_NOT_RUN"
+  },
+  "validation": {
+    "issue": 40,
+    "comment_id": 7244264589,
+    "body_sha256": "1b388b238e20ff0fa968387e8405a5e1d37b52799738f5c0f08a15866da8a167",
+    "reviewed_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "inherited_review_comments": [
+      7239835702,
+      7243959073
+    ]
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; full depth, G03/G04/G05 and release not accepted."
+  ],
+  "next": "V01 exact tuple integrated validation; no release.",
+  "content_digest": "be8a2e1c15098ce855b5c752c0b27cb7e99f0c90403dda3cbcb0978a153f6637",
+  "reviewed_input_rebind": [
+    {
+      "reviewed_input": {
+        "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+        "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+        "receipt_path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+        "receipt_sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d",
+        "task_id": "DB01",
+        "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e"
+      },
+      "actual": {
+        "task_id": "DB01",
+        "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+        "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+        "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+            "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+        "qualification_content_digest": "bda836211c7203072b63ed1ae5b8912f57b76728f024596574371864957e89bb",
+        "qualification_receipt": "evidence/tasks/K02/K02-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "90b250a76d43dd836682428e682b69673cf4f63f54f27fc019f77ba549793da8",
+        "receipt_id": "TASK:K02:K02-FORMAL-03",
+        "receipt_path": "evidence/tasks/K02/K02-FORMAL-03.json",
+        "receipt_sha256": "5c6f1a7b0c5b271495370ce6cdc63ec595dcad6137f6b3a16ac90e3eece92713",
+        "task_id": "K02",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+      },
+      "actual": {
+        "task_id": "K02",
+        "receipt_id": "TASK:K02:K02-FORMAL-03",
+        "content_digest": "92e790ad1574d0098327b2f21050b06a18f1d3e928f3eb65cadec20e3b08f379",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K02/K02-FORMAL-03.json",
+            "sha256": "5c6f1a7b0c5b271495370ce6cdc63ec595dcad6137f6b3a16ac90e3eece92713"
+          },
+          {
+            "path": "evidence/tasks/K02/K02-QUALIFICATION-01.json",
+            "sha256": "90b250a76d43dd836682428e682b69673cf4f63f54f27fc019f77ba549793da8"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+        "qualification_content_digest": "87380c72a3f6d5c46181b57095ddfd84a5fa93c4193a6aa53b72172823d32f0b",
+        "qualification_receipt": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae",
+        "receipt_id": "TASK:K03:K03-FORMAL-03",
+        "receipt_path": "evidence/tasks/K03/K03-FORMAL-03.json",
+        "receipt_sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de",
+        "task_id": "K03",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+      },
+      "actual": {
+        "task_id": "K03",
+        "receipt_id": "TASK:K03:K03-FORMAL-03",
+        "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+            "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+          },
+          {
+            "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+            "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+        "qualification_content_digest": "8f7d4d6e00eb6cbb7464de0135eeccbc2529cc06cf060c6e869b19f671229e14",
+        "qualification_receipt": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee",
+        "receipt_id": "TASK:K04:K04-FORMAL-03",
+        "receipt_path": "evidence/tasks/K04/K04-FORMAL-03.json",
+        "receipt_sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905",
+        "task_id": "K04",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+      },
+      "actual": {
+        "task_id": "K04",
+        "receipt_id": "TASK:K04:K04-FORMAL-03",
+        "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+            "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+          },
+          {
+            "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+            "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+        "qualification_content_digest": "871134ed34be5af7fd657dcf8aefb008400aa7a1b4465b70d919b8b072ee101a",
+        "qualification_receipt": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+        "qualification_receipt_sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb",
+        "receipt_id": "TASK:K06:K06-FORMAL-02",
+        "receipt_path": "evidence/tasks/K06/K06-FORMAL-02.json",
+        "receipt_sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235",
+        "task_id": "K06",
+        "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3"
+      },
+      "actual": {
+        "task_id": "K06",
+        "receipt_id": "TASK:K06:K06-FORMAL-02",
+        "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+        "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+            "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+          },
+          {
+            "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+            "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "bccf41be1b552c203974a374997d8aff4814b9a1ded7bab9d9adc9399ea25862",
+        "qualification_content_digest": "87e3e63f81987377c8ac481f04a3aa6133f60bf0e4cca0ab617299d6f1f573a6",
+        "qualification_receipt": "evidence/tasks/K09/K09-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340",
+        "receipt_id": "TASK:K09:K09-FORMAL-01",
+        "receipt_path": "evidence/tasks/K09/K09-FORMAL-01.json",
+        "receipt_sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85",
+        "task_id": "K09",
+        "version": "62760bfd4690279cf2a703be8cc908a92ef1d755"
+      },
+      "actual": {
+        "task_id": "K09",
+        "receipt_id": "TASK:K09:K09-FORMAL-01",
+        "content_digest": "bccf41be1b552c203974a374997d8aff4814b9a1ded7bab9d9adc9399ea25862",
+        "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K09/K09-FORMAL-01.json",
+            "sha256": "9f26fc18fb7959e07002743bdb0560db7fc8dddc087fdcd3e99868c98453ca85"
+          },
+          {
+            "path": "evidence/tasks/K09/K09-QUALIFICATION-01.json",
+            "sha256": "8053b3d049bc95ad440933f71e8033cd593f69b97b64113b1e4116d2c24b0340"
+          },
+          {
+            "path": "knowledge/v0.1.0/measurement-r4/K09/records-02.jsonl",
+            "sha256": "ef62d586dbffa43013775ba4951213971037871508be266605cc52f049c4de23",
+            "stable_id": "K09.01.03.ME.01",
+            "record_sha256": "e4439babe1aac3783b2ba8853c23b58d2f05f518fbebbebb6f2b65d95be62cd2",
+            "kind": "Claim",
+            "package_version": "0.1.0-measurement-candidate-4"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "36ac3110d5a361eedcd47a31f513726e16938f4d7b625ca42b18cfb7574f71f2",
+        "qualification_content_digest": "3c7fb24f37d505d13b0c3c00c9428a635f5c7669479045022aa9cc21d63ade9d",
+        "qualification_receipt": "evidence/tasks/K10/K10-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b",
+        "receipt_id": "TASK:K10:K10-FORMAL-01",
+        "receipt_path": "evidence/tasks/K10/K10-FORMAL-01.json",
+        "receipt_sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243",
+        "task_id": "K10",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a"
+      },
+      "actual": {
+        "task_id": "K10",
+        "receipt_id": "TASK:K10:K10-FORMAL-01",
+        "content_digest": "36ac3110d5a361eedcd47a31f513726e16938f4d7b625ca42b18cfb7574f71f2",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K10/K10-FORMAL-01.json",
+            "sha256": "0b445d618cf8492031bdf9e197fb3b25df7446c265e783245e2ae9f0df375243"
+          },
+          {
+            "path": "evidence/tasks/K10/K10-QUALIFICATION-01.json",
+            "sha256": "5036c6010954c6ca1008e8b2531b55522e377f893f4f37b273bfdec272cc517b"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e",
+        "qualification_content_digest": "70a836714e4cad040669d40eb5be3b5830770e53c48d177989dfb38715464137",
+        "qualification_receipt": "evidence/tasks/K11/K11-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233",
+        "receipt_id": "TASK:K11:K11-FORMAL-01",
+        "receipt_path": "evidence/tasks/K11/K11-FORMAL-01.json",
+        "receipt_sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123",
+        "task_id": "K11",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a"
+      },
+      "actual": {
+        "task_id": "K11",
+        "receipt_id": "TASK:K11:K11-FORMAL-01",
+        "content_digest": "36eabaf197609e600def86370d207c77adf6152fc0ceab456479da8523a33b8e",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K11/K11-FORMAL-01.json",
+            "sha256": "d2effba56b4d3196508cd723818e9ddbbea048fdc90dd14a231fe8df70e3a123"
+          },
+          {
+            "path": "evidence/tasks/K11/K11-QUALIFICATION-01.json",
+            "sha256": "3e17d31bc6f5e5eaf715369d8f7086f1e58cc98e0db9f63b6e77a742f9d5c233"
+          },
+          {
+            "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K11/records-03.jsonl",
+            "sha256": "9e8bfd3b9911a88807c93853189764dc08b443f4d3c00c2a178a3db451964037",
+            "stable_id": "K11.05.02.TR.01",
+            "record_sha256": "7537bea3f55ff31be172212d30c49859a152906d4492d30be3d2dd54494e67e5",
+            "kind": "Claim",
+            "package_version": "0.1.0-trace-adaptation-resources-candidate-1"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+        "qualification_content_digest": "c301209523a5a6a4fbf20ed5a79792b9d9b068255edb3eaeff17bdc1983eadd7",
+        "qualification_receipt": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186",
+        "receipt_id": "TASK:K16:K16-FORMAL-01",
+        "receipt_path": "evidence/tasks/K16/K16-FORMAL-01.json",
+        "receipt_sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373",
+        "task_id": "K16",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a"
+      },
+      "actual": {
+        "task_id": "K16",
+        "receipt_id": "TASK:K16:K16-FORMAL-01",
+        "content_digest": "8480ee3543e7c7ceae6575116592b44a7f3273986c80289183d40e5e108c5f90",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K16/K16-FORMAL-01.json",
+            "sha256": "742446b8a1c0c0f9c9631b35e34a8a0abc8bc4b98a81c14debf90589dd7a1373"
+          },
+          {
+            "path": "evidence/tasks/K16/K16-QUALIFICATION-01.json",
+            "sha256": "a1a33ddf87ea1b75bfd1d88a0b3b48c8c24d80fb0673786da9821827c78fe186"
+          },
+          {
+            "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K16/records-01.jsonl",
+            "sha256": "14104bc985f64edd03af68579c271601663fdf5f75c40376dedde51d020a4498",
+            "stable_id": "K16.02.04.TG.01",
+            "record_sha256": "60cc762b8ed62ad3ade83acabf1addb2dbab0e03742a75b50a3c02ac196d57bc",
+            "kind": "Claim",
+            "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "12a5152f08914ce28046fdbfadf3770daff65cccebf92dfb810781aba091ee7c",
+        "qualification_content_digest": "5f2469bdb549cdb441f1132c0de3c32973fcece6c00059433b9d80f98705fbcf",
+        "qualification_receipt": "evidence/tasks/P06/P06-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "4ecda73130e6055ee857c2f6998ae04f9961a92d7cae79a659adde53391e6988",
+        "receipt_id": "TASK:P06:P06-FORMAL-02",
+        "receipt_path": "evidence/tasks/P06/P06-FORMAL-02.json",
+        "receipt_sha256": "ed995d2e47ca7c8b309914a4184d9f32fcf468c5862e10532463bd7ba8211196",
+        "task_id": "P06",
+        "version": "1510e686cba5aaabcd376c718322da6239e8604c"
+      },
+      "actual": {
+        "task_id": "P06",
+        "receipt_id": "TASK:P06:P06-FORMAL-03",
+        "content_digest": "fa9d0d53d106864b17fccb55b89216540fc5dd1599efdc4ba314a9b02b12b11e",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/P06/P06-FORMAL-03.json",
+            "sha256": "0993dfb440fc9c753ee5919908d53e08a4c7b285d8726b82791184bc4f05dc5e"
+          },
+          {
+            "path": "evidence/tasks/P06/P06-QUALIFICATION-02.json",
+            "sha256": "3ff30427dfc9567eefea85aa2effa4f053bf88bda2cbacfeeed79a3ade55b0dd"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P06.jsonl",
+            "sha256": "3a96bef07579303e25d1e20c9f7f47d231a6559d5c31fad910cd8855c7e1ce70",
+            "stable_id": "P06.FLOW",
+            "record_sha256": "f09fc6ca0c6dc624955616830c0db62054b67b35149f31e99e2a8c2521b9de08",
+            "kind": "FlowSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "REVIEWED_VERSION_ONLY_MIGRATION"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "7b3bd0c646d18db8f4fe3b9b4e6b9805ba8a681821618ca34e97a3b6fa95ea95",
+        "qualification_content_digest": "b1c3bf8d6633b9216c3b284d4602a001aa80eb5734b0de1ace005ac2ecfe9930",
+        "qualification_receipt": "evidence/tasks/P08/P08-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "59a2e1bf8619dd707e298a43b13d7a42cd81ab00dc5208864a3c46e9817d63d1",
+        "receipt_id": "TASK:P08:P08-FORMAL-02",
+        "receipt_path": "evidence/tasks/P08/P08-FORMAL-02.json",
+        "receipt_sha256": "16ac3e16240793aa17bf5314714b352e6b2ff16b7d6ac2caf836fa850b3c272e",
+        "task_id": "P08",
+        "version": "1510e686cba5aaabcd376c718322da6239e8604c"
+      },
+      "actual": {
+        "task_id": "P08",
+        "receipt_id": "TASK:P08:P08-FORMAL-03",
+        "content_digest": "776737428a1bbdca8bccf5c09c208eee70c1cedebb33962ea06002d0880bb5d7",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/P08/P08-FORMAL-03.json",
+            "sha256": "8d11f93fe222ec51aedc510092c1d8c208f12007083dbea10e07f08b81fe362b"
+          },
+          {
+            "path": "evidence/tasks/P08/P08-QUALIFICATION-02.json",
+            "sha256": "0cc63e69c2f1f05ef64aa5c324ef16e0dcc64dc6fd643fdda51e03e424fa5171"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P08.jsonl",
+            "sha256": "17c686f7a9edcbce32b9e127a55ef54f750ff7583ea742c89d51aa30d67fcef9",
+            "stable_id": "P08.FLOW",
+            "record_sha256": "c22efb3c0d31bfdf299ef7928012e5203d007a8ae75ad5ce569041ff54a5daad",
+            "kind": "FlowSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "REVIEWED_VERSION_ONLY_MIGRATION"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+        "qualification_content_digest": "d131f92ff5d0e80464eb8977406fb113ae49bb5e7c58f271992c0eeb823d8582",
+        "qualification_receipt": "evidence/tasks/H06/H06-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "daba78cedd3b5a9c24e610d7694ee84de4267c49ef78a54b6859f3c0f8348c09",
+        "receipt_id": "TASK:H06:H06-FORMAL-01",
+        "receipt_path": "evidence/tasks/H06/H06-FORMAL-01.json",
+        "receipt_sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87",
+        "task_id": "H06",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H06",
+        "receipt_id": "TASK:H06:H06-FORMAL-01",
+        "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H06/H06-FORMAL-01.json",
+            "sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87"
+          },
+          {
+            "path": "evidence/tasks/H06/H06-QUALIFICATION-01.json",
+            "sha256": "daba78cedd3b5a9c24e610d7694ee84de4267c49ef78a54b6859f3c0f8348c09"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.06.04.R2.C01",
+            "record_sha256": "d7f4eb439943f92873416edf8cb7b23a110b4df11461803e31fbda0fe2ca4bb9",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.CONFIRM.OBS",
+            "record_sha256": "2efe3d25bdaa40b42018868657bcafff6af0e6aa570082034406197843031681",
+            "kind": "ObservationSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.CONFIRM.SKILL",
+            "record_sha256": "57d65c6b05b4485c2af2d1163e66c7b2aab8bfc6d9c8536eeb89df5a4605c641",
+            "kind": "SkillType",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.CONFIRM.TASK",
+            "record_sha256": "20cecfd561c68d22ba455004538761f4221597058968927c44a0e21eadfd2d43",
+            "kind": "TaskSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "receipt_path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+        "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+        "task_id": "IF01",
+        "version": "04263009493a994501520be08364b32329c93179"
+      },
+      "actual": {
+        "task_id": "IF01",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "version": "04263009493a994501520be08364b32329c93179",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+            "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    }
+  ],
+  "previous_receipt": null
+}

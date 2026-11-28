@@ -1,0 +1,546 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate4-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "7f6ee33736842461b1501134915a4ff0c7233d84",
+  "exact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+  "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "A08",
+  "attempt_id": "A08-FORMAL-01",
+  "receipt_id": "TASK:A08:A08-FORMAL-01",
+  "input": [
+    {
+      "task_id": "F08",
+      "receipt_id": "TASK:F08:F08-FORMAL-01",
+      "content_digest": "b8311bd253ad29196aeb203379fb65eef1f25cd87a56294bca1c302c10ca3d23",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/F08/F08-FORMAL-01.json",
+          "sha256": "54172bbfce79817e922bba350acceb9e8ea8065df765160b0cd3e41abfd087a4"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F08.jsonl",
+          "sha256": "223bbebf5cb2c8d4ab053a525e5a8e904e0f61279553140599c1f3597522d891",
+          "stable_id": "F08.COMPOSITION",
+          "record_sha256": "4fdc3185e6a633a2322e79fb4b715fc85fe4c5b81ec0bbe400c30db809693cd1",
+          "kind": "CompositionSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "E01",
+      "receipt_id": "TASK:E01:E01-FORMAL-02",
+      "content_digest": "2ca06ac4740f1d885c00867137b6218a68fea6b2a6b1b64685672e50ff29c275",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/E01/E01-FORMAL-02.json",
+          "sha256": "5d9a58d2267bb0ca63e9744daf40367a49f7515b0d62fda58f003f982d522569"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/E01.jsonl",
+          "sha256": "08f444e23117439c79a8a1ea01486fa9b0e546195300fb6359362baa8948b866",
+          "stable_id": "E01.COMPOSITION",
+          "record_sha256": "2952544de91fe889b35bef732621316bd3ccd579b1cddbb34fb72705a52237e4",
+          "kind": "CompositionSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/E01.jsonl",
+          "sha256": "08f444e23117439c79a8a1ea01486fa9b0e546195300fb6359362baa8948b866",
+          "stable_id": "E01.PROTOCOL",
+          "record_sha256": "507dfc689028e8274d38cc956d4bc941f8de78e272907b0bbbbe3f8aa344f5df",
+          "kind": "EvaluationProtocol",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/learning-process.manifest.json",
+      "sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/A08.jsonl",
+      "sha256": "5c709348f6018094a364e01e5269aaf7ea25495cf58f974077febd4b1773ee30",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/README.md",
+      "sha256": "0ca09013814eb9a801cf8377ec0812c68ff7db217b69bd7d21f45eb13675da48",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/bindings.json",
+      "sha256": "7227b2a15ae0cfab9c2266b1524241600a31db81d7beca9a4aef76b825839192",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/build_batch.py",
+      "sha256": "2cd7183dc0eaf8264d03080f7d0cc2f562bdca62cbaf3c6496838d206f1c6f2a",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/coverage.json",
+      "sha256": "101825f26aba47ad6beb4e17b0237f836108271a4b93b5c4370bb45a3ec66a95",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cq-lc-preparation.json",
+      "sha256": "ba48b45274d256b83f104f3503d25ef964df181020b71b4adf38bbbe27f8942b",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cumulative-evidence.json",
+      "sha256": "3f26198d17d208e1e2f159277fb92ea4dce894f798aa2ce95e9a465bae814ced",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/delta-invariance.json",
+      "sha256": "83bcad41d79d4e1caf06cbf4ae382cfa8d9f666185d36fb578352ae02da2183e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/design.json",
+      "sha256": "244201c72eee9e2554ce1b5426a28d7dbf4eafd31e29dc10e167a01aae62c781",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/migration.json",
+      "sha256": "56fea8b617caf98c70f087791775b71f9c1bc8768868cecde683d5cc8760afeb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/p-rebind-regression.json",
+      "sha256": "1d0db3d853e51d7d5a3c5c2f84dd877439c532003151b4420950c325c11f03aa",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/policy_entry.py",
+      "sha256": "39d6917f76074a7e41eab1a9df9d45cf53652f432ee67fd57fcbf3df25e4b3ef",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/process_pointer.py",
+      "sha256": "c7ed100f33ffa45c499b55e33a8c5c5014de08d5c19f8191b8135b37934435cb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/replay_p.py",
+      "sha256": "d7f88b1810c6886dcbc11e1256bb1f6e16faf984be4a54b9100d1a02dc8ca7a7",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/results.json",
+      "sha256": "69e8e394f1a2fd1ef304e13811dca18fc38c6ab08ff18b130d6f16e2b36b5f68",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/semantic_rules.py",
+      "sha256": "08ff220ac9de0d2cbbcb899e75527a0a3bdf050555af423017ef825b113de90e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_batch.py",
+      "sha256": "26adacfc85777b53035a424ea60ef0a79a1655ac7f76e5281b1b576f0fc9c9cd",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_delta.py",
+      "sha256": "abee8f44d3ec51a4d2a1b6abc93e7a79d090bc4f86e8c4cb5cb5c255368e6438",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_FINITE_COMPOSITION_CANDIDATE",
+    "reviewed_scope": {
+      "actual_cases": [
+        "A08.R4.CASE.1",
+        "A08.R4.CASE.2",
+        "A08.R4.CASE.3",
+        "A08.R4.CASE.4",
+        "A08.R4.CASE.5",
+        "A08.R4.CASE.6",
+        "A08.R4.CASE.7",
+        "A08.R4.CASE.8",
+        "A08.R4.CASE.9",
+        "A08.R4.CASE.10",
+        "A08.R4.CASE.11",
+        "A08.R4.CASE.12",
+        "A08.R4.CASE.13",
+        "A08.R4.CASE.14",
+        "A08.R4.CASE.15",
+        "A08.R4.CASE.16",
+        "A08.R4.CASE.17"
+      ],
+      "claim_ids": [
+        "K09.01.03.ME.01",
+        "K14.05.04.DD.01",
+        "K17.06.03.SR.01",
+        "H06.06.04.R2.C01",
+        "K17.01.02.SR.01",
+        "K17.01.03.SR.01",
+        "K17.02.02.SR.01",
+        "K17.06.01.SR.01",
+        "K15.06.04.TG.01",
+        "K19.03.04.TG.01",
+        "K09.02.05.ME.01"
+      ],
+      "full_scope": "HOLD_UNTIL_INDEPENDENT_COMPLETE_COVERAGE",
+      "inputs": [
+        "F08.COMPOSITION",
+        "E01.COMPOSITION",
+        "E01.PROTOCOL"
+      ],
+      "professional_topic_refs": [
+        "K09.02.04",
+        "K10.06.01",
+        "K11.06.01",
+        "K17.03.02",
+        "K19.05.01"
+      ],
+      "required_scope_ids": [
+        "A08.RQ01",
+        "A08.RQ02",
+        "A08.RQ03",
+        "A08.RQ04"
+      ],
+      "scope": "保持/迁移观察仅进入候选研究协议审查，模拟不等于效果，真实分析始终HOLD。",
+      "status": "PARTIAL_FINITE_PREPARATION_FULL_CQ_LC_NOT_RUN"
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "cumulative_version": "0.1.0-process-candidate-4",
+    "manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+    "module_records": 36,
+    "module_shard_sha256": "5c709348f6018094a364e01e5269aaf7ea25495cf58f974077febd4b1773ee30",
+    "owner_record_set_sha256": "6374a3c3a603b9ea77145835a9223986c71f3afa376ced0d9c10ad0853192155",
+    "record_digests": [
+      {
+        "stable_id": "A08.R4.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "b76052693f202e08ab2ce9ed673d80deb4c173b10d506fddc30dfd6519d90609"
+      },
+      {
+        "stable_id": "A08.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "9219e942cf08119b2be88005337d2d123f174a82a199652468445562e36c4803"
+      },
+      {
+        "stable_id": "A08.R4.CASE.1",
+        "kind": "Case",
+        "sha256": "f6771909d5b944f03e031587ad190ef115fdc59f78b4fa10902b3789d73cb94c"
+      },
+      {
+        "stable_id": "A08.R4.CASE.1.VAL",
+        "kind": "Validation",
+        "sha256": "cc0a56928f0b0968a7aebdd3d55116460700212d9324efc8202201fd93b33b80"
+      },
+      {
+        "stable_id": "A08.R4.CASE.2",
+        "kind": "Case",
+        "sha256": "a15501e209cd5d9d56679b39e8562168c238306c6aaab68b1c00663ee28cf7f6"
+      },
+      {
+        "stable_id": "A08.R4.CASE.2.VAL",
+        "kind": "Validation",
+        "sha256": "cbd5d0edf839982586d085f10839007ae1d6ef730538e9a1b6cbf3818bee688b"
+      },
+      {
+        "stable_id": "A08.R4.CASE.3",
+        "kind": "Case",
+        "sha256": "d5de7b61d0f34c919b30b743a203db9a471d4e5d82eeecf8a4895b6b26a39d02"
+      },
+      {
+        "stable_id": "A08.R4.CASE.3.VAL",
+        "kind": "Validation",
+        "sha256": "1e1c4dfb86c5ae3403c108f595ac48316f076be537050c51f1101fa03ab27be9"
+      },
+      {
+        "stable_id": "A08.R4.CASE.4",
+        "kind": "Case",
+        "sha256": "90756a6b37f20d14d558384ca6f3f14615faa2de4d07125f69b7786476d26315"
+      },
+      {
+        "stable_id": "A08.R4.CASE.4.VAL",
+        "kind": "Validation",
+        "sha256": "961c887c9d63160b168b00c819dd99c1b18c3ea4bbcb2e574a4cd0f944b89b58"
+      },
+      {
+        "stable_id": "A08.R4.CASE.5",
+        "kind": "Case",
+        "sha256": "de74adcfce24f6fa97496c257bd3839771e36b30cc21aacbcac2cc2a8e4eaaab"
+      },
+      {
+        "stable_id": "A08.R4.CASE.5.VAL",
+        "kind": "Validation",
+        "sha256": "8954f569df36f1f86705f3305add303cb9b7ab86fc991762d594642e6a0d2395"
+      },
+      {
+        "stable_id": "A08.R4.CASE.6",
+        "kind": "Case",
+        "sha256": "70e0129dc9f786965f3e62043a398fe1528eebc22f64e7e8258188f1558b35ad"
+      },
+      {
+        "stable_id": "A08.R4.CASE.6.VAL",
+        "kind": "Validation",
+        "sha256": "d4b6a053b91d308bd435390d3c4a083fc249a384c46efdb96a28d21fd3d854ea"
+      },
+      {
+        "stable_id": "A08.R4.CASE.7",
+        "kind": "Case",
+        "sha256": "1bed005856a410d59b4bb25e5c0b0169731edf9af292f15a8897ab0654dcbbf4"
+      },
+      {
+        "stable_id": "A08.R4.CASE.7.VAL",
+        "kind": "Validation",
+        "sha256": "7ce196d3438edf6f4e86c0f183d74c9f90a48a1536629ecf4869b4515fdbe885"
+      },
+      {
+        "stable_id": "A08.R4.CASE.8",
+        "kind": "Case",
+        "sha256": "8309fb6aa90ee207094c33b8182b73491a52035f3d289a779267e5065d5d74a6"
+      },
+      {
+        "stable_id": "A08.R4.CASE.8.VAL",
+        "kind": "Validation",
+        "sha256": "8695d4b8c1c1bb72e5f03dac13879d676b71ba7edbe037dfccd3248d8e4f835e"
+      },
+      {
+        "stable_id": "A08.R4.CASE.9",
+        "kind": "Case",
+        "sha256": "65f4c71eec6e15d57e5d5213e5816b60e3e3aed6fc65f4c17a1d315ec9f51c54"
+      },
+      {
+        "stable_id": "A08.R4.CASE.9.VAL",
+        "kind": "Validation",
+        "sha256": "447cbdbb472218e038c6db52011603e6e3b9d76716b49753ef53eba9519cee55"
+      },
+      {
+        "stable_id": "A08.R4.CASE.10",
+        "kind": "Case",
+        "sha256": "9f6c82df933c77a8f5c8a905c976bbc15ad806d8d8cdfa5cbaed4379c4e21696"
+      },
+      {
+        "stable_id": "A08.R4.CASE.10.VAL",
+        "kind": "Validation",
+        "sha256": "dfdc6fb2b62bada9bbd085eed882a6b399fad3cbf307142d4103079622ae5df9"
+      },
+      {
+        "stable_id": "A08.R4.CASE.11",
+        "kind": "Case",
+        "sha256": "2d08abbfbb0558617336a15cae6d8bd093956487b2219279ec886f9af7b1d4e9"
+      },
+      {
+        "stable_id": "A08.R4.CASE.11.VAL",
+        "kind": "Validation",
+        "sha256": "3790ef893314017d7c54f9f5f99fddd7d63c35d62668bc71d3c94518eba35d7f"
+      },
+      {
+        "stable_id": "A08.R4.CASE.12",
+        "kind": "Case",
+        "sha256": "1e696e9d6e08758888fe819ba987d8fe24f5b1c07403a42d9f790840f7f17275"
+      },
+      {
+        "stable_id": "A08.R4.CASE.12.VAL",
+        "kind": "Validation",
+        "sha256": "3e91eee04f0dc94fd30572663f791510aa137baf9617a0694f022bc11f4ee13f"
+      },
+      {
+        "stable_id": "A08.R4.CASE.13",
+        "kind": "Case",
+        "sha256": "423a576e832dd93f383c9bbe2ad066dbe1d61e614885599a985f4e64cb4223a4"
+      },
+      {
+        "stable_id": "A08.R4.CASE.13.VAL",
+        "kind": "Validation",
+        "sha256": "579da03a349be33296dc0e000aa4b51059423335b5accab48993c32d6f609547"
+      },
+      {
+        "stable_id": "A08.R4.CASE.14",
+        "kind": "Case",
+        "sha256": "e5918982a66453f8c277246f540c634372fbf2c56783b4bf3b682dad8ee3142a"
+      },
+      {
+        "stable_id": "A08.R4.CASE.14.VAL",
+        "kind": "Validation",
+        "sha256": "d50608bf06973994685f10a119d7a58f8f9a84f7c98ed22af97fdd7a2bda0f6f"
+      },
+      {
+        "stable_id": "A08.R4.CASE.15",
+        "kind": "Case",
+        "sha256": "09b8678362e18a3f8946eca44337a3c52e8d4f2153ccc58c36b0ab3dba059767"
+      },
+      {
+        "stable_id": "A08.R4.CASE.15.VAL",
+        "kind": "Validation",
+        "sha256": "48395cd05d54c52926b31ea4d34c551147cbefdb73073ec7d78db5dc30892924"
+      },
+      {
+        "stable_id": "A08.R4.CASE.16",
+        "kind": "Case",
+        "sha256": "27b7c2632902b92ef609b033bc42e0729a498b8f0f05cd5bffdc6023a90f4234"
+      },
+      {
+        "stable_id": "A08.R4.CASE.16.VAL",
+        "kind": "Validation",
+        "sha256": "394b2048a2b384511b6ff3549e0ef80c50c828c04391ddffe431a160ecf6a518"
+      },
+      {
+        "stable_id": "A08.R4.CASE.17",
+        "kind": "Case",
+        "sha256": "6b3a582e5ed66a70110a36032b508a03715185cc0623d46c18e313b64592ca15"
+      },
+      {
+        "stable_id": "A08.R4.CASE.17.VAL",
+        "kind": "Validation",
+        "sha256": "87d3d27835ae9f69eb76836c26fb9a8c265f51f017a000f82fc98308ec76b1bb"
+      }
+    ],
+    "reviewed_artifact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "reviewed_artifact_tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "case_count": 17,
+    "full_scope": "HOLD_FULL_CQ_LC_NOT_RUN"
+  },
+  "validation": {
+    "issue": 40,
+    "comment_id": 7244264589,
+    "body_sha256": "1b388b238e20ff0fa968387e8405a5e1d37b52799738f5c0f08a15866da8a167",
+    "reviewed_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "inherited_review_comments": [
+      7239835702,
+      7243959073
+    ]
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; full depth, G03/G04/G05 and release not accepted."
+  ],
+  "next": "V01 exact tuple integrated validation; no release.",
+  "content_digest": "e35170e415b5440e2c3b6453d63b3ef438a0cadc24c1918ece99857ec810c722",
+  "reviewed_input_rebind": [
+    {
+      "reviewed_input": {
+        "owner_record_set_sha256": "ebd5ed97f8de58741e92237e464e02945af0b6284b51906d3e33f5c12a834a7c",
+        "state": "PREPARATION_ONLY_NO_RECEIPT",
+        "task_id": "F08",
+        "version": "0.1.0-process-candidate-4"
+      },
+      "actual": {
+        "task_id": "F08",
+        "receipt_id": "TASK:F08:F08-FORMAL-01",
+        "content_digest": "b8311bd253ad29196aeb203379fb65eef1f25cd87a56294bca1c302c10ca3d23",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/F08/F08-FORMAL-01.json",
+            "sha256": "54172bbfce79817e922bba350acceb9e8ea8065df765160b0cd3e41abfd087a4"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F08.jsonl",
+            "sha256": "223bbebf5cb2c8d4ab053a525e5a8e904e0f61279553140599c1f3597522d891",
+            "stable_id": "F08.COMPOSITION",
+            "record_sha256": "4fdc3185e6a633a2322e79fb4b715fc85fe4c5b81ec0bbe400c30db809693cd1",
+            "kind": "CompositionSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "EXACT_PREPARATION_OWNER_SET"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "9505a9ee3dfa1ece0bb8a9978e9ae56a38bce37db955e33d1b2f73e90de0691b",
+        "receipt_id": "TASK:E01:E01-FORMAL-01",
+        "receipt_path": "evidence/tasks/E01/E01-FORMAL-01.json",
+        "receipt_sha256": "2b812e9224212b538d1c035ab5f72b0bceb9340816d9d9eb6a72fc709a6b631c",
+        "task_id": "E01",
+        "version": "1510e686cba5aaabcd376c718322da6239e8604c"
+      },
+      "actual": {
+        "task_id": "E01",
+        "receipt_id": "TASK:E01:E01-FORMAL-02",
+        "content_digest": "2ca06ac4740f1d885c00867137b6218a68fea6b2a6b1b64685672e50ff29c275",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/E01/E01-FORMAL-02.json",
+            "sha256": "5d9a58d2267bb0ca63e9744daf40367a49f7515b0d62fda58f003f982d522569"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/E01.jsonl",
+            "sha256": "08f444e23117439c79a8a1ea01486fa9b0e546195300fb6359362baa8948b866",
+            "stable_id": "E01.COMPOSITION",
+            "record_sha256": "2952544de91fe889b35bef732621316bd3ccd579b1cddbb34fb72705a52237e4",
+            "kind": "CompositionSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/E01.jsonl",
+            "sha256": "08f444e23117439c79a8a1ea01486fa9b0e546195300fb6359362baa8948b866",
+            "stable_id": "E01.PROTOCOL",
+            "record_sha256": "507dfc689028e8274d38cc956d4bc941f8de78e272907b0bbbbe3f8aa344f5df",
+            "kind": "EvaluationProtocol",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "REVIEWED_VERSION_ONLY_MIGRATION"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "receipt_path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+        "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+        "task_id": "IF01",
+        "version": "04263009493a994501520be08364b32329c93179"
+      },
+      "actual": {
+        "task_id": "IF01",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "version": "04263009493a994501520be08364b32329c93179",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+            "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    }
+  ],
+  "previous_receipt": null
+}

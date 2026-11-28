@@ -1,0 +1,706 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate4-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "7f6ee33736842461b1501134915a4ff0c7233d84",
+  "exact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+  "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "A06",
+  "attempt_id": "A06-FORMAL-01",
+  "receipt_id": "TASK:A06:A06-FORMAL-01",
+  "input": [
+    {
+      "task_id": "F03",
+      "receipt_id": "TASK:F03:F03-FORMAL-02",
+      "content_digest": "440c10b5cdefe33b5df44b89d9f9d51fb0c74079e8c45157f4b9818e321de861",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/F03/F03-FORMAL-02.json",
+          "sha256": "6dcaf3d30d4b402ea8927e845ee63e3c59b7efe4f396edc449c7b06d7548a9d1"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F03.jsonl",
+          "sha256": "9115ea8b97e348f727af0deec76b3b9aae8aa307dd62bd19b4a658d63276f12a",
+          "stable_id": "F03.COMPOSITION",
+          "record_sha256": "6c19b894909219042f011431d8be28f7beee1e881ccc7f7806e60fc633a5bace",
+          "kind": "CompositionSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "F04",
+      "receipt_id": "TASK:F04:F04-FORMAL-02",
+      "content_digest": "ee8acad47f1e7da3fb3be5ba321bb6e090e2a9b828736f123ea03c13893b52a2",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/F04/F04-FORMAL-02.json",
+          "sha256": "79b0df1aa2572f5275854b549794d2081ede815871158b1f8710a1f916cae31b"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F04.jsonl",
+          "sha256": "d80ade687002e7fadb5c0522c888fb58529760ad5d353ea9b2e000e29f61c0b6",
+          "stable_id": "F04.COMPOSITION",
+          "record_sha256": "ba6eeb3eb660430ad9a030389a8c54cfa513499b030591a53d0a226603388544",
+          "kind": "CompositionSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "K19",
+      "receipt_id": "TASK:K19:K19-FORMAL-01",
+      "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+          "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+        },
+        {
+          "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+          "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+          "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+          "stable_id": "K19.02.03.TG.01",
+          "record_sha256": "d35997a797b019fdd12c45f14d90d55f7aed137eec3a42d6bd33fb72d3b31d3d",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        },
+        {
+          "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+          "sha256": "4393fbe808eec1d435494c91d1f047ca1c168e81761f7073e480a5acfa83bd85",
+          "stable_id": "K19.05.03.TG.01",
+          "record_sha256": "acee8e799b7aab22dc1d0d7b05488f8a45490f17eb72e8b5a7f4667328e9e2bf",
+          "kind": "Claim",
+          "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    },
+    {
+      "task_id": "H03",
+      "receipt_id": "TASK:H03:H03-FORMAL-02",
+      "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H03/H03-FORMAL-02.json",
+          "sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c"
+        },
+        {
+          "path": "evidence/tasks/H03/H03-QUALIFICATION-01.json",
+          "sha256": "707ebe7338cca318ce0367c19f4687bc2c7ea288223370d2ca1107e650303640"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+          "sha256": "0c5a7de1b1e5ce8267cd311ce075a87157127b12c61eb773a71805c8ea24687b",
+          "stable_id": "H03.01.01.R1.C01",
+          "record_sha256": "d3b63a798321b99beabb114f3201beeeea86531ee7e005dcdb90db558206a7a6",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "H04",
+      "receipt_id": "TASK:H04:H04-FORMAL-02",
+      "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H04/H04-FORMAL-02.json",
+          "sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3"
+        },
+        {
+          "path": "evidence/tasks/H04/H04-QUALIFICATION-01.json",
+          "sha256": "63a5cd4201f15d97c7c3b076414835dbc137d84fe94106d5d84f57c22a639bf7"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+          "sha256": "ca55f5b74882ca5b2d861680b44d9f87fa726acdee4ecb23002bfb1522a6092e",
+          "stable_id": "H04.01.02.R1.C01",
+          "record_sha256": "8851616eb1a8e3310a86a72c5d0368a6ba6045b95e58839795e2221604f8614e",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "H05",
+      "receipt_id": "TASK:H05:H05-FORMAL-01",
+      "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+          "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+        },
+        {
+          "path": "evidence/tasks/H05/H05-QUALIFICATION-01.json",
+          "sha256": "99e6850eb119c05c995e94e87e0de3409f2a026bcead316613c5d260100a1144"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+          "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+          "stable_id": "H05.01.01.R2.C01",
+          "record_sha256": "b27b3df85e107f57e2a73fd0c4ba607590816e49877c8826a7f8442a45a972ed",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+          "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+          "stable_id": "H05.RFC.SEQUENCE",
+          "record_sha256": "679ae5f7dae97f568c0992949402f2db5284f47345643cca3683eacccb76beb7",
+          "kind": "Element",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/learning-process.manifest.json",
+      "sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/A06.jsonl",
+      "sha256": "274d6e94710d60bc58d45f627a8e86f3b88ccd0c1c23ea6991c18cfd599850f4",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/README.md",
+      "sha256": "0ca09013814eb9a801cf8377ec0812c68ff7db217b69bd7d21f45eb13675da48",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/bindings.json",
+      "sha256": "7227b2a15ae0cfab9c2266b1524241600a31db81d7beca9a4aef76b825839192",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/build_batch.py",
+      "sha256": "2cd7183dc0eaf8264d03080f7d0cc2f562bdca62cbaf3c6496838d206f1c6f2a",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/coverage.json",
+      "sha256": "101825f26aba47ad6beb4e17b0237f836108271a4b93b5c4370bb45a3ec66a95",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cq-lc-preparation.json",
+      "sha256": "ba48b45274d256b83f104f3503d25ef964df181020b71b4adf38bbbe27f8942b",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cumulative-evidence.json",
+      "sha256": "3f26198d17d208e1e2f159277fb92ea4dce894f798aa2ce95e9a465bae814ced",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/delta-invariance.json",
+      "sha256": "83bcad41d79d4e1caf06cbf4ae382cfa8d9f666185d36fb578352ae02da2183e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/design.json",
+      "sha256": "244201c72eee9e2554ce1b5426a28d7dbf4eafd31e29dc10e167a01aae62c781",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/migration.json",
+      "sha256": "56fea8b617caf98c70f087791775b71f9c1bc8768868cecde683d5cc8760afeb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/p-rebind-regression.json",
+      "sha256": "1d0db3d853e51d7d5a3c5c2f84dd877439c532003151b4420950c325c11f03aa",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/policy_entry.py",
+      "sha256": "39d6917f76074a7e41eab1a9df9d45cf53652f432ee67fd57fcbf3df25e4b3ef",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/process_pointer.py",
+      "sha256": "c7ed100f33ffa45c499b55e33a8c5c5014de08d5c19f8191b8135b37934435cb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/replay_p.py",
+      "sha256": "d7f88b1810c6886dcbc11e1256bb1f6e16faf984be4a54b9100d1a02dc8ca7a7",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/results.json",
+      "sha256": "69e8e394f1a2fd1ef304e13811dca18fc38c6ab08ff18b130d6f16e2b36b5f68",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/semantic_rules.py",
+      "sha256": "08ff220ac9de0d2cbbcb899e75527a0a3bdf050555af423017ef825b113de90e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_batch.py",
+      "sha256": "26adacfc85777b53035a424ea60ef0a79a1655ac7f76e5281b1b576f0fc9c9cd",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_delta.py",
+      "sha256": "abee8f44d3ec51a4d2a1b6abc93e7a79d090bc4f86e8c4cb5cb5c255368e6438",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_FINITE_COMPOSITION_CANDIDATE",
+    "reviewed_scope": {
+      "actual_cases": [
+        "A06.R4.CASE.1",
+        "A06.R4.CASE.2",
+        "A06.R4.CASE.3",
+        "A06.R4.CASE.4",
+        "A06.R4.CASE.5",
+        "A06.R4.CASE.6",
+        "A06.R4.CASE.7"
+      ],
+      "claim_ids": [
+        "K19.05.03.TG.01",
+        "K19.02.03.TG.01",
+        "H03.01.01.R1.C01",
+        "H04.01.02.R1.C01",
+        "H05.01.01.R2.C01",
+        "K12.01.03.TR.01",
+        "K12.01.04.TR.01",
+        "K12.04.03.TR.01",
+        "K16.03.02.TG.01",
+        "K16.04.03.TG.01",
+        "K12.02.02.TR.01",
+        "K12.03.03.TR.01",
+        "K12.03.05.TR.01",
+        "K15.06.02.TG.01",
+        "K15.06.04.TG.01"
+      ],
+      "full_scope": "HOLD_UNTIL_INDEPENDENT_COMPLETE_COVERAGE",
+      "inputs": [
+        "F03.COMPOSITION",
+        "F04.COMPOSITION",
+        "H05.RFC.SEQUENCE"
+      ],
+      "professional_topic_refs": [
+        "K12.03.05",
+        "K12.05.05",
+        "K15.04.01",
+        "K19.05.03",
+        "H04.07.03"
+      ],
+      "required_scope_ids": [
+        "A06.RQ01",
+        "A06.RQ02",
+        "A06.RQ03",
+        "A06.RQ04"
+      ],
+      "scope": "原创确认模板经事实、范围、权利、独立复核证据筛选；生成不冒充学习者，拒绝公开。",
+      "status": "PARTIAL_FINITE_PREPARATION_FULL_CQ_LC_NOT_RUN"
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "cumulative_version": "0.1.0-process-candidate-4",
+    "manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+    "module_records": 16,
+    "module_shard_sha256": "274d6e94710d60bc58d45f627a8e86f3b88ccd0c1c23ea6991c18cfd599850f4",
+    "owner_record_set_sha256": "55e4348631de688bb2218b825e3b154b0d5733349d0c37bf65f4717f2cb7068f",
+    "record_digests": [
+      {
+        "stable_id": "A06.R4.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "39ceef12b440dbe1ebf9d2d51d105b794b3587866ad974083aeedeff9168ea5d"
+      },
+      {
+        "stable_id": "A06.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "33089845672acf1810160294d6e4fe342ba0a778604587b34668b11464a50e39"
+      },
+      {
+        "stable_id": "A06.R4.CASE.1",
+        "kind": "Case",
+        "sha256": "9ed737d16d9f4915a515d1d6c8d9bcee7203a14d9d4605120fbdaa67c343a238"
+      },
+      {
+        "stable_id": "A06.R4.CASE.1.VAL",
+        "kind": "Validation",
+        "sha256": "611c5913ed5bb57dac236b8a17b924f6f936fc1bfaa5973914c2b830d8a5ce67"
+      },
+      {
+        "stable_id": "A06.R4.CASE.2",
+        "kind": "Case",
+        "sha256": "ab01e567251ce75bb16cdd4d7ed2b0095d2d05304e76e8f7ec57c53d3b5e77e3"
+      },
+      {
+        "stable_id": "A06.R4.CASE.2.VAL",
+        "kind": "Validation",
+        "sha256": "8d41e831f2463dc4f1e516ea552ef546f3420b474ee6d84024ccc1452f606fbf"
+      },
+      {
+        "stable_id": "A06.R4.CASE.3",
+        "kind": "Case",
+        "sha256": "f65c3c45421e7fec733ad25261ec1641bc0d420866dac3a3f05467204af14b1c"
+      },
+      {
+        "stable_id": "A06.R4.CASE.3.VAL",
+        "kind": "Validation",
+        "sha256": "a984e599e7a43c32bc89c1f1df1c86984ffaa2445a22a9ea84f0938587c90abf"
+      },
+      {
+        "stable_id": "A06.R4.CASE.4",
+        "kind": "Case",
+        "sha256": "ba7f4d819ccf74b954706eab99790e3a34b798e5895489cc1b02204f3ff701d8"
+      },
+      {
+        "stable_id": "A06.R4.CASE.4.VAL",
+        "kind": "Validation",
+        "sha256": "e7ffdc50d4acbbf234a1bef5e7b84ac7a899f751a7cc40f0ec14f0c77d3526d5"
+      },
+      {
+        "stable_id": "A06.R4.CASE.5",
+        "kind": "Case",
+        "sha256": "96fdcafd58a1cc1ab8135d91123a7de2b6c8c01dc244323abc1755f97cfdbe92"
+      },
+      {
+        "stable_id": "A06.R4.CASE.5.VAL",
+        "kind": "Validation",
+        "sha256": "6047c1499e1a2282eea20c9a19a58f6779fc2b90a5207882b2c8d13c0a0065d7"
+      },
+      {
+        "stable_id": "A06.R4.CASE.6",
+        "kind": "Case",
+        "sha256": "7e2646e60a09d425894356105d61e5141e1017e0ac9ca184f2f405f381a3651a"
+      },
+      {
+        "stable_id": "A06.R4.CASE.6.VAL",
+        "kind": "Validation",
+        "sha256": "02826c9916af68b2bb98d01a7d196593f0686c537dff9bd3e77827088a38d0a0"
+      },
+      {
+        "stable_id": "A06.R4.CASE.7",
+        "kind": "Case",
+        "sha256": "f99ddf2f49d2cb2a92de31806f21c1e48a4125b23f98b03e4dfd9eea6106968f"
+      },
+      {
+        "stable_id": "A06.R4.CASE.7.VAL",
+        "kind": "Validation",
+        "sha256": "b4e00bdcf4ffe398b84e33ea16665e8d8de7874fca881b3a36bfc6606eb0bbc5"
+      }
+    ],
+    "reviewed_artifact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "reviewed_artifact_tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "case_count": 7,
+    "full_scope": "HOLD_FULL_CQ_LC_NOT_RUN"
+  },
+  "validation": {
+    "issue": 40,
+    "comment_id": 7244264589,
+    "body_sha256": "1b388b238e20ff0fa968387e8405a5e1d37b52799738f5c0f08a15866da8a167",
+    "reviewed_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "inherited_review_comments": [
+      7239835702,
+      7243959073
+    ]
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; full depth, G03/G04/G05 and release not accepted."
+  ],
+  "next": "V01 exact tuple integrated validation; no release.",
+  "content_digest": "29894065d6db876d1e49db71ed16fbb1dda50f3b47816ddf1e282deffd456166",
+  "reviewed_input_rebind": [
+    {
+      "reviewed_input": {
+        "content_digest": "82a4666981587bb3aff5d86eb20e8f4ef6b53ecb03faedeb7b044ba91da3a40f",
+        "receipt_id": "TASK:F03:F03-FORMAL-01",
+        "receipt_path": "evidence/tasks/F03/F03-FORMAL-01.json",
+        "receipt_sha256": "dd06060b591d61dd89a1d6df68267409d9c109ea68c9f35eb6624df72d2e7e1c",
+        "task_id": "F03",
+        "version": "1510e686cba5aaabcd376c718322da6239e8604c"
+      },
+      "actual": {
+        "task_id": "F03",
+        "receipt_id": "TASK:F03:F03-FORMAL-02",
+        "content_digest": "440c10b5cdefe33b5df44b89d9f9d51fb0c74079e8c45157f4b9818e321de861",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/F03/F03-FORMAL-02.json",
+            "sha256": "6dcaf3d30d4b402ea8927e845ee63e3c59b7efe4f396edc449c7b06d7548a9d1"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F03.jsonl",
+            "sha256": "9115ea8b97e348f727af0deec76b3b9aae8aa307dd62bd19b4a658d63276f12a",
+            "stable_id": "F03.COMPOSITION",
+            "record_sha256": "6c19b894909219042f011431d8be28f7beee1e881ccc7f7806e60fc633a5bace",
+            "kind": "CompositionSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "REVIEWED_VERSION_ONLY_MIGRATION"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "dfa5e572d0b0b8d5f25cb6875a4a1b7366d6199c96ac83042ed4b3e35f6ce6e8",
+        "receipt_id": "TASK:F04:F04-FORMAL-01",
+        "receipt_path": "evidence/tasks/F04/F04-FORMAL-01.json",
+        "receipt_sha256": "f3b445dad9905a606dafb911428ee7a0fc967fa62b55b496d486c94e73bc5fe6",
+        "task_id": "F04",
+        "version": "1510e686cba5aaabcd376c718322da6239e8604c"
+      },
+      "actual": {
+        "task_id": "F04",
+        "receipt_id": "TASK:F04:F04-FORMAL-02",
+        "content_digest": "ee8acad47f1e7da3fb3be5ba321bb6e090e2a9b828736f123ea03c13893b52a2",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/F04/F04-FORMAL-02.json",
+            "sha256": "79b0df1aa2572f5275854b549794d2081ede815871158b1f8710a1f916cae31b"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F04.jsonl",
+            "sha256": "d80ade687002e7fadb5c0522c888fb58529760ad5d353ea9b2e000e29f61c0b6",
+            "stable_id": "F04.COMPOSITION",
+            "record_sha256": "ba6eeb3eb660430ad9a030389a8c54cfa513499b030591a53d0a226603388544",
+            "kind": "CompositionSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "REVIEWED_VERSION_ONLY_MIGRATION"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+        "qualification_content_digest": "5dfeed0a99e16b397f7385aeaff173fd993b3e439462d0c7fe23bdc4522a030b",
+        "qualification_receipt": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0",
+        "receipt_id": "TASK:K19:K19-FORMAL-01",
+        "receipt_path": "evidence/tasks/K19/K19-FORMAL-01.json",
+        "receipt_sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f",
+        "task_id": "K19",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a"
+      },
+      "actual": {
+        "task_id": "K19",
+        "receipt_id": "TASK:K19:K19-FORMAL-01",
+        "content_digest": "b03eefe405232c25cc1f9be4744e527287360dc16b6851d4a2314f0336784c18",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K19/K19-FORMAL-01.json",
+            "sha256": "e568ddd935465597c5dbd401f60b74bb8dfc204a27f1d26021e3f94a5b662f1f"
+          },
+          {
+            "path": "evidence/tasks/K19/K19-QUALIFICATION-01.json",
+            "sha256": "ca073c19e4bee95f576cbda901ccb985ee251d3245a8b784e4ab44859b8feac0"
+          },
+          {
+            "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-02.jsonl",
+            "sha256": "4a87fc30cabdc5214d7b0e9e8bc4dc7aebb3bc3202f7d7d59012b07ecec1a6e9",
+            "stable_id": "K19.02.03.TG.01",
+            "record_sha256": "d35997a797b019fdd12c45f14d90d55f7aed137eec3a42d6bd33fb72d3b31d3d",
+            "kind": "Claim",
+            "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+          },
+          {
+            "path": "knowledge/v0.1.0/technology-inclusion-governance-r1/K19/records-03.jsonl",
+            "sha256": "4393fbe808eec1d435494c91d1f047ca1c168e81761f7073e480a5acfa83bd85",
+            "stable_id": "K19.05.03.TG.01",
+            "record_sha256": "acee8e799b7aab22dc1d0d7b05488f8a45490f17eb72e8b5a7f4667328e9e2bf",
+            "kind": "Claim",
+            "package_version": "0.1.0-technology-inclusion-governance-candidate-1"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "receipt_path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+        "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+        "task_id": "IF01",
+        "version": "04263009493a994501520be08364b32329c93179"
+      },
+      "actual": {
+        "task_id": "IF01",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "version": "04263009493a994501520be08364b32329c93179",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+            "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+        "qualification_content_digest": "2c22aaba2a044757fc41f532f3f1fa9f67658ece9a51ef08af5c346e6391c811",
+        "qualification_receipt": "evidence/tasks/H03/H03-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "707ebe7338cca318ce0367c19f4687bc2c7ea288223370d2ca1107e650303640",
+        "receipt_id": "TASK:H03:H03-FORMAL-02",
+        "receipt_path": "evidence/tasks/H03/H03-FORMAL-02.json",
+        "receipt_sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c",
+        "task_id": "H03",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H03",
+        "receipt_id": "TASK:H03:H03-FORMAL-02",
+        "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H03/H03-FORMAL-02.json",
+            "sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c"
+          },
+          {
+            "path": "evidence/tasks/H03/H03-QUALIFICATION-01.json",
+            "sha256": "707ebe7338cca318ce0367c19f4687bc2c7ea288223370d2ca1107e650303640"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+            "sha256": "0c5a7de1b1e5ce8267cd311ce075a87157127b12c61eb773a71805c8ea24687b",
+            "stable_id": "H03.01.01.R1.C01",
+            "record_sha256": "d3b63a798321b99beabb114f3201beeeea86531ee7e005dcdb90db558206a7a6",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+        "qualification_content_digest": "644e1ba00783cdd6bf94fff4f776df1d914d9ffc5228257318cffb965b0c9a93",
+        "qualification_receipt": "evidence/tasks/H04/H04-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "63a5cd4201f15d97c7c3b076414835dbc137d84fe94106d5d84f57c22a639bf7",
+        "receipt_id": "TASK:H04:H04-FORMAL-02",
+        "receipt_path": "evidence/tasks/H04/H04-FORMAL-02.json",
+        "receipt_sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3",
+        "task_id": "H04",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H04",
+        "receipt_id": "TASK:H04:H04-FORMAL-02",
+        "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H04/H04-FORMAL-02.json",
+            "sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3"
+          },
+          {
+            "path": "evidence/tasks/H04/H04-QUALIFICATION-01.json",
+            "sha256": "63a5cd4201f15d97c7c3b076414835dbc137d84fe94106d5d84f57c22a639bf7"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+            "sha256": "ca55f5b74882ca5b2d861680b44d9f87fa726acdee4ecb23002bfb1522a6092e",
+            "stable_id": "H04.01.02.R1.C01",
+            "record_sha256": "8851616eb1a8e3310a86a72c5d0368a6ba6045b95e58839795e2221604f8614e",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+        "qualification_content_digest": "e2dcc46a1365151aa9e7c46ab22ad7bc1fa584a34958dfa8e84a8cd4d3745116",
+        "qualification_receipt": "evidence/tasks/H05/H05-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "99e6850eb119c05c995e94e87e0de3409f2a026bcead316613c5d260100a1144",
+        "receipt_id": "TASK:H05:H05-FORMAL-01",
+        "receipt_path": "evidence/tasks/H05/H05-FORMAL-01.json",
+        "receipt_sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567",
+        "task_id": "H05",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H05",
+        "receipt_id": "TASK:H05:H05-FORMAL-01",
+        "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+            "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+          },
+          {
+            "path": "evidence/tasks/H05/H05-QUALIFICATION-01.json",
+            "sha256": "99e6850eb119c05c995e94e87e0de3409f2a026bcead316613c5d260100a1144"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+            "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+            "stable_id": "H05.01.01.R2.C01",
+            "record_sha256": "b27b3df85e107f57e2a73fd0c4ba607590816e49877c8826a7f8442a45a972ed",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+            "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+            "stable_id": "H05.RFC.SEQUENCE",
+            "record_sha256": "679ae5f7dae97f568c0992949402f2db5284f47345643cca3683eacccb76beb7",
+            "kind": "Element",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    }
+  ],
+  "previous_receipt": null
+}

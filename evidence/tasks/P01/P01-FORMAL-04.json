@@ -1,0 +1,1309 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate4-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "7f6ee33736842461b1501134915a4ff0c7233d84",
+  "exact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+  "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "P01",
+  "attempt_id": "P01-FORMAL-04",
+  "receipt_id": "TASK:P01:P01-FORMAL-04",
+  "input": [
+    {
+      "task_id": "G01",
+      "receipt_id": "TASK:G01:G01-FORMAL-01",
+      "content_digest": "061961b544a95fc67cc32992990ac1a62784309f5db4ec83170254151ceeea6d",
+      "version": "a75848e5ec0e960c2fdb87cbfb1445b35fc3ac7a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/G01/G01-FORMAL-01.json",
+          "sha256": "889698faf195d9a3bde8c3264937b750baf1365fb805ba35d1685a871c878e33"
+        }
+      ]
+    },
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K05",
+      "receipt_id": "TASK:K05:K05-FORMAL-02",
+      "content_digest": "44d561458359a165d29d31603b35fa60f1b8e1311191e2faa49eaba49c78afeb",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K05/K05-FORMAL-02.json",
+          "sha256": "9191b45e42af9a1b0d37687a3579755ee72ed9ae1675652e38a3a809b657250e"
+        },
+        {
+          "path": "evidence/tasks/K05/K05-QUALIFICATION-02.json",
+          "sha256": "f56ab541e0094d772d105fe6597cf468f8744a6f3482d7e721fe6cd6962f933c"
+        }
+      ]
+    },
+    {
+      "task_id": "K06",
+      "receipt_id": "TASK:K06:K06-FORMAL-02",
+      "content_digest": "80b22fd8a56a1aac0e60f2eba212730deb72fc0fefc4545c7402c344c348d064",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K06/K06-FORMAL-02.json",
+          "sha256": "3600dc6fd5fe786b6b981ea111709dd156af939c1e2077e57f000350d30e5235"
+        },
+        {
+          "path": "evidence/tasks/K06/K06-QUALIFICATION-02.json",
+          "sha256": "9cf1d915bb6ee6651d5e9597b62a50baa1be04b8821ea5706d5303f3b149f3fb"
+        }
+      ]
+    },
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-02",
+      "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+          "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+        },
+        {
+          "path": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+          "sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97"
+        }
+      ]
+    },
+    {
+      "task_id": "K08",
+      "receipt_id": "TASK:K08:K08-FORMAL-02",
+      "content_digest": "232d438b24281923530b351968bdfb24517c09ef8f39fc152dedce98f20a5faa",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K08/K08-FORMAL-02.json",
+          "sha256": "789f7d9c18d9e200d8d6512e67ce132bd9c4191fc01f18d2197685902d7e3b69"
+        },
+        {
+          "path": "evidence/tasks/K08/K08-QUALIFICATION-02.json",
+          "sha256": "1f716e34738d2aa32dfe09add8d4dc10beaba8715c1df233627633914f038cd0"
+        }
+      ]
+    },
+    {
+      "task_id": "K13",
+      "receipt_id": "TASK:K13:K13-FORMAL-01",
+      "content_digest": "ad575d23624642747536f31d08b0be614ebe60cc613b9334eb90f52a924545f1",
+      "version": "62760bfd4690279cf2a703be8cc908a92ef1d755",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K13/K13-FORMAL-01.json",
+          "sha256": "a3a7d30d7652a4d9a911557015f9d53bbb6642705feff70e60580937d37a988f"
+        },
+        {
+          "path": "evidence/tasks/K13/K13-QUALIFICATION-01.json",
+          "sha256": "12b8e2628f4ff6232d5147c3dd77828e2f34b7323a9a734c44644a70f04171cf"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/learning-process.manifest.json",
+      "sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P01.jsonl",
+      "sha256": "dacc27957a1a44ccc0941a3b394396cd9e72b9ece141177fc05959636e133ee2",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/README.md",
+      "sha256": "0ca09013814eb9a801cf8377ec0812c68ff7db217b69bd7d21f45eb13675da48",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/bindings.json",
+      "sha256": "7227b2a15ae0cfab9c2266b1524241600a31db81d7beca9a4aef76b825839192",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/build_batch.py",
+      "sha256": "2cd7183dc0eaf8264d03080f7d0cc2f562bdca62cbaf3c6496838d206f1c6f2a",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/coverage.json",
+      "sha256": "101825f26aba47ad6beb4e17b0237f836108271a4b93b5c4370bb45a3ec66a95",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cq-lc-preparation.json",
+      "sha256": "ba48b45274d256b83f104f3503d25ef964df181020b71b4adf38bbbe27f8942b",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cumulative-evidence.json",
+      "sha256": "3f26198d17d208e1e2f159277fb92ea4dce894f798aa2ce95e9a465bae814ced",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/delta-invariance.json",
+      "sha256": "83bcad41d79d4e1caf06cbf4ae382cfa8d9f666185d36fb578352ae02da2183e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/design.json",
+      "sha256": "244201c72eee9e2554ce1b5426a28d7dbf4eafd31e29dc10e167a01aae62c781",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/migration.json",
+      "sha256": "56fea8b617caf98c70f087791775b71f9c1bc8768868cecde683d5cc8760afeb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/p-rebind-regression.json",
+      "sha256": "1d0db3d853e51d7d5a3c5c2f84dd877439c532003151b4420950c325c11f03aa",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/policy_entry.py",
+      "sha256": "39d6917f76074a7e41eab1a9df9d45cf53652f432ee67fd57fcbf3df25e4b3ef",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/process_pointer.py",
+      "sha256": "c7ed100f33ffa45c499b55e33a8c5c5014de08d5c19f8191b8135b37934435cb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/replay_p.py",
+      "sha256": "d7f88b1810c6886dcbc11e1256bb1f6e16faf984be4a54b9100d1a02dc8ca7a7",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/results.json",
+      "sha256": "69e8e394f1a2fd1ef304e13811dca18fc38c6ab08ff18b130d6f16e2b36b5f68",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/semantic_rules.py",
+      "sha256": "08ff220ac9de0d2cbbcb899e75527a0a3bdf050555af423017ef825b113de90e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_batch.py",
+      "sha256": "26adacfc85777b53035a424ea60ef0a79a1655ac7f76e5281b1b576f0fc9c9cd",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_delta.py",
+      "sha256": "abee8f44d3ec51a4d2a1b6abc93e7a79d090bc4f86e8c4cb5cb5c255368e6438",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "evidence/tasks/P01/P01-FORMAL-03.json",
+      "sha256": "969fdb1be723a3f9c8e413856ee91c75292461725f922d8c2cbcfa49076a1284",
+      "type": "HISTORICAL_CANDIDATE_RECEIPT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "mode_count": 6,
+    "flow_count": 6,
+    "activity_count": 24,
+    "canonical_record_count": 182,
+    "d3_topic_count": 121,
+    "builder_case_count": 36,
+    "upstream_scope_ledger_sha256": "ab2d792316a19d3fcf936a1ef38e9419bb47eba8791051850ec2ec981b371201",
+    "used_claim_ids": [
+      "K05.01.01.D4.01",
+      "K05.02.01.D4.01",
+      "K05.02.04.D4.01",
+      "K05.03.01.R9.S01",
+      "K05.05.04.R9.S01",
+      "K06.01.02.D4.01",
+      "K06.04.03.R9.S01",
+      "K06.06.01.D4.01",
+      "K06.06.02.D4.01",
+      "K06.06.04.D4.01",
+      "K06.07.02.D4.01",
+      "K06.07.04.R9.S01",
+      "K07.02.04.D4.01",
+      "K07.04.01.D4.01",
+      "K07.04.03.D4.01",
+      "K07.05.02.D4.01",
+      "K08.01.01.R9.S01",
+      "K08.02.01.D4.01",
+      "K08.03.01.D4.03",
+      "K08.03.03.D4.01",
+      "K08.04.01.D4.01",
+      "K08.04.02.D4.01",
+      "K08.04.04.D4.01",
+      "K08.04.05.D4.01",
+      "K08.05.04.R9.S01",
+      "K08.06.03.R9.S01",
+      "K13.02.01.SR.S01",
+      "K13.02.02.SR.S01",
+      "K13.02.04.SR.S01"
+    ],
+    "upstream_restrictions": {
+      "K05": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K05.01.01.D4.01",
+          "K05.02.01.D4.01",
+          "K05.02.02.D4.01",
+          "K05.02.04.D4.01",
+          "K05.03.01.R9.S01",
+          "K05.05.02.R9.S01",
+          "K05.05.04.R9.S01",
+          "K05.06.01.R9.S01",
+          "K05.06.02.R9.S01",
+          "K05.06.04.D4.01"
+        ],
+        "held_claim_count": 35
+      },
+      "K06": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K06.01.02.D4.01",
+          "K06.04.03.R9.S01",
+          "K06.06.01.D4.01",
+          "K06.06.02.D4.01",
+          "K06.06.04.D4.01",
+          "K06.07.02.D4.01",
+          "K06.07.04.R9.S01"
+        ],
+        "held_claim_count": 29
+      },
+      "K07": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K07.01.02.R9.S01",
+          "K07.02.04.D4.01",
+          "K07.04.01.D4.01",
+          "K07.04.03.D4.01",
+          "K07.05.02.D4.01"
+        ],
+        "held_claim_count": 24
+      },
+      "K08": {
+        "scope": "QUALIFIED_LOCAL_RESTRICTED",
+        "source_allowlist": [
+          "K08.01.01.R9.S01",
+          "K08.02.01.D4.01",
+          "K08.03.01.D4.03",
+          "K08.03.03.D4.01",
+          "K08.04.01.D4.01",
+          "K08.04.02.D4.01",
+          "K08.04.04.D4.01",
+          "K08.04.05.D4.01",
+          "K08.05.04.R9.S01",
+          "K08.05.05.R9.S01",
+          "K08.06.03.R9.S01"
+        ],
+        "held_claim_count": 33
+      },
+      "K13": {
+        "scope": "CANDIDATE_ONLY_RESTRICTED",
+        "source_allowlist": [
+          "K13.02.01.SR.S01",
+          "K13.02.02.SR.S01",
+          "K13.02.04.SR.S01"
+        ],
+        "held_claim_count": 35
+      }
+    },
+    "composition": "RESTRICTED_HOLD_DEFERRED_TO_P04_F_A",
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "limits": [
+      "P01 templates are candidates, not independently qualified.",
+      "K13 remains candidate-only and its source-limited claims are optional context only.",
+      "No automatic identity, ability, motivation or clinical inference.",
+      "No education effect or causal claim.",
+      "No numeric model; numeric oracle NOT_APPLICABLE.",
+      "Cross-mode composition is intentionally held for later P04/F/A."
+    ],
+    "cumulative_version": "0.1.0-process-candidate-4",
+    "manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+    "module_records": 182,
+    "case_count": 36,
+    "process_dependency_ids": {},
+    "registration_limits": "Restricted authored candidate; actual scope in coverage.json and README; no general runtime or empirical qualification, no source/rights promotion, CQ/LC NOT_RUN, full professional coverage and G03 remain unresolved.",
+    "supersedes": "evidence/tasks/P01/P01-FORMAL-03.json",
+    "migration_only": true,
+    "reviewed_scope": "Six modes/structural flows only; 121 held cross-mode views; no dynamic runtime.",
+    "reviewed_artifact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "reviewed_artifact_tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "record_digests": [
+      {
+        "stable_id": "ACT_COLLABORATIVE_DIALOGIC_STUDY_MODEL",
+        "kind": "Activity",
+        "sha256": "4a28652252d19f355ea7e1a9e6ac64445b1def01b801bfd550afe580447d31fb"
+      },
+      {
+        "stable_id": "ACT_COLLABORATIVE_DIALOGIC_STUDY_ORIENT",
+        "kind": "Activity",
+        "sha256": "10bf5652897e1b161ed8e0c5821f174997f9cee1ab216a9d673971129875247c"
+      },
+      {
+        "stable_id": "ACT_COLLABORATIVE_DIALOGIC_STUDY_PRACTICE",
+        "kind": "Activity",
+        "sha256": "9b8fb2e308d932d276020be381c8e4a55f394a5a070351e579c2bba252e67bf7"
+      },
+      {
+        "stable_id": "ACT_COLLABORATIVE_DIALOGIC_STUDY_REFLECT",
+        "kind": "Activity",
+        "sha256": "023519fbf462374884cc36fd08f806c3770a1b948606b80a83ebd2260966f381"
+      },
+      {
+        "stable_id": "ACT_DELIBERATE_SKILL_PRACTICE_MODEL",
+        "kind": "Activity",
+        "sha256": "95799c1ed0398707c57aa13c8481b1028d51994e6a1fc4de448804601638ce47"
+      },
+      {
+        "stable_id": "ACT_DELIBERATE_SKILL_PRACTICE_ORIENT",
+        "kind": "Activity",
+        "sha256": "c96db575d69b3991b893bc686dc4715526a177061311ec8b6c6a505d80879b6f"
+      },
+      {
+        "stable_id": "ACT_DELIBERATE_SKILL_PRACTICE_PRACTICE",
+        "kind": "Activity",
+        "sha256": "6a89c98eba1a32c8bf9331aa8e3ac7a980921890d746088288508b3a0cdb50c7"
+      },
+      {
+        "stable_id": "ACT_DELIBERATE_SKILL_PRACTICE_REFLECT",
+        "kind": "Activity",
+        "sha256": "b4f4412777e3cd5ccc34d0aa1fc333676a41aa0dd041e2e46e5530939fbb739a"
+      },
+      {
+        "stable_id": "ACT_GUIDED_CONCEPT_PRACTICE_MODEL",
+        "kind": "Activity",
+        "sha256": "f9fdf3a9c930ed69e61b62a4846a974f4f6be598a57ec8829cfddcb8090967ca"
+      },
+      {
+        "stable_id": "ACT_GUIDED_CONCEPT_PRACTICE_ORIENT",
+        "kind": "Activity",
+        "sha256": "a1ba6caf62710514f38536b10c164d508b4c99fd6adfc24f4a7b82a0092d619b"
+      },
+      {
+        "stable_id": "ACT_GUIDED_CONCEPT_PRACTICE_PRACTICE",
+        "kind": "Activity",
+        "sha256": "1d2c1d234f4e3b226b87d3e75a5c7e26a31ee3fd40de1c1ab4275dc13791e39e"
+      },
+      {
+        "stable_id": "ACT_GUIDED_CONCEPT_PRACTICE_REFLECT",
+        "kind": "Activity",
+        "sha256": "1042d068a099066f2caa15da867273070e397cf3f8c3f8e2ad5939c706fd393b"
+      },
+      {
+        "stable_id": "ACT_INTEGRATED_PROJECT_TRANSFER_MODEL",
+        "kind": "Activity",
+        "sha256": "1777818cea40068a4c2acd87611f097a9f197cdf43eb6acfbd3518a8ab94d083"
+      },
+      {
+        "stable_id": "ACT_INTEGRATED_PROJECT_TRANSFER_ORIENT",
+        "kind": "Activity",
+        "sha256": "05fca09050305b30a2ad617ca23ba66f37f51679a345e69380caac6cef54c1f4"
+      },
+      {
+        "stable_id": "ACT_INTEGRATED_PROJECT_TRANSFER_PRACTICE",
+        "kind": "Activity",
+        "sha256": "68dbc94e3bfdc5ce12f61b4296980060a0364198a11356052d8a4065ac379836"
+      },
+      {
+        "stable_id": "ACT_INTEGRATED_PROJECT_TRANSFER_REFLECT",
+        "kind": "Activity",
+        "sha256": "0206e269e25747b7116dd6f2954db32347aee6b138af549911b27a1cb5f9b9b6"
+      },
+      {
+        "stable_id": "ACT_RETRIEVAL_SPACED_REVIEW_MODEL",
+        "kind": "Activity",
+        "sha256": "6f91b32cedbcfa18600b5a61f6fe558421b67b6c3b643f574004099ab284666e"
+      },
+      {
+        "stable_id": "ACT_RETRIEVAL_SPACED_REVIEW_ORIENT",
+        "kind": "Activity",
+        "sha256": "21bdea58c57cc638521c28cdc3afb4b355ad9d0eaf2c72bfd4008d3fc2a3a4b5"
+      },
+      {
+        "stable_id": "ACT_RETRIEVAL_SPACED_REVIEW_PRACTICE",
+        "kind": "Activity",
+        "sha256": "4264f971ba7a46a164b099e42bf453991f90bcd0a3bb64c1f4a2390483a7a032"
+      },
+      {
+        "stable_id": "ACT_RETRIEVAL_SPACED_REVIEW_REFLECT",
+        "kind": "Activity",
+        "sha256": "9d6f01c920821aeb4b30c645f696f7d19960859e22a71613eccbd0c828fa3568"
+      },
+      {
+        "stable_id": "ACT_SELF_REGULATED_STUDY_MODEL",
+        "kind": "Activity",
+        "sha256": "82de3814fb5fb34de21d3ef6c366e5979bc0a0f317fc180ac0088d64e684eae5"
+      },
+      {
+        "stable_id": "ACT_SELF_REGULATED_STUDY_ORIENT",
+        "kind": "Activity",
+        "sha256": "7dfe6a7c9c67bcb1829b531c79c9a73638843b35274b958c65d9dbbbb0fb7c71"
+      },
+      {
+        "stable_id": "ACT_SELF_REGULATED_STUDY_PRACTICE",
+        "kind": "Activity",
+        "sha256": "814f2ef6487da30e3e26f5f834cf65004f54b473eaa47dc405d43e49909042dd"
+      },
+      {
+        "stable_id": "ACT_SELF_REGULATED_STUDY_REFLECT",
+        "kind": "Activity",
+        "sha256": "9f499331cdd625a111d25cb76bf680c9c113ce927f4071c6d21bff04e6871dc4"
+      },
+      {
+        "stable_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_COMPOSITION_06",
+        "kind": "Case",
+        "sha256": "468b031dfafff39f89e1c1825d40fc7130556c2d802e25ec04ca590f277dd197"
+      },
+      {
+        "stable_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_COUNTEREXAMPLE_04",
+        "kind": "Case",
+        "sha256": "ca316d881a7a7f277d1d907af5732ae26a3cd06f4b4daf290e811acd3ee08604"
+      },
+      {
+        "stable_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_COUNTEREXAMPLE_05",
+        "kind": "Case",
+        "sha256": "513a2681e0ebae6c8abaeed9d4494ee64a2ee084eec6165684c35d6d02bfde1e"
+      },
+      {
+        "stable_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_FORWARD_01",
+        "kind": "Case",
+        "sha256": "68fcaaf2dc7d81506af0080f9b34d5355ce7dbb20ba89de2bd3baa9cab2ae735"
+      },
+      {
+        "stable_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_INTERVENTION_03",
+        "kind": "Case",
+        "sha256": "a2becb88b92addab88cdc4235eba1c677fade59de20d07a4e186fb5f943e8b1a"
+      },
+      {
+        "stable_id": "CASE_COLLABORATIVE_DIALOGIC_STUDY_REVERSE_02",
+        "kind": "Case",
+        "sha256": "debfaa9d6e8a883c081a11ac19b8d28503c51b2277e60e5b6a4fcf66a19ef5cc"
+      },
+      {
+        "stable_id": "CASE_DELIBERATE_SKILL_PRACTICE_COMPOSITION_06",
+        "kind": "Case",
+        "sha256": "edb96c1851df3d64a45a7d14e7526ccb7aca8c2717d0975f84f4b2913d4dfc56"
+      },
+      {
+        "stable_id": "CASE_DELIBERATE_SKILL_PRACTICE_COUNTEREXAMPLE_04",
+        "kind": "Case",
+        "sha256": "a8988f966e3e38c3039560256680b90d21f1aa1924a9727cfe01200b12da303b"
+      },
+      {
+        "stable_id": "CASE_DELIBERATE_SKILL_PRACTICE_COUNTEREXAMPLE_05",
+        "kind": "Case",
+        "sha256": "f51450e463e80d17c66b2c38aeca06ad6a0935b8320a75765020799f803628e4"
+      },
+      {
+        "stable_id": "CASE_DELIBERATE_SKILL_PRACTICE_FORWARD_01",
+        "kind": "Case",
+        "sha256": "258de925c01309b268267efa797280612d79e0bb3aca11356234c3c6fb1b1e65"
+      },
+      {
+        "stable_id": "CASE_DELIBERATE_SKILL_PRACTICE_INTERVENTION_03",
+        "kind": "Case",
+        "sha256": "fcf9d9b8cae53928f19786acd438376c894c1023faf9aa119216cb8746dc366e"
+      },
+      {
+        "stable_id": "CASE_DELIBERATE_SKILL_PRACTICE_REVERSE_02",
+        "kind": "Case",
+        "sha256": "41afd0d1585ce030e8f7b377a768f4a7dff066edbe502c8eaf1195befaf2efab"
+      },
+      {
+        "stable_id": "CASE_GUIDED_CONCEPT_PRACTICE_COMPOSITION_06",
+        "kind": "Case",
+        "sha256": "26d59e17b6e4fe7e9265a8799901698573ff06f2d6d12518f35424c9b6963460"
+      },
+      {
+        "stable_id": "CASE_GUIDED_CONCEPT_PRACTICE_COUNTEREXAMPLE_04",
+        "kind": "Case",
+        "sha256": "9043336fe8360cd75774e1af8b4bfa3c24199be128ce22f9c09451d3e3f96ffa"
+      },
+      {
+        "stable_id": "CASE_GUIDED_CONCEPT_PRACTICE_COUNTEREXAMPLE_05",
+        "kind": "Case",
+        "sha256": "6aa78e07eabf2c14aa26bdd6d416e91571b1d9dae54f919dc7662517991f52db"
+      },
+      {
+        "stable_id": "CASE_GUIDED_CONCEPT_PRACTICE_FORWARD_01",
+        "kind": "Case",
+        "sha256": "29f576ca0d200601d06b9c3c34340b62b0d0355d9d3e9a32c052ff3e14fa7727"
+      },
+      {
+        "stable_id": "CASE_GUIDED_CONCEPT_PRACTICE_INTERVENTION_03",
+        "kind": "Case",
+        "sha256": "907ae675b3a83a0daa135e0aff1997ade763ae61abd6a0bbc11623498bfe552c"
+      },
+      {
+        "stable_id": "CASE_GUIDED_CONCEPT_PRACTICE_REVERSE_02",
+        "kind": "Case",
+        "sha256": "e8c5213926bddefba74e4735b93b63dd3e707ecedad76bce8df2a2874de494ec"
+      },
+      {
+        "stable_id": "CASE_INTEGRATED_PROJECT_TRANSFER_COMPOSITION_06",
+        "kind": "Case",
+        "sha256": "493ad4087630fb55c5785f11607f42c5f68e989073ec0d80a80e8ccedf73fda3"
+      },
+      {
+        "stable_id": "CASE_INTEGRATED_PROJECT_TRANSFER_COUNTEREXAMPLE_04",
+        "kind": "Case",
+        "sha256": "8827ede1def577e9d92ecefca69d1dbd4c507646dafbc84e69c9a0e833833301"
+      },
+      {
+        "stable_id": "CASE_INTEGRATED_PROJECT_TRANSFER_COUNTEREXAMPLE_05",
+        "kind": "Case",
+        "sha256": "5673fba9d440afa11eb61d9abba01f6a8626be6f06b2bf19353debb2b2fd9767"
+      },
+      {
+        "stable_id": "CASE_INTEGRATED_PROJECT_TRANSFER_FORWARD_01",
+        "kind": "Case",
+        "sha256": "39c109c5c526a26a9bf51c49b36878bce770f61a37567d2a4a1a6e4e6245b6ab"
+      },
+      {
+        "stable_id": "CASE_INTEGRATED_PROJECT_TRANSFER_INTERVENTION_03",
+        "kind": "Case",
+        "sha256": "44550f05f9333e20a49e756f849047bbcb632e27b02decbd301d8faae4156a21"
+      },
+      {
+        "stable_id": "CASE_INTEGRATED_PROJECT_TRANSFER_REVERSE_02",
+        "kind": "Case",
+        "sha256": "1203c71094661a951d6654ff8310dea0e49d7a48905db026e8022c4468e53e8f"
+      },
+      {
+        "stable_id": "CASE_RETRIEVAL_SPACED_REVIEW_COMPOSITION_06",
+        "kind": "Case",
+        "sha256": "35551822ce43787ff27d21d4d6982d0ccb813c3d8a59b31383b7e123b0d8edbd"
+      },
+      {
+        "stable_id": "CASE_RETRIEVAL_SPACED_REVIEW_COUNTEREXAMPLE_04",
+        "kind": "Case",
+        "sha256": "f4bbd61eef37e6bd869d6c46e7d7fa4778eeb12451a42feb1db9ea10b494b066"
+      },
+      {
+        "stable_id": "CASE_RETRIEVAL_SPACED_REVIEW_COUNTEREXAMPLE_05",
+        "kind": "Case",
+        "sha256": "54f4a0201ede7667145e2195cf43ba238df7fdb3bee9f7a13ef7e01e58c4c5c1"
+      },
+      {
+        "stable_id": "CASE_RETRIEVAL_SPACED_REVIEW_FORWARD_01",
+        "kind": "Case",
+        "sha256": "da975a97ebdae104a8569eea02e0ae18fbc7e32496e114eb8adb83cfd544bfd3"
+      },
+      {
+        "stable_id": "CASE_RETRIEVAL_SPACED_REVIEW_INTERVENTION_03",
+        "kind": "Case",
+        "sha256": "3331c4834e918e5a06247fa535bc1c57d7eaf57b130201f663e5f4f050837aff"
+      },
+      {
+        "stable_id": "CASE_RETRIEVAL_SPACED_REVIEW_REVERSE_02",
+        "kind": "Case",
+        "sha256": "59aa59187b5293d9e23109b89c825364571838a5d8e73e03602490f7bda700fa"
+      },
+      {
+        "stable_id": "CASE_SELF_REGULATED_STUDY_COMPOSITION_06",
+        "kind": "Case",
+        "sha256": "2bf8366c4e3813a98d37af602ec5249d697df004893403db876cff5dd92c2810"
+      },
+      {
+        "stable_id": "CASE_SELF_REGULATED_STUDY_COUNTEREXAMPLE_04",
+        "kind": "Case",
+        "sha256": "d0f5c072d2f874acdded936db22af772468dc24197ce6f70f9b06bc6b9308589"
+      },
+      {
+        "stable_id": "CASE_SELF_REGULATED_STUDY_COUNTEREXAMPLE_05",
+        "kind": "Case",
+        "sha256": "7c1780887c139be10c911757f2e8d457d1751172fe037675111b8562a30e15e1"
+      },
+      {
+        "stable_id": "CASE_SELF_REGULATED_STUDY_FORWARD_01",
+        "kind": "Case",
+        "sha256": "f4fe0c37583107ed157d5eb2135f8a0ce90026c37b0db0831780ddb945cd8692"
+      },
+      {
+        "stable_id": "CASE_SELF_REGULATED_STUDY_INTERVENTION_03",
+        "kind": "Case",
+        "sha256": "805387a48cc56be97cd2124fcfc426be40e8222342692bcaad766559376f6d97"
+      },
+      {
+        "stable_id": "CASE_SELF_REGULATED_STUDY_REVERSE_02",
+        "kind": "Case",
+        "sha256": "7529992be5b0462923426ead787e5a93c4e293d48690fef0721b708d1eba2fea"
+      },
+      {
+        "stable_id": "COND_COLLABORATIVE_DIALOGIC_STUDY_COMPLETE",
+        "kind": "ConditionSpec",
+        "sha256": "9b2d0263e8e1625d566510773b9439aca9e14a14ccf4f70c70c8c72ae1343a56"
+      },
+      {
+        "stable_id": "COND_COLLABORATIVE_DIALOGIC_STUDY_PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "f076e6b56d42e622c5f42ae5b4e89d8d9efe3b278aab184faf6defa5d50d1d51"
+      },
+      {
+        "stable_id": "COND_COLLABORATIVE_DIALOGIC_STUDY_RETRY",
+        "kind": "ConditionSpec",
+        "sha256": "578441fdc32e18ea88a0597451411837281c012a1a64ea6cee11fee07305e0ea"
+      },
+      {
+        "stable_id": "COND_COLLABORATIVE_DIALOGIC_STUDY_SELECT",
+        "kind": "ConditionSpec",
+        "sha256": "c7e07fc7226542d560bff803270c9cc7d1da2c12e8be4118c76212b152ba74ac"
+      },
+      {
+        "stable_id": "COND_COLLABORATIVE_DIALOGIC_STUDY_STOP",
+        "kind": "ConditionSpec",
+        "sha256": "d857546127283ff2f8cf5e62c038490e03fefbc871070fb052590c7ebab0442c"
+      },
+      {
+        "stable_id": "COND_DELIBERATE_SKILL_PRACTICE_COMPLETE",
+        "kind": "ConditionSpec",
+        "sha256": "a7c361f58c22fbfedc714e4b92a7dfc163addb40978a8fdbcd39ebda7a2f58c1"
+      },
+      {
+        "stable_id": "COND_DELIBERATE_SKILL_PRACTICE_PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "574a87b66914dc70a37dd74a0fee3026935f57d402a5f5b711f2e46fbc94a6a5"
+      },
+      {
+        "stable_id": "COND_DELIBERATE_SKILL_PRACTICE_RETRY",
+        "kind": "ConditionSpec",
+        "sha256": "ccc1fbf671eafd5a955584afe8ab165b1a51249003c096d756f1738440a1bdbc"
+      },
+      {
+        "stable_id": "COND_DELIBERATE_SKILL_PRACTICE_SELECT",
+        "kind": "ConditionSpec",
+        "sha256": "da4a18ea7b20196685fe0d8dc3c0403f3e1a5bdf10ae75f558f1941eec5e0325"
+      },
+      {
+        "stable_id": "COND_DELIBERATE_SKILL_PRACTICE_STOP",
+        "kind": "ConditionSpec",
+        "sha256": "8d632d6429904446585997608ea7a3f8fe0ba4eb616ac9318d1702eef0b84f75"
+      },
+      {
+        "stable_id": "COND_GUIDED_CONCEPT_PRACTICE_COMPLETE",
+        "kind": "ConditionSpec",
+        "sha256": "1b4d379391e2647c7f862a0867503ccd3b5744b552fc844e9d0f616d31eb2a21"
+      },
+      {
+        "stable_id": "COND_GUIDED_CONCEPT_PRACTICE_PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "719534a4969c6a5c0ecc275404939c6026de4b5dd824813d05a9c2253ef46639"
+      },
+      {
+        "stable_id": "COND_GUIDED_CONCEPT_PRACTICE_RETRY",
+        "kind": "ConditionSpec",
+        "sha256": "02e9107d2be493c691fa64664d28dfc8a69bb78c960014a345cae96bf6ac27ae"
+      },
+      {
+        "stable_id": "COND_GUIDED_CONCEPT_PRACTICE_SELECT",
+        "kind": "ConditionSpec",
+        "sha256": "753c84850db65ac36a0bd40a26096428963f6d52463ddde2c256ce874e9d821e"
+      },
+      {
+        "stable_id": "COND_GUIDED_CONCEPT_PRACTICE_STOP",
+        "kind": "ConditionSpec",
+        "sha256": "7d154f976b9ceaa8fcf509957d173f2477ff3c0957ba0da1b379c21c1eb668a1"
+      },
+      {
+        "stable_id": "COND_INTEGRATED_PROJECT_TRANSFER_COMPLETE",
+        "kind": "ConditionSpec",
+        "sha256": "c5ff7e70f06ff4682dc0fef89159f5744f32e3c5f74b3f9d81131cd1a6484a6c"
+      },
+      {
+        "stable_id": "COND_INTEGRATED_PROJECT_TRANSFER_PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "297a79abec5ff36876c7bb2b23741813477f25af9e2d182643a4a375015cafa3"
+      },
+      {
+        "stable_id": "COND_INTEGRATED_PROJECT_TRANSFER_RETRY",
+        "kind": "ConditionSpec",
+        "sha256": "56918063c4da8ba6409f1a807657c85d36b1be6222828c5f58c4be37c57df3e9"
+      },
+      {
+        "stable_id": "COND_INTEGRATED_PROJECT_TRANSFER_SELECT",
+        "kind": "ConditionSpec",
+        "sha256": "667c52bf8d8e2f61e95d032d667a469486bd7b2075ff2466c7e53c8a435e4ec2"
+      },
+      {
+        "stable_id": "COND_INTEGRATED_PROJECT_TRANSFER_STOP",
+        "kind": "ConditionSpec",
+        "sha256": "f58f8682e9bde0caf489b5539f3a85bb0eb1be25e9b0b561f93625b56d4fe380"
+      },
+      {
+        "stable_id": "COND_RETRIEVAL_SPACED_REVIEW_COMPLETE",
+        "kind": "ConditionSpec",
+        "sha256": "76439b7cfaabdbb0ee80d198c3c9b5afcd5951d8cbb88587598113b712960712"
+      },
+      {
+        "stable_id": "COND_RETRIEVAL_SPACED_REVIEW_PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "f5058d30746d220c759ebe68dc5515908364bd83b72d31c1b58014212a9c0075"
+      },
+      {
+        "stable_id": "COND_RETRIEVAL_SPACED_REVIEW_RETRY",
+        "kind": "ConditionSpec",
+        "sha256": "4376cbebb7997ac39066e2ab80732e2bf9c4ddf0b9489bb25a60891b961df326"
+      },
+      {
+        "stable_id": "COND_RETRIEVAL_SPACED_REVIEW_SELECT",
+        "kind": "ConditionSpec",
+        "sha256": "a24706e967de4720db45c2a5772a1a34bdf6c0d41dc625a5ccc89319b1177808"
+      },
+      {
+        "stable_id": "COND_RETRIEVAL_SPACED_REVIEW_STOP",
+        "kind": "ConditionSpec",
+        "sha256": "b484881d017ea6256791e557193c42f2e456e9e2db6058c1e7e8acb6d61cdc65"
+      },
+      {
+        "stable_id": "COND_SELF_REGULATED_STUDY_COMPLETE",
+        "kind": "ConditionSpec",
+        "sha256": "2a1fa8edc44e3c8f5aeba6d195ec8adca4fdd74c6b0ed3ff6487d5101b1fffb2"
+      },
+      {
+        "stable_id": "COND_SELF_REGULATED_STUDY_PAUSE",
+        "kind": "ConditionSpec",
+        "sha256": "cf65e82958177a2d6efb10224beff83aae483d70c60f012e807cd8ec0529ded0"
+      },
+      {
+        "stable_id": "COND_SELF_REGULATED_STUDY_RETRY",
+        "kind": "ConditionSpec",
+        "sha256": "5b19636a59f32e7ec643101104ceb921caeaaf48b31e600639d0c9ebfafc33ef"
+      },
+      {
+        "stable_id": "COND_SELF_REGULATED_STUDY_SELECT",
+        "kind": "ConditionSpec",
+        "sha256": "3e6628ea76158af746d98848928d49155464ba2498cbcc7a34f4da91e2483932"
+      },
+      {
+        "stable_id": "COND_SELF_REGULATED_STUDY_STOP",
+        "kind": "ConditionSpec",
+        "sha256": "1a008beaad8e84f6ad2d21b20ae4cdeca64bbd17f5630a17ebcbf76d16ee6c65"
+      },
+      {
+        "stable_id": "FLOW_COLLABORATIVE_DIALOGIC_STUDY",
+        "kind": "FlowSpec",
+        "sha256": "185004642631b0fa0c7717edca21012a6a9397b6aee082d431f7ddfbc757ff95"
+      },
+      {
+        "stable_id": "FLOW_DELIBERATE_SKILL_PRACTICE",
+        "kind": "FlowSpec",
+        "sha256": "71815c6e5b712263d01c6826d725728f7321d415e2f46fbfb456403b0fc36585"
+      },
+      {
+        "stable_id": "FLOW_GUIDED_CONCEPT_PRACTICE",
+        "kind": "FlowSpec",
+        "sha256": "03e5abdbc11b26f6e3f1f43be5452f727dd02ff091f70eb92c789fac95cf5790"
+      },
+      {
+        "stable_id": "FLOW_INTEGRATED_PROJECT_TRANSFER",
+        "kind": "FlowSpec",
+        "sha256": "7376495404fcb79f7f183947412eccdca0ac48084b9c546c1743e1fc9c6dfe79"
+      },
+      {
+        "stable_id": "FLOW_RETRIEVAL_SPACED_REVIEW",
+        "kind": "FlowSpec",
+        "sha256": "3c917a536fb5704b5baccbdac037265c568eeefb035ac139e005db284dcd2b8f"
+      },
+      {
+        "stable_id": "FLOW_SELF_REGULATED_STUDY",
+        "kind": "FlowSpec",
+        "sha256": "c358d3af010e51effc2a5cf53423318412f228d33ca9905f65b6ce4f434f37a2"
+      },
+      {
+        "stable_id": "GOAL_COLLABORATIVE_DIALOGIC_STUDY",
+        "kind": "Goal",
+        "sha256": "eb7bf21681a8f558223ea84be870f62d26cb4ace878b5aaee80585ddededef52"
+      },
+      {
+        "stable_id": "GOAL_DELIBERATE_SKILL_PRACTICE",
+        "kind": "Goal",
+        "sha256": "3cebd2b761c39296ada64ab0a1fc9567ac3be475d308957073417b3cd209dfbb"
+      },
+      {
+        "stable_id": "GOAL_GUIDED_CONCEPT_PRACTICE",
+        "kind": "Goal",
+        "sha256": "3685ce7aed045439d81f1cc158b25675fc7f98c468acce3d97009ff0618785ba"
+      },
+      {
+        "stable_id": "GOAL_INTEGRATED_PROJECT_TRANSFER",
+        "kind": "Goal",
+        "sha256": "4816aafaab0b7afe2b137bd15ededf250a007ea7b7ab33315547bad1cf3f345c"
+      },
+      {
+        "stable_id": "GOAL_RETRIEVAL_SPACED_REVIEW",
+        "kind": "Goal",
+        "sha256": "c4c5c15cb4884e6e8c7ae09cc059324dc96aed3f44e0332bf2224aa028f09cef"
+      },
+      {
+        "stable_id": "GOAL_SELF_REGULATED_STUDY",
+        "kind": "Goal",
+        "sha256": "c509f6ea082e047577fda165fa0ac9741c81489f5d0408c71b24cd517eb03fd6"
+      },
+      {
+        "stable_id": "OBJ_COLLABORATIVE_DIALOGIC_STUDY_MODEL",
+        "kind": "LearningObject",
+        "sha256": "d0b47744bf57d2d63918bba56f09f4d988d5754d816b423b80d92cf2a3fa9c8e"
+      },
+      {
+        "stable_id": "OBJ_COLLABORATIVE_DIALOGIC_STUDY_ORIENT",
+        "kind": "LearningObject",
+        "sha256": "45fb225bc02a53000868eac00fe4474c3ff30aec31f0e239c66e97d65ea601f0"
+      },
+      {
+        "stable_id": "OBJ_COLLABORATIVE_DIALOGIC_STUDY_PRACTICE",
+        "kind": "LearningObject",
+        "sha256": "ad1088d12aff54c0c1095998bfe2be220f2ef61bfea0350c4c2e171a67e771b7"
+      },
+      {
+        "stable_id": "OBJ_COLLABORATIVE_DIALOGIC_STUDY_REFLECT",
+        "kind": "LearningObject",
+        "sha256": "2202bc5e37a3f93593cc0336cc58553bd06850fa8212b4aa1e14d8eea2729ebb"
+      },
+      {
+        "stable_id": "OBJ_DELIBERATE_SKILL_PRACTICE_MODEL",
+        "kind": "LearningObject",
+        "sha256": "cbae1111a7f9fed89fc826c7afd9c1c7483e66d0d13b9b993c542508bad12bf9"
+      },
+      {
+        "stable_id": "OBJ_DELIBERATE_SKILL_PRACTICE_ORIENT",
+        "kind": "LearningObject",
+        "sha256": "e8504c9beddac69f15d06545ddc793e62335d3d22ddfbb52d52112086d839f5e"
+      },
+      {
+        "stable_id": "OBJ_DELIBERATE_SKILL_PRACTICE_PRACTICE",
+        "kind": "LearningObject",
+        "sha256": "80151cf6ff018001d99eb10427c5b7a65d69b0af5533aa8c1aefd42fe96c2019"
+      },
+      {
+        "stable_id": "OBJ_DELIBERATE_SKILL_PRACTICE_REFLECT",
+        "kind": "LearningObject",
+        "sha256": "c89e7b073ace6325adcb0596ae83799a4fc16f05434c20376776e6d56cd91a68"
+      },
+      {
+        "stable_id": "OBJ_GUIDED_CONCEPT_PRACTICE_MODEL",
+        "kind": "LearningObject",
+        "sha256": "2c4906bf3c7f11e8a667602ef901889bc767fa54574feeca016550d21ee69c87"
+      },
+      {
+        "stable_id": "OBJ_GUIDED_CONCEPT_PRACTICE_ORIENT",
+        "kind": "LearningObject",
+        "sha256": "497faa072820c188ea59a8e62347b5c833ae1107aa53b3ba0d7bad6aa9f2a018"
+      },
+      {
+        "stable_id": "OBJ_GUIDED_CONCEPT_PRACTICE_PRACTICE",
+        "kind": "LearningObject",
+        "sha256": "0eae34a21aa8235b78ed68a44dcc15a6ddc50e65e2c3ec052b808ea379ffe813"
+      },
+      {
+        "stable_id": "OBJ_GUIDED_CONCEPT_PRACTICE_REFLECT",
+        "kind": "LearningObject",
+        "sha256": "30c5e733e004e4e5858f2833f06471b1070be8408940f6713288c0dd0751b296"
+      },
+      {
+        "stable_id": "OBJ_INTEGRATED_PROJECT_TRANSFER_MODEL",
+        "kind": "LearningObject",
+        "sha256": "99a73535c67949edc7cdc31a354fffd59c3d911bd2dad0486878198be9595d58"
+      },
+      {
+        "stable_id": "OBJ_INTEGRATED_PROJECT_TRANSFER_ORIENT",
+        "kind": "LearningObject",
+        "sha256": "a47b15d5ba5b5120d03cdfcf9b20d6db804c4f3565dd030973aefad7602d87b3"
+      },
+      {
+        "stable_id": "OBJ_INTEGRATED_PROJECT_TRANSFER_PRACTICE",
+        "kind": "LearningObject",
+        "sha256": "837928b7d07f6e197d6e84c9786981fec015d28e5a031e54e4cfc9a5b3e7febf"
+      },
+      {
+        "stable_id": "OBJ_INTEGRATED_PROJECT_TRANSFER_REFLECT",
+        "kind": "LearningObject",
+        "sha256": "5d91c0ac3722461371e019d615d0c089263533875c70affce07e136a94ddf71e"
+      },
+      {
+        "stable_id": "OBJ_RETRIEVAL_SPACED_REVIEW_MODEL",
+        "kind": "LearningObject",
+        "sha256": "bab6a38e379f1cce3d4d155303f594b4c199b9605e0325aa038de5ffd2628e49"
+      },
+      {
+        "stable_id": "OBJ_RETRIEVAL_SPACED_REVIEW_ORIENT",
+        "kind": "LearningObject",
+        "sha256": "0300154da3f4501b4914ee8a436eee59ca9154ec290dc5d6c0670cb86f2521d7"
+      },
+      {
+        "stable_id": "OBJ_RETRIEVAL_SPACED_REVIEW_PRACTICE",
+        "kind": "LearningObject",
+        "sha256": "a9aa46a4f9e38d420019f7ccfeae0df88f2ecd50138f8013e94b9881dd407589"
+      },
+      {
+        "stable_id": "OBJ_RETRIEVAL_SPACED_REVIEW_REFLECT",
+        "kind": "LearningObject",
+        "sha256": "f87048bd50bef620798a469e795ade9a415a5da6309e8cd8948306fe01e220f6"
+      },
+      {
+        "stable_id": "OBJ_SELF_REGULATED_STUDY_MODEL",
+        "kind": "LearningObject",
+        "sha256": "e6b8e3cff2c7f8218c2bf06bc1c531ea5c534c0e1f13040bbbee47e2a83b29e5"
+      },
+      {
+        "stable_id": "OBJ_SELF_REGULATED_STUDY_ORIENT",
+        "kind": "LearningObject",
+        "sha256": "2899ed92e859b5d886e045a736b25c5c79abdef0260737cf14f0e8f1387c48f8"
+      },
+      {
+        "stable_id": "OBJ_SELF_REGULATED_STUDY_PRACTICE",
+        "kind": "LearningObject",
+        "sha256": "0d173d01b4a3e7046f4079b2ea76e971468042e7ed13830af3835c7315c86859"
+      },
+      {
+        "stable_id": "OBJ_SELF_REGULATED_STUDY_REFLECT",
+        "kind": "LearningObject",
+        "sha256": "b0b9e66b706f6d650b1c4d6b0c77ad2a604efdf4b6834fe43e6a9e55947e476d"
+      },
+      {
+        "stable_id": "COLLABORATIVE_DIALOGIC_STUDY",
+        "kind": "Mode",
+        "sha256": "7a74462fcbfb4bdc43fcb85511ca3a7ed3cc8773a39d418b89f3143ce7f8cb1b"
+      },
+      {
+        "stable_id": "DELIBERATE_SKILL_PRACTICE",
+        "kind": "Mode",
+        "sha256": "2d7b2f0451291701c22867aef68aaf81300fcfcc92f13ee853717fa28be7e741"
+      },
+      {
+        "stable_id": "GUIDED_CONCEPT_PRACTICE",
+        "kind": "Mode",
+        "sha256": "74c461184c945a4a5204bee710cc74717ecee97773a823865911e69df5b20681"
+      },
+      {
+        "stable_id": "INTEGRATED_PROJECT_TRANSFER",
+        "kind": "Mode",
+        "sha256": "43949faba2b6113b940d5376766263075a24e00c9a04a1f3680c75244256bd65"
+      },
+      {
+        "stable_id": "RETRIEVAL_SPACED_REVIEW",
+        "kind": "Mode",
+        "sha256": "e191bb2064e1ed52b259bc13fd1fcc01d3bcb50c104fcdc1b881049bfdbf502b"
+      },
+      {
+        "stable_id": "SELF_REGULATED_STUDY",
+        "kind": "Mode",
+        "sha256": "f702f8d664d81cbf908b2b5e893b42b5408c02973260e9dd3ff16c969fb4c456"
+      },
+      {
+        "stable_id": "OBS_ASSISTED_RESPONSE",
+        "kind": "ObservationSpec",
+        "sha256": "07795891c427a05a6fc13a106df4bee1fd2fd2be95e380b7b8257cf6358db078"
+      },
+      {
+        "stable_id": "OBS_INDEPENDENT_RESPONSE",
+        "kind": "ObservationSpec",
+        "sha256": "7737bb1a4bcc60e432a9eee495d704dbd9c1051d4e25279299b8b65022bdf0db"
+      },
+      {
+        "stable_id": "OBS_SELF_REPORT",
+        "kind": "ObservationSpec",
+        "sha256": "85c1cce08d4d531909c8df554e65966f49b8d09aa9756e9a5e5235a14fe9427b"
+      },
+      {
+        "stable_id": "OBS_TRANSFER_TASK",
+        "kind": "ObservationSpec",
+        "sha256": "9051d2a20938480a6e69b27f75d43acad386609ad206821b18cad39c017cdea0"
+      },
+      {
+        "stable_id": "ROLE_FACILITATOR",
+        "kind": "Role",
+        "sha256": "056e572f18549ab8f4cfb163ef5be935bbc2a04014180e2dface6373e74444a8"
+      },
+      {
+        "stable_id": "ROLE_LEARNER",
+        "kind": "Role",
+        "sha256": "50468fbec97f83854e8e450221dc445d118b39b1e8e450af56a3459f9ebb4fde"
+      },
+      {
+        "stable_id": "ROLE_ORCHESTRATOR",
+        "kind": "Role",
+        "sha256": "e27eafc2de844f13e02e7da88d2f1226d17b07e489d2e3bfd2d88b7c6d493c51"
+      },
+      {
+        "stable_id": "ROLE_PEER",
+        "kind": "Role",
+        "sha256": "5777123ae8894c443b8cfbf29423a97c605e17047ae998ab582f4f3d33297c1f"
+      },
+      {
+        "stable_id": "SKILL_CONCEPTUAL_TASK",
+        "kind": "SkillType",
+        "sha256": "3db715925d23f80d1e9bce3dc105890c6323f25c966db5cbada2eeba8feb9844"
+      },
+      {
+        "stable_id": "SKILL_DIALOGIC_REASONING",
+        "kind": "SkillType",
+        "sha256": "2104282c3592f16afef495143579cd1cf67ff4ecb1d990425cf94a34ab1ce6f4"
+      },
+      {
+        "stable_id": "SKILL_RETRIEVAL_TASK",
+        "kind": "SkillType",
+        "sha256": "d84f42bca9a8080bd42a772c281824bf242f02cfc63c5f588e9a97de998623c1"
+      },
+      {
+        "stable_id": "SKILL_SELF_REGULATION",
+        "kind": "SkillType",
+        "sha256": "b4a8c9c934812aa0e51279a2820d2b12662a2828337a427a788f57c413414058"
+      },
+      {
+        "stable_id": "SKILL_TASK_PERFORMANCE",
+        "kind": "SkillType",
+        "sha256": "9ae26804296a6c4c84e045103b20fcb4bbea6f173e166bd010c21414044d7ce8"
+      },
+      {
+        "stable_id": "SKILL_TRANSFER_TASK",
+        "kind": "SkillType",
+        "sha256": "6d807a465a41b252932e23302456b4401a0cba0e6db9eb02c366343087038c90"
+      },
+      {
+        "stable_id": "VAL_CASE_COLLABORATIVE_DIALOGIC_STUDY_COMPOSITION_06",
+        "kind": "Validation",
+        "sha256": "627985fbf621b6ed3da6693a88ec9e8b9cf81198ab58aa6e7b4df770e44a668d"
+      },
+      {
+        "stable_id": "VAL_CASE_COLLABORATIVE_DIALOGIC_STUDY_COUNTEREXAMPLE_04",
+        "kind": "Validation",
+        "sha256": "adfd0cad18f184a98d86673126b69756c5bf01bada3350ee5d84fd54432e91a0"
+      },
+      {
+        "stable_id": "VAL_CASE_COLLABORATIVE_DIALOGIC_STUDY_COUNTEREXAMPLE_05",
+        "kind": "Validation",
+        "sha256": "fa365e88e398e13f7158ed526ad52664347cc9b510d12822c11ce9463a90129b"
+      },
+      {
+        "stable_id": "VAL_CASE_COLLABORATIVE_DIALOGIC_STUDY_FORWARD_01",
+        "kind": "Validation",
+        "sha256": "e3905158c75d6a43764c4d9870d3dcade45db8b2adf17e51b26e5ba351747f98"
+      },
+      {
+        "stable_id": "VAL_CASE_COLLABORATIVE_DIALOGIC_STUDY_INTERVENTION_03",
+        "kind": "Validation",
+        "sha256": "2367ceee50bacc3fc6995ff7982509bf790e76dd995c3feb64867edca2cc3d91"
+      },
+      {
+        "stable_id": "VAL_CASE_COLLABORATIVE_DIALOGIC_STUDY_REVERSE_02",
+        "kind": "Validation",
+        "sha256": "7827da086811229a599003164e3e8f499299c9d1da9f52e3fc7fc384ed606f20"
+      },
+      {
+        "stable_id": "VAL_CASE_DELIBERATE_SKILL_PRACTICE_COMPOSITION_06",
+        "kind": "Validation",
+        "sha256": "e55b8773f2d204414b77a887decbc0c8866ca7c07bfc4893efd75aac6667ee7c"
+      },
+      {
+        "stable_id": "VAL_CASE_DELIBERATE_SKILL_PRACTICE_COUNTEREXAMPLE_04",
+        "kind": "Validation",
+        "sha256": "291375b836379a303a7c1f13650fe1ee77b68123e3f9232cc9a8835c7a349108"
+      },
+      {
+        "stable_id": "VAL_CASE_DELIBERATE_SKILL_PRACTICE_COUNTEREXAMPLE_05",
+        "kind": "Validation",
+        "sha256": "c4744566e05ae3d70ac70c5bf320996b82c24de2b821ee19adef5c209104bd84"
+      },
+      {
+        "stable_id": "VAL_CASE_DELIBERATE_SKILL_PRACTICE_FORWARD_01",
+        "kind": "Validation",
+        "sha256": "635fdc62c9535e5b7d0be849debddbd56a86acdaebca9f62b8a891e8a0d1360f"
+      },
+      {
+        "stable_id": "VAL_CASE_DELIBERATE_SKILL_PRACTICE_INTERVENTION_03",
+        "kind": "Validation",
+        "sha256": "6bd2fc2c6b95b9d2d49d6066af758999abde1f8417b3e77f6bebb674147cc513"
+      },
+      {
+        "stable_id": "VAL_CASE_DELIBERATE_SKILL_PRACTICE_REVERSE_02",
+        "kind": "Validation",
+        "sha256": "1bef4802d4a723ae5ed7e6625fa12d46d9e063a8abdb16f80919d1ce5f78fae2"
+      },
+      {
+        "stable_id": "VAL_CASE_GUIDED_CONCEPT_PRACTICE_COMPOSITION_06",
+        "kind": "Validation",
+        "sha256": "65c9a46bec02ceab9c21f4a6cc256f0fbadc4bd2b2d43fc858fbd23a0b1782d6"
+      },
+      {
+        "stable_id": "VAL_CASE_GUIDED_CONCEPT_PRACTICE_COUNTEREXAMPLE_04",
+        "kind": "Validation",
+        "sha256": "75c4fe970cbe1e6c2dcd5fcd6b456f405431a5e22a9c7474f40ca660a10207f2"
+      },
+      {
+        "stable_id": "VAL_CASE_GUIDED_CONCEPT_PRACTICE_COUNTEREXAMPLE_05",
+        "kind": "Validation",
+        "sha256": "fe286c46163579c09fc463f381cef3b900e7cb78c1747313dc0ea4499075d0bc"
+      },
+      {
+        "stable_id": "VAL_CASE_GUIDED_CONCEPT_PRACTICE_FORWARD_01",
+        "kind": "Validation",
+        "sha256": "6482aa3bc3d17b1ba886412a9160bbdd90b2f2eb6036c20692d8f740e10f10f6"
+      },
+      {
+        "stable_id": "VAL_CASE_GUIDED_CONCEPT_PRACTICE_INTERVENTION_03",
+        "kind": "Validation",
+        "sha256": "3c899ed8c00d2463f7884b1d4c4e787093349c695a629415fd36bf2308e54f72"
+      },
+      {
+        "stable_id": "VAL_CASE_GUIDED_CONCEPT_PRACTICE_REVERSE_02",
+        "kind": "Validation",
+        "sha256": "86f283696efae92dd9439fae504abc1d9068fbc52beca799a55c08f90916d724"
+      },
+      {
+        "stable_id": "VAL_CASE_INTEGRATED_PROJECT_TRANSFER_COMPOSITION_06",
+        "kind": "Validation",
+        "sha256": "925661dc7e8570ca08cd004c4d3d11355c4050e1523c17bad95344e34afdd6fa"
+      },
+      {
+        "stable_id": "VAL_CASE_INTEGRATED_PROJECT_TRANSFER_COUNTEREXAMPLE_04",
+        "kind": "Validation",
+        "sha256": "1de67021f796bdcf4685519c4975d768b52e97e837446850645694ebd38b083b"
+      },
+      {
+        "stable_id": "VAL_CASE_INTEGRATED_PROJECT_TRANSFER_COUNTEREXAMPLE_05",
+        "kind": "Validation",
+        "sha256": "fc836594b0c734ec0b07ae5240bfa5b6b01fad163fc9be6cc198322fe6a042a9"
+      },
+      {
+        "stable_id": "VAL_CASE_INTEGRATED_PROJECT_TRANSFER_FORWARD_01",
+        "kind": "Validation",
+        "sha256": "9dd645dbf0027d40a4493cfaf7b7d7ca6c688ed8665a13cd4db330be3a4aad99"
+      },
+      {
+        "stable_id": "VAL_CASE_INTEGRATED_PROJECT_TRANSFER_INTERVENTION_03",
+        "kind": "Validation",
+        "sha256": "b2932d0e8cc924a449d6b5dc1806f2e53e123af76d56ec35717dbc7f18bb314c"
+      },
+      {
+        "stable_id": "VAL_CASE_INTEGRATED_PROJECT_TRANSFER_REVERSE_02",
+        "kind": "Validation",
+        "sha256": "b5e0bc9fb3d5919ad9f74049df44f66ec52477cceebc6066191cf4a9e6d7a767"
+      },
+      {
+        "stable_id": "VAL_CASE_RETRIEVAL_SPACED_REVIEW_COMPOSITION_06",
+        "kind": "Validation",
+        "sha256": "66ca8e96b6d4a64cf05bf8b5b76d7fca1888262ae196a3e5a74305ae3e46f14f"
+      },
+      {
+        "stable_id": "VAL_CASE_RETRIEVAL_SPACED_REVIEW_COUNTEREXAMPLE_04",
+        "kind": "Validation",
+        "sha256": "a12a330c88f841735ea7aa712c093af0a37a0d41ffd8899da90d31030f60da2d"
+      },
+      {
+        "stable_id": "VAL_CASE_RETRIEVAL_SPACED_REVIEW_COUNTEREXAMPLE_05",
+        "kind": "Validation",
+        "sha256": "92554f08c17ac44705570fde6ce6f97833b828ab5f5a33715625c02b567b743a"
+      },
+      {
+        "stable_id": "VAL_CASE_RETRIEVAL_SPACED_REVIEW_FORWARD_01",
+        "kind": "Validation",
+        "sha256": "8a417ac04a04bef66859b43f3a39190ee525ad0584dc926607974a6bc2aa9dd1"
+      },
+      {
+        "stable_id": "VAL_CASE_RETRIEVAL_SPACED_REVIEW_INTERVENTION_03",
+        "kind": "Validation",
+        "sha256": "2f5199315dbc60c44946c2191ba20dfcc2ae36479a7b08bba72a2001c8d17795"
+      },
+      {
+        "stable_id": "VAL_CASE_RETRIEVAL_SPACED_REVIEW_REVERSE_02",
+        "kind": "Validation",
+        "sha256": "f74d352f7d48d5779b74062804b54c1a97c785fbe722ea4053209b481c769a29"
+      },
+      {
+        "stable_id": "VAL_CASE_SELF_REGULATED_STUDY_COMPOSITION_06",
+        "kind": "Validation",
+        "sha256": "62100988223e582c49966109634966f79fcdaf344f6cd69944e2071a421f91c5"
+      },
+      {
+        "stable_id": "VAL_CASE_SELF_REGULATED_STUDY_COUNTEREXAMPLE_04",
+        "kind": "Validation",
+        "sha256": "071f632963b541d98e0fbe4be5689224d8b20c62f4b932f47e052bef1ae96ede"
+      },
+      {
+        "stable_id": "VAL_CASE_SELF_REGULATED_STUDY_COUNTEREXAMPLE_05",
+        "kind": "Validation",
+        "sha256": "9246b2dc981d895e9c8bad71a5329e29a54e3fb4ea0104e995c22c2e95bdd2cf"
+      },
+      {
+        "stable_id": "VAL_CASE_SELF_REGULATED_STUDY_FORWARD_01",
+        "kind": "Validation",
+        "sha256": "20cecf0bdfa533583ca4805192a857465c342c2c9a3716d67953df84af195d03"
+      },
+      {
+        "stable_id": "VAL_CASE_SELF_REGULATED_STUDY_INTERVENTION_03",
+        "kind": "Validation",
+        "sha256": "04fbe6287a65bbabab7893063b2933586a717ddf4d73d4b8331f26266dc16df6"
+      },
+      {
+        "stable_id": "VAL_CASE_SELF_REGULATED_STUDY_REVERSE_02",
+        "kind": "Validation",
+        "sha256": "3891f13d7e4f117e7a79938185139f6563551f16087d823437cba05179348c12"
+      }
+    ],
+    "module_shard_sha256": "dacc27957a1a44ccc0941a3b394396cd9e72b9ece141177fc05959636e133ee2",
+    "owner_record_set_sha256": "e4fa4eb8420e87a4b00d6918871f67861d6c28b7663624ec829bb14a5a10fd8d"
+  },
+  "validation": {
+    "issue": 40,
+    "comment_id": 7244264589,
+    "body_sha256": "1b388b238e20ff0fa968387e8405a5e1d37b52799738f5c0f08a15866da8a167",
+    "reviewed_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "inherited_review_comments": [
+      7239835702,
+      7243959073
+    ]
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; full depth, G03/G04/G05 and release not accepted."
+  ],
+  "next": "V01 exact tuple integrated validation; no release.",
+  "content_digest": "5e37cfd73dcca1b7dc3b71cdf500f87f1a415ef0d142120337b25106bb09f077",
+  "reviewed_input_rebind": [],
+  "previous_receipt": "evidence/tasks/P01/P01-FORMAL-03.json"
+}

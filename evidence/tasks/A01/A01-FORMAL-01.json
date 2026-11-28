@@ -1,0 +1,414 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate4-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "7f6ee33736842461b1501134915a4ff0c7233d84",
+  "exact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+  "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "A01",
+  "attempt_id": "A01-FORMAL-01",
+  "receipt_id": "TASK:A01:A01-FORMAL-01",
+  "input": [
+    {
+      "task_id": "F01",
+      "receipt_id": "TASK:F01:F01-FORMAL-01",
+      "content_digest": "701515b725ba44ed3c43bb7a9da2ec93213da37270e2e3426ea8382f967fdc60",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/F01/F01-FORMAL-01.json",
+          "sha256": "2646506233fc8f1993572ae41fd937f5abd254f603227adcfe809980fd60c400"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F01.jsonl",
+          "sha256": "4ac45873655d77583e2c36dfeac456ff010eb785060db61aa42e96e1ad4eae05",
+          "stable_id": "F01.COMPOSITION",
+          "record_sha256": "a4b998d1acc35b39c8836f76bdf04c733d336e5a3e67e5b255d6927e07fec958",
+          "kind": "CompositionSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "F02",
+      "receipt_id": "TASK:F02:F02-FORMAL-01",
+      "content_digest": "45a62096e1c7c10e3699aaff4a56d594a5fed4342087a60a9857cc9179a6d379",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/F02/F02-FORMAL-01.json",
+          "sha256": "f25e3034793617f1a08ff6905b8ddd23d5418f00c699e0462c0b600a10e6f715"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F02.jsonl",
+          "sha256": "8da0ef63a9edc82ce987b67eeb2b2e98e7e66960cae3a0968a255815cf822ee6",
+          "stable_id": "F02.COMPOSITION",
+          "record_sha256": "16bb16851d06e603c212692ef1f835f649d5706865ceb73cdc0a8bb6063cc7e4",
+          "kind": "CompositionSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/learning-process.manifest.json",
+      "sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/A01.jsonl",
+      "sha256": "47d9fa6ab315110359f0a3f0829b5d642a170e7c378880c6866f9ed9912ed949",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/README.md",
+      "sha256": "0ca09013814eb9a801cf8377ec0812c68ff7db217b69bd7d21f45eb13675da48",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/bindings.json",
+      "sha256": "7227b2a15ae0cfab9c2266b1524241600a31db81d7beca9a4aef76b825839192",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/build_batch.py",
+      "sha256": "2cd7183dc0eaf8264d03080f7d0cc2f562bdca62cbaf3c6496838d206f1c6f2a",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/coverage.json",
+      "sha256": "101825f26aba47ad6beb4e17b0237f836108271a4b93b5c4370bb45a3ec66a95",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cq-lc-preparation.json",
+      "sha256": "ba48b45274d256b83f104f3503d25ef964df181020b71b4adf38bbbe27f8942b",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cumulative-evidence.json",
+      "sha256": "3f26198d17d208e1e2f159277fb92ea4dce894f798aa2ce95e9a465bae814ced",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/delta-invariance.json",
+      "sha256": "83bcad41d79d4e1caf06cbf4ae382cfa8d9f666185d36fb578352ae02da2183e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/design.json",
+      "sha256": "244201c72eee9e2554ce1b5426a28d7dbf4eafd31e29dc10e167a01aae62c781",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/migration.json",
+      "sha256": "56fea8b617caf98c70f087791775b71f9c1bc8768868cecde683d5cc8760afeb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/p-rebind-regression.json",
+      "sha256": "1d0db3d853e51d7d5a3c5c2f84dd877439c532003151b4420950c325c11f03aa",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/policy_entry.py",
+      "sha256": "39d6917f76074a7e41eab1a9df9d45cf53652f432ee67fd57fcbf3df25e4b3ef",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/process_pointer.py",
+      "sha256": "c7ed100f33ffa45c499b55e33a8c5c5014de08d5c19f8191b8135b37934435cb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/replay_p.py",
+      "sha256": "d7f88b1810c6886dcbc11e1256bb1f6e16faf984be4a54b9100d1a02dc8ca7a7",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/results.json",
+      "sha256": "69e8e394f1a2fd1ef304e13811dca18fc38c6ab08ff18b130d6f16e2b36b5f68",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/semantic_rules.py",
+      "sha256": "08ff220ac9de0d2cbbcb899e75527a0a3bdf050555af423017ef825b113de90e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_batch.py",
+      "sha256": "26adacfc85777b53035a424ea60ef0a79a1655ac7f76e5281b1b576f0fc9c9cd",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_delta.py",
+      "sha256": "abee8f44d3ec51a4d2a1b6abc93e7a79d090bc4f86e8c4cb5cb5c255368e6438",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_FINITE_COMPOSITION_CANDIDATE",
+    "reviewed_scope": {
+      "actual_cases": [
+        "A01.R4.CASE.1",
+        "A01.R4.CASE.2",
+        "A01.R4.CASE.3",
+        "A01.R4.CASE.4",
+        "A01.R4.CASE.5",
+        "A01.R4.CASE.6",
+        "A01.R4.CASE.7"
+      ],
+      "claim_ids": [
+        "K09.01.01.ME.01",
+        "H06.06.03.R2.C01",
+        "H07.02.02.R2.C01",
+        "K12.01.03.TR.01",
+        "H03.01.01.R1.C01",
+        "H04.01.02.R1.C01",
+        "H05.01.01.R2.C01",
+        "H06.01.02.R2.C01",
+        "H07.03.03.R2.C01"
+      ],
+      "full_scope": "HOLD_UNTIL_INDEPENDENT_COMPLETE_COVERAGE",
+      "inputs": [
+        "F01.COMPOSITION",
+        "F02.COMPOSITION"
+      ],
+      "professional_topic_refs": [
+        "K03.03.02",
+        "K07.03.01",
+        "K09.01.01",
+        "H07.04.01"
+      ],
+      "required_scope_ids": [
+        "A01.RQ01",
+        "A01.RQ02",
+        "A01.RQ03",
+        "A01.RQ04"
+      ],
+      "scope": "目标和对象两条有限决策必须同一任务与构念。",
+      "status": "PARTIAL_FINITE_PREPARATION_FULL_CQ_LC_NOT_RUN"
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "cumulative_version": "0.1.0-process-candidate-4",
+    "manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+    "module_records": 16,
+    "module_shard_sha256": "47d9fa6ab315110359f0a3f0829b5d642a170e7c378880c6866f9ed9912ed949",
+    "owner_record_set_sha256": "dffce45e89e2a535f290a8749220483eb2553990c13343a0d0e974734a83df94",
+    "record_digests": [
+      {
+        "stable_id": "A01.R4.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "69a23d021387540a0ebda9e627e3e60fc12eb40f012a88a8b41867fab85f8727"
+      },
+      {
+        "stable_id": "A01.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "143298f4e57070b16eddec7a33950514f401b0ae63a6eea95b6f3875009a3dca"
+      },
+      {
+        "stable_id": "A01.R4.CASE.1",
+        "kind": "Case",
+        "sha256": "b47ac2d3fe8b6fdd14f6230a38f988e15dd5b9332f425f71356e7d302ededfda"
+      },
+      {
+        "stable_id": "A01.R4.CASE.1.VAL",
+        "kind": "Validation",
+        "sha256": "bd4af93f0b0f39eda261841a38dc5e60dd9393c4bd919a536410193cca7baa5e"
+      },
+      {
+        "stable_id": "A01.R4.CASE.2",
+        "kind": "Case",
+        "sha256": "f85f64e026f759e921eae9330afb9c10f3699e42d8715e9980f893f4a51d6713"
+      },
+      {
+        "stable_id": "A01.R4.CASE.2.VAL",
+        "kind": "Validation",
+        "sha256": "bc470dc22e32d13d99938b1e3bad9405396f27a6e57eb922f25107ddd2af1d82"
+      },
+      {
+        "stable_id": "A01.R4.CASE.3",
+        "kind": "Case",
+        "sha256": "12d69222e21c64e15f4a66f5cc7ead5e555dd4183af5dbdaaaf04e6621a55387"
+      },
+      {
+        "stable_id": "A01.R4.CASE.3.VAL",
+        "kind": "Validation",
+        "sha256": "7e7729d542e94550cdead4bab5c6d3439e2f084add81d8303dffe80929dbe1fc"
+      },
+      {
+        "stable_id": "A01.R4.CASE.4",
+        "kind": "Case",
+        "sha256": "1a429d53ba5178551370fb0513e97115e8ece708038318fd96714d655cd562db"
+      },
+      {
+        "stable_id": "A01.R4.CASE.4.VAL",
+        "kind": "Validation",
+        "sha256": "11a1dad2daeea52b907b8374f9c0f5a927d941cf657ddd2e691f7bd6f4334474"
+      },
+      {
+        "stable_id": "A01.R4.CASE.5",
+        "kind": "Case",
+        "sha256": "9e77761755861dda10a4997555f898de6d53b86be81e8e7c366840aa2fae7f22"
+      },
+      {
+        "stable_id": "A01.R4.CASE.5.VAL",
+        "kind": "Validation",
+        "sha256": "c25af0a404a0148469ab1da8a9653acbf6707dda5874491c84ed80ee507347a3"
+      },
+      {
+        "stable_id": "A01.R4.CASE.6",
+        "kind": "Case",
+        "sha256": "ce592f62dbaeb59ee9c13f7908463a3fd8f4cb1e6d8e355849fe95c7a38a15b5"
+      },
+      {
+        "stable_id": "A01.R4.CASE.6.VAL",
+        "kind": "Validation",
+        "sha256": "32ef29a993f9b4eef6a98f2dd856796c778ed19178766b2d05be653bb81cedbc"
+      },
+      {
+        "stable_id": "A01.R4.CASE.7",
+        "kind": "Case",
+        "sha256": "bb032cfd1b56797ed84e6b559b8da9763d76fa79142110ef68f1bf0e6a0e19de"
+      },
+      {
+        "stable_id": "A01.R4.CASE.7.VAL",
+        "kind": "Validation",
+        "sha256": "a15571dff1eea67a42e8ec61072e1645b26b36d1a394419350875ae2a288dca1"
+      }
+    ],
+    "reviewed_artifact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "reviewed_artifact_tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "case_count": 7,
+    "full_scope": "HOLD_FULL_CQ_LC_NOT_RUN"
+  },
+  "validation": {
+    "issue": 40,
+    "comment_id": 7244264589,
+    "body_sha256": "1b388b238e20ff0fa968387e8405a5e1d37b52799738f5c0f08a15866da8a167",
+    "reviewed_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "inherited_review_comments": [
+      7239835702,
+      7243959073
+    ]
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; full depth, G03/G04/G05 and release not accepted."
+  ],
+  "next": "V01 exact tuple integrated validation; no release.",
+  "content_digest": "d9a6ad311210eafada6ebc6da8396045bffe4d3eb921fc96a07ad73717a2a3b1",
+  "reviewed_input_rebind": [
+    {
+      "reviewed_input": {
+        "owner_record_set_sha256": "5dc40da9316bd67f8620c7b3bd09531838cd0ffccedf6ed8fbe0f38e39e021c3",
+        "state": "PREPARATION_ONLY_NO_RECEIPT",
+        "task_id": "F01",
+        "version": "0.1.0-process-candidate-4"
+      },
+      "actual": {
+        "task_id": "F01",
+        "receipt_id": "TASK:F01:F01-FORMAL-01",
+        "content_digest": "701515b725ba44ed3c43bb7a9da2ec93213da37270e2e3426ea8382f967fdc60",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/F01/F01-FORMAL-01.json",
+            "sha256": "2646506233fc8f1993572ae41fd937f5abd254f603227adcfe809980fd60c400"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F01.jsonl",
+            "sha256": "4ac45873655d77583e2c36dfeac456ff010eb785060db61aa42e96e1ad4eae05",
+            "stable_id": "F01.COMPOSITION",
+            "record_sha256": "a4b998d1acc35b39c8836f76bdf04c733d336e5a3e67e5b255d6927e07fec958",
+            "kind": "CompositionSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "EXACT_PREPARATION_OWNER_SET"
+    },
+    {
+      "reviewed_input": {
+        "owner_record_set_sha256": "88c77a78c9560270a7308406cb82eea8f31cea555253d89b6632775a71adddd8",
+        "state": "PREPARATION_ONLY_NO_RECEIPT",
+        "task_id": "F02",
+        "version": "0.1.0-process-candidate-4"
+      },
+      "actual": {
+        "task_id": "F02",
+        "receipt_id": "TASK:F02:F02-FORMAL-01",
+        "content_digest": "45a62096e1c7c10e3699aaff4a56d594a5fed4342087a60a9857cc9179a6d379",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/F02/F02-FORMAL-01.json",
+            "sha256": "f25e3034793617f1a08ff6905b8ddd23d5418f00c699e0462c0b600a10e6f715"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F02.jsonl",
+            "sha256": "8da0ef63a9edc82ce987b67eeb2b2e98e7e66960cae3a0968a255815cf822ee6",
+            "stable_id": "F02.COMPOSITION",
+            "record_sha256": "16bb16851d06e603c212692ef1f835f649d5706865ceb73cdc0a8bb6063cc7e4",
+            "kind": "CompositionSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "EXACT_PREPARATION_OWNER_SET"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "receipt_path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+        "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+        "task_id": "IF01",
+        "version": "04263009493a994501520be08364b32329c93179"
+      },
+      "actual": {
+        "task_id": "IF01",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "version": "04263009493a994501520be08364b32329c93179",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+            "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    }
+  ],
+  "previous_receipt": null
+}

@@ -1,0 +1,1366 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "learn-kg-process-candidate4-registration-20261129",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "7f6ee33736842461b1501134915a4ff0c7233d84",
+  "exact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+  "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-29",
+  "task_id": "F02",
+  "attempt_id": "F02-FORMAL-01",
+  "receipt_id": "TASK:F02:F02-FORMAL-01",
+  "input": [
+    {
+      "task_id": "DB01",
+      "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+      "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+      "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+          "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+        }
+      ]
+    },
+    {
+      "task_id": "K03",
+      "receipt_id": "TASK:K03:K03-FORMAL-03",
+      "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+          "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+        },
+        {
+          "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+          "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+        }
+      ]
+    },
+    {
+      "task_id": "K04",
+      "receipt_id": "TASK:K04:K04-FORMAL-03",
+      "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+      "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+          "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+        },
+        {
+          "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+          "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+        }
+      ]
+    },
+    {
+      "task_id": "K07",
+      "receipt_id": "TASK:K07:K07-FORMAL-02",
+      "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+      "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+          "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+        },
+        {
+          "path": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+          "sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97"
+        }
+      ]
+    },
+    {
+      "task_id": "K12",
+      "receipt_id": "TASK:K12:K12-FORMAL-01",
+      "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+      "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/K12/K12-FORMAL-01.json",
+          "sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2"
+        },
+        {
+          "path": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+          "sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e"
+        },
+        {
+          "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+          "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+          "stable_id": "K12.01.03.TR.01",
+          "record_sha256": "99153cd993ef252b7a70414c4c19225550c9ab4d24b0f3f48fa6a3a0560d3f8d",
+          "kind": "Claim",
+          "package_version": "0.1.0-trace-adaptation-resources-candidate-1"
+        }
+      ]
+    },
+    {
+      "task_id": "P03",
+      "receipt_id": "TASK:P03:P03-FORMAL-04",
+      "content_digest": "ab5bf1f78c76457ec89ef39d0ef92bb653941e8e495f3a0fe4ced459822d7098",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P03/P03-FORMAL-04.json",
+          "sha256": "a5ca952df6ed9342574fe25b9c07a93be376d40a8692d050c2e10c1b62e57c77"
+        },
+        {
+          "path": "evidence/tasks/P03/P03-QUALIFICATION-02.json",
+          "sha256": "3c48c61488319e83eb95217d42a32b71111099019b5d65454e041142c468b299"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P03.jsonl",
+          "sha256": "98e06febfbc9d01a872050063b10d08a8aeb50ba5c815455ee35bfccf9f904b7",
+          "stable_id": "P03.PRODUCTION",
+          "record_sha256": "36bbc2575167c82da733b7ebd85145bb1d54f6c116e35e643386eabc9b083862",
+          "kind": "Activity",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "P04",
+      "receipt_id": "TASK:P04:P04-FORMAL-03",
+      "content_digest": "4d07c441fd4618c45301a78cc6b03725e913a6371a0152443e18a45c64b5969d",
+      "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/P04/P04-FORMAL-03.json",
+          "sha256": "885098bc65cbc31bb41166bdc0342bb4b5af0ce9e7e53ca0779128c2819846b2"
+        },
+        {
+          "path": "evidence/tasks/P04/P04-QUALIFICATION-02.json",
+          "sha256": "f904ff3e982d088836aecd1675bf66e37302bfe9302d7ad08d616ef503ba5c18"
+        },
+        {
+          "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P04.jsonl",
+          "sha256": "d83f99c73edabbf3bb1c37562a9b4d1ea139455ddedc36b35b58ec10ec651804",
+          "stable_id": "P04.FLOW",
+          "record_sha256": "b91570dc61c88fc2cd6d4792ad86daf34952c8571437780332046f06b8caaf61",
+          "kind": "FlowSpec",
+          "package_version": "0.1.0-process-candidate-4"
+        }
+      ]
+    },
+    {
+      "task_id": "H03",
+      "receipt_id": "TASK:H03:H03-FORMAL-02",
+      "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H03/H03-FORMAL-02.json",
+          "sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c"
+        },
+        {
+          "path": "evidence/tasks/H03/H03-QUALIFICATION-01.json",
+          "sha256": "707ebe7338cca318ce0367c19f4687bc2c7ea288223370d2ca1107e650303640"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+          "sha256": "0c5a7de1b1e5ce8267cd311ce075a87157127b12c61eb773a71805c8ea24687b",
+          "stable_id": "H03.01.01.R1.C01",
+          "record_sha256": "d3b63a798321b99beabb114f3201beeeea86531ee7e005dcdb90db558206a7a6",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "IF01",
+      "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+      "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+      "version": "04263009493a994501520be08364b32329c93179",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+          "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+        }
+      ]
+    },
+    {
+      "task_id": "H04",
+      "receipt_id": "TASK:H04:H04-FORMAL-02",
+      "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H04/H04-FORMAL-02.json",
+          "sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3"
+        },
+        {
+          "path": "evidence/tasks/H04/H04-QUALIFICATION-01.json",
+          "sha256": "63a5cd4201f15d97c7c3b076414835dbc137d84fe94106d5d84f57c22a639bf7"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+          "sha256": "ca55f5b74882ca5b2d861680b44d9f87fa726acdee4ecb23002bfb1522a6092e",
+          "stable_id": "H04.01.02.R1.C01",
+          "record_sha256": "8851616eb1a8e3310a86a72c5d0368a6ba6045b95e58839795e2221604f8614e",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "H05",
+      "receipt_id": "TASK:H05:H05-FORMAL-01",
+      "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+          "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+        },
+        {
+          "path": "evidence/tasks/H05/H05-QUALIFICATION-01.json",
+          "sha256": "99e6850eb119c05c995e94e87e0de3409f2a026bcead316613c5d260100a1144"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+          "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+          "stable_id": "H05.01.01.R2.C01",
+          "record_sha256": "b27b3df85e107f57e2a73fd0c4ba607590816e49877c8826a7f8442a45a972ed",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+          "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+          "stable_id": "H05.RFC.SEQUENCE",
+          "record_sha256": "679ae5f7dae97f568c0992949402f2db5284f47345643cca3683eacccb76beb7",
+          "kind": "Element",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "H06",
+      "receipt_id": "TASK:H06:H06-FORMAL-01",
+      "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H06/H06-FORMAL-01.json",
+          "sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87"
+        },
+        {
+          "path": "evidence/tasks/H06/H06-QUALIFICATION-01.json",
+          "sha256": "daba78cedd3b5a9c24e610d7694ee84de4267c49ef78a54b6859f3c0f8348c09"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.01.02.R2.C01",
+          "record_sha256": "6c4b4ac21bdc71052c940063a3c0b8d3dffa14d62a89920ed7a7ad45acc23d57",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.CONFIRM.OBJECT",
+          "record_sha256": "88a1326ec3a625df94673ffa71f68f6013741cb421fa92ff3dd707f0d2e0500d",
+          "kind": "LearningObject",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.CONFIRM.OBS",
+          "record_sha256": "2efe3d25bdaa40b42018868657bcafff6af0e6aa570082034406197843031681",
+          "kind": "ObservationSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.CONFIRM.SKILL",
+          "record_sha256": "57d65c6b05b4485c2af2d1163e66c7b2aab8bfc6d9c8536eeb89df5a4605c641",
+          "kind": "SkillType",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.CONFIRM.TASK",
+          "record_sha256": "20cecfd561c68d22ba455004538761f4221597058968927c44a0e21eadfd2d43",
+          "kind": "TaskSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.LISTENING",
+          "record_sha256": "d1792ae86387d70f545379911a4fa681f8635acd77a73a28b779c81976e3c6ac",
+          "kind": "TaskSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.LISTENING.OBJECT",
+          "record_sha256": "661d19deae2a357d0e143c4213357b77c0c14b3e569f17482d3ef5dd3483d371",
+          "kind": "LearningObject",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.LISTENING.OBS",
+          "record_sha256": "c5da7b1067b47e62c0bcd07fc21ea67850abda80af1a6895754f1cc918969898",
+          "kind": "ObservationSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.LISTENING.SKILL",
+          "record_sha256": "a2f2fbebdc6cd703b3a08d12feebeccbe3f0e2bfca23e3b4c64b22ad0d5c561e",
+          "kind": "SkillType",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.READING",
+          "record_sha256": "e51421fa96370022152c3f574f80ca13195bc04847ba5afaebb401da124abc95",
+          "kind": "TaskSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.READING.OBJECT",
+          "record_sha256": "7c9041a2254e96651f85629a0f7b93b920ebde983b5ba81ca39b79e0d60608f9",
+          "kind": "LearningObject",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.READING.OBS",
+          "record_sha256": "3cb6d7dd2caac2dcd69569b427694ecc8e8b40502d24eb41322f393774f9d411",
+          "kind": "ObservationSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.READING.SKILL",
+          "record_sha256": "877ed01d246e71801e5dcd2477e027b163413ac8e11af1fab947660c4e5f35a9",
+          "kind": "SkillType",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.SPEAKING",
+          "record_sha256": "1921c8f81bb1e6ed454627526df13f6d38966a26ce09b65bf75261c83dce4085",
+          "kind": "TaskSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.SPEAKING.OBJECT",
+          "record_sha256": "895f7ddb90ab1d7f6ab8690c701ecdbce4eb5b8ec831a1fa8a7321ce194b2b31",
+          "kind": "LearningObject",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.SPEAKING.OBS",
+          "record_sha256": "f22bd9c5f5086f3d36c5aaf6faa8733ff1912ab286eeb06670e0ee94006220a0",
+          "kind": "ObservationSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.SPEAKING.SKILL",
+          "record_sha256": "740caa9340111881585e158f6901a65a9785e48cede3df3555959276c4020f15",
+          "kind": "SkillType",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.WRITING",
+          "record_sha256": "21e16364f9ec0cb51a00187f10253c7f560b3cb0339de13013ad85a83a37577d",
+          "kind": "TaskSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.WRITING.OBJECT",
+          "record_sha256": "42b934e4404084f267ea594fd0c9208d35f17ca9b36bfb0dc69910a97bc31fbe",
+          "kind": "LearningObject",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.WRITING.OBS",
+          "record_sha256": "38414d8e2983a2661037ace55b1d0a04732bc61e0488f80a486d52169af390f2",
+          "kind": "ObservationSpec",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+          "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+          "stable_id": "H06.TASK.WRITING.SKILL",
+          "record_sha256": "61e38a17274138b47eba8feb2922074ffc7a09aab26f27b770c8a0a081ad087f",
+          "kind": "SkillType",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    },
+    {
+      "task_id": "H07",
+      "receipt_id": "TASK:H07:H07-FORMAL-01",
+      "content_digest": "d2da238163799f54941e02e0aa10a88a6637c2798cb35d61a612a78f9212fdc6",
+      "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/H07/H07-FORMAL-01.json",
+          "sha256": "0facd37fe97f559658bd803eddde2a0cc40934ac2538aeabce246c3a4ca25c5f"
+        },
+        {
+          "path": "evidence/tasks/H07/H07-QUALIFICATION-01.json",
+          "sha256": "8d5f64298f86e6821d34de4e2df7bc444ce5d12eed64aee967f987057fe3a128"
+        },
+        {
+          "path": "knowledge/v0.1.0/chinese-cumulative-r2/H07.jsonl",
+          "sha256": "7e74acf6151020c5ad83a88be88e5c734db0a5c210a9444153085043223fac14",
+          "stable_id": "H07.03.03.R2.C01",
+          "record_sha256": "8d94be9bee326e96f8e82928eb17f88c5aa0c3bedfd7e797ee7e4bd9ba3ff289",
+          "kind": "Claim",
+          "package_version": "0.1.0-chinese-cumulative-candidate-2"
+        }
+      ]
+    }
+  ],
+  "output": [
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/learning-process.manifest.json",
+      "sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+      "type": "SHARED_CUMULATIVE_MANIFEST"
+    },
+    {
+      "path": "knowledge/v0.1.0/learning-process-cumulative-r4/F02.jsonl",
+      "sha256": "8da0ef63a9edc82ce987b67eeb2b2e98e7e66960cae3a0968a255815cf822ee6",
+      "type": "MODULE_CANDIDATE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/README.md",
+      "sha256": "0ca09013814eb9a801cf8377ec0812c68ff7db217b69bd7d21f45eb13675da48",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/bindings.json",
+      "sha256": "7227b2a15ae0cfab9c2266b1524241600a31db81d7beca9a4aef76b825839192",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/build_batch.py",
+      "sha256": "2cd7183dc0eaf8264d03080f7d0cc2f562bdca62cbaf3c6496838d206f1c6f2a",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/coverage.json",
+      "sha256": "101825f26aba47ad6beb4e17b0237f836108271a4b93b5c4370bb45a3ec66a95",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cq-lc-preparation.json",
+      "sha256": "ba48b45274d256b83f104f3503d25ef964df181020b71b4adf38bbbe27f8942b",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/cumulative-evidence.json",
+      "sha256": "3f26198d17d208e1e2f159277fb92ea4dce894f798aa2ce95e9a465bae814ced",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/delta-invariance.json",
+      "sha256": "83bcad41d79d4e1caf06cbf4ae382cfa8d9f666185d36fb578352ae02da2183e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/design.json",
+      "sha256": "244201c72eee9e2554ce1b5426a28d7dbf4eafd31e29dc10e167a01aae62c781",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/migration.json",
+      "sha256": "56fea8b617caf98c70f087791775b71f9c1bc8768868cecde683d5cc8760afeb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/p-rebind-regression.json",
+      "sha256": "1d0db3d853e51d7d5a3c5c2f84dd877439c532003151b4420950c325c11f03aa",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/policy_entry.py",
+      "sha256": "39d6917f76074a7e41eab1a9df9d45cf53652f432ee67fd57fcbf3df25e4b3ef",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/process_pointer.py",
+      "sha256": "c7ed100f33ffa45c499b55e33a8c5c5014de08d5c19f8191b8135b37934435cb",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/replay_p.py",
+      "sha256": "d7f88b1810c6886dcbc11e1256bb1f6e16faf984be4a54b9100d1a02dc8ca7a7",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/results.json",
+      "sha256": "69e8e394f1a2fd1ef304e13811dca18fc38c6ab08ff18b130d6f16e2b36b5f68",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/semantic_rules.py",
+      "sha256": "08ff220ac9de0d2cbbcb899e75527a0a3bdf050555af423017ef825b113de90e",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_batch.py",
+      "sha256": "26adacfc85777b53035a424ea60ef0a79a1655ac7f76e5281b1b576f0fc9c9cd",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    },
+    {
+      "path": "docs/implementation/f-a-batch/verify_delta.py",
+      "sha256": "abee8f44d3ec51a4d2a1b6abc93e7a79d090bc4f86e8c4cb5cb5c255368e6438",
+      "type": "EXACT_REVIEWED_REBIND_EVIDENCE"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_FINITE_COMPOSITION_CANDIDATE",
+    "reviewed_scope": {
+      "actual_cases": [
+        "F02.R4.CASE.1",
+        "F02.R4.CASE.2",
+        "F02.R4.CASE.3",
+        "F02.R4.CASE.4",
+        "F02.R4.CASE.5",
+        "F02.R4.CASE.6",
+        "F02.R4.CASE.7"
+      ],
+      "claim_ids": [
+        "K12.01.03.TR.01",
+        "H03.01.01.R1.C01",
+        "H04.01.02.R1.C01",
+        "H05.01.01.R2.C01",
+        "H06.01.02.R2.C01",
+        "H07.03.03.R2.C01"
+      ],
+      "full_scope": "HOLD_UNTIL_INDEPENDENT_COMPLETE_COVERAGE",
+      "inputs": [
+        "P03.PRODUCTION",
+        "P04.FLOW",
+        "H05.RFC.SEQUENCE",
+        "H06.CONFIRM.OBJECT",
+        "H06.TASK.LISTENING.OBJECT",
+        "H06.TASK.READING.OBJECT",
+        "H06.TASK.SPEAKING.OBJECT",
+        "H06.TASK.WRITING.OBJECT",
+        "H06.TASK.LISTENING",
+        "H06.TASK.LISTENING.SKILL",
+        "H06.TASK.LISTENING.OBS",
+        "H06.TASK.READING",
+        "H06.TASK.READING.SKILL",
+        "H06.TASK.READING.OBS",
+        "H06.TASK.SPEAKING",
+        "H06.TASK.SPEAKING.SKILL",
+        "H06.TASK.SPEAKING.OBS",
+        "H06.TASK.WRITING",
+        "H06.TASK.WRITING.SKILL",
+        "H06.TASK.WRITING.OBS",
+        "H06.CONFIRM.TASK",
+        "H06.CONFIRM.SKILL",
+        "H06.CONFIRM.OBS"
+      ],
+      "professional_topic_refs": [
+        "K03.03.01",
+        "K03.03.02",
+        "K04.06.01",
+        "K07.02.05",
+        "K12.01.03",
+        "H03.01.04"
+      ],
+      "required_scope_ids": [
+        "F02.RQ01",
+        "F02.RQ02",
+        "F02.RQ03",
+        "F02.RQ04"
+      ],
+      "scope": "任务对象及粒度以实际构念、词语/构式条件和来源成员关系分开，不将源行当知识粒度或先修。",
+      "status": "PARTIAL_FINITE_PREPARATION_FULL_CQ_LC_NOT_RUN"
+    },
+    "rights": "HOLD",
+    "cq": "NOT_RUN",
+    "lc": "NOT_RUN",
+    "cumulative_version": "0.1.0-process-candidate-4",
+    "manifest_sha256": "7e2c3cfdc29f70d715e009fdb06b987c30e2a7432b418b95efa0a04a861f51b3",
+    "module_records": 21,
+    "module_shard_sha256": "8da0ef63a9edc82ce987b67eeb2b2e98e7e66960cae3a0968a255815cf822ee6",
+    "owner_record_set_sha256": "88c77a78c9560270a7308406cb82eea8f31cea555253d89b6632775a71adddd8",
+    "record_digests": [
+      {
+        "stable_id": "F02.R4.GUARD",
+        "kind": "ConditionSpec",
+        "sha256": "fcf6c01d1b108ab614367830097b8f57bfa326c5c433740f205a124d48363ef3"
+      },
+      {
+        "stable_id": "F02.R4.OBJECT.CONFIRMATION",
+        "kind": "LearningObject",
+        "sha256": "c181d75f30a569fe2fb3ec06d643c9a867cba5be7fe393fbf87c3f953704f5b8"
+      },
+      {
+        "stable_id": "F02.R4.OBJECT.LISTENING",
+        "kind": "LearningObject",
+        "sha256": "f174154f2e2cafe3c20a273b5da7a1ea7eb5306837f7b087599b6a512a87b3bb"
+      },
+      {
+        "stable_id": "F02.R4.OBJECT.READING",
+        "kind": "LearningObject",
+        "sha256": "60d1b864e7f300ca54cd00b6dc509c2572add6509229202d1bb528a2de0ee083"
+      },
+      {
+        "stable_id": "F02.R4.OBJECT.SPEAKING",
+        "kind": "LearningObject",
+        "sha256": "173d0cfdb433a261b8f15053a6dd8c62ddac2bef38f4240ab6b74c878f7892d8"
+      },
+      {
+        "stable_id": "F02.R4.OBJECT.WRITING",
+        "kind": "LearningObject",
+        "sha256": "ec54fd12ca324f2f0535fde5a9a95b9b3629dc4e3e738263c003db0bb6383973"
+      },
+      {
+        "stable_id": "F02.COMPOSITION",
+        "kind": "CompositionSpec",
+        "sha256": "16bb16851d06e603c212692ef1f835f649d5706865ceb73cdc0a8bb6063cc7e4"
+      },
+      {
+        "stable_id": "F02.R4.CASE.1",
+        "kind": "Case",
+        "sha256": "d3276fae27f1df8827659598848316072288178c094a351192aa25d4266a112a"
+      },
+      {
+        "stable_id": "F02.R4.CASE.1.VAL",
+        "kind": "Validation",
+        "sha256": "562e9c250b1b710c1000ee5383ca65e29f5c631bc5c3f896c89ad3d73f817d26"
+      },
+      {
+        "stable_id": "F02.R4.CASE.2",
+        "kind": "Case",
+        "sha256": "f0cf395bb95c340f56b74168acb8608195dc023bc021a968dea51876a2cf157b"
+      },
+      {
+        "stable_id": "F02.R4.CASE.2.VAL",
+        "kind": "Validation",
+        "sha256": "1d4c07338ee8ca3ac3a65e7672ab7009f331ebb80459e47aba5d23711f17cfb2"
+      },
+      {
+        "stable_id": "F02.R4.CASE.3",
+        "kind": "Case",
+        "sha256": "4bb6aa45c04ee8e7b69ce4d8bfea8e463d27d809ecf144aefc76c478aa1b34f0"
+      },
+      {
+        "stable_id": "F02.R4.CASE.3.VAL",
+        "kind": "Validation",
+        "sha256": "fc6224535b82235a8d61696cec1c09bc474505df780a82f01fba3b9113d4d5c6"
+      },
+      {
+        "stable_id": "F02.R4.CASE.4",
+        "kind": "Case",
+        "sha256": "42be2f58d25af0186fc87e8fc77fb0a10d957d402eadb76f91a1a3518bc4ac81"
+      },
+      {
+        "stable_id": "F02.R4.CASE.4.VAL",
+        "kind": "Validation",
+        "sha256": "76d06776912799ba745ff6946fb19eefabc62edd6eec3d7aebe08162b9618f27"
+      },
+      {
+        "stable_id": "F02.R4.CASE.5",
+        "kind": "Case",
+        "sha256": "0780face576b06721890a4ef9eed1c56605f33f47aaec879650509a3c9b783c2"
+      },
+      {
+        "stable_id": "F02.R4.CASE.5.VAL",
+        "kind": "Validation",
+        "sha256": "acce40998314c60d75944e89742240b5a66454025853bd0bd45e93b51317944d"
+      },
+      {
+        "stable_id": "F02.R4.CASE.6",
+        "kind": "Case",
+        "sha256": "34c5ade47a7d1b87de89d256ec9dc1e5837c33bb827485f862724592802448ed"
+      },
+      {
+        "stable_id": "F02.R4.CASE.6.VAL",
+        "kind": "Validation",
+        "sha256": "09fa9809fcd269b025b2acee5ad5694284fae2e9bd73dee3fcd4571abc5394db"
+      },
+      {
+        "stable_id": "F02.R4.CASE.7",
+        "kind": "Case",
+        "sha256": "77f0d631de1e699717b7a3061ef4d2488d7b6b2cacf42d89a52246a69a89bf03"
+      },
+      {
+        "stable_id": "F02.R4.CASE.7.VAL",
+        "kind": "Validation",
+        "sha256": "c027e688293655d7d00806942299ea7e071f35e42ca62eef7b4fd1a50a22488d"
+      }
+    ],
+    "reviewed_artifact_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "reviewed_artifact_tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "case_count": 7,
+    "full_scope": "HOLD_FULL_CQ_LC_NOT_RUN"
+  },
+  "validation": {
+    "issue": 40,
+    "comment_id": 7244264589,
+    "body_sha256": "1b388b238e20ff0fa968387e8405a5e1d37b52799738f5c0f08a15866da8a167",
+    "reviewed_head": "57b265594b4a40dc2b0c8798f8ae930424155074",
+    "tree": "52c2e4e12848ed77730e742cf6fcda8fd6cb2714",
+    "independent_result": "ACCEPT_SCOPED",
+    "findings": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "inherited_review_comments": [
+      7239835702,
+      7243959073
+    ]
+  },
+  "issues": [
+    "Restricted finite candidate only; rights HOLD; CQ/LC NOT_RUN; full depth, G03/G04/G05 and release not accepted."
+  ],
+  "next": "V01 exact tuple integrated validation; no release.",
+  "content_digest": "45a62096e1c7c10e3699aaff4a56d594a5fed4342087a60a9857cc9179a6d379",
+  "reviewed_input_rebind": [
+    {
+      "reviewed_input": {
+        "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+        "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+        "receipt_path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+        "receipt_sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d",
+        "task_id": "DB01",
+        "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e"
+      },
+      "actual": {
+        "task_id": "DB01",
+        "receipt_id": "TASK:DB01:DB01-FORMAL-01",
+        "content_digest": "1475c7c32cec38ef5700762e6ccd81b1a230d701bbc7edb12ff26fc53ca4cae0",
+        "version": "64cd256d769c2a2c44eeeca93e57f57c9ea6389e",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/DB01/DB01-FORMAL-01.json",
+            "sha256": "649cfd8c873666ed4293fec0a4563f14d3e567a9e903ad760d06c2b8ef1d969d"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+        "qualification_content_digest": "87380c72a3f6d5c46181b57095ddfd84a5fa93c4193a6aa53b72172823d32f0b",
+        "qualification_receipt": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae",
+        "receipt_id": "TASK:K03:K03-FORMAL-03",
+        "receipt_path": "evidence/tasks/K03/K03-FORMAL-03.json",
+        "receipt_sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de",
+        "task_id": "K03",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+      },
+      "actual": {
+        "task_id": "K03",
+        "receipt_id": "TASK:K03:K03-FORMAL-03",
+        "content_digest": "52c5799722dce8dbce8e32d42495911c9d423f88b77c3935f6ec0a578e8de715",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K03/K03-FORMAL-03.json",
+            "sha256": "ffbc02d9f2062341fcfd9a6c465204f828fecae5ef574d3e12ea2e6ec6d136de"
+          },
+          {
+            "path": "evidence/tasks/K03/K03-QUALIFICATION-01.json",
+            "sha256": "f2a367c804db010f62ab2cc976806ae608b31a52562227c343aa2ef5e9418dae"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+        "qualification_content_digest": "8f7d4d6e00eb6cbb7464de0135eeccbc2529cc06cf060c6e869b19f671229e14",
+        "qualification_receipt": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee",
+        "receipt_id": "TASK:K04:K04-FORMAL-03",
+        "receipt_path": "evidence/tasks/K04/K04-FORMAL-03.json",
+        "receipt_sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905",
+        "task_id": "K04",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760"
+      },
+      "actual": {
+        "task_id": "K04",
+        "receipt_id": "TASK:K04:K04-FORMAL-03",
+        "content_digest": "644e070a305277eff7c892819039b8c25972faba6f28739c699e4f537eb36e79",
+        "version": "4b35b500aaccac4787c6fb68fa950199ac34a760",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K04/K04-FORMAL-03.json",
+            "sha256": "d31892652d0c9d44683db1c147c70c7c5e21b65a5136e044633cf80e67d65905"
+          },
+          {
+            "path": "evidence/tasks/K04/K04-QUALIFICATION-01.json",
+            "sha256": "d29f963ef98258d3e94aac0f190ff9e4996f2ec58bb7a7aef4d54146e4cc2dee"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+        "qualification_content_digest": "446a8c541c6882450a4e9ef5af6b6ee6b64b036219e56bc92fc76a83cf4eb530",
+        "qualification_receipt": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+        "qualification_receipt_sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97",
+        "receipt_id": "TASK:K07:K07-FORMAL-02",
+        "receipt_path": "evidence/tasks/K07/K07-FORMAL-02.json",
+        "receipt_sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64",
+        "task_id": "K07",
+        "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3"
+      },
+      "actual": {
+        "task_id": "K07",
+        "receipt_id": "TASK:K07:K07-FORMAL-02",
+        "content_digest": "a3006a791a9616484b8f6dd82ee69a9fb2792606dd995fff70629fec985c86a6",
+        "version": "504d3ba161cc8aaac2e50b3c9ccdcee06fcd56a3",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K07/K07-FORMAL-02.json",
+            "sha256": "961dffb7370f3b1e629ed94840b2bfc6f782184569aaa3aa4fb60054fea15e64"
+          },
+          {
+            "path": "evidence/tasks/K07/K07-QUALIFICATION-02.json",
+            "sha256": "7075fa433d8ce3a57d27a938fc0aa2f9be83342b1b1519d289838e0e34309c97"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+        "qualification_content_digest": "4ba06537a9649d5892bc2b08bda1c8df4c536c07cc6043f11f0abcef17cffd94",
+        "qualification_receipt": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e",
+        "receipt_id": "TASK:K12:K12-FORMAL-01",
+        "receipt_path": "evidence/tasks/K12/K12-FORMAL-01.json",
+        "receipt_sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2",
+        "task_id": "K12",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a"
+      },
+      "actual": {
+        "task_id": "K12",
+        "receipt_id": "TASK:K12:K12-FORMAL-01",
+        "content_digest": "7f17c5de11f6c368626d4e3f05d62638d047272123b2d722a3bfb54dd1557ef4",
+        "version": "d4e50eebb8605f7326b2b5d6afc3a9c3edce656a",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/K12/K12-FORMAL-01.json",
+            "sha256": "81884ca98ef0c2e0eb7e16588f2b81be8e6dc9ed37bbd462f02e47892283fdd2"
+          },
+          {
+            "path": "evidence/tasks/K12/K12-QUALIFICATION-01.json",
+            "sha256": "332b018ea9b6339fc3b3fd69abbd95b1b0e2c855b69e9a22ed34a73f22801d6e"
+          },
+          {
+            "path": "knowledge/v0.1.0/trace-adaptation-resources-r1/K12/records-02.jsonl",
+            "sha256": "4b0827087ac8ba07750e72f65721ed8b7646fbd9b2b49d34f4b593d7b7e15b78",
+            "stable_id": "K12.01.03.TR.01",
+            "record_sha256": "99153cd993ef252b7a70414c4c19225550c9ab4d24b0f3f48fa6a3a0560d3f8d",
+            "kind": "Claim",
+            "package_version": "0.1.0-trace-adaptation-resources-candidate-1"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "d3c1862f40b7cd81f468c81b6960d5e1df21f1ae0d3f5585ea33ec02b84d95b9",
+        "qualification_content_digest": "3f13a908f9145b188cb262ea3dfd940d82051c0b864663a531639593dedd7b35",
+        "qualification_receipt": "evidence/tasks/P03/P03-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "ec625fd5da53ad0d8e95cf99288974bf33fa85333fb51b5a5a4ccc9ae4ffa3ca",
+        "receipt_id": "TASK:P03:P03-FORMAL-03",
+        "receipt_path": "evidence/tasks/P03/P03-FORMAL-03.json",
+        "receipt_sha256": "98b13eb9fcb499a425b8f4abac3830b61510707e62d953c0e4001372d7d4df3e",
+        "task_id": "P03",
+        "version": "1510e686cba5aaabcd376c718322da6239e8604c"
+      },
+      "actual": {
+        "task_id": "P03",
+        "receipt_id": "TASK:P03:P03-FORMAL-04",
+        "content_digest": "ab5bf1f78c76457ec89ef39d0ef92bb653941e8e495f3a0fe4ced459822d7098",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/P03/P03-FORMAL-04.json",
+            "sha256": "a5ca952df6ed9342574fe25b9c07a93be376d40a8692d050c2e10c1b62e57c77"
+          },
+          {
+            "path": "evidence/tasks/P03/P03-QUALIFICATION-02.json",
+            "sha256": "3c48c61488319e83eb95217d42a32b71111099019b5d65454e041142c468b299"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P03.jsonl",
+            "sha256": "98e06febfbc9d01a872050063b10d08a8aeb50ba5c815455ee35bfccf9f904b7",
+            "stable_id": "P03.PRODUCTION",
+            "record_sha256": "36bbc2575167c82da733b7ebd85145bb1d54f6c116e35e643386eabc9b083862",
+            "kind": "Activity",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "REVIEWED_VERSION_ONLY_MIGRATION"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "c1f96b3d5b89f926dcbb40740c84634f33fec45180a1b149a6a410b049223694",
+        "qualification_content_digest": "f3c4177a8453da571a57188985e243c83781a56dada76b6247822ff1adbe58e3",
+        "qualification_receipt": "evidence/tasks/P04/P04-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "d15883bd9f147ff7ad26d396946b67843d8a25fabe12bfa79e55b8b3fd6465f2",
+        "receipt_id": "TASK:P04:P04-FORMAL-02",
+        "receipt_path": "evidence/tasks/P04/P04-FORMAL-02.json",
+        "receipt_sha256": "9c27d1e96d2dd3db2b59a366bd558249c7394955bdf85579b879107064e0909e",
+        "task_id": "P04",
+        "version": "1510e686cba5aaabcd376c718322da6239e8604c"
+      },
+      "actual": {
+        "task_id": "P04",
+        "receipt_id": "TASK:P04:P04-FORMAL-03",
+        "content_digest": "4d07c441fd4618c45301a78cc6b03725e913a6371a0152443e18a45c64b5969d",
+        "version": "57b265594b4a40dc2b0c8798f8ae930424155074",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/P04/P04-FORMAL-03.json",
+            "sha256": "885098bc65cbc31bb41166bdc0342bb4b5af0ce9e7e53ca0779128c2819846b2"
+          },
+          {
+            "path": "evidence/tasks/P04/P04-QUALIFICATION-02.json",
+            "sha256": "f904ff3e982d088836aecd1675bf66e37302bfe9302d7ad08d616ef503ba5c18"
+          },
+          {
+            "path": "knowledge/v0.1.0/learning-process-cumulative-r4/P04.jsonl",
+            "sha256": "d83f99c73edabbf3bb1c37562a9b4d1ea139455ddedc36b35b58ec10ec651804",
+            "stable_id": "P04.FLOW",
+            "record_sha256": "b91570dc61c88fc2cd6d4792ad86daf34952c8571437780332046f06b8caaf61",
+            "kind": "FlowSpec",
+            "package_version": "0.1.0-process-candidate-4"
+          }
+        ]
+      },
+      "proof": "REVIEWED_VERSION_ONLY_MIGRATION"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+        "qualification_content_digest": "2c22aaba2a044757fc41f532f3f1fa9f67658ece9a51ef08af5c346e6391c811",
+        "qualification_receipt": "evidence/tasks/H03/H03-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "707ebe7338cca318ce0367c19f4687bc2c7ea288223370d2ca1107e650303640",
+        "receipt_id": "TASK:H03:H03-FORMAL-02",
+        "receipt_path": "evidence/tasks/H03/H03-FORMAL-02.json",
+        "receipt_sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c",
+        "task_id": "H03",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H03",
+        "receipt_id": "TASK:H03:H03-FORMAL-02",
+        "content_digest": "d30b1838bb336fe6ec32bf3df5bf5cee8bd1a5e5a522314e96767837dfbb830c",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H03/H03-FORMAL-02.json",
+            "sha256": "36f4dfe2569dc4d1cb4e55ffa549294244877a73e002debcd593727b11fd179c"
+          },
+          {
+            "path": "evidence/tasks/H03/H03-QUALIFICATION-01.json",
+            "sha256": "707ebe7338cca318ce0367c19f4687bc2c7ea288223370d2ca1107e650303640"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H03.jsonl",
+            "sha256": "0c5a7de1b1e5ce8267cd311ce075a87157127b12c61eb773a71805c8ea24687b",
+            "stable_id": "H03.01.01.R1.C01",
+            "record_sha256": "d3b63a798321b99beabb114f3201beeeea86531ee7e005dcdb90db558206a7a6",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "receipt_path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+        "receipt_sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8",
+        "task_id": "IF01",
+        "version": "04263009493a994501520be08364b32329c93179"
+      },
+      "actual": {
+        "task_id": "IF01",
+        "receipt_id": "TASK:IF01:IF01-FORMAL-01",
+        "content_digest": "8246a9a59db1a2bcf1ece98339f678f1539768f803cf4a7a61728c6fdf43b55e",
+        "version": "04263009493a994501520be08364b32329c93179",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/IF01/IF01-FORMAL-01.json",
+            "sha256": "716af8b94afee8356bbb6b10f1dafe730b72067a989463b7cdd911181f9b55a8"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+        "qualification_content_digest": "644e1ba00783cdd6bf94fff4f776df1d914d9ffc5228257318cffb965b0c9a93",
+        "qualification_receipt": "evidence/tasks/H04/H04-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "63a5cd4201f15d97c7c3b076414835dbc137d84fe94106d5d84f57c22a639bf7",
+        "receipt_id": "TASK:H04:H04-FORMAL-02",
+        "receipt_path": "evidence/tasks/H04/H04-FORMAL-02.json",
+        "receipt_sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3",
+        "task_id": "H04",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H04",
+        "receipt_id": "TASK:H04:H04-FORMAL-02",
+        "content_digest": "bb40c7148373363f3fdf131140952ceaa99a503f5863a390be8d735ddb81ec3e",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H04/H04-FORMAL-02.json",
+            "sha256": "40e07a8b9b6e9eaf90dd6674eb9fe3ddaf30b0f2b529ee35471c9f0f0dda25f3"
+          },
+          {
+            "path": "evidence/tasks/H04/H04-QUALIFICATION-01.json",
+            "sha256": "63a5cd4201f15d97c7c3b076414835dbc137d84fe94106d5d84f57c22a639bf7"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H04.jsonl",
+            "sha256": "ca55f5b74882ca5b2d861680b44d9f87fa726acdee4ecb23002bfb1522a6092e",
+            "stable_id": "H04.01.02.R1.C01",
+            "record_sha256": "8851616eb1a8e3310a86a72c5d0368a6ba6045b95e58839795e2221604f8614e",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+        "qualification_content_digest": "e2dcc46a1365151aa9e7c46ab22ad7bc1fa584a34958dfa8e84a8cd4d3745116",
+        "qualification_receipt": "evidence/tasks/H05/H05-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "99e6850eb119c05c995e94e87e0de3409f2a026bcead316613c5d260100a1144",
+        "receipt_id": "TASK:H05:H05-FORMAL-01",
+        "receipt_path": "evidence/tasks/H05/H05-FORMAL-01.json",
+        "receipt_sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567",
+        "task_id": "H05",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H05",
+        "receipt_id": "TASK:H05:H05-FORMAL-01",
+        "content_digest": "51778396aa24948c42b0438f5cffe290e414aaa7c2d70745d2ffd95fd9fbb27d",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H05/H05-FORMAL-01.json",
+            "sha256": "923dcde056331b6de78312934c8c584e3e6ada04440a16f0c14d13d2db7d7567"
+          },
+          {
+            "path": "evidence/tasks/H05/H05-QUALIFICATION-01.json",
+            "sha256": "99e6850eb119c05c995e94e87e0de3409f2a026bcead316613c5d260100a1144"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+            "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+            "stable_id": "H05.01.01.R2.C01",
+            "record_sha256": "b27b3df85e107f57e2a73fd0c4ba607590816e49877c8826a7f8442a45a972ed",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H05.jsonl",
+            "sha256": "e24c6169b744762e53edfbd4319c3e52d2d2849cafdfad4f1662a6e4566bd12e",
+            "stable_id": "H05.RFC.SEQUENCE",
+            "record_sha256": "679ae5f7dae97f568c0992949402f2db5284f47345643cca3683eacccb76beb7",
+            "kind": "Element",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+        "qualification_content_digest": "d131f92ff5d0e80464eb8977406fb113ae49bb5e7c58f271992c0eeb823d8582",
+        "qualification_receipt": "evidence/tasks/H06/H06-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "daba78cedd3b5a9c24e610d7694ee84de4267c49ef78a54b6859f3c0f8348c09",
+        "receipt_id": "TASK:H06:H06-FORMAL-01",
+        "receipt_path": "evidence/tasks/H06/H06-FORMAL-01.json",
+        "receipt_sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87",
+        "task_id": "H06",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H06",
+        "receipt_id": "TASK:H06:H06-FORMAL-01",
+        "content_digest": "e8ee531a21bdab606dc8dfcf44201195fd6a60e634dae63d2e620d40d568979d",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H06/H06-FORMAL-01.json",
+            "sha256": "8c01ec8a482f553eae0171df86a2eb4521268a9f14b86c91ddf42c404fad1e87"
+          },
+          {
+            "path": "evidence/tasks/H06/H06-QUALIFICATION-01.json",
+            "sha256": "daba78cedd3b5a9c24e610d7694ee84de4267c49ef78a54b6859f3c0f8348c09"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.01.02.R2.C01",
+            "record_sha256": "6c4b4ac21bdc71052c940063a3c0b8d3dffa14d62a89920ed7a7ad45acc23d57",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.CONFIRM.OBJECT",
+            "record_sha256": "88a1326ec3a625df94673ffa71f68f6013741cb421fa92ff3dd707f0d2e0500d",
+            "kind": "LearningObject",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.CONFIRM.OBS",
+            "record_sha256": "2efe3d25bdaa40b42018868657bcafff6af0e6aa570082034406197843031681",
+            "kind": "ObservationSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.CONFIRM.SKILL",
+            "record_sha256": "57d65c6b05b4485c2af2d1163e66c7b2aab8bfc6d9c8536eeb89df5a4605c641",
+            "kind": "SkillType",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.CONFIRM.TASK",
+            "record_sha256": "20cecfd561c68d22ba455004538761f4221597058968927c44a0e21eadfd2d43",
+            "kind": "TaskSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.LISTENING",
+            "record_sha256": "d1792ae86387d70f545379911a4fa681f8635acd77a73a28b779c81976e3c6ac",
+            "kind": "TaskSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.LISTENING.OBJECT",
+            "record_sha256": "661d19deae2a357d0e143c4213357b77c0c14b3e569f17482d3ef5dd3483d371",
+            "kind": "LearningObject",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.LISTENING.OBS",
+            "record_sha256": "c5da7b1067b47e62c0bcd07fc21ea67850abda80af1a6895754f1cc918969898",
+            "kind": "ObservationSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.LISTENING.SKILL",
+            "record_sha256": "a2f2fbebdc6cd703b3a08d12feebeccbe3f0e2bfca23e3b4c64b22ad0d5c561e",
+            "kind": "SkillType",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.READING",
+            "record_sha256": "e51421fa96370022152c3f574f80ca13195bc04847ba5afaebb401da124abc95",
+            "kind": "TaskSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.READING.OBJECT",
+            "record_sha256": "7c9041a2254e96651f85629a0f7b93b920ebde983b5ba81ca39b79e0d60608f9",
+            "kind": "LearningObject",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.READING.OBS",
+            "record_sha256": "3cb6d7dd2caac2dcd69569b427694ecc8e8b40502d24eb41322f393774f9d411",
+            "kind": "ObservationSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.READING.SKILL",
+            "record_sha256": "877ed01d246e71801e5dcd2477e027b163413ac8e11af1fab947660c4e5f35a9",
+            "kind": "SkillType",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.SPEAKING",
+            "record_sha256": "1921c8f81bb1e6ed454627526df13f6d38966a26ce09b65bf75261c83dce4085",
+            "kind": "TaskSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.SPEAKING.OBJECT",
+            "record_sha256": "895f7ddb90ab1d7f6ab8690c701ecdbce4eb5b8ec831a1fa8a7321ce194b2b31",
+            "kind": "LearningObject",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.SPEAKING.OBS",
+            "record_sha256": "f22bd9c5f5086f3d36c5aaf6faa8733ff1912ab286eeb06670e0ee94006220a0",
+            "kind": "ObservationSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.SPEAKING.SKILL",
+            "record_sha256": "740caa9340111881585e158f6901a65a9785e48cede3df3555959276c4020f15",
+            "kind": "SkillType",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.WRITING",
+            "record_sha256": "21e16364f9ec0cb51a00187f10253c7f560b3cb0339de13013ad85a83a37577d",
+            "kind": "TaskSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.WRITING.OBJECT",
+            "record_sha256": "42b934e4404084f267ea594fd0c9208d35f17ca9b36bfb0dc69910a97bc31fbe",
+            "kind": "LearningObject",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.WRITING.OBS",
+            "record_sha256": "38414d8e2983a2661037ace55b1d0a04732bc61e0488f80a486d52169af390f2",
+            "kind": "ObservationSpec",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H06.jsonl",
+            "sha256": "452c1ba5366083f8ba0312aca65fd77fc478405f9a90d0aec1c07b8cc4c67e89",
+            "stable_id": "H06.TASK.WRITING.SKILL",
+            "record_sha256": "61e38a17274138b47eba8feb2922074ffc7a09aab26f27b770c8a0a081ad087f",
+            "kind": "SkillType",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    },
+    {
+      "reviewed_input": {
+        "content_digest": "d2da238163799f54941e02e0aa10a88a6637c2798cb35d61a612a78f9212fdc6",
+        "qualification_content_digest": "4583d4aeb18dcbff590ea13f3ca215ad36ae31fc0c13c8380e18731173e1238d",
+        "qualification_receipt": "evidence/tasks/H07/H07-QUALIFICATION-01.json",
+        "qualification_receipt_sha256": "8d5f64298f86e6821d34de4e2df7bc444ce5d12eed64aee967f987057fe3a128",
+        "receipt_id": "TASK:H07:H07-FORMAL-01",
+        "receipt_path": "evidence/tasks/H07/H07-FORMAL-01.json",
+        "receipt_sha256": "0facd37fe97f559658bd803eddde2a0cc40934ac2538aeabce246c3a4ca25c5f",
+        "task_id": "H07",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec"
+      },
+      "actual": {
+        "task_id": "H07",
+        "receipt_id": "TASK:H07:H07-FORMAL-01",
+        "content_digest": "d2da238163799f54941e02e0aa10a88a6637c2798cb35d61a612a78f9212fdc6",
+        "version": "c659b5952a4d1f6e4e6c6675d9104be171f047ec",
+        "specific_refs": [
+          {
+            "path": "evidence/tasks/H07/H07-FORMAL-01.json",
+            "sha256": "0facd37fe97f559658bd803eddde2a0cc40934ac2538aeabce246c3a4ca25c5f"
+          },
+          {
+            "path": "evidence/tasks/H07/H07-QUALIFICATION-01.json",
+            "sha256": "8d5f64298f86e6821d34de4e2df7bc444ce5d12eed64aee967f987057fe3a128"
+          },
+          {
+            "path": "knowledge/v0.1.0/chinese-cumulative-r2/H07.jsonl",
+            "sha256": "7e74acf6151020c5ad83a88be88e5c734db0a5c210a9444153085043223fac14",
+            "stable_id": "H07.03.03.R2.C01",
+            "record_sha256": "8d94be9bee326e96f8e82928eb17f88c5aa0c3bedfd7e797ee7e4bd9ba3ff289",
+            "kind": "Claim",
+            "package_version": "0.1.0-chinese-cumulative-candidate-2"
+          }
+        ]
+      },
+      "proof": "EXACT_REGISTERED_RECEIPT"
+    }
+  ],
+  "previous_receipt": null
+}
