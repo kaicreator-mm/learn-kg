@@ -20,3 +20,7 @@ design.json、p09-remediation.json、coverage.json 逐原始需求保留受限�
 原 P01–P03 的额外专业限制和覆盖缺口继承，不因版本迁移而消失。P04–P10 中的布尔字段是明确提供的合成事实而非已实现的现实分类器；具体案例仍限各自专用方法。P04 支持逻辑汇合，不承诺通用并发、跨进程执行或实际调用下级 FlowSpec。P09 的 PolicySpec 不再有 SUGGEST 路由；只有内部精确 FlowSpec 同输入求值 COMPLETE 后才允许 REQUEST_OBSERVATION（ADVICE_ONLY），不推断保持、迁移、掌握或因果效果。P10 检查点摘要来自可信调用者的明确 pin，摘要本身不是身份认证。
 
 当前状态：PREPARATION_ONLY；P09-only independent delta review PENDING；不写资格收据、不更新 Task DAG 注册、不创建 PR、不合并。
+
+### P09 residual policy identity boundary (#26)
+
+通用 policy_eval 仅接受当前 P07.POLICY 完整类型引用，从已校验的只读 SQL 导入读取规范对象；拒绝调用者提供的规则对象、P09 类型引用、缺失或外域条件引用和早期 SUGGEST。P07 保留原有有限激励建议语义，P09 专用 wrapper 与全部 canonical 记录不变。18 项 policy-gate 单元测试（含 2 个新测试方法及多个对抗子例），8 项身份时间测试、37 项 importer 测试、360 个 SQL builder cases 通过；不构成独立审核或资格。

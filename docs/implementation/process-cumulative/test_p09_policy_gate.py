@@ -340,7 +340,7 @@ class P09PolicyGateTests(unittest.TestCase):
             "evidence_separated": True, "goal_reviewed": True,
             "selected": "ANY",
         }
-        self.assertEqual(process_build.policy_eval(self.importer, self.policy, forged), "CLARIFY")
+        self.assertEqual(process_build.policy_eval(self.importer, self.policy, forged), "HOLD")
         malicious_policy = copy.deepcopy(self.policy)
         malicious_policy["rules"].append({
             "condition_ref": self.policy["rules"][0]["condition_ref"],
@@ -389,6 +389,46 @@ class P09PolicyGateTests(unittest.TestCase):
         for connection in self.importer.connections.values():
             rows = connection.execute("PRAGMA database_list").fetchall()
             self.assertTrue(all(row[2] == "" for row in rows), rows)
+
+    def test_17_generic_entry_rejects_mutable_policy_objects_and_p09_refs(self):
+        forged_input = {"exit": False, "declined": False, "paused": False,
+                        "selected": "FORGED_POLICY_ROUTE"}
+        foreign = process_build.ref("P07", "ConditionSpec", "P07.GUARD.EXIT", self.version)
+        for condition in (None, foreign, self.policy["rules"][0]["condition_ref"]):
+            policy = copy.deepcopy(self.policy)
+            policy["rules"] = [{"action": "SUGGEST", "condition_ref": condition,
+                                "priority": 1, "reason": "FORGED_POLICY_ROUTE"}]
+            for label in ({}, {"owner": "P07", "kind": "PolicySpec",
+                               "stable_id": "P07.POLICY", "version": self.version,
+                               "package_id": "learning-process"}):
+                with self.subTest(condition=condition, label=label):
+                    self.assertEqual(process_build.policy_eval(self.importer, {**policy, **label},
+                                                               forged_input), "HOLD")
+        for ref in (self.policy_ref, {**self.policy_ref, "owner": "P07"},
+                    {**self.policy_ref, "stable_id": "P07.POLICY"},
+                    {**self.policy_ref, "kind": "ConditionSpec"}, None):
+            with self.subTest(ref=ref):
+                self.assertEqual(process_build.policy_eval(self.importer, ref, forged_input), "HOLD")
+
+    def test_18_p07_canonical_tuple_regression_and_untrusted_route_rejection(self):
+        ref = process_build.ref("P07", "PolicySpec", "P07.POLICY", self.version)
+        canonical = load_record(self.importer, ref)
+        # Fixed STOP priority from the declared P07 policy, not a builder expected result.
+        self.assertEqual(process_build.policy_eval(self.importer, ref, {"exit": True}), "STOP")
+        for bad_ref in ({**ref, "version": "0.1.0-process-candidate-1"},
+                        {**ref, "package_id": "foreign"},
+                        {**ref, "rules": canonical["rules"]}):
+            self.assertEqual(process_build.policy_eval(self.importer, bad_ref, {"exit": True}), "HOLD")
+        for bad_condition in (None, self.policy["rules"][0]["condition_ref"]):
+            altered = copy.deepcopy(canonical)
+            altered["rules"][0]["condition_ref"] = bad_condition
+            with patch.object(process_build, "load_record", return_value=altered):
+                self.assertEqual(process_build.policy_eval(self.importer, ref, {"exit": True}), "HOLD")
+        altered = copy.deepcopy(canonical)
+        altered["rules"][0]["action"] = "SUGGEST"
+        with patch.object(process_build, "load_record", return_value=altered):
+            self.assertEqual(process_build.policy_eval(self.importer, ref, {"exit": True}), "HOLD")
+
 
 
 if __name__ == "__main__":

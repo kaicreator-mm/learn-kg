@@ -769,7 +769,7 @@
       "import_receipt_sha256": "e606598e155a3c80724031f375167500628306fd533ebd18ead4f8a8ce9f4d3e",
       "migration_sha256": "5d2b3286d45d5cf89c04b35cec4c157b723915bc34bf4880c3c36e30c58946e7",
       "bindings_sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391",
-      "policy_gate_tests_sha256": "3ef96d30ad7e63e56d88d1e262361514f3e08c1269b85e0e8ae25d84cdd64119",
+      "policy_gate_tests_sha256": "839ad917a10607b55a32bc4ccea861af71429b04756004b6332af37a333ef0f1",
       "p09_policy_gate_fixtures_sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa"
     },
     "validation": {
@@ -814,8 +814,8 @@
       "preserved_p01_p08_p10_byte_identity": "PASS",
       "git_diff_check": "PASS",
       "policy_gate_tests": {
-        "passed": 16,
-        "total": 16
+        "passed": 18,
+        "total": 18
       }
     },
     "package_records": 1401,
@@ -823,8 +823,22 @@
     "p09_policy_gate_cases": 12,
     "policy_gate_status": "SUGGEST_DISABLED_UNTIL_SUPPORTED_NONFORGEABLE_FLOW_COMPLETION_BINDING",
     "policy_gate_tests": {
-      "passed": 16,
-      "total": 16
+      "passed": 18,
+      "total": 18
+    },
+    "policy_identity_boundary_delta": {
+      "review_base": "c94228990766795fcb5955e1ad9bfceb38afeea7",
+      "finding_issue": 26,
+      "finding_comment": 7235816275,
+      "status": "IMPLEMENTED_PREPARATION_ONLY",
+      "generic_entry": "EXACT_P07_POLICY_TYPED_REFERENCE_ONLY_CANONICAL_SQL_LOAD",
+      "p09_entry": "UNCHANGED_P09_POLICY_WRAPPER_NO_SUGGEST",
+      "builder_cases": 360,
+      "importer_tests": 37,
+      "policy_gate_tests": 18,
+      "identity_time_tests": 8,
+      "independent_review": "PENDING",
+      "scope": "No canonical record/manifest/fixture/result or Task DAG change; no general runtime, rights or qualification."
     }
   }
 }

@@ -354,7 +354,7 @@ def main():
    elif x.get('scenario')=='CONCRETE_FINITE':
     y=evaluate(im,a,x,f['owner'],load_record)
    elif f['owner']=='P07':
-    y=policy_eval(im,a,x)
+    y=policy_eval(im,t,x)
    else:
     y=flow_eval(im,a,x,f['owner'])
    assert y==f['expected'],(f['case_id'],y,f['expected'],x);results.append(dict(owner=f['owner'],case_id=f['case_id'],actual=y))
@@ -485,21 +485,31 @@ def flow_eval(im,f,x,owner=None):
     state=sorted(join-members)[0];continue
   state=z['to_step']
  return 'PAUSE' if checkpoint else terms.get(state,'HOLD')
-def policy_eval(im,p,x):
- # P09 PolicySpec is intentionally non-suggesting. The generic evaluator never
- # executes its observation route; only p09_policy_eval() may do so after an
- # internal same-version/same-input FlowSpec re-evaluation.
- rules=p.get('rules')
- if not isinstance(rules,list):return 'HOLD'
- p09_policy=any(
-  isinstance(r,dict) and isinstance(r.get('condition_ref'),dict)
-  and r['condition_ref'].get('owner')=='P09'
-  for r in rules
- )
- if p09_policy:
-  if any(not isinstance(r,dict) for r in rules):return 'HOLD'
-  if any(r.get('action')=='SUGGEST' for r in rules):return 'HOLD'
-  return 'CLARIFY'
+def policy_eval(im,policy_ref,x):
+ # Bounded P07-only entry point. Never infer policy ownership from mutable
+ # rule payloads. Resolve the canonical policy using the complete typed tuple
+ # from the already validated, read-only SQL import. No caller policy object.
+ expected=ref('P07','PolicySpec','P07.POLICY','0.1.0-process-candidate-2')
+ if type(policy_ref) is not dict or policy_ref!=expected or type(x) is not dict:return 'HOLD'
+ try:
+  p=load_record(im,expected)
+  if type(p) is not dict or p.get('effect')!='ADVICE_ONLY' or p.get('policy_type')!='MOTIVATION':return 'HOLD'
+  rules=p.get('rules')
+  if type(rules) is not list or not rules:return 'HOLD'
+  priorities=set()
+  early_actions={0:'STOP',1:'DEFER',2:'PAUSE'}
+  for r in rules:
+   if type(r) is not dict or type(r.get('priority')) is not int:return 'HOLD'
+   priority=r['priority'];condition=r.get('condition_ref')
+   if priority<0 or priority in priorities:return 'HOLD'
+   priorities.add(priority)
+   if type(condition) is not dict:return 'HOLD'
+   guard_id=condition.get('stable_id')
+   if type(guard_id) is not str or not guard_id.startswith('P07.GUARD.'):return 'HOLD'
+   if condition!=ref('P07','ConditionSpec',guard_id,expected['version']):return 'HOLD'
+   if r.get('action')!=early_actions.get(priority,'SUGGEST'):return 'HOLD'
+ except Exception:
+  return 'HOLD'
  if x.get('exit') is not True and x.get('exit') is not False:return 'HOLD'
  if x.get('exit') is not True and type(x.get('declined')) is not bool:return 'HOLD'
  y=dict(x);y['pause_without_resume']=x.get('paused') is True and x.get('resume_requested') is not True
