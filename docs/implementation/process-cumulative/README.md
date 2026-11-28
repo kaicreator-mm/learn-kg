@@ -9,6 +9,7 @@
 - P08：估计与不确定性、有限目标/预算/可及性/构念/权限筛选、本人选择及结果记录；具体候选集不自动执行，无可行或未知时澄清/延期。
 - P09：即时、延迟、陌生任务迁移三条观察必须携带相同typed LEARNER_SUBJECT identity对象（稳定subject_id及identity_version）；三个event time固定为UTC epoch seconds/SECOND。recorded_at独立记录，只在recording clock stream内检查顺序，不与observed_at跨时钟比较。延迟由时间戳相减计算，至少86,400秒，novel严格晚于delayed；86,400秒仅是本候选协议边界，不是普遍或最优间隔。身份相等仅为协议绑定，不是真实身份认证；时钟来源准确度未验证；不声称真实延迟保持、迁移或掌握效果。
 - P09 policy-to-flow gate：现有DB01 PolicySpec/CompositionSpec与IF01 typed refs无法表达绑定精确FlowSpec身份/版本、flow instance、input digest和COMPLETE结果的不可伪造依赖。因此移除P09 PolicySpec的SUGGEST规则；只保留ADVICE_ONLY REQUEST_OBSERVATION。专用wrapper从SQL重新加载同版本的精确P09.FLOW，并对同一input对象内部求值；不接受caller flow_result/flow_ref/flow_instance_id/input_digest。HOLD/STOP/PAUSE/FAILED/缺失/未知/错配均不进入REQUEST_OBSERVATION路径。未来若要恢复SUGGEST，必须先扩展受支持的canonical composition contract并重新独立审核。
+- P09 policy-to-flow生成产物在独立detached worktree重放，P09.jsonl、manifest、fixtures、results、import receipt五项SHA256全部一致（5/5）；这只证明确定性重放，不代表独立审核或资格。
 - P09当前共93项有限案例，其中38项身份/时间正反例、12项policy-to-flow gate案例；8项原身份/时间边界测试和16项新policy gate测试通过，38/38独立参考计算对照通过。知识导入器37/37，IF01有限接口验证通过；所有结果均为受限合成协议验证，不是学习效果资格。
 - P10：跨日计划与用户选择、精确版本及检查点、稳定事件 ID、冲突拒绝、预算、显式退出。具体检查点合成回放不构成真实持久性/事务性、认证或后台授权。
 

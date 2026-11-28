@@ -170,6 +170,9 @@ def main():
     assert files['P09.jsonl']['sha256'] != base_files['P09.jsonl']['sha256']
 
     coverage = load(DOC / 'coverage.json')
+    replay = coverage['p09_remediation']['validation']['deterministic_replay']
+    assert replay['status'] == 'VERIFIED_ISOLATED_WORKTREE_EXACT_REPLAY'
+    assert replay['artifact_count'] == 5
     p09_coverage = next(x for x in coverage['modules'] if x['owner'] == 'P09')
     assert p09_coverage['records'] == 221
     assert p09_coverage['finite_cases'] == 93 and p09_coverage['concrete_cases'] == 38 and p09_coverage['policy_gate_cases'] == 12

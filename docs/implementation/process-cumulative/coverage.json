@@ -799,8 +799,16 @@
         "negative_rejected": 17
       },
       "deterministic_replay": {
-        "status": "PENDING",
-        "artifact_count": 0
+        "status": "VERIFIED_ISOLATED_WORKTREE_EXACT_REPLAY",
+        "artifact_count": 5,
+        "artifact_paths": [
+          "knowledge/v0.1.0/learning-process-cumulative-r2/P09.jsonl",
+          "knowledge/v0.1.0/learning-process-cumulative-r2/learning-process.manifest.json",
+          "docs/implementation/process-cumulative/fixtures.json",
+          "docs/implementation/process-cumulative/results.json",
+          "docs/implementation/process-cumulative/import-receipt.json"
+        ],
+        "method": "Build in a detached worktree at the exact implementation commit; compare all five SHA256 values before and after replay."
       },
       "p09_remediation_invariants": "PASS",
       "preserved_p01_p08_p10_byte_identity": "PASS",
