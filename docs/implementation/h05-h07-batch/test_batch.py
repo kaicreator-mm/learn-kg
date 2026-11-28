@@ -6,7 +6,7 @@ HERE=Path(__file__).resolve().parent
 class Tests(unittest.TestCase):
  def test_all_finite(self):
   d=json.loads((HERE/'professional-design.json').read_text());rules={c['id']:c['rule'] for c in d['claims']}
-  self.assertEqual(len(d['cases']),64)
+  self.assertEqual(len(d['cases']),74)
   for z in d['cases']:self.assertEqual(evaluate(rules[z['claim']],z['input']),z['expected'],z['id'])
  def test_unknown_shape(self):
   for c in json.loads((HERE/'professional-design.json').read_text())['claims']:
@@ -36,6 +36,11 @@ class Tests(unittest.TestCase):
   self.assertEqual(evaluate('standard_mapping',x),'UNKNOWN_HOLD')
   for v in (True,1,None,'false'):self.assertEqual(evaluate('standard_mapping',dict(x,same_label_only=v)),'UNKNOWN_HOLD')
   self.assertEqual(evaluate('standard_mapping',dict(x,same_label_only=False)),'LINK_EVIDENCE_REVIEW_REQUIRED')
+ def test_cross_standard_identity(self):
+  x=dict(framework='PROJECT_EVIDENCE_GATE',query='CROSS_STANDARD_MAPPING',source_standard='HSK',source_version='3.0',target_standard='HSK',target_version='3.0',same_label_only=False,empirical_link_evidence=True,mapping_conditions_verified=True)
+  for v in ('3.0','2.0','unknown',None):self.assertEqual(evaluate('standard_mapping',dict(x,target_version=v)),'HOLD')
+  for v in ('hsk',' HSK','HSK 3.0','UNKNOWN',None,True):self.assertEqual(evaluate('standard_mapping',dict(x,target_standard=v)),'HOLD')
+  self.assertEqual(evaluate('standard_mapping',dict(x,target_standard='CEFR',target_version='2020')),'LINK_EVIDENCE_REVIEW_REQUIRED')
  def test_scope_counts(self):
   x=dict(source='MOE_2021_04_02',standard='GF0025-2021',query='COVERAGE_FROM_COUNTS',source_counts_equal=True)
   self.assertEqual(evaluate('gf_totals',x),'HOLD')

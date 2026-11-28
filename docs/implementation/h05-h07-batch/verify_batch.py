@@ -62,7 +62,7 @@ def main():
    assert a==len(im.packages[k][3]) and b==len(links[k])
    counts.append(dict(package=list(k),manifest_sha256=catalog[k].sha256,records=a,typed_refs=b))
   c=im.connections[h];results=load(HERE/'validation-results.json')['tests'];prior=load(HERE.parent/'h01-h04-batch/validation-results.json')['tests']
-  assert len(results)==64 and len(prior)==95
+  assert len(results)==74 and len(prior)==95
   for z in prior+results:
    row=c.execute('SELECT input_spec,expected_spec FROM record_case WHERE stable_id=?',(z['id'],)).fetchone()
    assert row and evaluate(z['rule'],json.loads(row[0]))==json.loads(row[1])==z['actual'],z['id']

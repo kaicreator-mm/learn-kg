@@ -26,7 +26,7 @@
       },
       {
         "counts": {
-          "Case": 851,
+          "Case": 861,
           "Claim": 515,
           "Competency": 1,
           "Element": 2,
@@ -45,8 +45,8 @@
           "chinese",
           "0.1.0-chinese-cumulative-candidate-2"
         ],
-        "records": 2099,
-        "typed_refs": 4637
+        "records": 2109,
+        "typed_refs": 4677
       }
     ],
     "persistent_sqlite": false,
@@ -54,7 +54,7 @@
     "status": "CANDIDATE_RESEARCH_ONLY"
   },
   "inherited_cases_replayed": 95,
-  "manifest_sha256": "a5318e19b94c1f67d2247e7ec280f263241d9588e4d198fd5f8965f0e7340eb2",
+  "manifest_sha256": "e2e92a12595c8a15bda667bc8d68c587efdea65dc07b0aab38637853881eae35",
   "persistent_sqlite": false,
   "stats": {
     "H05": {
@@ -77,10 +77,10 @@
     },
     "H07": {
       "candidate_claims": 7,
-      "executed_cases": 28,
+      "executed_cases": 38,
       "held_claims": 50,
       "held_only_topics": 13,
-      "records": 258,
+      "records": 268,
       "restricted_candidate_topics": 7,
       "topics": 20
     }
@@ -1097,6 +1097,216 @@
       "rule": "standard_mapping",
       "status": "PASS",
       "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.5",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "HSK",
+        "target_version": "3.0"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.6",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "HSK",
+        "target_version": "2.0"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.7",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "hsk",
+        "target_version": "3.0"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.8",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": " HSK",
+        "target_version": "3.0"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.9",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "UNKNOWN",
+        "target_version": "2020"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.10",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "CEFR",
+        "target_version": "3.0"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.11",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": true,
+        "target_standard": "CEFR",
+        "target_version": "2020"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "HOLD",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "HOLD",
+      "id": "H07.05.03.R2.C01.CASE.12",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "CEFR",
+        "target_version": "2020 "
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "COUNTEREXAMPLE"
+    },
+    {
+      "actual": "LINK_EVIDENCE_REVIEW_REQUIRED",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "LINK_EVIDENCE_REVIEW_REQUIRED",
+      "id": "H07.05.03.R2.C01.CASE.13",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "HSK",
+        "source_version": "3.0",
+        "target_standard": "GF0025",
+        "target_version": "2021"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "FORWARD"
+    },
+    {
+      "actual": "LINK_EVIDENCE_REVIEW_REQUIRED",
+      "claim": "H07.05.03.R2.C01",
+      "expected": "LINK_EVIDENCE_REVIEW_REQUIRED",
+      "id": "H07.05.03.R2.C01.CASE.14",
+      "input": {
+        "empirical_link_evidence": true,
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "mapping_conditions_verified": true,
+        "query": "CROSS_STANDARD_MAPPING",
+        "same_label_only": false,
+        "source_standard": "CEFR",
+        "source_version": "2020",
+        "target_standard": "HSK",
+        "target_version": "3.0"
+      },
+      "owner": "H07",
+      "rule": "standard_mapping",
+      "status": "PASS",
+      "view": "FORWARD"
     },
     {
       "actual": "RECORDED_MEMBERSHIP_ONLY",

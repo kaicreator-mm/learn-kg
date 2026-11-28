@@ -298,9 +298,11 @@
       "locator": "lines 128–147",
       "statement": "跨测评体系的等级关联需要透明且有证据的论证过程；标签相似不足以建立等价。",
       "conditions": [
-        "明确不同体系及版本，显式排除仅同名依据，有经验链接证据及条件核验；输出仅为复核请求。"
+        "本有限跨体系门仅识别明示的项目身份组合 HSK 2.0/3.0、CEFR 2001/2020、GF0025 2021；两体系必须不同。",
+        "同体系同版本及跨版本比较均不属于此门；其他标识、别名、缺失或非法版本保持 HOLD。",
+        "显式排除仅同名依据，具有经验链接证据及条件核验；仅路由复核。"
       ],
-      "negative": "本项目的证据门仅路由复核，不授予等级对应、等值或互认。"
+      "negative": "不将同体系版本比较、别名、标识相似性或证据布尔值当作规范身份或等级等价证明；允许的项目标识仅用于有限夹具，不是官方版本注册表。"
     },
     {
       "id": "H07.03.03.R2.C01",
@@ -1182,6 +1184,176 @@
         "source_counts_equal": false
       },
       "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.5",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "HSK",
+        "source_version": "3.0",
+        "target_version": "3.0",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.6",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "HSK",
+        "source_version": "3.0",
+        "target_version": "2.0",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.7",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "hsk",
+        "source_version": "3.0",
+        "target_version": "3.0",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.8",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": " HSK",
+        "source_version": "3.0",
+        "target_version": "3.0",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.9",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "UNKNOWN",
+        "source_version": "3.0",
+        "target_version": "2020",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.10",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "CEFR",
+        "source_version": "3.0",
+        "target_version": "3.0",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.11",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "CEFR",
+        "source_version": true,
+        "target_version": "2020",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.12",
+      "claim": "H07.05.03.R2.C01",
+      "view": "COUNTEREXAMPLE",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "CEFR",
+        "source_version": "3.0",
+        "target_version": "2020 ",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "HOLD"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.13",
+      "claim": "H07.05.03.R2.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "HSK",
+        "target_standard": "GF0025",
+        "source_version": "3.0",
+        "target_version": "2021",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "LINK_EVIDENCE_REVIEW_REQUIRED"
+    },
+    {
+      "id": "H07.05.03.R2.C01.CASE.14",
+      "claim": "H07.05.03.R2.C01",
+      "view": "FORWARD",
+      "input": {
+        "framework": "PROJECT_EVIDENCE_GATE",
+        "query": "CROSS_STANDARD_MAPPING",
+        "source_standard": "CEFR",
+        "target_standard": "HSK",
+        "source_version": "2020",
+        "target_version": "3.0",
+        "same_label_only": false,
+        "empirical_link_evidence": true,
+        "mapping_conditions_verified": true
+      },
+      "expected": "LINK_EVIDENCE_REVIEW_REQUIRED"
     }
   ]
 }

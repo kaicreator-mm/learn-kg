@@ -61,7 +61,14 @@ def finite(rule,x):
   return {'announced_date':'2026-12-13','status':'ANNOUNCED_NOT_ACTUAL_OCCURRENCE'}
  if rule=='standard_mapping':
   if x.get('query')!='CROSS_STANDARD_MAPPING' or x.get('framework')!='PROJECT_EVIDENCE_GATE':return 'HOLD'
-  if not all(isinstance(x.get(k),str) and x[k].strip() for k in ('source_standard','target_standard','source_version','target_version')):return 'HOLD'
+  # Bounded explicit identities, not a public registry or an alias resolver.
+  # Same-system version comparison is a different operation, outside this gate.
+  families={'HSK':{'2.0','3.0'},'CEFR':{'2001','2020'},'GF0025':{'2021'}}
+  a,b=x.get('source_standard'),x.get('target_standard')
+  av,bv=x.get('source_version'),x.get('target_version')
+  if not all(isinstance(v,str) for v in (a,b,av,bv)):return 'HOLD'
+  if a not in families or b not in families or av not in families[a] or bv not in families[b]:return 'HOLD'
+  if a==b:return 'HOLD'
   if x.get('same_label_only') is not False or x.get('empirical_link_evidence') is not True or x.get('mapping_conditions_verified') is not True:return 'UNKNOWN_HOLD'
   return 'LINK_EVIDENCE_REVIEW_REQUIRED'
  if rule=='membership':
