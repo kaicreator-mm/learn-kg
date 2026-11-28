@@ -1,0 +1,1333 @@
+{
+  "status": "MEMORY_SQLITE_BUILDER_ONLY",
+  "cases": 121,
+  "results": [
+    {
+      "owner": "F03",
+      "case_id": "F03.AUDIO_LISTENING_SYNTHETIC",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.TEXT_READING_SYNTHETIC",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.TEXT_FOR_LISTENING_REJECT",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "REJECT_CONSTRUCT_SUBSTITUTION",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.RIGHTS_UNKNOWN_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.ACCESS_UNAVAILABLE_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.PRIVATE_TO_PUBLIC_REFUSE",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "REFUSE_PUBLICATION",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.VISUAL_RECOGNITION_SYNTHETIC",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "PUBLIC_RESOURCE_CANDIDATE_WITH_SEPARATE_RIGHTS_CHECK",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.VISUAL_ACCESSIBILITY_UNKNOWN_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.VISUAL_ACCESSIBILITY_RESOURCE_MISMATCH_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.VISUAL_ACCESSIBILITY_DIGEST_MISMATCH_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.VISUAL_ACCESSIBILITY_SCOPE_MISMATCH_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.UNSUPPORTED_VIDEO_MODALITY_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.MISSING_MODALITY_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.UNSUPPORTED_CONSTRUCT_HOLD",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F03",
+      "case_id": "F03.AUDIO_FOR_READING_REJECT",
+      "sql_target": "F03.COMPOSITION",
+      "actual": "REJECT_CONSTRUCT_SUBSTITUTION",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.UNASSISTED_INDEPENDENT",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "INDEPENDENT_RETEST_OBSERVATION",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.HINTED_NOT_INDEPENDENT",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.IDENTICAL_DUPLICATE_HINT_IDEMPOTENT",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.EVENT_AND_STORAGE_TIMES_SEPARATE",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.GENERATED_ANSWER_NOT_EVIDENCE",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "NOT_LEARNER_EVIDENCE",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.MISSING_INITIAL_UNKNOWN",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "UNKNOWN",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.ROLE_DENIED_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.VERSION_MISMATCH_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.CONFLICTING_DUPLICATE_HINT_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.GENERATED_ANSWER_UNKNOWN",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "UNKNOWN",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.MISSING_RETEST_UNKNOWN",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "UNKNOWN",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.SAME_VARIANT_REPLAY_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_VERSION_MISMATCH_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.ASSISTED_RETEST_NOT_INDEPENDENT",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "ASSISTED_NOT_INDEPENDENT",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_CONSTRUCT_MISMATCH_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_SCORING_BINDING_MISMATCH_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RETEST_EVENT_HASH_MISMATCH_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.HINTED_THEN_INDEPENDENT_RETEST",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "INDEPENDENT_RETEST_OBSERVATION",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.EMPTY_TASK_VERSION_TOP_AND_EVENTS_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.EMPTY_SCORING_VERSION_TOP_AND_EVENTS_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.EMPTY_RETEST_TASK_VERSION_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.EMPTY_RETEST_SCORING_VERSION_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.UNKNOWN_CLOCK_DOMAIN_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.CLOCK_SKEW_EXCEEDED_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F04",
+      "case_id": "F04.RECORDED_AT_ORDER_INVALID_HOLD",
+      "sql_target": "F04.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.SEPARATE_CHANNELS",
+      "sql_target": "F05.COMPOSITION",
+      "actual": {
+        "channels": {
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "UNKNOWN",
+            "reason": "MISSING"
+          },
+          "score": {
+            "status": "SCORED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.MISSING_SELF_REPORT_UNKNOWN",
+      "sql_target": "F05.COMPOSITION",
+      "actual": {
+        "channels": {
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "UNKNOWN",
+            "reason": "NOT_ADMINISTERED"
+          },
+          "score": {
+            "status": "SCORED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.MISSING_SCORE_UNKNOWN",
+      "sql_target": "F05.COMPOSITION",
+      "actual": {
+        "channels": {
+          "response": {
+            "status": "OBSERVED",
+            "value": "response",
+            "task_version": "T1"
+          },
+          "self_report": {
+            "status": "UNKNOWN",
+            "reason": "MISSING"
+          },
+          "score": {
+            "status": "UNKNOWN",
+            "reason": "MISSING"
+          },
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.UNPINNED_MODEL_HOLD",
+      "sql_target": "F05.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.SCORING_VERSION_MISMATCH_HOLD",
+      "sql_target": "F05.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.EXPECTED_SCORING_VERSION_REBOUND_HOLD",
+      "sql_target": "F05.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.SCORING_VERSION_EXPECTATION_MISSING_HOLD",
+      "sql_target": "F05.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.SCORING_VERSION_EMPTY_HOLD",
+      "sql_target": "F05.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.RESPONSE_MISSING_UNKNOWN",
+      "sql_target": "F05.COMPOSITION",
+      "actual": {
+        "channels": {
+          "response": {
+            "status": "UNKNOWN",
+            "reason": "MISSING"
+          },
+          "self_report": {
+            "status": "UNKNOWN",
+            "reason": "MISSING"
+          },
+          "score": {
+            "status": "SCORED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.RESPONSE_INVALID_UNKNOWN",
+      "sql_target": "F05.COMPOSITION",
+      "actual": {
+        "channels": {
+          "response": {
+            "status": "UNKNOWN",
+            "reason": "INVALID"
+          },
+          "self_report": {
+            "status": "UNKNOWN",
+            "reason": "MISSING"
+          },
+          "score": {
+            "status": "SCORED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.RESPONSE_NOT_ADMINISTERED_UNKNOWN",
+      "sql_target": "F05.COMPOSITION",
+      "actual": {
+        "channels": {
+          "response": {
+            "status": "UNKNOWN",
+            "reason": "NOT_ADMINISTERED"
+          },
+          "self_report": {
+            "status": "UNKNOWN",
+            "reason": "MISSING"
+          },
+          "score": {
+            "status": "SCORED",
+            "value": 0.75,
+            "scoring_version": "S1",
+            "denominator": 4
+          },
+          "estimate": {
+            "status": "NOT_ESTIMATED"
+          }
+        },
+        "combined_mastery": "NOT_INFERRED"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F05",
+      "case_id": "F05.MODEL_OUTPUT_UNBOUND_HOLD",
+      "sql_target": "F05.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.LEARNER_SELF_SESSION_RESOLVER_UNBOUND_HOLD",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.ROLE_PERMISSION_DENIED",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "REFUSE",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.IDENTITY_UNKNOWN_CLARIFY",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "CLARIFY",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.ACCESS_UNAVAILABLE_DEFER",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "DEFER",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.USER_EXIT_STOP",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "STOP",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.NO_LEARNER_SELECTION_CLARIFY",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "CLARIFY",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.REVIEWER_READ_ONLY_REFUSE",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "REFUSE",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.EXIT_UNKNOWN_CLARIFY",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "CLARIFY",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.FACILITATOR_ASSIGNED_SCOPE_OPTION",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.FACILITATOR_SCOPE_MISMATCH_REFUSE",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "REFUSE",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.EXPIRED_FACILITATOR_AUTHORITY_REFUSE",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "REFUSE",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.AUTHORITY_HASH_MISMATCH_HOLD",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.SESSION_MISMATCH_HOLD",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.GENERIC_PERMISSION_BOOLEAN_NOT_AUTHORITY_CLARIFY",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "CLARIFY",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.ENVIRONMENT_PROFILE_HASH_TAMPER_HOLD",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.STALE_ENVIRONMENT_PROFILE_HOLD",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "F07",
+      "case_id": "F07.ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD",
+      "sql_target": "F07.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.PRESERVED_CONSTRUCT_OPTIONAL_SUPPORT",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.CHANGED_CONSTRUCT_ASSESSMENT_DEFER",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.CHANGED_CONSTRUCT_PRACTICE_ONLY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.MISSING_SELF_REPORT_EXPLICIT_REQUEST_OK",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.MISSING_SELF_REPORT_NO_REQUEST_CLARIFY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.AGE_LABEL_INVARIANCE",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.DIAGNOSIS_LABEL_INVARIANCE",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.UNBOUND_ESTIMATE_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "UNBOUND_ESTIMATE_NOT_USED",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.MISSING_RESPONSE_NO_DEFICIT_INFERENCE",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.IDENTITY_UNKNOWN_CLARIFY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.FACILITATOR_CANNOT_SELECT",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.REVIEWER_READ_ONLY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REFUSE",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "REVIEW_ONLY_ROLE",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.PERMISSION_DENIED_REFUSE",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REFUSE",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_AUTHORITY_REFUSED",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.ACCESS_UNAVAILABLE_DEFER",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "DEFER",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "ENVIRONMENT_OR_CAPABILITY_BLOCK",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.ACCESS_UNKNOWN_CLARIFY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.NO_LEARNER_SELECTION_CLARIFY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.USER_EXIT_STOP",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "STOP",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "LEARNER_EXIT",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.EXIT_MISSING_CLARIFY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "EXIT_STATE_UNKNOWN",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.EXIT_NULL_CLARIFY",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "EXIT_STATE_UNKNOWN",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.CONSTRUCT_REVIEW_UNKNOWN_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "CONSTRUCT_RELATION_UNKNOWN",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.CONSTRUCT_REVIEW_UNVERIFIED_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "TASK_LEVEL_CONSTRUCT_REVIEW_REQUIRED",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.CONSTRUCT_REVIEW_MISSING_HASH_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "CONSTRUCT_REVIEW_DIGEST_INVALID",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.CONSTRUCT_REVIEW_TASK_VERSION_MISMATCH_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "CONSTRUCT_REVIEW_IDENTITY_MISMATCH",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.SELF_REPORT_WRONG_RESPONDENT_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "SELF_REPORT_NOT_LEARNER_AUTHORED",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.SCORE_VALUE_INVARIANCE",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.INVALID_ASSESSMENT_FLAG_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "ASSESSMENT_SCOPE_UNKNOWN",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.ENVIRONMENT_PROFILE_UNVERIFIED",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "CLARIFY",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_EVIDENCE_INCOMPLETE",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.ENVIRONMENT_PROFILE_MISSING_HASH",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.SUPPORT_REQUEST_UNVERIFIED",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.F07_INPUT_MISSING_REQUEST_OBSERVATION",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TYPED_EVIDENCE_REQUIRED",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "A07",
+      "case_id": "A07.STALE_ENVIRONMENT_PROFILE_HOLD",
+      "sql_target": "A07.COMPOSITION",
+      "actual": {
+        "action": "REQUEST_OBSERVATION",
+        "support_scope": "NONE",
+        "assessment_disposition": "UNKNOWN",
+        "evidence_basis": "F07_TRUSTED_AUTHORITY_RESOLVER_UNBOUND",
+        "effect": "ADVICE_ONLY"
+      },
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.PINNED_PROTOCOL_AWAITING_APPROVAL_AND_REVIEW_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.APPROVAL_MISSING_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.COMPARATOR_MISSING_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.SIMULATION_NOT_EFFECT",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "SIMULATION_ONLY_NOT_EFFECT",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.ASSIGNMENT_UNVERIFIED_DESCRIPTIVE_ONLY",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "DESCRIPTIVE_ONLY_NO_CAUSAL_ESTIMATE",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.DIRECT_KNOWLEDGE_WRITE_REFUSE",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "REFUSE",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.DIRECT_KNOWLEDGE_WRITE_UNKNOWN_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.FOLLOWUP_MISSING_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.IDENTICAL_POLICY_VERSIONS_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.INVALID_ANALYSIS_PLAN_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.POLICY_VERSION_MISMATCH_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.ASSIGNMENT_UNIT_METHOD_MISMATCH_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.LEGACY_BOOLEAN_APPROVAL_NOT_EVIDENCE_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.UNRESOLVED_TYPED_APPROVAL_AND_REVIEW_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.DUPLICATE_APPROVAL_REVIEW_IDENTITY_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.EXPIRED_APPROVAL_REVIEW_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.EVIDENCE_PATH_TRAVERSAL_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.EVIDENCE_ARTIFACT_HASH_MISMATCH_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.ANALYSIS_PLAN_REF_MISMATCH_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    },
+    {
+      "owner": "E01",
+      "case_id": "E01.ANALYSIS_PLAN_SUMMARY_MISMATCH_HOLD",
+      "sql_target": "E01.COMPOSITION",
+      "actual": "HOLD",
+      "status": "SQL_BUILDER_ONLY"
+    }
+  ],
+  "cross_module_bindings": [
+    {
+      "owner": "F03",
+      "expected_process_refs": [
+        "P03.PRODUCTION",
+        "P04.FLOW"
+      ],
+      "actual_process_refs": [
+        "P03.PRODUCTION",
+        "P04.FLOW",
+        "F03.MOD.TEXT",
+        "F03.MOD.AUDIO",
+        "F03.MOD.VISUAL",
+        "F03.RES.TEXT",
+        "F03.RES.AUDIO",
+        "F03.RES.UNVERIFIED",
+        "F03.RES.VISUAL"
+      ],
+      "status": "STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION"
+    },
+    {
+      "owner": "F04",
+      "expected_process_refs": [
+        "P03.PRODUCTION",
+        "P06.FLOW"
+      ],
+      "actual_process_refs": [
+        "F04.INTERACTION",
+        "P03.PRODUCTION",
+        "P06.FLOW",
+        "F04.OBS.INITIAL",
+        "F04.OBS.HINT",
+        "F04.OBS.FINAL",
+        "F04.OBS.RETEST"
+      ],
+      "status": "STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION"
+    },
+    {
+      "owner": "F05",
+      "expected_process_refs": [
+        "P08.FLOW",
+        "P10.FLOW"
+      ],
+      "actual_process_refs": [
+        "P08.FLOW",
+        "P10.FLOW",
+        "F05.OBS.RESPONSE",
+        "F05.OBS.SELF_REPORT",
+        "F05.OBS.SCORE",
+        "F05.OBS.ESTIMATE"
+      ],
+      "status": "STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION"
+    },
+    {
+      "owner": "F07",
+      "expected_process_refs": [
+        "P10.FLOW"
+      ],
+      "actual_process_refs": [
+        "P10.FLOW",
+        "F07.ENV.LOW_BANDWIDTH",
+        "F07.ENV.SHARED_DEVICE",
+        "F07.ENV.PRIVATE_DEVICE",
+        "F07.ROLE.LEARNER",
+        "F07.ROLE.FACILITATOR",
+        "F07.ROLE.REVIEWER"
+      ],
+      "status": "STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION"
+    },
+    {
+      "owner": "A07",
+      "expected_process_refs": [
+        "F05.COMPOSITION",
+        "F05.STATE.RESPONSE",
+        "F05.STATE.SELF_REPORT",
+        "F05.STATE.SCORE",
+        "F05.STATE.ESTIMATE",
+        "F07.COMPOSITION",
+        "F07.POLICY",
+        "F07.GUARD.EXIT",
+        "F07.GUARD.EXIT_UNKNOWN",
+        "F07.GUARD.REVIEWER",
+        "F07.GUARD.DENY",
+        "F07.GUARD.UNAVAILABLE",
+        "F07.GUARD.LEARNER_AUTH_UNBOUND",
+        "F07.GUARD.FACILITATOR_UNBOUND",
+        "F07.GUARD.OFFER_LEARNER"
+      ],
+      "actual_process_refs": [
+        "F05.COMPOSITION",
+        "F05.STATE.RESPONSE",
+        "F05.STATE.SELF_REPORT",
+        "F05.STATE.SCORE",
+        "F05.STATE.ESTIMATE",
+        "F07.COMPOSITION",
+        "F07.POLICY",
+        "F07.ENV.LOW_BANDWIDTH",
+        "F07.ENV.SHARED_DEVICE",
+        "F07.ENV.PRIVATE_DEVICE",
+        "F07.ROLE.LEARNER",
+        "F07.ROLE.FACILITATOR",
+        "F07.ROLE.REVIEWER",
+        "F07.GUARD.EXIT",
+        "F07.GUARD.EXIT_UNKNOWN",
+        "F07.GUARD.REVIEWER",
+        "F07.GUARD.DENY",
+        "F07.GUARD.UNAVAILABLE",
+        "F07.GUARD.LEARNER_AUTH_UNBOUND",
+        "F07.GUARD.FACILITATOR_UNBOUND",
+        "F07.GUARD.OFFER_LEARNER"
+      ],
+      "status": "STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION"
+    },
+    {
+      "owner": "E01",
+      "expected_process_refs": [
+        "P10.FLOW"
+      ],
+      "actual_process_refs": [
+        "E01.PROTOCOL",
+        "P10.FLOW",
+        "E01.POLICY.CURRENT",
+        "E01.POLICY.CANDIDATE",
+        "E01.GOAL",
+        "E01.OBS.PRIMARY_OUTCOME",
+        "E01.OBS.SAFETY"
+      ],
+      "status": "STATIC_TYPED_BINDING_ONLY_NOT_EXECUTION"
+    }
+  ],
+  "nested_typed_bindings": [
+    {
+      "owner": "F04",
+      "interaction_ref": {
+        "package_id": "learning-process",
+        "version": "0.1.0-process-candidate-3",
+        "kind": "Interaction",
+        "stable_id": "F04.INTERACTION",
+        "owner": "F04"
+      },
+      "retest_observation_ref": {
+        "package_id": "learning-process",
+        "version": "0.1.0-process-candidate-3",
+        "kind": "ObservationSpec",
+        "stable_id": "F04.OBS.RETEST",
+        "owner": "F04"
+      },
+      "scoring_observation_ref": {
+        "package_id": "learning-process",
+        "version": "0.1.0-process-candidate-3",
+        "kind": "ObservationSpec",
+        "stable_id": "P06.ACT.OBSERVE.OBS",
+        "owner": "P06"
+      },
+      "status": "STATIC_TYPED_EVENT_AND_SCORING_BINDING_ONLY"
+    }
+  ],
+  "manifest_sha256": "a5f7a42acb0f7067738f83c7fddf7317a41e75bf7765b39ca060c1926db8c9a4",
+  "migration_count": 1312,
+  "record_count": 1636,
+  "limits": "No persistent SQLite; no independent oracle or task qualification."
+}

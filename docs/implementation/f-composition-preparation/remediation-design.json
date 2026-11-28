@@ -1,0 +1,322 @@
+{
+  "version": "0.1.0-process-candidate-3",
+  "status": "PREPARATION_ONLY",
+  "modules": {
+    "F03": {
+      "title": "资源与表达组合",
+      "claims": [
+        "K12.01.03.TR.01",
+        "K12.01.04.TR.01",
+        "K12.04.03.TR.01",
+        "K16.03.02.TG.01",
+        "K16.04.03.TG.01",
+        "K19.05.03.TG.01"
+      ],
+      "inputs": [
+        "P03.PRODUCTION",
+        "P04.FLOW"
+      ],
+      "records": [
+        "Modality",
+        "Resource",
+        "ConditionSpec",
+        "CompositionSpec",
+        "Case",
+        "Validation"
+      ],
+      "requirements": {
+        "F03.RQ01": "资源身份、版本、目标和命题分离；资源形态不是教学效果；VISUAL正例必须绑定精确资源身份/版本、视觉模态、构念、测试范围/结果和重算摘要；合成对象不代表真实无障碍认证",
+        "F03.RQ02": "仅接受TEXT→READING、AUDIO→LISTENING、VISUAL→VISUAL_RECOGNITION的明确映射；未知/缺失模态或构念HOLD；视觉路径还需视觉可及性核验",
+        "F03.RQ03": "可及性、真实可用性和目标保持分别核验；替代改变构念时另立任务",
+        "F03.RQ04": "未知权利保持HOLD；PRIVATE_ONLY资源不得进入公开包；当前导入器拒绝PRIVATE_ONLY记录；正例仅为无实际媒体字节的合成授权描述。"
+      },
+      "cases": [
+        "AUDIO_LISTENING_SYNTHETIC",
+        "TEXT_READING_SYNTHETIC",
+        "TEXT_FOR_LISTENING_REJECT",
+        "RIGHTS_UNKNOWN_HOLD",
+        "ACCESS_UNAVAILABLE_HOLD",
+        "PRIVATE_TO_PUBLIC_REFUSE",
+        "VISUAL_RECOGNITION_SYNTHETIC",
+        "VISUAL_ACCESSIBILITY_UNKNOWN_HOLD",
+        "VISUAL_ACCESSIBILITY_RESOURCE_MISMATCH_HOLD",
+        "VISUAL_ACCESSIBILITY_DIGEST_MISMATCH_HOLD",
+        "VISUAL_ACCESSIBILITY_SCOPE_MISMATCH_HOLD",
+        "UNSUPPORTED_VIDEO_MODALITY_HOLD",
+        "MISSING_MODALITY_HOLD",
+        "UNSUPPORTED_CONSTRUCT_HOLD",
+        "AUDIO_FOR_READING_REJECT"
+      ]
+    },
+    "F04": {
+      "title": "学习交互组合",
+      "claims": [
+        "K12.02.02.TR.01",
+        "K12.03.03.TR.01",
+        "K12.03.05.TR.01",
+        "K15.06.02.TG.01",
+        "K15.06.04.TG.01"
+      ],
+      "inputs": [
+        "P03.PRODUCTION",
+        "P06.FLOW"
+      ],
+      "records": [
+        "ObservationSpec",
+        "Interaction",
+        "ConditionSpec",
+        "CompositionSpec",
+        "Case",
+        "Validation"
+      ],
+      "requirements": {
+        "F04.RQ01": "首次响应、提示、最终响应和独立复测为不同追加事件；独立复测必须是新变式、单独响应、无辅助，并绑定精确构念/评分/观察合同；任务/评分版本非空且固定；事件/记录时间声明UTC时钟域、时钟身份、300秒最大偏差和追加记录顺序",
+        "F04.RQ02": "识别、自由回忆、提示回忆与生成答案不可混为同一观测；generated_answer必须明确false，未知不晋升",
+        "F04.RQ03": "提示事件具有稳定ID、任务版本、发生时间和记录时间；相同事件幂等，冲突隔离；缺答/无效/未施测与错误互斥",
+        "F04.RQ04": "任务/评分版本和角色权限匹配；未知、歧义及冲突不强行评分"
+      },
+      "cases": [
+        "UNASSISTED_INDEPENDENT",
+        "HINTED_NOT_INDEPENDENT",
+        "IDENTICAL_DUPLICATE_HINT_IDEMPOTENT",
+        "EVENT_AND_STORAGE_TIMES_SEPARATE",
+        "GENERATED_ANSWER_NOT_EVIDENCE",
+        "MISSING_INITIAL_UNKNOWN",
+        "ROLE_DENIED_HOLD",
+        "VERSION_MISMATCH_HOLD",
+        "CONFLICTING_DUPLICATE_HINT_HOLD",
+        "GENERATED_ANSWER_UNKNOWN",
+        "MISSING_RETEST_UNKNOWN",
+        "SAME_VARIANT_REPLAY_HOLD",
+        "RETEST_VERSION_MISMATCH_HOLD",
+        "ASSISTED_RETEST_NOT_INDEPENDENT",
+        "RETEST_CONSTRUCT_MISMATCH_HOLD",
+        "RETEST_SCORING_BINDING_MISMATCH_HOLD",
+        "RETEST_EVENT_HASH_MISMATCH_HOLD",
+        "HINTED_THEN_INDEPENDENT_RETEST",
+        "EMPTY_TASK_VERSION_TOP_AND_EVENTS_HOLD",
+        "EMPTY_SCORING_VERSION_TOP_AND_EVENTS_HOLD",
+        "EMPTY_RETEST_TASK_VERSION_HOLD",
+        "EMPTY_RETEST_SCORING_VERSION_HOLD",
+        "UNKNOWN_CLOCK_DOMAIN_HOLD",
+        "CLOCK_SKEW_EXCEEDED_HOLD",
+        "RECORDED_AT_ORDER_INVALID_HOLD"
+      ]
+    },
+    "F05": {
+      "title": "学习者状态组合",
+      "claims": [
+        "K10.01.04.TR.01",
+        "K10.01.05.TR.01",
+        "K10.06.06.TR.01",
+        "K09.01.01.ME.01",
+        "K09.01.04.ME.01",
+        "K16.01.04.TG.01",
+        "K09.02.05.ME.01"
+      ],
+      "inputs": [
+        "P08.FLOW",
+        "P10.FLOW"
+      ],
+      "records": [
+        "SkillType",
+        "ObservationSpec",
+        "StateDimension",
+        "ConditionSpec",
+        "CompositionSpec",
+        "Case",
+        "Validation"
+      ],
+      "requirements": {
+        "F05.RQ01": "原始响应、自述、评分、帮助和模型估计独立表达；expected_scoring_version必须等于组合合同固定的S1，不允许caller同时改写预期与实际版本",
+        "F05.RQ02": "缺失保持UNKNOWN；缺答/无效/未施测与错误不折叠；预期评分版本必须显式绑定且与观察评分版本相同",
+        "F05.RQ03": "估计绑定模型身份、版本、尺度、适用条件及不确定性",
+        "F05.RQ04": "没有已核验估计器时只定义状态维度，不计算或推断掌握"
+      },
+      "cases": [
+        "SEPARATE_CHANNELS",
+        "MISSING_SELF_REPORT_UNKNOWN",
+        "MISSING_SCORE_UNKNOWN",
+        "UNPINNED_MODEL_HOLD",
+        "SCORING_VERSION_MISMATCH_HOLD",
+        "EXPECTED_SCORING_VERSION_REBOUND_HOLD",
+        "SCORING_VERSION_EXPECTATION_MISSING_HOLD",
+        "SCORING_VERSION_EMPTY_HOLD",
+        "RESPONSE_MISSING_UNKNOWN",
+        "RESPONSE_INVALID_UNKNOWN",
+        "RESPONSE_NOT_ADMINISTERED_UNKNOWN",
+        "MODEL_OUTPUT_UNBOUND_HOLD"
+      ]
+    },
+    "F07": {
+      "title": "环境与角色组合",
+      "claims": [
+        "K16.02.04.TG.01",
+        "K16.03.02.TG.01",
+        "K19.02.03.TG.01",
+        "K19.03.02.TG.01",
+        "K19.05.02.TG.01",
+        "K15.06.04.TG.01",
+        "K13.04.02.SR.01",
+        "K16.04.03.TG.01"
+      ],
+      "inputs": [
+        "P10.FLOW"
+      ],
+      "records": [
+        "Environment",
+        "Role",
+        "ConditionSpec",
+        "PolicySpec",
+        "CompositionSpec",
+        "Case",
+        "Validation"
+      ],
+      "requirements": {
+        "F07.RQ01": "角色能力、身份、用途、范围、期限、会话、被授权学习者和实际权限分别验证；审核者只读；促进者授权必须由可信解析器核验；无可信学习者/促进者身份授权解析器时不得SUGGEST；政策机器合同不得保留绕过语义校验器的SUGGEST规则",
+        "F07.RQ02": "环境能力、真实可及性和构念适配分开",
+        "F07.RQ03": "支持请求必须由学习者本人选择并形成带稳定ID/摘要的事件；促进者必须有指定学习者、用途/范围、会话和有效期限授权；可信解析器未绑定时促进者路径HOLD",
+        "F07.RQ04": "exit必须明确false才可建议；未知澄清、退出停止、未授权拒绝；建议不代表执行授权"
+      },
+      "cases": [
+        "LEARNER_SELF_SESSION_RESOLVER_UNBOUND_HOLD",
+        "ROLE_PERMISSION_DENIED",
+        "IDENTITY_UNKNOWN_CLARIFY",
+        "ACCESS_UNAVAILABLE_DEFER",
+        "USER_EXIT_STOP",
+        "NO_LEARNER_SELECTION_CLARIFY",
+        "REVIEWER_READ_ONLY_REFUSE",
+        "EXIT_UNKNOWN_CLARIFY",
+        "FACILITATOR_ASSIGNED_SCOPE_OPTION",
+        "FACILITATOR_SCOPE_MISMATCH_REFUSE",
+        "EXPIRED_FACILITATOR_AUTHORITY_REFUSE",
+        "AUTHORITY_HASH_MISMATCH_HOLD",
+        "SESSION_MISMATCH_HOLD",
+        "GENERIC_PERMISSION_BOOLEAN_NOT_AUTHORITY_CLARIFY",
+        "ENVIRONMENT_PROFILE_HASH_TAMPER_HOLD",
+        "STALE_ENVIRONMENT_PROFILE_HOLD",
+        "ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD"
+      ]
+    },
+    "E01": {
+      "title": "外部改进闭环",
+      "claims": [
+        "K17.01.02.SR.01",
+        "K17.01.03.SR.01",
+        "K17.02.02.SR.01",
+        "K17.06.01.SR.01",
+        "K15.06.04.TG.01",
+        "K19.03.04.TG.01",
+        "K09.02.05.ME.01"
+      ],
+      "inputs": [
+        "P10.FLOW"
+      ],
+      "records": [
+        "SkillType",
+        "Goal",
+        "ObservationSpec",
+        "PolicySpec",
+        "EvaluationProtocol",
+        "ConditionSpec",
+        "CompositionSpec",
+        "Case",
+        "Validation"
+      ],
+      "requirements": {
+        "E01.RQ01": "预先固定人群身份/纳入排除、处理/比较版本、主要结果、分配单位/方法、28日随访、估计量；规范JSON字符串槽位与只读分析计划文件SHA256精确绑定；审批与独立复核身份必须不同且在evaluation_time有效、artifact路径安全并匹配字节摘要；无可信resolver时候选策略不得SUGGEST；协议投影由验证器逐字段比较",
+        "E01.RQ02": "分配效应与实际接受处理分开；模拟、描述和因果估计分开",
+        "E01.RQ03": "个体记录不直接写入正式知识；候选修订必须版本化、可审查、可回退",
+        "E01.RQ04": "证据、审批、独立复核和发布阶段分离；审批/复核必须绑定类型化外部证据身份；当前可信解析器未绑定，观察数据效果分析保持HOLD"
+      },
+      "cases": [
+        "PINNED_PROTOCOL_AWAITING_APPROVAL_AND_REVIEW_HOLD",
+        "APPROVAL_MISSING_HOLD",
+        "COMPARATOR_MISSING_HOLD",
+        "SIMULATION_NOT_EFFECT",
+        "ASSIGNMENT_UNVERIFIED_DESCRIPTIVE_ONLY",
+        "DIRECT_KNOWLEDGE_WRITE_REFUSE",
+        "DIRECT_KNOWLEDGE_WRITE_UNKNOWN_HOLD",
+        "FOLLOWUP_MISSING_HOLD",
+        "IDENTICAL_POLICY_VERSIONS_HOLD",
+        "INVALID_ANALYSIS_PLAN_HOLD",
+        "POLICY_VERSION_MISMATCH_HOLD",
+        "ASSIGNMENT_UNIT_METHOD_MISMATCH_HOLD",
+        "LEGACY_BOOLEAN_APPROVAL_NOT_EVIDENCE_HOLD",
+        "UNRESOLVED_TYPED_APPROVAL_AND_REVIEW_HOLD",
+        "DUPLICATE_APPROVAL_REVIEW_IDENTITY_HOLD",
+        "EXPIRED_APPROVAL_REVIEW_HOLD",
+        "EVIDENCE_PATH_TRAVERSAL_HOLD",
+        "EVIDENCE_ARTIFACT_HASH_MISMATCH_HOLD",
+        "ANALYSIS_PLAN_REF_MISMATCH_HOLD",
+        "ANALYSIS_PLAN_SUMMARY_MISMATCH_HOLD"
+      ]
+    },
+    "A07": {
+      "title": "环境/发展/差异→支持贯通组合",
+      "claims": [],
+      "inputs": [
+        "F05.STATE.RESPONSE",
+        "F05.STATE.SELF_REPORT",
+        "F05.STATE.SCORE",
+        "F05.STATE.ESTIMATE",
+        "F05.COMPOSITION",
+        "F07.COMPOSITION",
+        "F07.POLICY",
+        "F07.ENV.LOW_BANDWIDTH",
+        "F07.ENV.SHARED_DEVICE",
+        "F07.ENV.PRIVATE_DEVICE",
+        "F07.ROLE.LEARNER",
+        "F07.ROLE.FACILITATOR",
+        "F07.ROLE.REVIEWER"
+      ],
+      "records": [
+        "CompositionSpec",
+        "PolicySpec",
+        "ConditionSpec",
+        "Case",
+        "Validation"
+      ],
+      "requirements": {
+        "A07.RQ01": "区分身份、角色、权限、设备/连接环境、实际可及性和本人选择；环境能力必须绑定当前环境配置及测试摘要；环境障碍不得误判为知识缺口；exit必须精确false；消费F07完整事件/角色授权/环境证据和上游守卫；环境绑定任务/版本/时效；构念审查对象重算摘要并绑定任务/评估身份",
+        "A07.RQ02": "只使用任务相关观测和本人明确自述；缺失保持UNKNOWN；不按年龄、发展标签、诊断或固定学习风格推断个体；不做发展阶段判断",
+        "A07.RQ03": "支持选项必须经过任务级构念审查；改变目标构念时只能作为单独练习，不可替代原测量或合并评分",
+        "A07.RQ04": "本人明确请求事件及选择、身份与权限均需核验；退出停止；建议仅ADVICE_ONLY，不执行、不写状态"
+      },
+      "cases": [
+        "PRESERVED_CONSTRUCT_OPTIONAL_SUPPORT",
+        "CHANGED_CONSTRUCT_ASSESSMENT_DEFER",
+        "CHANGED_CONSTRUCT_PRACTICE_ONLY",
+        "MISSING_SELF_REPORT_EXPLICIT_REQUEST_OK",
+        "MISSING_SELF_REPORT_NO_REQUEST_CLARIFY",
+        "AGE_LABEL_INVARIANCE",
+        "DIAGNOSIS_LABEL_INVARIANCE",
+        "UNBOUND_ESTIMATE_HOLD",
+        "MISSING_RESPONSE_NO_DEFICIT_INFERENCE",
+        "IDENTITY_UNKNOWN_CLARIFY",
+        "FACILITATOR_CANNOT_SELECT",
+        "REVIEWER_READ_ONLY",
+        "PERMISSION_DENIED_REFUSE",
+        "ACCESS_UNAVAILABLE_DEFER",
+        "ACCESS_UNKNOWN_CLARIFY",
+        "NO_LEARNER_SELECTION_CLARIFY",
+        "USER_EXIT_STOP",
+        "EXIT_MISSING_CLARIFY",
+        "EXIT_NULL_CLARIFY",
+        "CONSTRUCT_REVIEW_UNKNOWN_HOLD",
+        "CONSTRUCT_REVIEW_UNVERIFIED_HOLD",
+        "CONSTRUCT_REVIEW_MISSING_HASH_HOLD",
+        "CONSTRUCT_REVIEW_TASK_VERSION_MISMATCH_HOLD",
+        "SELF_REPORT_WRONG_RESPONDENT_HOLD",
+        "SCORE_VALUE_INVARIANCE",
+        "INVALID_ASSESSMENT_FLAG_HOLD",
+        "ENVIRONMENT_PROFILE_UNVERIFIED",
+        "ENVIRONMENT_PROFILE_MISSING_HASH",
+        "SUPPORT_REQUEST_UNVERIFIED",
+        "F07_INPUT_MISSING_REQUEST_OBSERVATION",
+        "ENVIRONMENT_TASK_VERSION_MISMATCH_HOLD",
+        "STALE_ENVIRONMENT_PROFILE_HOLD"
+      ]
+    }
+  }
+}
