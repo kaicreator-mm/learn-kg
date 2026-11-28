@@ -298,6 +298,7 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         parse_status, members = parse_level_label(raw_label)
         level_bands.append({
             "kind": "HSKLevelBand",
+            "evidence_origin": "PINNED_ARCHIVE",
             "stable_id": "HS00.BAND." + sha256(raw_label.encode("utf-8"))[:20],
             "source_band_id": record["stable_id"],
             "source_standard_id": iri_value(record, "version"),
@@ -327,6 +328,7 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
         parse_status, members = parse_level_label(raw_label)
         level_label_observations.append({
             "kind": "HSKLevelLabelObservation",
+            "evidence_origin": "PINNED_ARCHIVE",
             "raw_level_label": raw_label,
             "occurrence_count": count,
             "source_record_refs": sorted(level_sources[raw_label]),

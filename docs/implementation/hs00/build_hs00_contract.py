@@ -172,15 +172,15 @@ def make_schema() -> dict[str, Any]:
         "HSKLevelBand": {
             "type": "object", "additionalProperties": False,
             "required": [
-                "kind", "stable_id", "source_band_id", "source_standard_id",
+                "kind", "evidence_origin", "stable_id", "source_band_id", "source_standard_id",
                 "raw_level_label", "raw_field_sha256", "raw_label_term", "normalized_member_levels",
                 "merged_level_identity", "parser_name", "parser_version",
                 "parse_status", "semantics_status", "source_record_line_sha256",
                 "rights_scope"
             ],
             "properties": {
-                "kind": {"const": "HSKLevelBand"}, "stable_id": nonempty(),
-                "source_band_id": nonempty(), "source_standard_id": nonempty(),
+                "kind": {"const": "HSKLevelBand"}, "evidence_origin": {"enum": ["PINNED_ARCHIVE", "UNBOUND_CAPTURE"]}, "stable_id": nonempty(),
+                "source_band_id": nullable_string(), "source_standard_id": nonempty(),
                 "raw_level_label": {"type": "string"}, "raw_field_sha256": digest,
                 "raw_label_term": {"type": "object", "additionalProperties": False, "required": ["kind", "value", "datatype", "language"], "properties": {"kind": {"const": "literal"}, "value": {"type": "string"}, "datatype": nullable_string(), "language": nullable_string()}},
                 "normalized_member_levels": {"oneOf": [{"type": "array", "minItems": 1, "uniqueItems": True, "items": {"type": "integer", "minimum": 1, "maximum": 9}}, {"type": "null"}]},
@@ -188,23 +188,24 @@ def make_schema() -> dict[str, Any]:
                 "parser_name": nonempty(), "parser_version": nonempty(),
                 "parse_status": {"enum": ["PARSED_CANDIDATE", "HOLD_UNPARSED"]},
                 "semantics_status": {"const": "UNKNOWN_HOLD"},
-                "source_record_line_sha256": digest,
+                "source_record_line_sha256": {"oneOf": [digest, {"type": "null"}]},
                 "rights_scope": {"$ref": "#/$defs/rightsScope"}
             }
         },
         "HSKLevelLabelObservation": {
             "type": "object", "additionalProperties": False,
             "required": [
-                "kind", "raw_level_label", "occurrence_count", "source_record_refs",
+                "kind", "evidence_origin", "raw_level_label", "occurrence_count", "source_record_refs",
                 "raw_field_sha256", "parser_name", "parser_version", "parse_status",
                 "normalized_member_levels", "merged_level_identity", "semantics_status",
                 "rights_scope"
             ],
             "properties": {
                 "kind": {"const": "HSKLevelLabelObservation"},
+                "evidence_origin": {"enum": ["PINNED_ARCHIVE", "UNBOUND_CAPTURE"]},
                 "raw_level_label": {"type": "string"},
-                "occurrence_count": {"type": "integer", "minimum": 1},
-                "source_record_refs": {"type": "array", "minItems": 1, "uniqueItems": True, "items": nonempty()},
+                "occurrence_count": {"oneOf": [{"type": "integer", "minimum": 1}, {"type": "null"}]},
+                "source_record_refs": {"type": "array", "uniqueItems": True, "items": nonempty()},
                 "raw_field_sha256": digest,
                 "parser_name": nonempty(), "parser_version": nonempty(),
                 "parse_status": {"enum": ["PARSED_CANDIDATE", "HOLD_UNPARSED"]},
@@ -332,6 +333,16 @@ def make_schema() -> dict[str, Any]:
         defs[name]["allOf"] = [{"if": {"properties": {"parse_status": {"const": "HOLD_UNPARSED"}}},
             "then": {"properties": {"normalized_member_levels": {"type": "null"}, "merged_level_identity": {"type": "null"}}},
             "else": {"properties": {"normalized_member_levels": {"type": "array"}, "merged_level_identity": {"type": "string"}}}}]
+    defs["HSKLevelBand"]["allOf"].append({
+        "if": {"properties": {"evidence_origin": {"const": "UNBOUND_CAPTURE"}}},
+        "then": {"properties": {"source_band_id": {"type": "null"}, "source_record_line_sha256": {"type": "null"}, "stable_id": {"pattern": "^HS00[.]UNBOUND[.]BAND[.][a-f0-9]{24}$"}}},
+        "else": {"properties": {"source_band_id": nonempty(), "source_record_line_sha256": digest}}
+    })
+    defs["HSKLevelLabelObservation"]["allOf"].append({
+        "if": {"properties": {"evidence_origin": {"const": "UNBOUND_CAPTURE"}}},
+        "then": {"properties": {"occurrence_count": {"type": "null"}, "source_record_refs": {"maxItems": 0}}},
+        "else": {"properties": {"occurrence_count": {"type": "integer", "minimum": 1}, "source_record_refs": {"minItems": 1}}}
+    })
     defs["HSKRawFieldCapture"]["allOf"] = [{"if": {"properties": {"parse_status": {"not": {"const": "PARSED_CANDIDATE"}}}},
         "then": {"properties": {"normalized_value": {"type": "null"}}}}]
     return {
@@ -561,7 +572,7 @@ def make_db01_projections(mapping: dict[str, Any]) -> dict[str, Any]:
         "effective_date": None
     })
     for index, band in enumerate(mapping["level_bands"]):
-        if band["parse_status"] != "PARSED_CANDIDATE":
+        if band["parse_status"] != "PARSED_CANDIDATE" or band["evidence_origin"] != "PINNED_ARCHIVE":
             continue  # lossless HOLD stays in source mapping, not a DB01 projection
         records.append({
             "kind": "StandardBand",
@@ -616,6 +627,7 @@ def make_db01_projections(mapping: dict[str, Any]) -> dict[str, Any]:
             "attribution": "RECORDED_NOT_REVERIFIED",
             "verification": "SourceBlock metadata and text digest are preserved; printed label is not visually reverified and PDF page index/number remain unknown."
         })
+    projected_bands = [r for r in records if r["kind"] == "StandardBand"]
     synthetic_membership = {
         "kind": "SourceMembership",
         "stable_id": "HS00.SYNTHETIC.MEMBERSHIP",
@@ -630,7 +642,7 @@ def make_db01_projections(mapping: dict[str, Any]) -> dict[str, Any]:
             "source_status": "ORIGINAL_SYNTHETIC_FIXTURE"
         }],
         "standard_ref": standard_ref,
-        "band_ref": ref("StandardBand", mapping["level_bands"][0]["stable_id"], "H07"),
+        "band_ref": ref("StandardBand", projected_bands[0]["stable_id"] if projected_bands else "UNAVAILABLE_NOT_EMITTED", "H07"),
         "source_ref": source_refs[0],
         "section": "SYNTHETIC_INTERFACE_FIXTURE_ONLY",
         "ordinal": 1,
@@ -642,10 +654,12 @@ def make_db01_projections(mapping: dict[str, Any]) -> dict[str, Any]:
     # The synthetic record is stored separately and never counted as an imported source membership.
     refs = [
         source_refs[0], standard_ref,
-        ref("StandardBand", mapping["level_bands"][0]["stable_id"], "H07"),
+        ref("StandardBand", projected_bands[0]["stable_id"] if projected_bands else "UNAVAILABLE_NOT_EMITTED", "H07"),
         ref("Locator", "HS00.LOCATOR.001", "EVIDENCE"),
         ref("SourceMembership", "HS00.SYNTHETIC.MEMBERSHIP", "H07")
     ]
+    if not projected_bands:
+        refs = [x for x in refs if x["kind"] not in ("StandardBand", "SourceMembership")]
     return {
         "schema_version": "learn-kg-hs00-db01-projection-1",
         "status": "SYNTACTIC_COMPATIBILITY_ONLY",
@@ -655,11 +669,11 @@ def make_db01_projections(mapping: dict[str, Any]) -> dict[str, Any]:
         "if01_interface_sha256": sha((ROOT / "docs/implementation/if01/interface-contract.json").read_bytes()),
         "source_mapping_sha256": mapping_sha,
         "records": records,
-        "synthetic_records": [synthetic_membership],
+        "synthetic_records": [synthetic_membership] if projected_bands else [],
         "if01_typed_reference_examples": refs,
         "limits": [
             "All DB01 records are HOLD candidate projections. The candidate package ID/version is a shape example only; no HSK package manifest is created or registered.",
-            "The single SourceMembership is synthetic and must not be counted as HSK01 conversion output.",
+            "SourceMembership is synthetic and must not be counted as HSK01 conversion output; omitted with its refs if no parsed projected band exists.",
             "No DB01 schema or IF01 contract is modified."
         ]
     }
@@ -760,6 +774,8 @@ def main() -> None:
             "level_band_digest_encoding": "canonical sorted-key compact UTF-8 JSON of exact raw_label_term (RDF literal); raw label must equal term.value",
             "level_observation_digest_encoding": "UTF-8 exact raw label bytes",
             "unresolved_band": "HOLD_UNPARSED retains raw string and RDF term; null members and merged identity; no DB01 StandardBand projection",
+            "evidence_origin": "PINNED_ARCHIVE requires full equality to pinned band/observation. UNBOUND_CAPTURE has null source band/line digest or null count and empty source refs; synthetic stable ID derived from exact RDF term. It is not archive evidence or a DB01 projection.",
+            "runtime_trust": "Exact deployed validator/parser code and independently supplied contract digest trusted; public mapping/schema/index access returns defensive copies; not a Python sandbox.",
             "synthetic_locator": "synthetic page values may differ from archive; source/block IDs and digest linkage still exact; not source evidence"
         },
         "hsk01_consumption_contract": [

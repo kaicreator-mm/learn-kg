@@ -1,14 +1,14 @@
 {
-  "output_label": "LEARN_KG_V010_HS00_INTERFACE_SEMANTIC_VALIDATION_REMEDIATION",
+  "output_label": "LEARN_KG_V010_HS00_PINNED_EVIDENCE_AND_ALIAS_REMEDIATION",
   "task_issue": 22,
   "status": "CANDIDATE_PREPARATION_ONLY",
-  "base_head": "434f6563c14933b06cc443cb6de881bb95a204b3",
+  "base_head": "5680c4a50e1f0f2b5654e5606778b089f1ae7c34",
   "branch": "prep/hs00-interface-remediation",
   "validation": {
     "hs00_json_schema": "PASS",
     "finite_tests": {
-      "passed": 28,
-      "total": 28,
+      "passed": 31,
+      "total": 31,
       "status": "PASS"
     },
     "deterministic_replay": {
@@ -42,6 +42,11 @@
       "original_negative": 13,
       "finding_issue": 24,
       "finding_comment": 7239215513
+    },
+    "residual_delta": {
+      "finding_issue": 29,
+      "finding_comment": 7239816437,
+      "status": "AUTHOR_TESTS_ONLY"
     }
   },
   "inventory": {
@@ -125,19 +130,19 @@
   "artifacts": {
     "schema.json": {
       "path": "docs/implementation/hs00/schema.json",
-      "sha256": "2cf5d236c24aa53b9fb2f2935373048ed06d8e5108783c604be673a1769fcafe"
+      "sha256": "4e271cf564882f32e17b3694524bb9fc40cf67a0762b1a33271a210a1d1b9f1f"
     },
     "interface-contract.json": {
       "path": "docs/implementation/hs00/interface-contract.json",
-      "sha256": "7667fdac9847b245e38d318dcf2afe5d1d957d79605ec68f90362a645ddba556"
+      "sha256": "b5f3bb57cbe863224c0de07ffcc1e6dd5e0825bcaf91b18bf8b0c83b4fa6c34c"
     },
     "source-mapping.json": {
       "path": "docs/implementation/hs00/source-mapping.json",
-      "sha256": "4b4c4a837fb7dd39cacf233b5368a31e55175a464accae176b53e9642ec4f596"
+      "sha256": "407d940fab7d6c98021b87e81d16924be382e4902e0c6d1910e5fa90ffcb12a9"
     },
     "db01-projections.json": {
       "path": "docs/implementation/hs00/db01-projections.json",
-      "sha256": "6a7c79a630e0acd6aa88657e353c4a50bb17473f827b75444c8472683b80c3f8"
+      "sha256": "3dafd63201a06d9ef1d7c5f10b2d99e22a6e712e5f64c16091dd00d1c559a3ac"
     },
     "fixtures.json": {
       "path": "docs/implementation/hs00/fixtures.json",
@@ -145,19 +150,19 @@
     },
     "README.md": {
       "path": "docs/implementation/hs00/README.md",
-      "sha256": "80ebfe4974aa15c485f571cc7f4450ec86d56b0e95ffab098d4ee6088c944fa7"
+      "sha256": "cb74008a7eb5ca33de43e5d997994958acc68200de287a2de7af5a8c53fc96f9"
     },
     "build_hs00.py": {
       "path": "docs/implementation/hs00/build_hs00.py",
-      "sha256": "242b777939572f72c0d70ba1ec673c11de6fdd6041bd308928cfc4160e765071"
+      "sha256": "0954d8e0f378695e3bb5fc215cf5fc15e2eceb0ba7402c5cd612de4beaa69c9d"
     },
     "build_hs00_contract.py": {
       "path": "docs/implementation/hs00/build_hs00_contract.py",
-      "sha256": "d05e57a3e19c673c20ce307833409e359f163953c905273992ee71fa2c458bc6"
+      "sha256": "4a7721f75778bb8bb2261e54ff51bf8f8ebacd0e469748186e0bba676f0b23e6"
     },
     "test_hs00.py": {
       "path": "docs/implementation/hs00/test_hs00.py",
-      "sha256": "40c9ccf2b9522a8acead6c95288027843c583dc0af3a77b3607bce3619fe84e3"
+      "sha256": "745ebda80e1343688bd1e8f7ab5077f1bbee33405448aa0e84d1c5e850be873f"
     },
     "verify_hs00.py": {
       "path": "docs/implementation/hs00/verify_hs00.py",
@@ -165,7 +170,7 @@
     },
     "hs00_semantic.py": {
       "path": "docs/implementation/hs00/hs00_semantic.py",
-      "sha256": "1f886f1ef054c9d567d30129b516befa2adab2f79448b612af6e377c8d654ddb"
+      "sha256": "8f875ef742d7b4060c3ac2de34052b121641b6345918e90cdf1560fb807a3a9b"
     }
   },
   "safety_boundaries": {

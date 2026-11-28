@@ -336,7 +336,7 @@ class HS00Tests(unittest.TestCase):
 
     def test_22_validation_results_bind_exact_artifact_hashes_and_scope(self):
         result = load(HERE / "validation-results.json")
-        self.assertEqual(result["validation"]["finite_tests"], {"passed": 28, "total": 28, "status": "PASS"})
+        self.assertEqual(result["validation"]["finite_tests"], {"passed": 31, "total": 31, "status": "PASS"})
         self.assertEqual(result["validation"]["deterministic_replay"], {"artifacts": 5, "identical_sha256": 5, "status": "PASS"})
         for name, record in result["artifacts"].items():
             self.assertEqual(record["sha256"], sha(HERE / name), name)
@@ -359,7 +359,7 @@ class HS00Tests(unittest.TestCase):
             v = c["input"]
             if c["case_type"] == "LEVEL_LABEL":
                 row = copy.deepcopy(self.mapping["level_label_observations"][0])
-                row.update(raw_level_label=v["raw_level_label"], raw_field_sha256=digest(v["raw_level_label"]),
+                row.update(evidence_origin="UNBOUND_CAPTURE", occurrence_count=None, source_record_refs=[], raw_level_label=v["raw_level_label"], raw_field_sha256=digest(v["raw_level_label"]),
                            parse_status=c["expected"]["parse_status"], normalized_member_levels=c["expected"]["normalized_member_levels"])
                 from build_hs00 import merged_identity
                 row["merged_level_identity"] = merged_identity(row["raw_level_label"])
@@ -372,7 +372,7 @@ class HS00Tests(unittest.TestCase):
                 t = c["case_type"]
                 if t in ("LEVEL_LABEL", "LEVEL_FIELD_SILENT_NORMALIZATION"):
                     row = copy.deepcopy(self.mapping["level_label_observations"][0])
-                    row.update(raw_level_label=v["raw_level_label"], raw_field_sha256=digest(v["raw_level_label"]),
+                    row.update(evidence_origin="UNBOUND_CAPTURE", occurrence_count=None, source_record_refs=[], raw_level_label=v["raw_level_label"], raw_field_sha256=digest(v["raw_level_label"]),
                                parse_status="HOLD_UNPARSED", normalized_member_levels=None, merged_level_identity=None)
                     if t == "LEVEL_LABEL":
                         self.assertTrue(self.semantic.validate(row, "HSKLevelLabelObservation"))
@@ -430,14 +430,14 @@ class HS00Tests(unittest.TestCase):
     def test_26_unresolved_labels_lossless_full_records_and_digest_binding(self):
         for raw in ("", " ", "9（10）", "4(5)", "3（4"):
             observation = copy.deepcopy(self.mapping["level_label_observations"][0])
-            observation.update(raw_level_label=raw,raw_field_sha256=digest(raw),parse_status="HOLD_UNPARSED",
+            observation.update(evidence_origin="UNBOUND_CAPTURE",occurrence_count=None,source_record_refs=[],raw_level_label=raw,raw_field_sha256=digest(raw),parse_status="HOLD_UNPARSED",
                                normalized_member_levels=None,merged_level_identity=None)
             self.assertTrue(self.semantic.validate(observation,"HSKLevelLabelObservation"))
             self.rejects({**observation,"normalized_member_levels":[9],"merged_level_identity":"FORGED"},"HSKLevelLabelObservation")
             self.rejects({**observation,"raw_field_sha256":"0"*64},"HSKLevelLabelObservation")
             band = copy.deepcopy(self.mapping["level_bands"][0])
             band["raw_label_term"]["value"]=raw
-            band.update(raw_level_label=raw,raw_field_sha256=digest(band["raw_label_term"]),
+            band.update(evidence_origin="UNBOUND_CAPTURE",source_band_id=None,source_record_line_sha256=None,stable_id="HS00.UNBOUND.BAND."+digest(band["raw_label_term"])[:24],raw_level_label=raw,raw_field_sha256=digest(band["raw_label_term"]),
                         parse_status="HOLD_UNPARSED",normalized_member_levels=None,merged_level_identity=None)
             self.assertTrue(self.semantic.validate(band,"HSKLevelBand"))
             self.rejects({**band,"raw_level_label":raw+"x"},"HSKLevelBand")
@@ -469,6 +469,59 @@ class HS00Tests(unittest.TestCase):
         self.rejects({**loc,"printed_page_label_recorded_raw":"999","printed_page_numeric_value":999},"HSKSourceLocator")
         self.rejects({**source,"canonical_connector_text_sha256":"0"*64},"HSKSourceRecord")
         self.rejects({**block,"source_record_id":"urn:learn-kg:source:RHSK02"},"HSKSourceBlockMapping")
+
+    def test_29_pinned_level_evidence_cannot_be_substituted_with_recomputed_hashes(self):
+        from build_hs00 import merged_identity
+        b=copy.deepcopy(self.mapping["level_bands"][0])
+        b["raw_label_term"]["value"]="8"
+        b.update(raw_level_label="8",normalized_member_levels=[8],merged_level_identity=merged_identity("8"),
+                 raw_field_sha256=digest(b["raw_label_term"]))
+        self.rejects(b,"HSKLevelBand")
+        self.rejects({**b,"evidence_origin":"UNBOUND_CAPTURE"},"HSKLevelBand")
+        o=copy.deepcopy(self.mapping["level_label_observations"][0])
+        self.rejects({**o,"occurrence_count":o["occurrence_count"]+100000,
+                      "source_record_refs":["urn:learn-kg:source:RHSK03"]},"HSKLevelLabelObservation")
+        self.rejects({**o,"evidence_origin":"UNBOUND_CAPTURE"},"HSKLevelLabelObservation")
+        for b in self.mapping["level_bands"]:
+            self.assertTrue(self.semantic.validate(b,"HSKLevelBand"))
+        for o in self.mapping["level_label_observations"]:
+            self.assertTrue(self.semantic.validate(o,"HSKLevelLabelObservation"))
+
+    def test_30_public_accessors_are_defensive_copies(self):
+        v=HS00Validator.from_pinned_files(HERE,sha(HERE/"interface-contract.json"))
+        original=v.mapping["source_records"][0]
+        for r in (v.mapping["source_records"][0],v.sources[original["source_record_id"]]):
+            r["canonical_connector_text_sha256"]="0"*64
+            with self.assertRaises(ValueError):
+                v.validate(r,"HSKSourceRecord")
+        self.assertTrue(v.validate(original,"HSKSourceRecord"))
+        b=v.mapping["level_bands"][0]
+        altered=v.bands[b["source_band_id"]]
+        altered["source_record_line_sha256"]="0"*64
+        with self.assertRaises(ValueError):v.validate(altered,"HSKLevelBand")
+        schema=v.schema
+        schema["$defs"]["HSKSourceRecord"]={}
+        with self.assertRaises((ValueError,ValidationError)):
+            v.validate({"kind":"HSKSourceRecord","source_record_id":original["source_record_id"]},"HSKSourceRecord")
+        self.assertTrue(v.validate(b,"HSKLevelBand"))
+
+    def test_31_unresolved_first_and_all_bands_have_no_dangling_synthetic_refs(self):
+        from build_hs00_contract import make_db01_projections
+        for all_bands in (False,True):
+            mapping=copy.deepcopy(self.mapping)
+            for band in mapping["level_bands"] if all_bands else mapping["level_bands"][:1]:
+                band.update(parse_status="HOLD_UNPARSED",normalized_member_levels=None,merged_level_identity=None)
+            projection=make_db01_projections(mapping)
+            ids={(r["kind"],r["stable_id"]) for r in projection["records"]+projection["synthetic_records"]}
+            for ref in projection["if01_typed_reference_examples"]:
+                self.assertIn((ref["kind"],ref["stable_id"]),ids)
+            if all_bands:
+                self.assertEqual(projection["synthetic_records"],[])
+                self.assertFalse(any(r["kind"]=="StandardBand" for r in projection["records"]))
+            else:
+                self.assertEqual(len(projection["synthetic_records"]),1)
+                self.assertIn(("StandardBand",projection["synthetic_records"][0]["band_ref"]["stable_id"]),ids)
+                self.assertNotEqual(projection["synthetic_records"][0]["band_ref"]["stable_id"],mapping["level_bands"][0]["stable_id"])
 
 
 if __name__ == "__main__":

@@ -5,11 +5,11 @@
   "owner": "HS00",
   "schema": {
     "path": "docs/implementation/hs00/schema.json",
-    "sha256": "2cf5d236c24aa53b9fb2f2935373048ed06d8e5108783c604be673a1769fcafe"
+    "sha256": "4e271cf564882f32e17b3694524bb9fc40cf67a0762b1a33271a210a1d1b9f1f"
   },
   "source_mapping": {
     "path": "docs/implementation/hs00/source-mapping.json",
-    "sha256": "4b4c4a837fb7dd39cacf233b5368a31e55175a464accae176b53e9642ec4f596"
+    "sha256": "407d940fab7d6c98021b87e81d16924be382e4902e0c6d1910e5fa90ffcb12a9"
   },
   "fixtures": {
     "path": "docs/implementation/hs00/fixtures.json",
@@ -19,7 +19,7 @@
   },
   "db01_projection": {
     "path": "docs/implementation/hs00/db01-projections.json",
-    "sha256": "6a7c79a630e0acd6aa88657e353c4a50bb17473f827b75444c8472683b80c3f8",
+    "sha256": "3dafd63201a06d9ef1d7c5f10b2d99e22a6e712e5f64c16091dd00d1c559a3ac",
     "actual_records": 109,
     "synthetic_records": 1
   },
@@ -97,7 +97,7 @@
   },
   "semantic_validation": {
     "entrypoint": "hs00_semantic.py:HS00Validator.from_pinned_files",
-    "validator_sha256": "1f886f1ef054c9d567d30129b516befa2adab2f79448b612af6e377c8d654ddb",
+    "validator_sha256": "8f875ef742d7b4060c3ac2de34052b121641b6345918e90cdf1560fb807a3a9b",
     "record_api": "validate(record, expected_kind)",
     "required": true,
     "mapping_binding": "caller must supply independently pinned interface-contract SHA256; schema and source mapping bytes checked against it; validate against pinned source and block index",
@@ -105,6 +105,8 @@
     "level_band_digest_encoding": "canonical sorted-key compact UTF-8 JSON of exact raw_label_term (RDF literal); raw label must equal term.value",
     "level_observation_digest_encoding": "UTF-8 exact raw label bytes",
     "unresolved_band": "HOLD_UNPARSED retains raw string and RDF term; null members and merged identity; no DB01 StandardBand projection",
+    "evidence_origin": "PINNED_ARCHIVE requires full equality to pinned band/observation. UNBOUND_CAPTURE has null source band/line digest or null count and empty source refs; synthetic stable ID derived from exact RDF term. It is not archive evidence or a DB01 projection.",
+    "runtime_trust": "Exact deployed validator/parser code and independently supplied contract digest trusted; public mapping/schema/index access returns defensive copies; not a Python sandbox.",
     "synthetic_locator": "synthetic page values may differ from archive; source/block IDs and digest linkage still exact; not source evidence"
   },
   "hsk01_consumption_contract": [
