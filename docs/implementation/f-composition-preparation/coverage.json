@@ -1,10 +1,10 @@
 {
   "status": "PREPARATION_ONLY_NOT_REGISTERED",
   "package_version": "0.1.0-process-candidate-3",
-  "manifest_sha256": "a5f7a42acb0f7067738f83c7fddf7317a41e75bf7765b39ca060c1926db8c9a4",
-  "migrated_p_records": 1312,
+  "manifest_sha256": "72400e5ed04657a7c4c424a4ccf7f2efae83018ddc475feff1b0806611278321",
+  "migrated_p_records": 1401,
   "new_records": 324,
-  "total_records": 1636,
+  "total_records": 1725,
   "new_composition_cases": 121,
   "f_e_cases": 89,
   "a07_cases_out_of_review_scope": 32,
@@ -320,10 +320,37 @@
     },
     "deterministic_replay": {
       "status": "PASS",
-      "files": 27
+      "files": "ALL_TRACKED_GENERATED_ARTIFACTS"
     },
     "migration_and_structural_invariants": "PASS",
     "if01_finite_interface_candidate_validation": "PASS",
     "git_diff_check": "PASS"
+  },
+  "integration_delta": {
+    "status": "AUTHOR_REBIND_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+    "accepted_p09_head": "589cd14a042501ce468b9976edefdba2c537e657",
+    "accepted_f_e_a07_head": "d1ce8647b29f896849e14a9d7314b9b51c338fdf",
+    "review_comments": [
+      7227452019,
+      7230581974,
+      7235816275,
+      7239065926,
+      7230765057,
+      7230765548,
+      7230766078,
+      7230766596,
+      7231143475
+    ],
+    "migration_changed": 1232,
+    "migration_unchanged": 169,
+    "p_current_sql_cases": 360,
+    "p_inherited_sql_cases": 143,
+    "p_total_sql_cases": 503,
+    "f_e_a07_sql_cases": 121,
+    "unchanged_target_shards": 15,
+    "changed_target_shards": [
+      "P09"
+    ],
+    "historical_review_scope": "Prior verdicts preserved for their exact old tuples; no current qualification inferred."
   }
 }

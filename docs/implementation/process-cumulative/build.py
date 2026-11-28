@@ -485,11 +485,12 @@ def flow_eval(im,f,x,owner=None):
     state=sorted(join-members)[0];continue
   state=z['to_step']
  return 'PAUSE' if checkpoint else terms.get(state,'HOLD')
-def policy_eval(im,policy_ref,x):
+def policy_eval(im,policy_ref,x,*,expected_version='0.1.0-process-candidate-2'):
  # Bounded P07-only entry point. Never infer policy ownership from mutable
  # rule payloads. Resolve the canonical policy using the complete typed tuple
  # from the already validated, read-only SQL import. No caller policy object.
- expected=ref('P07','PolicySpec','P07.POLICY','0.1.0-process-candidate-2')
+ if expected_version not in ('0.1.0-process-candidate-2','0.1.0-process-candidate-3'):return 'HOLD'
+ expected=ref('P07','PolicySpec','P07.POLICY',expected_version)
  if type(policy_ref) is not dict or policy_ref!=expected or type(x) is not dict:return 'HOLD'
  try:
   p=load_record(im,expected)

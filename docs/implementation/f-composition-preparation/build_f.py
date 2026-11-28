@@ -77,7 +77,7 @@ def main():
   for line in p.read_text(encoding='utf-8').splitlines():
    r=json.loads(line);assert r['stable_id'] not in records
    records[r['stable_id']]=remap(r);old_records[r['stable_id']]=r
- assert len(records)==1312
+ assert len(records)==1401
  # Load all package manifests, preserving exact source manifest pins.
  catalog={}
  for m in B.glob('*/*manifest.json'):

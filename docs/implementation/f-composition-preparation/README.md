@@ -76,3 +76,6 @@
 - SRC01 已取得 ACCEPT_SCOPED / PRESERVATION_VERIFIED，但历史 PDF 身份、权利和视觉资格仍保留限制；HSK01/HS00/H01–H07 需按其各自任务推进。
 - G03/G04/G05、CQ/LC、专业覆盖充分性和发布资格仍各自 HOLD/NOT_RUN。
 - 无通用运行时、真实状态估计器、调度器、跨进程检查点、身份认证器、权限执行器或知识库写入器。
+
+### Integrated P09 and candidate-3 tuple rebind (new snapshot)
+Historical sections above describe the earlier reviewed candidate. New preparation candidate merges reviewed P09 #28 and F/E/A07 #17–20, #27 on the version baseline. The 1,401 P source records are migrated (1,232 exact internal ref-only transformations, 169 unchanged); 324 F/E/A07 records remain unchanged, total 1,725. Fifteen target canonical shards byte-identical to the prior accepted candidate-3; P09 updated only. All 360 current P cases and 143 inherited P cases replay against candidate-3 SQL via replay_p_rebind.py; 121 F/E/A07 cases separate. P07 exact canonical typed entry accepts a version only via the explicit finite replay configuration (default candidate-2; explicit candidate-3 allowed), not caller rule content; P09 no SUGGEST and wrapper unchanged. Serialized adversarial input strings remain unchanged. Historical reviews are not registrations for the new manifest. Current receipts/DAG unchanged until exact integrated independent review; no release, persistent SQLite, professional or rights promotion.

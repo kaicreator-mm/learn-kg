@@ -8,10 +8,10 @@ ROOT = Path(__file__).resolve().parents[3]
 DOC = Path(__file__).resolve().parent
 PKG = ROOT / 'knowledge/v0.1.0/learning-process-cumulative-r3'
 OLD = ROOT / 'knowledge/v0.1.0/learning-process-cumulative-r2'
-BASE = 'b08f0ccd5fce03093871d5020bd674134c8e530a'
+BASE = 'd1ce8647b29f896849e14a9d7314b9b51c338fdf'
 EXPECTED_CASES = {'F03': 15, 'F04': 25, 'F05': 12, 'F07': 17, 'A07': 32, 'E01': 20}
 EXPECTED_NEW_RECORDS = 324
-EXPECTED_TOTAL_RECORDS = 1636
+EXPECTED_TOTAL_RECORDS = 1725
 
 
 def sha(path):
@@ -97,10 +97,10 @@ def main():
     old = records(OLD, old_manifest)
     new = records(PKG, new_manifest)
     migration = load(DOC / 'migration.json')
-    assert len(old) == len(new) - EXPECTED_NEW_RECORDS == 1312
-    assert migration['migrated_record_count'] == 1312
+    assert len(old) == len(new) - EXPECTED_NEW_RECORDS == 1401
+    assert migration['migrated_record_count'] == 1401
     entries = {x['stable_id']: x for x in migration['records']}
-    assert len(entries) == 1312 and set(entries) == set(old)
+    assert len(entries) == 1401 and set(entries) == set(old)
     changed = unchanged = 0
     for stable_id, old_record in old.items():
         expected = remap(old_record)
@@ -114,8 +114,16 @@ def main():
             changed += 1
         else:
             unchanged += 1
-    assert (changed, unchanged) == (1147, 165)
-    assert all('0.1.0-process-candidate-2' not in json.dumps(x, ensure_ascii=False) for x in new.values())
+    assert (changed, unchanged) == (1232, 169)
+    def check_refs(value):
+        if isinstance(value, dict):
+            if value.get('package_id') == 'learning-process' and {'version','owner','kind','stable_id'} <= value.keys():
+                assert value['version'] == '0.1.0-process-candidate-3', value
+            for child in value.values(): check_refs(child)
+        elif isinstance(value, list):
+            for child in value: check_refs(child)
+    for record in new.values(): check_refs(record)
+    # Serialized input_spec strings intentionally preserve adversarial foreign-version inputs.
 
     manifest_hash = sha(PKG / 'learning-process.manifest.json')
     result = load(DOC / 'results.json')
@@ -138,14 +146,22 @@ def main():
         assert len(module['cases']) == len(set(module['cases']))
         assert set(module['cases']) == fixture_names[owner]
 
-    # P01-P10 and migration proof remain byte-stable; A07 is intentionally reworked.
-    for owner in [f'P{i:02d}' for i in range(1, 11)]:
+    # Previously independently reviewed candidate-3 professional/composition shards:
+    # only P09 changes; other nine P shards and all six F/E/A07 shards are byte-identical.
+    for owner in [f'P{i:02d}' for i in range(1, 11) if i != 9] + ['F03','F04','F05','F07','A07','E01']:
         path = f'knowledge/v0.1.0/learning-process-cumulative-r3/{owner}.jsonl'
         assert git_bytes(path) == (PKG / f'{owner}.jsonl').read_bytes(), owner
-    a07_path = 'knowledge/v0.1.0/learning-process-cumulative-r3/A07.jsonl'
-    assert git_bytes(a07_path) != (PKG / 'A07.jsonl').read_bytes()
-    assert git_bytes('docs/implementation/f-composition-preparation/design.json') == (DOC / 'design.json').read_bytes()
-    assert git_bytes('docs/implementation/f-composition-preparation/migration.json') == (DOC / 'migration.json').read_bytes()
+    assert git_bytes('knowledge/v0.1.0/learning-process-cumulative-r3/P09.jsonl') != (PKG / 'P09.jsonl').read_bytes()
+    for name in ('design.json','remediation-design.json','analysis-plan.json','fixtures.json','bindings.json'):
+        assert git_bytes('docs/implementation/f-composition-preparation/'+name) == (DOC / name).read_bytes()
+    for owner in [f'P{i:02d}' for i in range(1,11)]:
+        path=f'knowledge/v0.1.0/learning-process-cumulative-r2/{owner}.jsonl'
+        assert subprocess.check_output(['git','-C',str(ROOT),'show','589cd14a042501ce468b9976edefdba2c537e657:'+path]) == (ROOT/path).read_bytes()
+    p_rebind=load(DOC/'p-rebind-regression.json')
+    assert p_rebind['target_manifest_sha256']==manifest_hash
+    assert p_rebind['source_manifest_sha256']==sha(OLD/'learning-process.manifest.json')
+    assert (p_rebind['current_cases'],p_rebind['inherited_cases'],p_rebind['total_cases'])==(360,143,503)
+    assert p_rebind['qualification']=='NOT_GRANTED' and p_rebind['persistent_sqlite'] is False
 
     # F03: exact visual-accessibility evidence identity/version/scope/result/digest is pinned.
     f03_comp = new['F03.COMPOSITION']
