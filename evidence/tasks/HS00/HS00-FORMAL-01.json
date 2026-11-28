@@ -1,0 +1,142 @@
+{
+  "operator": "chatgpt-web:learn-kg-controller",
+  "session": "hs00-registration-20261128",
+  "role": "CONTROLLER_REGISTERING_INDEPENDENT_REVIEW",
+  "branch": "version/v0.1.0",
+  "base": "710ef78e13f1b67bb9f483075cae8172477564b9",
+  "exact_head": "32928027e18a2afa9764d3024af26045dcd502bb",
+  "tree": "fcbf94fc9616e15dabe98eacd3f8a9e52db59c1c",
+  "version": "32928027e18a2afa9764d3024af26045dcd502bb",
+  "contract_id": "D013-R3R-D014",
+  "contract_hash": "0bcf76f3374e5ebd169d8177595cb958b16a0c415705a76d7cee4c087f694f6d",
+  "time": "2026-11-28",
+  "task_id": "HS00",
+  "attempt_id": "HS00-FORMAL-01",
+  "receipt_id": "TASK:HS00:HS00-FORMAL-01",
+  "input": [
+    {
+      "task_id": "S01",
+      "receipt_id": "TASK:S01:S01-FORMAL-01",
+      "content_digest": "82aa24a189e3d4ad12a2d7d6e8a128f946a899c10a48d1aac45ddb7b7747ddc7",
+      "version": "dcbcb5e6e766b3f25bc8082f2a877a93d236bf3f",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/S01/S01-FORMAL-01.json",
+          "sha256": "29833f32e3e073bb6a3d7b24bfd3eb08816c3b94944c47a7850ccbdb53bf0ff0"
+        }
+      ]
+    },
+    {
+      "task_id": "SRC01",
+      "receipt_id": "TASK:SRC01:SRC01-FORMAL-02",
+      "content_digest": "8b5eaf476a1ff0cb61c3bcb79957ff5b01cad4bf2bfaf161b6cc3620ab8cfc96",
+      "version": "94004f85fb768f611930f87ffaf203d7d9827595",
+      "specific_refs": [
+        {
+          "path": "evidence/tasks/SRC01/SRC01-FORMAL-02.json",
+          "sha256": "06022ab7502cb4e78249a5b8cc181e024b64106b518ea79a46b9ab41a8e3e188"
+        }
+      ],
+      "preservation_review": {
+        "issue": 5,
+        "comment_id": 7226990636,
+        "body_sha256": "83e64dcb92b9277d01db4f4028aca61a7107c3e4b472597adf78971600c045c2",
+        "decision": "PRESERVATION_VERIFIED_RESTRICTED"
+      }
+    }
+  ],
+  "output": [
+    {
+      "path": "docs/implementation/hs00/README.md",
+      "sha256": "cb74008a7eb5ca33de43e5d997994958acc68200de287a2de7af5a8c53fc96f9",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/build_hs00.py",
+      "sha256": "0954d8e0f378695e3bb5fc215cf5fc15e2eceb0ba7402c5cd612de4beaa69c9d",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/build_hs00_contract.py",
+      "sha256": "4a7721f75778bb8bb2261e54ff51bf8f8ebacd0e469748186e0bba676f0b23e6",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/db01-projections.json",
+      "sha256": "3dafd63201a06d9ef1d7c5f10b2d99e22a6e712e5f64c16091dd00d1c559a3ac",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/fixtures.json",
+      "sha256": "b02d23519a602453691006674b6308ad19c83842f32ab1a4c191f7dd2ac30921",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/hs00_semantic.py",
+      "sha256": "8f875ef742d7b4060c3ac2de34052b121641b6345918e90cdf1560fb807a3a9b",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/interface-contract.json",
+      "sha256": "b5f3bb57cbe863224c0de07ffcc1e6dd5e0825bcaf91b18bf8b0c83b4fa6c34c",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/schema.json",
+      "sha256": "4e271cf564882f32e17b3694524bb9fc40cf67a0762b1a33271a210a1d1b9f1f",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/source-mapping.json",
+      "sha256": "407d940fab7d6c98021b87e81d16924be382e4902e0c6d1910e5fa90ffcb12a9",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/test_hs00.py",
+      "sha256": "745ebda80e1343688bd1e8f7ab5077f1bbee33405448aa0e84d1c5e850be873f",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/validation-results.json",
+      "sha256": "71d738e9255b312ee00646b24591347a612c7cbd78e4d9a83bb808428a46f704",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    },
+    {
+      "path": "docs/implementation/hs00/verify_hs00.py",
+      "sha256": "6ba851a904715cf9d25cfc1f082fd579666d0c25640faca869bc4628ce0bd0ec",
+      "type": "HS00_REVIEWED_INTERFACE_ARTIFACT"
+    }
+  ],
+  "state": "CANDIDATE_READY",
+  "receipt_type": "CANDIDATE_READY",
+  "scope_restriction": {
+    "status": "RESTRICTED_CANDIDATE_SCOPE",
+    "interface_contract_sha256": "b5f3bb57cbe863224c0de07ffcc1e6dd5e0825bcaf91b18bf8b0c83b4fa6c34c",
+    "source_mapping_sha256": "407d940fab7d6c98021b87e81d16924be382e4902e0c6d1910e5fa90ffcb12a9",
+    "rights": "HOLD",
+    "authority": "UNKNOWN_HOLD",
+    "historical_pdf_identity": "HOLD",
+    "visual_layout": "HOLD",
+    "H07": "NOT_RUN",
+    "publication": "NOT_AUTHORIZED"
+  },
+  "validation": {
+    "independent_review_issue": 31,
+    "review_comment": 7240310807,
+    "review_body_sha256": "6d14dae116f0819cf87fdb27f35124d5f1a1daaf145eca9e399bad370ea81bab",
+    "independent_result": "ACCEPT_SCOPED",
+    "P0": 0,
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "repository_tests": "31/31",
+    "independent_probes": "56/56",
+    "actual_levels": "39/39",
+    "deterministic_replay": "5/5"
+  },
+  "issues": [
+    "Restricted source interface only; no professional qualification or rights expansion."
+  ],
+  "next": "HSK01 private text conversion and reconciliation",
+  "content_digest": "15e34adc14bcb943448521ad7c38f1e72c3916d12caacaa8a6aace60413921d0"
+}

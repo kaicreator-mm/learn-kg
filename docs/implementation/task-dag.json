@@ -113,7 +113,7 @@
       "deliverable": "私有UTF-8 JSONL/JSON原始记录及语义候选文本、RDF/源逐字段映射、差异账本与导入映射",
       "acceptance": "11000词汇/4288成员/3088字/94源块/9能力/823分类逐类对账；102括号级别、合并级、页序号/原始字段、来源身份和scopeTopic语义；可阅读且可解析、未知保留、权利不明保持私有；不生成SQLite文件",
       "kind": "implementation",
-      "status": "PLANNED",
+      "status": "READY",
       "requirements": [
         {
           "task_id": "SRC01",
@@ -3405,7 +3405,9 @@
         }
       ],
       "output_receipt": "CANDIDATE_READY",
-      "status": "READY"
+      "status": "CANDIDATE_READY",
+      "current_receipt": "evidence/tasks/HS00/HS00-FORMAL-01.json",
+      "qualification_scope": "RESTRICTED"
     },
     {
       "id": "V00",
@@ -3651,5 +3653,5 @@
     "validation": "static schema and semantic validation first; later importer tests use in-memory SQLite by default; physical SQLite tests only in separately authorized scope, report untested obligations explicitly",
     "release": "approved readable source package + schemas + importer + validation reports and manifest; no .sqlite/.db binary files"
   },
-  "current_task_state_note": "P01-P10 exact candidate-3 rebind and PR01/PR02 restricted qualifications registered from #30 comment 7239835702; F03/F04/F05/F07/E01/A07 candidate receipts registered, G03/CQ/LC/rights/release not granted. HS00 unchanged."
+  "current_task_state_note": "HS00 candidate registered from #31 comment 7240310807; HSK01 READY for private text conversion only; source authority/rights/layout/history HOLD retained."
 }
