@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 DOC = Path(__file__).resolve().parent
 PKG = ROOT / 'knowledge/v0.1.0/learning-process-cumulative-r2'
-BASE = '4a8cd2b6aef68d5a574842325ef9fddaa0559c16'
+BASE = '9ee04704f4b388aa8ead129574c3f616c3c551a5'
 P09_PATH = 'knowledge/v0.1.0/learning-process-cumulative-r2/P09.jsonl'
 MANIFEST_PATH = 'knowledge/v0.1.0/learning-process-cumulative-r2/learning-process.manifest.json'
 
@@ -49,12 +49,43 @@ def main():
     assert (DOC / 'design.json').read_bytes() == git_bytes('docs/implementation/process-cumulative/design.json')
     assert (DOC / 'migration.json').read_bytes() == git_bytes('docs/implementation/process-cumulative/migration.json')
     assert (ROOT / 'docs/implementation/task-dag.json').read_bytes() == git_bytes('docs/implementation/task-dag.json')
+    for rel in (
+        'docs/implementation/db01/canonical.schema.json',
+        'docs/implementation/if01/interface-contract.json',
+    ):
+        assert (ROOT / rel).read_bytes() == git_bytes(rel), f'{rel} changed'
+
+    allowed = {
+        'docs/implementation/process-cumulative/README.md',
+        'docs/implementation/process-cumulative/build.py',
+        'docs/implementation/process-cumulative/coverage.json',
+        'docs/implementation/process-cumulative/fixtures.json',
+        'docs/implementation/process-cumulative/import-receipt.json',
+        'docs/implementation/process-cumulative/p09-remediation.json',
+        'docs/implementation/process-cumulative/results.json',
+        'docs/implementation/process-cumulative/test_p09_identity_time.py',
+        'docs/implementation/process-cumulative/test_p09_policy_gate.py',
+        'docs/implementation/process-cumulative/verify_p09_remediation.py',
+        P09_PATH,
+        MANIFEST_PATH,
+    }
+    tracked_delta = set(subprocess.check_output(
+        ['git', '-C', str(ROOT), 'diff', '--name-only', BASE],
+        text=True,
+    ).splitlines())
+    untracked = set(subprocess.check_output(
+        ['git', '-C', str(ROOT), 'ls-files', '--others', '--exclude-standard'],
+        text=True,
+    ).splitlines())
+    assert tracked_delta | untracked <= allowed, {
+        'unexpected_paths': sorted((tracked_delta | untracked) - allowed)
+    }
 
     records = [json.loads(line) for line in (PKG / 'P09.jsonl').read_text(encoding='utf-8').splitlines()]
     by_id = {x['stable_id']: x for x in records}
-    assert len(records) == len(by_id) == 197
-    assert sum(x['kind'] == 'Case' for x in records) == 81
-    assert sum(x['kind'] == 'Validation' for x in records) == 81
+    assert len(records) == len(by_id) == 221
+    assert sum(x['kind'] == 'Case' for x in records) == 93
+    assert sum(x['kind'] == 'Validation' for x in records) == 93
     assert sum(x['kind'] == 'PolicySpec' for x in records) == 1
     assert sum(x['kind'] == 'ObservationSpec' for x in records) == 4
     p09_contract_sha = sha(DOC / 'p09-remediation.json')
@@ -96,37 +127,52 @@ def main():
 
     policy = by_id['P09.POLICY']
     assert policy['policy_type'] == 'ASSESSMENT' and policy['effect'] == 'ADVICE_ONLY'
+    assert len(policy['rules']) == 1
+    assert policy['rules'][0]['action'] == 'REQUEST_OBSERVATION'
     assert policy['rules'][0]['condition_ref']['stable_id'] == 'P09.GUARD.COMPOSITE_VALID'
-    assert '不推断真实保持、迁移、掌握或因果效果' in ''.join(policy['conditions'])
+    assert not any(x['action'] == 'SUGGEST' for x in policy['rules'])
+    assert '移除SUGGEST路由' in ''.join(policy['conditions'])
+    policy_boundary = policy['negative_boundary']
+    assert 'No SUGGEST route' in policy_boundary
+    assert 'no state writes' in policy_boundary
+    assert 'no action execution' in policy_boundary
+    assert 'no learning-effect inference' in policy_boundary
     composition = by_id['P09.COMPOSITION']
     assert {'P09.FLOW','P09.POLICY'} <= {x['stable_id'] for x in composition['output_refs']}
     assert {'P09.GUARD.SAME_LEARNER','P09.GUARD.TIME_BASIS','P09.GUARD.MIN_DELAY',
             'P09.GUARD.COMPOSITE_VALID'} <= {x['stable_id'] for x in composition['condition_refs']}
+    assert '移除PolicySpec的SUGGEST规则' in ''.join(composition['conditions'])
+    assert any('同一input' in x for x in composition['conditions'])
 
     fixture_rows = load(DOC / 'fixtures.json')
     p09_fixtures = [x for x in fixture_rows if x['owner'] == 'P09']
-    assert len(fixture_rows) == 348 and len(p09_fixtures) == 81
+    assert len(fixture_rows) == 360 and len(p09_fixtures) == 93
     concrete = [x for x in p09_fixtures if x['input'].get('scenario') == 'CONCRETE_FINITE']
-    assert len(concrete) == 38
+    policy_gate = [x for x in p09_fixtures if x.get('evaluation_kind') == 'P09_POLICY_GATE']
+    assert len(concrete) == 38 and len(policy_gate) == 12
+    assert {x['expected'] for x in policy_gate} == {'REQUEST_OBSERVATION','HOLD','STOP','PAUSE'}
     results = load(DOC / 'results.json')
-    assert results['cases'] == 348
+    assert results['cases'] == 360
     assert results['manifest_sha256'] == sha(PKG / 'learning-process.manifest.json')
     assert results['fixture_sha256'] == sha(DOC / 'fixtures.json')
-    assert sum(x['owner'] == 'P09' for x in results['results']) == 81
+    assert sum(x['owner'] == 'P09' for x in results['results']) == 93
+    policy_result_ids = {x['case_id'] for x in results['results'] if x['owner'] == 'P09' and x['case_id'] in {f'P09.C{i:03d}' for i in range(82,94)}}
+    assert len(policy_result_ids) == 12
+    assert all(x['actual'] != 'SUGGEST' for x in results['results'] if x['owner'] == 'P09' and x['case_id'] in policy_result_ids)
     assert manifest['files'] == [
         {'path': f'{owner}.jsonl', 'sha256': sha(PKG / f'{owner}.jsonl'),
          'format': 'JSONL_RECORDS',
          'record_count': sum(1 for _ in (PKG / f'{owner}.jsonl').open(encoding='utf-8'))}
         for owner in [f'P{i:02}' for i in range(1, 11)]
     ]
-    assert sum(x['record_count'] for x in manifest['files']) == 1377
+    assert sum(x['record_count'] for x in manifest['files']) == 1401
     assert sum(x['record_count'] for x in manifest['files'] if x['path'] != 'P09.jsonl') == 1180
     assert files['P09.jsonl']['sha256'] != base_files['P09.jsonl']['sha256']
 
     coverage = load(DOC / 'coverage.json')
     p09_coverage = next(x for x in coverage['modules'] if x['owner'] == 'P09')
-    assert p09_coverage['records'] == 197
-    assert p09_coverage['finite_cases'] == 81 and p09_coverage['concrete_cases'] == 38
+    assert p09_coverage['records'] == 221
+    assert p09_coverage['finite_cases'] == 93 and p09_coverage['concrete_cases'] == 38 and p09_coverage['policy_gate_cases'] == 12
     assert p09_coverage.get('independent_delta_review') in (None, 'PENDING')
     hashes = coverage['p09_remediation']['artifact_hashes']
     expected_hashes = {
@@ -137,7 +183,9 @@ def main():
         'results_sha256': sha(DOC / 'results.json'),
         'import_receipt_sha256': sha(DOC / 'import-receipt.json'),
         'migration_sha256': sha(DOC / 'migration.json'),
-        'bindings_sha256': sha(DOC / 'bindings.json')
+        'bindings_sha256': sha(DOC / 'bindings.json'),
+        'policy_gate_tests_sha256': sha(DOC / 'test_p09_policy_gate.py'),
+        'p09_policy_gate_fixtures_sha256': sha(DOC / 'fixtures.json')
     }
     for key, value in expected_hashes.items():
         assert hashes[key] == value, key
@@ -150,6 +198,7 @@ def main():
         'p09_contract_sha256': p09_contract_sha,
         'p09_records': len(records),
         'p09_cases': len(p09_fixtures),
+        'p09_policy_gate_cases': len(policy_gate),
         'p09_concrete_identity_time_cases': len(concrete),
         'package_records': sum(x['record_count'] for x in manifest['files']),
         'builder_cases': len(fixture_rows),

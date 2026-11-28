@@ -65,5 +65,17 @@
     "P09.RQ02": "三个观察的event time采用UTC epoch seconds与SECOND单位；recorded_at独立记录，保持自身时基/单位与追加顺序；不得将event time与recorded_at跨时钟比较。",
     "P09.RQ03": "延迟间隔由delayed.observed_at减immediate.observed_at计算，至少86400秒；novel transfer observed_at严格晚于delayed；caller delay_positive和caller minimum_delay_seconds均不构成证据。",
     "P09.RQ04": "保留即时、延迟、迁移各自结果及失败/未知状态；迁移必须是不同任务族且目标维度明确；本候选阈值不是普遍或最优间隔建议。"
+  },
+  "policy_gate": {
+    "status": "SUGGEST_DISABLED_UNTIL_SUPPORTED_NONFORGEABLE_FLOW_COMPLETION_BINDING",
+    "required_flow_spec": "P09.FLOW",
+    "required_flow_result": "COMPLETE",
+    "same_input_binding": "The policy wrapper loads the exact P09.FLOW ref at the same package version as P09.POLICY and evaluates the same input object internally; caller-supplied flow_result, flow_ref, flow_instance_id and input_digest are never accepted as evidence.",
+    "canonical_contract_limit": "Current DB01 PolicySpec/CompositionSpec and IF01 typed references do not encode a non-forgeable FlowSpec completion result bound to a flow instance and input digest.",
+    "policy_route": "REQUEST_OBSERVATION_ONLY",
+    "suggest_route": "REMOVED",
+    "effect": "ADVICE_ONLY",
+    "future_reenablement": "Requires a supported canonical composition contract carrying exact FlowSpec identity/version, flow instance, input digest and COMPLETE result, followed by independent review.",
+    "negative_boundary": "No SUGGEST route, no state writes, no action execution, no real-person identity authentication, no clock authentication and no learning-effect inference."
   }
 }

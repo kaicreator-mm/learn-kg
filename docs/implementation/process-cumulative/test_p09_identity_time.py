@@ -215,7 +215,10 @@ class P09IdentityTimeTests(unittest.TestCase):
         policy = by_id['P09.POLICY']
         self.assertEqual(policy['policy_type'], 'ASSESSMENT')
         self.assertEqual(policy['effect'], 'ADVICE_ONLY')
+        self.assertEqual(policy['rules'][0]['action'], 'REQUEST_OBSERVATION')
         self.assertEqual(policy['rules'][0]['condition_ref']['stable_id'], 'P09.GUARD.COMPOSITE_VALID')
+        self.assertNotIn('SUGGEST', {r['action'] for r in policy['rules']})
+        self.assertIn('移除SUGGEST路由', ''.join(policy['conditions']))
         composition = by_id['P09.COMPOSITION']
         self.assertIn('P09.POLICY', {r['stable_id'] for r in composition['output_refs']})
         self.assertIn('P09.GUARD.MIN_DELAY', {r['stable_id'] for r in composition['condition_refs']})

@@ -472,8 +472,8 @@
     },
     {
       "owner": "P09",
-      "records": 197,
-      "finite_cases": 81,
+      "records": 221,
+      "finite_cases": 93,
       "concrete_cases": 38,
       "status": "RESTRICTED_BUILDER_CANDIDATE_ONLY",
       "requirements": [
@@ -512,6 +512,15 @@
           "candidate_case_group": "P09",
           "remaining": "真实学习者任务执行、跨会话持久化和阶段总结效果未验证",
           "state": "PARTIAL_RESTRICTED_NOT_FULL_COVERAGE"
+        },
+        {
+          "id": "P09.RQ05",
+          "scope": "PolicySpec不得独立消费caller computed_*或summary booleans；当前canonical contract不支持不可伪造FlowSpec completion binding，移除SUGGEST，仅同版本精确P09.FLOW同输入内部求值COMPLETE后允许REQUEST_OBSERVATION",
+          "target": "P09.POLICY",
+          "composition": "P09.COMPOSITION",
+          "candidate_case_group": "P09_POLICY_GATE",
+          "remaining": "未来如需恢复SUGGEST，须先有DB01/IF01支持的精确FlowSpec identity/version、flow instance、input digest与COMPLETE结果绑定合同，并重新独立审核",
+          "state": "PARTIAL_RESTRICTED_FAIL_CLOSED"
         }
       ],
       "case_ids": [
@@ -595,9 +604,22 @@
         "P09.C078",
         "P09.C079",
         "P09.C080",
-        "P09.C081"
+        "P09.C081",
+        "P09.C082",
+        "P09.C083",
+        "P09.C084",
+        "P09.C085",
+        "P09.C086",
+        "P09.C087",
+        "P09.C088",
+        "P09.C089",
+        "P09.C090",
+        "P09.C091",
+        "P09.C092",
+        "P09.C093"
       ],
-      "independent_delta_review": "PENDING"
+      "independent_delta_review": "PENDING",
+      "policy_gate_cases": 12
     },
     {
       "owner": "P10",
@@ -703,13 +725,13 @@
   "independent_qualification": "NOT_RUN",
   "p09_remediation": {
     "status": "IMPLEMENTED_PREPARATION_ONLY",
-    "task_issue": 21,
-    "base_head": "4a8cd2b6aef68d5a574842325ef9fddaa0559c16",
-    "manifest_sha256": "c4cc5334849c12a5a9a7cddb47be45fe44da556e497cf2901b06ac1612817ab0",
+    "task_issue": 25,
+    "base_head": "9ee04704f4b388aa8ead129574c3f616c3c551a5",
+    "manifest_sha256": "70ac569a201d2984b86f191131ff0fd9ae38593e199323d59af836b69222a7db",
     "contract_path": "docs/implementation/process-cumulative/p09-remediation.json",
     "contract_sha256": "43da419ef95fdb9436bac428fcc8b48a7d65abf4e8ef63a36b566935ae0f3f92",
-    "p09_records": 197,
-    "p09_cases": 81,
+    "p09_records": 221,
+    "p09_cases": 93,
     "p09_concrete_identity_time_cases": 38,
     "semantic_boundary_tests": {
       "passed": 8,
@@ -739,14 +761,16 @@
     "independent_delta_review": "PENDING",
     "qualification": "NOT_GRANTED",
     "artifact_hashes": {
-      "p09_jsonl_sha256": "a3018e3a5af586c3d2ef701e50aa69c55653c16ddb8a696cb4af1a855e3b2fa5",
-      "manifest_sha256": "a739e55e122f1358fdfcf7bfe1f8993b53ec6af5bab5ef8f0d553e30cdfa2a65",
-      "contract_sha256": "43da419ef95fdb9436bac428fcc8b48a7d65abf4e8ef63a36b566935ae0f3f92",
-      "fixtures_sha256": "c27fda5270e81985e832389af60b58d88902cb7c96ece23b01784b673701def7",
-      "results_sha256": "ce2a2f24f306e92bae35f6dc7e7c60eb6fe172f8e3ed1be72293867ad2cfcf30",
-      "import_receipt_sha256": "a5775674c37f86271f28e80e3e5403335e56d73dd7290804a278ac6bf038f09e",
+      "p09_jsonl_sha256": "4c598cbf66c86cf081e29649b834995a0a68388db88131e658552c5a9bb0a4a1",
+      "manifest_sha256": "70ac569a201d2984b86f191131ff0fd9ae38593e199323d59af836b69222a7db",
+      "contract_sha256": "d8014d1262c995b7f97f30855f9a7f8dc750d0765a093fc37a6f5a94db6a4b44",
+      "fixtures_sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa",
+      "results_sha256": "63bec5140a66861c4808e76f7b53135a55b0275aadc85aae3af6f4905c77a327",
+      "import_receipt_sha256": "e606598e155a3c80724031f375167500628306fd533ebd18ead4f8a8ce9f4d3e",
       "migration_sha256": "5d2b3286d45d5cf89c04b35cec4c157b723915bc34bf4880c3c36e30c58946e7",
-      "bindings_sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391"
+      "bindings_sha256": "e342a91b510735849ed10e5ef25dda26f872090037fbd8a32e39c80344fb2391",
+      "policy_gate_tests_sha256": "3ef96d30ad7e63e56d88d1e262361514f3e08c1269b85e0e8ae25d84cdd64119",
+      "p09_policy_gate_fixtures_sha256": "9c2bc57ff88e1b9fa1ab8cd6a1b0b4ee40f037eaff15033e801f76fe5c14d2aa"
     },
     "validation": {
       "semantic_boundary_tests": {
@@ -775,14 +799,24 @@
         "negative_rejected": 17
       },
       "deterministic_replay": {
-        "status": "PASS",
-        "artifact_count": 26
+        "status": "PENDING",
+        "artifact_count": 0
       },
       "p09_remediation_invariants": "PASS",
       "preserved_p01_p08_p10_byte_identity": "PASS",
-      "git_diff_check": "PASS"
+      "git_diff_check": "PASS",
+      "policy_gate_tests": {
+        "passed": 16,
+        "total": 16
+      }
     },
-    "package_records": 1377,
-    "builder_cases": 348
+    "package_records": 1401,
+    "builder_cases": 360,
+    "p09_policy_gate_cases": 12,
+    "policy_gate_status": "SUGGEST_DISABLED_UNTIL_SUPPORTED_NONFORGEABLE_FLOW_COMPLETION_BINDING",
+    "policy_gate_tests": {
+      "passed": 16,
+      "total": 16
+    }
   }
 }

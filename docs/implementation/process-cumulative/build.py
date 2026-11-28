@@ -101,12 +101,14 @@ def main():
    trans.extend([tr(s['id'],'STOP','STOP',None,False,0),tr(s['id'],'PAUSE','PAUSE',None,False,0)])
   return add(o,'FlowSpec',o+'.FLOW',cr,entry=steps[0]['id'],steps=steps,transitions=trans,terminals=[dict(id=x,outcome=x) for x in ('COMPLETE','STOP','PAUSE','HOLD','FAILED')],max_events=max_events,unknown_terminal='HOLD',stop_terminal='STOP',parallel_joins=joins,effect='TEMPLATE_ONLY')
  def step(id,ar,n=1):return dict(id=id,activity_ref=ar,max_attempts=n,checkpoint=True)
- def case(o,target,x,y,view='FORWARD'):
+ def case(o,target,x,y,view='FORWARD',evaluation_kind=None):
   id=o+'.C'+str(1+sum(f['owner']==o for f in fixtures)).zfill(3)
   vr=ref(o,'Validation',id+'.VAL',v);c=ref(o,'Case',id,v)
   add(o,'Case',id,target_refs=[target],view=view,input_spec=json.dumps(x,ensure_ascii=False,sort_keys=True),expected_spec=json.dumps(y,ensure_ascii=False,sort_keys=True,separators=(',',':')) if isinstance(y,dict) else y,oracle_ref=vr,actual_status='RECORDED_BUILDER_ONLY')
   add(o,'Validation',id+'.VAL',target_refs=[target],case_refs=[c],method='Exact SQL-read finite contract replay; author expectation',oracle_identity='AUTHOR_FROZEN_CONTRACT_EXPECTATION',input_digest=dig(x),result_digest=dig(y),run_status='BUILDER_RUN')
-  fixtures.append(dict(owner=o,case_id=id,target=target,input=x,expected=y));return c
+  fixture=dict(owner=o,case_id=id,target=target,input=x,expected=y)
+  if evaluation_kind is not None:fixture['evaluation_kind']=evaluation_kind
+  fixtures.append(fixture);return c
  def composition(o,cr,target,guards,evidence):
   inp=[local(id) for id in d[o]['inputs']]
   for a in inp:assert a['owner'] in ts[o]['depends_on']
@@ -222,11 +224,17 @@ def main():
              dict(field='goal_reviewed',op='EQ',value=True)],
     combination='ALL',unknown='HOLD')
    guards.extend([same,time,delay,composite])
+   policy_gate=p09_contract['policy_gate']
+   assert policy_gate['status']=='SUGGEST_DISABLED_UNTIL_SUPPORTED_NONFORGEABLE_FLOW_COMPLETION_BINDING'
    policy=add(o,'PolicySpec','P09.POLICY',cr,
-    conditions=['仅在P09 FlowSpec与组合校验全部完成后，向调用者建议保存三任务观察摘要；此策略不推断真实保持、迁移、掌握或因果效果。缺失/无效身份或时间输入必须先由FlowSpec/evaluator保持HOLD，不得由策略覆盖。'],
-    negative_boundary='ADVICE_ONLY；不执行调度、不更新学习者状态、不认证现实身份/时钟来源、不形成真实学习效果结论。',
+    conditions=[
+     '当前DB01 PolicySpec/CompositionSpec与IF01 typed reference合同不能表达绑定精确FlowSpec身份/版本、flow instance、input digest和COMPLETE结果的不可伪造依赖，因此明确移除SUGGEST路由。',
+     '仅当内部wrapper以同一package version加载精确P09.FLOW并对同一input对象重新求值为COMPLETE时，才允许REQUEST_OBSERVATION；wrapper不接受caller提供的flow_result、flow_ref、flow_instance_id或input_digest。',
+     'HOLD/STOP/PAUSE/FAILED/缺失/未知/格式错误/身份或时间不匹配均不得进入建议路径。'
+    ],
+    negative_boundary=policy_gate['negative_boundary'],
     policy_type='ASSESSMENT',
-    rules=[dict(condition_ref=composite,action='SUGGEST',reason='仅建议记录通过有限协议校验的三任务观察摘要；不推断保持/迁移/掌握或因果',priority=1)],
+    rules=[dict(condition_ref=composite,action='REQUEST_OBSERVATION',reason='FlowSpec精确同输入求值COMPLETE后，仅请求记录有限观察；不产生建议或学习效果结论',priority=1)],
     unknown_action='CLARIFY',effect='ADVICE_ONLY')
    trans[-1]['condition_ref']=composite
    for i,e in enumerate(events[:3]):
@@ -270,9 +278,47 @@ def main():
     '每条即时/延迟/迁移ObservationSpec必须携带相同typed learner_identity，subject_id与identity_version精确一致。',
     '延迟间隔只从UTC epoch-second observed_at相减计算，阈值86400秒仅为本候选有限协议边界。',
     'recorded_at使用独立recording time basis/unit，只验证其自身顺序；绝不与observed_at跨时钟比较。',
-    'caller delay_positive与caller minimum_delay_seconds均不作为证据；缺失、冲突和未知保持HOLD。']
-   records['P09.COMPOSITION']['failure_policy']='任何身份不一致、时间单位/时基混用、延迟不足、时间顺序错误、recording顺序错误或summary缺失均HOLD；不认证现实身份/时钟来源，不声称学习效果。'
+    'caller delay_positive与caller minimum_delay_seconds均不作为证据；缺失、冲突和未知保持HOLD。',
+    '当前DB01/IF01无法表达不可伪造FlowSpec完成结果绑定，因此移除PolicySpec的SUGGEST规则。',
+    '仅内部wrapper加载与PolicySpec同package version的精确P09.FLOW并使用同一input重新求值COMPLETE后，才允许REQUEST_OBSERVATION。']
+   records['P09.COMPOSITION']['failure_policy']='任何身份不一致、时间单位/时基混用、延迟不足、时间顺序错误、recording顺序错误或summary缺失均HOLD；STOP/PAUSE原样传播。当前canonical contract无法表达不可伪造FlowSpec完成依赖，故PolicySpec无SUGGEST规则；仅精确P09.FLOW同版本/同输入内部求值COMPLETE后可REQUEST_OBSERVATION。'
+   p09_policy_ref=policy
+   p09_policy_base_input=copy.deepcopy(x)
  for o,x,y in fixture_rows():case(o,local(o+'.FLOW'),x,y,'COMPOSITION')
+ # P09 policy-gate cases are separate from FlowSpec cases. They exercise the
+ # only supported ADVICE_ONLY route after an internally re-evaluated exact flow.
+ def p09_policy_case(x,expected):
+  case('P09',p09_policy_ref,copy.deepcopy(x),expected,'COMPOSITION','P09_POLICY_GATE')
+ policy_base=copy.deepcopy(p09_policy_base_input)
+ p09_policy_case(policy_base,'REQUEST_OBSERVATION')
+ x=copy.deepcopy(policy_base);x['events'][1]['learner_identity']['subject_id']='SUBJECT-OTHER'
+ x.update(dict(computed_same_learner_identity=True,immediate_subject_id='SUBJECT-01',delayed_subject_id='SUBJECT-01',transfer_subject_id='SUBJECT-01',computed_delay_seconds=86400,minimum_delay_seconds=86400,computed_timestamp_order_valid=True,computed_recording_order_valid=True,evidence_separated=True,goal_reviewed=True))
+ x['flow_result']=dict(status='COMPLETE',flow_instance_id='OTHER-FLOW',input_sha256='0'*64,version='V0')
+ p09_policy_case(x,'HOLD')
+ x=copy.deepcopy(policy_base);x['events'][1]['observed_at']=x['events'][0]['observed_at']+86399;x['events'][2]['observed_at']=x['events'][1]['observed_at']+86400
+ x.update(dict(computed_delay_seconds=86400,minimum_delay_seconds=86400,computed_timestamp_order_valid=True,computed_recording_order_valid=True))
+ p09_policy_case(x,'HOLD')
+ x=copy.deepcopy(policy_base);x['events'][2]['learner_identity']['subject_id']='SUBJECT-OTHER'
+ x.update(dict(computed_same_learner_identity=True,immediate_subject_id='SUBJECT-01',delayed_subject_id='SUBJECT-01',transfer_subject_id='SUBJECT-01',computed_delay_seconds=86400,minimum_delay_seconds=86400,computed_timestamp_order_valid=True,computed_recording_order_valid=True))
+ p09_policy_case(x,'HOLD')
+ x=copy.deepcopy(policy_base);x['events'][1]['learner_identity']['subject_id']='SUBJECT-OTHER'
+ x['events'][3].update(dict(evidence_separated=True,goal_reviewed=True))
+ x.update(dict(computed_same_learner_identity=True,computed_delay_seconds=86400,computed_timestamp_order_valid=True,computed_recording_order_valid=True))
+ p09_policy_case(x,'HOLD')
+ x=copy.deepcopy(policy_base);x['events']=None;x['flow_result']=dict(status='COMPLETE',flow_ref=dict(owner='P09',kind='FlowSpec',stable_id='P09.FLOW',version='0.1.0-process-candidate-1',package_id='learning-process'))
+ p09_policy_case(x,'HOLD')
+ x=copy.deepcopy(policy_base);x['flow_result']=dict(status='COMPLETE',flow_instance_id='OTHER-FLOW',input_sha256=dig(policy_base),version=v)
+ p09_policy_case(x,'REQUEST_OBSERVATION')
+ x=copy.deepcopy(policy_base);x['flow_result']=dict(status='COMPLETE',flow_instance_id='P09:'+dig(policy_base),input_sha256='f'*64,version=v)
+ p09_policy_case(x,'REQUEST_OBSERVATION')
+ x=copy.deepcopy(policy_base);x['flow_result']=dict(status='COMPLETE',flow_instance_id='P09:'+dig(policy_base),input_sha256=dig(policy_base),version='0.1.0-process-candidate-1',flow_ref=dict(owner='P09',kind='FlowSpec',stable_id='P09.FLOW',version='0.1.0-process-candidate-1',package_id='learning-process'))
+ p09_policy_case(x,'REQUEST_OBSERVATION')
+ x=copy.deepcopy(policy_base);x['events']=[dict(type='STOP')]
+ p09_policy_case(x,'STOP')
+ x=copy.deepcopy(policy_base);x['events']=[dict(type='PAUSE')]
+ p09_policy_case(x,'PAUSE')
+ x=copy.deepcopy(policy_base);x['events']=[dict(type='UNKNOWN')]
+ p09_policy_case(x,'HOLD')
  # Write one version with local references only.
  PKG.mkdir(exist_ok=True);files=[]
  for o in [f'P{i:02}' for i in range(1,11)]:
@@ -303,7 +349,14 @@ def main():
   for f in fixtures:
    c=load_record(im,local(f['case_id']));x=json.loads(c['input_spec']);assert x==f['input'] and c['expected_spec']==(json.dumps(f['expected'],ensure_ascii=False,sort_keys=True,separators=(',',':')) if isinstance(f['expected'],dict) else f['expected'])
    t=c['target_refs'][0];a=load_record(im,t)
-   y=evaluate(im,a,x,f['owner'],load_record) if x.get('scenario')=='CONCRETE_FINITE' else policy_eval(im,a,x) if f['owner']=='P07' else flow_eval(im,a,x,f['owner'])
+   if f.get('evaluation_kind')=='P09_POLICY_GATE':
+    y=p09_policy_eval(im,t,x)
+   elif x.get('scenario')=='CONCRETE_FINITE':
+    y=evaluate(im,a,x,f['owner'],load_record)
+   elif f['owner']=='P07':
+    y=policy_eval(im,a,x)
+   else:
+    y=flow_eval(im,a,x,f['owner'])
    assert y==f['expected'],(f['case_id'],y,f['expected'],x);results.append(dict(owner=f['owner'],case_id=f['case_id'],actual=y))
   write(P/'import-receipt.json',receipt);write(P/'results.json',dict(status='SQL_BOUND_BUILDER_ONLY',cases=len(results),results=results,manifest_sha256=sha(mf),fixture_sha256=sha(P/'fixtures.json'),migration_count=len(migration),limits='Finite contract replay only. No generic engine, real state, empirical effect, rights, CQ/LC or independent verdict.'))
   print('MIGRATED',len(migration),'NEW',len(records)-len(migration),'SQL CASES',len(results),'PACKAGE',len(records))
@@ -433,6 +486,20 @@ def flow_eval(im,f,x,owner=None):
   state=z['to_step']
  return 'PAUSE' if checkpoint else terms.get(state,'HOLD')
 def policy_eval(im,p,x):
+ # P09 PolicySpec is intentionally non-suggesting. The generic evaluator never
+ # executes its observation route; only p09_policy_eval() may do so after an
+ # internal same-version/same-input FlowSpec re-evaluation.
+ rules=p.get('rules')
+ if not isinstance(rules,list):return 'HOLD'
+ p09_policy=any(
+  isinstance(r,dict) and isinstance(r.get('condition_ref'),dict)
+  and r['condition_ref'].get('owner')=='P09'
+  for r in rules
+ )
+ if p09_policy:
+  if any(not isinstance(r,dict) for r in rules):return 'HOLD'
+  if any(r.get('action')=='SUGGEST' for r in rules):return 'HOLD'
+  return 'CLARIFY'
  if x.get('exit') is not True and x.get('exit') is not False:return 'HOLD'
  if x.get('exit') is not True and type(x.get('declined')) is not bool:return 'HOLD'
  y=dict(x);y['pause_without_resume']=x.get('paused') is True and x.get('resume_requested') is not True
@@ -450,4 +517,62 @@ def policy_eval(im,p,x):
   if not isinstance(a,dict) or not isinstance(b,dict) or any(not isinstance(a.get(k),str) or not a[k] or a[k]!=b.get(k) for k in ('goal','scoring_version','support','unit')) or not int0(a.get('score')) or not int0(b.get('score')):return 'REQUEST_OBSERVATION'
   return 'DESCRIBE_TASK_CHANGE_ONLY'
  return 'SUGGEST_'+matches[0]['reason']
+
+def p09_policy_eval(im,policy_ref,x):
+ """Fail-closed P09 policy wrapper: exact same-version FlowSpec + same input.
+
+ The current canonical DB01/IF01 contract cannot persist a non-forgeable flow
+ completion result bound to a flow instance and input digest. Therefore the
+ PolicySpec has no SUGGEST rule. This wrapper re-loads the exact P09.FLOW ref
+ at the PolicySpec version, evaluates that flow with this exact input object,
+ and permits only the declared ADVICE_ONLY REQUEST_OBSERVATION route.
+ Caller-supplied flow_result/flow_ref/flow_instance_id/input_digest are ignored.
+ """
+ if type(policy_ref) is not dict or type(x) is not dict:return 'HOLD'
+ version=policy_ref.get('version')
+ expected_policy=ref('P09','PolicySpec','P09.POLICY',version)
+ if policy_ref!=expected_policy:return 'HOLD'
+ flow_ref=ref('P09','FlowSpec','P09.FLOW',version)
+ try:
+  policy=load_record(im,policy_ref);flow_record=load_record(im,flow_ref)
+ except Exception:
+  return 'HOLD'
+ # load_record resolves each object through its exact typed reference tuple;
+ # the imported payload omits DB identity columns, so do not expect those
+ # columns to be duplicated inside the canonical JSON payload.
+ if policy.get('effect')!='ADVICE_ONLY' or not isinstance(flow_record,dict):
+  return 'HOLD'
+ rules=policy.get('rules')
+ if type(rules) is not list or len(rules)!=1:return 'HOLD'
+ composite_ref=ref('P09','ConditionSpec','P09.GUARD.COMPOSITE_VALID',version)
+ route=rules[0]
+ if (type(route) is not dict or route.get('action')!='REQUEST_OBSERVATION'
+     or route.get('condition_ref')!=composite_ref
+     or route.get('priority')!=1):
+  return 'HOLD'
+ # Snapshot only plain JSON values. The wrapper evaluates this immutable-by-
+ # convention copy, not caller-owned mutable state or caller-supplied results.
+ def plain_json(value):
+  if value is None or type(value) in (str,int,bool):return True
+  if type(value) is float:return value==value and abs(value)!=float('inf')
+  if type(value) is list:return all(plain_json(v) for v in value)
+  if type(value) is dict:return all(type(k) is str and plain_json(v) for k,v in value.items())
+  return False
+ if not plain_json(x):return 'HOLD'
+ try:
+  original_digest=dig(x)
+  snapshot=json.loads(json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':'),allow_nan=False))
+ except (TypeError,ValueError,OverflowError):
+  return 'HOLD'
+ input_digest=dig(snapshot)
+ try:
+  if input_digest!=original_digest or dig(x)!=original_digest:return 'HOLD'
+  flow_result=p09_flow_eval(im,flow_record,snapshot)
+  if dig(snapshot)!=input_digest or dig(x)!=original_digest:return 'HOLD'
+ except Exception:
+  return 'HOLD'
+ if flow_result in ('STOP','PAUSE','HOLD','FAILED'):return flow_result
+ if flow_result!='COMPLETE':return 'HOLD'
+ return route['action']
+
 if __name__=='__main__':main()
